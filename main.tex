@@ -1945,7 +1945,42 @@ Hint: Consider the sum of the first nth positive integer. Try to make assumption
         
         This will complete the proof if we can establish that the simplified version of \( S(k+1) \) matches the form of the inductive hypothesis.
 \end{proof}
+\begin{exercise}
+    Prove the sum of geometric sequence  is \( S_n = \frac{a_0(1 - r^n)}{1 - r} = \) using mathematical induction.
+\end{exercise}
+\begin{proof}
+    We want to prove that the sum of the first \( n \) terms of a geometric sequence \( S_n \) with the first term \( a \) and common ratio \( r \) (where \( r \neq 1 \)) is given by:
 
+\[ S_n = \frac{a(1 - r^n)}{1 - r} \]
+
+\textbf{Base Case (n=1):}
+
+The sum of the first term is simply the term itself:
+
+\[ S_1 = a \]
+
+which agrees with the formula.
+
+\textbf{Inductive Step:}
+
+Assume the formula holds for \( n = k \), that is,
+
+\[ S_k = \frac{a(1 - r^k)}{1 - r} \]
+
+We need to prove that it also holds for \( n = k+1 \):
+
+\[ S_{k+1} = \frac{a(1 - r^{k+1})}{1 - r} \]
+
+Starting with the inductive hypothesis for \( S_k \) and adding the \( (k+1) \)-th term \( ar^k \) to both sides, we have:
+
+\[ S_k + ar^k = \frac{a(1 - r^k)}{1 - r} + ar^k \]
+
+Simplifying, we obtain:
+
+\[ S_{k+1} = S_k + ar^k = \frac{a - ar^{k+1}}{1 - r} \]
+
+which is the same as the formula for \( S_{k+1} \), thus completing the proof.
+\end{proof}
 \begin{exercise}
     Given a sequence \( \{a_n\} \) and a series \( S_n = an^2 + bn + c (a \neq 0) \).
 
