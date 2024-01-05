@@ -28,4 +28,4 @@ All contributions are welcome! Whether it's fixing typos, improving explanations
 This work is released under the MIT license.
 
 ## Contact
-For questions and feedback, feel free to reach out to me at ericyxy123@gmail.com.
+For questions and feedback, feel free to post it under issue.
