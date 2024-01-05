@@ -435,12 +435,12 @@ Suppose, for the sake of contradiction, that the statement we wish to prove is f
 
 \begin{enumerate}
     \item State the negation of the theorem or proposition you are trying to prove.
-    \item Use logical reasoning and established mathematical principles to derive consequences from this assumption.
+    \item Use logical reasoning and established mathematical principles to derive consequences of this assumption.
     \item Show that these consequences lead to a contradiction, something that is known to be false or violates a basic principle of mathematics.
     \item Conclude that since the assumption leads to a contradiction, the negation must be false, and therefore, the original statement is true.
 \end{enumerate}
 
-Contradiction could be used to proof many interesting conclusion in mathematics, here is a classical example that prove the length of a diagonal in a square with side length 1 is irrational number.
+Contradiction could be used to proof many interesting conclusions in mathematics, here is a classical example that prove the length of a diagonal in a square with side length 1 is irrational number.
 \begin{example}
     Prove that the length of a diagonal in a square with side length 1 is irrational number
 \end{example}
@@ -1706,8 +1706,106 @@ Therefore, the original statement is incorrect unless the condition that all \( 
 %------------------------------------------------
 
 \section{Sequence}
+If everything so far is not a problem for you, congratulations, because you have known everything you need to know sequence. Sequence is an important concept that will be used throughout your journey of learning math. A Sequence
+is defined as:
+\begin{definition}
+    A sequence is a function \( f: \mathbb{N} \to \mathbb{R} \), where \(\mathbb{N}\) is the set of natural numbers and \(\mathbb{R}\) is the set of real numbers. The value \( f(n) \) 
+    is the \( n \)-th term of the sequence, often denoted as \( a_n \). Therefore, a sequence can be represented as \( \{a_n\}_{n=1}^{\infty} \) for an infinite sequence or \( \{a_n\}_{n=1}^{N} \) for a finite sequence of length \( N \).
+\end{definition} 
 
-%------------------------------------------------
+\subsection{Introduction}
+Sequences could be either infinite or finite. A \textit{sequence} is defined to be a function \( S \) whose domain \( D \) is a nonempty interval of integers. \( S \) is an \textit{infinite sequence} if \( D \) has the form \( \{a..\} \). % Usually \( a \) is 1 or 0.
+
+\( S \) is a \textit{finite sequence} if \( D \) has the form \( \{a..b\} \) where \( a \leq b \). When \( |D| = n \), we will say that \( S \) is an \( n\text{-sequence} \). We will take the domain of an \( n\text{-sequence} \) to be the set \( \{1..n\} \). % But \( a \) could be 0, and then \( D \) is \( \{0..(n - 1)\} \).
+
+The (natural) ordering of the domain of a sequence \( S \) gives a natural ordering to the ordered pairs in the set \( S \). If \( S \) is a 5-sequence, then
+\[ S = \{(1, S(1)), (2, S(2)), (3, S(3)), (4, S(4)), (5, S(5))\} \]
+
+\begin{example}
+    Suppose \( D = \{1..10\} \), and we define the function \( S \) on \( D \) by
+
+\[ S(i) = \text{the smallest prime factor of the integer } (1 + i). \]
+
+Then \( D \) is a finite interval of integers, and so \( S \) is the sequence denoted by
+
+\[ S = (2, 3, 2, 5, 2, 7, 2, 3, 2, 11). \]
+\end{example}
+
+\begin{definition}[Sum of Sequence]
+    If \( S = (S_1, S_2, S_3, \ldots, S_n) \) is a finite sequence of numbers, the corresponding \textit{series} is the sum of the entries in \( S \)
+    is:
+
+\[ S_1 + S_2 + S_3 + \ldots + S_n. \]
+\end{definition}
+\subsection{Special Sequences}
+This section introduces common sequences as well as their properties.
+\subsubsection{Algorithmic Sequence}
+Algorithmic sequences are a fundamental concept in both computer science and mathematics, forming the backbone of algorithm design and analysis. These sequences are typically defined as an ordered set of steps or instructions, aimed at solving a specific problem or accomplishing a particular computation.
+\begin{definition}[Arithmetic Sequence]
+    An arithmetic sequence of the form
+\[
+a, a + d, a + 2d, \ldots, a + nd, \ldots
+\]
+where the initial term \( a \) and the common difference \( d \) are real numbers.
+\end{definition}
+Usually, the notation $a_n$ is used to express the nth term of a sequence (starting from 0). For the example in the 
+definition, we have $a_0 = a$ and $a_n = a_0 + nd$. 
+We also have:
+$$a_1 = a_0 + d$$
+$$a_2 = a_1 + d$$
+$$\dots$$
+$$a_n = a_{n-1} + d = a_0 + (n-1)d$$
+These formula shows the linking between consecutive terms in an arithmetic sequence. We know that the sum
+$s$ of the sequence is:
+\begin{align*}
+    S & =\ a_{0} \ +\ a\_1\ +\ \dotsc \ +\ a\_n\\
+    S & =\ a_{0} \ +\ a_{0} +d\ +\ \dotsc \ +\ a_{n-1} +d
+    \end{align*}
+The sum is expressed in infinite terms, and it is called \textbf{open form equation}. Accordingly, there are also \textbf{closed form
+equations}.
+\begin{definition}[Open Form]
+    An \textit{open form} or \textit{non-closed form} expression, on the other hand, does not have a finite standard representation and often requires recursive or iterative methods for evaluation. It may involve summations, integrals, or other operations that are not easily simplified into a finite number of operations.
+\end{definition}
+\begin{definition}[Closed Form]
+    A \textit{closed form} expression is a mathematical expression that can be evaluated in a finite number of standard operations. It typically involves constants, variables, and operations from algebra, calculus, and other areas of mathematics that can be computed in a finite number of steps.
+    A closed form expression provides a direct way to compute the term of a sequence without the need for recursion.
+\end{definition}
+
+Is the open form good for calculating the sum of a sequence? Suppose now I want to know $S_{100}$ (The sum of the first 100th terms),
+with the open form, I still have to calculate 99 terms using the definition of this sequence. So is there a way 
+to make it possible that we get the sum in one step? Think about closed form. The closed form allows us to calculate
+the sum directly. But is it possible to transform an open expression to closed form? If possible, how?
+
+You may already notice that the open form has a property of infinity, and each step is somewhat related.
+Isn't it a perfect problem to be solved by mathematical induction? We will leave this proof as a exercise, and here we provide another direct proof
+by the symmetry of arithmetic sequence.
+\begin{theorem}[Sum of Arithmetic Sequence]
+    For  arithmetic sequence \( a_0, a_1, \ldots, a_n \), where each term can be expressed as \( a_i = a_0 + id \) and \( d \) is the common difference. The sum of the first nth terms is:
+    \[ S = \frac{n}{2}[2a_0 + (n-1)d] \] or \[ S = \frac{n}{2}(a_0 + a_n) \] where \[ a_n = a_0 + (n-1)d \]
+\end{theorem}
+
+\begin{proof}
+    Consider an arithmetic sequence \( a_0, a_1, \ldots, a_n \), where each term can be expressed as \( a_i = a_0 + id \) and \( d \) is the common difference.
+    \item Write the sum of the sequence in order:
+\[
+S = a_0 + (a_0 + d) + (a_0 + 2d) + \ldots + (a_0 + (n-1)d)
+\]
+
+\item Write the sum of the sequence in reverse order:
+\[
+S = (a_0 + (n-1)d) + (a_0 + (n-2)d) + \ldots + a_0
+\]
+
+\item Add these two equations together, every pair of terms within the brackets forms: \[ 2a_0 + (n-1)d \]
+
+\item Since each term appears in a pair, there are \( n \) such pairs.
+
+\item The resulting equation is \( 2S = n[2a_0 + (n-1)d] \).
+
+\item Solving for \( S \) gives us \( S = \frac{n}{2}[2a_0 + (n-1)d] \) or \( S = \frac{n}{2}(a_0 + a_n) \), where \( a_n = a_0 + (n-1)d \).
+\end{proof}
+
+%-------------------------------------------------------------
 \section{Counting: a perspective from Set Theory}
 %------------------------------------------------
 
@@ -1726,7 +1824,7 @@ Computer Science is most commonly known as an engineering subject, while the una
 
     \subsection{Algorithm}
     \subsubsection{What is an Algorithm?}
-    \begin{definition}[Algorithm]\label{def:algo}
+    \begin{definition}[Algorithm] \label{def:algo}
         An algorithm is a well-defined, step-by-step procedure or sequence of instructions designed to solve a specific class of problems:
         \begin{itemize}
             \item Each step in an algorithm must be clear and unambiguous. 
@@ -1774,13 +1872,13 @@ A & B \\
 
 Sum of the remaining A-values: $2336+584+73=2993$.
 
-Let's review this algorithm referring to definition \ref{def:algo}. 
+Let's review this algorithm referring to definition \autoref{def:algo}. 
 \begin{enumerate}
     \item Clarity and Accuracy: All the instructions are clear and manipulable, nothing is ambiguous.
     
     \item Solvability: It is no doubt that for any two real numbers, we can find their product.
     
-    \item Termination: For which ever numbers, we can always solve the problem in limited steps, as the terminate condition is when $B=1$, while B is divided by 2 （integer division）repetitively. 
+    \item Termination: For which ever numbers, we can always solve the problem in limited steps, as the terminate condition is when $B=1$, while B is divided by 2 (integer division) repetitively. 
 \end{enumerate}
 
 Hence, the RPM is a good example of algorithm, and with this, we could tell whether
@@ -2157,7 +2255,6 @@ Elementary consequences of the field axioms.
     \text{(g)} &\quad 0 < x < y \text{ implies } 0 < y^{-1} < x^{-1}
 \end{align*}
 \end{proposition}
-
 
 
 
