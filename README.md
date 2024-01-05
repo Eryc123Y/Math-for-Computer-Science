@@ -22,11 +22,7 @@ You can:
 - Download "main.pdf" dirrectly after new release is updated.
 
 ## How to Contribute
-Contributions are welcome! Whether it's fixing typos, improving explanations, or adding new content, your help is appreciated. To contribute:
-1. Correct erros.
-2. Make suggestions.
-
-
+All contributions are welcome! Whether it's fixing typos, improving explanations, or adding new content, your help is appreciated.
 
 ## License
 This work is released under the MIT license.
