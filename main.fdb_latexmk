@@ -1,27 +1,28 @@
 # Fdb version 4
-["biber main"] 1704425582.00029 "main.bcf" "main.bbl" "main" 1704468116.77438 0
-  "main.bcf" 1704468116 107347 1f51a2be7d23f3423c0e59ffd4ef65c6 "pdflatex"
+["biber main"] 1704425582.00029 "main.bcf" "main.bbl" "main" 1704535115.6333 0
+  "main.bcf" 1704535115 107347 1f51a2be7d23f3423c0e59ffd4ef65c6 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["makeindex main.idx"] 1704465875.02366 "main.idx" "main.ind" "main" 1704468116.77409 0
-  "main.idx" 1704468114 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+["makeindex main.idx"] 1704534114.63239 "main.idx" "main.ind" "main" 1704535115.63305 0
+  "main.idx" 1704535113 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   (generated)
   "main.ilg"
   "main.ind"
   (rewritten before read)
-["pdflatex"] 1704468113.93655 "c:/Programming/GitProjects/Math-for-CS/main.tex" "main.pdf" "main" 1704468116.77479 0
+["pdflatex"] 1704535112.56472 "c:/Programming/GitProjects/Math-for-CS/main.tex" "main.pdf" "main" 1704535115.63367 0
   "Images/background.pdf" 1704396250 15253 d9a03f6e202671124db1172af03625d4 ""
   "Images/chap1.png" 1704396250 1464091 97f639f93ce82ccf7856c8473bb03149 ""
   "Images/chap2.png" 1704396250 1443376 4be2ceb6583f88430390603feb599b18 ""
   "Images/func.jpg" 1704396250 134188 1a7175266a6c8bac24a1df855dc41b1d ""
+  "Images/intfunc.png" 1704515408 80329 f1ecbdf3434e6e810189a21692583509 ""
   "Images/orange1.jpg" 1704396250 283287 d6581159f0df10856515945a2304d056 ""
   "Images/orange2.jpg" 1704396250 158800 7383cd993ae5eaea1920b9e650bcfaae ""
   "Images/time complexity.png" 1704396250 150606 67fc10912a0e3be724736b2edeeb88c5 ""
   "Images/venn.png" 1704396250 101167 627b3f359fe3b8844e7f344c0e38c3ca ""
   "LegrandOrangeBook.cls" 1704396250 34330 8b54c63dbc2df44de404d2768f953f7c ""
-  "c:/Programming/GitProjects/Math-for-CS/main.tex" 1704468108 131997 ccbe4eddc3f78a5dff3f350e5beb4873 ""
+  "c:/Programming/GitProjects/Math-for-CS/main.tex" 1704535108 145544 9674878e40b2dd9b15ff9cd5881711d5 ""
   "c:/texlive/2023/texmf-dist/fonts/enc/dvips/base/8r.enc" 1704276465 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "c:/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1704275942 2971 def0b6c1f0b107b3b936def894055589 ""
   "c:/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1704276883 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -261,15 +262,15 @@
   "c:/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1704280865 4785560 10f5a17fcbe2ff40a0047ec23402f933 ""
   "c:/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1704280976 8217725 7701aa7a6db71a8cb2ecc05da3359d3e ""
   "c:/texlive/2023/texmf.cnf" 1704280848 713 e69b156964470283e0530f5060668171 ""
-  "main.aux" 1704468116 30907 18f1e19c1f4da63b656944bf0b82427e "pdflatex"
+  "main.aux" 1704535115 32413 5b0bf3e150b09340b328d8683b4d8886 "pdflatex"
   "main.bbl" 1704425620 486 ee04f40f768daeed26442158e95aba61 "biber main"
-  "main.ind" 1704465875 0 d41d8cd98f00b204e9800998ecf8427e "makeindex main.idx"
-  "main.lof" 1704468116 606 af6e15728bea52d8ed9204748effb391 "pdflatex"
-  "main.lot" 1704468116 501 ff8d6062b976a61af86a9e6f801cbf43 "pdflatex"
-  "main.ptc" 1704468116 5559 87e18ca3e9ef4f756dd20596cfadc04e "pdflatex"
-  "main.run.xml" 1704468116 2301 f06af3099c978185a0ac5347b2a69dfa "pdflatex"
-  "main.tex" 1704468108 131997 ccbe4eddc3f78a5dff3f350e5beb4873 ""
-  "main.toc" 1704468116 5266 5432137eb3744c95a33e547264865543 "pdflatex"
+  "main.ind" 1704534115 0 d41d8cd98f00b204e9800998ecf8427e "makeindex main.idx"
+  "main.lof" 1704535115 748 1be6d861ebfe6d1c52abe6b62ee93356 "pdflatex"
+  "main.lot" 1704535115 501 a5046c92bcaacf414dc260beef0ad259 "pdflatex"
+  "main.ptc" 1704535115 6036 e748e5767d774871e2e15b4467e6a9fb "pdflatex"
+  "main.run.xml" 1704535115 2301 f06af3099c978185a0ac5347b2a69dfa "pdflatex"
+  "main.tex" 1704535108 145544 9674878e40b2dd9b15ff9cd5881711d5 ""
+  "main.toc" 1704535115 5743 76d4fd14bb3fcaf95ce122c66c2fd990 "pdflatex"
   (generated)
   "main.aux"
   "main.bcf"

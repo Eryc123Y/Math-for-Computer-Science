@@ -1032,7 +1032,7 @@ and when \( r = 3, \forall n \in \mathbb{N}, \sum_{j=0}^{n} (j + 1)3^j = \frac{[
 \chapterimage{orange2.jpg}
 \chapterspaceabove{6.75cm} 
 \chapterspacebelow{7.25cm} 
-\chapter{Set,Sequence, Function, Summation and Counting}
+\chapter{Set, Sequence, Function, and Summation}
 \section{Set}
     We begin our formal development with basic notions of set theory. Our most primitive notion is that of a set. This notion is so fundamental that we do not attempt to give a precise definition. We think of a set as a collection of distinct objects with a precise description that provides a way of deciding (in principle) whether a given object is in it.
 
@@ -1348,6 +1348,19 @@ Next, we distribute the intersection over the union:
 
 Hence, the original statement is proven.
 \end{proof}
+
+\begin{exercise}
+    Define the set $S = \{x | x = 12m + 8n, m,n \in \mathbb{Z}\}$, and let $P = \{x | x = 20p + 16q, p,q \in \mathbb{Z}\}$.
+
+Prove that $S = P$.
+\end{exercise}
+\textbf{Proof:}
+
+Let $x \in S$, then $x = 12m + 8n = 4(3m + 2n) = 20(3m + 2n) + 16(-3m - 2n) \in P$, so $S \subseteq P$;
+
+Now let $x \in P$, then $x = 20p + 16q = 4(5p + 4q) = 12(5p + 4q) + 8(-5p - 4q) \in S$,
+
+so $P \subseteq S$; thus, by definition, $S = P$.
 %------------------------------------------------
 \section{Function: a perspective of Set Theory}
 This section discusses function from a perspective of set. We clarify this by the relation between sets.
@@ -1424,6 +1437,38 @@ Using $A$, $B$, and $C$ to denote the set of injective, surjective, and bijectiv
 Which means that if a function is injective and surjective in the same time, it is bijective. 
 
 And these will be all we need to know about function for now, since the rest of the properties will be discussed in single-variable calculus. This section aims only introduce the idea of injectivity, surjectivity, and bijectivity, 
+
+\subsection{Exercises}
+\begin{exercise}
+    Determine the images of the functions \( f: \mathbb{R} \rightarrow \mathbb{R} \) defined as follows:
+    \begin{enumerate}
+        \item[a)] \( f(x) = \frac{x^2}{1 + x^2} \).
+        \item[b)] \( f(x) = \frac{x}{1 + |x|} \).
+    \end{enumerate}
+\end{exercise}
+\begin{proof}[Solution for a)]
+    We analyze the function \( f(x) = \frac{x^2}{1 + x^2} \):
+    \begin{itemize}
+        \item This function is defined for all \( x \in \mathbb{R} \).
+        \item For \( x = 0 \), \( f(0) = 0 \).
+        \item For \( x \neq 0 \), \( f(x) \) is always positive.
+        \item As \( x \) approaches infinity, \( f(x) \) approaches 1.
+    \end{itemize}
+    Thus, the image of \( f \) is \( (0, 1] \).
+    \end{proof}
+    
+    \begin{proof}[Solution for b)]
+    We analyze the function \( f(x) = \frac{x}{1 + |x|} \):
+    \begin{itemize}
+        \item This function is defined for all \( x \in \mathbb{R} \).
+        \item For \( x > 0 \), as \( x \) increases, \( f(x) \) approaches 1.
+        \item For \( x < 0 \), as \( x \) decreases, \( f(x) \) approaches -1.
+    \end{itemize}
+    Thus, the image of \( f \) is \( (-1, 1) \).
+    \end{proof}
+
+
+
 %------------------------------------------------
 \section{Summation}
 Before we move on to the most important part of this chapter, sequence, we use this section to introduce a prerequisite for studying its properties. We introduce the Sigma sign.
@@ -2135,274 +2180,10 @@ Computer Science is most commonly known as an engineering subject, while the una
 
 %------------------------------------------------
 
-\section{Algorithm and Algorithm Analysis}
-	This Section discusses what is algorithm, and more importantly, how algorithms
-	are assessed.
-
-    \subsection{Algorithm}
-    \subsubsection{What is an Algorithm?}
-    \begin{definition}[Algorithm] \label{def:algo}
-        An algorithm is a well-defined, step-by-step procedure or sequence of instructions designed to solve a specific class of problems:
-        \begin{itemize}
-            \item Each step in an algorithm must be clear and unambiguous. 
-            \item Algorithms must be solvable, meaning they should be able to produce a correct solution for any valid input within a finite amount of time.
-            \item An algorithm must terminate, i.e., it should have a defined end, at which point the goal has been achieved and the final output is produced.
-        \end{itemize} 
-    \end{definition}
-    Here is an example of multiplication algorithm for better understanding of the concept.
-    \begin{example}[Russian Peasant Multiplication]
-        To find the product of integers \( M \) and \( N \), both larger than one:
-
-        \begin{enumerate}
-            \item Start two columns on a page, one labeled ``A'' and the other ``B''; and put the value of \( M \) under A and the value of \( N \) under B.
-            
-            \item Repeat
-            \begin{itemize}
-                \item[(a)] calculate a new A-value by multiplying the old A-value by 2; and
-                \item[(b)] calculate a new B-value by dividing the old B-value by 2 and reducing the result by a half if necessary to obtain an integer;
-            \end{itemize}
-            Until the B-value equals one.
-            
-            \item Go down the columns crossing out the A-value whenever the B-value is even.
-            
-            \item Add up the remaining A-values and ``return'' the sum.
-        \end{enumerate}
-    \end{example}
-    To show how it works, assume $A=73$ and $B=41$.
-
-\begin{table}[H]
-\centering
-\begin{tabular}{c|c}
-\hline
-A & B \\
-\hline
-73 & 41 \\
-146 & 20 (20\(\frac{1}{2}\) is reduced to 20) \\
-292 & 10 \\
-584 & 5 \\
-1168 & 2 (2\(\frac{1}{2}\) is reduced to 2) \\
-2336 & 1 \\
-\hline
-\end{tabular}
-\caption{Execution of RPM}
-\end{table}
-
-Sum of the remaining A-values: $2336+584+73=2993$.
-
-Let's review this algorithm referring to definition \autoref{def:algo}. 
-\begin{enumerate}
-    \item Clarity and Accuracy: All the instructions are clear and manipulable, nothing is ambiguous.
-    
-    \item Solvability: It is no doubt that for any two real numbers, we can find their product.
-    
-    \item Termination: For which ever numbers, we can always solve the problem in limited steps, as the terminate condition is when $B=1$, while B is divided by 2 (integer division) repetitively. 
-\end{enumerate}
-
-Hence, the RPM is a good example of algorithm, and with this, we could tell whether
-something else is an algorithm or not.
-\subsubsection{Pseudocode}
-Pseudocode is a simplified, half-code, half-natural language script used by software developers and algorithm designers to outline the structure of a program or algorithm. It's not executable code, but rather a high-level representation of the algorithm's logic. The purpose of pseudo-code is to express the design of an algorithm in a form that can be easily translated into actual programming languages. It is written in a way that is understandable to people who do not necessarily know the syntax of programming languages. Pseudo-code allows the designer to focus on the core logic of the algorithm without getting bogged down with the syntactic details of a particular programming language. It often uses control structures like if-then-else, while, for, and others that are common to many high-level languages.
-Here's the RPM transcribed in pseudocode:
-\begin{algorithm}[H]
-	\caption{Russian Peasant Multiplication}\label{alg:rpm}
-	\begin{algorithmic}[1]
-	\Procedure{RPM}{$A, B$}
-		\State $product \gets 0$
-		\While{$B > 0$}
-			\If{$B$ is odd}
-				\State $product \gets product + A$
-			\EndIf
-			\State $A \gets A \times 2$
-			\State $B \gets B \div 2$
-		\EndWhile
-		\State \textbf{return} $product$
-	\EndProcedure
-	\end{algorithmic}
-	\end{algorithm}
-	
-	All later algorithm in this book will be presented using pseudocode.
-%------------------------------------------------
-
-\subsection{Algorithm Analysis}
-
-\par Now let's take a look at this algorithm from another aspects. Is this a good or a bad algorithm. People assess algorithms by examine its \textbf{complexity}, which could be either \textbf{space complexity} or \textbf{time complexity}. The former refers to the the relationship between the input and the space needed to execute the algorithm, the latter, similarly, refers to the time needed. Many tools are available to quantify complexity, for both space and time complexity, \textbf{the big O notation} is the most common measurement. 
-\begin{definition}[The Big O Notation]\label{Big O}
-    Big O notation is used to classify algorithms according to how their running time or space requirements grow as the input size grows. The notation describes an upper limit on the time an algorithm could possibly take to complete, given the size of the input. For a function \( f(n) \), where n is the scale of input for the algorithm, the Big O notation is formally defined as follows with $c$ as a positive constant:
-    $$O(f(n)) = \{ g(n) : \text{Where } c \text{ and } n_0 
-	\text{ such that } 0 \leq g(n) \leq c \cdot f(n) \text{ for all } n \geq n_0 \}$$
-\end{definition}
-
-The following table provides common time complexities using Big O notation:
-
-\begin{table}[ht]
-\centering
-\begin{tabular}{@{}cc@{}}
-\toprule
-\( f(n) \) & Description \\ \midrule
-1 & Constant \\
-\( \log n \) & Logarithmic \\
-n & Linear \\
-\( n \log n \) & Linearithmic \\
-\( n^2 \) & Quadratic \\
-\( n^3 \) & Cubic \\
-\( 2^n \) & Exponential \\ 
-\(n!\) & Factorial \\
-\bottomrule
-\end{tabular}
-\caption{Common time complexities in Big O notation}
-\end{table}
-We can visualize it using function graph
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.8\linewidth]{Images/time complexity.png}
-    \caption{Time Complexity Visualization}
-    
-\end{figure}
-So which space and time complexity does this algorithm fall in? 
-\subsubsection{Time Complexity}
-To analyze the time complexity, we usually focus on the termination condition or the number of iteration for the algorithm. For the real number $B$ in RPM, each time it is divided by 2 until $B = 1$. Therefore, the total number of iteration will be $\log_2 B$, which is categorized in \( O(\log n) \).
-\begin{remark}
-    Actually, the time complexity of an algorithm could be shown by strict proof using MI. Here is the proof on the time complexity of RPM.
-    \begin{proof}
-        We will use mathematical induction to prove that the number of steps in the algorithm is proportional to \( \log_2(B) \).
-
-\noindent \textbf{Base Case:}\\
-When \( B = 1 \), the algorithm requires only one step. This is consistent with \( \log_2(1) = 0 \), which satisfies our complexity class \( O(\log n) \).
-
-\noindent \textbf{Inductive Hypothesis:}\\
-Assume that for a positive integer \( k \), when \( B = k \), the algorithm operates within \( \log_2(k) \) steps.
-
-\noindent \textbf{Inductive Step:}\\
-Consider \( B = 2k \). In the first step of the algorithm, \( B \) is halved to \( k \), and \( S \) is doubled. From this point, based on our inductive hypothesis, reaching \( B = 1 \) requires \( \log_2(k) \) steps.
-
-Hence, for \( A = 2k \), the total number of steps is \( \log_2(k) + 1 \). Using the properties of logarithms, we have:
-\begin{align*}
-\log_2(k) + 1 &= \log_2(k) + \log_2(2) \\
-&= \log_2(2k)
-\end{align*}
-
-Therefore, for any \( A = 2k \), the total number of steps is also \( \log_2(2k) \), proving that for any positive integer \( A \), the time complexity of the Russian Peasant Multiplication is \( O(\log A) \).
-    \end{proof}
-\end{remark}
-%------------------------------------------------
-\subsubsection{Space Complexity}
-The space complexity of the Russian Peasant Multiplication algorithm is determined by the amount of memory required to store the operands and the intermediate results. Initially, only two numbers need to be stored: the multiplicands. As the algorithm proceeds, we need additional space to keep track of the current product. Since the algorithm does not use any complex data structures and only requires a fixed number of variables, the space complexity is \( O(1) \), indicating constant space usage. It does not depend on the size of the input operands, as the memory required does not increase with larger numbers.
-%------------------------------------------------
-\subsection{Exercises}
-\begin{exercise}
-    A non-recursive Square and Multiply Algorithm to calculate \( b^n \).
-
-\textbf{Precondition:} \( n \) is a positive integer and \( b \) is of any type that can be multiplied.
-
-\textbf{Postcondition:} the value returned is equal \( (b)^n \).
-\begin{enumerate}
-    \item Show that the algorithm terminates. Let \( a_k \) denote the value of \( a \) after the \( k \)th iteration of the while-loop, and let \( s = \lfloor \lg(n) \rfloor \). Prove by Mathematical Induction on \( k \) that For any nonnegative integer \( k \), after \( k \) iterations of the while-loop:
-    $$2^{s-k} \le a_k < 2^{s-k+1}$$
-    \item  Proof of correctness. Use Mathematical Induction on \( k \) to prove For any nonnegative integer \( k \), after \( k \) iterations of the while-loop:
-\[ (\text{square})^a \times \text{product} = (b)^n \].
-\end{enumerate}
-\end{exercise}
-\begin{algorithm}
-    \caption{Square and Multiply Algorithm}
-    \begin{algorithmic}[1]
-    \State $product \gets 1$
-    \State $square \gets b$
-    \State $a \gets n$
-    \While{$a > 1$}
-        \If{$a \mod 2 \neq 0$} \Comment{If $a$ is odd}
-            \State $product \gets product \times square$
-        \EndIf
-        \State $square \gets square \times square$
-        \State $a \gets \lfloor a / 2 \rfloor$ \Comment{Integer division}
-    \EndWhile
-    \State \Return $product \times square$
-    \end{algorithmic}
-\end{algorithm}
-\begin{proof}[1]
-    \textit{Base Case} \(k=0\):
-For \(k = 0\), \(a_0 = n\), which is the initial value of \(a\). Since \(s = \left\lfloor \lg(n) \right\rfloor\), it is the greatest integer less than or equal to \(\lg(n)\), therefore \(2^s \leq n < 2^{s+1}\). So, for \(k = 0\), the predicate holds because:
-\[
-\frac{2^s}{2^0} \leq a_0 = n < 2 \times \frac{2^s}{2^0}
-\]
-
-\textit{Inductive Step}:
-Assume \(P(k)\) holds for some nonnegative integer \(k\). That is:
-\[
-\frac{2^s}{2^k} \leq a_k < 2 \times \frac{2^s}{2^k}
-\]
-We need to show \(P(k+1)\) holds. During each iteration, \(a\) is halved (integer division by 2), which gives us:
-\[
-a_{k+1} = \left\lfloor \frac{a_k}{2} \right\rfloor
-\]
-
-Since \(a_k\) is an integer, \(\left\lfloor \frac{a_k}{2} \right\rfloor\) will either be \(\frac{a_k}{2}\) or \(\frac{a_k - 1}{2}\), depending on whether \(a_k\) is even or odd. Thus, we have:
-\[
-\frac{2^s}{2^{k+1}} \leq \left\lfloor \frac{a_k}{2} \right\rfloor < 2 \times \frac{2^s}{2^{k+1}}
-\]
-
-Since \(a_k < 2 \times \frac{2^s}{2^k}\), dividing by 2 gives \(\frac{a_k}{2} < \frac{2^s}{2^k}\), and therefore:
-\[
-a_{k+1} < 2 \times \frac{2^s}{2^{k+1}}
-\]
-
-Similarly, \(\frac{2^s}{2^k} \leq a_k\) implies \(\frac{2^s}{2^{k+1}} \leq \frac{a_k}{2}\), so we have:
-\[
-\frac{2^s}{2^{k+1}} \leq a_{k+1}
-\]
-This completes the inductive step and thus, by induction, \(P(k)\) holds for all nonnegative integers \(k\).
-\end{proof}
-\begin{proof}[2]
-    We need to prove that after \(k\) iterations of the while-loop, the invariant holds:
-\[
-(\text{square})^a \times \text{product} = b^n
-\]
-
-\textit{Base Case} \(k=0\):
-Initially, \(\text{product} = 1\), \(\text{square} = b\), and \(a = n\). So,
-\[
-(\text{square})^a \times \text{product} = b^n
-\]
-is trivially true.
-
-\textit{Inductive Step}:
-Assume the invariant holds after \(k\) iterations, i.e.,
-\[
-(\text{square}_k)^{a_k} \times \text{product}_k = b^n
-\]
-Now, consider the \(k+1\)th iteration. There are two cases:
-
-\textit{Case 1} (\(a_k\) is odd):
-The product is updated by multiplying it with \(\text{square}_k\), and we have:
-\[
-\text{product}_{k+1} = \text{product}_k \times \text{square}_k
-\]
-Since \(a_k\) is odd, we can write \(a_k = 2m + 1\) for some integer \(m\), and after the iteration, \(a\) becomes \(a_{k+1} = m\). The invariant becomes:
-\[
-(\text{square}_k)^{2m+1} \times \text{product}_k = (\text{square}_k)^m \times \text{product}_{k+1} = b^n
-\]
-
-\textit{Case 2} (\(a_k\) is even):
-The product remains the same, and \(a_k\) can be written as \(2m\), so the invariant remains:
-\[
-(\text{square}_k)^{2m} \times \text{product}_k = (\text{square}_k)^m \times \text{product}_k = b^n
-\]
-since \(\text{square}_{k+1} = (\text{square}_k)^2\) and \(a_{k+1} = m\).
-
-In both cases, after the iteration, \(\text{square}\) is squared, so we get:
-\[
-\text{square}_{k+1} = (\text{square}_k)^2
-\]
-and therefore, the invariant still holds as:
-\[
-(\text{square}_{k+1})^{a_{k+1}} \times \text{product}_{k+1} = b^n
-\]
-
-Thus, by mathematical induction, the invariant holds true for every iteration of the loop, proving the correctness of the algorithm.
-\end{proof}
 \section{Numbers}
 Every reader could be quite surprised when seeing the title for this section. Yes, numbers, we have known what is number since the very beginning when we get to learn math as toddlers. In this section, we will explain the system of number, not only will we figure out how numbers and their operations are defined, but how they are categorized.
 \subsection{Typology of Numbers}
-This part recalls the the type of numbers we've learnt since primary school and their set notations.
+This part recalls the type of numbers we've learned since primary school and their set notations.
 
 \begin{enumerate}
   \item \textbf{Natural Numbers}
@@ -2573,6 +2354,483 @@ Elementary consequences of the field axioms.
 \end{align*}
 \end{proposition}
 
+\subsection{Floor, Ceiling, and Remainder}
+This Section discusses more form numbers that may not be as familiar as real numbers. We first introduce 
+\textbf{Integer Function}:
+\begin{definition}[Floor and Ceiling]
+    If \( x \) is any real number, we write
+\[
+\lfloor x \rfloor = \text{the greatest integer less than or equal to \( x \) (the floor of \( x \))}
+\]
+\[
+\lceil x \rceil = \text{the least integer greater than or equal to \( x \) (the ceiling of \( x \))}
+\]
+\end{definition}
+Note that the $x$ could be not just a variable, but a mathematical expression.
+\begin{example}
+    \[
+\lfloor \sqrt{2} \rfloor = 1, \quad \lceil \sqrt{2} \rceil = 2, \quad \left\lceil \frac{1}{2} \right\rceil = 0, \quad \left\lfloor -\frac{1}{2} \right\rfloor = 0, \quad \left\lceil -\frac{1}{2} \right\rceil = -1 \ (\text{not zero!});
+\]
+\end{example}
+
+\subsubsection{Properties of Integer Function}
+We will look into the properties of integer function with its graph. 
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width = 0.75\linewidth]{intfunc.png}
+        \caption{Visualization of $\lceil x \rceil \text{ and } \lfloor x \rfloor$}
+    \end{figure}
+
+\begin{theorem}[Properties of Integer Function]
+    Keep in mind the following important properties of integer function, which is 
+    often used in algorithm analysis or other mathematical proof.
+    \begin{enumerate}
+        \item $\lfloor x \rfloor \leq x \leq \lceil x \rceil$
+        \item  $\forall x\in \mathbb{Z} \text{, } \lceil x \rceil = \lfloor x \rfloor$
+        \item $x \notin \mathbb{Z} \iff  \lceil x \rceil =  \lfloor x \rfloor+ 1  $
+        \item $\lfloor -x \rfloor = -\lceil x \rceil $; $\lceil-x \rceil = - \lfloor x \rfloor$
+        \item $x - 1 < \lfloor x \rfloor \leq x \leq \lceil x \rceil < x + 1$
+    \end{enumerate}
+\end{theorem}
+The proofs to these conclusions are quite basic, and is therefore not provided here.
+
+\subsubsection{Remainder and Integer Function}
+We introduce a new operation that we have learned before in this section with its notation.
+\begin{notation}[modulo operator]
+    The modulo operation, denoted as \( a \bmod n \), finds the remainder when one integer \( a \) is divided by another integer \( n \). 
+    If \( a \) divided by \( n \) gives a quotient \( q \) with remainder \( r \), then \( a = nq + r \), and \( r \) would be the result of \( a \bmod n \).
+\end{notation}
+
+Moving back to the integer function, we have:
+\begin{theorem}
+    $$\forall x, y \in \mathbb{R}, x \bmod y = x - y\left\lfloor \frac{x}{y} \right\rfloor, \quad \text{if } y \neq 0; \quad x \bmod 0 = x$$
+\end{theorem}
+Below is the proof to the first conclusion, where the properties of integer function are applied.
+\begin{proof}
+    By the Division Algorithm, for any integer \( x \) and any positive integer \( y \), there exist unique integers \( q \) and \( r \) such that \( x = qy + r \) and \( 0 \leq r < |y| \), where \( q \) is the quotient and \( r \) is the remainder. The floor function \( \left\lfloor \frac{x}{y} \right\rfloor \) yields the largest integer less than or equal to \( \frac{x}{y} \), which by definition is the quotient \( q \). Thus, we have:
+\[
+\left\lfloor \frac{x}{y} \right\rfloor = q
+\]
+and therefore:
+\[
+y\left\lfloor \frac{x}{y} \right\rfloor = yq
+\]
+Subtracting this from \( x \) gives:
+\[
+x - y\left\lfloor \frac{x}{y} \right\rfloor = x - yq = r
+\]
+The uniqueness of the quotient and remainder in the Division Algorithm ensures that this value of \( r \) is the remainder from the modulus operation. Therefore, we have:
+\[
+x \mod y = x - y\left\lfloor \frac{x}{y} \right\rfloor
+\]
+which is the remainder when \( x \) is divided by \( y \), completing the proof.
+
+\end{proof}
+Also, from definition, by dividing $y$ on both sides of the equation:
+$$0\leq \frac{x}{y} - \lfloor\frac{x}{y}\rfloor = \frac{x \bmod y}{y} < 1$$
+Among which, $x \bmod y <y$. 
+\begin{proof}
+    
+        By the definition of the modulo operation, \( x \mod y \) can be written as \( x - y\left\lfloor \frac{x}{y} \right\rfloor \). Since \( \left\lfloor \frac{x}{y} \right\rfloor \) is the greatest integer less than or equal to \( \frac{x}{y} \), we have:
+        \[
+        x - y\left\lfloor \frac{x}{y} \right\rfloor \geq x - y \cdot \frac{x}{y} = x - x = 0.
+        \]
+        Furthermore, because \( \left \lfloor \frac{x}{y} \right\rfloor \) is less than \( \frac{x}{y} \), it follows that:
+        \[
+        x - y\left\lfloor \frac{x}{y} \right\rfloor < x - y \cdot \left(\frac{x}{y} - 1\right) = y.
+        \]
+        Hence, \( 0 \leq x \mod y < y \).
+
+\end{proof}
+And we have:
+\begin{corollary}
+    By above-mentioned conclusions:
+    \begin{itemize}
+        \item[a)] If $y > 0, \text{ then } 0 \leq x \bmod y < y$.
+        \item[b)] If $y < 0, \text{ then}  0 \geq x \bmod y > y$.
+        \item[c)]  $x - (x \bmod y) \text{ is an integral multiple of } y$.
+    \end{itemize}
+\end{corollary}
+We call $x \bmod y$ the remainder when $x$ is divided by $y$. We call $\lfloor \frac{x}{y} \rfloor$ the quotient.
+We have \( x \bmod y = 0 \) if and only if \( x \) is a multiple of \( y \), that is, if and only if \( x \) is divisible by \( y \). The notation \( y \mid x \), read ``\( y \) divides \( x \)'', means that \( y \) is a positive integer and \( x \bmod y = 0 \).
+\subsection{exercises}
+\begin{exercise}
+    
+        Let \( F \) be a field consisting of exactly three elements \( 0, 1, x \). Prove that \( x + x = 1 \) and that \( x \cdot x = 1 \). Obtain the addition and multiplication tables for \( F \).
+        
+\end{exercise}
+    Hint: Think on the property of filed: inverse of addition and multiplication.
+    \begin{proof}
+        Since \( F \) is a field, it has the properties of both a group under addition and a group under multiplication (excluding \( 0 \) for the latter).
+        
+        \textbf{Part 1: Proof that \( x + x = 1 \)}
+        \begin{enumerate}
+            \item In a group, every element has an additive inverse. In \( F \), the additive inverse of \( 0 \) is \( 0 \) itself, since \( 0 + 0 = 0 \).
+            \item The additive inverse of \( 1 \) cannot be \( 1 \) itself because \( 1 + 1 = 1 \) would imply \( 1 = 0 \), which is a contradiction. Therefore, \( 1 \)'s additive inverse must be some other element of \( F \), which can only be \( x \). Hence, \( 1 + x = 0 \).
+            \item The element \( x \) must also have an additive inverse in \( F \), which cannot be \( 0 \) (as \( 0 \)'s inverse is \( 0 \)) and cannot be \( 1 \) (as \( 1 \)'s inverse is \( x \)). The only option left is \( x \) itself. Thus, \( x + x = 0 \).
+            \item Given \( x + x = 0 \) and \( 1 + x = 0 \), by the cancellation law, it must be that \( x = 1 \). However, this contradicts the assumption that \( x \) is distinct from \( 1 \). Therefore, our assumption that \( x + x = 0 \) is incorrect.
+            \item The only remaining possibility is \( x + x = 1 \).
+        \end{enumerate}
+        
+        \textbf{Part 2: Proof that \( x \cdot x = 1 \)}
+        \begin{enumerate}
+            \item Similarly, in a multiplicative group (excluding \( 0 \)), every non-zero element has a multiplicative inverse. For \( 1 \), the multiplicative inverse is \( 1 \) itself since \( 1 \cdot 1 = 1 \).
+            \item The element \( x \) must have a multiplicative inverse. It cannot be \( 0 \) since \( 0 \) is not invertible, and it cannot be \( 1 \) since \( 1 \) is already serving as its own inverse.
+            \item The only remaining option for the multiplicative inverse of \( x \) is \( x \) itself. Hence, \( x \cdot x = 1 \).
+        \end{enumerate}
+
+        Now we construct the addition and multiplication tables for \( F \):
+
+        \noindent
+        \begin{minipage}{.5\textwidth}
+        \centering
+        \textbf{Addition Table:}
+        \[
+        \begin{array}{c|ccc}
+        + & 0 & 1 & x \\
+        \hline
+        0 & 0 & 1 & x \\
+        1 & 1 & x & 0 \\
+        x & x & 0 & 1 \\
+        \end{array}
+        \]
+        \end{minipage}%
+        \begin{minipage}{.5\textwidth}
+        \centering
+        \textbf{Multiplication Table:}
+        \[
+        \begin{array}{c|ccc}
+        \times & 0 & 1 & x \\
+        \hline
+        0 & 0 & 0 & 0 \\
+        1 & 0 & 1 & x \\
+        x & 0 & x & 1 \\
+        \end{array}
+        \]
+        \end{minipage}
+        \end{proof}
+\begin{problem}
+    Is there a field with exactly four elements? Is there a field with exactly six elements?
+\end{problem}
+
+
+\begin{exercise}
+    Let \( n \) be an integer, and let \( x \) be a real number. Prove that:
+\begin{enumerate}
+    \item[a)] \( \lfloor x \rfloor < n \) if and only if \( x < n \);
+    \item[b)] \( n \leq \lfloor x \rfloor \) if and only if \( n \leq x \);
+    \item[c)] \( \lfloor x \rfloor \leq n \) if and only if \( x \leq n \);
+    \item[d)] \( n < \lfloor x \rfloor \) if and only if \( n < x \);
+    \item[e)] \( \lfloor x \rfloor = n \) if and only if \( x - 1 < n \leq x \) and if and only if \( n \leq x < n + 1 \);
+    \item[f)] \( \lfloor x \rfloor = n \) if and only if \( x \leq n < x + 1 \) and if and only if \( n - 1 < x \leq n \).
+\end{enumerate}
+\end{exercise}
+\begin{proof}
+    \textbf{Part (a):} By definition, \( \lfloor x \rfloor \) is the greatest integer less than or equal to \( x \). Therefore, \( \lfloor x \rfloor < n \) means that \( x \) is less than \( n \) but not equal to it since \( \lfloor x \rfloor \) cannot be greater than \( x \).
+    
+    \textbf{Part (b):} If \( n \leq \lfloor x \rfloor \), then \( n \) must also be less than or equal to \( x \) because \( \lfloor x \rfloor \) is the greatest integer less than or equal to \( x \).
+    
+    \textbf{Part (c):} The statement \( \lfloor x \rfloor \leq n \) indicates that the largest integer less than or equal to \( x \) is also less than or equal to \( n \), which directly implies \( x \leq n \).
+    
+    \textbf{Part (d):} If \( n < \lfloor x \rfloor \), then \( n \) is strictly less than the integer part of \( x \), which means that \( n \) is also strictly less than \( x \).
+    
+    \textbf{Part (e):} For \( \lfloor x \rfloor = n \) to be true, \( x \) must be greater than \( n - 1 \) but not reach \( n + 1 \), hence the inequality \( x - 1 < n \leq x \) and \( n \leq x < n + 1 \).
+    
+    \textbf{Part (f):} Similarly, \( \lfloor x \rfloor = n \) if \( x \) has not reached \( n + 1 \) yet, which is the same as saying \( x \leq n < x + 1 \), and also if \( x \) is greater than \( n - 1 \) and less than or equal to \( n \), hence \( n - 1 < x \leq n \).
+    \end{proof}
+
+        \begin{exercise}
+            Using the previous exercise, prove that \( \lfloor -x \rfloor = -\lceil x \rceil \).
+            \end{exercise}
+            
+            \begin{proof}
+                From the previous exercise, we have the following properties of the floor function for a real number \( x \) and an integer \( n \):
+                \begin{enumerate}
+                    \item \( x - 1 < \lfloor x \rfloor \leq x \);
+                    \item \( n \leq x \) if and only if \( n \leq \lfloor x \rfloor \).
+                \end{enumerate}
+                Using these properties, we want to show that \( \lfloor -x \rfloor = -\lceil x \rceil \).
+                
+                Consider the number \( -x \). Applying property 1, we get:
+                \[ -x - 1 < \lfloor -x \rfloor \leq -x \]
+                Adding 1 to all parts of the inequality, we obtain:
+                \[ -x < \lfloor -x \rfloor + 1 \leq -x + 1 \]
+                Since \( \lceil x \rceil \) is the smallest integer greater than or equal to \( x \), \( \lfloor -x \rfloor + 1 \) is the smallest integer greater than \( -x \), which is \( -\lfloor x \rfloor \). Thus:
+                \[ \lfloor -x \rfloor = -\lfloor x \rfloor - 1 = -\lceil x \rceil \]
+                This completes the proof.
+            \end{proof}
+%------------------------------------------------------------
+
+
+
+
+
+
+\section{Algorithm and Algorithm Analysis}
+	This Section discusses what is algorithm, and more importantly, how algorithms
+	are assessed.
+
+    \subsection{Algorithm}
+    \subsubsection{What is an Algorithm?}
+    \begin{definition}[Algorithm] \label{def:algo}
+        An algorithm is a well-defined, step-by-step procedure or sequence of instructions designed to solve a specific class of problems:
+        \begin{itemize}
+            \item Each step in an algorithm must be clear and unambiguous. 
+            \item Algorithms must be solvable, meaning they should be able to produce a correct solution for any valid input within a finite amount of time.
+            \item An algorithm must terminate, i.e., it should have a defined end, at which point the goal has been achieved and the final output is produced.
+        \end{itemize} 
+    \end{definition}
+    Here is an example of multiplication algorithm for better understanding of the concept.
+    \begin{example}[Russian Peasant Multiplication]
+        To find the product of integers \( M \) and \( N \), both larger than one:
+
+        \begin{enumerate}
+            \item Start two columns on a page, one labeled ``A'' and the other ``B''; and put the value of \( M \) under A and the value of \( N \) under B.
+            
+            \item Repeat
+            \begin{itemize}
+                \item[(a)] calculate a new A-value by multiplying the old A-value by 2; and
+                \item[(b)] calculate a new B-value by dividing the old B-value by 2 and reducing the result by a half if necessary to obtain an integer;
+            \end{itemize}
+            Until the B-value equals one.
+            
+            \item Go down the columns crossing out the A-value whenever the B-value is even.
+            
+            \item Add up the remaining A-values and ``return'' the sum.
+        \end{enumerate}
+    \end{example}
+    To show how it works, assume $A=73$ and $B=41$.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{c|c}
+\hline
+A & B \\
+\hline
+73 & 41 \\
+146 & 20 (20\(\frac{1}{2}\) is reduced to 20) \\
+292 & 10 \\
+584 & 5 \\
+1168 & 2 (2\(\frac{1}{2}\) is reduced to 2) \\
+2336 & 1 \\
+\hline
+\end{tabular}
+\caption{Execution of RPM}
+\end{table}
+
+Sum of the remaining A-values: $2336+584+73=2993$.
+
+Let's review this algorithm referring to definition \autoref{def:algo}. 
+\begin{enumerate}
+    \item Clarity and Accuracy: All the instructions are clear and manipulable, nothing is ambiguous.
+    
+    \item Solvability: It is no doubt that for any two real numbers, we can find their product.
+    
+    \item Termination: For which ever numbers, we can always solve the problem in limited steps, as the terminate condition is when $B=1$, while B is divided by 2 (integer division) repetitively. 
+\end{enumerate}
+
+Hence, the RPM is a good example of algorithm, and with this, we could tell whether
+something else is an algorithm or not.
+\subsubsection{Pseudocode}
+Pseudocode is a simplified, half-code, half-natural language script used by software developers and algorithm designers to outline the structure of a program or algorithm. It's not executable code, but rather a high-level representation of the algorithm's logic. The purpose of pseudo-code is to express the design of an algorithm in a form that can be easily translated into actual programming languages. It is written in a way that is understandable to people who do not necessarily know the syntax of programming languages. Pseudo-code allows the designer to focus on the core logic of the algorithm without getting bogged down with the syntactic details of a particular programming language. It often uses control structures like if-then-else, while, for, and others that are common to many high-level languages.
+Here's the RPM transcribed in pseudocode:
+\begin{algorithm}[H]
+	\caption{Russian Peasant Multiplication}\label{alg:rpm}
+	\begin{algorithmic}[1]
+	\Procedure{RPM}{$A, B$}
+		\State $product \gets 0$
+		\While{$B > 0$}
+			\If{$B$ is odd}
+				\State $product \gets product + A$
+			\EndIf
+			\State $A \gets A \times 2$
+			\State $B \gets B \div 2$
+		\EndWhile
+		\State \textbf{return} $product$
+	\EndProcedure
+	\end{algorithmic}
+	\end{algorithm}
+	
+	All later algorithm in this book will be presented using pseudocode.
+%------------------------------------------------
+
+\subsection{Algorithm Analysis}
+
+\par Now let's take a look at this algorithm from another aspects. Is this a good or a bad algorithm. People assess algorithms by examine its \textbf{complexity}, which could be either \textbf{space complexity} or \textbf{time complexity}. The former refers to the the relationship between the input and the space needed to execute the algorithm, the latter, similarly, refers to the time needed. Many tools are available to quantify complexity, for both space and time complexity, \textbf{the big O notation} is the most common measurement. 
+\begin{definition}[The Big O Notation]\label{Big O}
+    Big O notation is used to classify algorithms according to how their running time or space requirements grow as the input size grows. The notation describes an upper limit on the time an algorithm could possibly take to complete, given the size of the input. For a function \( f(n) \), where n is the scale of input for the algorithm, the Big O notation is formally defined as follows with $c$ as a positive constant:
+    $$O(f(n)) = \{ g(n) : \text{Where } c \text{ and } n_0 
+	\text{ such that } 0 \leq g(n) \leq c \cdot f(n) \text{ for all } n \geq n_0 \}$$
+\end{definition}
+
+The following table provides common time complexities using Big O notation:
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{@{}cc@{}}
+\toprule
+\( f(n) \) & Description \\ \midrule
+1 & Constant \\
+\( \log n \) & Logarithmic \\
+n & Linear \\
+\( n \log n \) & Linearithmic \\
+\( n^2 \) & Quadratic \\
+\( n^3 \) & Cubic \\
+\( 2^n \) & Exponential \\ 
+\(n!\) & Factorial \\
+\bottomrule
+\end{tabular}
+\caption{Common time complexities in Big O notation}
+\end{table}
+We can visualize it using function graph
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{Images/time complexity.png}
+    \caption{Time Complexity Visualization}
+    
+\end{figure}
+So which space and time complexity does this algorithm fall in? 
+\subsubsection{Time Complexity}
+To analyze the time complexity, we usually focus on the termination condition or the number of iteration for the algorithm. For the real number $B$ in RPM, each time it is divided by 2 until $B = 1$. Therefore, the total number of iteration will be $\log_2 B$, which is categorized in \( O(\log n) \).
+\begin{remark}
+    Actually, the time complexity of an algorithm could be shown by strict proof using MI. Here is the proof on the time complexity of RPM.
+    \begin{proof}
+        We will use mathematical induction to prove that the number of steps in the algorithm is proportional to \( \log_2(B) \).
+
+\noindent \textbf{Base Case:}\\
+When \( B = 1 \), the algorithm requires only one step. This is consistent with \( \log_2(1) = 0 \), which satisfies our complexity class \( O(\log n) \).
+
+\noindent \textbf{Inductive Hypothesis:}\\
+Assume that for a positive integer \( k \), when \( B = k \), the algorithm operates within \( \log_2(k) \) steps.
+
+\noindent \textbf{Inductive Step:}\\
+Consider \( B = 2k \). In the first step of the algorithm, \( B \) is halved to \( k \), and \( S \) is doubled. From this point, based on our inductive hypothesis, reaching \( B = 1 \) requires \( \log_2(k) \) steps.
+
+Hence, for \( A = 2k \), the total number of steps is \( \log_2(k) + 1 \). Using the properties of logarithms, we have:
+\begin{align*}
+\log_2(k) + 1 &= \log_2(k) + \log_2(2) \\
+&= \log_2(2k)
+\end{align*}
+
+Therefore, for any \( A = 2k \), the total number of steps is also \( \log_2(2k) \), proving that for any positive integer \( A \), the time complexity of the Russian Peasant Multiplication is \( O(\log A) \).
+    \end{proof}
+\end{remark}
+%------------------------------------------------
+\subsubsection{Space Complexity}
+The space complexity of the Russian Peasant Multiplication algorithm is determined by the amount of memory required to store the operands and the intermediate results. Initially, only two numbers need to be stored: the multiplicands. As the algorithm proceeds, we need additional space to keep track of the current product. Since the algorithm does not use any complex data structures and only requires a fixed number of variables, the space complexity is \( O(1) \), indicating constant space usage. It does not depend on the size of the input operands, as the memory required does not increase with larger numbers.
+%------------------------------------------------
+\subsection{Exercises}
+\begin{exercise}
+    A non-recursive Square and Multiply Algorithm to calculate \( b^n \).
+
+\textbf{Precondition:} \( n \) is a positive integer and \( b \) is of any type that can be multiplied.
+
+\textbf{Postcondition:} the value returned is equal \( (b)^n \).
+
+\begin{enumerate}
+    \item Show that the algorithm terminates. Let \( a_k \) denote the value of \( a \) after the \( k \)th iteration of the while-loop, and let \( s = \lfloor \lg(n) \rfloor \). Prove by Mathematical Induction on \( k \) that For any nonnegative integer \( k \), after \( k \) iterations of the while-loop:
+    $$2^{s-k} \le a_k < 2^{s-k+1}$$
+    \item  Proof of correctness. Use Mathematical Induction on \( k \) to prove For any nonnegative integer \( k \), after \( k \) iterations of the while-loop:
+\[ (\text{square})^a \times \text{product} = (b)^n \]
+\end{enumerate}
+\end{exercise}
+\begin{algorithm}
+    \caption{Square and Multiply Algorithm}
+    \begin{algorithmic}[1]
+    \State $product \gets 1$
+    \State $square \gets b$
+    \State $a \gets n$
+    \While{$a > 1$}
+        \If{$a \mod 2 \neq 0$} \Comment{If $a$ is odd}
+            \State $product \gets product \times square$
+        \EndIf
+        \State $square \gets square \times square$
+        \State $a \gets \lfloor a / 2 \rfloor$ \Comment{Integer division}
+    \EndWhile
+    \State \Return $product \times square$
+    \end{algorithmic}
+\end{algorithm}
+\begin{proof}[1]
+    \textit{Base Case} \(k=0\):
+For \(k = 0\), \(a_0 = n\), which is the initial value of \(a\). Since \(s = \left\lfloor \lg(n) \right\rfloor\), it is the greatest integer less than or equal to \(\lg(n)\), therefore \(2^s \leq n < 2^{s+1}\). So, for \(k = 0\), the predicate holds because:
+\[
+\frac{2^s}{2^0} \leq a_0 = n < 2 \times \frac{2^s}{2^0}
+\]
+
+\textit{Inductive Step}:
+Assume \(P(k)\) holds for some nonnegative integer \(k\). That is:
+\[
+\frac{2^s}{2^k} \leq a_k < 2 \times \frac{2^s}{2^k}
+\]
+We need to show \(P(k+1)\) holds. During each iteration, \(a\) is halved (integer division by 2), which gives us:
+\[
+a_{k+1} = \left\lfloor \frac{a_k}{2} \right\rfloor
+\]
+
+Since \(a_k\) is an integer, \(\left\lfloor \frac{a_k}{2} \right\rfloor\) will either be \(\frac{a_k}{2}\) or \(\frac{a_k - 1}{2}\), depending on whether \(a_k\) is even or odd. Thus, we have:
+\[
+\frac{2^s}{2^{k+1}} \leq \left\lfloor \frac{a_k}{2} \right\rfloor < 2 \times \frac{2^s}{2^{k+1}}
+\]
+
+Since \(a_k < 2 \times \frac{2^s}{2^k}\), dividing by 2 gives \(\frac{a_k}{2} < \frac{2^s}{2^k}\), and therefore:
+\[
+a_{k+1} < 2 \times \frac{2^s}{2^{k+1}}
+\]
+
+Similarly, \(\frac{2^s}{2^k} \leq a_k\) implies \(\frac{2^s}{2^{k+1}} \leq \frac{a_k}{2}\), so we have:
+\[
+\frac{2^s}{2^{k+1}} \leq a_{k+1}
+\]
+This completes the inductive step and thus, by induction, \(P(k)\) holds for all nonnegative integers \(k\).
+\end{proof}
+\begin{proof}[2]
+    We need to prove that after \(k\) iterations of the while-loop, the invariant holds:
+\[
+(\text{square})^a \times \text{product} = b^n
+\]
+
+\textit{Base Case} \(k=0\):
+Initially, \(\text{product} = 1\), \(\text{square} = b\), and \(a = n\). So,
+\[
+(\text{square})^a \times \text{product} = b^n
+\]
+is trivially true.
+
+\textit{Inductive Step}:
+Assume the invariant holds after \(k\) iterations, i.e.,
+\[
+(\text{square}_k)^{a_k} \times \text{product}_k = b^n
+\]
+Now, consider the \(k+1\)th iteration. There are two cases:
+
+\textit{Case 1} (\(a_k\) is odd):
+The product is updated by multiplying it with \(\text{square}_k\), and we have:
+\[
+\text{product}_{k+1} = \text{product}_k \times \text{square}_k
+\]
+Since \(a_k\) is odd, we can write \(a_k = 2m + 1\) for some integer \(m\), and after the iteration, \(a\) becomes \(a_{k+1} = m\). The invariant becomes:
+\[
+(\text{square}_k)^{2m+1} \times \text{product}_k = (\text{square}_k)^m \times \text{product}_{k+1} = b^n
+\]
+
+\textit{Case 2} (\(a_k\) is even):
+The product remains the same, and \(a_k\) can be written as \(2m\), so the invariant remains:
+\[
+(\text{square}_k)^{2m} \times \text{product}_k = (\text{square}_k)^m \times \text{product}_k = b^n
+\]
+since \(\text{square}_{k+1} = (\text{square}_k)^2\) and \(a_{k+1} = m\).
+
+In both cases, after the iteration, \(\text{square}\) is squared, so we get:
+\[
+\text{square}_{k+1} = (\text{square}_k)^2
+\]
+and therefore, the invariant still holds as:
+\[
+(\text{square}_{k+1})^{a_{k+1}} \times \text{product}_{k+1} = b^n
+\]
+
+Thus, by mathematical induction, the invariant holds true for every iteration of the loop, proving the correctness of the algorithm.
+\end{proof}
 
 
 
