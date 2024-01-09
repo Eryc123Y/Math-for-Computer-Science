@@ -2633,6 +2633,8 @@ Hence, the RPM is a good example of algorithm, and with this, we could tell whet
 something else is an algorithm or not.
 \subsubsection{Pseudocode}
 Pseudocode is a simplified, half-code, half-natural language script used by software developers and algorithm designers to outline the structure of a program or algorithm. It's not executable code, but rather a high-level representation of the algorithm's logic. The purpose of pseudo-code is to express the design of an algorithm in a form that can be easily translated into actual programming languages. It is written in a way that is understandable to people who do not necessarily know the syntax of programming languages. Pseudo-code allows the designer to focus on the core logic of the algorithm without getting bogged down with the syntactic details of a particular programming language. It often uses control structures like if-then-else, while, for, and others that are common to many high-level languages.
+Understanding pseudocode is quite easy as it quite close to natural languages.
+
 Here's the RPM transcribed in pseudocode:
 \begin{algorithm}[H]
 	\caption{Russian Peasant Multiplication}\label{alg:rpm}
@@ -2650,8 +2652,22 @@ Here's the RPM transcribed in pseudocode:
 	\EndProcedure
 	\end{algorithmic}
 	\end{algorithm}
-	
-	All later algorithm in this book will be presented using pseudocode.
+
+    To explicit:
+    \begin{itemize}
+        \item \textbf{procedure RPM(A, B)}: Defines a procedure or function named `RPM` taking two parameters `A` and `B`.
+        \item \textbf{product $\leftarrow$ 0}: The assignment operator `$\leftarrow$` is used to assign the value on the right (0 here) to the variable on the left (`product`).
+        \item \textbf{while B $>$ 0 do}: Begins a `while` loop that continues as long as the condition `B $>$ 0` is true. The `do` indicates that the following block of code will execute if the condition is met.
+        \item \textbf{if B is odd then}: A conditional statement that checks if `B` is odd. If it is, the subsequent statement is executed.
+        \item \textbf{product $\leftarrow$ product + A}: An assignment operation that adds `A` to `product` and assigns the sum back to `product`.
+        \item \textbf{end if}: Marks the end of the `if` statement.
+        \item \textbf{A $\leftarrow$ A $\times$ 2}: Multiplies the value of `A` by 2 and then assigns the result back to `A`.
+        \item \textbf{B $\leftarrow$ B $\div$ 2}: Divides the value of `B` by 2 (integer division) and assigns the result back to `B`.
+        \item \textbf{end while}: Marks the end of the `while` loop.
+        \item \textbf{return product}: The `return` statement indicates the output or result of the procedure, which here is the value of the variable `product`.
+        \item \textbf{end procedure}: Marks the end of the `RPM` procedure.
+    \end{itemize}
+	All later algorithms in this book will be presented using pseudocode.
 %------------------------------------------------
 
 \subsection{Algorithm Analysis}
@@ -2831,15 +2847,231 @@ and therefore, the invariant still holds as:
 
 Thus, by mathematical induction, the invariant holds true for every iteration of the loop, proving the correctness of the algorithm.
 \end{proof}
+%------------------------------------------------
+\section{Base of Number}
+In everyday life we use a system based on decimal digits (0, 1, 2, 3, 4, 5, 6, 7, 8, 9) to
+represent numbers, and refer to the system as the decimal system. Consider what 442.256 means.
+The decimal system is said to have a base, or radix, of 10. This means that each digit
+in the number is multiplied by 10 raised to a power corresponding to that digit's
+position:
+$$\begin{aligned}442.256&=(4\times10^2)+(4+10^1)+(2\times10^0)+(2\times10^{-1})+(5\times10^{-2})\\&+(6\times10^{-3})\end{aligned}$$
+\begin{definition}[significant Digit]
+    In any number, the leftmost digit is referred to as the most significant digit,
+because it carries the highest value. The rightmost digit is called the least significant
+digit.
+\end{definition}
+In general, for the decimal representation of \( X = \{ \ldots d_2d_1d_0.d_{-1}d_{-2}d_{-3} \ldots \} \), the value of \( X \) is
+\[
+X = \sum_i (d_i \times 10^i)
+\]
+
+\subsection{The Binary System}
+\begin{definition}[Positional Number System]
+    In a positional number system, each number is represented by a string of digits in which each digit position \( i \) has an associated weight \( r^i \), where \( r \) is the radix, or base, of the number system. The general form of a number in such a system with radix \( r \) is
+
+\[
+(\ldots a_3a_2a_1a_0.a_{-1}a_{-2}a_{-3}\ldots)_r
+\]
+
+where the value of any digit \( a_i \) is an integer in the range \( 0 \leq a_i < r \). The dot between \( a_0 \) and \( a_{-1} \) is called the radix point. The number is defined to have the value
+
+\[
+\ldots + a_3r^3 + a_2r^2 + a_1r^1 + a_0r^0 + a_{-1}r^{-1} + a_{-2}r^{-2} + a_{-3}r^{-3} + \ldots = \sum_i (a_i \times b^i)
+\]
 
 
-
+\end{definition}
 %------------------------------------------------
 
 \chapterimage{orange2.jpg}
 \chapterspaceabove{6.75cm} 
 \chapterspacebelow{7.25cm} 
 \chapter{Inequality}
+throughout our mathematical journey, equalities are always the very basics of most conclusion, and that is also which we start to learn math for. However, inequalities are not such a know thing as equalities.
+Inequalities have many tricky characteristics so that we have to take with care, or things could go wrong. This chapter covers the fundamentals of inequality as a crucial tool for problem-solving in Computer Science.
+
+\section{Inequality basics}
+We all know about inequalities, and the first thing to clarify is the relationship between sizes. How to determine the size relationship between certain numbers? Since the basis for comparing "numbers" with each other corresponds to one, it is stipulated on the number line that the points increase from left to right, and therefore the numbers they represent increase in turn. Listed in ascending order, that is:
+
+Let \( a, b \) be two real numbers, and the points on the number line are denoted as \( A, B \) respectively. If \( A \) is to the right of \( B \), we say \( a > b \); if \( A \) is to the left of \( B \), we say \( a < b \); if \( A \) coincides with \( B \), we say \( a = b \).
+
+Thus, for any two real numbers, one and only one of the following three situations must hold:
+
+\[
+a > b; \quad a = b; \quad a < b.
+\]
+
+The above relationship is also known as the one-dimensional coordinate law.
+
+\[
+\begin{aligned}
+a > b &\Leftrightarrow a - b > 0 \\
+a < b &\Leftrightarrow a - b < 0 \\
+a = b &\Leftrightarrow a - b = 0
+\end{aligned}
+\]
+
+Where the symbol “\( \Leftrightarrow \)” (double arrow), read as "if and only if," means that the truth of two propositions depends on each other. That is to say, if one proposition is true, then the other proposition is also true; conversely, if one proposition is false, then the other proposition is also false.
+
+Based on the derivation of inequalities, in most cases, the above principles are sufficient. The following mathematical laws involve the geometric and algebraic meanings of the sizes of real numbers and the relationship between them. They are the basis for comparing the sizes of two real numbers and for proving inequalities by comparison. Let's review some basic properties of inequalities that are the foundation for our further study.
+
+\begin{itemize}
+    \item Symmetry: \( a > b \) if and only if \( b < a \).
+    \item Transitivity: If \( a > b \) and \( b > c \), then \( a > c \).
+    \item Addition (Subtraction): If \( a > b \), then \( a + c > b + c \).
+    \item Multiplication (Division): If \( a > b \) and \( c > 0 \), then \( ac > bc \); if \( a > b \) and \( c < 0 \), then \( ac < bc \).
+    \item Exponentiation: If \( a > b \), then \( a^n > b^n \), where \( n \) is a positive integer, and \( n \geq 2 \).
+    \item Root Extraction (Power Root): If \( a > b > 0 \), then \( \sqrt[n]{a} > \sqrt[n]{b} \), where \( n \) is a positive integer, and \( n \geq 2 \).
+    \item If \( a > b \) and \( c > d \), then \( a + c > b + d \).
+    \item If \( a > b > 0 \) and \( c > d > 0 \), then \( ac > bd \).
+\end{itemize}
+
+\subsection{Solving Quadratic Inequality}
+Recall that, when we solve Quadratic equations, we use discriminant to solve equations, which is also applicable to inequalities.
+For a quadratic inequality of the form $ax^2 + bx + c > 0$ or $ax^2 + bx + c < 0$ (where $a > 0$), the solution set can be determined by the discriminant $\Delta = b^2 - 4ac$:
+\begin{enumerate}
+    \item If $\Delta > 0$, the quadratic equation $ax^2 + bx + c = 0$ has two distinct real roots $x_1$ and $x_2$, and $x_1 < x_2$. The solution set for $y = ax^2 + bx + c$ being greater than zero (when $y = 0$) is for values of $x$ either less than $x_1$ or greater than $x_2$, and the solution set for $ax^2 + bx + c < 0$ is $\{ x \mid x_1 < x < x_2 \}$.
+    \item If $\Delta = 0$, then $ax^2 + bx + c = 0$ has one real root, specifically $x_1 = x_2 = -\frac{b}{2a}$. The solution set for $y = ax^2 + bx + c$ being greater than zero is all $x$ except $x \neq -\frac{b}{2a}$, and there is no solution set where $ax^2 + bx + c < 0$.
+    \item If $\Delta < 0$, then $ax^2 + bx + c = 0$ has no real roots, and the parabola $y = ax^2 + bx + c$ does not intersect the x-axis. The solution set for $ax^2 + bx + c > 0$ is all real numbers, and there is no solution set where $ax^2 + bx + c < 0$.
+\end{enumerate}
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{quadratic.png}
+    \caption{Quadratic function graphs based on the discriminant.}
+\end{figure}
+\begin{example}
+    Solve the following quadratic inequalities:
+
+\begin{enumerate}
+    \item \(4x^2 + 6x + 2 < 0\);
+    \item \(4x^2 + 4x + 1 < 0\);
+    \item \(-3x^2 + x - 6 < 0\).
+\end{enumerate}
+\end{example}
+\textbf{Solution:}
+
+\begin{enumerate}
+    \item The discriminant \(\Delta = 6^2 - 4 \times 4 \times 2 = 4 > 0\), so the quadratic equation \(4x^2 + 6x + 2 = 0\) has two real roots \(x_1 = -1\), \(x_2 = -\frac{1}{2}\).
+    Hence, the solution set for the inequality is \(x \in \left(-\infty, -1\right) \cup \left(-\frac{1}{2}, \infty\right)\).
+
+    \item The discriminant \(\Delta = 4^2 - 4 \times 4 \times 1 = 0\), so the quadratic equation \(4x^2 + 4x + 1 = 0\) has one real double root. Therefore, the inequality has no solution set.
+
+    \item The discriminant \(\Delta = 1^2 - 4 \times (-3) \times (-6) = -71 < 0\), so the quadratic equation \(-3x^2 + x - 6 = 0\) has no real roots.
+    Therefore, the solution set for the inequality \(3x^2 - x + 6 > 0\) is all real numbers, and thus the solution set for the given inequality is also all real numbers.
+\end{enumerate}
+
+\subsection{important Inequalities}
+In this part, we explore two fundamental inequalities in mathematics: the Triangle Inequality and the Arithmetic-Geometric Mean (AGM) Inequality. Each section provides a comprehensive overview, including detailed proofs and corollaries.
+\subsubsection{The Triangle Inequality}
+The Triangle Inequality is a fundamental relation in geometry and analysis, asserting that the sum of the lengths of any two sides of a triangle must be greater than or equal to the length of the remaining side.
+    \begin{definition}
+        For any real numbers \( a \) and \( b \), the Triangle Inequality is given by:
+        \[ |a + b| \leq |a| + |b| \]
+    \end{definition}
+    \begin{proof}
+        The proof of the Triangle Inequality considers the sign of \( a \) and \( b \):
+    \begin{itemize}
+     \item \textbf{Case 1:} If \( a \) and \( b \) have the same sign, the inequality follows directly.
+        \item \textbf{Case 2:} If \( a \) and \( b \) have opposite signs, assume \( a > 0 \) and \( b < 0      \). Then, \( |a + b| \leq a - b = |a| + |b| \).
+    \end{itemize}
+    Thus, the Triangle Inequality is proven.
+    \end{proof}
+    \begin{remark}
+        This important inequality will also be seen in other chapters.
+    \end{remark}
+
+    \subsubsection{The Arithmetic-Geometric Mean Inequality}
+    The AGM Inequality states that for any set of non-negative real numbers, the arithmetic mean is always greater than or equal to the geometric mean.
+    \begin{definition}[AGM Inequality] \label{AGM}
+        For non-negative real numbers \( a_1, a_2, \ldots, a_n \), the AGM Inequality is:
+        \[ \frac{a_1 + a_2 + \cdots + a_n}{n} \geq \sqrt[n]{a_1 \cdot a_2 \cdots a_n} \]
+    \end{definition}
+    \begin{proof}
+        The proof uses induction:
+        \begin{enumerate}
+            \item \textbf{Base Case:} For \( n = 1 \), the inequality reduces to:
+\[ \frac{a_1}{1} \geq \sqrt[1]{a_1} \]
+which is trivially true since both sides are equal to \( a_1 \).
+            \item \textbf{Inductive Step:} Assume the inequality holds for \( n = k \). That is, for non-negative real numbers \( a_1, a_2, \ldots, a_k \), we have:
+\[ \frac{a_1 + a_2 + \cdots + a_k}{k} \geq \sqrt[k]{a_1 \cdot a_2 \cdots a_k} \]
+We need to show that it holds for \( n = k + 1 \).
+
+Consider \( k + 1 \) non-negative real numbers \( a_1, a_2, \ldots, a_{k+1} \). Let \( A \) be their arithmetic mean and \( G \) their geometric mean:
+\[ A = \frac{a_1 + a_2 + \cdots + a_{k+1}}{k+1} \]
+\[ G = \sqrt[k+1]{a_1 \cdot a_2 \cdots a_{k+1}} \]
+
+To prove \( A \geq G \), consider the \( k \) numbers \( a_1, a_2, \ldots, a_k, A \). By the inductive hypothesis, their arithmetic mean is at least as great as their geometric mean. That is,
+\[ \frac{a_1 + a_2 + \cdots + a_k + A}{k+1} \geq \sqrt[k+1]{a_1 \cdot a_2 \cdots a_k \cdot A} \]
+Since the left-hand side is \( A \), we have:
+\[ A \geq \sqrt[k+1]{a_1 \cdot a_2 \cdots a_k \cdot A} \]
+Raising both sides to the power \( k+1 \) and rearranging gives:
+\[ A^{k+1} \geq a_1 \cdot a_2 \cdots a_k \cdot A \]
+This implies \( A \geq G \), completing the proof.
+        \end{enumerate}
+    \end{proof}
+
+    \begin{corollary}[Mean Inequality Corollary]
+If $x, y > 0$, then
+\[\frac{2xy}{x+y} \leq \sqrt{xy} \leq \frac{x+y}{2}.\]
+Equality holds in each inequality only when $x = y$.
+\end{corollary}
+
+\begin{proof}
+Proposition \ref{AGM} yields $\sqrt{xy} \leq \frac{x+y}{2}$. We obtain the other inequality from this by multiplying both sides by the positive number $\frac{2\sqrt{xy}}{x+y}$, leading to:
+\[\sqrt{xy} \cdot \frac{2\sqrt{xy}}{x+y} \leq \frac{x+y}{2} \cdot \frac{2\sqrt{xy}}{x+y},\]
+which simplifies to:
+\[\frac{2xy}{x+y} \leq \sqrt{xy}.\]
+Thus, we have shown that $\frac{2xy}{x+y} \leq \sqrt{xy} \leq \frac{x+y}{2}$, with equality if and only if $x = y$.
+\end{proof}
+The expression $\frac{2xy}{x+y}$ is the harmonic mean of $x$ and $y$. It arises in the study of average rates. For example, consider traveling a distance $d$ at rate $r_1$ in time $t_1$ and making the return trip at rate $r_2$ in time $t_2$. The harmonic mean gives us the average rate $r$ for the full trip.
+
+Assuming we travel the same distance $d$ for both trips, we have:
+\begin{align*}
+r_1t_1 &= d \\
+r_2t_2 &= d
+\end{align*}
+
+The average rate $r$ for the full trip is computed as follows:
+\begin{align*}
+r &= \frac{2d}{t_1 + t_2} = \frac{2d}{\frac{d}{r_1} + \frac{d}{r_2}} = \frac{2d}{\frac{r_1r_2(t_1 + t_2)}{r_1r_2}} =\frac{2r_1r_2}{r_1 + r_2}\\
+\end{align*}
+%------------------------------------------------
+\subsection{Exercises}
+\begin{exercise}
+    Explain the following statement.
+    \begin{enumerate}
+        \item If \( a > b \), then \( \frac{a}{c} > \frac{b}{c} \);
+        \item If \( ac < bc \), then \( a < b \);
+        \item If \( a < b \), then \( \frac{1}{a} > \frac{1}{b} \);
+        \item If \( ac^2 > bc^2 \), then \( a > b \);
+        \item If \( a > b \), then \( a^n > b^n \).
+    \end{enumerate}
+\end{exercise}
+
+\textbf{Solution:}
+
+\begin{enumerate}
+    \item If \( c > 0 \), multiplying both sides of \( a > b \) by the positive number \( \frac{1}{c} \) preserves the inequality, hence \( \frac{a}{c} > \frac{b}{c} \). If \( c < 0 \), the direction of the inequality would be reversed, which is not given in the condition, hence we assume \( c > 0 \).
+    \item Dividing both sides of \( ac < bc \) by \( c \) (assuming \( c \neq 0 \)), we get \( a < b \) because division by a positive number preserves the inequality, and division by a negative number reverses it.
+    \item Taking the reciprocal of both sides of \( a < b \) reverses the inequality because \( a \) and \( b \) are on opposite sides of the fraction line, hence \( \frac{1}{a} > \frac{1}{b} \) (assuming \( a, b > 0 \) to avoid division by zero).
+    \item Dividing both sides of \( ac^2 > bc^2 \) by \( c^2 \) (assuming \( c \neq 0 \)) preserves the inequality, hence \( a > b \) because \( c^2 \) is positive regardless of whether \( c \) is positive or negative.
+    \item Raising both sides of \( a > b \) to a power \( n \) (assuming \( n \) is a positive integer) preserves the inequality because both \( a \) and \( b \) are raised to the same power, hence \( a^n > b^n \).
+\end{enumerate}
+\begin{exercise}
+    Given the inequality \( a > b > 0 \), \( c < d < 0 \), \( f < 0 \), show that:
+\[
+\frac{f}{a - c} > \frac{f}{b - d}.
+\]
+\end{exercise}
+\begin{proof}
+    Since \( a > b > 0 \) and \( c < d < 0 \), then \( a - c > b - d \) because subtracting a smaller negative number is the same as adding a larger positive number. Given that \( f < 0 \), when dividing by a larger positive number, the result is smaller because a negative number divided by a positive number yields a negative result, and the further away the divisor is from zero, the smaller the quotient.
+
+Therefore:
+\[
+\frac{f}{a - c} > \frac{f}{b - d}.
+\]
+\end{proof}
+
 
 %------------------------------------------------
 
