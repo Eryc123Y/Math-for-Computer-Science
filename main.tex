@@ -2926,7 +2926,7 @@ Based on the derivation of inequalities, in most cases, the above principles are
     \item If \( a > b > 0 \) and \( c > d > 0 \), then \( ac > bd \).
 \end{itemize}
 
-\subsection{Solving Quadratic Inequality}
+\section{Solving Quadratic Inequality}
 Recall that, when we solve Quadratic equations, we use discriminant to solve equations, which is also applicable to inequalities.
 For a quadratic inequality of the form $ax^2 + bx + c > 0$ or $ax^2 + bx + c < 0$ (where $a > 0$), the solution set can be determined by the discriminant $\Delta = b^2 - 4ac$:
 \begin{enumerate}
@@ -2960,9 +2960,9 @@ For a quadratic inequality of the form $ax^2 + bx + c > 0$ or $ax^2 + bx + c < 0
     Therefore, the solution set for the inequality \(3x^2 - x + 6 > 0\) is all real numbers, and thus the solution set for the given inequality is also all real numbers.
 \end{enumerate}
 
-\subsection{important Inequalities}
+\section{important Inequalities}
 In this part, we explore two fundamental inequalities in mathematics: the Triangle Inequality and the Arithmetic-Geometric Mean (AGM) Inequality. Each section provides a comprehensive overview, including detailed proofs and corollaries.
-\subsubsection{The Triangle Inequality}
+\subsection{The Triangle Inequality}
 The Triangle Inequality is a fundamental relation in geometry and analysis, asserting that the sum of the lengths of any two sides of a triangle must be greater than or equal to the length of the remaining side.
     \begin{definition}
         For any real numbers \( a \) and \( b \), the Triangle Inequality is given by:
@@ -2980,36 +2980,128 @@ The Triangle Inequality is a fundamental relation in geometry and analysis, asse
         This important inequality will also be seen in other chapters.
     \end{remark}
 
-    \subsubsection{The Arithmetic-Geometric Mean Inequality}
-    The AGM Inequality states that for any set of non-negative real numbers, the arithmetic mean is always greater than or equal to the geometric mean.
+    \subsection{The Arithmetic-Geometric Mean Inequality}
+    The AGM Inequality(also known as AM-GM inequality) states that for any set of non-negative real numbers, the arithmetic mean is always greater than or equal to the geometric mean.
     \begin{definition}[AGM Inequality] \label{AGM}
         For non-negative real numbers \( a_1, a_2, \ldots, a_n \), the AGM Inequality is:
         \[ \frac{a_1 + a_2 + \cdots + a_n}{n} \geq \sqrt[n]{a_1 \cdot a_2 \cdots a_n} \]
     \end{definition}
+    Many methods are available to prove this important conclusion. Below is the proof by MI.
     \begin{proof}
-        The proof uses induction:
-        \begin{enumerate}
-            \item \textbf{Base Case:} For \( n = 1 \), the inequality reduces to:
-\[ \frac{a_1}{1} \geq \sqrt[1]{a_1} \]
-which is trivially true since both sides are equal to \( a_1 \).
-            \item \textbf{Inductive Step:} Assume the inequality holds for \( n = k \). That is, for non-negative real numbers \( a_1, a_2, \ldots, a_k \), we have:
-\[ \frac{a_1 + a_2 + \cdots + a_k}{k} \geq \sqrt[k]{a_1 \cdot a_2 \cdots a_k} \]
-We need to show that it holds for \( n = k + 1 \).
+        We prove that for any non-negative real numbers \(x_1, \ldots, x_n\), the following inequality holds:
 
-Consider \( k + 1 \) non-negative real numbers \( a_1, a_2, \ldots, a_{k+1} \). Let \( A \) be their arithmetic mean and \( G \) their geometric mean:
-\[ A = \frac{a_1 + a_2 + \cdots + a_{k+1}}{k+1} \]
-\[ G = \sqrt[k+1]{a_1 \cdot a_2 \cdots a_{k+1}} \]
+\[
+\alpha^n \geq x_1 x_2 \cdots x_n
+\]
 
-To prove \( A \geq G \), consider the \( k \) numbers \( a_1, a_2, \ldots, a_k, A \). By the inductive hypothesis, their arithmetic mean is at least as great as their geometric mean. That is,
-\[ \frac{a_1 + a_2 + \cdots + a_k + A}{k+1} \geq \sqrt[k+1]{a_1 \cdot a_2 \cdots a_k \cdot A} \]
-Since the left-hand side is \( A \), we have:
-\[ A \geq \sqrt[k+1]{a_1 \cdot a_2 \cdots a_k \cdot A} \]
-Raising both sides to the power \( k+1 \) and rearranging gives:
-\[ A^{k+1} \geq a_1 \cdot a_2 \cdots a_k \cdot A \]
-This implies \( A \geq G \), completing the proof.
-        \end{enumerate}
-    \end{proof}
+where \( \alpha \) is the arithmetic mean of the numbers, with equality if and only if all the numbers are equal.
+\begin{remark}
+    This is because, the inequality is equivalent to AGM:
+    $$\frac{a_{1} +a_{2} +\dotsc +a_{n}}{n} \geq \sqrt[n]{a_{1} \cdot a_{2} \dotsc a_{n}} \Longleftrightarrow \left(\frac{a_{1} +a_{2} +\dotsc +a_{n}}{n}\right)^{n} \geq a_{1} \cdot a_{2} \dotsc a_{n}$$
 
+\end{remark}
+\textbf{Induction Basis:}
+For \(n = 1\), the statement is trivially true, as the arithmetic mean of a single number is the number itself.
+
+\noindent \textbf{Induction Hypothesis:}
+Assume that the AM-GM inequality holds for \(n\) non-negative real numbers.
+
+\noindent \textbf{Induction Step:}
+Consider \(n+1\) non-negative real numbers \(x_1, \ldots, x_{n+1}\). Their arithmetic mean \( \alpha \) satisfies:
+
+\[
+\alpha = \frac{x_1 + \cdots + x_n + x_{n+1}}{n+1}
+\]
+
+If all the \(x_i\) are equal to \( \alpha \), then we have equality in the AM-GM statement, and we are done. In the case where some are not equal to \( \alpha \), there must exist at least one number greater and one smaller than \( \alpha \). Without loss of generality, we can reorder our \(x_i\) to ensure that \(x_n > \alpha > x_{n+1}\), which gives us:
+\begin{equation}
+    (x_n - \alpha)(\alpha - x_{n+1}) > 0 \label{agm1}
+\end{equation}
+
+
+Define a new number \( y \) with:
+
+\[
+y = x_n + x_{n+1} - \alpha \geq x_n - \alpha > 0
+\]
+Since all numbers from $x_1$ to $y$  are non-negative.
+
+$$\begin{aligned}&(n+1)\alpha=x_1+\cdots+x_{n-1}+x_n+x_{n+1}\\&n\alpha=x_1+\cdots+x_{n-1}+\underbrace{x_n+x_{n+1}-\alpha}_{=y},\end{aligned}$$
+
+This shows that $\alpha$ is also a geometric mean of the n-sequence $x_{1},\ldots,x_{n-1},y$. 
+
+By the induction hypothesis:
+$$\alpha^{n+1}=\alpha^n\cdot\alpha\geq x_1x_2\cdots x_{n-1}y\cdot\alpha.$$
+
+From equation \autoref{agm1}, we have:
+$$(\underbrace{x_n+x_{n+1}-\alpha}_{=y})\alpha-x_nx_{n+1}=(x_n-\alpha)(\alpha-x_{n+1})>0,$$
+
+Hence:
+$$y\cdot \alpha > x_n x_{n+1}$$
+By substituting we have:
+$$\alpha^{n+1}>x_1x_2\cdots x_{n-1}x_nx_{n+1}$$
+This completes the proof.
+\end{proof}
+
+\subsubsection*{Geometric representation}
+We can use function graphs to visualize the relationship implied in the AGM inequality. On the left and right-hand-side of the inequality sign, there are two functions with $n$ variables.
+For simplicity, we use $n=2$ to show its visualization.
+We obtain this interactive graph by Mathematica. This simple model involves three variables only. $\displaystyle x_{1}$ and $\displaystyle x_{2}$ are the values to be used to calculate AM and GM. 
+We take one of the input value as preimage on the x-axis, and the AM or GM as the image on y-axis. The scroll on the top indicates the value of $\displaystyle x_{2}$. When $\displaystyle x_{2} =0$, the 
+graph is shown below. It can be seen that the AGM inequality holds, and only when $\displaystyle x_{2} =x_{1} =0$, there is an intersection$\displaystyle \ ( 0,0) .$
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{agmx=0.png}
+    \caption{AGM when $x_2 = 0$}
+\end{figure}
+
+As we increase the $\displaystyle x_{2}$ value, the GM curve rise up, and the intersection moves on the right direction, remaining on the AM curve. Below is the visualization for $\displaystyle x_{2} =5$. 
+There is no any overlap between graphs except the intersection $\displaystyle ( 5,5)$. 
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth]{agmx=5.png}
+    \caption{AGM when $x_2 = 5$}
+\end{figure}
+
+\begin{problem}
+    Where will the intersection go if we have $x_2 = 10$ for this model?
+\end{problem}
+
+Now, I think everything is clear, but only things so far. From now on, we will extend the understanding of function graph to a new
+dimension, in the 3 dimension space. Functions in the 3D space is extremely important for multi-variable calculus, and learning linear 
+algebra also requires us to abstract numbers in more than 3 dimension, but goes up to n dimension space. But don't worry, the discussion
+here only involve simple concepts. 
+
+We have three variables: $x_1, x_2, y$, where $y$ is the value of AM or GM from $x_1$ and $x_2$. Coincidently, we have three coordinate
+axis in a 3D space. In the three-dimensional coordinate system, we assign two preimages $x_1$, $x_2$ to $x$ and $y$ axis, and the mean
+to the $z$ axis. In this way we can get two function graphs, or surface, in the real sense, in the coordinate, which look like in the 
+figure below.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{agm3D.png}
+    \caption{AGM 3D Visualization}
+\end{figure}
+
+The plane in blue represents the set of all possible arithmetic mean derived from all combinations of $x_1 \text{ and }x_2$ with $x_1,x_2\in [0,10]$, and the other 
+surface, almost below the AM plane, is exactly the geometric mean curve that has a similar definition to the former. This is quite different from the functions
+we have known, since they are only a line or a curve in the Cartesian coordinate, yet in the 3D coordinate, function could be surface. We will explore more
+about multi-variable functions in the future. 
+
+It is noticeable that the two surfaces are actually independent. They intersect in a line that go across the space. That specific line is actually a set of all the
+ordered pairs $(x_1,x_2)$ where $x_1 = x_2$. We can actually relate it to the graph in the Cartesian coordinate. If we change the view point to the front of the
+curves shaped in the 3D space, we see something like this picture.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{agm3dsect.png}
+    \caption{AGM 3D Visualization (Front)}
+\end{figure}
+Isn't this quite similar to the 2D graph? Actually, the first image is exactly a horizontal cross-section of the 3D function graph, and the intersection in the 2D 
+graph changes as the position of intersection line changes. These explain AGM inequality's geometric meaning.
+
+\subsection*{Conclusions of AGM inequality}
+AGM inequality has brought us to these conclusions:
     \begin{corollary}[Mean Inequality Corollary]
 If $x, y > 0$, then
 \[\frac{2xy}{x+y} \leq \sqrt{xy} \leq \frac{x+y}{2}.\]
@@ -3036,7 +3128,7 @@ The average rate $r$ for the full trip is computed as follows:
 r &= \frac{2d}{t_1 + t_2} = \frac{2d}{\frac{d}{r_1} + \frac{d}{r_2}} = \frac{2d}{\frac{r_1r_2(t_1 + t_2)}{r_1r_2}} =\frac{2r_1r_2}{r_1 + r_2}\\
 \end{align*}
 %------------------------------------------------
-\subsection{Exercises}
+\section{Exercises}
 \begin{exercise}
     Explain the following statement.
     \begin{enumerate}

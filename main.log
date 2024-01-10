@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.3)  9 JAN 2024 22:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.3)  10 JAN 2024 22:18
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1253,12 +1253,12 @@ Overfull \hbox (390.95769pt too wide) detected at line 68
 [][][][][][] [][][][][][] 
  []
 
-
+[4]
 Overfull \hbox (390.95769pt too wide) detected at line 69
 [][][][][][] [][][][][][] 
  []
 
-[4]
+
 Overfull \hbox (390.95769pt too wide) detected at line 75
 [][][][][][] [][][][][][] 
  []
@@ -1308,7 +1308,7 @@ LaTeX Font Info:    Font shape `T1/pag/b/n' in size <30> not available
 
 ] [12]
 Chapter 1.
-<Images/chap1.png, id=398, 975.645pt x 451.6875pt>
+<Images/chap1.png, id=432, 975.645pt x 451.6875pt>
 File: Images/chap1.png Graphic file (type png)
 <use Images/chap1.png>
 Package pdftex.def Info: Images/chap1.png  used on input line 131.
@@ -1599,7 +1599,7 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 
 [32]
 Chapter 2.
-<Images/orange2.jpg, id=556, 1300.86pt x 602.25pt>
+<Images/orange2.jpg, id=589, 1300.86pt x 602.25pt>
 File: Images/orange2.jpg Graphic file (type jpg)
 <use Images/orange2.jpg>
 Package pdftex.def Info: Images/orange2.jpg  used on input line 1035.
@@ -1779,7 +1779,7 @@ Package mdframed Info: mdframed works in twoside mode on input line 1411.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 1411.
-<Images/func.jpg, id=613, 623.32875pt x 384.11505pt>
+<Images/func.jpg, id=646, 623.32875pt x 384.11505pt>
 File: Images/func.jpg Graphic file (type jpg)
 <use Images/func.jpg>
 Package pdftex.def Info: Images/func.jpg  used on input line 1417.
@@ -2043,7 +2043,7 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 
 [56]
 Chapter 3.
-<Images/chap2.png, id=746, 770.88pt x 481.8pt>
+<Images/chap2.png, id=779, 770.88pt x 481.8pt>
 File: Images/chap2.png Graphic file (type png)
 <use Images/chap2.png>
 Package pdftex.def Info: Images/chap2.png  used on input line 2177.
@@ -2051,7 +2051,7 @@ Package pdftex.def Info: Images/chap2.png  used on input line 2177.
 [57
 
  <./Images/chap2.png>]
-<Images/venn.png, id=754, 581.17125pt x 415.5525pt>
+<Images/venn.png, id=787, 581.17125pt x 415.5525pt>
 File: Images/venn.png Graphic file (type png)
 <use Images/venn.png>
 Package pdftex.def Info: Images/venn.png  used on input line 2250.
@@ -2108,7 +2108,7 @@ Package mdframed Info: mdframed works in twoside mode on input line 2360.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 2360.
-<Images/intfunc.png, id=782, 500.1084pt x 379.4175pt>
+<Images/intfunc.png, id=815, 500.1084pt x 379.4175pt>
 File: Images/intfunc.png Graphic file (type png)
 <use Images/intfunc.png>
 Package pdftex.def Info: Images/intfunc.png  used on input line 2380.
@@ -2203,7 +2203,7 @@ Package mdframed Info: mdframed works in twoside mode on input line 2676.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 2676.
-<Images/time complexity.png, id=851, 715.11165pt x 570.933pt>
+<Images/time complexity.png, id=884, 715.11165pt x 570.933pt>
 File: Images/time complexity.png Graphic file (type png)
 <use Images/time complexity.png>
 Package pdftex.def Info: Images/time complexity.png  used on input line 2704.
@@ -2285,7 +2285,7 @@ Package pdftex.def Info: Images/orange2.jpg  used on input line 2889.
 [73
 
 ]
-<Images/quadratic.png, id=892, 715.11165pt x 570.933pt>
+<Images/quadratic.png, id=925, 715.11165pt x 570.933pt>
 File: Images/quadratic.png Graphic file (type png)
 <use Images/quadratic.png>
 Package pdftex.def Info: Images/quadratic.png  used on input line 2939.
@@ -2303,6 +2303,15 @@ Package mdframed Info: mdframed works in twoside mode on input line 2967.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 2967.
+
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[75 <./Images/quadratic.png>]
 Package mdframed Info: mdframed works in twoside mode on input line 2985.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
@@ -2315,29 +2324,17 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[75 <./Images/quadratic.png>]
-Package mdframed Info: Not enough space on this page on input line 2988.
-Package mdframed Info: mdframed works in twoside mode on input line 3013.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 3013.
-
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
-
 [76]
-Package mdframed Info: mdframed works in twoside mode on input line 3040.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 3040.
-Package mdframed Info: mdframed works in twoside mode on input line 3060.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 3060.
+<Images/agmx=0.png, id=953, 576.35326pt x 319.1925pt>
+File: Images/agmx=0.png Graphic file (type png)
+<use Images/agmx=0.png>
+Package pdftex.def Info: Images/agmx=0.png  used on input line 3055.
+(pdftex.def)             Requested size: 341.43437pt x 189.09148pt.
+<Images/agmx=5.png, id=954, 573.342pt x 314.97675pt>
+File: Images/agmx=5.png Graphic file (type png)
+<use Images/agmx=5.png>
+Package pdftex.def Info: Images/agmx=5.png  used on input line 3064.
+(pdftex.def)             Requested size: 341.43437pt x 187.5793pt.
 
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
@@ -2346,7 +2343,13 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[77]
+[77 <./Images/agmx=0.png>]
+<Images/agm3D.png, id=962, 361.35pt x 291.489pt>
+File: Images/agm3D.png Graphic file (type png)
+<use Images/agm3D.png>
+Package pdftex.def Info: Images/agm3D.png  used on input line 3083.
+(pdftex.def)             Requested size: 256.07741pt x 206.57167pt.
+
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2354,99 +2357,142 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[78]
+[78 <./Images/agmx=5.png> <./Images/agm3D.png (PNG copy)>]
+<Images/agm3dsect.png, id=968, 420.3705pt x 180.675pt>
+File: Images/agm3dsect.png Graphic file (type png)
+<use Images/agm3dsect.png>
+Package pdftex.def Info: Images/agm3dsect.png  used on input line 3097.
+(pdftex.def)             Requested size: 256.07741pt x 110.06822pt.
+Package mdframed Info: mdframed works in twoside mode on input line 3105.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 3105.
+
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[79 <./Images/agm3dsect.png (PNG copy)>]
+Package mdframed Info: mdframed works in twoside mode on input line 3132.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 3132.
+Package mdframed Info: mdframed works in twoside mode on input line 3152.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 3152.
+
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[80]
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[81] [82
+
+]
 Chapter 5.
 File: Images/orange2.jpg Graphic file (type jpg)
 <use Images/orange2.jpg>
-Package pdftex.def Info: Images/orange2.jpg  used on input line 3081.
+Package pdftex.def Info: Images/orange2.jpg  used on input line 3173.
 (pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
-[79
+[83] [84
 
-] [80
-
-] (./main.ptc) [81] [82]
+] (./main.ptc) [85] [86]
 Chapter 6.
 File: Images/orange2.jpg Graphic file (type jpg)
 <use Images/orange2.jpg>
-Package pdftex.def Info: Images/orange2.jpg  used on input line 3090.
+Package pdftex.def Info: Images/orange2.jpg  used on input line 3182.
 (pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
-[83
+[87
 
-] [84
+] [88
 
 ]
 Chapter 7.
 File: Images/orange2.jpg Graphic file (type jpg)
 <use Images/orange2.jpg>
-Package pdftex.def Info: Images/orange2.jpg  used on input line 3096.
+Package pdftex.def Info: Images/orange2.jpg  used on input line 3188.
 (pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
-[85] [86
+[89] [90
 
 ]
 Chapter 8.
 File: Images/orange2.jpg Graphic file (type jpg)
 <use Images/orange2.jpg>
-Package pdftex.def Info: Images/orange2.jpg  used on input line 3101.
+Package pdftex.def Info: Images/orange2.jpg  used on input line 3193.
 (pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
-[87] [88
+[91] [92
 
 ]
 Chapter 9.
 File: Images/orange2.jpg Graphic file (type jpg)
 <use Images/orange2.jpg>
-Package pdftex.def Info: Images/orange2.jpg  used on input line 3106.
+Package pdftex.def Info: Images/orange2.jpg  used on input line 3198.
 (pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
-[89] [90
+[93] [94
 
-] (./main.ptc) [91] [92] (./main.ptc) [93
+] (./main.ptc) [95] [96] (./main.ptc) [97
 
-] [94] (./main.ptc) [95
+] [98] (./main.ptc) [99
 
-] [96] (./main.ptc) [97
+] [100] (./main.ptc) [101
 
-] [98]
+] [102]
 Chapter 10.
 File: Images/orange2.jpg Graphic file (type jpg)
 <use Images/orange2.jpg>
-Package pdftex.def Info: Images/orange2.jpg  used on input line 3121.
+Package pdftex.def Info: Images/orange2.jpg  used on input line 3213.
 (pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
-[99
+[103
 
-] [100
+] [104
 
 ]
 Chapter 11.
 File: Images/orange2.jpg Graphic file (type jpg)
 <use Images/orange2.jpg>
-Package pdftex.def Info: Images/orange2.jpg  used on input line 3127.
+Package pdftex.def Info: Images/orange2.jpg  used on input line 3219.
 (pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
-[101] [102
+[105] [106
 
 ]
 Chapter 12.
 File: Images/orange2.jpg Graphic file (type jpg)
 <use Images/orange2.jpg>
-Package pdftex.def Info: Images/orange2.jpg  used on input line 3133.
+Package pdftex.def Info: Images/orange2.jpg  used on input line 3225.
 (pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
-[103] [104
+[107] [108
 
 ]
 Chapter 13.
 File: Images/orange2.jpg Graphic file (type jpg)
 <use Images/orange2.jpg>
-Package pdftex.def Info: Images/orange2.jpg  used on input line 3139.
+Package pdftex.def Info: Images/orange2.jpg  used on input line 3231.
 (pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
-[105] [106
+[109] [110
 
 ]
 Chapter 14.
 File: Images/orange2.jpg Graphic file (type jpg)
 <use Images/orange2.jpg>
-Package pdftex.def Info: Images/orange2.jpg  used on input line 3145.
+Package pdftex.def Info: Images/orange2.jpg  used on input line 3237.
 (pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
-[107] [108
+[111] [112
 
-] (./main.ptc) [109] [110]
+] (./main.ptc) [113] [114]
 \tf@ptc=\write9
 \openout9 = `main.ptc'.
 
@@ -2460,18 +2506,18 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 35169 strings out of 474175
- 642065 string characters out of 5749699
+ 35226 strings out of 474175
+ 643030 string characters out of 5749699
  1951460 words of memory out of 5000000
- 55800 multiletter control sequences out of 15000+600000
- 726897 words of font info for 601 fonts, out of 8000000 for 9000
+ 55840 multiletter control sequences out of 15000+600000
+ 729015 words of font info for 608 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  98i,17n,101p,1040b,918s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/avantgar/uagd8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/avantgar/uagk8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/symbol/usyr.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/symbol/usyr.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (110 pages, 4667042 bytes).
+Output written on main.pdf (114 pages, 4852105 bytes).
 PDF statistics:
- 1368 PDF objects out of 1440 (max. 8388607)
- 1099 compressed objects within 11 object streams
- 416 named destinations out of 1000 (max. 500000)
- 168271 words of extra memory for PDF output out of 184870 (max. 10000000)
+ 1433 PDF objects out of 1440 (max. 8388607)
+ 1144 compressed objects within 12 object streams
+ 424 named destinations out of 1000 (max. 500000)
+ 168315 words of extra memory for PDF output out of 184870 (max. 10000000)
 

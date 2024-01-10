@@ -1,0 +1,1 @@
+{"rule":"NOW","sentence":"^\\QThere is no any overlap between graphs except the intersection \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q.\\E$"}
