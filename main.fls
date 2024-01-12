@@ -323,6 +323,8 @@ INPUT c:/texlive/2023/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
 INPUT c:/texlive/2023/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
 INPUT c:/texlive/2023/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
 INPUT c:/texlive/2023/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
+INPUT c:/texlive/2023/texmf-dist/tex/latex/wrapfig/wrapfig.sty
+INPUT c:/texlive/2023/texmf-dist/tex/latex/wrapfig/wrapfig.sty
 INPUT c:/texlive/2023/texmf-dist/tex/latex/psnfss/t1ptm.fd
 INPUT c:/texlive/2023/texmf-dist/tex/latex/psnfss/t1ptm.fd
 INPUT c:/texlive/2023/texmf-dist/tex/latex/psnfss/t1ptm.fd
@@ -536,10 +538,10 @@ INPUT c:/texlive/2023/texmf-dist/fonts/tfm/adobe/times/psyro.tfm
 INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm
 INPUT c:/texlive/2023/texmf-dist/fonts/tfm/adobe/times/ptmri8r.tfm
 INPUT c:/texlive/2023/texmf-dist/fonts/vf/adobe/times/zptmcm7t.vf
-INPUT c:/texlive/2023/texmf-dist/fonts/tfm/adobe/symbol/psyr.tfm
-INPUT c:/texlive/2023/texmf-dist/fonts/tfm/adobe/times/ptmr8r.tfm
 INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
 INPUT c:/texlive/2023/texmf-dist/fonts/vf/adobe/times/zptmcm7t.vf
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/adobe/symbol/psyr.tfm
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/adobe/times/ptmr8r.tfm
 INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
 INPUT ./Images/orange1.jpg
 INPUT ./Images/orange1.jpg
@@ -675,6 +677,14 @@ INPUT ./Images/quadratic.png
 INPUT ./Images/quadratic.png
 INPUT ./Images/quadratic.png
 INPUT ./Images/quadratic.png
+INPUT ./Images/triangleablt0.png
+INPUT ./Images/triangleablt0.png
+INPUT ./Images/triangleablt0.png
+INPUT ./Images/triangleablt0.png
+INPUT ./Images/triangle2.png
+INPUT ./Images/triangle2.png
+INPUT ./Images/triangle2.png
+INPUT ./Images/triangle2.png
 INPUT c:/texlive/2023/texmf-dist/fonts/vf/adobe/times/zptmcm7m.vf
 INPUT c:/texlive/2023/texmf-dist/fonts/tfm/adobe/times/psyro.tfm
 INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm

@@ -1,17 +1,17 @@
 # Fdb version 4
-["biber main"] 1704854992.44882 "main.bcf" "main.bbl" "main" 1704896285.00786 0
-  "main.bcf" 1704896284 107347 1f51a2be7d23f3423c0e59ffd4ef65c6 "pdflatex"
+["biber main"] 1704981275.23828 "main.bcf" "main.bbl" "main" 1704998818.39352 0
+  "main.bcf" 1704998818 107347 1f51a2be7d23f3423c0e59ffd4ef65c6 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["makeindex main.idx"] 1704875741.83528 "main.idx" "main.ind" "main" 1704896285.00756 0
-  "main.idx" 1704896282 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+["makeindex main.idx"] 1704998094.75352 "main.idx" "main.ind" "main" 1704998818.39318 0
+  "main.idx" 1704998815 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   (generated)
   "main.ilg"
   "main.ind"
   (rewritten before read)
-["pdflatex"] 1704896281.45312 "c:/Programming/GitProjects/Math-for-CS/main.tex" "main.pdf" "main" 1704896285.00826 0
+["pdflatex"] 1704998814.88511 "c:/Programming/GitProjects/Math-for-CS/main.tex" "main.pdf" "main" 1704998818.39415 0
   "Images/agm3D.png" 1704875704 97995 3c8707993f2acdfb1f5fe89cecae6e4e ""
   "Images/agm3dsect.png" 1704880238 44643 73eb57f3840cb5ff6c2c67bcf1c7b93d ""
   "Images/agmx=0.png" 1704873744 26598 bd43746e4060570704283b475eedb198 ""
@@ -25,9 +25,11 @@
   "Images/orange2.jpg" 1704396250 158800 7383cd993ae5eaea1920b9e650bcfaae ""
   "Images/quadratic.png" 1704805588 132497 47ad20118ac7ed72f3b48326a8f90762 ""
   "Images/time complexity.png" 1704396250 150606 67fc10912a0e3be724736b2edeeb88c5 ""
+  "Images/triangle2.png" 1704988430 6334 eb2d56651cbec168bba4a038f1395201 ""
+  "Images/triangleablt0.png" 1704986326 3895 bd43a8c51df6653f51e14e40e5512280 ""
   "Images/venn.png" 1704396250 101167 627b3f359fe3b8844e7f344c0e38c3ca ""
   "LegrandOrangeBook.cls" 1704396250 34330 8b54c63dbc2df44de404d2768f953f7c ""
-  "c:/Programming/GitProjects/Math-for-CS/main.tex" 1704896280 166211 265409f172efabcfd9f6c81caa7c0e0d ""
+  "c:/Programming/GitProjects/Math-for-CS/main.tex" 1704998810 173827 8e575f147e19a709a7567be69f184653 ""
   "c:/texlive/2023/texmf-dist/fonts/enc/dvips/base/8r.enc" 1704276465 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "c:/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1704275942 2971 def0b6c1f0b107b3b936def894055589 ""
   "c:/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1704276883 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -259,6 +261,7 @@
   "c:/texlive/2023/texmf-dist/tex/latex/tools/array.sty" 1704280380 12667 e4b5eb11e4b7239e6c8a52bbe074a6c6 ""
   "c:/texlive/2023/texmf-dist/tex/latex/tools/calc.sty" 1704280380 10214 547fd4d29642cb7c80bf54b49d447f01 ""
   "c:/texlive/2023/texmf-dist/tex/latex/url/url.sty" 1704280562 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
+  "c:/texlive/2023/texmf-dist/tex/latex/wrapfig/wrapfig.sty" 1704280677 26220 3701aebf80ccdef248c0c20dd062fea9 ""
   "c:/texlive/2023/texmf-dist/tex/latex/xcolor/svgnam.def" 1704280694 4705 ec4d2f4b7125d5a5145cc9aabae1d54b ""
   "c:/texlive/2023/texmf-dist/tex/latex/xcolor/xcolor.sty" 1704280694 55487 80a65caedd3722f4c20a14a69e785d8f ""
   "c:/texlive/2023/texmf-dist/tex/latex/zref/zref-abspage.sty" 1704280823 2269 4fe6fb3396214c91f164d45faf9bec45 ""
@@ -267,15 +270,15 @@
   "c:/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1704280865 4785560 10f5a17fcbe2ff40a0047ec23402f933 ""
   "c:/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1704280976 8217725 7701aa7a6db71a8cb2ecc05da3359d3e ""
   "c:/texlive/2023/texmf.cnf" 1704280848 713 e69b156964470283e0530f5060668171 ""
-  "main.aux" 1704896284 36510 d3a1635af8d584158f20aabeca7b66f7 "pdflatex"
-  "main.bbl" 1704854996 486 ee04f40f768daeed26442158e95aba61 "biber main"
-  "main.ind" 1704875742 0 d41d8cd98f00b204e9800998ecf8427e "makeindex main.idx"
-  "main.lof" 1704896284 1259 049b4eb5f48a5542ba465e9ca25a9096 "pdflatex"
-  "main.lot" 1704896284 501 6af533af4d440b448421acb03b5030b8 "pdflatex"
-  "main.ptc" 1704896284 6728 58a3e2a3cd50fec8df4ca61e7c1e4538 "pdflatex"
-  "main.run.xml" 1704896284 2301 f06af3099c978185a0ac5347b2a69dfa "pdflatex"
-  "main.tex" 1704896280 166211 265409f172efabcfd9f6c81caa7c0e0d ""
-  "main.toc" 1704896284 6435 84128b23d3b09faa4e209c49af4f443b "pdflatex"
+  "main.aux" 1704998818 37335 12dd227305499a8e40a976d484242a2b "pdflatex"
+  "main.bbl" 1704981276 486 ee04f40f768daeed26442158e95aba61 "biber main"
+  "main.ind" 1704998095 0 d41d8cd98f00b204e9800998ecf8427e "makeindex main.idx"
+  "main.lof" 1704998818 1365 8476d5d4ed864e96e4b176dd3853027f "pdflatex"
+  "main.lot" 1704998818 501 6af533af4d440b448421acb03b5030b8 "pdflatex"
+  "main.ptc" 1704998818 6820 f8a484fd16624415183d6753e6471657 "pdflatex"
+  "main.run.xml" 1704998818 2301 f06af3099c978185a0ac5347b2a69dfa "pdflatex"
+  "main.tex" 1704998810 173827 8e575f147e19a709a7567be69f184653 ""
+  "main.toc" 1704998818 6527 ce4ac9099ce6a7a6e419bc8790b46d17 "pdflatex"
   (generated)
   "main.aux"
   "main.bcf"

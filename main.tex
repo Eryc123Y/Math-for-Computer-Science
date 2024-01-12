@@ -51,6 +51,7 @@
 
 \usepackage{algorithm}
 \usepackage{algpseudocode}
+\usepackage{wrapfig}
 
 \addbibresource{sample.bib} % Bibliography file
 
@@ -2925,6 +2926,41 @@ Based on the derivation of inequalities, in most cases, the above principles are
     \item If \( a > b \) and \( c > d \), then \( a + c > b + d \).
     \item If \( a > b > 0 \) and \( c > d > 0 \), then \( ac > bd \).
 \end{itemize}
+\subsection{Exercises}
+\begin{exercise}
+    Explain the following statement.
+    \begin{enumerate}
+        \item If \( a > b \), then \( \frac{a}{c} > \frac{b}{c} \);
+        \item If \( ac < bc \), then \( a < b \);
+        \item If \( a < b \), then \( \frac{1}{a} > \frac{1}{b} \);
+        \item If \( ac^2 > bc^2 \), then \( a > b \);
+        \item If \( a > b \), then \( a^n > b^n \).
+    \end{enumerate}
+\end{exercise}
+
+\textbf{Solution:}
+
+\begin{enumerate}
+    \item If \( c > 0 \), multiplying both sides of \( a > b \) by the positive number \( \frac{1}{c} \) preserves the inequality, hence \( \frac{a}{c} > \frac{b}{c} \). If \( c < 0 \), the direction of the inequality would be reversed, which is not given in the condition, hence we assume \( c > 0 \).
+    \item Dividing both sides of \( ac < bc \) by \( c \) (assuming \( c \neq 0 \)), we get \( a < b \) because division by a positive number preserves the inequality, and division by a negative number reverses it.
+    \item Taking the reciprocal of both sides of \( a < b \) reverses the inequality because \( a \) and \( b \) are on opposite sides of the fraction line, hence \( \frac{1}{a} > \frac{1}{b} \) (assuming \( a, b > 0 \) to avoid division by zero).
+    \item Dividing both sides of \( ac^2 > bc^2 \) by \( c^2 \) (assuming \( c \neq 0 \)) preserves the inequality, hence \( a > b \) because \( c^2 \) is positive regardless of whether \( c \) is positive or negative.
+    \item Raising both sides of \( a > b \) to a power \( n \) (assuming \( n \) is a positive integer) preserves the inequality because both \( a \) and \( b \) are raised to the same power, hence \( a^n > b^n \).
+\end{enumerate}
+\begin{exercise}
+    Given the inequality \( a > b > 0 \), \( c < d < 0 \), \( f < 0 \), show that:
+\[
+\frac{f}{a - c} > \frac{f}{b - d}.
+\]
+\end{exercise}
+\begin{proof}
+    Since \( a > b > 0 \) and \( c < d < 0 \), then \( a - c > b - d \) because subtracting a smaller negative number is the same as adding a larger positive number. Given that \( f < 0 \), when dividing by a larger positive number, the result is smaller because a negative number divided by a positive number yields a negative result, and the further away the divisor is from zero, the smaller the quotient.
+
+Therefore:
+\[
+\frac{f}{a - c} > \frac{f}{b - d}.
+\]
+\end{proof}
 
 \section{Solving Quadratic Inequality}
 Recall that, when we solve Quadratic equations, we use discriminant to solve equations, which is also applicable to inequalities.
@@ -2979,7 +3015,70 @@ The Triangle Inequality is a fundamental relation in geometry and analysis, asse
     \begin{remark}
         This important inequality will also be seen in other chapters.
     \end{remark}
+We also have the following conclusion by preliminary algebra:
+$$
+\begin{aligned}
+    |a{+}b|{\leqslant}|a|+|b|& \Leftrightarrow|a{+}b|^2{\leqslant}(|a|{+}|b|)^2  \\
+    &\Leftrightarrow(a+b)^2\leqslant|a|^2+2|a||b|+|b|^2 \\
+    &\Leftrightarrow a^2+2ab+b^2\leqslant a^2+2|a|\mid b|+b^2 \\
+    &\Leftrightarrow ab{\leqslant}|a|\left|b\right| \\
+    &\Leftrightarrow ab\leqslant\lvert ab\rvert.
+    \end{aligned}
+$$
+The quality holds only when $ab \geq 0$.
+\subsubsection*{Geometric Explanation of Triangular Inequality}
+    Consider $a$ and $b$ are random numbers on a number axis:
+    \begin{itemize}
+        \item If $ab \geq 0$, then they are both in the same half-axis (both positive or negative). In this case, the distance between $a$ and $-b$
+        is the sum of the distance from both points to the origin of the number axis.
+        \item  Now consider $ab < 0$, either of them is positive, and the other is negative. In this case, the distance between $a$ and $-b$ is shorter than the sum of 
+        the distance from both points to the origin of the number axis.
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width = 0.6\textwidth]{triangleablt0.png}
+            \caption{Triangular Inequality: $ab < 0$}
+        \end{figure}
+    \end{itemize}
 
+We also have:
+    \begin{theorem}
+        For $a, b, c\in \mathbb{R}$, $|a-c|\leq |a-b| + |b-c|$.
+    \end{theorem}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width = 0.5\textwidth]{triangle2.png}
+    \end{figure}
+    \begin{proof}
+        Since $a-c$, $a-b$, $b-c$ follows the relationship of triangular inequality. We have:
+        $$(a-b)(b-c) \geq 0$$
+        
+        meaning that $b$ is between $a$ and $c$, which could be proven by sketching.
+    \end{proof}
+
+    \begin{corollary} \label{trian}
+        $||a| - |b|| \leq |a + b|$
+    \end{corollary}
+    \begin{proof}
+        \[ |a| = |(a+b) - b| \leq |a+b| + |-b| = |a+b| + |b|. \]
+Therefore,
+\[ |a| - |b| \leq |a+b|, \]
+and similarly it can be proven that
+\[ |b| - |a| \leq |a+b|. \]
+Hence,
+\[ ||a - b|| \leq |a+b|. \]
+    \end{proof}
+
+    \begin{corollary}
+        $|a| - |b| \leq |a + b|$
+        
+    \end{corollary}
+    \begin{proof}
+        By corollary \autoref{trian}:
+        \[ ||a| - |b|| \leq |a + (-b)|, \]
+therefore,
+\[ ||a| - |-b|| \leq |a - b|. \]
+    \end{proof}
+%---------------------------------------------------------------------------
     \subsection{The Arithmetic-Geometric Mean Inequality}
     The AGM Inequality(also known as AM-GM inequality) states that for any set of non-negative real numbers, the arithmetic mean is always greater than or equal to the geometric mean.
     \begin{definition}[AGM Inequality] \label{AGM}
@@ -3059,7 +3158,7 @@ graph is shown below. It can be seen that the AGM inequality holds, and only whe
 As we increase the $\displaystyle x_{2}$ value, the GM curve rise up, and the intersection moves on the right direction, remaining on the AM curve. Below is the visualization for $\displaystyle x_{2} =5$. 
 There is no any overlap between graphs except the intersection $\displaystyle ( 5,5)$. 
 
-\begin{figure}
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{agmx=5.png}
     \caption{AGM when $x_2 = 5$}
@@ -3127,42 +3226,125 @@ The average rate $r$ for the full trip is computed as follows:
 \begin{align*}
 r &= \frac{2d}{t_1 + t_2} = \frac{2d}{\frac{d}{r_1} + \frac{d}{r_2}} = \frac{2d}{\frac{r_1r_2(t_1 + t_2)}{r_1r_2}} =\frac{2r_1r_2}{r_1 + r_2}\\
 \end{align*}
-%------------------------------------------------
-\section{Exercises}
-\begin{exercise}
-    Explain the following statement.
-    \begin{enumerate}
-        \item If \( a > b \), then \( \frac{a}{c} > \frac{b}{c} \);
-        \item If \( ac < bc \), then \( a < b \);
-        \item If \( a < b \), then \( \frac{1}{a} > \frac{1}{b} \);
-        \item If \( ac^2 > bc^2 \), then \( a > b \);
-        \item If \( a > b \), then \( a^n > b^n \).
-    \end{enumerate}
-\end{exercise}
 
-\textbf{Solution:}
-
-\begin{enumerate}
-    \item If \( c > 0 \), multiplying both sides of \( a > b \) by the positive number \( \frac{1}{c} \) preserves the inequality, hence \( \frac{a}{c} > \frac{b}{c} \). If \( c < 0 \), the direction of the inequality would be reversed, which is not given in the condition, hence we assume \( c > 0 \).
-    \item Dividing both sides of \( ac < bc \) by \( c \) (assuming \( c \neq 0 \)), we get \( a < b \) because division by a positive number preserves the inequality, and division by a negative number reverses it.
-    \item Taking the reciprocal of both sides of \( a < b \) reverses the inequality because \( a \) and \( b \) are on opposite sides of the fraction line, hence \( \frac{1}{a} > \frac{1}{b} \) (assuming \( a, b > 0 \) to avoid division by zero).
-    \item Dividing both sides of \( ac^2 > bc^2 \) by \( c^2 \) (assuming \( c \neq 0 \)) preserves the inequality, hence \( a > b \) because \( c^2 \) is positive regardless of whether \( c \) is positive or negative.
-    \item Raising both sides of \( a > b \) to a power \( n \) (assuming \( n \) is a positive integer) preserves the inequality because both \( a \) and \( b \) are raised to the same power, hence \( a^n > b^n \).
-\end{enumerate}
+\subsection{Exercises}
 \begin{exercise}
-    Given the inequality \( a > b > 0 \), \( c < d < 0 \), \( f < 0 \), show that:
-\[
-\frac{f}{a - c} > \frac{f}{b - d}.
-\]
+    Prove that for any triangle with sides \(a\), \(b\), and \(c\), the following inequality holds:
+\[ \frac{a}{b + c} + \frac{b}{a + c} + \frac{c}{a + b} > 1 \]
 \end{exercise}
 \begin{proof}
-    Since \( a > b > 0 \) and \( c < d < 0 \), then \( a - c > b - d \) because subtracting a smaller negative number is the same as adding a larger positive number. Given that \( f < 0 \), when dividing by a larger positive number, the result is smaller because a negative number divided by a positive number yields a negative result, and the further away the divisor is from zero, the smaller the quotient.
 
-Therefore:
-\[
-\frac{f}{a - c} > \frac{f}{b - d}.
-\]
+Given a triangle with sides \(a\), \(b\), and \(c\), we know that for any triangle, the sum of the lengths of any two sides is greater than the length of the third side. Therefore, \(a < b + c\), \(b < a + c\), and \(c < a + b\).
+
+Now, consider the inequality \(\frac{a}{b + c} > \frac{a}{a + b + c}\). This is true because \(b + c > a\) implies that the denominator of the left-hand side is smaller than that of the right-hand side while keeping the numerator constant.
+
+Similarly, we can show that \(\frac{b}{a + c} > \frac{b}{a + b + c}\) and \(\frac{c}{a + b} > \frac{c}{a + b + c}\).
+
+Adding these three inequalities, we get:
+\[ \frac{a}{b + c} + \frac{b}{a + c} + \frac{c}{a + b} > \frac{a + b + c}{a + b + c} \]
+
+Simplifying the right-hand side, we obtain:
+\[ \frac{a}{b + c} + \frac{b}{a + c} + \frac{c}{a + b} > 1 \]
+
+Thus, the inequality is proven. 
+
 \end{proof}
+
+\begin{exercise}
+    Given $\varepsilon > 0$, if $|x - a| < \frac{\varepsilon}{4}$ and $|y - b| < \frac{\varepsilon}{6}$, prove that:
+
+\[
+|2x + 3y - 2a - 3b| < \varepsilon.
+\]
+\end{exercise}
+Hint: Rearrange it in a form that is good for using triangle inequality.
+\begin{proof}
+    \begin{align*}
+        |2x + 3y - 2a - 3b| &= |2(x - a) + 3(y - b)| \\
+        &\leq |2(x - a)| + |3(y - b)| \\
+        &= 2|x - a| + 3|y - b| \\
+        &< 2 \times \frac{\varepsilon}{4} + 3 \times \frac{\varepsilon}{6} \\
+        &= \varepsilon.
+        \end{align*}
+\end{proof}
+
+\begin{exercise}
+    Prove for any real numbers \( a, b, c, d \) that:
+\[ |a - b| + |b - c| + |c - d| + |d - a| \geq |a - c| + |b - d| \]
+
+\end{exercise}
+
+\begin{proof}
+    \begin{enumerate}
+    \item \textbf{Application of the Triangle Inequality:}
+    The triangle inequality states that for any real numbers \( x, y, z \):
+    \[ |x - y| \leq |x - z| + |z - y| \]
+    We can apply this inequality to certain terms in our original problem. For example, consider \( |a - c| \) and \( |b - d| \).
+
+    \item \textbf{Separate Applications of the Triangle Inequality:}
+    For \( |a - c| \), we have:
+    \[ |a - c| \leq |a - b| + |b - c| \]
+    For \( |b - d| \), we have:
+    \[ |b - d| \leq |b - c| + |c - d| \]
+
+    \item \textbf{Combining Inequalities:}
+    Adding the above two inequalities, we get:
+    \[ |a - c| + |b - d| \leq |a - b| + 2|b - c| + |c - d| \]
+
+    \item \textbf{Simplification and Rearrangement:}
+    Notice that \( 2|b - c| \) appears on the right side of the inequality. However, since \( |b - c| \) is non-negative, we can remove one \( |b - c| \) and the inequality still holds. Hence, we have:
+    \[ |a - c| + |b - d| \leq |a - b| + |b - c| + |c - d| \]
+    This is the reverse of the inequality in our original problem, so we can conclude:
+    \[ |a - b| + |b - c| + |c - d| + |d - a| \geq |a - c| + |b - d| \]
+
+    \item \textbf{Conclusion:}
+    Therefore, the original inequality is proved.
+\end{enumerate}
+\end{proof}
+\begin{exercise}
+    Prove that for any real numbers \( x, y, z \), the following inequality holds:
+\[ |x + y + z| \leq |x| + |y| + |z| \]
+
+\end{exercise}
+\begin{proof}
+    We will use the triangle inequality which states that for any real numbers \( a \) and \( b \):
+\[ |a + b| \leq |a| + |b| \]
+
+First, apply the triangle inequality to \( x \) and \( y \):
+\[ |x + y| \leq |x| + |y| \]
+
+Now, let \( a = x + y \) and \( b = z \), and apply the triangle inequality again:
+\[ |(x + y) + z| \leq |x + y| + |z| \]
+
+Substitute the first inequality into the second one:
+\[ |x + y + z| \leq |x| + |y| + |z| \]
+
+This completes the proof.
+\end{proof}
+\begin{exercise}
+    Prove that for any sequence of real numbers \( x_1, x_2, \ldots, x_n \), the following inequality holds:
+\[ \left|x_1 + x_2 + \ldots + x_n\right| \leq \left|x_1\right| + \left|x_2\right| + \ldots + \left|x_n\right| \]
+\end{exercise}
+\begin{proof}
+    We will prove this by induction on the number of terms \( n \).
+
+\textit{Base case} (\( n = 1 \)):
+For a single real number \( x_1 \), the inequality trivially holds as:
+\[ \left|x_1\right| = \left|x_1\right| \]
+
+\textit{Inductive step}:
+Assume the inequality holds for some \( n = k \), i.e.,
+\[ \left|x_1 + x_2 + \ldots + x_k\right| \leq \left|x_1\right| + \left|x_2\right| + \ldots + \left|x_k\right| \]
+Now, consider the case when \( n = k + 1 \). By the triangle inequality, we have:
+\[ \left|x_1 + x_2 + \ldots + x_k + x_{k+1}\right| \leq \left|x_1 + x_2 + \ldots + x_k\right| + \left|x_{k+1}\right| \]
+
+Using the induction hypothesis, we can then write:
+\[ \left|x_1 + x_2 + \ldots + x_k + x_{k+1}\right| \leq \left(\left|x_1\right| + \left|x_2\right| + \ldots + \left|x_k\right|\right) + \left|x_{k+1}\right| \]
+\[ \left|x_1 + x_2 + \ldots + x_k + x_{k+1}\right| \leq \left|x_1\right| + \left|x_2\right| + \ldots + \left|x_k\right| + \left|x_{k+1}\right| \]
+
+This completes the inductive step and thus, by the principle of mathematical induction, the inequality holds for all positive integers \( n \).
+\end{proof}
+%------------------------------------------------
 
 
 %------------------------------------------------
