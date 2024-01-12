@@ -3227,6 +3227,15 @@ The average rate $r$ for the full trip is computed as follows:
 r &= \frac{2d}{t_1 + t_2} = \frac{2d}{\frac{d}{r_1} + \frac{d}{r_2}} = \frac{2d}{\frac{r_1r_2(t_1 + t_2)}{r_1r_2}} =\frac{2r_1r_2}{r_1 + r_2}\\
 \end{align*}
 
+The other important corollary of AGM inequality is:
+\begin{corollary}
+    $a^2+b^2 \geq 2ab$
+\end{corollary}
+\begin{proof}
+    $a^2 + b^2 \geq 2ab \iff a^2 + b^2 - 2ab \geq 0 \iff (a - b)^2 \geq 0.$
+\end{proof}
+
+
 \subsection{Exercises}
 \begin{exercise}
     Prove that for any triangle with sides \(a\), \(b\), and \(c\), the following inequality holds:
@@ -3344,6 +3353,102 @@ Using the induction hypothesis, we can then write:
 
 This completes the inductive step and thus, by the principle of mathematical induction, the inequality holds for all positive integers \( n \).
 \end{proof}
+
+\begin{exercise}
+    Let \(a\), \(b\), \(c\) be positive real numbers. Prove the inequality:
+\[ (a+b+c)(a^2+b^2+c^2) > 9abc. \]
+\end{exercise}
+\begin{proof}
+    By the Arithmetic Mean-Geometric Mean Inequality (AM-GM Inequality), we have:
+\[ \frac{a^2+b^2+c^2}{3} \geq \sqrt[3]{a^2b^2c^2}, \]
+\[ \frac{a+b+c}{3} \geq \sqrt[3]{abc}. \]
+
+Cubing both sides of the inequalities, we get:
+\[ (a^2+b^2+c^2)^3 \geq 27a^2b^2c^2, \]
+\[ (a+b+c)^3 \geq 27abc. \]
+
+Multiplying the resulting inequalities, we obtain:
+\[ (a^2+b^2+c^2)^3(a+b+c)^3 \geq (27a^2b^2c^2)(27abc). \]
+
+Taking the cube root of both sides, we arrive at:
+\[ (a^2+b^2+c^2)(a+b+c) \geq 9abc. \]
+
+Note that the inequality is strict when \(a\), \(b\), \(c\) are positive real numbers, thus:
+\[ (a^2+b^2+c^2)(a+b+c) > 9abc. \]
+\end{proof}
+
+\begin{exercise}
+    Given non-negative real numbers \( a, b, c \) such that \( a + b + c = 1 \), we want to prove that:
+\[ a^2 + b^2 + c^2 \geq \frac{1}{3}. \]
+\end{exercise}
+\begin{proof}
+    We will use the Arithmetic Mean-Geometric Mean Inequality (AM-GM Inequality) which states that for any non-negative real numbers \( x, y, z \), the following holds:
+\[ \frac{x + y + z}{3} \geq \sqrt[3]{xyz}. \]
+
+Applying this to \( a, b, c \), we have:
+\[ \frac{a + b + c}{3} \geq \sqrt[3]{abc} \Rightarrow \frac{1}{3} \geq \sqrt[3]{abc}. \]
+
+Cubing both sides of the inequality yields:
+\[ \frac{1}{27} \geq abc. \]
+
+Now, by AM-GM applied to \( a^2, b^2, c^2 \), we get:
+\[ \frac{a^2 + b^2 + c^2}{3} \geq \sqrt[3]{a^2b^2c^2}. \]
+
+Since \( a^2b^2c^2 \) is the square of \( abc \), it follows that:
+\[ \frac{a^2 + b^2 + c^2}{3} \geq (abc)^{\frac{2}{3}}. \]
+
+Given \( \frac{1}{27} \geq abc \), we have:
+\[ (abc)^{\frac{2}{3}} \leq \left(\frac{1}{27}\right)^{\frac{2}{3}} = \frac{1}{9}. \]
+
+Therefore, we can conclude that:
+\[ \frac{a^2 + b^2 + c^2}{3} \geq \frac{1}{9}. \]
+
+Multiplying through by 3, we obtain the desired inequality:
+\[ a^2 + b^2 + c^2 \geq \frac{1}{3}. \]
+
+Hence, we have proved that \( a^2 + b^2 + c^2 \geq \frac{1}{3} \) as required.
+\end{proof}
+
+\begin{exercise}
+    Consider the function
+    \[
+    f(x, y, z) = \frac{x}{y} + \frac{y}{z} + \frac{z}{x}
+    \]
+    for all positive real numbers \( x, y, \) and \( z \). Find the minimal value of the function.
+    \end{exercise}
+    
+    \begin{proof}
+    For \( (x, y, z) \) positive real numbers, we have
+    \[
+    f(x, y, z) = \frac{x}{y} + \frac{y}{z} + \frac{z}{x}
+    \]
+    can be rewritten as
+    \[
+    f(x, y, z) = 6 \cdot \left( \frac{1}{6} \cdot \frac{x}{y} + \frac{1}{6} \cdot \frac{y}{z} + \frac{1}{6} \cdot \frac{z}{x} + \frac{1}{6} \cdot \frac{x}{y} + \frac{1}{6} \cdot \frac{y}{z} + \frac{1}{6} \cdot \frac{z}{x} \right)
+    \]
+    Setting \( x_1 = \frac{x}{y}, x_2 = x_3 = \frac{1}{2} \cdot \frac{y}{z}, x_4 = x_5 = x_6 = \frac{1}{3} \cdot \frac{z}{x} \), and applying the AM-GM inequality for \( n = 6 \), we get
+    \[
+    f(x, y, z) \geq 6 \cdot \sqrt[6]{x_1 \cdot x_2 \cdot x_3 \cdot x_4 \cdot x_5 \cdot x_6} = 6 \cdot \sqrt[6]{\frac{1}{2 \cdot 2 \cdot 3 \cdot 3 \cdot 3} \cdot \frac{x}{y} \cdot \frac{y}{z} \cdot \frac{z}{x}}
+    \]
+    which simplifies to
+    \[
+    f(x, y, z) \geq 6 \cdot \sqrt[6]{\frac{1}{2^2 \cdot 3^3}} = 2^{2/3} \cdot 3^{1/2}
+    \]
+    Further, we know that the two sides are equal exactly when all the terms of the mean are equal. Thus,
+    \[
+    f(x, y, z) = 2^{2/3} \cdot 3^{1/2}
+    \]
+    when
+    \[
+    \frac{x}{y} = \frac{1}{2} \cdot \frac{y}{z} = \frac{1}{3} \cdot \frac{z}{x}
+    \]
+    All the points \( (x, y, z) \), satisfying these conditions lie on a half-line starting at the origin and are given by,
+    \[
+    (x, y, z) = \left( t, \frac{3}{2}\sqrt{3}t, \frac{3}{2}\sqrt{3}t \right)
+    \]
+    with \( t > 0 \).
+    \end{proof}
+    
 %------------------------------------------------
 
 
