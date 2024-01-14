@@ -51,15 +51,20 @@
 \contentsline {subsection}{\numberline {3.2.3}Exercises}{69}{subsection.3.2.3}%
 \contentsline {section}{\numberline {3.3}Base of Number}{71}{section.3.3}%
 \contentsline {subsection}{\numberline {3.3.1}The Binary System}{71}{subsection.3.3.1}%
-\contentsline {chapter}{\numberline {4}Inequality}{73}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Inequality basics}{73}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Exercises}{74}{subsection.4.1.1}%
-\contentsline {section}{\numberline {4.2}Solving Quadratic Inequality}{75}{section.4.2}%
-\contentsline {section}{\numberline {4.3}important Inequalities}{76}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}The Triangle Inequality}{76}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}The Arithmetic-Geometric Mean Inequality}{78}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}Exercises}{83}{subsection.4.3.3}%
-\contentsline {chapter}{\numberline {5}Complex Number}{89}{chapter.5}%
+\contentsline {chapter}{\numberline {4}Vector and Complex Number}{73}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Introduction To vector}{73}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Vector Operations}{74}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Vector Resolution and Projection}{74}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Collinearity and Linear Combination}{74}{section.4.4}%
+\contentsline {chapter}{\numberline {5}Inequality}{75}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Inequality basics}{75}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Exercises}{76}{subsection.5.1.1}%
+\contentsline {section}{\numberline {5.2}Solving Quadratic Inequality}{77}{section.5.2}%
+\contentsline {section}{\numberline {5.3}important Inequalities}{78}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}The Triangle Inequality}{78}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}The Arithmetic-Geometric Mean Inequality}{80}{subsection.5.3.2}%
+\contentsline {subsection}{\numberline {5.3.3}Exercises}{84}{subsection.5.3.3}%
+\contentsline {section}{\numberline {5.4}Cauchy-Schwarz Inequality}{89}{section.5.4}%
 \ttl@stoptoc {part@1}
 \ttl@starttoc {part@2}
 \contentsline {part}{\numberline {II}Further Discrete Mathematics}{91}{part.2}%
