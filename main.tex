@@ -2185,7 +2185,7 @@ Computer Science is most commonly known as an engineering subject, while the una
 Every reader could be quite surprised when seeing the title for this section. Yes, numbers, we have known what is number since the very beginning when we get to learn math as toddlers. In this section, we will explain the system of number, not only will we figure out how numbers and their operations are defined, but how they are categorized.
 \subsection{Typology of Numbers}
 This part recalls the type of numbers we've learned since primary school and their set notations.
-
+\label{sec:number}
 \begin{enumerate}
   \item \textbf{Natural Numbers}
   \begin{itemize}
@@ -2884,17 +2884,7 @@ where the value of any digit \( a_i \) is an integer in the range \( 0 \leq a_i 
 \end{definition}
 %------------------------------------------------
 
-\chapterimage{orange2.jpg}
-\chapterspaceabove{6.75cm} 
-\chapterspacebelow{7.25cm} 
-\chapter{Complex Number}
 
-\section{Algebra of Complex Number}
-
-\section{Point representation}
-\section{ Vector, and Polar Form}
-\section{Exponential Form}
-\section{Finding Complex Roots}
 %------------------------------------------------
 
 \chapterimage{orange2.jpg}
@@ -3468,7 +3458,233 @@ Hence, we have proved that \( a^2 + b^2 + c^2 \geq \frac{1}{3} \) as required.
 %------------------------------------------------
 
 
+\chapterimage{orange2.jpg}
+\chapterspaceabove{6.75cm} 
+\chapterspacebelow{7.25cm} 
+\chapter{Complex Number}
+In \autoref{sec:number}, we introduced the categorization of numbers. This chapter will unveil the
+most special subset of number that we have known, which is complex number. Complex number is a powerful
+mathematical tool for Computer Science, especially for some machine learning algorithms and computer graphics.
 
+In the 18th century, some mathematicians are confused by the roots of equations, especially  high-ordered equation.
+In some cases, they have to get the square root of a negative number, which is non-existent in the real number filed.
+In this context, mathematicians extend their knowledge to complex number. For equations such as $x^2 = -1$,
+we can easily find out that the root is $\sqrt{-1}$, which is not defined for all real numbers. Mathematicians
+define $\sqrt{-1}$ as \textbf{Imaginary Number}, denoted by $i$.
+\begin{definition}[imaginary Number]
+    The equation $x^2 = -1$ is used to define imaginary number $i$, which gives $i^2 = -1$. The two roots are $i$
+    and $-i$ respectively.
+\end{definition}
+
+Formally, a compex number is defined as:
+\begin{definition}
+    A complex number is an expression of the form \(a + bi\), where \(a\) and \(b\) are real numbers.
+The set of all complex numbers is denoted by \(\mathbb{C}\). That is,
+\[
+\mathbb{C} = \{ a + bi : a, b \in \mathbb{R} \}
+\]
+The letter \(z\) is often used to denote a complex number.
+\begin{itemize}
+    \item If \( a = 0 \), then \( z = bi \) is said to be an imaginary number.
+    \item If \( b = 0 \), then \( z = a \) is a real number.
+\end{itemize}
+The real numbers and the imaginary numbers are subsets of \( \mathbb{C} \)
+\end{definition}
+
+\begin{definition} [Real and Imaginary Part]
+    For a complex number \( z = a + bi \), we define
+\[
+\text{Re}(z) = a \quad \text{and} \quad \text{Im}(z) = b
+\]
+where \(\text{Re}(z)\) is called the \textit{real part} of \(z\), and \(\text{Im}(z)\) is called the \textit{imaginary part} of \(z\).
+
+\textbf{Note:} Both \(\text{Re}(z)\) and \(\text{Im}(z)\) are real numbers. That is, \(\text{Re}: \mathbb{C} \rightarrow \mathbb{R}\) and \(\text{Im}: \mathbb{C} \rightarrow \mathbb{R}\).
+\end{definition}    
+Sometimes we need to represent or simplify a given number to complex number. refer to the following examples
+\begin{example}
+    \textbf{a} Represent \(\sqrt{-5}\) as an imaginary number. \quad
+    \textbf{b} Simplify \(2\sqrt{-9} + 4i\).
+\end{example}
+\textbf{Solution}
+
+\textbf{a} \(\sqrt{-5} = \sqrt{5} \times (-1)\) \\
+\phantom{\textbf{a}} \(= \sqrt{5} \times \sqrt{-1}\) \\
+\phantom{\textbf{a}} \(= i\sqrt{5}\)
+
+\textbf{b} \(2\sqrt{-9} + 4i = 2\sqrt{9} \times (-1) + 4i\) \\
+\phantom{\textbf{b}} \(= 2 \times 3 \times i + 4i\) \\
+\phantom{\textbf{b}} \(= 6i + 4i\) \\
+\phantom{\textbf{b}} \(= 10i\)
+\section{Algebra of Complex Number} 
+This section discusses operations of complex number and some of its algebraic properties.
+For rationals, we have \begin{itemize}
+    \item \textbf{Commutative Law of Addition}
+    \[ a + b = b + a \]
+    
+    \item \textbf{Commutative Law of Multiplication}
+    \[ ab = ba \]
+    
+    \item \textbf{Associative Law of Addition}
+    \[ a + (b + c) = (a + b) + c \]
+    
+    \item \textbf{Associative Law of Multiplication}
+    \[ a(bc) = (ab)c \]
+    
+    \item \textbf{Distributive Law}
+    \[ (a + b)c = ac + bc, \]
+\end{itemize}
+
+for any rationals \( a \), \( b \), and \( c \).
+
+These basic rules are still available for complex number.
+
+\begin{definition}[Addition and Subtraction of Complex Number]
+    The operations of addition and subtraction of complex numbers are given by
+\[
+(a + bi) \pm (c + di) = (a \pm c) + (b \pm d)i,
+\]
+\end{definition}
+
+\begin{definition}[Multiplication of Complex Number]
+    The multiplication of two complex numbers is defined by
+\[
+(a + bi)(c + di) = (ac - bd) + (bc + ad)i.
+\]
+where $i^2=-1$.
+\end{definition}
+
+Now let's consider division of complex number. If we write it as a fraction, we have two complex number with real and imaginary parts, which is quite tricky to handle.
+In this case we can use the technique to deal with fraction with root denominator, rationalization, to cancel the imaginary part in the denominator, as $i^2=-1$.
+\begin{definition}[Division of Complex Number]
+    The division of complex numbers is given by
+\[
+\frac{a + bi}{c + di} := \frac{ac + bd}{c^2 + d^2} + \frac{bc - ad}{c^2 + d^2}i \quad (\text{if } c^2 + d^2 \neq 0).
+\]
+\end{definition}
+
+\begin{example}
+    Find the quotient
+\[
+\frac{(6 + 2i) - (1 + 3i)}{(-1 + i) - 2}.
+\]
+\end{example}
+\textbf{Solution.}
+\begin{align*}
+\frac{(6 + 2i) - (1 + 3i)}{(-1 + i) - 2} &= \frac{5 - i}{-3 + i} = \frac{5 - i}{-3 + i} \cdot \frac{(-3 - i)}{(-3 - i)} \\
+&= \frac{-15 - 1 - 5i + 3i}{9 + 1} \\
+&= \frac{-16 - 2i}{10} \\
+&= \frac{-8}{5} - \frac{1}{5}i. 
+\end{align*}
+
+\subsection{Exercises}
+\begin{exercise}
+    Verify the commutative, associative, and distributive laws for complex numbers.
+\end{exercise}
+
+\begin{exercise}
+    Notice that \(0\) and \(1\) retain their “identity” properties as complex numbers; that is, \(0 + z = z\) and \(1 \cdot z = z\) when \(z\) is complex.
+    \begin{enumerate}[label=(\alph*)]
+        \item Verify that complex subtraction is the inverse of complex addition (that is, \(z_3 = z_2 - z_1\) if and only if \(z_3 + z_1 = z_2\)).
+        \item Verify that complex division, as given in the text, is the inverse of complex multiplication (that is, if \(z_2 \neq 0\), then \(z_3 = z_1 / z_2\) if and only if \(z_3z_2 = z_1\)).
+    \end{enumerate}
+    \end{exercise}
+
+\begin{exercise}
+    Prove that if $z_1z_2=0$, then $z_1=0$ or $z_2=0$.
+\end{exercise}
+
+\begin{exercise}
+    Show that \(\Re(i z) = -\Im z\) for every complex number \(z\).
+\end{exercise}
+Hint: Prove using $z=a+bi$ directly.
+
+\begin{exercise}
+    Let $\displaystyle k$ be an integer. show that
+
+\begin{equation*}
+i^{4k} =1,\ i^{4k+1} =i,\ i^{4k+2} =-1,\ i^{4k+3} =-i
+\end{equation*}
+and thus evalueate
+\begin{equation*}
+3i^{11} +6i^{3} +\frac{8}{i^{20}} +i^{-1}
+\end{equation*}
+\end{exercise}
+\begin{proof}
+    We know that \( i^2 = -1 \). Therefore, we can express powers of \( i \) in terms of powers of \( -1 \):
+\begin{align*}
+i^{4k} &= (i^2)^{2k} = (-1)^{2k} = 1, \\
+i^{4k+1} &= i^{4k} \cdot i = 1 \cdot i = i, \\
+i^{4k+2} &= i^{4k} \cdot i^2 = 1 \cdot (-1) = -1, \\
+i^{4k+3} &= i^{4k+2} \cdot i = (-1) \cdot i = -i.
+\end{align*}
+Now we can evaluate the given expression:
+
+\[
+3i^{11} + 6i^3 + \frac{8}{i^{20}} + i^{-1} = 3i^{4(2)+3} + 6i^{4(0)+3} + \frac{8}{i^{4(5)}} + i^{-1}
+\]
+\[
+= 3(-i) + 6(-i) + \frac{8}{1} + \frac{1}{i}
+\]
+\[
+= -3i - 6i + 8 - i \cdot \left( \frac{1}{i} \cdot \frac{i}{i} \right) = -3i - 6i + 8 - \frac{i}{i^2} = -3i - 6i + 8 - \frac{i}{-1} = -3i - 6i + 8 + i
+\]
+\[
+= 8 - 10i
+\]
+Therefore, the evaluated expression is \( 8 - 10i \).
+\end{proof}
+
+\begin{exercise}
+    Solve each of the following equations for \( z \).
+    \begin{enumerate}[label=(\alph*)]
+        \item \( iz = 4 - zi \)
+        \item \( \frac{z}{1 - z} = 1 - 5i \)
+        \item \( (2 - i)z + 8z^2 = 0 \)
+        \item \( z^2 + 16 = 0 \)
+    \end{enumerate}
+\end{exercise}
+
+
+\begin{exercise}
+    The complex numbers \( z_1, z_2 \) satisfy the system of equations
+\begin{align*}
+    (1 - i)z_1 + 3z_2 &= 2 - 3i, \\
+    iz_1 + (1 + 2i)z_2 &= 1.
+\end{align*}
+Find \( z_1, z_2 \).
+\end{exercise}
+Hint: To find \( z_1 \) and \( z_2 \), we solve the system of equations and find that
+\[ z_1 = 1 + i \]
+\[ z_2 = -i \]
+
+\begin{exercise}
+    The straightforward method of computing the product \((a + bi)(c + di) = (ac - bd) + i(bc + ad)\) requires four (real) multiplications (and two signed additions). On most computers multiplication is far more time-consuming than addition. Devise an algorithm for computing \((a + bi)(c + di)\) with only three multiplications (at the cost of extra additions). 
+    \begin{itemize}
+        \item Write this algorithm in pseudocode
+    \end{itemize}
+\end{exercise}
+
+\noindent Hint: Start with \((a + b)(c + d)\), this is calleded "Karatsuba's algorithm"
+
+\noindent \textbf{Solution:}
+\begin{algorithm}
+    \caption{Karatsuba's algorithm for multiplying two complex numbers}
+    \begin{algorithmic}[1]
+    \Procedure{KaratsubaMultiply}{$a, b, c, d$}
+    \State $ac \gets a \cdot c$
+    \State $bd \gets b \cdot d$
+    \State $abcd \gets (a + b) \cdot (c + d)$
+    \State $real \gets ac - bd$
+    \State $imag \gets abcd - ac - bd$
+    \State \Return $real + imag \cdot i$
+    \EndProcedure
+    \end{algorithmic}
+    \end{algorithm}
+
+\section{Point representation of Complex Number}
+\section{Vector, and Polar Form}
+\section{Exponential Form}
+\section{Finding Complex Roots}
 %------------------------------------------------
 \part{Further Discrete Mathematics}
 
