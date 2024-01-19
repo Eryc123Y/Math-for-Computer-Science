@@ -52,7 +52,7 @@
 \usepackage{algorithm}
 \usepackage{algpseudocode}
 \usepackage{wrapfig}
-
+\usepackage{hyperref}
 \addbibresource{sample.bib} % Bibliography file
 
 \definecolor{ocre}{RGB}{243, 102, 25} % Define the color used for highlighting throughout the book
@@ -3003,7 +3003,7 @@ For a quadratic inequality of the form $ax^2 + bx + c > 0$ or $ax^2 + bx + c < 0
 In this part, we explore two fundamental inequalities in mathematics: the Triangle Inequality and the Arithmetic-Geometric Mean (AGM) Inequality. Each section provides a comprehensive overview, including detailed proofs and corollaries.
 \subsection{The Triangle Inequality}
 The Triangle Inequality is a fundamental relation in geometry and analysis, asserting that the sum of the lengths of any two sides of a triangle must be greater than or equal to the length of the remaining side.
-    \begin{definition}
+    \begin{definition}[Triangular Inequality] \label{triangularineq}
         For any real numbers \( a \) and \( b \), the Triangle Inequality is given by:
         \[ |a + b| \leq |a| + |b| \]
     \end{definition}
@@ -3682,8 +3682,678 @@ Hint: To find \( z_1 \) and \( z_2 \), we solve the system of equations and find
     \end{algorithm}
 
 \section{Point representation of Complex Number}
-\section{Vector, and Polar Form}
+This section delves into the representation of Complex Number in the Cartesian coordinate, with which we are 
+already quite familiar. In this system, we use ordered pairs like $(a,b)$ to show the position of a given point.
+In the study of complex number, we can draw all complex number on a Cartesian coordinate which we call \textbf{Complex Plane}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics{complexplane.png}
+    \caption{Complex Plane}
+\end{figure}
+
+\begin{definition}[Complex Plane]
+    The complex plane is a two-dimensional space where each point represents a complex number. The horizontal axis represents the real part of the number, and the vertical axis represents the imaginary part. This allows for a geometric interpretation of complex numbers.
+\end{definition}
+Now that we have point representation on the complex plane, we can gauge the length of a complex number, which we call
+\textbf{absolute value} or \textbf{modulus}, as what we do to vectors.
+\begin{definition}[Modulus of Complex Number]
+    The absolute value or modulus of the number \( z = a + bi \) is denoted by \( |z| \) and is given by
+\[ |z| := \sqrt{a^2 + b^2}. \]
+\end{definition}
+In particular,
+\[ |0| = 0, \quad \left|\frac{i}{2}\right| = \frac{1}{2}, \quad |3 - 4i| = \sqrt{9 + 16} = 5. \]
+Similarly, we can also gain the distance between two complex numbers in the plane by taking them as two points.
+\begin{definition}[Distance between Complex Number]
+    Let \( z_1 = a_1 + b_1i \) and \( z_2 = a_2 + b_2i \). 
+    \begin{equation}
+        |z_1 - z_2| = |(a_1 - a_2) + (b_1 - b_2)i| = \sqrt{(a_1 - a_2)^2 + (b_1 - b_2)^2}
+    \end{equation}
+\end{definition}
+We can use this property to describe curves in the plane.
+\begin{example}
+    Draw the area that satisfies $|z-z_0|=1$, where $z_0 = 2+2i$.
+\end{example}
+
+This set consists of all points $z$ whose distance from $z_0$ is $r$.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.5\textwidth]{locus1.png}
+\end{figure}
+\begin{example}
+    Describe the set of points \( z \) that satisfy the equations
+
+\begin{enumerate}
+\item[(a)] \( |z + 2| = |z - 1| \),
+\item[(b)] \( |z - 1| = \text{Re} \, z + 1 \).
+\end{enumerate}
+\end{example}
+\textbf{Solution.}
+
+\begin{itemize}
+    \item[(a)] A point \( z \) satisfies Eq. (a) if and only if it is equidistant from the points \( -2 \) and \( 1 \). Hence, Eq. (a) is the equation of the perpendicular bisector of the line segment joining \( -2 \) and \( 1 \); that is, Eq. (a) describes the line \( x = -\frac{1}{2} \).
+
+    A more routine method for solving Eq. (a) is to set \( z = x + iy \) in the equation and perform the algebra:
+    \begin{align*}
+        |z + 2| &= |z - 1|, \\
+        |x + iy + 2| &= |x + iy - 1|, \\
+        (x + 2)^2 + y^2 &= (x - 1)^2 + y^2, \\
+        4x + 4 &= -2x + 1, \\
+        x &= -\frac{1}{2}.
+    \end{align*}
+
+    \item[(b)] The geometric interpretation of Eq. (b) is less obvious, so we proceed directly with the mechanical approach and derive
+    $$\sqrt{(x-1)^2} + y^2 = x+1 \iff y^2 = 4x$$
+    which is a parabola.
+\end{itemize}
+Another important concept is \textbf{complex conjugate}.
+
+Geometrically, the conjugate of a complex number is its reflection on the x-axis.
+\begin{wrapfigure}{r}{0.5\textwidth}
+    \centering
+    \includegraphics[width=0.48\textwidth]{conjugate.png}
+    \caption{Complex Conjugate}
+  \end{wrapfigure}
+  The complex conjugate of the number $z = a+bi$ is denoted by $\bar{z} = a-bi $.
+  It follows that \( z = \bar{z} \) if and only if \( z \) is a real number. Also, it is clear that the conjugate of the sum (difference) of two complex numbers is equal to the sum (difference) of their conjugates; that is,
+
+$$z_1 + z_2 = \bar{z}_1 + \bar{z}_2$$
+
+$$\quad z_1 - z_2 = \bar{z}_1 - \bar{z}_2$$
+
+We also have:
+$$\bar{(z_1z_2)} = \bar{z_1} \bar{z_2}$$
+and
+$$\begin{aligned}\overline{\left(\frac{z_1}{z_2}\right)}&=\frac{\bar{z_1}}{\bar{z_2}}\quad(z_2\neq0);\\\operatorname{Re}z&=\frac{z+\bar{z}}2;\\\operatorname{Im}z&=\frac{z-\bar{z}}{2i};\end{aligned}$$
+The proof is not very complex, and is therefore exercises for this section.
+\\
+\subsection{Exercises}
+
+
+\begin{exercise}
+    Describe the set of points \( z \) in the complex plane that satisfies each of the following.
+    \begin{enumerate}
+        \item[\textbf{(a)}] \( \text{Im} \, z = -2 \)
+        \item[\textbf{(b)}] \( |z - 1 + i| = 3 \)
+        \item[\textbf{(c)}] \( |2z - i| = 4 \)
+        \item[\textbf{(d)}] \( |z - 1| = |z + i| \)
+        \item[\textbf{(e)}] \( |z| = \text{Re} \, z + 2 \)
+        \item[\textbf{(f)}] \( |z - 1| + |z + 1| = 7 \)
+        \item[\textbf{(g)}] \( |z| = 3|z - 1| \)
+        \item[\textbf{(h)}] \( \text{Re} \, z \geq 4 \)
+        \item[\textbf{(i)}] \( |z - i| < 2 \)
+        \item[\textbf{(j)}] \( |z| > 6 \)
+      \end{enumerate}
+\end{exercise}
+\begin{proof}
+    Here we describe the set of points \( z \) in the complex plane that satisfies each of the following conditions:
+    
+    \begin{enumerate}
+      \item[\textbf{(a)}] For \( \text{Im} \, z = -2 \), the Cartesian equation is \( y = -2 \).
+      \item[\textbf{(b)}] For \( |z - 1 + i| = 3 \), the Cartesian equation is \( (x - 1)^2 + (y + 1)^2 = 9 \).
+      \item[\textbf{(c)}] For \( |2z - i| = 4 \), the Cartesian equation is \( (2x)^2 + (2y - 1)^2 = 16 \).
+      \item[\textbf{(d)}] For \( |z - 1| = |z + i| \), the Cartesian equation is \( (x - 1)^2 + y^2 = x^2 + (y + 1)^2 \).
+      \item[\textbf{(e)}] For \( |z| = \text{Re} \, z + 2 \), the Cartesian equation is \( x^2 + y^2 = x + 2 \).
+      \item[\textbf{(f)}] For \( |z - 1| + |z + 1| = 7 \), this is the equation of an ellipse with foci at (1,0) and (-1,0).
+      \item[\textbf{(g)}] For \( |z| = 3|z - 1| \), the Cartesian equation is \( x^2 + y^2 = 3(\sqrt{(x - 1)^2 + y^2}) \).
+      \item[\textbf{(h)}] For \( \text{Re} \, z \geq 4 \), the Cartesian equation is \( x \geq 4 \).
+      \item[\textbf{(i)}] For \( |z - i| < 2 \), the Cartesian equation is \( (x)^2 + (y - 1)^2 < 4 \).
+      \item[\textbf{(j)}] For \( |z| > 6 \), the Cartesian equation is \( x^2 + y^2 > 36 \).
+    \end{enumerate}
+    \end{proof}
+
+    \begin{exercise}
+        Prove that if \( \overline{z}^2 = z^2 \), then \( z \) is either real or pure imaginary.
+        \end{exercise}
+        
+        \begin{proof}
+        Let \( z = a + bi \) where \( a \) and \( b \) are real numbers and \( i \) is the imaginary unit. Then \( \overline{z} = a - bi \). 
+        
+        According to the premise:
+        \[ \overline{z}^2 = (a - bi)^2 = a^2 - 2abi + b^2i^2 = a^2 - 2abi - b^2 \]
+        \[ z^2 = (a + bi)^2 = a^2 + 2abi + b^2i^2 = a^2 + 2abi - b^2 \]
+        
+        For \( \overline{z}^2 \) to equal \( z^2 \), the real parts and the imaginary parts of \( \overline{z}^2 \) and \( z^2 \) must be equal, thus:
+        \[ a^2 - b^2 = a^2 - b^2 \]
+        \[ -2ab = 2ab \]
+        
+        The real parts are already equal. For the imaginary parts to be equal, \( -2ab \) must equal \( 2ab \), which is only possible if \( ab = 0 \). This means that either \( a = 0 \) or \( b = 0 \) (or both).
+        
+        If \( a = 0 \), then \( z \) is pure imaginary. If \( b = 0 \), then \( z \) is real. Hence, if \( \overline{z}^2 = z^2 \), \( z \) must be either real or pure imaginary.
+        \end{proof}
+
+        \begin{exercise}
+            Show that:
+            \begin{itemize}
+                \item$\lvert z_1z_2 \rvert = \lvert z_1 \rvert \lvert z_2 \rvert$ \quad (the modulus of a product is the product of the moduli)
+                \item $\left\lvert \frac{z_1}{z_2} \right\rvert = \frac{\lvert z_1 \rvert}{\lvert z_2 \rvert}$ \quad (the modulus of a quotient is the quotient of the moduli)
+                \item $\lvert z_1 \rvert + \lvert z_2 \rvert \leq \lvert z_1 + z_2 \rvert$ \quad (triangle inequality)
+              \end{itemize}
+        \end{exercise}
+        
+        \begin{exercise}
+            Show that:
+            \begin{itemize}
+                \item $z_1 + z_2 = \overline{z_1} + \overline{z_2}$
+                \item $z_1z_2 = \overline{z_1} \, \overline{z_2}$
+                \item $\overline{z}z = \lvert z \rvert^2$
+                \item $z + \overline{z} = 2Re(z)$
+                \item $kz = \overline{kz}$, for $k \in \mathbb{R}$
+              \end{itemize}
+        \end{exercise}
+        \begin{exercise}
+            Prove that \( \overline{z}^k = (\overline{z^k}) \) for every integer \( k \) (provided \( z \neq 0 \) when \( k \) is negative).
+            \end{exercise}
+            
+            \begin{proof}
+            Consider a complex number \( z = a + bi \), where \( a \) and \( b \) are real numbers and \( i \) is the imaginary unit. The complex conjugate of \( z \) is \( \overline{z} = a - bi \).
+            
+            The statement is trivially true for \( k = 0 \) and \( k = 1 \). Now let \( k \) be any positive integer.
+            
+            We proceed by induction on \( k \):
+            
+            \textbf{Base case} (\( k = 1 \)):
+            \[ \overline{z}^1 = \overline{z} = a - bi = \overline{z^1} \]
+            The base case holds.
+            
+            \textbf{Inductive step}:
+            Assume the statement is true for \( k \), i.e., \( \overline{z}^k = \overline{z^k} \). We need to show that \( \overline{z}^{k+1} = \overline{z^{k+1}} \).
+            \[ \overline{z}^{k+1} = \overline{z}^k \cdot \overline{z} = \overline{z^k} \cdot \overline{z} \]
+            Using the property of complex conjugates that \( \overline{zw} = \overline{z} \cdot \overline{w} \), we have:
+            \[ \overline{z^k} \cdot \overline{z} = \overline{z^k \cdot z} = \overline{z^{k+1}} \]
+            This completes the inductive step.
+            
+            For negative integers \( k \), we have \( \overline{z}^k = \overline{z^{-k}} = (\overline{z^{-1}})^k = (\overline{z})^k \), since the complex conjugate of a reciprocal is the reciprocal of the complex conjugate, and the induction hypothesis applies.
+            
+            Therefore, \( \overline{z}^k = (\overline{z^k}) \) for every integer \( k \).
+            \end{proof}
+
+            \begin{exercise}\label{conjugate root}
+                Let \( a_1, a_2, \ldots, a_n \) be real constants. Show that if \( z_0 \) is a root of the polynomial equation \( z^n + a_1z^{n-1} + a_2z^{n-2} + \ldots + a_n = 0 \), then so is \( \overline{z_0} \).
+                \end{exercise}
+                
+                \begin{proof}
+                Suppose \( z_0 \) is a root of the polynomial \( P(z) = z^n + a_1z^{n-1} + a_2z^{n-2} + \ldots + a_n \). This means that:
+                \[ P(z_0) = z_0^n + a_1z_0^{n-1} + a_2z_0^{n-2} + \ldots + a_n = 0 \]
+                
+                Taking the complex conjugate of the entire equation, we have:
+                \[ \overline{P(z_0)} = \overline{z_0^n + a_1z_0^{n-1} + a_2z_0^{n-2} + \ldots + a_n} = \overline{0} \]
+                
+                Since the \( a_i \) are real, \( \overline{a_i} = a_i \), and using the property that \( \overline{z + w} = \overline{z} + \overline{w} \) and \( \overline{zw} = \overline{z}\cdot \overline{w} \), we get:
+                \[ \overline{P(z_0)} = \overline{z_0}^n + a_1\overline{z_0}^{n-1} + a_2\overline{z_0}^{n-2} + \ldots + a_n \]
+                
+                Since \( \overline{0} = 0 \), the equation simplifies to:
+                \[ P(\overline{z_0}) = \overline{z_0}^n + a_1\overline{z_0}^{n-1} + a_2\overline{z_0}^{n-2} + \ldots + a_n = 0 \]
+                
+                Therefore, \( \overline{z_0} \) is also a root of the polynomial \( P(z) \).
+                \end{proof}
+                \begin{remark}
+                    This statement is actually \textbf{Conjugate Root Theorem}, which we will discuss further details about in finding
+                    complex roots of equations.
+                \end{remark}
+            \begin{exercise}
+                We have noted that the conjugate \( \overline{z} \) is the reflection of the point \( z \) in the real axis (the horizontal line \( y = 0 \)). Show that the reflection of \( z \) in the line \( ax + by = c \) (where \( a, b, c \) are real) is given by
+\[ \frac{2ic    + (b - ai)\overline{z}}{b + ai} \]
+            \end{exercise}
+            Hint: In general, the reflection of the point \( (x_1, y_1) \) in the line \( ax + by + c = 0 \) given by this formula:
+            \[ 
+            x_2 = \frac{x_1(b^2 - a^2) - 2aby_1 - 2ac}{a^2 + b^2}
+            \]
+            \[ 
+            y_2 = \frac{y_1(a^2 - b^2) - 2abx_1 - 2bc}{a^2 + b^2}
+            \]
+            
+            \begin{proof}
+                Now the reflection of $z = (x, y)$ in the line $ax + by - c = 0$ is $w = u + iv$, $u, v \in \mathbb{R}$, where:
+                \begin{align*}
+                u &= \frac{x(b^2 - a^2) - 2aby + 2ac}{a^2 + b^2}, \\
+                v &= \frac{y(a^2 - b^2) - 2abx + 2bc}{a^2 + b^2}.
+                \end{align*}
+                Then:
+                \begin{align*}
+                w = u + vi &= \frac{x(b^2 - a^2) - 2aby + 2ac}{a^2 + b^2} + \frac{y(a^2 - b^2) - 2abx + 2bc}{a^2 + b^2}i. 
+                \end{align*}
+                Next, we'll prove now:
+                \begin{align*}
+                w &= \frac{2ic + (b - ai)\overline{z}}{b + ai}.
+                \end{align*}
+                We'll factorize and simplify $w$ in $(*)$:
+                \begin{align*}
+                w &= \frac{x(b^2 - a^2) - 2aby + 2ac}{a^2 + b^2} + \frac{y(a^2 - b^2) - 2abx + 2bc}{a^2 + b^2}i \\
+                &= \frac{x(b^2 - a^2) - 2aby + 2ac + y(a^2 - b^2)i - 2abxi + 2bci}{a^2 + b^2}.
+                \end{align*}
+                Simplify more:
+                \begin{align*}
+                (b^2 - a^2 - 2abi) &= (b - ai)^2, \\
+                (a^2i - b^2i - 2ab) &= (-i)(b^2 - a^2 + 2ab) \\
+                &= (-i)(b + ai)^2 \quad \left(\text{since } \frac{1}{i} = -i\right), \\
+                &= (-i)(b - ai)(b + ai)^2 \\
+                &= i(b - ai) \\
+                &= i(b - ai)(b + ai).
+                \end{align*}
+                Now we'll put all of them in the $(1)$,
+                \begin{align*}
+                w &= \frac{x(b - ai)^2 - yi(b - ai)^2 + 2ci(b - ai)}{b + ai} \\
+                &= \frac{(b - ai)x(b - ai) - yi(b - ai) + 2ci}{b + ai} \\
+                &= \frac{2ci + (b - ai)\overline{z}}{b + ai}.
+                \end{align*}
+                Therefore, the reflection of $z$ in the line $ax + by = c$ is:
+                \begin{align*}
+                w &= \frac{2ic + (b - ai)\overline{z}}{b + ai}.
+                \end{align*}
+                \end{proof}
+               
+\section{Vector and Polar Form}
+\subsection{Vector Form of Complex Number}
+Now that we can express complex numbers as points scattered in the complex plane, we can take them as direction vectors
+in the plane as shown in figure \ref{vec}. 
+\begin{figure}[H]
+    \centering \label{vec}
+    \includegraphics[width = 0.5\textwidth]{complexvector.png}
+    \caption{Complex Number as Vector}
+\end{figure}
+With this, we can apply all possible operations of vectors to complex numbers, such as the \textbf{parallelogram law} as in figure \ref{parrl}.
+\begin{figure}[H]
+    \centering \label{parrl}
+    \includegraphics[width = 0.5\textwidth]{paralaw.png}
+    \caption{Parallelogram Law}
+\end{figure}
+Examing this figure, it actually reminds us of a important conclusion mentioned in earlier chapter. If we focus on
+the lower triangle of the parallelogram, and denote these two complex numbers as $z_1$ and $z_2$ respectively.
+They hold that: $$|z_1+z_2| \leq |z_1|+|z_2|$$
+This is exactly the geometrical meaning of triangular inequality as in definition \ref{triangularineq}.
+And these are all we need to know about complex number's vector form, as it is not used very common.
+
+\subsection{Polar Form of Complex Number}
+This section discusses one of the most commonly used form of complex number. We start with introducing a new coordinate syste.
+
+\subsubsection{The Polar Coordinate}
+Polar coordinates provide an alternative to Cartesian coordinates for describing the location of points in a two-dimensional plane. While Cartesian coordinates use a grid of horizontal and vertical lines to specify a point by its horizontal (x) and vertical (y) distances from an origin, polar coordinates specify a point by its distance from a reference point (called the pole, analogous to the origin) and an angle relative to a reference direction.
+\begin{figure}[H]
+    \centering \label{polar}
+    \includegraphics[width = 0.5\textwidth]{polar2.png}
+    \caption{Complex Number in Polar Coordinate}
+\end{figure}
+A point's location in polar coordinates is given as \( (r, \theta) \), where \( r \) is the radial distance from the pole, and \( \theta \) is the angular coordinate, typically measured in radians from the positive x-axis (the reference direction). Polar coordinates are particularly useful in situations where the geometry of a problem has rotational symmetry, making it more natural and simpler to work with angles and radii than with rectangular coordinates.
+
+One of the most common applications of polar coordinates is in the field of trigonometry, complex numbers, and vector calculus, where they provide a more straightforward approach to solving problems involving circular motion, periodic functions, and fields.
+
+\subsubsection{Polar Expression of Complex Number}
+Now that we know the existence of polar form, how can we get it from Cartesian form? In the Cartesian coordinate,
+the positions are expressed, straightforwardly, in the horizontal and vertical distance to y and x-axis, while in polar
+coordinate, we express them using the angle between the line from the origin to the specific position and the horizontal axis, as well
+as the length of this line. Is there a mapping or relation between the points in these two types of coordinates? Some clever students
+may have noticed that trigonometric functions are the keys here.
+we readily derive the equations expressing the rectangular (or Cartesian) coordinates $(x, y)$ in terms of the polar coordinates $(r, \theta)$:
+\begin{equation}
+x = r \cos \theta, \quad y = r \sin \theta. 
+\end{equation}
+On the other hand, the expressions for $(r, \theta)$ in terms of $(x, y)$ contain some minor but troublesome complications. Indeed the coordinate $r$ is given, unambiguously, by
+\begin{equation}
+r = \sqrt{x^2 + y^2} = |z|. 
+\end{equation}
+
+However, observe that although it is certainly true that $\tan \theta = \frac{y}{x}$, the natural conclusion
+\begin{equation}
+\theta = \tan^{-1}\left(\frac{y}{x}\right)
+\end{equation}
+is \textit{invalid} for points $z$ in the second and third quadrants (since the standard interpretation of the arctangent function places its range in the first and fourth quadrants). Since an angle is fixed by its sine \textit{and} cosine, $\theta$ is uniquely determined by the pair of equations
+\begin{equation}
+\cos \theta = \frac{x}{|z|}, \quad \sin \theta = \frac{y}{|z|}, 
+\end{equation}
+And all these lead us to the polar form of a given complex number:
+\begin{equation}
+    z=x+iy=r(\cos\theta+i\sin\theta)=r\operatorname{cis}\theta
+\end{equation}
+
+Considering the circularity of radiant, we introduce the \textbf{argument} of complex number.
+\begin{definition}[Arguement of Complex Number]
+In the study of complex numbers, the \emph{argument} of a complex number \( z \), denoted as \( \text{arg}(z) \), is a fundamental concept representing the angle between the positive real axis and the line segment that joins the origin with the point \( z \) in the complex plane. Specifically, if \( z = x + iy \), where \( x \) and \( y \) are real numbers, then \( \text{arg}(z) \) is defined as the angle \( \theta \) in polar coordinates that satisfies \( x = r\cos(\theta) \) and \( y = r\sin(\theta) \), where \( r \) is the magnitude of \( z \). The value of \( \text{arg}(z) \) is usually given in radians and, by convention, is restricted to the interval \( (-\pi, \pi] \), known as the principal value. The argument provides a complete description of the direction in which the point \( z \) lies from the origin, serving as a crucial tool in the fields of complex analysis, phasor calculus in electrical engineering, and in the representation of waves and oscillations.
+\end{definition}
+
+\begin{example}
+    Find $\arg(1 + \sqrt{3}i)$ and write $1 + \sqrt{3}i$ in polar form.
+\end{example}
+\textbf{Solutions:}
+
+Note that $r = |1 + \sqrt{3}i| = 2$ and that the equations $\cos\theta = \frac{1}{2}$, $\sin\theta = \frac{\sqrt{3}}{2}$ are satisfied by $\theta = \frac{\pi}{3}$. Hence $\arg(1 + \sqrt{3}i) = \frac{\pi}{3} + 2k\pi, k = 0, \pm1, \pm2, \ldots$ [in particular, $\text{Arg}(1 + \sqrt{3}i) = \frac{\pi}{3}$]. The polar form of $1 + \sqrt{3}i$ is
+\[2(\cos\frac{\pi}{3} + i\sin\frac{\pi}{3}) = 2\operatorname{cis}\frac{\pi}{3}.\]
+
+More properties of polar form complex number could be derived with properties of trigonometric identities.
+Now suppose we have 
+$$z_1=r_1\left(\cos\theta_1+i\sin\theta_1\right),\quad z_2=r_2\left(\cos\theta_2+i\sin\theta_2\right)$$
+then we have
+$$z_1z_2=r_1r_2\left[(\cos\theta_1\cos\theta_2-\sin\theta_1\sin\theta_2)+i(\sin\theta_1\cos\theta_2+\cos\theta_1\sin\theta_2)\right]$$
+which follows that
+\begin{equation} \label{polarprod}
+    z_1z_2=r_1r_2\left[\cos\left(\theta_1+\theta_2\right)+i\sin\left(\theta_1+\theta_2\right)\right]
+\end{equation}
+
+\begin{remark}
+The compound angle formula is applied in the proof, which should already been covered in high school
+syllabus. You may refer to \href{https://en.wikipedia.org/wiki/List_of_trigonometric_identities}{this link} for further information.
+A concise proof is provided below.
+\begin{proof}[Proof of the Composite Angle Formulas]
+    To prove the sine of the sum of two angles \( \alpha \) and \( \beta \), we can use the unit circle and the definition of sine and cosine.
+    
+    Consider a unit circle where point \( A \) corresponds to angle \( \alpha \), and point \( B \) corresponds to angle \( \alpha + \beta \). Point \( A \) has coordinates \( (\cos(\alpha), \sin(\alpha)) \), and point \( B \) has coordinates \( (\cos(\alpha + \beta), \sin(\alpha + \beta)) \).
+    
+    By rotating point \( A \) by angle \( \beta \), we can form a right triangle where the new point, \( C \), has coordinates \( (\cos(\alpha)\cos(\beta) - \sin(\alpha)\sin(\beta), \sin(\alpha)\cos(\beta) + \cos(\alpha)\sin(\beta)) \).
+    
+    The coordinates of point \( C \) represent the cosine and sine of the sum of angles \( \alpha \) and \( \beta \) due to the rotation. Therefore, we have:
+    
+    \[
+    \sin(\alpha + \beta) = \sin(\alpha)\cos(\beta) + \cos(\alpha)\sin(\beta)
+    \]
+    \[
+    \cos(\alpha + \beta) = \cos(\alpha)\cos(\beta) - \sin(\alpha)\sin(\beta)
+    \]
+    
+    Similarly, by considering the rotation in the opposite direction (subtracting angle \( \beta \) from \( \alpha \)), we can derive the formulas for the sine and cosine of the difference of two angles:
+    
+    \[
+    \sin(\alpha - \beta) = \sin(\alpha)\cos(\beta) - \cos(\alpha)\sin(\beta)
+    \]
+    \[
+    \cos(\alpha - \beta) = \cos(\alpha)\cos(\beta) + \sin(\alpha)\sin(\beta)
+    \]
+    
+    Thus, we have proven the composite angle formulas for sine and cosine.
+
+    \end{proof}
+\end{remark}
+
+The abbreviated version of Eq. \ref{polarprod} reads as follows:
+\[
+\overline{z_1z_2} = (r_1 \operatorname{cis} \theta_1)(r_2 \operatorname{cis} \theta_2) = (r_1r_2) \operatorname{cis} (\theta_1 + \theta_2)
+\]
+and we see that
+
+\textbf{The modulus of the product is the product of the moduli:}
+\[
+|\overline{z_1z_2}| = |z_1||z_2| \quad (= r_1r_2);
+\]
+
+
+\textbf{The argument of the product is the sum of the arguments:}
+\[
+\arg \overline{z_1z_2} = \arg z_1 + \arg z_2 \quad (= \theta_1 + \theta_2).
+\]
+As division is the inverse of multiplication, we can get the following statements by similar method:
+\begin{equation} \label{5.8}
+    \frac{z_{1}}{z_{2}}=\frac{r_{1}}{r_{2}}\left[\cos\left(\theta_{1}-\theta_{2}\right)+i\sin\left(\theta_{1}-\theta_{2}\right)\right]=\frac{r_{1}}{r_{2}}\mathrm{cis}\left(\theta_{1}-\theta_{2}\right)
+\end{equation}
+\begin{equation}\label{5.9}
+    \arg\left(\frac{z_{1}}{z_{2}}\right)=\arg z_{1}-\arg z_{2} 
+\end{equation}
+\begin{equation}\label{5.10}
+    \left|\frac{z_1}{z_2}\right|=\frac{|z_1|}{|z_2|}
+\end{equation}
+\begin{example}
+    Write the quotient \( \frac{(1 + i)}{(\sqrt{3} - i)} \) in polar form.
+\end{example}
+\begin{proof}
+    The polar forms for \( 1 + i \) and \( \sqrt{3} - i \) are
+    \[
+    1 + i = |1 + i| \operatorname{cis}(\arg(1 + i)) = \sqrt{2} \operatorname{cis}\left(\frac{\pi}{4}\right),
+    \]
+    \[
+    \sqrt{3} - i = 2 \operatorname{cis}\left(-\frac{\pi}{6}\right).
+    \]
+    Hence, from Eq. \ref{5.8}, we have
+    \[
+    \frac{1 + i}{\sqrt{3} - i} = \frac{\sqrt{2}}{2} \operatorname{cis} \left(\frac{\pi}{4} - \left(-\frac{\pi}{6}\right)\right) = \frac{\sqrt{2}}{2} \operatorname{cis}\left(\frac{5\pi}{12}\right).
+    \]
+    \end{proof}
+
+\subsection{Exercises}
+\begin{exercise}
+    Find the following:
+    \begin{enumerate}
+        \item[(a)] \( \left| \frac{1 + 2i}{-2 - i} \right| \)
+        \item[(b)] \( \left| (1 + i)(2 - 3i)(4i - 3) \right| \)
+        \item[(c)] \( \left| \frac{i(2 + i)^3}{(1 - i)^2} \right| \)
+        \item[(d)] \( \left| \frac{(\pi + i)^{100}}{(\pi - i)^{100}} \right| \)
+    \end{enumerate}
+\end{exercise}
+\begin{exercise}
+    Draw the following vectors:
+    \begin{enumerate}
+        \item[(a)] \( 7 \operatorname{cis}\left(\frac{3\pi}{4}\right) \)
+        \item[(b)] \( 4 \operatorname{cis}\left(-\frac{\pi}{6}\right) \)
+        \item[(c)] \( \operatorname{cis}\left(\frac{3\pi}{4}\right) \)
+        \item[(d)] \( 3 \operatorname{cis}\left(\frac{27\pi}{4}\right) \)
+    \end{enumerate}
+\end{exercise}
+\begin{exercise}
+    Find the argument of each of the following complex numbers and write each in polar form:
+    \begin{enumerate}
+        \item[(a)] \( -\frac{1}{2} \)
+        \item[(b)] \( -3 + 3i \)
+        \item[(c)] \( -\pi i \)
+        \item[(d)] \( -2\sqrt{3} - 2i \)
+        \item[(e)] \( (1 - i)(-\sqrt{3} + i) \)
+        \item[(f)] \( (\sqrt{3} - i)^2 \)
+        \item[(g)] \( \frac{-1 + \sqrt{3}i}{2 + 2i} \)
+        \item[(h)] \( \frac{-\sqrt{7}(1 + i)}{\sqrt{3} + i} \)
+    \end{enumerate}
+\end{exercise}
+\begin{exercise}
+    Show geometrically that the nonzero complex numbers \( z_1 \) and \( z_2 \) satisfy \( z_1 + z_2 = |z_1| + |z_2| \) if and only if they have the same argument.
+\end{exercise}
+\begin{proof}
+    If \( z_1 \) and \( z_2 \) have the same argument, it follows that:
+
+    We see here if $z_1 = r_1(\cos \theta + i \sin \theta)$, $z_2 = r_2(\cos \theta + i \sin \theta)$, then
+\begin{align*}
+|z_1 + z_2| &= |r_1(\cos \theta + i \sin \theta) + r_2(\cos \theta + i \sin \theta)| \\
+&= |(r_1 + r_2)(\cos \theta + i \sin \theta)| \\
+&= r_1 + r_2 = |z_1| + |z_2|
+\end{align*}
+\end{proof}
+\begin{exercise}
+    Given the vector \( z \), interpret geometrically the vector \( (\cos \phi + i \sin \phi)z \).
+\end{exercise}
+\textbf{Solution:}
+
+Let \( z \in \mathbb{C} \), \( z = r(\cos \theta + i \sin \theta) \)
+
+\[
+(\cos \phi + i \sin \phi)z = (\cos \phi + i \sin \phi)r(\cos \theta + i \sin \theta)
+\]
+\[
+= r[\cos(\theta + \phi) + i \sin(\theta + \phi)]
+\]
+\[
+= r\operatorname{cis}(\theta + \phi)
+\]
+
+Geometrically this: \( r\operatorname{cis}(\theta + \phi) \) means a vector that its length \( r \) and argument is \( \theta + \phi \), we can get it by rotating vector \( z \) about origin through an angle \( \phi \) in the counterclockwise direction.
+
+\begin{exercise}
+    Show that $|z_1z_2z_3|=|z_1||z_2||z_3|$ and thus prove 
+    $$|\prod_{i=1}^{n} z_i| = \prod_{i=1}^{n} |z_i|$$
+    \begin{remark}
+        $\prod$ is called pi (upper case) notation. Take it as the sigma notation for multiplication.
+    \end{remark}
+\end{exercise}
+    \begin{proof}
+        Consider the complex numbers \( z_1 = r_1(\cos \theta_1 + i\sin \theta_1) \), \( z_2 = r_2(\cos \theta_2 + i\sin \theta_2) \), and \( z_3 = r_3(\cos \theta_3 + i\sin \theta_3) \), where \( r_1, r_2, \) and \( r_3 \) are the moduli of \( z_1, z_2, \) and \( z_3 \) respectively, and \( \theta_1, \theta_2, \) and \( \theta_3 \) are the arguments. The product \( z_1z_2z_3 \) is then given by:
+        \[
+        z_1z_2z_3 = r_1r_2r_3(\cos(\theta_1 + \theta_2 + \theta_3) + i\sin(\theta_1 + \theta_2 + \theta_3))
+        \]
+        
+        The modulus of this product is:
+        \[
+        |z_1z_2z_3| = |r_1r_2r_3(\cos(\theta_1 + \theta_2 + \theta_3) + i\sin(\theta_1 + \theta_2 + \theta_3))| = r_1r_2r_3
+        \]
+        
+        Since the moduli of \( z_1, z_2, \) and \( z_3 \) are \( r_1, r_2, \) and \( r_3 \) respectively, it follows that:
+        \[
+        |z_1z_2z_3| = |z_1||z_2||z_3|
+        \]
+        
+        Now, extend this property to a product of \( n \) complex numbers:
+        \[
+        \prod_{i=1}^{n} z_i = \prod_{i=1}^{n} r_i(\cos \theta_i + i\sin \theta_i)
+        \]
+        
+        Taking the modulus of both sides:
+        \[
+        \left|\prod_{i=1}^{n} z_i\right| = \left|\prod_{i=1}^{n} r_i(\cos \theta_i + i\sin \theta_i)\right| = \prod_{i=1}^{n} r_i
+        \]
+        
+        Thus:
+        \[
+        \prod_{i=1}^{n} |\overline{z_i}| = \prod_{i=1}^{n} |z_i|
+        \]
+        
+        as required.
+
+        MI is also a option:
+
+        \textbf{Base case} (\(n = 1\)): For a single complex number \(z_1\), the statement is trivially true since \(|\overline{z_1}| = |z_1|\).
+
+        \textbf{Inductive step}: Assume the statement holds for \(n = k\), i.e.,
+        \[
+        \prod_{i=1}^{k} |\overline{z_i}| = \prod_{i=1}^{k} |z_i|
+        \]
+        Now consider \(n = k + 1\) complex numbers. By the induction hypothesis and the property that the modulus of a product is equal to the product of the moduli for any two complex numbers \(a\) and \(b\), namely \(|ab| = |a||b|\), we have:
+        \[
+        \prod_{i=1}^{k+1} |\overline{z_i}| = |\overline{z_{k+1}}| \prod_{i=1}^{k} |\overline{z_i}| = |z_{k+1}| \prod_{i=1}^{k} |z_i| = \prod_{i=1}^{k+1} |z_i|
+        \]
+        Thus, by mathematical induction, the statement is proved for all \(n \in \mathbb{N}\).
+        \end{proof}
+
+    \begin{exercise}
+        Show that\begin{enumerate}
+            \item[(a)] $\text{arg } z_1z_2z_3 = \text{arg } z_1 + \text{arg } z_2 + \text{arg } z_3$
+            \item[(b)] $\text{arg } z_1 \overline{z_2} = \text{arg } z_1 - \text{arg } z_2$.
+        \end{enumerate}
+    \end{exercise}              
+    \textbf{Solution:}
+    Let $z_1, z_2, z_3 \in \mathbb{C}$,
+
+(a) we'll prove $\text{arg }(z_1z_2z_3) = \text{arg } z_1 + \text{arg } z_2 + \text{arg } z_3$
+
+Let $z_1 = r_1(\cos \theta_1 + i \sin \theta_1)$, where $\text{arg } z_1 = \theta_1$
+
+$z_2 = r_2(\cos \theta_2 + i \sin \theta_2)$, where $\text{arg } z_2 = \theta_2$
+
+$z_3 = r_3(\cos \theta_3 + i \sin \theta_3)$, where $\text{arg } z_3 = \theta_3$
+
+We'll prove $\text{arg } z_1z_2z_3 = \text{arg } z_1 + \text{arg } z_2 + \text{arg } z_3$
+
+At first we'll find $z_1z_2z_3$:
+
+\begin{align*}
+    z_1z_2z_3 &= (z_1z_2)z_3 = r_1r_2[\cos(\theta_1 + \theta_2) + i \sin(\theta_1 + \theta_2)]z_3 \\
+    &= r_1r_2r_3[\cos(\theta_1 + \theta_2) + i \sin(\theta_1 + \theta_2)](\cos \theta_3 + i \sin \theta_3) \\
+    &= r_1r_2r_3[\cos(\theta_1 + \theta_2) \cos \theta_3 - \sin(\theta_1 + \theta_2) \sin \theta_3 \\
+    &\quad + i(\sin(\theta_1 + \theta_2) \cos \theta_3 + \cos(\theta_1 + \theta_2) \sin \theta_3)] \\
+    &= r_1r_2r_3[\cos(\theta_1 + \theta_2 + \theta_3) + i \sin(\theta_1 + \theta_2 + \theta_3)]
+\end{align*}
+
+Therefore, $\text{arg } z_1z_2z_3 = \theta_1 + \theta_2 + \theta_3 = \text{arg } z_1 + \text{arg } z_2 + \text{arg } z_3$.
+
+(b) we'll prove $\text{arg } z_1 \overline{z_2} = \text{arg } z_1 - \text{arg } z_2$
+
+Therefore, $z_2 = r_2(\cos \theta_2 + i \sin \theta_2)$ and hence
+
+\[
+\overline{z_2} = r_2(\cos(-\theta_2) + i \sin(-\theta_2)) = r_2(\cos \theta_2 - i \sin \theta_2)
+\]
+
+Now we find the argument of $z_1 \overline{z_2}$:
+
+\begin{align*}
+    \text{arg } z_1 \overline{z_2} &= \text{arg }[(r_1(\cos \theta_1 + i \sin \theta_1))(r_2(\cos \theta_2 - i \sin \theta_2))] \\
+    &= \text{arg }[r_1r_2((\cos \theta_1 \cos \theta_2 + \sin \theta_1 \sin \theta_2) \\
+    &\quad + i(\cos \theta_1 \sin \theta_2 - \cos \theta_2 \sin \theta_1))] \\
+    &= \text{arg }[r_1r_2(\cos(\theta_1 - \theta_2) + i \sin(\theta_1 - \theta_2))] \\
+    &= \theta_1 - \theta_2 \\
+    &= \text{arg } z_1 - \text{arg } z_2
+\end{align*}
+
+Thus, $\text{arg } z_1 \overline{z_2} = \text{arg } z_1 - \text{arg } z_2$.
+
+\begin{exercise}
+    Recall that the dot (scalar) product of two planar vectors $v_1 = (x_1, y_1)$ and $v_2 = (x_2, y_2)$ is given by:
+    \[ v_1 \cdot v_2 = x_1x_2 + y_1y_2. \]
+\textbf{Show that the dot product of the vectors represented by the complex numbers $z_1$ and $z_2$ is given by}
+\[ z_1 \cdot z_2 = Re(\overline{z_1}z_2). \]
+\end{exercise}
+\begin{proof}
+    Let $z_1, z_2 \in \mathbb{C}$.
+
+We can represent $z_1, z_2$ as vectors as follows:
+\[ z_1 = (x_1, y_1) = x_1 + y_1j, \quad z_2 = (x_2, y_2) = x_2 + y_2j \]
+\[ z_1 \cdot z_2 = (x_1 + y_1j) \cdot (x_2 + y_2j) \]
+\[ = x_1x_2 + y_1y_2 + x_1y_2(j \cdot j) + x_2y_1(i \cdot j) \]
+\[ = x_1x_2 + y_1y_2 + 0 + 0 \quad (\because i^2 = j^2 = -1, i \cdot j = 0) \]
+\[ \therefore z_1 \cdot z_2 = x_1x_2 + y_1y_2 \quad \text{(1)} \]
+
+Now we'll find:
+\[ \overline{z_1}z_2 = (x_1 - y_1j)(x_2 + y_2j) = x_1x_2 + y_1y_2 + x_1y_2(-j) - x_2y_1j \]
+\[ \therefore Re(\overline{z_1}z_2) = x_1x_2 + y_1y_2 \quad \text{(2)} \]
+
+From (1) and (2) we get:
+\[ z_1 \cdot z_2 = Re(\overline{z_1}z_2) = x_1x_2 + y_1y_2 \]
+\end{proof}
+
+\begin{exercise}
+    We have proven the \textbf{Generalized Triangle Inequality} in last chapter that:
+    $$\left|\sum_{k=1}^{n} z_{k}\right| \leq \sum_{k=1}^{n}\left|z_{k}\right|$$
+    For complex number$z_1$, $z_2$, and $z_3$, prove that:
+    $$\left|\frac{m_{1} z_{1}+m_{2} z_{2}+m_{3} z_{3}}{m_{1}+m_{2}+m_{3}}\right| \leq 1$$
+\end{exercise}
+\begin{proof}
+    
+We'll take at first:
+\[
+\left| \frac{m_1z_1 + m_2z_2 + m_3z_3}{m_1 + m_2 + m_3} \right| = \frac{\left| m_1z_1 + m_2z_2 + m_3z_3 \right|}{\left| m_1 + m_2 + m_3 \right|}
+\]
+
+Now we'll find:
+\[
+\left| m_1z_1 + m_2z_2 + m_3z_3 \right| \leq \left| m_1z_1 \right| + \left| m_2z_2 \right| + \left| m_3z_3 \right| \quad \text{(Triangle inequality)}
+\]
+\[
+= m_1 \left| z_1 \right| + m_2 \left| z_2 \right| + m_3 \left| z_3 \right|
+\]
+\[
+\leq m_1 + m_2 + m_3 \quad (\text{since } m_1, m_2, m_3 > 0 \text{ and } \left| z_1 \right|, \left| z_2 \right|, \left| z_3 \right| \leq 1)
+\]
+\[
+= \left| m_1 + m_2 + m_3 \right|
+\]
+
+Therefore:
+\[
+\left| m_1z_1 + m_2z_2 + m_3z_3 \right| \leq \left| m_1 + m_2 + m_3 \right|
+\]
+\[
+\therefore \left| \frac{m_1z_1 + m_2z_2 + m_3z_3}{m_1 + m_2 + m_3} \right| = \frac{\left| m_1z_1 + m_2z_2 + m_3z_3 \right|}{\left| m_1 + m_2 + m_3 \right|} \leq 1
+\]
+\end{proof}
+
 \section{Exponential Form}
+
+
+
+
+\subsection{Exercises}
+
+
+                \begin{exercise}
+                    Consider a complex number sequence \(\{z_n\}\), where \(z_n = (1 + i)^n\) and \(n\) is a non-negative integer. Calculate the sum of the first \(N\) terms of the sequence, \(S_N = \sum_{n=0}^{N-1} z_n\).
+                \end{exercise}
+                Hint: Utilize the properties of powers of complex numbers and summation formulas to solve this problem. Consider converting \(1 + i\) into its exponential form to simplify the calculation.
+               
+                    To solve this problem, we first express \(1 + i\) in its polar form, which is \(1 + i = \sqrt{2}(\cos \frac{\pi}{4} + i\sin \frac{\pi}{4})\). By applying De Moivre's Theorem, we can simplify the calculation of the powers.
+
+                    The sum can be calculated using the formula for the sum of a geometric series:
+                    \[ S_N = \sum_{n=0}^{N-1} (\sqrt{2}(\cos \frac{\pi}{4} + i\sin \frac{\pi}{4}))^n \] 
 \section{Finding Complex Roots}
 %------------------------------------------------
 \part{Further Discrete Mathematics}
