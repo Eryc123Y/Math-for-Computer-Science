@@ -1086,7 +1086,7 @@ Intervals. When \( a, b \in \mathbb{R} \) with \( a < b \), the closed interval 
 \end{definition}
 
 
-\section*{Properties of Sets with Proofs}
+\section{Properties of Sets with Proofs}
 
 \subsection*{Commutative Laws}
 \textbf{Union:}
@@ -1689,7 +1689,7 @@ The first sum is:
 a_0 + a_1 + a_2 + a_3 + a_4 + a_5
 \]
 
-The second sum, being tricky, $k \in \{-2, -1, 0, 1, 2\}$, therefore:
+The second sum,  $k \in \{-2, -1, 0, 1, 2\}$, therefore:
 \[
 a_4 + a_1 + a_0 + a_1 + a_4
 \]
@@ -1723,6 +1723,8 @@ Hint: Use Associative Law to LHS, try to make the indices of the two sums as sim
 \left( \sum_{i=1}^{n} a_i \right) \left( \sum_{j=1}^{n} \frac{1}{a_j} \right) = \sum_{1 \leq i \leq n} \sum_{1 \leq j \leq n} \frac{a_i}{a_j} = \sum_{1 \leq i \leq n} \sum_{1 \leq i \leq n} \frac{a_i}{a_i} = \sum_{i=1}^{n} 1 = n
 \]
 \end{exercise}
+\textbf{Solution:}
+
 Consider the expression given by:
 \[
 \left( \sum_{i=1}^{n} a_i \right) \left( \sum_{j=1}^{n} \frac{1}{a_j} \right)
@@ -1748,6 +1750,58 @@ where the first sum on the right-hand side counts the \( n \) instances where \(
 The claim would only be true if all \( a_i \) are equal, which is a special case, not the general case. In the general case, the expression evaluates to something different than \( n \) due to the presence of terms where \( i \neq j \). 
 
 Therefore, the original statement is incorrect unless the condition that all \( a_i \) are equal is specified.
+
+\begin{exercise}
+    Consider the following double summation where $a_i, a_j, b_i, b_j \in \mathbb{R}$.
+    $$\sum_{i=1}^{n} \sum_{j=1}^{n} (a_ib_j-a_jb_i)$$
+    $$\sum_{i=1}^{n} \sum_{j=1}^{n} (a_ib_j-a_jb_i)^2$$
+    Is there anything special about these expressions? Manage to find all the equivalent expressions of
+    the sum of squares in sigma notation. Also consider, if the order of summand increases to infinity, 
+    whether these properties still exist?
+\end{exercise}
+\textbf{Solutions:}
+
+For $\sum_{i=1}^{n} \sum_{j=1}^{n} (a_ib_j-a_jb_i)$
+\begin{itemize}
+    \item It could be seen that the sums are actually symmetrical. When $i=j$, $a_ib_j-a_jb_i=0$.
+    \item If you list several of the first nth term, the term with indices $(i, j)$ will be canceled by $(j, i)$ term, since $(a_ib_j-a_jb_i)+(a_jb_i-a_ib_j)=0$ 
+\end{itemize} 
+We can visualize it in a matrix with $n=5$.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.8\textwidth]{mtxvis.png}
+    \caption{Visualization of $\sum_{i=1}^{n} \sum_{j=1}^{n} (a_ib_j-a_jb_i)$}
+\end{figure}
+
+With this image, we expand it until n; we can still cancel all elements symmetrical by the diagonal on by one. As the sum on the diagonal is 0, we conclude that 
+$$\sum_{i=1}^{n} \sum_{j=1}^{n} (a_ib_j-a_jb_i)=0$$
+
+Now consider the summation of squares. $(a_ib_j-a_jb_i)^2 = 0$ still holds for  $i=j$, but what about the symmetrical pairs $(i, j)$ and $(j, i)$?
+We can figure it out by analysis by expanding the square of sum.
+$$\sum_{i=1}^{n} \sum_{j=1}^{n}\left(a_{i}^{2} b_{j}^{2}-2 a_{i} a_{j} b_{i} b_{j}+a_{j}^{2} b_{i}^{2}\right)$$
+By associative property of summation, we rearrange it as:
+$$\sum_{i=1}^{n} \sum_{j=1}^{n}(a_i^2 b_j^2+a_j^2b_i^2) - 2\sum_{i=1}^{n} \sum_{j=1}^{n}a_ia_jb_ib_j$$
+When $i \neq j$, each pair of $(i, j)$ and $(j, i)$. The sum of symmetric pair is
+$$(a_i^2 b_j^2+a_j^2b_i^2 - 2a_ia_jb_ib_j) + (a_j^2 b_i^2+a_i^2b_j^2 - 2a_ia_jb_ib_j)$$
+Rearrange it as:
+$$2(a_i^2 b_j^2+a_j^2b_i^2) - 4(a_ia_jb_ib_j)$$
+Still, as the sum of $(i, j)$ terms where $i=j$ is 0. We can ignore the diagonal. Hence, we have $n/2$ pairs
+of $(a_i^2 b_j^2+a_j^2b_i^2) - 4(a_ia_jb_ib_j)$. This could be written as:
+$$\frac{1}{2} \sum_{i=1}^{n} \sum_{j=1}^{n}2[(a_i^2 b_j^2+a_j^2b_i^2) - 4(a_ia_jb_ib_j)]$$
+$$\sum_{i=1}^{n} \sum_{j=1}^{n}[(a_i^2 b_j^2+a_j^2b_i^2) - 2(a_ia_jb_ib_j)]$$
+Notice that, $\sum_{i=1}^{n} \sum_{j=1}^{n}a_i^2 b_j^2 = \sum_{i=1}^{n} \sum_{j=1}^{n}a_j^2b_i^2$ due to the
+diagonal symmetry of the summation as illustrated in the graph. We are adding the same term twice. 
+Hence, we have:
+$$2\sum_{i=1}^{n} \sum_{j=1}^{n}[a_i^2 b_j^2 - (a_ia_jb_ib_j)]$$
+We can further simplify it by rule out the terms where $i=j$, as the summand is 0 in those cases.
+We rewrite the sum as:
+$$2\sum_{i=1}^{n-1} \sum_{j=2}^{n} [a_i^2 b_j^2 - (a_ia_jb_ib_j)]$$
+or in single summation, we have:
+$$2\sum_{i \neq j}[a_i^2 b_j^2 - (a_ia_jb_ib_j)] = 2\sum_{1 \leq i < j \leq n}[a_i^2 b_j^2 - (a_ia_jb_ib_j)] $$
+
+For $\sum_{i=1}^{n} \sum_{j=1}^{n} (a_ib_j-a_jb_i)^n$, the symmetric property of summand still exists.
+However we cannot prove it for now, as we need to use polynomial theorem to be introduced in Combinatorics.
+
 %------------------------------------------------
 
 \section{Sequence}
@@ -3420,6 +3474,80 @@ Hence, we have proved that \( a^2 + b^2 + c^2 \geq \frac{1}{3} \) as required.
     
 %------------------------------------------------
 \subsection{Cauchy-Schwarz Inequality}
+Cauchy-Schwarz inequality is another important inequality that is used for mathematical proofs. 
+
+\begin{theorem}[Cauchy-Schwarz Inequality]\label{CSineq}
+    Let \( a_1, \ldots, a_n \) and \( b_1, \ldots, b_n \) be real numbers. Then
+\[
+(a_1b_1 + a_2b_2)^2 \leq (a_1^2 + a_2^2)(b_1^2 + b_2^2)
+\]
+\end{theorem}
+\begin{proof}
+\[
+(a_1 + a_2)(b_1^2 + b_2^2) - (a_1b_1 + a_2b_2)^2 \geq 0
+\]
+\[
+\Leftrightarrow a_1^2b_1^2 + a_2^2b_2^2 + a_1^2b_2^2 + a_2^2b_1^2 - a_1^2b_1^2 - a_2^2b_2^2 - 2a_1a_2b_1b_2 \geq 0
+\]
+\[
+\Leftrightarrow a_1^2b_2^2 - 2a_1a_2b_1b_2 + a_2^2b_1^2 \geq 0
+\]
+\[
+\Leftrightarrow (a_1b_2 - a_2b_1)^2 \geq 0
+\]
+Hence, the equality holds if an only if when $a_1b_2=a_2b_1$.
+\end{proof}
+
+This is not a difficult proof, but it does not show all the implications of the inequality, especially in
+geometry. Let's take a look at how we can derive its vector form.
+
+In the inequality of the inner product in vector space, let \(\alpha\) and \(\beta\) be the directed line segments determined by vectors \(\mathbf{a}\) and \(\mathbf{b}\) respectively, with terminal coordinates \(a_1, a_2\) and \(b_1, b_2\), and let
+\[
+\alpha = (a_1, a_2), \quad \beta = (b_1, b_2),
+\]
+Then, \(\alpha\) and \(\beta\) are not both zero, and the angle between them is denoted as \(\langle \alpha, \beta \rangle\), with the convention that
+\[
+0 \leq \langle \alpha, \beta \rangle \leq \pi.
+\]
+The \(\cos \langle \alpha, \beta \rangle\) is called the cosine of the angle (inner product) between vectors \(\alpha\) and \(\beta\), denoted as \(\alpha \cdot \beta\), and
+\[
+\alpha \cdot \beta = a_1b_1 + a_2b_2,
+\]
+\[
+|\alpha| = \sqrt{\alpha \cdot \alpha} = \sqrt{a_1^2 + a_2^2},
+\]
+\[
+|\beta| = \sqrt{\beta \cdot \beta} = \sqrt{b_1^2 + b_2^2},
+\]
+Therefore,
+\[
+\cos\langle \alpha, \beta \rangle = \frac{a_1b_1 + a_2b_2}{\sqrt{a_1^2 + a_2^2} \sqrt{b_1^2 + b_2^2}},
+\]
+\[
+\cos^2\langle \alpha, \beta \rangle = \left(\frac{a_1b_1 + a_2b_2}{\sqrt{a_1^2 + a_2^2} \sqrt{b_1^2 + b_2^2}}\right)^2 \leq 1,
+\]
+which implies
+\[
+(a_1^2 + a_2^2)(b_1^2 + b_2^2) \geq (a_1b_1 + a_2b_2)^2,
+\]
+and since
+\begin{equation}\label{CSvec}
+    \sqrt{a_1^2 + a_2^2} \sqrt{b_1^2 + b_2^2} \geq |a_1b_1 + a_2b_2|.
+\end{equation}
+
+It is evident that \(\cos^2\langle \alpha, \beta \rangle = 1\) implies \(\langle \alpha, \beta \rangle = 0\) or \(\pi\), which corresponds to vectors \(\alpha\) and \(\beta\) being parallel or anti-parallel. When the angle is 0, vectors A and B are in the same direction, which is the condition for equality.
+
+\begin{theorem}[Cauchy-Schwarz Inequality(vector)]
+    \label{CSvector}
+    Assume that $\alpha = (a_1, a_2)$ and $\beta = (b_1, b_2)$ are two planar vectors, then
+    $$|\alpha||\beta|\geq |\alpha \cdot \beta|$$
+    and$$\sqrt{a_1^2 + a_2^2} \sqrt{b_1^2 + b_2^2} \geq |a_1b_1 + a_2b_2|$$
+\end{theorem}   
+
+It is noticeable that when we take $a_2=b_2=0$, we have
+$$|a_1|+|b_1|\geq|a_1+b_1|$$
+which is exactly the triangle inequality for vector that we have discussed earlier.
+
 
 %------------------------------------------------
 \subsection{Rearrangement Inequality}
@@ -3427,6 +3555,272 @@ Hence, we have proved that \( a^2 + b^2 + c^2 \geq \frac{1}{3} \) as required.
 \subsection{Bernoulli's Inequality}
 %------------------------------------------------
 \subsection{Exercises}
+\begin{exercise}
+    Prove that for any real numbers \( a \), \( b \), \( c \), and \( d \), the following inequality holds:
+    \[
+    a^2 + b^2 + c^2 + d^2 \geq ab + bc + cd + da.
+    \]
+\end{exercise}
+\begin{proof}
+    Consider the sequences \( (a, b, c, d) \) and \( (b, c, d, a) \). By the Cauchy-Schwarz inequality, we have:
+    \[
+    (a^2 + b^2 + c^2 + d^2)(b^2 + c^2 + d^2 + a^2) \geq (ab + bc + cd + da)^2.
+    \]
+    $$\left(a^2+b^2+c^2+d^2\right)^2 \geq (ab + bc + cd + da)^2$$
+    \[
+    a^2 + b^2 + c^2 + d^2 \geq ab + bc + cd + da.
+    \]
+    This completes the proof.
+\end{proof}
+\begin{exercise}
+    In mathematics, the QM-AM-GM-HM inequalities, also known as the mean inequality chain, state the relationship between the harmonic mean, geometric mean, arithmetic mean, and quadratic mean (also known as root mean square).
+    It follows that:
+    \begin{equation}
+        0<\frac{n}{\frac{1}{x_{1}}+\frac{1}{x_{2}}+\cdots+\frac{1}{x_{n}}} \leq \sqrt[n]{x_{1} x_{2} \cdots x_{n}} \leq \frac{x_{1}+x_{2}+\cdots+x_{n}}{n} \leq \sqrt{\frac{x_{1}^{2}+x_{2}^{2}+\cdots+x_{n}^{2}}{n}}
+    \end{equation}
+    The right part of the inequality is a direct conclusion from Cauchy-Schwarz inequality. Prove it by
+    substituting special values to fit the relation.
+\end{exercise}
+\begin{proof}
+    Cauchy-Schwarz inequality states that:
+    $$\left(a_{1}^{2}+a_{2}^{2}+\cdots+a_{n}^{2}\right)\left(b_{1}^{2}+b_{2}^{2}+\cdots+b_{n}^{2}\right) \geq\left(a_{1} b_{1}+a_{2} b_{2}+\cdots+a_{n} b_{n}\right)^{2}$$
+    where all terms are real numbers.
+    Let $b_1=b_2=\cdots=b_n=1$, we have:
+    $$\left(x_{1}^{2}+x_{2}^{2}+\cdots+x_{n}^{2}\right)(1+1+\cdots+1) \geq\left(x_{1}+x_{2}+\cdots+x_{n}\right)^{2}$$
+
+    $$\frac{x_{1}^{2}+x_{2}^{2}+\cdots+x_{n}^{2}}{n} \geq\left(\frac{x_{1}+x_{2}+\cdots+x_{n}}{n}\right)^{2}$$
+    $$\sqrt{\frac{x_{1}^{2}+\cdots+x_{n}^{2}}{n}} \geq \frac{x_{1}+\cdots+x_{n}}{n}$$
+    This completes the proof.
+\end{proof}
+If you are interested in the complete proof, check \href{https://artofproblemsolving.com/wiki/index.php/Root-Mean_Square-Arithmetic_Mean-Geometric_Mean-Harmonic_mean_Inequality}{this link}.
+\begin{exercise}
+    Prove that, let \( a, b, c \) be positive real numbers such that \( a + b + c = 1 \). Then the following inequality holds:
+\[
+\frac{1}{a} + \frac{1}{b} + \frac{1}{c} \geq 9.
+\]
+\end{exercise}
+\begin{proof}
+    By applying the Cauchy-Schwarz inequality to the sequences \( (\sqrt{a}, \sqrt{b}, \sqrt{c}) \) and \( (\frac{1}{\sqrt{a}}, \frac{1}{\sqrt{b}}, \frac{1}{\sqrt{c}} ) \), we have:
+\[
+\left( (\sqrt{a})^2 + (\sqrt{b})^2 + (\sqrt{c})^2 \right) \left( \left(\frac{1}{\sqrt{a}}\right)^2 + \left(\frac{1}{\sqrt{b}}\right)^2 + \left(\frac{1}{\sqrt{c}}\right)^2 \right) 
+\]
+\[
+\geq \left( \sqrt{a} \cdot \frac{1}{\sqrt{a}} + \sqrt{b} \cdot \frac{1}{\sqrt{b}} + \sqrt{c} \cdot \frac{1}{\sqrt{c}} \right)^2
+\]
+Simplifying both sides of the inequality gives us:
+\[
+(a + b + c) \left( \frac{1}{a} + \frac{1}{b} + \frac{1}{c} \right) \geq (1 + 1 + 1)^2
+\]
+Given that \( a + b + c = 1 \), substituting this into the inequality yields:
+\[
+1 \cdot \left( \frac{1}{a} + \frac{1}{b} + \frac{1}{c} \right) \geq 3^2
+\]
+Therefore, we have:
+\[
+\frac{1}{a} + \frac{1}{b} + \frac{1}{c} \geq 9.
+\]
+This completes the proof.
+\end{proof}
+\begin{exercise}
+    We have proven the Cauchy-Schwarz inequality for planar vectors, can you expand theorem \ref{CSvector}
+to 3D vectors? Hint: Express your solution in the form of Eq. \ref{CSvec}. No extra thinking is needed.
+\end{exercise}
+\textbf{Solution:}
+
+In the 3D space, we have
+\begin{corollary}
+    Assume that $\alpha = (a_1, a_2, a_3)$ and $\beta = (b_1, b_2, b_3)$ are two 3D vectors:
+    \[
+\sqrt{a_1^2 + a_2^2 + a_3^2}\sqrt{b_1^2 + b_2^2 + b_3^2} \geq |a_1b_1 + a_2b_2 + a_3b_3|.
+\] 
+\end{corollary}
+\begin{proof}
+    In the inequality of the inner product in vector space, let \( \alpha \) and \( \beta \) be the directed line segments determined by vectors \(\mathbf{a}\) and \(\mathbf{b}\) respectively, with terminal coordinates \( a_1, a_2, a_3 \) and \( b_1, b_2, b_3 \), and let
+\[
+\alpha = (a_1, a_2, a_3), \quad \beta = (b_1, b_2, b_3),
+\]
+Then, \( \alpha \) and \( \beta \) are not both zero, and the angle between them is denoted as \( \langle \alpha, \beta \rangle \), with the convention that
+\[
+0 \leq \langle \alpha, \beta \rangle \leq \pi.
+\]
+The \( \cos\langle \alpha, \beta \rangle \) is called the cosine of the angle (inner product) between vectors \( \alpha \) and \( \beta \), denoted as \( \alpha \cdot \beta \), and
+\[
+\alpha \cdot \beta = a_1b_1 + a_2b_2 + a_3b_3,
+\]
+\[
+|\alpha| = \sqrt{\alpha \cdot \alpha} = \sqrt{a_1^2 + a_2^2 + a_3^2},
+\]
+\[
+|\beta| = \sqrt{\beta \cdot \beta} = \sqrt{b_1^2 + b_2^2 + b_3^2},
+\]
+Therefore,
+\[
+\cos\langle \alpha, \beta \rangle = \frac{a_1b_1 + a_2b_2 + a_3b_3}{\sqrt{a_1^2 + a_2^2 + a_3^2}\sqrt{b_1^2 + b_2^2 + b_3^2}},
+\]
+\[
+\cos^2\langle \alpha, \beta \rangle = \left(\frac{a_1b_1 + a_2b_2 + a_3b_3}{\sqrt{a_1^2 + a_2^2 + a_3^2}\sqrt{b_1^2 + b_2^2 + b_3^2}}\right)^2 \leq 1,
+\]
+which implies
+\[
+(a_1^2 + a_2^2 + a_3^2)(b_1^2 + b_2^2 + b_3^2) \geq (a_1b_1 + a_2b_2 + a_3b_3)^2,
+\]
+and since
+\[
+\sqrt{a_1^2 + a_2^2 + a_3^2}\sqrt{b_1^2 + b_2^2 + b_3^2} \geq |a_1b_1 + a_2b_2 + a_3b_3|.
+\]
+which completes the proof.
+\end{proof}
+\begin{exercise}
+    We have shown that the Cauchy-Schwarz inequality still works in the 3-dimensional space, why not try
+    to show that it holds for all vectors in the n-dimension space? Think about the strategy to be used and show your 
+    meticulous proof for nD vector. Hint: We are actually trying to find a generalized form of the inequality.
+    Try to express it in an open form (summation).
+\end{exercise}
+\textbf{Solutions:}
+\begin{theorem}[Generalized Cauchy-Schwarz Inequality(vector)]\label{gcsineq}
+    We consider vectors in n-dimentional space.
+    Let \( \mathbf{a} = (a_1, a_2, \ldots, a_n) \) and \( \mathbf{b} = (b_1, b_2, \ldots, b_n) \) be two \( n \)-dimensional vectors. Then the following inequality holds:
+\[
+\left(\sum_{i=1}^{n} a_i b_i\right)^2 \leq \left(\sum_{i=1}^{n} a_i^2\right) \left(\sum_{i=1}^{n} b_i^2\right)
+\]
+\end{theorem}
+\begin{proof}
+    We will prove the Cauchy-Schwarz inequality for \( n \)-dimensional vectors using mathematical induction.
+
+\textbf{Base Case:} For \( n = 1 \), we have:
+\[
+(a_1b_1)^2 \leq (a_1^2)(b_1^2)
+\]
+which is obviously true, as both sides are equal.
+
+\textbf{Inductive Step:}
+Assume the inequality holds for \( n = k \), that is:
+\[
+\left(\sum_{i=1}^{k} a_ib_i\right)^2 \leq \left(\sum_{i=1}^{k} a_i^2\right)\left(\sum_{i=1}^{k} b_i^2\right)
+\]
+We need to show that it also holds for \( n = k+1 \):
+\[
+\left(\sum_{i=1}^{k+1} a_ib_i\right)^2 \leq \left(\sum_{i=1}^{k+1} a_i^2\right)\left(\sum_{i=1}^{k+1} b_i^2\right)
+\]
+
+Expanding both sides, we get:
+
+\textbf{LHS:}
+\[
+\left(\sum_{i=1}^{k} a_ib_i + a_{k+1}b_{k+1}\right)^2 = \left(\sum_{i=1}^{k} a_ib_i\right)^2 + 2a_{k+1}b_{k+1}\sum_{i=1}^{k} a_ib_i + a_{k+1}^2b_{k+1}^2
+\]
+
+\textbf{RHS:}
+\[
+\left(\sum_{i=1}^{k} a_i^2 + a_{k+1}^2\right)\left(\sum_{i=1}^{k} b_i^2 + b_{k+1}^2\right)
+\]
+\[
+= \left(\sum_{i=1}^{k} a_i^2\right)\left(\sum_{i=1}^{k} b_i^2\right) + b_{k+1}^2\sum_{i=1}^{k} a_i^2 + a_{k+1}^2\sum_{i=1}^{k} b_i^2 + a_{k+1}^2b_{k+1}^2
+\]
+
+By the inductive hypothesis, we have:
+\[
+\left(\sum_{i=1}^{k} a_ib_i\right)^2 \leq \left(\sum_{i=1}^{k} a_i^2\right)\left(\sum_{i=1}^{k} b_i^2\right)
+\]
+
+It remains to show that the additional terms also satisfy the inequality:
+\[
+2a_{k+1}b_{k+1}\sum_{i=1}^{k} a_ib_i + a_{k+1}^2b_{k+1}^2 \leq b_{k+1}^2\sum_{i=1}^{k} a_i^2 + a_{k+1}^2\sum_{i=1}^{k} b_i^2 + a_{k+1}^2b_{k+1}^2
+\]
+
+This is equivalent to showing:
+\[
+\sum_{i=1}^{k} (a_{k+1}b_i - a_ib_{k+1})^2 \geq 0
+\]
+Which is true since it is a sum of squares.
+
+\noindent Hence, by mathematical induction, the inequality holds for all \( n \)-dimensional vectors.
+\begin{remark}
+    If this is not quite clear for you, here's the explanation: 
+
+    \noindent Cancel $a_{k+1}^2b_{k+1}^2$ on both sides, we have:
+    \begin{align*}
+        2a_{k+1} b_{k+1} \ \sum _{i=1}^{k} a_{i} b_{i} & \leq \ a_{k+1}^{2}\sum _{i=1}^{k} b_{i}^{2} +b_{k+1}^{2}\sum _{i=1}^{k} a_{i}^{2}
+    \end{align*}
+    Moving the terms on the same side of the inequality sign:
+    \begin{align*}
+        \ a_{k+1}^{2}\sum _{i=1}^{k} b_{i}^{2} +b_{k+1}^{2}\sum _{i=1}^{k} a_{i}^{2} \ -2a_{k+1} b_{k+1} \ \sum _{i=1}^{k} a_{i} b_{i} & \geq 0
+        \end{align*}
+    This is an interesting expression since the coefficients and the terms of the summation can all fit the
+    terms of sum of square: $(a\pm b)^2 = a^2+b^2\pm 2ab$.
+    we can expand LHS as:
+    $$
+        LHS =a_{k+1}^{2}\left( b_{1}^{2} +b_{2}^{2} +\cdots +b_{k}^{2}\right) +b_{k+1}^{2}\left( a_{1}^{2} +a_{2}^{2} +\cdots +a_{k}^{2}\right) -2a_{k+1} b_{k+1}( a_{1} b_{1} +a_{2} b_{2} +\cdots +a_{k} b_{k})
+    $$
+    
+    Fitting it into sum of square formula $(a\pm b)^2 = a^2+b^2\pm 2ab$ with $a = a_{k+1}b_i$ and $b=a_ib_{k+1}$.
+    
+    \noindent We have: 
+    \[
+    \sum_{i=1}^{k} (a_{k+1}b_i - a_ib_{k+1})^2 = LHS
+    \]
+\end{remark}
+
+
+\end{proof}
+
+\begin{exercise}
+    Having proven the generalized Cauchy-Schwarz Inequality by using vector properties, you must have
+    built up some confidence. These problems that seem tricky are actually easy to prove. Now we have 
+    one last proof for  Cauchy-Schwarz Inequality (it's true I promise, no more proof for this inequality.).
+    Since we have proved the generalized form by using vector, recall that we also prove it by pure algebra
+    analysis in theorem \ref{CSineq}. Now, prove the generalized form without using vector, and think
+    about the similarity and difference of the two proofs.
+\end{exercise}
+\textbf{solution:}
+\begin{proof}
+    The equality holds if and only if \( \frac{a_1}{b_1} = \frac{a_2}{b_2} = \ldots = \frac{a_n}{b_n} \) (assuming \( b_i \neq 0 \) for all \( i \); if \( b_j = 0 \), then \( a_j = 0 \), for \( j = 1, 2, \ldots, n \)).
+    
+    \textbf{Case 1}: If all \( a_i = 0 \), the inequality obviously holds.
+    
+    \textbf{Case 2}: If not all \( a_i = 0 \), consider the following quadratic in \( x \):
+    \[
+    f(x) = (a_1x + b_1)^2 + (a_2x + b_2)^2 + \ldots + (a_nx + b_n)^2
+    \]
+    It is clear that for all \( x \), \( f(x) \geq 0 \) since it is a sum of squares.
+    
+    Expanding \( f(x) \), we get:
+    \[
+    f(x) = (a_1^2 + a_2^2 + \ldots + a_n^2)x^2 + 2(a_1b_1 + a_2b_2 + \ldots + a_nb_n)x + (b_1^2 + b_2^2 + \ldots + b_n^2)
+    \]
+    The discriminant \( \Delta \) of this quadratic is:
+    \[
+    \Delta = 4(a_1b_1 + a_2b_2 + \ldots + a_nb_n)^2 - 4(a_1^2 + a_2^2 + \ldots + a_n^2)(b_1^2 + b_2^2 + \ldots + b_n^2)
+    \]
+    For \( f(x) \geq 0 \) to hold for all \( x \), the discriminant \( \Delta \) must be less than or equal to zero. This leads to:
+    \[
+    (a_1b_1 + a_2b_2 + \ldots + a_nb_n)^2 - (a_1^2 + a_2^2 + \ldots + a_n^2)(b_1^2 + b_2^2 + \ldots + b_n^2) \leq 0
+    \]
+    Hence, the inequality is proven. Equality holds if and only if the numbers are proportional.
+    \end{proof}
+
+    \begin{exercise}
+        If one did not know the Cauchy Schwarz inequality, but knew Lagrange's identity, then how could one derive the Cauchy-Schwarz inequality.
+        \begin{theorem}[Lagrange's Identity]
+            Let \( a_1, \ldots, a_n \) and \( b_1, \ldots, b_n \) be real numbers. Then
+            \[
+                \left(\sum_{k=1}^{n} a_{k}^{2}\right)\left(\sum_{k=1}^{n} b_{k}^{2}\right)-\left(\sum_{k=1}^{n} a_{k} b_{k}\right)^{2}=\sum_{i=1}^{n-1} \sum_{j=i+1}^{n}\left(a_{i} b_{j}-a_{j} b_{i}\right)^{2}
+\]
+        \end{theorem}
+        Prove this identity with summation form of generalized Cauchy-Schwarz inequality. Hint: Loosely speaking, Lagrange's identity says that the left-hand side in the Cauchy-
+        Schwarz inequality is off from the right-hand side of the Cauchy-Schwarz inequality
+        by the error term.
+    \end{exercise}
+    \begin{proof}
+    Cauchy Inequality states that: $$\left(\sum_{i=1}^{n} a_{i} b_{i}\right)^{2} \leq\left(\sum_{i=1}^{n} a_{i}^{2}\right)\left(\sum_{i=1}^{n} b_{i}^{2}\right)$$
+    Assuming the Cauchy-Schwarz inequality is true, we aim to demonstrate Lagrange's Identity. The inequality gives us the left-hand side of the identity directly. To arrive at the right-hand side, we need to show the existence of an error term which is the sum of squares of the differences between the products of the components of \( \mathbf{a} \) and \( \mathbf{b} \).
+
+Consider the expression \( \sum_{i=1}^{n-1} \sum_{j=i+1}^{n} (a_i b_j - a_j b_i)^2 \), which expands to include all combinations of the product differences. Each term is of the form \( a_i^2 b_j^2 - 2 a_i b_i a_j b_j + a_j^2 b_i^2 \), and when summed over all \( i \) and \( j \), the middle terms \( -2 a_i b_i a_j b_j \) combine to give us \( -2 \left( \sum_{k=1}^{n} a_k b_k \right)^2 \), which is the term we subtract on the left-hand side of the identity to obtain the equality.
+
+Thus, by rearranging the terms and recognizing that the right-hand side sum is always non-negative, we establish Lagrange's Identity as an equality.
+
+    \end{proof}
+
 
 %------------------------------------------------
 \chapterimage{orange2.jpg}

@@ -1,24 +1,25 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Examples of Special Mappings}}{41}{figure.2.1}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Visualization of $\sum _{i=1}^{n} \sum _{j=1}^{n} (a_ib_j-a_jb_i)$}}{49}{figure.2.2}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Venn Diagram of Number Sets}}{59}{figure.3.1}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Visualization of $\lceil x \rceil \text { and } \lfloor x \rfloor $}}{61}{figure.3.2}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Time Complexity Visualization}}{68}{figure.3.3}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Venn Diagram of Number Sets}}{61}{figure.3.1}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Visualization of $\lceil x \rceil \text { and } \lfloor x \rfloor $}}{63}{figure.3.2}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Time Complexity Visualization}}{70}{figure.3.3}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Quadratic function graphs based on the discriminant.}}{75}{figure.4.1}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Triangular Inequality: $ab < 0$}}{77}{figure.4.2}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces AGM when $x_2 = 0$}}{80}{figure.4.3}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces AGM when $x_2 = 5$}}{80}{figure.4.4}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces AGM 3D Visualization}}{81}{figure.4.5}%
-\contentsline {figure}{\numberline {4.6}{\ignorespaces AGM 3D Visualization (Front)}}{81}{figure.4.6}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Quadratic function graphs based on the discriminant.}}{77}{figure.4.1}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Triangular Inequality: $ab < 0$}}{79}{figure.4.2}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces AGM when $x_2 = 0$}}{82}{figure.4.3}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces AGM when $x_2 = 5$}}{82}{figure.4.4}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces AGM 3D Visualization}}{83}{figure.4.5}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces AGM 3D Visualization (Front)}}{83}{figure.4.6}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Complex Plane}}{93}{figure.5.1}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Complex Conjugate}}{95}{figure.5.2}%
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Complex Number as Vector}}{100}{figure.5.3}%
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Parallelogram Law}}{100}{figure.5.4}%
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Complex Number in Polar Coordinate}}{101}{figure.5.5}%
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Solutions for $z^3=1$}}{122}{figure.5.6}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Complex Plane}}{101}{figure.5.1}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Complex Conjugate}}{103}{figure.5.2}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Complex Number as Vector}}{108}{figure.5.3}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Parallelogram Law}}{108}{figure.5.4}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Complex Number in Polar Coordinate}}{109}{figure.5.5}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Solutions for $z^3=1$}}{130}{figure.5.6}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

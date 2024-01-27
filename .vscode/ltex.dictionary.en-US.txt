@@ -9,3 +9,6 @@ Mathematica
 Eq
 textbfSolution
 Moivre
+nD
+addants
+summand
