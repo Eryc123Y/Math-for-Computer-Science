@@ -1,18 +1,18 @@
 # Fdb version 4
-["biber main"] 0 "main.bcf" "main.bbl" "main" 1706376900.99199 -1
-  "main.bcf" 1706376900 107347 1f51a2be7d23f3423c0e59ffd4ef65c6 "pdflatex"
+["biber main"] 0 "main.bcf" "main.bbl" "main" 1706459712.51428 -1
+  "main.bcf" 1706459712 107347 1f51a2be7d23f3423c0e59ffd4ef65c6 "pdflatex"
   "sample.bib" 1704396250 423 68b8f6cb50917872bb3a29f3e28dd3c7 ""
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["makeindex main.idx"] 1706372704.14577 "main.idx" "main.ind" "main" 1706376900.99166 0
-  "main.idx" 1706376897 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+["makeindex main.idx"] 1706372704.14577 "main.idx" "main.ind" "main" 1706459712.51398 0
+  "main.idx" 1706459708 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   (generated)
   "main.ilg"
   "main.ind"
   (rewritten before read)
-["pdflatex"] 1706376896.0922 "c:/Programming/GitProjects/Math-for-CS/main.tex" "main.pdf" "main" 1706376900.99245 0
+["pdflatex"] 1706459707.52076 "c:/Programming/GitProjects/Math-for-CS/main.tex" "main.pdf" "main" 1706459712.51473 0
   "Images/agm3D.png" 1704875704 97995 3c8707993f2acdfb1f5fe89cecae6e4e ""
   "Images/agm3dsect.png" 1704880238 44643 73eb57f3840cb5ff6c2c67bcf1c7b93d ""
   "Images/agmx=0.png" 1704873744 26598 bd43746e4060570704283b475eedb198 ""
@@ -38,7 +38,7 @@
   "Images/triangleablt0.png" 1704986326 3895 bd43a8c51df6653f51e14e40e5512280 ""
   "Images/venn.png" 1704396250 101167 627b3f359fe3b8844e7f344c0e38c3ca ""
   "LegrandOrangeBook.cls" 1704396250 34330 8b54c63dbc2df44de404d2768f953f7c ""
-  "c:/Programming/GitProjects/Math-for-CS/main.tex" 1706376895 281896 d9e264553cb763348ba868e0d76fb577 ""
+  "c:/Programming/GitProjects/Math-for-CS/main.tex" 1706459701 291976 abc972ba3d657135ae143a2716d9fd78 ""
   "c:/texlive/2023/texmf-dist/fonts/enc/dvips/base/8r.enc" 1704276465 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "c:/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1704275942 2971 def0b6c1f0b107b3b936def894055589 ""
   "c:/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1704276883 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -280,15 +280,15 @@
   "c:/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1704280865 4785560 10f5a17fcbe2ff40a0047ec23402f933 ""
   "c:/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1704280976 8217725 7701aa7a6db71a8cb2ecc05da3359d3e ""
   "c:/texlive/2023/texmf.cnf" 1704280848 713 e69b156964470283e0530f5060668171 ""
-  "main.aux" 1706376900 51868 9094148a77f18a7e3330c3208a6a89f9 "pdflatex"
+  "main.aux" 1706459712 52373 2e715c2c71779988c94fa02c063ef1a4 "pdflatex"
   "main.bbl" 1705958554 486 ee04f40f768daeed26442158e95aba61 "biber main"
   "main.ind" 1706372704 0 d41d8cd98f00b204e9800998ecf8427e "makeindex main.idx"
-  "main.lof" 1706376900 2088 e7dcc4f6a2cdb6e34909d16cb01f3a69 "pdflatex"
-  "main.lot" 1706376900 501 28501c3538a6f04daa40c77fe6631b51 "pdflatex"
-  "main.ptc" 1706376900 8804 970cf6bf0d88cdf9a70b15dc84a97101 "pdflatex"
-  "main.run.xml" 1706376900 2301 f06af3099c978185a0ac5347b2a69dfa "pdflatex"
-  "main.tex" 1706376895 281896 d9e264553cb763348ba868e0d76fb577 ""
-  "main.toc" 1706376900 8511 932368ee7ae530543bfa3e7ea4d839e1 "pdflatex"
+  "main.lof" 1706459712 2088 26581cbf3989358a7bdf163ad8a5d96c "pdflatex"
+  "main.lot" 1706459712 501 28501c3538a6f04daa40c77fe6631b51 "pdflatex"
+  "main.ptc" 1706459712 8714 7ba12df1e4e9b74949e023028f7537b0 "pdflatex"
+  "main.run.xml" 1706459712 2301 f06af3099c978185a0ac5347b2a69dfa "pdflatex"
+  "main.tex" 1706459701 291976 abc972ba3d657135ae143a2716d9fd78 ""
+  "main.toc" 1706459712 8421 67be60287662e008c1373d5be2d84f01 "pdflatex"
   (generated)
   "main.aux"
   "main.bcf"

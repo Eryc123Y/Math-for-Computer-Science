@@ -908,31 +908,29 @@ Therefore, by the principle of mathematical induction, the given formula is true
 \]
 \end{exercise}
 \begin{proof}
-We will prove this statement by induction.
-
-\textbf{Base Case:}
-
-When $n = 1$, the statement is $$\frac{1}{3} = \frac{1}{2+1},$$ which is true.
-
-\textbf{Inductive Hypothesis:}
-
-Assume that the statement is true for some integer $k$. That is, $$\frac{1}{3} + \frac{1}{5} + \cdots + \frac{1}{2k+1} = \frac{k}{2k+1}.$$
-
-\textbf{Inductive Step:}
-
-We need to show that the statement is also true for $k+1$. That is, we need to show that $$\frac{1}{3} + \frac{1}{5} + \cdots + \frac{1}{2k+1} + \frac{1}{2(k+1)+1} = \frac{k+1}{2(k+1)+1}.$$
-
-Starting with the left-hand side of the equation, we can use the inductive hypothesis to write $$\frac{1}{3} + \frac{1}{5} + \cdots + \frac{1}{2k+1} + \frac{1}{2(k+1)+1} = \frac{k}{2k+1} + \frac{1}{2(k+1)+1}.$$
-
-Combining the two fractions on the left-hand side, we get $$\frac{1}{3} + \frac{1}{5} + \cdots + \frac{1}{2k+1} + \frac{1}{2(k+1)+1} = \frac{k(2(k+1)+1) + 1}{(2k+1)(2(k+1)+1)}.$$
-
-Simplifying the numerator, we get $$\frac{1}{3} + \frac{1}{5} + \cdots + \frac{1}{2k+1} + \frac{1}{2(k+1)+1} = \frac{2k^2 + 3k + 1}{(2k+1)(2(k+1)+1)}.$$
-
-Factoring the numerator, we get $$\frac{1}{3} + \frac{1}{5} + \cdots + \frac{1}{2k+1} + \frac{1}{2(k+1)+1} = \frac{(k+1)(2k+1)}{(2k+1)(2(k+1)+1)}.$$
-
-Canceling the common factor of $(k+1)(2k+1)$, we get $$\frac{1}{3} + \frac{1}{5} + \cdots + \frac{1}{2k+1} + \frac{1}{2(k+1)+1} = \frac{1}{2(k+1)+1},$$ which is the right-hand side of the equation.
-
-Therefore, by the principle of mathematical induction, the statement is true for all integers $n \geq 1$.
+    \textbf{Base Case:} For $n=1$,
+    \begin{equation*}
+    \frac{1}{1\cdot 3} = \frac{1}{3} = \frac{1}{2 \cdot 1 + 1}
+    \end{equation*}
+    
+    \textbf{Inductive Step:} Assume the statement is true for $n=k$, that is:
+    \begin{equation*}
+    \sum_{i=1}^{k} \frac{1}{(2i-1)(2i+1)} = \frac{k}{2k+1}
+    \end{equation*}
+    
+    We need to show it holds for $n=k+1$:
+    \begin{align*}
+    \sum_{i=1}^{k+1} \frac{1}{(2i-1)(2i+1)} &= \sum_{i=1}^{k} \frac{1}{(2i-1)(2i+1)} + \frac{1}{(2(k+1)-1)(2(k+1)+1)} \\
+    &= \frac{k}{2k+1} + \frac{1}{(2k+1)(2k+3)} \\
+    &= \frac{k(2k+3) + 1}{(2k+1)(2k+3)} \\
+    &= \frac{2k^2 + 3k + 1}{(2k+1)(2k+3)} \\
+    &= \frac{(k+1)(2k+1)}{(2k+1)(2k+3)} \\
+    &= \frac{k+1}{2k+3} \\
+    &= \frac{k+1}{2(k+1)+1}
+    \end{align*}
+    
+    Therefore, by the principle of mathematical induction, the statement is true for all integers $n \geq 1$.
+    
 \end{proof}
 
 \begin{exercise}
@@ -3551,8 +3549,47 @@ which is exactly the triangle inequality for vector that we have discussed earli
 
 %------------------------------------------------
 \subsection{Rearrangement Inequality}
+This section introduces \textbf{Rearrangement Inequality}, whose direct conclusions are the \href{https://en.wikipedia.org/wiki/QM-AM-GM-HM_Inequalities}{QM-AM-GM-HM inequality}.
 
-\subsection{Bernoulli's Inequality}
+We start with an example. Suppose there are four boxes containing \$10, \$20, \$50 and \$100 bills, respectively. You may take 2 bills from one box, 3 bills from another, 4 bills from another, and 5 bills from the remaining box. What is the maximum amount of money you can get?
+
+Clearly, you’d want to take as many bills as possible from the box with largest-value bills! So you would take 5 \$100 bills, 4 \$50 bills, 3 \$20 bills, and 2 \$10 bills, for a grand total of
+\begin{equation}\label{eq4.3}
+5 \cdot \$100 + 4 \cdot \$50 + 3 \cdot \$20 + 2 \cdot \$10 = \$780.
+\end{equation}
+
+Suppose instead that your arch-nemesis (who isn't very good at math) is picking the bills instead, and he asks you how many bills he should take from each box. In this case, to minimize the amount of money he gets, you’d want him to take as many bills as possible from the box with lowest-value bills. So you tell him to take 5 \$10 bills, 4 \$20 bills, 3 \$50 bills, and 2 \$100 bills, for a grand total of
+\begin{equation}\label{eq4.4}
+5 \cdot \$10 + 4 \cdot \$20 + 3 \cdot \$50 + 2 \cdot \$100 = \$480.
+\end{equation}
+
+The maximum is attained when the number of bills taken and the denominations are similarly sorted as
+ in Eq. \ref{eq4.3} and the minimum is attained when they are oppositely sorted as in \ref{eq4.4}. The Rearrangement Inequality formalizes this observation.
+\begin{theorem}{Rearrangement}
+    Let \( x_1, x_2, \ldots, x_n \) and \( y_1, y_2, \ldots, y_n \) be real numbers (not necessarily positive) with
+\[ x_1 \leq x_2 \leq \ldots \leq x_n, \quad \text{and} \quad y_1 \leq y_2 \leq \ldots \leq y_n, \]
+and let \( \sigma \) be a permutation of \( \{1, 2, \ldots, n\} \). (That is, \( \sigma \) sends each of \( 1, 2, \ldots, n \) to a different value in \( \{1, 2, \ldots, n\} \).) Then the following inequality holds:
+\[ x_1y_n + x_2y_{n-1} + \ldots + x_ny_1 \leq x_1y_{\sigma(1)} + x_2y_{\sigma(2)} + \ldots + x_ny_{\sigma(n)} \leq x_1y_1 + x_2y_2 + \ldots + x_ny_n. \]
+\end{theorem}
+\begin{proof}
+    We prove the inequality on the right by induction on \( n \). The statement is obvious for \( n = 1 \). Suppose it true for \( n - 1 \). Let \( m \) be an integer such that \( \sigma(m) = n \). Since
+\[ x_n \geq x_m \quad \text{and} \quad y_n \geq y_{\sigma(n)}, \]
+we have
+\[ 0 \leq (x_n - x_m)(y_n - y_{\sigma(n)}) \quad \]
+\[\implies x_my_n + x_ny_{\sigma(n)} \leq x_my_{\sigma(n)} + x_ny_n. \]
+
+Hence
+\[ x_1y_{\sigma(1)} + \ldots + x_my_{\sigma(m)} + \ldots + x_ny_{\sigma(n)} \leq x_1y_{\sigma(1)} + \ldots + x_my_n + \ldots + x_ny_n. \]
+
+By the induction hypothesis,
+\[ x_1y_{\sigma(1)} + \ldots + x_my_n + \ldots + x_ny_{\sigma(n-1)} \leq x_1y_1 + \ldots + x_my_m + \ldots + x_ny_{n-1}. \]
+
+Thus the RHS is at most \( x_1y_1 + \ldots + x_{n-1}y_{n-1} + x_ny_n \), as needed.
+To prove the LHS, apply the above with \( -y_i \) instead of \( y_i \) (noting that negating an inequality reverses the sign).
+\end{proof}
+\begin{remark}
+    The equality holds if and only if $a_1 = a_2 =\cdots a_n$ or $b_1 = b_2 =\cdots b_n$
+\end{remark}
 %------------------------------------------------
 \subsection{Exercises}
 \begin{exercise}
@@ -3821,7 +3858,167 @@ Thus, by rearranging the terms and recognizing that the right-hand side sum is a
 
     \end{proof}
 
+\begin{exercise}
+    Consider the function \( f(x) = \frac{(x+k)^2}{x^2+1} \) where \( k \) is a positive whole number. Show that \( f(x) \leq k^2 + 1 \).
+\end{exercise}
+Hint: Try to fit Cauchy-Schwarz inequality. There are more than one method.
+\begin{proof}
+    We will prove that \( \frac{(x+k)^2}{x^2+1} \leq k^2 + 1 \), which is equivalent to \( (x+k)^2 \leq (k^2 + 1)(x^2 + 1) \).
 
+Notice that \( (k^2 + 1)(x^2 + 1) \) has (by Cauchy-Schwarz Inequality):
+\[ (k^2 + 1)(x^2 + 1) \geq (kx + 1)^2 = k^2x^2 + 2kx + 1 \]
+
+where \( x \in \mathbb{R} \) and \( k \in \mathbb{Z}^+ \).
+
+We also have \( (x+k)^2 = x^2 + 2kx + k^2 \), now we need to compare \( k^2x^2 + 1 \) and \( x^2 + k^2 \).
+
+Cancel the $2kx$ term, we need to show that
+\[ x^2 + k^2 \leq k^2x^2 + 1 \]
+Simplifying, we see:
+\[ x^2(1 - k^2) \leq 1 - k^2 \]
+
+Since \( 1 - k^2 \) is non-positive for \( k \in \mathbb{Z}^+ \), dividing by \( 1 - k^2 \) (which reverses the inequality due to the negative sign) gives us:
+\[ x^2 \geq 1 \]
+
+Which holds true for all real \( x \). Therefore, the original inequality is proven.
+
+\textbf{Below is how you can construct a new inequality to prove it}.
+
+Firstly, we utilize the vector dot product form of the Cauchy-Schwarz Inequality over the real numbers. To apply the vector dot product form, we identify corresponding elements for two vectors. Let's choose vectors \( \mathbf{a} \) and \( \mathbf{b} \):
+
+\[
+\mathbf{a} = \begin{bmatrix}
+x \\
+k \\
+\end{bmatrix}, \quad \mathbf{b} = \begin{bmatrix}
+1 \\
+\frac{1}{x} \\
+\end{bmatrix}
+\]
+
+The Cauchy-Schwarz Inequality is stated as:
+
+\[
+(\mathbf{a} \cdot \mathbf{b})^2 \leq (\mathbf{a} \cdot \mathbf{a})(\mathbf{b} \cdot \mathbf{b})
+\]
+
+Applying this to our case:
+
+\[
+\left( x \cdot 1 + k \cdot \frac{1}{x} \right)^2 \leq (x^2 + k^2)\left( 1^2 + \left(\frac{1}{x}\right)^2 \right)
+\]
+
+\[
+\left( \frac{x + k}{x} \right)^2 \leq (x^2 + k^2)\left( 1 + \frac{1}{x^2} \right)
+\]
+
+\[
+\left(\frac{(x+k)^2}{x^2}\right) \leq (x^2 + k^2)\left( \frac{x^2+1}{x^2} \right)
+\]
+
+\[
+\frac{(x+k)^2}{x^2+1} \leq k^2 + 1
+\]
+
+Therefore, we have proved the given inequality \( f(x) = \frac{(x+k)^2}{x^2+1} \leq k^2 + 1 \) using the Cauchy-Schwarz Inequality.
+
+\end{proof}
+\begin{exercise}
+    For $a, b, c > 0$ prove that
+    \begin{enumerate}
+        \item[(a)] \(a^{a}b^{b}c^{c} \geq a^{b}b^{c}c^{a}\).
+        \item[(b)] \(a^{a}b^{b}c^{c} \geq (abc)^{\frac{a+b+c}{3}}\).
+    \end{enumerate}
+\end{exercise}
+\begin{proof}
+    Since \(\ln\) is an increasing function, we take the \(\ln\) of both sides to find that the inequalities are equivalent to
+\begin{align*}
+    a\ln a + b\ln b + c\ln c &\geq b\ln a + c\ln b + a\ln c \\
+    a\ln a + b\ln b + c\ln c &\geq \frac{a+b+c}{3}(\ln a + \ln b + \ln c).
+\end{align*}
+\end{proof}
+\begin{exercise}
+    Chebyshev inequality is an important conclusion about random variables. It states that:
+    Let \( a_1, a_2, \ldots, a_n; b_1, b_2, \ldots, b_n \) be real numbers arranged in ascending order for \( a_i \) and in descending order for \( b_i \), such that:
+
+\begin{enumerate}
+    \item[(1)] If \( a_1 \leq a_2 \leq \ldots \leq a_n \) and \( b_1 \geq b_2 \geq \ldots \geq b_n \), then
+    \[ \frac{a_1b_1 + a_2b_2 + \ldots + a_nb_n}{n} \geq \left( \frac{a_1 + a_2 + \ldots + a_n}{n} \right)\left( \frac{b_1 + b_2 + \ldots + b_n}{n} \right) \]
+
+    \item[(2)] If \( a_1 \leq a_2 \leq \ldots \leq a_n \) but \( b_1 \leq b_2 \leq \ldots \leq b_n \), then
+    \[ \frac{a_1b_1 + a_2b_2 + \ldots + a_nb_n}{n} \leq \left( \frac{a_1 + a_2 + \ldots + a_n}{n} \right)\left( \frac{b_1 + b_2 + \ldots + b_n}{n} \right) \]
+\end{enumerate}
+\end{exercise}
+\begin{proof}
+    For \( (1) \) where \( a_1 \leq a_2 \leq \ldots \leq a_n \), and \( b_1 \geq b_2 \geq \ldots \geq b_n \), we have the following:
+
+\begin{align*}
+    a_1b_1 + a_2b_2 + \ldots + a_nb_n &= a_1b_1 + a_2b_2 + \ldots + a_nb_n \\
+    a_1b_1 + a_2b_2 + \ldots + a_nb_n &\geq a_1b_2 + a_2b_3 + \ldots + a_nb_1 \\
+    a_1b_1 + a_2b_2 + \ldots + a_nb_n &\geq a_1b_3 + a_2b_4 + \ldots + a_{n-1}b_1 + a_nb_2 \\
+    &\vdots \\
+    a_1b_1 + a_2b_2 + \ldots + a_nb_n &\geq a_1b_n + a_2b_1 + \ldots + a_nb_{n-1}.
+\end{align*}
+
+Adding these \( n \) inequalities together, we obtain:
+\[ n(a_1b_1 + a_2b_2 + \ldots + a_nb_n) \geq (a_1 + a_2 + \ldots + a_n)(b_1 + b_2 + \ldots + b_n). \]
+
+After dividing by \( n^2 \), it follows that:
+\[ \frac{a_1b_1 + a_2b_2 + \ldots + a_nb_n}{n} \geq \left( \frac{a_1 + a_2 + \ldots + a_n}{n} \right)\left( \frac{b_1 + b_2 + \ldots + b_n}{n} \right). \]
+
+This holds especially if \( a_1 = a_2 = \ldots = a_n \) and \( b_1 = b_2 = \ldots = b_n \), which is trivial.
+
+For \( (2) \) where the sequences are oppositely sorted, the proof is similar.
+\end{proof}
+
+\begin{exercise}
+    Suppose \(a_1, a_2, \ldots, a_n > 0\) and let \(s = a_1 + \ldots + a_n\). Prove that
+\[ \frac{a_1}{s - a_1} + \ldots + \frac{a_n}{s - a_n} \geq \frac{n}{n - 1} \]
+\end{exercise}
+\begin{proof}
+    
+    The left-hand side of the inequality can be seen as the average of \(n\) fractions where the numerators are the \(a_i\)'s and the denominators are \(s - a_i\)'s.
+    
+    Since the sum of the numerators equals the sum of the \(a_i\)'s and the sum of the denominators is \(n(s - \frac{s}{n}) = (n-1)s\), we can apply Chebyshev's Inequality because it states that if \(a_1 \leq \ldots \leq a_n\) and \(b_1 \leq \ldots \leq b_n\), then the arithmetic mean of the products \(a_ib_i\) is greater than or equal to the product of the arithmetic means of \(a_i\) and \(b_i\).
+    
+    By rearranging the terms, we can match the \(a_i\)'s with the inverses of denominators in a way that corresponds to the conditions of Chebyshev's Inequality:
+    
+    \[ \sum_{i=1}^n a_i \cdot \frac{1}{s - a_i} \geq \frac{1}{n} \sum_{i=1}^n a_i \cdot \frac{1}{n} \sum_{i=1}^n \frac{1}{s - a_i}. \]
+    
+    This simplifies to:
+    
+    \[ \frac{a_1}{s - a_1} + \ldots + \frac{a_n}{s - a_n} \geq \frac{s}{(n-1)s} = \frac{n}{n-1}. \]
+    
+    Therefore, we have shown that:
+    
+    \[ \frac{a_1}{s - a_1} + \ldots + \frac{a_n}{s - a_n} \geq \frac{n}{n - 1}. \]
+    
+    This completes the proof.
+    
+\end{proof}
+
+\begin{exercise}
+    Prove the following for \( x, y, z > 0 \):
+    \begin{enumerate}
+        \item[(a)] \(\frac{x^2}{y} + \frac{y^2}{x} \geq x + y\).
+        \item[(b)] \(\frac{x^2}{y^2} + \frac{y^2}{z^2} + \frac{z^2}{x^2} \geq \frac{x}{z} + \frac{y}{x} + \frac{z}{y}\).
+        \item[(c)] \(\frac{xy}{z^2} + \frac{yz}{x^2} + \frac{zx}{y^2} \geq \frac{x}{y} + \frac{y}{z} + \frac{z}{x}\).
+    \end{enumerate}
+\end{exercise}
+\begin{proof}
+    \begin{enumerate}
+        \item[(a)] Without loss of generality, \(x \geq y\). Then \(x^2 \geq y^2\) and \(\frac{1}{y} \geq \frac{1}{x}\), i.e., \((x^2, y^2)\) and \((\frac{1}{y}, \frac{1}{x})\) are similarly sorted. Thus
+        \[ \frac{x^2}{y} + \frac{y^2}{x} \geq \frac{x^2}{x} + \frac{y^2}{y} = x + y. \]
+    
+        \item[(b)] Letting \(a = \frac{x}{y}\), \(b = \frac{y}{z}\), \(c = \frac{z}{x}\), the inequality is equivalent to
+        \[ a^2 + b^2 + c^2 \geq ab + bc + ca. \]
+        This is true by the rearrangement inequality applied to the similarly sorted sequences \((a, b, c)\) and \((a, b, c)\).
+    
+        \item[(c)] Let \(a = \frac{1}{x}\frac{1}{y^{1/3}}\frac{1}{z^{1/3}}\), \(b = \frac{1}{y}\frac{1}{z^{1/3}}\frac{1}{x^{1/3}}\), and \(c = \frac{1}{z}\frac{1}{x^{1/3}}\frac{1}{y^{1/3}}\). Then the inequality to prove becomes
+        \[ a^3 + b^3 + c^3 \geq a^2b + b^2c + c^2a \]
+        which was proved in problem 1.
+    \end{enumerate}
+\end{proof}
 %------------------------------------------------
 \chapterimage{orange2.jpg}
 \chapterspaceabove{6.75cm} 
