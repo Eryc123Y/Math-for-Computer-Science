@@ -12,3 +12,7 @@ Moivre
 nD
 addants
 summand
+Monotonicity
+Normals
+Extrema
+Rolle

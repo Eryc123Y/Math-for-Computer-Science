@@ -573,6 +573,9 @@ INPUT c:/texlive/2023/texmf-dist/fonts/tfm/adobe/avantgar/pagd8r.tfm
 INPUT c:/texlive/2023/texmf-dist/fonts/vf/adobe/avantgar/pagd8t.vf
 INPUT c:/texlive/2023/texmf-dist/fonts/tfm/adobe/avantgar/pagd8r.tfm
 INPUT c:/texlive/2023/texmf-dist/fonts/vf/adobe/times/ptmr8t.vf
+INPUT ./content/part1 Intro/Chapter1.tex
+INPUT ./content/part1 Intro/Chapter1.tex
+INPUT content/part1 Intro/Chapter1.tex
 INPUT ./Images/chap1.png
 INPUT ./Images/chap1.png
 INPUT ./Images/chap1.png
@@ -625,6 +628,9 @@ INPUT c:/texlive/2023/texmf-dist/fonts/tfm/adobe/symbol/psyr.tfm
 INPUT c:/texlive/2023/texmf-dist/fonts/vf/adobe/times/zptmcm7y.vf
 INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
 INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm
+INPUT ./content/part1 Intro/Chapter2.tex
+INPUT ./content/part1 Intro/Chapter2.tex
+INPUT content/part1 Intro/Chapter2.tex
 INPUT c:/texlive/2023/texmf-dist/fonts/vf/adobe/times/zptmcm7m.vf
 INPUT c:/texlive/2023/texmf-dist/fonts/tfm/adobe/times/psyro.tfm
 INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm
@@ -651,6 +657,9 @@ INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm
 INPUT c:/texlive/2023/texmf-dist/fonts/vf/adobe/times/zptmcm7y.vf
 INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
 INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm
+INPUT ./content/part1 Intro/Chapter3.tex
+INPUT ./content/part1 Intro/Chapter3.tex
+INPUT content/part1 Intro/Chapter3.tex
 INPUT ./Images/chap2.png
 INPUT ./Images/chap2.png
 INPUT ./Images/chap2.png
@@ -674,6 +683,9 @@ INPUT ./Images/time complexity.png
 INPUT c:/texlive/2023/texmf-dist/fonts/tfm/adobe/times/ptmb8t.tfm
 INPUT c:/texlive/2023/texmf-dist/fonts/vf/adobe/times/ptmb8t.vf
 INPUT c:/texlive/2023/texmf-dist/fonts/tfm/adobe/times/ptmb8r.tfm
+INPUT ./content/part1 Intro/Chapter4.tex
+INPUT ./content/part1 Intro/Chapter4.tex
+INPUT content/part1 Intro/Chapter4.tex
 INPUT ./Images/orange2.jpg
 INPUT ./Images/orange2.jpg
 INPUT ./Images/orange2.jpg
@@ -710,6 +722,9 @@ INPUT ./Images/agm3dsect.png
 INPUT ./Images/agm3dsect.png
 INPUT ./Images/agm3dsect.png
 INPUT c:/texlive/2023/texmf-dist/fonts/vf/adobe/times/ptmb7t.vf
+INPUT ./content/part1 Intro/Chapter5.tex
+INPUT ./content/part1 Intro/Chapter5.tex
+INPUT content/part1 Intro/Chapter5.tex
 INPUT ./Images/orange2.jpg
 INPUT ./Images/orange2.jpg
 INPUT ./Images/orange2.jpg
@@ -744,6 +759,84 @@ INPUT ./Images/rootdemoivre.png
 INPUT ./main.ptc
 INPUT ./main.ptc
 INPUT main.ptc
+INPUT ./content/Part2 Discrete math/Chapter1.tex
+INPUT ./content/Part2 Discrete math/Chapter1.tex
+INPUT content/Part2 Discrete math/Chapter1.tex
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./content/Part2 Discrete math/Chapter2.tex
+INPUT ./content/Part2 Discrete math/Chapter2.tex
+INPUT content/Part2 Discrete math/Chapter2.tex
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./content/Part2 Discrete math/Chapter3.tex
+INPUT ./content/Part2 Discrete math/Chapter3.tex
+INPUT content/Part2 Discrete math/Chapter3.tex
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./content/Part2 Discrete math/Chapter4.tex
+INPUT ./content/Part2 Discrete math/Chapter4.tex
+INPUT content/Part2 Discrete math/Chapter4.tex
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./main.ptc
+INPUT ./main.ptc
+INPUT main.ptc
+INPUT ./content/Part3 Single-variable Calculus/Chapter1.tex
+INPUT ./content/Part3 Single-variable Calculus/Chapter1.tex
+INPUT content/Part3 Single-variable Calculus/Chapter1.tex
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./content/Part3 Single-variable Calculus/Chapter2.tex
+INPUT ./content/Part3 Single-variable Calculus/Chapter2.tex
+INPUT content/Part3 Single-variable Calculus/Chapter2.tex
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./content/Part3 Single-variable Calculus/Chapter3.tex
+INPUT ./content/Part3 Single-variable Calculus/Chapter3.tex
+INPUT content/Part3 Single-variable Calculus/Chapter3.tex
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./content/Part3 Single-variable Calculus/Chapter4.tex
+INPUT ./content/Part3 Single-variable Calculus/Chapter4.tex
+INPUT content/Part3 Single-variable Calculus/Chapter4.tex
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./content/Part3 Single-variable Calculus/Chapter5.tex
+INPUT ./content/Part3 Single-variable Calculus/Chapter5.tex
+INPUT content/Part3 Single-variable Calculus/Chapter5.tex
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./content/Part3 Single-variable Calculus/Chapter6.tex
+INPUT ./content/Part3 Single-variable Calculus/Chapter6.tex
+INPUT content/Part3 Single-variable Calculus/Chapter6.tex
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./content/Part3 Single-variable Calculus/Chapter7.tex
+INPUT ./content/Part3 Single-variable Calculus/Chapter7.tex
+INPUT content/Part3 Single-variable Calculus/Chapter7.tex
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./main.ptc
+INPUT ./main.ptc
+INPUT main.ptc
+INPUT ./content/Part4 Multi-variable Calculus/Chapter1.tex
+INPUT ./content/Part4 Multi-variable Calculus/Chapter1.tex
+INPUT content/Part4 Multi-variable Calculus/Chapter1.tex
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
 INPUT ./Images/orange2.jpg
 INPUT ./Images/orange2.jpg
 INPUT ./Images/orange2.jpg
@@ -759,15 +852,99 @@ INPUT ./Images/orange2.jpg
 INPUT ./main.ptc
 INPUT ./main.ptc
 INPUT main.ptc
+INPUT ./content/Part5 Linear Algebra/Chapter1.tex
+INPUT ./content/Part5 Linear Algebra/Chapter1.tex
+INPUT content/Part5 Linear Algebra/Chapter1.tex
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
 INPUT ./main.ptc
 INPUT ./main.ptc
 INPUT main.ptc
+INPUT ./content/Part6 Probability and Combinatorics/Chapter1.tex
+INPUT ./content/Part6 Probability and Combinatorics/Chapter1.tex
+INPUT content/Part6 Probability and Combinatorics/Chapter1.tex
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
 INPUT ./main.ptc
 INPUT ./main.ptc
 INPUT main.ptc
+INPUT ./content/Part7 Statistics/Chapter1.tex
+INPUT ./content/Part7 Statistics/Chapter1.tex
+INPUT content/Part7 Statistics/Chapter1.tex
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
 INPUT ./main.ptc
 INPUT ./main.ptc
 INPUT main.ptc
+INPUT ./content/Part8 Basic Information Theory/Chapter1.tex
+INPUT ./content/Part8 Basic Information Theory/Chapter1.tex
+INPUT content/Part8 Basic Information Theory/Chapter1.tex
 INPUT ./Images/orange2.jpg
 INPUT ./Images/orange2.jpg
 INPUT ./Images/orange2.jpg
@@ -783,9 +960,9 @@ INPUT ./Images/orange2.jpg
 INPUT ./Images/orange2.jpg
 INPUT ./Images/orange2.jpg
 INPUT ./Images/orange2.jpg
-INPUT ./main.ptc
-INPUT ./main.ptc
-INPUT main.ptc
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
 OUTPUT main.ptc
 INPUT main.aux
 INPUT main.run.xml
