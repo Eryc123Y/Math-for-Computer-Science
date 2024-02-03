@@ -1,4 +1,242 @@
 \chapterimage{orange2.jpg}
 \chapterspaceabove{6.75cm} 
 \chapterspacebelow{7.25cm} 
-\chapter{Search and Sorting}
+\chapter{Further Algorithm Analysis: Search and Sorting}
+In this chapter, we will look into common search and sorting algorithms in computer science. This could
+be treated as an extension to prior knowledge in this book, as almost every chapter are involved in the
+analysis and proof of these algorithms. Stay calm if you find it a little difficult, since it takes some
+time for everyone to fully understand the notions.
+
+\section{Searching algorithms}
+    The very first thing we need to do is figure out what is searching, before we do any math.
+    \begin{definition}[Searching algorithm]
+        Given an array \( A[1], A[2], A[3], \ldots, A[n] \) and a target value \( T \), find an index \( j \) where \( T = A[j] \) or determine that no such index exists because \( T \) is not in the array \( A \).
+    \end{definition}
+    \subsection*{Searching in Unordered Array List}
+    We proceed to analyze the most common case, where we need to find the element $T$ from an unordered 
+    array. In this case, what we need to do is just like counting numbers. We will check each element in
+    the array $A$, from $A[1]$ to $A[n]$, until we find $T$. This way of reaching in pure sequential 
+    order is called \textbf{Linear Search}. The pseudocode is shown below.
+    \begin{algorithm}
+        \caption{Linear search for a target value in an array}
+        \begin{algorithmic}[1]
+        \Procedure{LinearSearch}{$A, T$}
+            \For{$j = 1$ to $j=n$}
+                \If{$A[j] == T$}
+                    \State \Return $j$
+                \EndIf
+            \EndFor
+            \State \Return $\text{``not found''}$
+        \EndProcedure
+        \end{algorithmic}
+        \end{algorithm} 
+    This is the easiest  algorithm in this book, and it is clear that for an array of size $n$, this 
+    algorithm has a time complexity of $O(n)$ in the worst cases. Now consider that, what if we are lucky
+    enough to find our target $T$ in the very first element in the array? Actually, computer scientists
+    have the other notation to show the best-case performance of a algorithm, which is $\omega$ notation.
+    \begin{notation}[Omega Notation]
+        The Omega notation describes the lower bound of an algorithm's running time. 
+        It measures the best-case scenario, at least this fast. For a given function g(n), 
+        we denote $\omega(g(n))$ the set of functions:
+        \[
+        \Omega(g(n)) = \{ f(n) : \exists c > 0, n_0 > 0 \text{ such that } 0 \leq cg(n) \leq f(n) \text{ for all } n \geq n_0 \}
+        \]
+    \end{notation}
+    Yet there is another notation to show the overall, or average performance of an algorithm.
+    \begin{notation}[Theta Notation]
+        The Theta notation tightly bounds a function from above and below, meaning it defines an algorithm's running time both in the best and worst cases. For a given function $g(n)$, we denote $\Theta(g(n))$ the set of functions:
+        \[
+        \Theta(g(n)) = \{ f(n) : \exists c_1 > 0, c_2 > 0, n_0 > 0 \text{ such that } 0 \leq c_1g(n) \leq f(n) \leq c_2g(n) \text{ for all } n \geq n_0 \}
+        \]
+    \end{notation}
+    Theta notation is used to evaluate the average time complexity of executing an algorithm. For instance,
+    we use $\bar{p}$ to denote the average of accessed elements. We have:
+    $$\bar{p} = \frac{1}{n} \sum_{i=i}^{n}i = \frac{1}{n}\times\frac{n(n+1)}{2}=\frac{n+1}{2}$$
+    Which means this algorithm has $\Theta(\frac{n+1}{2})$ time complexity.
+    \subsection*{Searching in Ordered Array List}
+    It seems that we do not have any better way to design a more efficient algorithm for finding target in 
+    unordered array. Now we will discuss the case for an ordered array.
+    \begin{definition}
+        An ordered array refers to an array $A$ that satisfies $A[1]\leq \cdots \leq A[n]$ or $A[1]\geq 
+        \cdots, \geq A[n]$.
+    \end{definition}
+    In this case, the target $T$ and any random element $A[n]$ in the array has the following properties
+    \begin{itemize}
+        \item  If \( T < A[i] \), then \( T \) cannot occur among \( A[i], A[i + 1], \ldots, A[n] \), and we need only search the list from \( A[1] \) to \( A[i - 1] \)
+        \item  If \( A[i] < T \), then \( T \) cannot occur among \( A[1], A[2], \ldots, A[i] \), and we need only search the list from \( A[i + 1] \) to \( A[n] \)
+    \end{itemize}
+    If we adopt a policy of making the worst case as favorable as we can, we should
+    probe in the middle (or as near to the middle as possible) of the list (or sublist) we're
+    searching. Then, if we don't find the target there, we will have at most half the list to
+    search.
+    
+    Suppose the partition of the original list we are searching in is from $A[p]$ to $A[q]$. We can get
+    the median by $\frac{p+q}{2}$, however, when $p+q$ is odd, we cannot get a valid integer as position
+    of element. As a result, we probe $A[i]$ where $i = \lfloor \frac{p+q}{2} \rfloor$ instead. 
+    The resulting search algorithm where we probe in the middle of the current
+    sublist is \textbf{Binary Search}.
+    \begin{algorithm}[H]
+        \caption{Binary Search for a target value in a sorted array}
+        \begin{algorithmic}[1]
+        \Procedure{BinarySearch}{$A, T$}
+            \State $p \gets 1$
+            \State $q \gets n$
+            \While{$p \leq q$}
+                \State $j \gets \left\lfloor (p + q) / 2 \right\rfloor$
+                \If{$A[j] == T$}
+                    \State \Return $j$
+                \ElsIf{$A[j] < T$}
+                    \State $p \gets j + 1$
+                \Else
+                    \State $q \gets j - 1$
+                \EndIf
+            \EndWhile
+            \State \Return $\text{``not found''}$
+        \EndProcedure
+        \end{algorithmic}
+        \end{algorithm}
+    \begin{remark}
+        If this code is a little confusing for you, you may check \href{https://www.cs.usfca.edu/~galles/visualization/Search.html}{here}
+        for complete visualization of binary search.
+    \end{remark}
+    
+    Walkthrough with $n = 12$ and $A = (3, 5, 8, 8, 9, 16, 29, 41, 50, 63, 64, 67)$. 
+
+    If $T=99$, then, we can show the variables involved in a table.
+    \begin{table}[h!]
+        \centering
+        \begin{tabular}{cccccc}
+        \toprule
+        \( p \) & \( j \) & \( q \) & \( A[j] \) & relation     & output         \\
+        \midrule
+        1       & 6       & 12      & 16         & \( A[j] < T \) & -             \\
+        7       & 9       & 12      & 50         & \( A[j] < T \) & -             \\
+        10      & 11      & 12      & 64         & \( A[j] < T \) & -             \\
+        12      & 12      & 12      & 67         & \( A[j] < T \) & -             \\
+        13      & -       & 12      & -          & -              & \( T \) is not in \( A \) \\
+        \bottomrule
+        \end{tabular}
+        \caption{Binary Search Iterations}
+        \end{table}
+        Suppose the sublist we're searching is from \( A[p] \) up to \( A[q] \) of length \( k = q - p + 1\) and we probe unsuccessfully at \( A[j] \):
+        $$\underbrace{A[p]\ldots A[j-1]}_{k1}\quad\text{A}[j]\quad\underbrace{A[j+1]\ldots A[q]}_{k2}$$
+        
+        If \( A[j] \geq T \), then we will search from \( A[p] \) up to \( A[j-1] \) of length \( k_1 = j - p \). \\
+        
+        If \( A[j] < T \), then we will search from \( A[j+1] \) up to \( A[q] \) of length \( k_2 = q - j \). \\
+        
+        We would like \( k_1 \) and \( k_2 \) to be equal, but if that's not possible (because \( q - p \) is odd), let's consistently make \( k_1 \) the smaller value.
+        $\text{How should we choose }  j  \text{ so that }  k_1 \leq k_2  \text{ and }  k_2$  is as small as possible?
+        To make \( k_2 = q - j \) as small as possible, we need to make \( j \) as large as possible. We want
+        
+        \[ k_1 + k_2 \leq k_2 + k_2, \]
+        that is,
+        \[ q - p \leq 2(q - j) = 2q - 2j \]
+        or
+        \[ 2j \leq 2q - (q - p) = q + p. \]
+        
+        The largest integer \( j \) such that \( j \leq (q + p)/2 \) is \( \lfloor (q + p)/2 \rfloor \), and this is the \( j \)-value used in the algorithm.
+        \begin{theorem}[Binary Search Sublist Lengths]
+            On each iteration of Binary Search with \( j = \left\lfloor \frac{p + q}{2} \right\rfloor \), the lengths of the sublists will be \( k_1 = \left\lfloor \frac{k - 1}{2} \right\rfloor \) such that \( k_1 \leq k_2 = \left\lceil \frac{k - 1}{2} \right\rceil \leq \frac{k}{2} \).
+            \end{theorem}
+            
+            \begin{proof}
+            Since \( j \leq \frac{q + p}{2} < j + 1 \), subtracting \( p \) from each of these three expressions gives
+            \begin{align*}
+            j - p &\leq \frac{q + p}{2} - p < j - p + 1 \\
+            k_1 &\leq \frac{q - p}{2} < k_1 + 1.
+            \end{align*}
+            Thus, \( k_1 = \left\lfloor \frac{q - p}{2} \right\rfloor = \left\lfloor \frac{k - 1}{2} \right\rfloor \).
+            
+            Because \( k_1 + k_2 = k - 1 \), we know that
+            \begin{itemize}
+            \item if \( k \) is odd, say \( k = 2r + 1 \), then \( k - 1 = 2r \) and \( k_1 = r = k_2 < \frac{k}{2} \),
+            \item if \( k \) is even, say \( k = 2r \), then \( k - 1 = 2r - 1 \) and \( k_1 = r - 1 < r = k_2 = \frac{k}{2} \).
+            \end{itemize}
+            Thus, \( k_1 = \left\lfloor \frac{k - 1}{2} \right\rfloor \leq k_2 = \left\lceil \frac{k - 1}{2} \right\rceil \leq \frac{k}{2} \).
+            \end{proof}
+
+            \begin{theorem}[Binary Search Termination]
+                Binary Search terminates after at most \(\lceil \lg(n) \rceil + 1\) probes.
+                \end{theorem}
+                
+                \begin{proof}
+                Let \( w = \lfloor \lg(n) \rfloor \). If, in some instance, Binary Search has not terminated after \( w \) (unsuccessful) probes, then the current value of \( p \) must be \( \leq \) the current value of \( q \), and the length of the current sublist, \( k \), must be \( \leq n/2^w \).
+                \[ // \text{Prove this by MI.} \]
+                Since \( w \leq \lg(n) < w + 1 \),
+                \[ 2^w \leq n < 2 \times 2^w \]
+                \[ // \text{then dividing each by } 2^w \]
+                \[ 1 \leq n/2^w < 2. \]
+                \[ // \text{which implies that } k = 1 \]
+                
+                For the next iteration, \( p = q \) and so \( j = p \).
+                \[ // \text{And we probe the one remaining entry in } A. \]
+                
+                If \( A[j] < T \), then \( p \leftarrow j + 1 > q \), so Binary Search terminates after this probe; if \( A[j] > T \), then \( q \leftarrow j - 1 < p \), so Binary Search terminates after this probe; and if \( A[j] = T \), then Binary Search terminates after this one last probe.
+                
+                Therefore, Binary Search terminates after at most \(\lceil \lg(n) \rceil + 1\) probes.
+                \end{proof}
+    To show that the binary search algorithm is correct, we also need to show its \textbf{loop invariant}.
+        \begin{definition}
+            In computer science, a loop invariant is a logical assertion that is true before and after 
+            each iteration of a program loop. It is a condition that is true at the beginning and 
+            end of every iteration of a loop.
+        \end{definition}
+    Assume that $T$ is in $A$ and $T=A[i]$, $i \in [p, q]$.
+    \begin{theorem}[Loop Invariance of Binary Search]
+        After $k$ iterations of the loop, if $T$ = $A[i]$, then $p\leq i \leq q$.
+    \end{theorem}
+    \begin{proof}
+        By Mathematical Induction on \(k\) where \(k \in \{0..\}\)
+
+\textbf{Step 1.} After \(k = 0\) iterations of the loop, that is, before the loop is done once
+\[ p = 1 \quad \text{and} \quad q = n, \]
+and therefore,
+\[ \text{if} \quad T = A[i] \quad \text{then} \quad p \leq i \leq q. \quad (\text{P}(0) \text{ is True}) \]
+
+\textbf{Step 2.} Assume \(\exists w \in \mathbb{N}\) such that
+after \(w\) iterations of the loop, if \( T = A[i] \), then \( p \leq i \leq q \). \quad (\text{This is P}(w).)
+
+\textbf{Step 3.} Suppose there is another iteration, the \( w + 1^{st} \).
+That is, \( T \) has not been found in \( w \) unsuccessful probes, and now, \( p \leq q \).
+On the next iteration, we calculate a new \( j \)-value,
+\[ j_{\text{new}} \leftarrow \left\lfloor \frac{(p + q)}{2} \right\rfloor \]
+
+Since \( p \leq q \),
+\[ p + p \leq p + q \leq q + q \]
+and
+\[ p = \left( p + \frac{p}{2} \right) \leq \left( p + \frac{q}{2} \right) \leq \left( q + \frac{q}{2} \right) = q \]
+and so \( p \leq j_{\text{new}} \leq q \).
+In fact, if \( p = q \), then \( j_{\text{new}} = p \), and if \( p < q \), then \( p \leq j_{\text{new}} < q \).
+
+In the remainder of the proof, we will let \( p^* \) and \( q^* \) denote the values of \( p \) and \( q \) at the end of the iteration. There are three cases to consider:
+
+\textbf{Case 1.} If \( A[j_{\text{new}}] < T \), then \( T \) cannot occur at or before position \( j_{\text{new}} \) hence
+\[ \text{if} \quad T = A[i] \quad \text{then} \quad p < j_{\text{new}} + 1 \leq i \leq q. \quad \text{Here} \quad p^* = j_{\text{new}} + 1 \quad \text{and} \quad q^* = q. \]
+
+\textbf{Case 2.} If \( A[j_{\text{new}}] > T \), then \( T \) cannot occur at or after position \( j_{\text{new}} \) hence
+\[ \text{if} \quad T = A[i] \quad \text{then} \quad p \leq i < j_{\text{new}} - 1 < q. \quad \text{Here} \quad p^* = p \quad \text{and} \quad q^* = j_{\text{new}} - 1. \]
+
+\textbf{Case 3.} If \( A[j_{\text{new}}] = T \), then neither \( p \) nor \( q \) are changed hence, from Step 2
+\[ \text{if} \quad T = A[i] \quad \text{then} \quad p \leq i \leq q. \quad \text{In this case,} \quad p^* = p \quad \text{and} \quad q^* = q. \]
+
+Therefore, after this next iteration,
+\[ \text{if} \quad T = A[i] \quad \text{then} \quad p^* \leq i \leq q^*. \quad \text{in every case} \]
+    \end{proof}
+    \begin{remark}
+    When the repeat-loop in Binary Search terminates,
+    \[ \text{if} \quad T = A[i], \quad \text{then} \quad p \leq i \leq q. \quad \text{(That is, this conditional statement is True.)} \]
+    
+    But if \( p > q \), there is no index \( i \) where \( p \leq i \leq q \).
+    \[ \text{(The consequent must be False. The antecedent must be False.)} \]
+    
+    If \( p > q \), there is no index \( i \) where \( T = A[i] \).
+    \[ \text{(If \( p > q \), then \( T \) cannot be in \( A \). Therefore, when Binary Search terminates,} \]
+    
+    the target has been found at position \( j \)
+    or
+    \[ (p > q \quad \text{and so} \quad T \text{ is not in } A.) \]
+    
+    Binary Search is correct and very efficient.
+    \[ \text{(compared to Linear Search)} \]
+    \end{remark}
