@@ -345,7 +345,7 @@ Therefore, after this next iteration,
     \begin{theorem}\label{4.2.1}
         After $w$ iterations of the loop
         \[
-        \left\lceil \frac{n}{2^w} \right\rceil \leq L(w) \leq \left\lfloor \frac{n}{2^w} \right\rfloor.
+        \left\lfloor \frac{n}{2^w} \right\rfloor \leq L(w) \leq \left\lceil \frac{n}{2^w} \right\rceil.
         \]
     \end{theorem}
     \begin{proof}
@@ -365,20 +365,20 @@ Therefore, after this next iteration,
         \paragraph{Step 2.}
         Assume there exists $m \in \mathbb{N}$ such that after $m$ iterations of the loop
         \[
-        \left\lceil \frac{n}{2^m} \right\rceil \leq L(m) \leq \left\lfloor \frac{n}{2^m} \right\rfloor.
+        \left\lfloor \frac{n}{2^m} \right\rfloor \leq L(m) \leq \left\lceil \frac{n}{2^m} \right\rceil.
         \]
         This is $P(m)$.
 
         \paragraph{Step 3.}
         Suppose there is another iteration, the $m + 1$. That is, now $p < q$. We know that
         \[
-        \left\lceil \frac{L(m)}{2} \right\rceil \leq L(m + 1) \leq \left\lfloor \frac{L(m)}{2} \right\rfloor.
+        \left\lfloor \frac{L(m)}{2} \right\rfloor \leq L(m + 1) \leq \left\lceil \frac{L(m)}{2} \right\rceil.
         \]
         If we can show that
         \[
         \lceil L(m) / 2\rceil\leq\left\lceil\left\lceil n / 2^{m}\right\rceil / 2\right\rceil \text { and }\left\lceil\left\lceil n / 2^{m}\right\rceil / 2\right\rceil \leq \left\lceil n / 2^{m+1}\right\rceil
         \]
-        we will have the upper bound we want: $L(m + 1) \leq \left\lfloor \frac{n}{2^{m+1}} \right\rfloor$.
+        we will have the upper bound we want: $L(m + 1) \leq \left\lceil \frac{n}{2^{m+1}} \right\rceil$.
 
         We deal with these (and the corresponding inequalities with the floor function) in a more general setting in the next two lemmas.
 
@@ -388,22 +388,22 @@ Therefore, after this next iteration,
         
         It takes some extra step to show this. We will prove the inductive hypothesis by 2 lemmas.
 
-        \noindent \textbf{Lemma 1}: If \( x \) and \( y \) are real numbers and \( x < y \), then \( \lfloor x \rfloor \leq \lceil y \rceil \) and \( \lfloor x \rfloor \leq \lfloor y \rfloor \).
+        \noindent \textbf{Lemma 1}: If \( x \) and \( y \) are real numbers and \( x < y \), then \( \lceil x \rceil \leq \lceil y \rceil \) and \( \lfloor x \rfloor \leq \lfloor y \rfloor \).
         \begin{proof}
             The floor and ceiling functions are nondecreasing.
-            Since \( x < y \leq \lceil y \rceil \in \mathbb{Z} \) and \( \lceil x \rceil \) is the smallest integer \( \geq x \), \( \lfloor x \rfloor \leq \lceil y \rceil \).
+            Since \( x < y \leq \lceil y \rceil \in \mathbb{Z} \) and \( \lceil x \rceil \) is the smallest integer \( \geq x \), \( \lceil x \rceil \leq \lceil y \rceil \).
             Since \( \lfloor x \rfloor \leq x < y \) and \( \lfloor y \rfloor \) is the largest integer \( \leq y \), \( \lfloor y \rfloor \geq \lfloor x \rfloor \).
         \end{proof}
 
-        \noindent \textbf{Lemma 2}: For any real number \(x\), \(\left\lfloor \frac{\lvert x\rvert}{2} \right\rfloor = \left\lfloor \frac{x}{2} \right\rfloor\) and \(\left\lceil \frac{\lvert x\rvert}{2} \right\rceil = \left\lceil \frac{x}{2} \right\rceil\).
+        \noindent \textbf{Lemma 2}: For any real number \(x\), \(\left\lfloor \frac{\lfloor x\rfloor}{2} \right\rfloor = \left\lfloor \frac{x}{2} \right\rfloor\) and \(\left\lceil \frac{\lceil x\rceil}{2} \right\rceil = \left\lceil \frac{x}{2} \right\rceil\).
         \begin{proof}
-            If \(x\) is an integer, then \(\lvert x\rvert = x = \lceil x\rceil\), and therefore,
+            If \(x\) is an integer, then \(\lfloor x\rfloor = x = \lceil x\rceil\), and therefore,
             \[
-            \left\lfloor \frac{\lvert x\rvert}{2} \right\rfloor = \left\lfloor \frac{x}{2} \right\rfloor
+            \left\lfloor \frac{\lfloor x\rfloor}{2} \right\rfloor = \left\lfloor \frac{x}{2} \right\rfloor
             \]
             and
             \[
-            \left\lceil \frac{\lvert x\rvert}{2} \right\rceil = \left\lceil \frac{x}{2} \right\rceil
+            \left\lceil \frac{\lceil x\rceil}{2} \right\rceil = \left\lceil \frac{x}{2} \right\rceil
             \].
             Suppose now that \(x\) is not an integer, and let \(Q\) denote \(\left\lfloor \frac{x}{2} \right\rfloor\). Then, we have
             \[
@@ -427,11 +427,11 @@ Therefore, after this next iteration,
             \]
             and so
             \[
-            \left\lfloor \frac{\lvert x\rvert}{2} \right\rfloor = \left\lfloor \frac{x}{2} \right\rfloor = Q
+            \left\lfloor \frac{\lfloor x\rfloor}{2} \right\rfloor = \left\lfloor \frac{x}{2} \right\rfloor = Q
             \]
             and
             \[
-            \left\lceil \frac{\lvert x\rvert}{2} \right\rceil = \left\lceil \frac{x}{2} \right\rceil = Q + 1.
+            \left\lceil \frac{\lceil x\rceil}{2} \right\rceil = \left\lceil \frac{x}{2} \right\rceil = Q + 1.
             \]
         \end{proof}
     
@@ -499,3 +499,17 @@ Therefore, after this next iteration,
 
         Thus, the while loop cannot stop before \(Q - 1\) iterations are done, though it might stop after exactly \(Q - 1\) iterations are done, but if \(L(Q - 1) = 2\), it must stop after (one more iteration) exactly \(Q\) iterations.
     \end{proof}
+
+
+    \subsection{Exercises}
+    \begin{exercise}
+        Consider the best performance of binary search in $\Theta$ notation and worst performance in big $O$ notation. Is it possible to get the average performance in $\Theta$ notation? If yes, state the precise time complexity; if not, explain why.
+    \end{exercise}
+    \textbf{Solution:}
+
+    \begin{itemize}
+        \item Best time complexity: The best case scenario occurs when the target value is at the midpoint of the array, which happens with a constant time complexity, thus $\Omega(1)$. However, best case scenarios are generally not described using $\Theta$ notation as it implies a tight bound that is both the upper and lower limit, which is not applicable for the best case.
+        \item Worst time complexity: Binary search has a worst-case time complexity of $O(\log n)$ when the target value is not within the initial bounds of the midpoint checks, thus requiring the maximum number of iterations to converge on the target.
+        \item Average time complexity: The average time complexity of binary search is generally represented as $O(\log n)$. This is due to the fact that, on average, the number of steps required to find an element in a sorted array is logarithmic relative to the array size. Precise average case analysis of binary search is complex as it depends on the probability distribution of the target element's position. It is generally not represented in $\Theta$ notation because the lower and upper bounds for the average case cannot be tightly bounded as they can be for the best and worst cases.
+    \end{itemize}
+    

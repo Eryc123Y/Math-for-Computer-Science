@@ -90,6 +90,7 @@
 \contentsline {paragraph}{Step 1.}{162}{paragraph*.4}%
 \contentsline {paragraph}{Step 2.}{162}{paragraph*.5}%
 \contentsline {paragraph}{Step 3.}{162}{paragraph*.6}%
+\contentsline {subsection}{\numberline {8.1.4}Exercises}{165}{subsection.8.1.4}%
 \contentsline {chapter}{\numberline {9}Graph Theory}{167}{chapter.9}%
 \contentsline {part}{\numberline {III}Single-variable Calculus}{169}{part.3}%
 \contentsline {chapter}{\numberline {10}Function Monotonicity, Parity and Periodicity}{171}{chapter.10}%
