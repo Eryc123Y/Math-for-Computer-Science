@@ -1,18 +1,20 @@
 \chapterimage{orange2.jpg}
 \chapterspaceabove{6.75cm} 
 \chapterspacebelow{7.25cm} 
-\chapter{Further Algorithm Analysis: Search and Sorting}
+\chapter{Search and Sorting with Further Algorithm Analysis}
 In this chapter, we will look into common search and sorting algorithms in computer science. This could
 be treated as an extension to prior knowledge in this book, as almost every chapter are involved in the
 analysis and proof of these algorithms. Stay calm if you find it a little difficult, since it takes some
-time for everyone to fully understand the notions.
+time for everyone to fully understand the notions. Some of you may think it's quite hilarious to put 
+sorting and searching algorithm in a chapter about discrete math, but they are exactly the algorithms that
+requires to be analyzed using the most mathematical tools.
 
 \section{Searching algorithms}
     The very first thing we need to do is figure out what is searching, before we do any math.
     \begin{definition}[Searching algorithm]
         Given an array \( A[1], A[2], A[3], \ldots, A[n] \) and a target value \( T \), find an index \( j \) where \( T = A[j] \) or determine that no such index exists because \( T \) is not in the array \( A \).
     \end{definition}
-    \subsection*{Searching in Unordered Array List}
+    \subsection{Searching in Unordered Array List}
     We proceed to analyze the most common case, where we need to find the element $T$ from an unordered 
     array. In this case, what we need to do is just like counting numbers. We will check each element in
     the array $A$, from $A[1]$ to $A[n]$, until we find $T$. This way of reaching in pure sequential 
@@ -53,7 +55,7 @@ time for everyone to fully understand the notions.
     we use $\bar{p}$ to denote the average of accessed elements. We have:
     $$\bar{p} = \frac{1}{n} \sum_{i=i}^{n}i = \frac{1}{n}\times\frac{n(n+1)}{2}=\frac{n+1}{2}$$
     Which means this algorithm has $\Theta(\frac{n+1}{2})$ time complexity.
-    \subsection*{Searching in Ordered Array List}
+    \subsection{Searching in Ordered Array List}
     It seems that we do not have any better way to design a more efficient algorithm for finding target in 
     unordered array. Now we will discuss the case for an ordered array.
     \begin{definition}
@@ -103,7 +105,8 @@ time for everyone to fully understand the notions.
     Walkthrough with $n = 12$ and $A = (3, 5, 8, 8, 9, 16, 29, 41, 50, 63, 64, 67)$. 
 
     If $T=99$, then, we can show the variables involved in a table.
-    \begin{table}[h!]
+    \begin{table}[h!] 
+        \label{bisearch1}
         \centering
         \begin{tabular}{cccccc}
         \toprule
@@ -136,7 +139,7 @@ time for everyone to fully understand the notions.
         \[ 2j \leq 2q - (q - p) = q + p. \]
         
         The largest integer \( j \) such that \( j \leq (q + p)/2 \) is \( \lfloor (q + p)/2 \rfloor \), and this is the \( j \)-value used in the algorithm.
-        \begin{theorem}[Binary Search Sublist Lengths]
+        \begin{theorem}[Binary Search Sublist Lengths] \label{sublistlen}
             On each iteration of Binary Search with \( j = \left\lfloor \frac{p + q}{2} \right\rfloor \), the lengths of the sublists will be \( k_1 = \left\lfloor \frac{k - 1}{2} \right\rfloor \) such that \( k_1 \leq k_2 = \left\lceil \frac{k - 1}{2} \right\rceil \leq \frac{k}{2} \).
             \end{theorem}
             
@@ -240,3 +243,259 @@ Therefore, after this next iteration,
     Binary Search is correct and very efficient.
     \[ \text{(compared to Linear Search)} \]
     \end{remark}
+
+    \subsection*{Branching Diagrams}
+    \begin{definition}[Branching Diagram]
+        A General Branching Diagram for an algorithm is a tree that shows all possible
+        sequences of operations the algorithm might do.
+    \end{definition}
+    Branching tree is an important tool for algorithm analysis; when n is not very large, we can draw the
+    branching diagram for algorithm analysis.
+
+    Suppose that we have an array with $n=12$. In this branching tree, each cell represent a result of iterating element in the array. Certainly, we have $A[6]$ as the first element to be accessed.
+    With 6 visited, there are two possible consequence of comparisons which will lead us to either
+    $A[3]$ or $A[9]$, and so forth.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width = 0.8 \textwidth]{"branchingtree.png"}
+        \caption{Branching Tree of Binary Search}
+    \end{figure}
+
+    This kind of diagram is known as a \textbf{Binary Tree}: it's “rooted” at the vertex
+    placed at the top of the diagram, and is binary in the sense that from any vertex,
+    there are at most two edges downward in the diagram. The vertices with no
+    downward edges are called \textbf{leaves}. The other vertices are called \textbf{internal vertices}.
+    Every vertex, except the root, is the end of exactly one edge to it from a vertex
+    above it in the diagram.
+
+    \subsection{Binary Search: Version 2}
+    Now we look into the other version of binary search.
+    \begin{algorithm}[H]
+        \caption{Binary Search Version 2 for a target value in a sorted array}
+        \begin{algorithmic}[1]
+        \Procedure{BinarySearch}{$A, T$}
+            \State $p \gets 1$
+            \State $q \gets n$
+            \While{$p < q$}
+                \State $j \gets \left\lfloor (p + q) / 2 \right\rfloor$
+                \If{$A[j] < T$}
+                    \State $p \gets j + 1$
+                \Else
+                    \State $q \gets j$
+                \EndIf
+            \EndWhile
+            \If{$A[p] = T$}
+                \State \Return $p$
+            \Else
+                \State \Return \textit{not found}
+            \EndIf
+        \EndProcedure
+        \end{algorithmic}
+        \end{algorithm}
+    There is only one major difference between these 2 versions. For $p$ and $q$, the way they are updated in
+    the second version is different, as $q$ is assigned by $j$ instead of $j-1$. It seems that this is 
+    only a trivial change in the algorithm, mathematically, however, it changes the way how it works completely.
+    We refer to the same example where $T=99$.
+    \begin{table}[h!]
+        \centering
+        \caption{Execution steps of Binary Search when $T = 99$}
+        \begin{tabular}{ccccccc}
+        \toprule
+        $p$ & $j$ & $q$ & $p < q$ & $A[j]$ & $A[j] < T$ & Output \\
+        \midrule
+        1 & 6 & 12 & t & 16 & t & - \\
+        7 & 9 & 12 & t & 50 & t & - \\
+        10 & 11 & 12 & t & 64 & t & - \\
+        12 & - & 12 & f & - & - & $T$ is not in $A$ \\
+        \bottomrule
+        \end{tabular}
+    \end{table}
+
+    Comparing with the table \ref{bisearch1}, the number of iteration decreases by 1.
+
+    Is this algorithm really correct? To figure it out, recall that to show an algorithm correct,
+    we need to secure its loop invariance and whether it is terminable. Actually, this algorithm 
+    operates on two partitions of the array only, but not 3, as in the previous version. 
+    Suppose the sublist we're searching is from $A[p]$ up to $A[q]$ of length $k = q-p+1$, and we
+    make the comparison “is $A[j] < T$?”:
+    $$\underbrace{A[p] \ldots A[j]}_{k 1} \quad \underbrace{A[j+1] \ldots A[q]}_{k 2}$$
+
+    In this case, $A[j]$ is not considered as an independent element, but the last element of sublist $p$ to $j$.
+    If $A[j] < T$, the Procedure will try to find it in $k2$ by assign the index of the smallest item in it 
+    to $p$. And if $A[j] \geq T$, it is just the other way around. Recall that in theorem \ref{sublistlen},
+    when $j = \lfloor \frac{p+q}{2}\rfloor$ the length of $k1$  will be $\lfloor\frac{k-1}{2}\rfloor$, 
+    while length of $k2$ is $\lceil \frac{k-1}{2}\rceil$. However, $\forall k\in \mathbb{Z}$, 
+    $\lceil \frac{k-1}{2} \rceil = \lfloor \frac{k}{2}\rfloor$ (proven in previous chapter).
+
+    Since $k_1 + k_2 = k$, we have
+    \[
+    \text{if } k \text{ is even, say } k = 2r, \text{ then } k_1 = r = k_2 = \frac{k}{2} \text{ and}
+    \]
+    \[
+    \text{if } k \text{ is odd, say } k = 2r + 1, \text{ then } k_2 = r < \frac{k}{2} < r + 1 = k_1.
+    \]
+    In general,
+    \[
+    k_2 = \left\lfloor \frac{k}{2} \right\rfloor \leq \frac{k}{2} \leq k_1 = \left\lceil \frac{k}{2} \right\rceil.
+    \]
+
+    Therefore, at some iterations of binary search \#2, the length of the next sublist is more than half the length of the previous sublist.
+
+    Let $L(w)$ denote the length of the sublist still to be searched after $w$ iterations of the while loop.
+    \begin{theorem}\label{4.2.1}
+        After $w$ iterations of the loop
+        \[
+        \left\lceil \frac{n}{2^w} \right\rceil \leq L(w) \leq \left\lfloor \frac{n}{2^w} \right\rfloor.
+        \]
+    \end{theorem}
+    \begin{proof}
+        Denote the statement as $P(w)$
+
+        By Mathematical Induction on $w$ where $w \in \{0, \ldots\}$.
+
+    \paragraph{Step 1.}
+        After $w = 0$ iterations of the loop, before the loop is done once the length of the current sublist,
+        \[
+        L(0) = n = \left\lceil \frac{n}{2^0} \right\rceil = \left\lfloor \frac{n}{2^0} \right\rfloor.
+        \]
+        $P(0)$ is True.
+
+        Suppose that for the first few iterations of the loop (even though $p$ and $q$ may have been changed), these bounds on the length of the current sublist are maintained.
+
+        \paragraph{Step 2.}
+        Assume there exists $m \in \mathbb{N}$ such that after $m$ iterations of the loop
+        \[
+        \left\lceil \frac{n}{2^m} \right\rceil \leq L(m) \leq \left\lfloor \frac{n}{2^m} \right\rfloor.
+        \]
+        This is $P(m)$.
+
+        \paragraph{Step 3.}
+        Suppose there is another iteration, the $m + 1$. That is, now $p < q$. We know that
+        \[
+        \left\lceil \frac{L(m)}{2} \right\rceil \leq L(m + 1) \leq \left\lfloor \frac{L(m)}{2} \right\rfloor.
+        \]
+        If we can show that
+        \[
+        \lceil L(m) / 2\rceil\leq\left\lceil\left\lceil n / 2^{m}\right\rceil / 2\right\rceil \text { and }\left\lceil\left\lceil n / 2^{m}\right\rceil / 2\right\rceil \leq \left\lceil n / 2^{m+1}\right\rceil
+        \]
+        we will have the upper bound we want: $L(m + 1) \leq \left\lfloor \frac{n}{2^{m+1}} \right\rfloor$.
+
+        We deal with these (and the corresponding inequalities with the floor function) in a more general setting in the next two lemmas.
+
+        Remember that $\left\lceil r \right\rceil$ is (defined to be) the smallest integer greater than or equal 
+        to the (real) number $r$ and $\left\lfloor r \right\rfloor$ is the largest integer less than or equal 
+        to $r$. Also, recall that whenever $y$ is not an integer, $\left\lfloor y \right\rfloor < y < \left\lfloor y \right\rfloor + 1$.
+        
+        It takes some extra step to show this. We will prove the inductive hypothesis by 2 lemmas.
+
+        \noindent \textbf{Lemma 1}: If \( x \) and \( y \) are real numbers and \( x < y \), then \( \lfloor x \rfloor \leq \lceil y \rceil \) and \( \lfloor x \rfloor \leq \lfloor y \rfloor \).
+        \begin{proof}
+            The floor and ceiling functions are nondecreasing.
+            Since \( x < y \leq \lceil y \rceil \in \mathbb{Z} \) and \( \lceil x \rceil \) is the smallest integer \( \geq x \), \( \lfloor x \rfloor \leq \lceil y \rceil \).
+            Since \( \lfloor x \rfloor \leq x < y \) and \( \lfloor y \rfloor \) is the largest integer \( \leq y \), \( \lfloor y \rfloor \geq \lfloor x \rfloor \).
+        \end{proof}
+
+        \noindent \textbf{Lemma 2}: For any real number \(x\), \(\left\lfloor \frac{\lvert x\rvert}{2} \right\rfloor = \left\lfloor \frac{x}{2} \right\rfloor\) and \(\left\lceil \frac{\lvert x\rvert}{2} \right\rceil = \left\lceil \frac{x}{2} \right\rceil\).
+        \begin{proof}
+            If \(x\) is an integer, then \(\lvert x\rvert = x = \lceil x\rceil\), and therefore,
+            \[
+            \left\lfloor \frac{\lvert x\rvert}{2} \right\rfloor = \left\lfloor \frac{x}{2} \right\rfloor
+            \]
+            and
+            \[
+            \left\lceil \frac{\lvert x\rvert}{2} \right\rceil = \left\lceil \frac{x}{2} \right\rceil
+            \].
+            Suppose now that \(x\) is not an integer, and let \(Q\) denote \(\left\lfloor \frac{x}{2} \right\rfloor\). Then, we have
+            \[
+            Q < \frac{x}{2} < Q + 1 \quad // \frac{x}{2} \text{ cannot be an integer.}
+            \]
+            \[
+            \Leftrightarrow 2Q < x < 2Q + 2.
+            \]
+            In fact,
+            \[
+            2Q \leq \lvert x\rvert < 2Q + 2,
+            \]
+            // because \(2Q \in \mathbb{Z}\)
+            and
+            \[
+            2Q < \lceil x\rceil \leq 2Q + 2.
+            \]
+            Then,
+            \[
+            Q \leq \left\lfloor \frac{x}{2} \right\rfloor < \frac{x}{2} < \frac{x}{2} < \lceil x\rceil \leq Q + 1,
+            \]
+            and so
+            \[
+            \left\lfloor \frac{\lvert x\rvert}{2} \right\rfloor = \left\lfloor \frac{x}{2} \right\rfloor = Q
+            \]
+            and
+            \[
+            \left\lceil \frac{\lvert x\rvert}{2} \right\rceil = \left\lceil \frac{x}{2} \right\rceil = Q + 1.
+            \]
+        \end{proof}
+    
+        Returning to the proof of Theorem 4.2.1, and taking \(x = n/2^m\),  
+        from Lemma 2, we have
+        \[
+        \left\lfloor \frac{n/2^m}{2} \right\rfloor = \left\lfloor \frac{n/2^m+1}{2} \right\rfloor \quad \text{and} \quad \left\lfloor \frac{n/2^m}{2} \right\rfloor = \left\lfloor \frac{n/2^m+1}{2} \right\rfloor.
+        \]
+        Since
+        \[
+        \left\lfloor \frac{n/2^m}{2} \right\rfloor \leq L(m) \leq \left\lceil \frac{n/2^m}{2} \right\rceil, \quad // \text{from Step 2}
+        \]
+        \[
+        \left\lfloor \frac{n/2^m}{2} \right\rfloor \leq \frac{L(m)}{2} \leq \left\lceil \frac{n/2^m}{2} \right\rceil \quad // \text{and applying Lemma A}
+        \]
+        \[
+        \left\lfloor \frac{n/2^m}{2} \right\rfloor \leq \frac{L(m)}{2} \quad \text{and} \quad \left\lceil \frac{L(m)}{2} \right\rceil \leq \left\lceil \frac{n/2^m}{2} \right\rceil.
+        \]
+        Thus,
+        \[
+        L(m+1) \leq \left\lfloor \frac{L(m)}{2} \right\rfloor \quad \text{and} \quad L(m+1) \geq \left\lceil \frac{L(m)}{2} \right\rceil
+        \]
+        that is,
+        \[
+        \left\lfloor \frac{n/2^m+1}{2} \right\rfloor \leq L(m+1) \leq \left\lceil \frac{n/2^m+1}{2} \right\rceil.
+        \]
+        The completes the proof.
+    \end{proof}
+
+    \begin{theorem}
+        After at most \(\left\lceil \lg(n) \right\rceil\) comparisons of the form "Is \(A[j] < T?\)"  
+        and when \(p = q\) in the last comparison, the length of the current sublist is 1.
+    \end{theorem}
+    \begin{proof}
+        Let \(Q = \left\lceil \lg(n) \right\rceil\). Then
+        \[
+        Q - 1 < \lg(n) \leq Q \text{ so } 2^{Q-1} < n \leq 2^Q.
+        \]
+        For any integer \(k\)
+        \[
+        \frac{2^{Q-1}}{2^k} = \frac{2^Q}{2^{k+1}} < \frac{n}{2^k} < \frac{2^Q}{2^k} = 2^{Q-k}.
+        \]
+        By theorem \ref{4.2.1} and lemma 1
+        \[
+        L(k) \leq \left\lfloor \frac{n}{2^k} \right\rfloor \leq \frac{2^Q}{2^k} = 2^{Q-k} \quad // Q - k \in \mathbb{P} \text{ so } 2^{Q-k} \in \mathbb{P}.
+        \]
+
+        and
+
+        \[
+        L(k) \geq \left\lceil \frac{n}{2^k} \right\rceil \geq \frac{2^{Q-1}}{2^k} = 2^{Q-1-k} \quad // \text{And } 2^{Q-1-k} \in \mathbb{P}.
+        \]
+
+        In particular,
+
+        \[
+        2 = 2^1 \leq L(Q - 2) \leq 2^2
+        \]
+
+        and
+
+        \[
+        1 = 2^0 \leq L(Q - 1) \leq 2^1 = 2.
+        \]
+
+        Thus, the while loop cannot stop before \(Q - 1\) iterations are done, though it might stop after exactly \(Q - 1\) iterations are done, but if \(L(Q - 1) = 2\), it must stop after (one more iteration) exactly \(Q\) iterations.
+    \end{proof}

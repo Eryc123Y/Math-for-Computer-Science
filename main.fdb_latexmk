@@ -1,22 +1,23 @@
 # Fdb version 4
-["biber main"] 1706523622.6383 "main.bcf" "main.bbl" "main" 1706945972.56988 0
-  "main.bcf" 1706945972 107347 1f51a2be7d23f3423c0e59ffd4ef65c6 "pdflatex"
+["biber main"] 1706523622.6383 "main.bcf" "main.bbl" "main" 1707272274.09805 0
+  "main.bcf" 1707272273 107347 1f51a2be7d23f3423c0e59ffd4ef65c6 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["makeindex main.idx"] 1706884948.85649 "main.idx" "main.ind" "main" 1706945972.5692 0
-  "main.idx" 1706945968 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+["makeindex main.idx"] 1707272258.07823 "main.idx" "main.ind" "main" 1707272274.09777 0
+  "main.idx" 1707272269 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   (generated)
   "main.ilg"
   "main.ind"
   (rewritten before read)
-["pdflatex"] 1706945967.43915 "c:/Programming/GitProjects/Math-for-CS/main.tex" "main.pdf" "main" 1706945972.57093 0
+["pdflatex"] 1707272269.01447 "c:/Programming/GitProjects/Math-for-CS/main.tex" "main.pdf" "main" 1707272274.09844 0
   "Images/agm3D.png" 1704875704 97995 3c8707993f2acdfb1f5fe89cecae6e4e ""
   "Images/agm3dsect.png" 1704880238 44643 73eb57f3840cb5ff6c2c67bcf1c7b93d ""
   "Images/agmx=0.png" 1704873744 26598 bd43746e4060570704283b475eedb198 ""
   "Images/agmx=5.png" 1704873857 29410 f8db7f4f425c906f94c6f2f56125a8e6 ""
   "Images/background.pdf" 1704396250 15253 d9a03f6e202671124db1172af03625d4 ""
+  "Images/branchingtree.png" 1707259002 157622 56009a53fc5b69d70869b88fc80d7a62 ""
   "Images/chap1.png" 1704396250 1464091 97f639f93ce82ccf7856c8473bb03149 ""
   "Images/chap2.png" 1704396250 1443376 4be2ceb6583f88430390603feb599b18 ""
   "Images/complexplane.png" 1705393065 9001 30806f18d7dac2b5a242b714bb135b10 ""
@@ -37,7 +38,7 @@
   "Images/triangleablt0.png" 1704986326 3895 bd43a8c51df6653f51e14e40e5512280 ""
   "Images/venn.png" 1704396250 101167 627b3f359fe3b8844e7f344c0e38c3ca ""
   "LegrandOrangeBook.cls" 1704396250 34330 8b54c63dbc2df44de404d2768f953f7c ""
-  "c:/Programming/GitProjects/Math-for-CS/main.tex" 1706529778 7349 1d477b679cf277f4ee49224e9769c767 ""
+  "c:/Programming/GitProjects/Math-for-CS/main.tex" 1707269982 7336 7c168afcd8ad22347d6f2b27ddf8aab5 ""
   "c:/texlive/2023/texmf-dist/fonts/enc/dvips/base/8r.enc" 1704276465 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "c:/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1704275942 2971 def0b6c1f0b107b3b936def894055589 ""
   "c:/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1704276883 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -281,7 +282,7 @@
   "c:/texlive/2023/texmf.cnf" 1704280848 713 e69b156964470283e0530f5060668171 ""
   "content/Part2 Discrete math/Chapter1.tex" 1706519251 111 945d12129fd6d9ff449472fb651d85d4 ""
   "content/Part2 Discrete math/Chapter2.tex" 1706519251 138 cf28bf14184327ffeef0db6347d1ca52 ""
-  "content/Part2 Discrete math/Chapter3.tex" 1706945966 15041 46ba62ecb717220b1e38994ae7c68fa1 ""
+  "content/Part2 Discrete math/Chapter3.tex" 1707272266 27830 ad8033a8d822526529ba3dfc161c7287 ""
   "content/Part2 Discrete math/Chapter4.tex" 1706519248 108 75644d9f2dfb719db49f3f5f256a9bdb ""
   "content/Part3 Single-variable Calculus/Chapter1.tex" 1706522262 264 9fd8e282897f99bcd0b71fc264a23be9 ""
   "content/Part3 Single-variable Calculus/Chapter2.tex" 1706522291 200 ac4eabbcd266e7d94f3b5804a736917a ""
@@ -300,15 +301,15 @@
   "content/part1 Intro/Chapter3.tex" 1706511948 37711 82301f02dd83adac23796e4c03d43722 ""
   "content/part1 Intro/Chapter4.tex" 1706512010 57259 bed4375ef85716f26b0ae4705146b46d ""
   "content/part1 Intro/Chapter5.tex" 1706512083 88243 989a2fe9a0123e4b52072bab758ecc3f ""
-  "main.aux" 1706945972 99823 6f392abccbf4ba8d23da74d4f95bff08 "pdflatex"
+  "main.aux" 1707272273 101434 5bdaf4bdf0cc772d4126e512097faa0b "pdflatex"
   "main.bbl" 1706523624 486 ee04f40f768daeed26442158e95aba61 "biber main"
-  "main.ind" 1706884949 0 d41d8cd98f00b204e9800998ecf8427e "makeindex main.idx"
-  "main.lof" 1706945972 2828 b0259e9584eae916d8c149ac0532186d "pdflatex"
-  "main.lot" 1706945972 1339 39ac97c4bfd6eeeffd0bf2b702d2ad2b "pdflatex"
-  "main.ptc" 1706945972 19515 622af4dd57202e540b41cc1f880e6fb5 "pdflatex"
-  "main.run.xml" 1706945972 2301 f06af3099c978185a0ac5347b2a69dfa "pdflatex"
-  "main.tex" 1706529778 7349 1d477b679cf277f4ee49224e9769c767 ""
-  "main.toc" 1706945972 19155 704491460db7cb1746bc01759d02034b "pdflatex"
+  "main.ind" 1707272258 0 d41d8cd98f00b204e9800998ecf8427e "makeindex main.idx"
+  "main.lof" 1707272273 2935 06e5b4213298af2b034867d80f738959 "pdflatex"
+  "main.lot" 1707272273 1459 19939326391e7004f45c75e58cdeaccd "pdflatex"
+  "main.ptc" 1707272273 19976 3f6e94ee65aa087e605ca01a4f6b2632 "pdflatex"
+  "main.run.xml" 1707272273 2301 f06af3099c978185a0ac5347b2a69dfa "pdflatex"
+  "main.tex" 1707269982 7336 7c168afcd8ad22347d6f2b27ddf8aab5 ""
+  "main.toc" 1707272273 19616 24044ead3694b2d120af5df651682d3a "pdflatex"
   (generated)
   "main.aux"
   "main.bcf"
