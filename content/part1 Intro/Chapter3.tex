@@ -386,6 +386,17 @@ We have \( x \bmod y = 0 \) if and only if \( x \) is a multiple of \( y \), tha
                 \[ \lfloor -x \rfloor = -\lfloor x \rfloor - 1 = -\lceil x \rceil \]
                 This completes the proof.
             \end{proof}
+
+    \begin{exercise}
+        Prove that $\displaystyle \lceil ( k-1) /2\rceil =\lfloor k/2\rfloor \ $and $\displaystyle \lfloor ( k-1) /2\rfloor =\lceil k/2\rceil \ $ $\displaystyle \forall \ k\ \in \mathbb{Z} .$
+    \end{exercise}
+    \begin{proof}
+        We will prove the statement by cases.
+
+        When $k$ is even, let $k=2n$. $\lceil (2n-1)/2\rceil = \lceil n - \frac{1}{2}\rceil=n, and \lfloor 2n/2\rfloor = n$.
+        When $k$ is odd, let $k=2n+1$. $\lceil 2n/2 \rceil = n$, and $\lfloor2n+1/2\rfloor=\lfloor n+\frac{1}{2}=n$.
+        The proof for $\displaystyle \lfloor ( k-1) /2\rfloor =\lceil k/2\rceil$ is similar.
+    \end{proof}
 %------------------------------------------------------------
 
 

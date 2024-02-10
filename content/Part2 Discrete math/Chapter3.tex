@@ -513,3 +513,28 @@ Therefore, after this next iteration,
         \item Average time complexity: The average time complexity of binary search is generally represented as $O(\log n)$. This is due to the fact that, on average, the number of steps required to find an element in a sorted array is logarithmic relative to the array size. Precise average case analysis of binary search is complex as it depends on the probability distribution of the target element's position. It is generally not represented in $\Theta$ notation because the lower and upper bounds for the average case cannot be tightly bounded as they can be for the best and worst cases.
     \end{itemize}
     
+    \begin{exercise}
+        Prove by MI that $\displaystyle \forall \ k\in \mathbb{N} ,\ $if Binary Search is applied to an array of length$\displaystyle \ n$ and has not terminated after $\displaystyle k$ (unsuccessful) probes, then the length of the current sublist must be less or equal to $\displaystyle \frac{n}{2^{k}}$
+    \end{exercise}
+    \begin{proof}
+        We use $\displaystyle L(w)$ to denote the length of the current sublist after $\displaystyle w$ probes.
+        
+        \textbf{Base Case:}
+        When $\displaystyle k=0$, the sorting is not yet started, so $\displaystyle L( 0) =n$, and we have $\displaystyle L( 0) =\frac{n}{2^{0}} =n$.
+        
+        \textbf{Inductive hypothesis:}
+        Now assume that when $\displaystyle k=w$, it holds that:
+        \begin{equation*}
+        L( w) \leq \frac{n}{2^{w}}
+        \end{equation*}
+        
+        \textbf{Inductive Step:}
+        Thus, we need to prove that for $\displaystyle k=w+1$, $\displaystyle L( w+1) \leq 
+        \frac{n}{2^{w+1}}$.
+        We have proven earlier in theorem \ref{4.2.1} that after $\displaystyle w$ loops, $\displaystyle 
+        \lfloor n/2^{w} \rfloor \leq L( w) \leq \lceil n/2^{w} \rceil $, and the length of the 
+        sublist to be probed after $\displaystyle k+1$ unsuccessful probes is $\displaystyle 
+        \frac{n}{2^{w+1}}$. While \ $\displaystyle \frac{n}{2^{w+1}} \leq \lceil n/2^{w+1} \rceil $. 
+        Refer to the definition of $\displaystyle w( k)$ in the statement of problem, $\displaystyle 
+        w\in \mathbb{N}$, so $\displaystyle \frac{n}{2^{w+1}} =\lceil n/2^{w+1} \rceil \ $. Hence, $\displaystyle L( w+1) \ \leq \frac{n}{2^{w+1}} \ $, this completes the proof.
+    \end{proof}
