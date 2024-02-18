@@ -208,7 +208,7 @@ On the next iteration, we calculate a new \( j \)-value,
 Since \( p \leq q \),
 \[ p + p \leq p + q \leq q + q \]
 and
-\[ p = \left( p + \frac{p}{2} \right) \leq \left( p + \frac{q}{2} \right) \leq \left( q + \frac{q}{2} \right) = q \]
+$$p\ =\ \frac{p+p}{2} \leq \frac{p+q}{2} \leq \frac{q+q}{2} =q$$
 and so \( p \leq j_{\text{new}} \leq q \).
 In fact, if \( p = q \), then \( j_{\text{new}} = p \), and if \( p < q \), then \( p \leq j_{\text{new}} < q \).
 
@@ -500,8 +500,50 @@ Therefore, after this next iteration,
         Thus, the while loop cannot stop before \(Q - 1\) iterations are done, though it might stop after exactly \(Q - 1\) iterations are done, but if \(L(Q - 1) = 2\), it must stop after (one more iteration) exactly \(Q\) iterations.
     \end{proof}
 
-
+    We can also visualize the version2 of binary search in a Branching Diagram. Below is a search
+    in a sorted list with length $n=12$.
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width = 1\textwidth]{v2bintree.png}
+        \caption{Binary Search V2 with $n=12$}
+    \end{figure}
+    This diagram is also a Binary Tree. But in it, from every internal vertex, there
+    are exactly two edges downward in the diagram (never just one). This kind of
+    Binary Tree is said to be a full Binary Tree. We will look into trees in detail in the next section.
+    \begin{theorem}
+        If \( T \) is a full binary tree with \( m \) internal vertices, then \( T \) has \( m + 1 \) leaves.
+        \end{theorem}
+        
+        \begin{proof}
+        We proceed by induction on the number of internal vertices, \( m \).
+        
+        \textbf{Base Case:} When \( m = 1 \), there is only one internal vertex, which is the root of the tree. By the definition of a full binary tree, the root must have two children, and since these children cannot be internal vertices (as there is only one internal vertex, the root itself), they must be leaves. Hence, the tree has \( 1 + 1 = 2 \) leaves, which satisfies our theorem.
+        
+        \textbf{Inductive Step:} Assume that the theorem holds for a full binary tree with \( m \) internal vertices, such that the tree has \( m + 1 \) leaves. Now consider a full binary tree with \( m + 1 \) internal vertices. By the definition of a full binary tree, adding an internal vertex means we are adding two children to an existing leaf (which is now converted into an internal vertex). This addition results in one less leaf (the converted internal vertex) and two more leaves (the new children). Therefore, the number of leaves increases by \( 2 - 1 = 1 \) compared to the number of leaves in the tree with \( m \) internal vertices.
+        
+        So, a tree with \( m + 1 \) internal vertices will have \( (m + 1) + 1 \) leaves. Hence, by the principle of mathematical induction, the theorem is true for all \( m \geq 1 \).
+        \end{proof}
     \subsection{Exercises}
+    \begin{exercise}
+        Suppose \( T \) is not found by Binary Search. Where will \( T \) fit into the array? 
+        Where should it be inserted?
+    \begin{enumerate}
+        \item Is the final \( q \)-value always one less than the final \( p \)-value?
+        \item When is \( A[q] < T < A[p] \)?
+        \item If \( p = 1 \) (that is, \( p \) was never changed), is \( T < A[1] \)?
+        \item If \( q = n \) (that is, \( q \) was never changed), is \( A[n] < T \)?
+    \end{enumerate}
+    \end{exercise}
+    
+    \textbf{Solution}:
+    \begin{enumerate}
+        \item The final value of \( q \) is not necessarily always one less than the final \( p \) value. It depends on the search process and the position where \( T \) would fit if it were in the array.
+        \item The condition \( A[q] < T < A[p] \) holds when \( T \) would be inserted between \( A[q] \) and \( A[p] \) in a sorted array to maintain the sorted order.
+        \item If \( p = 1 \), it means \( T < A[1] \), and \( T \) should be inserted at the beginning of the array.
+        \item If \( q = n \), it means \( A[n] < T \), and \( T \) should be inserted at the end of the array.
+    \end{enumerate}
+
+
     \begin{exercise}
         Consider the best performance of binary search in $\Theta$ notation and worst performance in big $O$ notation. Is it possible to get the average performance in $\Theta$ notation? If yes, state the precise time complexity; if not, explain why.
     \end{exercise}
@@ -538,3 +580,6 @@ Therefore, after this next iteration,
         Refer to the definition of $\displaystyle w( k)$ in the statement of problem, $\displaystyle 
         w\in \mathbb{N}$, so $\displaystyle \frac{n}{2^{w+1}} =\lceil n/2^{w+1} \rceil \ $. Hence, $\displaystyle L( w+1) \ \leq \frac{n}{2^{w+1}} \ $, this completes the proof.
     \end{proof}
+    
+
+
