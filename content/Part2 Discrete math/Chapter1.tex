@@ -2,3 +2,147 @@
 \chapterspaceabove{6.75cm} 
 \chapterspacebelow{7.25cm} 
 \chapter{Boolean Algebra}
+    In the first chapter of this book, we discussed the very basic of mathematics, 
+    proof and propositions. This chapter aims to excavate mathematical logics in 
+    further details. With Boolean Algebra, we can explain more thoroughly on
+    the mechanism of logics and mathematical proof, and on top of that, we can 
+    figure out how computer functions, as well as how integrated circuits are 
+    constructed.
+    \section{Boolean Expression and Truth Table}
+        We call Boolean Algebra "Algebra" of course, because it possesses property of Algebra.
+        We will start with basic algebra operation and thus, proceed to get the rule of 
+        Boolean operation, which we call the "Truth Table".
+    \subsection{Property of Algebra Operation}
+        For normal algebra operation of numbers, we have the following general law
+        by representing the number in $x$, $y$, and $z$.
+        \begin{table}[h] 
+            \label{algelaw}
+            \centering
+            \caption{Common Algebraic Laws}
+            \begin{tabular}{ll}
+            \hline
+            \textbf{Law} & \textbf{Expression} \\ \hline
+            Addition Identity & $x + 0 = x$ \\
+            Multiplication Identity & $x \cdot 1 = x$ \\
+            Multiplication Property of Zero & $x\cdot0=0$\\
+            Addition Inverse & $x + (-x) = 0$ \\
+            Multiplication Inverse & $x \cdot x^{-1} = 1$ \text{, for} $x \neq 0$ \\
+            Commutative Law of Addition & $x + y = y + x$ \\
+            Commutative Law of Multiplication & $x \cdot y = y \cdot x$ \\
+            Associative Law of Addition & $(x + y) + z = x + (y + z)$ \\
+            Associative Law of Multiplication & $(x \cdot y) \cdot z = x \cdot (y \cdot z)$ \\
+            Distributive Law & $x \cdot (y + z) = x \cdot y + x \cdot z$ \\
+            \hline
+            \end{tabular}
+        \end{table}
+        In this case, we call $x$, $y$, and $z$ variables as in programming. for 
+        all possible values of these variables, these laws hold.
+        Why these laws are important is that all algebra expressions is derived
+        from these laws, which means we can prove any equality that is correct.
+        We take $-1 \time -1$ as an example. One may say without a second thought that
+        the answer is 1. But why? Can we prove it? Now we try to prove it using the
+        common algebraic laws.
+        \begin{example}
+            Prove that $(-1)\times (-1) = 1$
+        \end{example}
+        \begin{proof}
+            \begin{align*}
+                 & ( -1) \times ( -1)\\
+                = & (( -1) \times ( -1)) +0\ ( Addition\ Identity\ )\\
+                = & (( -1) \times ( -1)) +\ (( -1) +1) \ ( Addition\ Inverse)\\
+                = & ((( -1) \times ( -1) +( -1)) +1\ ( Associative\ Law\ of\ Addition)\\
+                = & ((( -1) \times ( -1) +(( -1) \times 1)) +1\ ( Multiplication\ Identity)\\
+                = & (( -1) \times (( -1) +1)) +1\ ( Distributive\ Law)\\
+                = & (( -1) \times 0) \ +\ 1\ ( Addition\ Inverse)\\
+                = & 0+1\ ( Multiplication\ Property\ of\ Zero)\\
+                = & 1+0\ (Commutative\ Law\ of\ Addition)\\
+                = & 1\ ( Addition\ Identity)
+            \end{align*}
+        \end{proof}
+        \begin{remark}
+            Some people may not understand why we have to write $0+1$ into $1+0$. This is because
+            Addition Identity is only defined in the table as $x+0=x$, so we need to apply Commutative
+            law of addition to fit it into the known conclusion.
+        \end{remark}
+
+        After seeing this, you may think, do we really have to know this to make sure that $-1\times-1=1$?
+        Of course not, but keep in mind that \textbf{Every mathematical conclusion cannot be simply referred as
+        rules such as "a negative times negative give you a positive number", but by meticulous, reasonable, and 
+        replicable proof.}
+
+        Hold on a second, isn't this chapter on Boolean Algebra? Why we still need to go over these
+        old knowledge from primary school? Well, this is because we will prove Boolean expression in the
+        same way. Before that, we introduce Boolean value and operations. 
+        % Definition of Boolean Values
+        \begin{definition}[Boolean Values]
+        In mathematics and computer science, a Boolean value is defined as an element of the Boolean domain \(B\), which can be mathematically represented as:
+        \[
+        B = \{0, 1\}
+        \]
+        where:
+        \begin{itemize}
+            \item \(0\) typically represents \textit{false}
+            \item \(1\) typically represents \textit{true}
+        \end{itemize}
+        \end{definition}
+        Some may be confused by true and false here. Just recall what we have done to propositions in
+        the first chapter in this book. When a statement holds for given condition, we take it as
+        correct, while incorrect when it does not hold. Boolean value is the basis of Boolean Expression,
+        and \textbf{all valid boolean expression could be reduced or simplified to a Boolean value}.
+        % Boolean Operations
+        \begin{definition}[Boolean Operations]
+        Boolean algebra involves operations such as AND, OR, NOT, XOR, which operate on these Boolean values. These operations are defined as follows:
+        \begin{itemize}
+            \item \textbf{AND} (\(\land\)): An operation on two Boolean values that returns \textit{true} if both operands are \textit{true}, otherwise returns \textit{false}.
+            \item \textbf{OR} (\(\lor\)): An operation on two Boolean values that returns \textit{true} if at least one of the operands is \textit{true}, otherwise returns \textit{false}.
+            \item \textbf{NOT} (\(\lnot\)): A unary operation that returns \textit{true} if the operand is \textit{false} and vice versa.
+            \item \textbf{XOR} (\(\oplus\)): An operation on two Boolean values that returns \textit{true} if the operands are different, otherwise returns \textit{false}.
+        \end{itemize}
+        \end{definition}
+        In computer science, Boolean values are fundamental in conditional statements and loops, where they determine the flow of control in algorithms and programs. They are also essential in the design of electronic circuits and digital computing.
+
+
+        \subsection{Exercises}
+        \begin{exercise}
+            Use table \ref{algelaw} and $1+1=2$ to show that $(x+x)=(2\times x)$.
+        \end{exercise}
+        \begin{proof}
+            \begin{align*}
+                ( 2\times x) & =( 1+1) \times x\ ( by\ 1+1=2)\\
+                & =\ 1\times x+1\times x\ ( Distributive\ Law)\\
+                & =x+x\ ( Multiplication\ Identity)
+            \end{align*}
+        \end{proof}
+        \begin{exercise}
+            Show that $((-1)\times x)+x=0$ using the table.
+        \end{exercise}
+        \begin{proof}
+            \begin{align*}
+                (( -1) \times x) +x & =x( -1+1) \ ( Distributive\ Law)\\
+                 & =\ x\times 0\ ( Addition\ Inverse)\\
+                 & =0\ ( Multiplication\ Property\ of\ Zero)
+            \end{align*}
+        \end{proof}
+        \begin{exercise}
+            Show that $(x+(((-1)\times (x+y))+z)) + y =z$, you may use the conclusion of previous
+            exercise.
+        \end{exercise}
+        \begin{proof} 
+            To make it clear, we use square and curly bracket for different layers of parenthesis.
+            \begin{align*}
+                \  & \{x+[((-1) \times ( x+y)) +z]\} +y\\
+                & =\{x+[(( -1) \times x) +(( -1) \times y)] +z\} +y\ ( Distributive\ Law\ )\\
+                & =\{x+(( -1) \times x) +[(( -1) \times y) +z]\} +y\ ( Associative\ Law\ of\ Addition)\\
+                & =\{(( -1) \times x) +x+\ [(( -1) \times y) +z]\} +y( Commutative\ Law\ of\ Addition)\\
+                & =0+\{[(( -1) \times y) +z] +y\}\ ( Previous\ Conclusion)\\
+                & =\{[(( -1) \times y) +z] +y\} +0\ ( Commutative\ Law\ of\ Addition)\\
+                & =\{[(( -1) \times y) +z] +y\} \ ( Addition\ Identity)\\
+                & =(( -1) \times y) +( z+y) \ ( Associative\ Law\ of\ Addition)\\
+                & =( z+y) +(( -1) \times y) \ ( Commutative\ Law\ of\ Addition)\\
+                & =z+[ y+(( -1) \times y)] \ ( Associative\ Law\ of\ Addition)\\
+                & =z+[(( -1) \times y) +y] \ ( Commutative\ Law\ of\ Addition)\\
+                & =z+0\ ( Previous\ Conclusion)\\
+                & =z\ ( Addition\ Identity)
+            \end{align*}
+    
+        \end{proof}
