@@ -763,6 +763,8 @@ INPUT content/Part2 Discrete math/Chapter1.tex
 INPUT ./Images/orange2.jpg
 INPUT ./Images/orange2.jpg
 INPUT ./Images/orange2.jpg
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/ptmb8t.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/ptmb8t.tfm
 INPUT ./content/Part2 Discrete math/Chapter2.tex
 INPUT ./content/Part2 Discrete math/Chapter2.tex
 INPUT content/Part2 Discrete math/Chapter2.tex

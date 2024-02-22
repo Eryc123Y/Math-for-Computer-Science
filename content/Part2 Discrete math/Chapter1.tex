@@ -15,24 +15,21 @@
     \subsection{Property of Algebra Operation}
         For normal algebra operation of numbers, we have the following general law
         by representing the number in $x$, $y$, and $z$.
-        \begin{table}[h] 
+        \begin{table}[ht]
             \label{algelaw}
             \centering
             \caption{Common Algebraic Laws}
-            \begin{tabular}{ll}
-            \hline
-            \textbf{Law} & \textbf{Expression} \\ \hline
-            Addition Identity & $x + 0 = x$ \\
-            Multiplication Identity & $x \cdot 1 = x$ \\
-            Multiplication Property of Zero & $x\cdot0=0$\\
-            Addition Inverse & $x + (-x) = 0$ \\
-            Multiplication Inverse & $x \cdot x^{-1} = 1$ \text{, for} $x \neq 0$ \\
-            Commutative Law of Addition & $x + y = y + x$ \\
-            Commutative Law of Multiplication & $x \cdot y = y \cdot x$ \\
-            Associative Law of Addition & $(x + y) + z = x + (y + z)$ \\
-            Associative Law of Multiplication & $(x \cdot y) \cdot z = x \cdot (y \cdot z)$ \\
-            Distributive Law & $x \cdot (y + z) = x \cdot y + x \cdot z$ \\
-            \hline
+            \begin{tabular}{lll}
+            \toprule
+            \textbf{Law} & \textbf{Addition Expression} & \textbf{Multiplication Expression} \\
+            \midrule
+            Identity & \( x + 0 = x \) & \( x \cdot 1 = x \) \\
+            Property of Zero & & \( x \cdot 0 = 0 \) \\
+            Inverse & \( x + (-x) = 0 \) & \( x \cdot x^{-1} = 1 \), for \( x \neq 0 \) \\
+            Commutative & \( x + y = y + x \) & \( x \cdot y = y \cdot x \) \\
+            Associative & \( (x + y) + z = x + (y + z) \) & \( (x \cdot y) \cdot z = x \cdot (y \cdot z) \) \\
+            Distributive & &\( x \cdot (y + z) = x \cdot y + x \cdot z \) \\
+            \bottomrule
             \end{tabular}
         \end{table}
         In this case, we call $x$, $y$, and $z$ variables as in programming. for 
@@ -58,18 +55,19 @@
                 = & 1+0\ (Commutative\ Law\ of\ Addition)\\
                 = & 1\ ( Addition\ Identity)
             \end{align*}
+            \begin{remark}
+                Some people may not understand why we have to write $0+1$ into $1+0$. This is because
+                Addition Identity is only defined in the table as $x+0=x$, so we need to apply Commutative
+                law of addition to fit it into the known conclusion.
+            \end{remark}
         \end{proof}
-        \begin{remark}
-            Some people may not understand why we have to write $0+1$ into $1+0$. This is because
-            Addition Identity is only defined in the table as $x+0=x$, so we need to apply Commutative
-            law of addition to fit it into the known conclusion.
-        \end{remark}
 
         After seeing this, you may think, do we really have to know this to make sure that $-1\times-1=1$?
         Of course not, but keep in mind that \textbf{Every mathematical conclusion cannot be simply referred as
         rules such as "a negative times negative give you a positive number", but by meticulous, reasonable, and 
         replicable proof.}
 
+    \subsection{Boolean Expression and Truth Table}
         Hold on a second, isn't this chapter on Boolean Algebra? Why we still need to go over these
         old knowledge from primary school? Well, this is because we will prove Boolean expression in the
         same way. Before that, we introduce Boolean value and operations. 
@@ -98,8 +96,276 @@
             \item \textbf{NOT} (\(\lnot\)): A unary operation that returns \textit{true} if the operand is \textit{false} and vice versa.
             \item \textbf{XOR} (\(\oplus\)): An operation on two Boolean values that returns \textit{true} if the operands are different, otherwise returns \textit{false}.
         \end{itemize}
+        \begin{remark}
+            There are more Boolean operators to be discussed later.
+        \end{remark}
         \end{definition}
         In computer science, Boolean values are fundamental in conditional statements and loops, where they determine the flow of control in algorithms and programs. They are also essential in the design of electronic circuits and digital computing.
+        The following table shows the truth table of these basic Boolean operations. the first column
+        shows the combination of inputs for the specific operator, and the second column shows the
+        result of operation.
+        \begin{table}[ht] \label{truthtab}
+            \centering % This centers the entire table construct
+            
+            \noindent
+            \begin{tabular}{c|c}
+            \textbf{A} & $\neg \textbf{A}$ \\
+            \hline
+            F & T \\
+            T & F \\
+            \end{tabular}
+            \quad % Reduce the space between tables
+            \begin{tabular}{cc|c}
+            \textbf{A} & \textbf{B} & $\textbf{A} \land \textbf{B}$ \\
+            \hline
+            F & F & F \\
+            F & T & F \\
+            T & F & F \\
+            T & T & T \\
+            \end{tabular}
+            
+            \vspace{2mm} % Reduce the vertical space between the rows of tables
+            
+            \noindent
+            \begin{tabular}{cc|c}
+            \textbf{A} & \textbf{B} & $\textbf{A} \lor \textbf{B}$ \\
+            \hline
+            F & F & F \\
+            F & T & T \\
+            T & F & T \\
+            T & T & T \\
+            \end{tabular}
+            \quad % Reduce the space between tables
+            \begin{tabular}{cc|c}
+            \textbf{A} & \textbf{B} & $\textbf{A} \oplus \textbf{B}$ \\
+            \hline
+            F & F & F \\
+            F & T & T \\
+            T & F & T \\
+            T & T & F \\
+            \end{tabular}
+            
+            \caption{Common Boolean Operators Truth Tables}
+        \end{table}
+
+        It's noticeable that different Boolean operators may differ in the number of input. $\lnot$ operator
+        takes only one Boolean variable (input) to get an output by negating the input, however the rest 
+        take two inputs and produce one output. 
+        
+        At the beginning of the section, we have defined Boolean
+        space $B=\{0,1\}$, but why George Boole(The British mathematician who initiate this idea) define 
+        Boolean value with a set containing only zero and one? This is actually because, \textbf{The foundation
+        of Boolean Algebra is set upon operations involving 0 and 1}. To explicit, I need to clarify that
+        among the four operators introduced above, $\lnot$, $\land$, and $\lor$ are the very basic of all
+        Boolean expressions, which means other Boolean operators could be written in an equivalent form with
+        these basic operators. For example, we can write XOR($\oplus$) in the other three operators:
+        \begin{equation}
+            \label{xor}
+            A \oplus B= (A \land \lnot B) \lor(\lnot A \land B)
+        \end{equation}
+        It doesn't really matter if you find the RHS strange,as all we need now is just know the fact 
+        that we can write it in this form. We will discuss the expression in details in the next section.
+        Now let's refocus on Boolean space \{0,1\}. We all know that there are four basic operations in 
+        algebra which are addition, subtraction, multiplication, and division. But generally, we say there 
+        are only two basic operations in algebra, which are $+$ and $\times$, as subtraction and division are
+        just inverse operation of addition and multiplication. Let's look in to the table of addition and 
+        multiplication of 0 and 1 listed below.
+        \begin{table}[ht]
+            \centering % This centers the entire table construct
+            \noindent
+            \begin{tabular}{cc|c}
+                A & B & $A \times B$ \\
+                \hline
+                0 & 0 & 0 \\
+                0 & 1 & 0 \\
+                1 & 0 & 0 \\
+                1 & 1 & 1 \\
+            \end{tabular}
+            \quad
+            \begin{tabular}{cc|c}
+                A & B & $A + B$ \\
+                \hline
+                0 & 0 & 0 \\
+                0 & 1 & 1 \\
+                1 & 0 & 1 \\
+                1 & 1 & 1 \\     
+            \end{tabular}
+        \caption{Addition and Multiplication Rule of 0 and 1}
+        \end{table}
+
+        Now you may have realized that this is exactly the truth table for $\land$ and $\lor$, you may
+        check table \ref{truthtab}.
+    
+        \subsection{Boolean Identities}
+        Now recall that $A \oplus B= (A \land \lnot B) \lor(\lnot A \land B)$. In this
+        expression, we cannot get a direct answer from the RHS by using the truth table of $\lor$. So,
+        we need to try harder to get the truth table for the expression as shown in the table below.
+        \begin{table}[ht]
+            \centering
+            \caption{Truth table for \((A \land \neg B) \lor (\neg A \land B)\)}
+            \begin{tabular}{cc|c|c|c|c|c}
+            \hline
+            \( A \) & \( B \) & \( \neg B \) & \( A \land \neg B \) & \( \neg A \) & \( \neg A \land B \) & \( (A \land \neg B) \lor (\neg A \land B) \) \\ \hline
+            F & F & T & F & T & F & F \\
+            F & T & F & F & T & T & T \\
+            T & F & T & T & F & F & T \\
+            T & T & F & F & F & F & F \\ \hline
+            \end{tabular}
+            
+        \end{table}
+
+        With this method, we can find truth table for more complex expressions, and some of them
+        are categorized as \textbf{Basic Boolean Identities}. The LHS and RHS are could be proven qaual
+        by listing truth table respectively.
+
+        \begin{table}[H]
+            \centering
+            \caption{Basic Boolean Identities}
+            \begin{tabular}{lll}
+            \toprule
+            \textbf{Identity} & \textbf{AND Form} & \textbf{OR Form} \\
+            \midrule
+            Idempotent Law & \( x \cdot x = x \) & \( x + x = x \) \\
+            Identity Law & \( x \cdot 1 = x \) & \( x + 0 = x \) \\
+            Domination Law & \( x \cdot 0 = 0 \) & \( x + 1 = 1 \) \\
+            Complement Law & \( x \cdot \lnot x = 0 \) & \( x + \lnot x = 1 \) \\
+            Double Negation Law & \( \lnot(\lnot x) = x \) & \( \lnot(\lnot x) = x \)\\
+            Commutative Law & \( x \cdot y = y \cdot x \) & \( x + y = y + x \) \\
+            Associative Law & \( x \cdot (y \cdot z) = (x \cdot y) \cdot z \) & \( x + (y + z) = (x + y) + z \) \\
+            Distributive Law & \( x \cdot (y + z) = (x \cdot y) + (x \cdot z) \) & \( x + (y \cdot z) = (x + y) \cdot (x + z) \) \\
+            De Morgan's Law & \( \lnot(x + y) = \lnot x \cdot \lnot y \) & \( \lnot(x \cdot y) = \lnot x + \lnot y \) \\
+            Absorption Law & \( x \cdot (x + y) = x \) & \( x + (x \cdot y) = x \) \\
+            \bottomrule
+            \end{tabular}
+        \end{table}
+        \begin{remark}
+            If you are confused by the algebra form of Boolean identities, just take $x$, $y$, $z$ as
+            $A$, $B$, and $C$; take 0/1 as F/T; take + as $\lor$, and $\times$ as $\land$.
+        \end{remark}
+        It is quite important to be familiar with these rules, as they are just as essential as
+        the normal algebra laws we've learned before, since we may simplify complex Boolean expressions
+        using these rules. Also, the proof of some of these identities using truth table will be 
+        added to the problem set for this section. If you remain any doubt or confusion about any laws
+        given, just try to get the truth table for the LHS and RHS of the identity, simple as that.
+
+        This is actually not yet a complete table of Boolean Identities, two laws are still missing
+        from the table, because they are relevant to secondary operator, one of which is already mentioned($\oplus$).
+        \subsubsection*{Secondary Boolean Operators}
+        \begin{definition}[Secondary Boolean Operators]
+            Secondary operators are derived from basic operators:
+            \begin{itemize}
+                \item Material conditional: \( x \rightarrow y = \lnot x \lor y \)
+                \item Material biconditional: \( x \leftrightarrow y = (x \land y) \lor (\lnot x \land \lnot y) \)
+                \item Exclusive OR (XOR): \( x \oplus y = \lnot(x \leftrightarrow y) = (x \lor y) \land (\lnot x \lor \lnot y) = (x \land \lnot y) \lor (\lnot x \land y) \)
+                \end{itemize}
+        \end{definition}
+
+        Their truth tables for the secondary operation are below:
+        \begin{table}[H]
+        \centering
+        \begin{tabular}{cc|c|c|c}
+        \hline
+        \( x \) & \( y \) & \( x \rightarrow y \) & \( x \leftrightarrow y \) & \( x \oplus y \) \\
+        \hline
+        0 & 0 & 1 & 1 & 0 \\
+        1 & 0 & 0 & 0 & 1 \\
+        0 & 1 & 1 & 0 & 1 \\
+        1 & 1 & 1 & 1 & 0 \\
+        \hline
+        \end{tabular}
+        \caption{Truth values of material conditional, biconditional, and XOR for all possible inputs.}
+        \end{table}
+        The $\rightarrow$ operation holds that $x \rightarrow x = 1$. This expression means
+        that when $x=y$, then $x\rightarrow y$ must be true. The complete form of secondary operators
+        and the implication identity will be the last Boolean identity to be covered in this chapter.
+        \begin{enumerate}
+            \item Material Conditional (\(\rightarrow\)):
+            The material conditional \( x \rightarrow y \) is read as "if \( x \) then \( y \)" or "\( x \) implies \( y \)". It represents the logical implication. The truth value of \( x \rightarrow y \) is false only when \( x \) is true and \( y \) is false; in all other cases, it is true. This is a bit counter-intuitive when \( x \) is false because the implication will be true regardless of the value of \( y \). It can be expressed using basic operations as \( \lnot x \lor y \).
+            
+            \item Material Biconditional (\(\leftrightarrow\)):
+            The material biconditional \( x \leftrightarrow y \), also known as logical equivalence, is the operation that is true when \( x \) and \( y \) have the same truth values, and false otherwise. It's often read as " \( x \) if and only if \( y \)". It can be formulated as \( (x \land y) \lor (\lnot x \land \lnot y) \), meaning both \( x \) and \( y \) are true, or both are false.
+            
+            \item Exclusive OR (XOR):
+            The exclusive OR \( x \oplus y \) is true when \( x \) and \( y \) have different truth values — that is, one is true and the other is false. It differs from the regular OR operation in that \( x \oplus y \) is false when both \( x \) and \( y \) are true. It can be represented as \( (x \land \lnot y) \lor (\lnot x \land y) \).
+        \end{enumerate}
+        
+        With these basic identities and operators, we can prove more interesting Boolean theorems.
+        Below are more theorems to be proved as example. Maybe you are ready to draw a truth table to prove
+        them. However, with these basic Boolean Laws, we actually don't have to do that, but prove it
+        by using Algebra techniques.
+        \begin{example}
+            Prove the following identities using the table given earlier.
+        \begin{table}[ht]
+            \centering
+            \begin{tabular}{ll}
+            \toprule
+            \textbf{Expression} & \textbf{Name} \\
+            \midrule
+            \( (x \rightarrow \text{False}) = (\lnot x) \) & $\lnot$ as \(\rightarrow\) \\
+            \( (x \rightarrow y) = (\lnot y \rightarrow \lnot x) \) & contrapositive \\
+            \( ((x \rightarrow y) \land (x \rightarrow z)) = (x \rightarrow (y \land z)) \) & implication \\
+            \( ((x \rightarrow y) \land (\lnot x \rightarrow y)) = y \) & absurdity \\
+            \( (x \rightarrow (\lnot x)) = (\lnot x) \) & contradiction \\
+            \bottomrule
+            \end{tabular}
+        \end{table}
+        \end{example}
+
+        \begin{proof}
+            To prove $\lnot$ as \(\rightarrow\), we just need to use the definition of $
+            \rightarrow$.
+            $$x\rightarrow\text{ False}= \lnot x \lor False = \lnot x + 0 = \lnot x \ \text{(OR Identity Law)}$$
+            
+            The contrapositive identity states that \( (x \rightarrow y) \) is logically equivalent to \( (\lnot y \rightarrow \lnot x) \).
+            \begin{align*}
+            x \rightarrow y &\equiv \lnot x \lor y \\
+                &\equiv y \lor \lnot x\ \text{(Commutative Law)}\\
+            &\equiv \lnot y \rightarrow \lnot x
+            \end{align*}
+            \begin{remark}
+                This proof shows why proof by contrapositive (mentioned in chapter1) is correct.
+            \end{remark}
+            The implication identity can be proved by showing that \( (x \rightarrow y) \land (x \rightarrow z) \) is equivalent to \( x \rightarrow (y \land z) \).
+            \begin{align*}
+            (x \rightarrow y) \land (x \rightarrow z) &\equiv (\lnot x \lor y) \land (\lnot x \lor z) \\
+            &\equiv \lnot x \lor (y \land z) \\
+            &\equiv x \rightarrow (y \land z)
+            \end{align*}
+
+            The absurdity identity states that \( (x \rightarrow y) \land (\lnot x \rightarrow y) \) is equivalent to \( y \).
+            \begin{align*}
+            (x \rightarrow y) \land (\lnot x \rightarrow y) &\equiv (\lnot x \lor y) \land (x \lor y) \\
+            &\equiv y \lor (x \land \lnot x) \\
+            &\equiv y \lor \text{False} \\
+            &\equiv y
+            \end{align*}
+
+            The contradiction identity states that \( x \rightarrow (\lnot x) \) is equivalent to \( \lnot x \).
+            \begin{align*}
+            x \rightarrow (\lnot x) &\equiv \lnot x \lor (\lnot x) \\
+            &\equiv \lnot x
+            \end{align*}
+        \end{proof}
+        \begin{remark}
+            Some may feel confused by the notation of Boolean expression we use in this chapter.
+            Sometimes we use logic notation, while sometimes use algebra operation. Both are ok,
+            it's really up to your preference.
+        \end{remark}
+        When you look through the whole process, you'll find that we are actually doing the same
+        thing as simplifying Boolean expressions, where all the laws could be used so that we don't
+        need to draw truth table again and again.
+
+        \subsection{Boolean Function}
+        Now we have learned most of the rules of Boolean operations; we use the rest of this section
+        to bring you some further ideas of Boolean operation. Just like we can take a normal algebra
+        expression, such as $2x+3$, as a function $f(x)=2x+3$; we can define \textbf{Boolean Function}
+        with Boolean operation.
+        \begin{definition}[Boolean Function]
+        A Boolean function is a function that returns a Boolean value (true or false) for each possible combination of Boolean inputs. 
+        $f: B^n \rightarrow B$ is a function from the set of  $n$-tuples of Boolean values to the set of Boolean values, where  $B = \{0, 1\}$.
+        \end{definition} 
+
+
 
 
         \subsection{Exercises}
@@ -144,5 +410,139 @@
                 & =z+0\ ( Previous\ Conclusion)\\
                 & =z\ ( Addition\ Identity)
             \end{align*}
-    
+            
         \end{proof}
+        
+        \begin{exercise}
+            Use truth table to show that De Morgan's Law is correct.
+        \end{exercise}
+        \begin{proof}
+            De Morgan's First Law: \( \lnot (A \land B) = \lnot A \lor \lnot B \)
+            
+            \begin{tabular}{cc|c|c|c}
+            \toprule
+            \( A \) & \( B \) & \( A \land B \) & \( \lnot (A \land B) \) & \( \lnot A \lor \lnot B \) \\
+            \midrule
+            0 & 0 & 0 & 1 & 1 \\
+            0 & 1 & 0 & 1 & 1 \\
+            1 & 0 & 0 & 1 & 1 \\
+            1 & 1 & 1 & 0 & 0 \\
+            \bottomrule
+            \end{tabular}
+
+            \vspace{2em} 
+
+            De Morgan's Second Law: \( \lnot (A \lor B) = \lnot A \land \lnot B \)
+
+            \begin{tabular}{cc|c|c|c}
+            \toprule
+            \( A \) & \( B \) & \( A \lor B \) & \( \lnot (A \lor B) \) & \( \lnot A \land \lnot B \) \\
+            \midrule
+            0 & 0 & 0 & 1 & 1 \\
+            0 & 1 & 1 & 0 & 0 \\
+            1 & 0 & 1 & 0 & 0 \\
+            1 & 1 & 1 & 0 & 0 \\
+            \bottomrule
+            \end{tabular}
+        \end{proof}
+
+        \begin{exercise}
+            Use truth table to show that Absorption Law is correct.
+        \end{exercise}
+        \begin{proof}
+            \begin{tabular}{cc|c|c}
+                \hline
+                \( x \) & \( y \) & $x \lor y$&\( x \land (x \lor y) \) \\
+                \hline
+                T & T & T & T \\
+                T & F & T & T \\
+                F & T & F & F \\
+                F & F & F & F \\
+                \hline
+            \end{tabular}
+            \quad
+            \begin{tabular}{cc|c|c}
+                \hline
+                \( x \) & \( y \)&$x \land y$ & \( x \lor (x \land y) \) \\
+                \hline
+                T & T& T& T \\
+                T & F& F& T \\
+                F & T& F& F \\
+                F & F& F& F \\
+                \hline
+            \end{tabular}
+        \end{proof}
+
+        \begin{exercise}
+            Show the truth table of $\displaystyle x\lor (( \lnot y) \land ( \lnot z))$.
+        \end{exercise}
+        \textbf{Hint:} For Boolean expression of 3 variable, there will be more combinations.
+        
+        \textbf{Solution:}
+
+        \begin{table}[ht]
+            \centering
+            \caption{Truth table for the expression \( x \lor ((\lnot y) \land (\lnot z)) \)}
+            \begin{tabular}{ccc|c|c|c|c}
+            \hline
+            \( x \) & \( y \) & \( z \) & \( \lnot y \) & \( \lnot z \)& $(\lnot y) \land (\lnot z)$ & \( x \lor ((\lnot y) \land (\lnot z)) \) \\
+            \hline
+            0 & 0 & 0 & 1 & 1 &1& 1 \\
+            0 & 0 & 1 & 1 & 0 &0& 0 \\
+            0 & 1 & 0 & 0 & 1 &0& 0 \\
+            0 & 1 & 1 & 0 & 0 &0& 0 \\
+            1 & 0 & 0 & 1 & 1 &0& 1 \\
+            1 & 0 & 1 & 1 & 0 &0& 1 \\
+            1 & 1 & 0 & 0 & 1 &0& 1 \\
+            1 & 1 & 1 & 0 & 0 &0& 1 \\
+            \hline
+            \end{tabular}
+ 
+        \end{table}
+
+        \begin{exercise}
+            Given the expressions:
+            \begin{align*}
+            1. & \quad (x \rightarrow y) \land (\lnot x \rightarrow \lnot y) \\
+            2. & \quad ((\lnot x) \lor y) \land (x \lor (\lnot y)) \\
+            3. & \quad \lnot((x \land (\lnot y)) \lor ((\lnot x) \land y)) \\
+            4. & \quad \lnot((x \lor y) \land (\lnot x \lor \lnot y)) \\
+            \end{align*}
+            Show that they are equivalent and find the common (simplified) form of the four expression
+        \end{exercise}
+        \begin{proof}
+            \begin{align*}
+                (x \rightarrow y) \land (\neg x \rightarrow \neg y) & \equiv (\neg x \lor y) \land (x \lor \neg y) && \text{(Implication equivalence)} \\
+                & \equiv (x \lor \neg y) \land (\neg x \lor y) && \text{(Commutativity of OR)} \\
+                & \equiv (x \lor \neg y) \land (y \lor \neg x) && \text{(Commutativity of AND)}
+                \end{align*}
+
+                \begin{align*}
+                    ((\neg x) \lor y) \land (x \lor (\neg y)) & \equiv (y \lor \neg x) \land (x \lor \neg y) && \text{(Commutativity of OR)} \\
+                    & \equiv (x \lor \neg y) \land (y \lor \neg x) && \text{(Commutativity of AND)}
+                    \end{align*}
+            
+                    \begin{align*}
+                        \neg((x \land (\neg y)) \lor ((\neg x) \land y)) & \equiv \neg(x \land (\neg y)) \land \neg((\neg x) \land y) && \text{(De Morgan's laws)} \\
+                        & \equiv (\neg x \lor y) \land (x \lor \neg y) && \text{(De Morgan's laws)} \\
+                        & \equiv (x \lor \neg y) \land (y \lor \neg x) && \text{(Commutativity of OR and AND)}
+                        \end{align*}
+
+                        \begin{align*}
+                            \neg((x \lor y) \land (\neg x \lor \neg y)) & \equiv \neg(x \lor y) \lor \neg(\neg x \lor \neg y) && \text{(De Morgan's laws)} \\
+                            & \equiv (\neg x \land \neg y) \lor (x \land y) && \text{(De Morgan's laws)} \\
+                            & \equiv (x \land y) \lor (\neg x \land \neg y) && \text{(Commutativity of OR)} \\
+                            & \equiv (x \lor \neg y) \land (y \lor \neg x) && \text{(Distribution)}
+                            \end{align*}
+                            
+
+            These expressions could be simplified to $(\lnot y \lor x)\land(\lnot x\lor y)$, or
+            $(y\rightarrow x)\land(x\rightarrow y)$, which can also be understood as $x$ and $y$
+            cannot be true of false in the same time.
+        \end{proof}
+
+    \section{Predicates and Quantifiers}
+
+    \section{Digital Circuits of Logic}
+
+    \section{Logic of Deduction and Induction}
