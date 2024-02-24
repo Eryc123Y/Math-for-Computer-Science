@@ -19,7 +19,7 @@ All suggestions or corrections are welcome.
 The book is written in \LaTeX, ensuring high-quality typesetting, especially for mathematical expressions. To use this book:
 You can:
 - Clone the repository to your local machine and compile to PDF.
-- Download "main.pdf" dirrectly after new release is updated.
+- Download "main.pdf" dirrectly after new commits.
 
 ## How to Contribute
 All contributions are welcome! Whether it's fixing typos, improving explanations, or adding new content, your help is appreciated.
