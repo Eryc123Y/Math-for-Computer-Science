@@ -1,17 +1,17 @@
 # Fdb version 4
-["biber main"] 1708527326.22252 "main.bcf" "main.bbl" "main" 1708594397.27438 0
-  "main.bcf" 1708594396 107347 1f51a2be7d23f3423c0e59ffd4ef65c6 "pdflatex"
+["biber main"] 1708746167.19721 "main.bcf" "main.bbl" "main" 1708768781.35215 0
+  "main.bcf" 1708768780 107347 1f51a2be7d23f3423c0e59ffd4ef65c6 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["makeindex main.idx"] 1708594132.76086 "main.idx" "main.ind" "main" 1708594397.27413 0
-  "main.idx" 1708594392 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+["makeindex main.idx"] 1708763478.92825 "main.idx" "main.ind" "main" 1708768781.3517 0
+  "main.idx" 1708768776 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   (generated)
   "main.ilg"
   "main.ind"
   (rewritten before read)
-["pdflatex"] 1708594391.96901 "c:/Programming/GitProjects/Math-for-Computer-Science/main.tex" "main.pdf" "main" 1708594397.27478 0
+["pdflatex"] 1708768775.44407 "c:/Programming/GitProjects/Math-for-Computer-Science/main.tex" "main.pdf" "main" 1708768781.35284 0
   "Images/agm3D.png" 1707481231 97995 3c8707993f2acdfb1f5fe89cecae6e4e ""
   "Images/agm3dsect.png" 1707481231 44643 73eb57f3840cb5ff6c2c67bcf1c7b93d ""
   "Images/agmx=0.png" 1707481231 26598 bd43746e4060570704283b475eedb198 ""
@@ -281,7 +281,7 @@
   "c:/texlive-full/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1707382065 8211147 811c16a8b9887a9bc34df061f4beda64 ""
   "c:/texlive-full/2023/texmf.cnf" 1707381885 713 e69b156964470283e0530f5060668171 ""
   "content/Part2 Discrete math/Chapter1.tex" 1708594385 29793 d00aaef28ef86a02453652c1464db44b ""
-  "content/Part2 Discrete math/Chapter2.tex" 1707481232 138 cf28bf14184327ffeef0db6347d1ca52 ""
+  "content/Part2 Discrete math/Chapter2.tex" 1708768769 14330 a5a8c30f2917d4faf66dd2aed340fed9 ""
   "content/Part2 Discrete math/Chapter3.tex" 1708140416 34496 bb8bec884c944bfa3bef4409a1858635 ""
   "content/Part2 Discrete math/Chapter4.tex" 1707481232 108 75644d9f2dfb719db49f3f5f256a9bdb ""
   "content/Part3 Single-variable Calculus/Chapter1.tex" 1707481232 264 9fd8e282897f99bcd0b71fc264a23be9 ""
@@ -301,15 +301,15 @@
   "content/part1 Intro/Chapter3.tex" 1708134773 38387 5cb4e07992d9f571716d4eb87801ccf9 ""
   "content/part1 Intro/Chapter4.tex" 1707481232 57259 bed4375ef85716f26b0ae4705146b46d ""
   "content/part1 Intro/Chapter5.tex" 1707481232 88243 989a2fe9a0123e4b52072bab758ecc3f ""
-  "main.aux" 1708594396 107739 3539a56ce9ba3ab03ba756a8375ad4e7 "pdflatex"
-  "main.bbl" 1708527327 486 ee04f40f768daeed26442158e95aba61 "biber main"
-  "main.ind" 1708594133 0 d41d8cd98f00b204e9800998ecf8427e "makeindex main.idx"
-  "main.lof" 1708594396 3039 7c7d1518851287427221c309b03bd7fd "pdflatex"
-  "main.lot" 1708594396 2316 f2973173130e856c18260027d66455ea "pdflatex"
-  "main.ptc" 1708594396 20888 afc9d5222d2253acac4da76c30767ac6 "pdflatex"
-  "main.run.xml" 1708594396 2301 f06af3099c978185a0ac5347b2a69dfa "pdflatex"
+  "main.aux" 1708768780 112578 0bf96db144c4358cc99bacea694ea5ff "pdflatex"
+  "main.bbl" 1708746202 486 ee04f40f768daeed26442158e95aba61 "biber main"
+  "main.ind" 1708763479 0 d41d8cd98f00b204e9800998ecf8427e "makeindex main.idx"
+  "main.lof" 1708768780 3039 f5e292daecdddfb2d17699ce91b91b33 "pdflatex"
+  "main.lot" 1708768780 2316 ccdd1254cbe315422a8c9cf677f4a3a4 "pdflatex"
+  "main.ptc" 1708768780 22365 3d6fc8ee4071bfca09fee0861115ed86 "pdflatex"
+  "main.run.xml" 1708768780 2301 f06af3099c978185a0ac5347b2a69dfa "pdflatex"
   "main.tex" 1707481232 7499 7c168afcd8ad22347d6f2b27ddf8aab5 ""
-  "main.toc" 1708594396 20528 d52da5ae843fbe2a90aef2b729d72826 "pdflatex"
+  "main.toc" 1708768780 22005 8498f43c052a6f7e4976d19fcc70c32b "pdflatex"
   (generated)
   "main.aux"
   "main.bcf"

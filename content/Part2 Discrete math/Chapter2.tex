@@ -2,3 +2,205 @@
 \chapterspaceabove{6.75cm} 
 \chapterspacebelow{7.25cm} 
 \chapter{Preliminary Number Theory and Cryptography}
+%intro
+In this chapter, we will look into one of the most exciting part of mathematics, and it is also a
+crucial cornerstone for computer science. The inception of number theory can be traced back to ancient civilizations, but it began to emerge as a distinct mathematical discipline with the work of the Greek mathematician Euclid. His monumental work, "Elements," laid the groundwork for the study of prime numbers and proved fundamental theorems, such as the infinitude of primes, which are still central to number theory today. The nature of whole numbers, especially the intriguing properties of prime numbers—the building blocks of all natural numbers—has fascinated mathematicians for centuries. Over time, the field has expanded to include a rich array of topics such as the distribution of primes, the solutions of Diophantine equations, modular arithmetic, and the exploration of number-theoretic functions like the Riemann zeta function. Number theory's initial focus on prime numbers and divisibility has blossomed into a diverse and vibrant branch of mathematics, with applications ranging from cryptography to the theory of chaos.
+
+\section{Divisibility and Modular Arithmetic}
+We start with the divisibility of number, as it is the basis of many further topics.
+Divisibility serves as the cornerstone of number theory due to several pivotal reasons. It is the bedrock upon which the Fundamental Theorem of Arithmetic stands, declaring that each integer greater than 1 is uniquely decomposable into a product of prime numbers. These primes are the elemental units, akin to atoms in chemistry, from which all other numbers are constructed. The concepts of greatest common divisors and least common multiples emerge from divisibility, forming the basis of crucial algebraic structures such as rings and fields, and thereby extending number theory into algebraic realms. Furthermore, the pursuit of integer solutions to equations, known as Diophantine analysis, is deeply reliant on principles of divisibility. In the modern context, divisibility underpins cryptographic systems, leveraging the challenging task of prime factorization to secure digital communication. Moreover, divisibility naturally extends to modular arithmetic, enriching number theory with the study of congruences, which has profound implications across mathematics and its myriad applications. Therefore, the study of divisibility is not just foundational but also a connective thread that weaves through the entire fabric of number theory.
+
+\subsection{Division and Divisibility}
+To figure out problems related to \textbf{Divisibility}, we must figure out the definition and properties
+of \textbf{Division}. We were taught in the primary school that a division is an operation  that
+divides a number to a certain part. For instance, $6\div2=3$, and $6\div4=1.5$. Sometimes, the
+division produce an integer as result, while sometimes not. We define division as follows:
+    \begin{definition}[Division]
+        The division of a number \( a \) by a non-zero number \( b \) is denoted by \( a \div b \) or \( \frac{a}{b} \), and it gives the quotient \( q \) and possibly a remainder \( r \). The operation can be written as:
+        \[
+        a = b \times q + r
+        \]
+        where \( 0 \leq r < b \) and \(q \in \mathbb{Z}\).
+    \end{definition}
+    In $6\div2=3$, clearly we have $6=2\times3+0$, with $r=0$, $q=3$. But how could we explain
+    $6\div4=1.5$? The quotient is a decimal instead of an integer. Fundamentally, we cannot separate
+    the number 6 in to 4 parts to be represented as integer. In this case the division can be represented
+    as $6 = 4\times0+6$, meaning $q=0$ and $r=6$. Actually, $6\div4=1.5$ is not defined as only
+    division, but \textbf{True Division}.
+    \begin{definition}[True Division]
+        True division is concerned with the quotient including the remainder as a fractional part. In true division, when \( a \) is divided by \( b \), the quotient \( q \) is a real number that can be represented as:
+        \[
+        q = \frac{a}{b}
+        \]
+    \end{definition}
+    You may find that true division doesn't have a remainder. This is just because the purpose of 
+    these two operations are different, as true division only focus on the scale of each part of
+    $a$, but division involves the divisibility and remainder, which will be discussed further
+    in this chapter.
+
+    Now that we have defined division and true division, you may understand the following definition
+    of divisibility easier.
+    \begin{definition}[Divisibility]
+        If $a$ and $b$ are integers with $a \neq 0$, we say that $a$ divides $b$ if there is an integer $c$ such that $b = a\times c$ (or equivalently, if $b$ a is an integer). When $a$ divides $b$ we say that $a$ is a factor or divisor of $b$, and that $b$ is a multiple of $a$. The notation a $\mid$ b denotes that $a$ divides $b$. We write $a \nmid b$ when $a$ does not divide $b$
+    \end{definition}
+    For example, we have $4\mid 20$, because $20\div4$ gives an integer, however, $4\nmid 21$, as the answer
+    cannot be represented as integer. Besides, we have:
+    \begin{equation}
+        a\mid b \iff \exists c(ac=b).
+    \end{equation}
+
+    \begin{problem}
+        Let \( n \) and \( d \) be positive integers. How many positive integers not exceeding \( n \) are divisible by \( d \)?
+    \end{problem}
+    \textbf{Solution:} The positive integers divisible by \( d \) are all the integers of the form \( dk \), where \( k \) is a positive integer. Hence, the number of positive integers divisible by \( d \) that do not exceed \( n \) equals the number of integers \( k \) with \( 0 < dk \leq n \), or with \( 0 < k \leq \frac{n}{d} \). Therefore, there are \( \left\lfloor \frac{n}{d} \right\rfloor \) positive integers not exceeding \( n \) that are divisible by \( d \).
+
+    Divisibility holds the following properties, which could be proven directly.
+    \begin{theorem}[Properties of Divisibility] \label{Properties of Divisibility}
+        Let $a$, $b$, and $c$ be integers, where $a\neq 0$, then:
+        \begin{enumerate}
+            \item if $a \mid b$ and $a \mid c$, then $a \mid (b+c)$
+            \item if $a \mid b$ then $a \mid bc$ for all integers $c$
+            \item if $a \mid b$ and $b\mid c$, then $a \mid c$
+        \end{enumerate}
+    \end{theorem}
+    \begin{proof}
+        Since \( a \mid b \) and \( a \mid c \), there exist integers \( m \) and \( n \) such that \( b = am \) and \( c = an \). Therefore, \( b+c = am + an = a(m+n) \), and since \( m+n \) is an integer, it follows that \( a \mid (b+c) \).
+        
+        Given \( a \mid b \), there exists an integer \( k \) such that \( b = ak \). For any integer \( c \), \( bc = a(kc) \). Since \( kc \) is an integer (because the product of two integers is an integer), \( a \mid bc \).
+        
+        If \( a \mid b \) and \( b \mid c \), then there exist integers \( p \) and \( q \) such that \( b = ap \) and \( c = bq \). Substituting the expression for \( b \) into the equation for \( c \) gives \( c = (ap)q = a(pq) \). Since \( pq \) is an integer, \( a \mid c \).
+    \end{proof}
+    With this we have the following conclusion.
+    \begin{corollary}\label{div1}
+        if $a$, $b$, and $c$ are integers, where $a\neq 0$, such that $a\mid b$ and $a\mid c$, then $a\mid mb + nc$ whenever $m$ and $n$ are integers.
+    \end{corollary}
+    This could be proven in direct proof, which you will finish in the exercise.
+
+    \subsection{Modular Arithmetic}
+    In this section, we will focus on the remainder of division, as well as modular arithmetic.
+    In the definition of division, we involved $q$ and $r$, which denotes the quotient and
+    the remainder of the operation. We use the following notations to denote each of both.
+    \begin{notation}[div and mod]
+        For $a$, $b\in \mathbb{R}$.
+        $a = b\times q + r$    
+        $$q = a\ \text{\textbf{div}}\ b$$
+        $$r = a\ \text{\textbf{mod}}\ b$$
+    \end{notation}
+    Besides, when $a$ is an integer and $b$ is a positive integer, we have$a\ \text{\textbf{div}}\ b = \left \lfloor  a/b \right \rfloor$.
+    \begin{example}
+        What are the quotient and remainder when 93 is divided by 9?
+    \end{example}
+    \textbf{Solution:} $93 = 9\times 10 + 3$. $q = 10$, $r = 3$.
+
+    The quotient is $93\ \textbf{div}\ 9 = 10 = \lfloor93/9\rfloor = \lfloor10.3333\dots \rfloor = 10$
+
+    The remainder is $93\ \textbf{mod}\ 9 = 3 = 93 - 90$
+    \begin{problem}
+        Is it possible for the remainder to be negative?
+    \end{problem}
+    In most cases, we see positive remainder, as if it were the only possibility. However, we can
+    refute this using one example.
+    \begin{example}
+        What are the quotient and remainder when -93 is divided by 9?
+    \end{example}
+    \textbf{Solution:} $-93 = 9\times (-11) + 6$. $q = -11$, $r = 6$.
+    
+    Remember that we must make sure $r\geq0$ as we defined earlier, even though $-93 = 9\times(-10) - 3$.
+    But remainder could be positive in other division algorithm, which we will discuss in the exercise.
+
+    We have already introduced the notation $ a\ \textbf{mod}\ m $ to represent the remainder when an integer
+    $a$ is divided by the positive integer $m$. We now introduce a different, but related, notation
+    that indicates that two integers have the same remainder when they are divided by the positive
+    integer $m$. But why we need to find and study the numbers with the same remainder by dividing 
+    the same positive integer? Studying numbers that yield the same remainder when divided by a given positive integer is a
+    fundamental part of number theory; later you will understand why say so.
+    \begin{definition}
+        If $a$ and $b$ are integers and $m$ is a positive integer, then $a$ is \textbf{congruent} 
+        to $b$ \textbf{modulo} $m$ if $m$ divides $a - b$. 
+        We use the notation $a \equiv b (\bmod m)$ to indicate that $a$ is congruent to $b$ modulo 
+        $m$. We say that $a \equiv b (\bmod m)$ is a congruence and that $m$ is its modulus 
+        (plural moduli). If $a$ and $b$ are not congruent modulo $m$, we write $a \not\equiv b (\bmod m)$.
+    \end{definition}
+    Do note that mod and \textbf{mod} are different notations. The first represents a relation on the set of integers, whereas the
+    second represents a function. However, they are still related.
+    \begin{theorem}
+        Let $a$ and $b$ be integers, and let $m$ be a positive integer. $a \equiv b (\bmod \  m)$ if and only if $a\ \textbf{mod}\ m$ = $b\ \textbf{mod}\ m$.
+    \end{theorem}
+    \begin{proof}
+        First, suppose \( a \equiv b \pmod{m} \). By definition of congruence modulo \( m \), \( m \) divides \( a - b \), which means there exists some integer \( k \) such that \( a - b = km \).
+
+        Dividing \( a \) and \( b \) by \( m \), they both leave the same remainder \( r \), since \( a = q_1m + r \) and \( b = q_2m + r \) for some integers \( q_1 \) and \( q_2 \). The remainder \( r \) in both cases is the same because the difference \( a - b \) is a multiple of \( m \), which does not affect the remainder.
+
+        Conversely, if \( a \mod m = b \mod m \), then both \( a \) and \( b \) leave the same remainder when divided by \( m \). Denote this common remainder as \( r \).
+
+        We can write \( a = q_1m + r \) and \( b = q_2m + r \) for some integers \( q_1 \) and \( q_2 \). Subtracting these two equations, we get \( a - b = (q_1 - q_2)m \), which shows that \( a - b \) is a multiple of \( m \).
+
+        Therefore, \( m \) divides \( a - b \), and by definition of congruence modulo \( m \), we have \( a \equiv b \pmod{m} \).
+
+        This completes the proof.
+    \end{proof}
+    \begin{remark}
+        Remember, when we say if and only if, we need proof from each of the both statements to the other.
+    \end{remark}
+    \begin{theorem}\label{mod2}
+        Let $m$ be a positive integer. The integers $a$ and $b$ are congruent modulo $m$ if and only if there is an integer $k$ such that $a = b + km$.
+    \end{theorem}
+    The proof is similar and not complex, try to prove it in the exercise.
+
+
+
+
+
+
+
+    \subsection{Exercises}
+    \begin{exercise}
+        Prove corollary \ref{div1} that if $a$, $b$, and $c$ are integers, where $a\neq 0$, such that $a\mid b$ and $a\mid c$, then $a\mid mb + nc$ whenever $m$ and $n$ are integers.
+    \end{exercise}
+    \begin{proof}
+        By theorem \ref{Properties of Divisibility}, $a\mid b$ and $a\mid c$ gives us $a\mid mb$
+        and $a\mid nc$ (property 2). Hence, $a\mid (mb+nc)$ (property 1). This completes the proof.
+    \end{proof}
+    
+    \begin{exercise}
+        floored division he truncated division
+    \end{exercise}
+
+    \begin{exercise}
+        Prove theorem \ref{mod2}, you may use other theorems or corollary in this chapter.
+    \end{exercise}
+    \begin{proof}
+        If $a \equiv b (\bmod \ m)$, that means we have $m\mid(a-b)$. There must be a integer $k$, such that $a = b + km$ (theorem \ref{mod2}). Conversely, if we have a integer $k$, such that $a = b+km$, we have $km = a-b$. Hence, $m\mid(a-b)$, $a \equiv b (\bmod \ m)$.
+    \end{proof}
+    \section{Integer Representations and Algorithms}
+
+    \subsection{Representations of Integers and Base Conversion}
+    \subsubsection*{Binary, Octal, and Hexadecimal Expansion}
+
+    \subsection{Base Conversion}
+
+
+    \subsection{Integer Operations Algorithms}
+
+    \subsubsection*{Addition Algorithm}
+
+    \subsubsection*{Multiplication Algorithm}
+
+    \subsubsection*{Algorithm for Div and Mod}
+
+    \subsection{Modular Exponentiation}
+
+    \subsection{Exercises}
+
+
+    \section{Primes and Greatest Common Divisors}
+
+    \subsection{Primes and Trial Division}
+
+    \subsection{Manipulation of Primes}
+
+    \subsection{Greatest Common Divisors and Least Common Multiples}
+
+    \subsubsection*{The Euclidean Algorithm}
+
+    \subsection{Greatest Common Divisors as Linear Combinations}
