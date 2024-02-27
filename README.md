@@ -25,7 +25,7 @@ You can:
 All contributions are welcome! Whether it's fixing typos, improving explanations, or adding new content, your help is appreciated.
 
 ## License
-This work is released under the MIT license.
+This work is released under the CC BY-NC-SA 4.0 DEED license.
 
 ## Contact
 For questions and feedback, feel free to post it under issue.
