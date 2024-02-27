@@ -86,7 +86,7 @@ division produce an integer as result, while sometimes not. We define division a
         $$q = a\ \text{\textbf{div}}\ b$$
         $$r = a\ \text{\textbf{mod}}\ b$$
     \end{notation}
-    Besides, when $a$ is an integer and $b$ is a positive integer, we have$a\ \text{\textbf{div}}\ b = \left \lfloor  a/b \right \rfloor$.
+    Besides, when $a$ is an integer and $b$ is a positive integer, we have $a\ \text{\textbf{div}}\ b = \left \lfloor  a/b \right \rfloor$.
     \begin{example}
         What are the quotient and remainder when 93 is divided by 9?
     \end{example}
@@ -172,15 +172,196 @@ division produce an integer as result, while sometimes not. We define division a
     \begin{proof}
         If $a \equiv b (\bmod \ m)$, that means we have $m\mid(a-b)$. There must be a integer $k$, such that $a = b + km$ (theorem \ref{mod2}). Conversely, if we have a integer $k$, such that $a = b+km$, we have $km = a-b$. Hence, $m\mid(a-b)$, $a \equiv b (\bmod \ m)$.
     \end{proof}
-    \section{Integer Representations and Algorithms}
+    \section{Number Representations and Algorithms}
+    In everyday life, we use decimal notation to express integers. Though this is not
+    for all cases, as we are using a 60 base system for time. However, in computer science, binary, octal, and hexadecimal
+    systems are widely used for number representation. The reason is that binary system consist of 
+    only 0 and 1, as we have mentioned in Boolean algebra, this system is perfect for logic operations
+    in side the computer. What's more, 0 and 1 could be easily represented by the on and off of tiny
+    switches in the integrated circuits. This chapter looks into the representation of number
+    in different bases and their relationship, with a tress on binary representation that computer
+    system uses. Meanwhile, we will go through algorithm of some operations between number, and
+    analyze them accordingly.
+    \subsection{Representations of Numbers and Base Conversion}
+    In whichever base, a number could be expressed using the exponent of the base.
+    \begin{theorem}[Representation of Number]
+		Let $b$ be an integer greater than 1. Then if $n$ is a positive integer, it can be expressed uniquely 
+		in the form:\\
+		$n=a_{k} b^{k}+a_{k-1} b^{k-1}+\cdots+a_{1} b+a_{0}$\\
+		where $k$ is a nonnegative integer, $a_0, a_1,\cdots, a_k$ are negative integers less than b, and $a_k \neq 0$
+	\end{theorem}
+    For example, 1024 could be interpreted as $1024 = 1\times10^3+\times10^2+2\times10^1+4\times10^0$.
+    Besides, the base of number constraints the possible numbers to be used on the bits. For example,
+    under decimal system, we cannot take 10 as one digit, instead it is a number with two digits 1 and 0,
+    because for bits under decimal system, the maximum only goes to 9. Therefore, you could take it as
+    a fact that for a system of base $b$, the biggest value for one bit is $b-1$. Similarly, we see
+    only 0 and 1 in binary, 1-7 in ocatl, 1-15 in hexadecimal expression.
 
-    \subsection{Representations of Integers and Base Conversion}
-    \subsubsection*{Binary, Octal, and Hexadecimal Expansion}
+    To indicate the base of a number, we use the following subscript.
+    \begin{notation}[$xxxx_b$]
+        We use $_b$ to show the base of a number, where $b$ is the base number.
+    \end{notation}
+
+    The other important fact is that numbers are just numbers, base is only the way we gauge them.
+    However you change $121_{10}$, to whatever base, it is still 121 in decimal, but just expressed 
+    in a different way.
+    \subsubsection*{Binary, Octal, and Hexadecimal Expression}
+    In \textbf{binary expansion}, the base on any integer is 2, that is to say, the number in each digit is either 0 or 1.
+We can expand binary integer in the same ways as mentioned in last section.
+
+\begin{example}
+	What is the decimal expansion of the integer that has $(101011111)_2$ as its binary expansion?
+
+		$(101011111)_2$ has nine digits, so we have:\\
+		$(101011111)_2$ = $1\times 2^9 + 1\times 2^7+1\times 2^5+1\times 2^4+1\times 2^3+1\times 2^2+1\times 2^1+1\times 2^0 = 351$
+
+\end{example}
+Decimal expansion of octal expansions could be calculated in the same way as the binary expansion. However, 
+Sixteen different digits are required for hexadecimal expansions. Usually, the hexadecimal digits used are 
+0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, and F, where the letters A through F represent the digits 
+corresponding to the numbers 10 through 15 (in decimal notation). 
+\begin{example}
+	What is the decimal expansion of the number with hexadecimal expansion $(2AE0B)_{16}$?
+\end{example}
+In hexadecimal cases, the only difference is that capital latters are used to represent two-digit number in
+		one digit. We still have:\\
+		$(2AE0B)_{16}$ = $2\times 16^4 + 10\times 16^3 + 14\times 16^2 + 0 \times 16^1 + 11 \times 16^0=175627$
+
+        \textbf{NOTICE: } Each hexadecimal digit can be represented using four bits. For instance, 
+we see that $(1110 0101)_2$ = $(E5)_{16}$ because $(1110)_2$ = $(E)_{16}$ and $(0101)_2 = (5)_{16}$. Bytes, which are bit strings 
+of length eight, can be represented by two hexadecimal digits.
 
     \subsection{Base Conversion}
+    \subsubsection*{Base conversion of Integer}
+    Now we have learned how to express numbers in different base systems, but is there any way to
+    convert them from one base to the other? You may have realized that a general solution is to
+    convert the number back to decimal form, and then to the target base. Yes, it works, but can we
+    make it better? One way to this is to use the general base conversion algorithm.
+    The most common algorithm to constructing the base $b$ expansion of an integer n is as follows:\\
+First, divide $n$ by $b$ to obtain a quotient and remainder, that is: \\
+\begin{center}
+	$\displaystyle n\ =\ bq_{0} \ +\ a_{0} \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ( 0\ \leq \ a_{0} \ < \ b)$
+\end{center}
+The remainder, $a_0$, is the rightmost digit in the base b expansion of $n$. Next, divide $q_0$ by $b$ toobtain:\\
+\begin{center}
+	$\displaystyle q_0\ =\ bq_{1} \ +\ a_{1} \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ( 0\ \leq \ a_{1} \ < \ b)$
+\end{center}
+We see that $a_1$ is the second digit from the right in the base b expansion of n. Then, we just continue this process
+until we obtain a quotient equal to zero. This algorithm produces the base $b$ digits of $n$ from the right to the left.
 
+\begin{example}
+	Find the hexadecimal expansion of $(177130)_{10}$.
+		\begin{center}
+		$177130 = 16 \cdot 11070 + 10$\\
+		$11070 = 16 \cdot 691 + 14$\\
+		$691 = 16 \cdot 43 + 3$\\
+		$43 = 16 \cdot 2 + 11$\\
+		$2 = 16 \cdot 0 + 2 $\\
+		\end{center}
+		Therefore, $(177130)_{10} = (2B3EA)_{16}$
+\end{example}
+    This method is equivalent to the following pseudocode.
+    \begin{algorithm}
+        \caption{Base conversion of an integer $n$ to base $b$}
+        \begin{algorithmic}[H]
+        \Require{An integer $n$ and a base $b$ to convert to}
+        \Ensure{The base $b$ expansion of $n$}
+        \Function{ConvertToBase}{$n, b$}
+            \State $digits \gets$ empty list
+            \While{$n > 0$}
+                \State $remainder \gets n \bmod b$
+                \State Append $remainder$ to $digits$
+                \State $n \gets \left\lfloor n / b \right\rfloor$
+            \EndWhile
+            \State $digits \gets$ reverse $digits$
+            \State \textbf{return} $digits$
+        \EndFunction
+        \end{algorithmic}
+        \end{algorithm}
+    \subsubsection*{Base Conversion of Float}
+    The previous algorithm only deals with integers, so we need a different approach for decimals.
+    The algorithm for converting a floating-point number from base 10 to base $b$ is given as follows:
 
-    \subsection{Integer Operations Algorithms}
+\begin{algorithm}
+\caption{Convert a floating-point number to a different base}
+\begin{algorithmic}[1]
+\Function{ConvertFloatToBase}{$number$, $targetBase$}
+    \State $integerPart \gets \lfloor number \rfloor$
+    \State $fractionalPart \gets number - integerPart$
+    \State $baseInteger \gets \Call{ConvertIntegerToBase}{integerPart, targetBase}$
+    \State $baseFraction \gets ``"$
+    \While{$fractionalPart > 0$ \textbf{and} length of $baseFraction$ is less than limit}
+        \State $fractionalPart \gets fractionalPart \times targetBase$
+        \State $baseFraction \gets baseFraction + \lfloor fractionalPart \rfloor$
+        \State $fractionalPart \gets fractionalPart - \lfloor fractionalPart \rfloor$
+    \EndWhile
+    \State \Return $baseInteger + ``." + baseFraction$
+\EndFunction
+\end{algorithmic}
+\end{algorithm}
+
+\begin{example}
+Convert the floating-point number 12.375 from base 10 to base 2.
+\begin{itemize}
+\item Integer part: 12 in base 10 is 1100 in base 2.
+\item Fractional part: 0.375 in base 10 to base 2.
+\begin{align*}
+0.375 \times 2 &= 0.75 \rightarrow \text{integer part is 0} \\
+0.75 \times 2 &= 1.5 \rightarrow \text{integer part is 1} \\
+0.5 \times 2 &= 1 \rightarrow \text{integer part is 1} \\
+\end{align*}
+\item The fractional part in base 2 is .011.
+\end{itemize}
+
+Therefore, $12.375_{10}$ is $1100.011_{2}$.
+\end{example}
+Also, when a number consist of both integer and decimal parts, we just deal with them separately
+and them put them back together later. You will see these exercises in the problem set.
+
+\subsubsection*{Base Conversion between Binary, Octal, and Hexadecimal number}
+The base conversion between Binary, Octal and Hexadecimal numbers are much easier.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{converttab.png}
+    \caption{Binary, Octal and Hexadecimal Representation}
+\end{figure}
+The conversion between binary, octal, and hexadecimal systems is straightforward because the bases of these systems (2 for binary, 8 for octal, and 16 for hexadecimal) are related by powers of 2. Specifically:
+\begin{itemize}
+    \item Octal digits correspond to three binary digits since \(8 = 2^3\). Each octal digit can be directly mapped to a unique combination of three binary bits.
+    \item Hexadecimal digits correspond to four binary digits since \(16 = 2^4\). Each hexadecimal digit can be directly mapped to a unique combination of four binary bits.
+\end{itemize}
+This relationship allows for simple grouping of binary bits into sets of three or four to convert 
+to octal or hexadecimal, respectively, without any complex calculation or division. 
+\begin{example}
+	Find the octal and hexadecimal expansions of $(11\ 1110\ 1011\  1100)_2$ and the binary expansions of $(765)_{8}$ and $(A8D)_{16}$.
+\end{example}
+\textbf{Solution:} To convert $(11\ 1110\ 1011\  1100)_2$ into octal notation we group the binary digits
+into blocks of three, adding initial zeros at the start of the leftmost block if necessary.
+These blocks, from left to right, are 011, 111, 010, 111, and 100, corresponding to 3, 7, 2, 7, and 4 respectively. Consequently, we get $(11\ 1110\ 1011\  1100)_2 = (37274)_8$
+\par We do the hexadecimal convention in the same way. These blocks, from left to right, are 0011,
+1110, 1011, and 1100, corresponding to the hexadecimal digits 3, E, B, and C, respectively. Consequently, $(11\ 1110\ 1011\  1100)_2 = (3EBC)_{16}$
+\par \textbf{NOTE: } The conversion could be done inversely in the same way. If the number of bit is not the multiple of 4 when you are converting between 2 and 16 base
+number, fill those missing digits/bits with 0.
+
+Whether you noticed or that the base conversion, essentially, is about division and modular arithmetic
+that we just learned? The general base conversion algorithm could be simplified to the following algorithm,
+where $n$ denotes the number to be converted and $b$ is the target base.
+\begin{algorithm}
+    \caption{Constructing Base \( b \) Expansions}
+    \begin{algorithmic}[1]
+    \Procedure{base \( b \) expansion}{$n, b$: positive integers with $b > 1$}
+    \State $q \gets n$
+    \State $k \gets 0$
+    \While{$q \neq 0$}
+    \State $a_k \gets q \mod b$
+    \State $q \gets \lfloor q / b \rfloor$
+    \State $k \gets k + 1$
+    \EndWhile
+    \State \textbf{return} $(a_{k-1}, \ldots, a_1, a_0)$ \Comment{The base \( b \) expansion of \( n \)}
+    \EndProcedure
+    \end{algorithmic}
+    \end{algorithm}
+    \subsection{Operation Algorithms of Number}
 
     \subsubsection*{Addition Algorithm}
 
