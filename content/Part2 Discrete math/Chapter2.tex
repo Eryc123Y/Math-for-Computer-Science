@@ -147,10 +147,100 @@ division produce an integer as result, while sometimes not. We define division a
     \end{theorem}
     The proof is similar and not complex, try to prove it in the exercise.
 
+    Another theorem about congruence is that analogical to operation properties of addition and multiplication in basic algebra.
+    \begin{theorem}
+        Let \( m \) be a positive integer. If \( a \equiv b \ (\text{mod}\ m) \) and \( c \equiv d \ (\text{mod}\ m) \), then
+        \[ a + c \equiv b + d \ (\text{mod}\ m) \quad \text{and} \quad ac \equiv bd \ (\text{mod}\ m). \]
+    \end{theorem}
 
+    \begin{proof}
+        Since \( a \equiv b \ (\text{mod}\ m) \), there exists some integer \( k \) such that \( a = b + km \). Similarly, since \( c \equiv d \ (\text{mod}\ m) \), there exists some integer \( l \) such that \( c = d + lm \).
+        
+        For the addition part:
+        \begin{align*}
+        a + c & = (b + km) + (d + lm) \\
+        & = (b + d) + (km + lm) \\
+        & = (b + d) + m(k + l),
+        \end{align*}
+        which shows that \( a + c \) differs from \( b + d \) by a multiple of \( m \), hence \( a + c \equiv b + d \ (\text{mod}\ m) \).
+        
+        For the multiplication part:
+        \begin{align*}
+        ac & = (b + km)(d + lm) \\
+        & = bd + b(lm) + d(km) + (km)(lm) \\
+        & = bd + m(bl + dk + klm),
+        \end{align*}
+        which shows that \( ac \) differs from \( bd \) by a multiple of \( m \), hence \( ac \equiv bd \ (\text{mod}\ m) \).
+        
+        Thus, both properties are proven.
+    \end{proof}
+    This leads to a corollary on $\textbf{mod}$ operation.
+    \begin{corollary}
+        Let \( m \) be a positive integer and let \( a \) and \( b \) be integers. Then
+        \[(a + b) \textbf{ mod } m = ((a \textbf{ mod } m) + (b \textbf{ mod } m)) \textbf{ mod } m\]
+        and
+        \[ab \textbf{ mod } m = ((a \textbf{ mod } m)(b \textbf{ mod } m)) \textbf{ mod } m.\]
+        \end{corollary}
+        
+        \begin{proof}
+        Let \( a' = a \textbf{ mod } m \) and \( b' = b \textbf{ mod } m \), which means that there exist integers \( k \) and \( l \) such that \( a = mk + a' \) and \( b = ml + b' \), where \( 0 \leq a' < m \) and \( 0 \leq b' < m \).
+        
+        For the addition part:
+        \begin{align*}
+        a + b &= mk + a' + ml + b' \\
+        &= m(k + l) + (a' + b') \\
+        (a + b) \textbf{ mod } m &= (a' + b') \textbf{ mod } m.
+        \end{align*}
+        This means that $a+b\equiv a'+b(\bmod m)$, since \( m(k + l) \) is divisible by \( m \).
+        
+        For the multiplication part:
+        \begin{align*}
+        ab &= (mk + a')(ml + b') \\
+        &= m^2(kl) + m(kb' + la') + a'b' \\
+        ab \textbf{ mod } m &= a'b' \textbf{ mod } m.
+        \end{align*}
+        This means that $ab\equiv a'b'(\bmod m)$, since \( m^2(kl) \) and \( m(kb' + la') \) are both divisible by \( m \).
+        
+        Thus, we can conclude that:
+        \[(a + b) \textbf{ mod } m = ((a \textbf{ mod } m) + (b \textbf{ mod } m)) \textbf{ mod } m\]
+        and
+        \[ab \textbf{ mod } m = ((a \textbf{ mod } m)(b \textbf{ mod } m)) \textbf{ mod } m.\]
+        This completes the proof.
+        \end{proof}
+    \begin{remark}
+        You can somewhat analogize this corollary to the distributive law, but do remember that
+        there is another \textbf{mod} operator outside the parenthesis.
+    \end{remark}
 
-
-
+    \subsubsection*{Arithmetic Modulo $m$}
+    We can also define the new operation and notation called Arithmetic Modulo, which means conducting modular
+    operation about a certain positive integer$m$ after basic algebra operation between two number denoted by $a,b$ in this case.
+    \begin{definition}[Arithmetic Modulo $m$]
+        We can define arithmetic operations on \( \mathbb{Z}_m \), the set of nonnegative integers less than \( m \), that is, the set \( \{0, 1, \ldots, m - 1\} \). In particular, we define addition of these integers, denoted by \( +_m \) by
+        \[ a +_m b = (a + b) \textbf{ mod } m, \]
+        where the addition on the right-hand side of this equation is the ordinary addition of integers, and we define multiplication of these integers, denoted by \( \cdot_m \) by
+        \[ a \cdot_m b = (a \cdot b) \textbf{ mod } m, \]
+        where the multiplication on the right-hand side of this equation is the ordinary multiplication of integers. The operations \( +_m \) and \( \cdot_m \) are called addition and multiplication modulo \( m \) and when we use these operations, we are said to be doing arithmetic modulo \( m \).
+    \end{definition}
+    \begin{example}
+        Let \( m = 5 \), \( a = 7 \), and \( b = 3 \):
+        \begin{itemize}
+            \item Addition: \( a +_m b = (7 + 3) \textbf{ mod } 5 = 10 \textbf{ mod } 5 = 0 \)
+            \item Multiplication: \( a \cdot_m b = (7 \cdot 3) \textbf{ mod } 5 = 21 \textbf{ mod } 5 = 1 \)
+        \end{itemize}
+    \end{example}
+    Arithmetic modulo \( m \) has several properties that are similar to ordinary arithmetic:
+    \begin{itemize}
+        \item \textbf{Closure}: If \( a, b \in \mathbb{Z}_m \), then \( a +_m b \) and \( a \cdot_m b \) are also in \( \mathbb{Z}_m \).
+        \item \textbf{Associativity}: For all \( a, b, c \in \mathbb{Z}_m \),
+        \[ (a +_m b) +_m c = a +_m (b +_m c) \]
+        \[ (a \cdot_m b) \cdot_m c = a \cdot_m (b \cdot_m c) \]
+        \item \textbf{Commutativity}: For all \( a, b \in \mathbb{Z}_m \),
+        \[ a +_m b = b +_m a \]
+        \[ a \cdot_m b = b \cdot_m a \]
+        \item \textbf{Distributivity}: For all \( a, b, c \in \mathbb{Z}_m \),
+        \[ a \cdot_m (b +_m c) = (a \cdot_m b) +_m (a \cdot_m c) \]
+    \end{itemize}
 
 
     \subsection{Exercises}
@@ -163,8 +253,17 @@ division produce an integer as result, while sometimes not. We define division a
     \end{proof}
     
     \begin{exercise}
-        floored division he truncated division
+        Prove that if $\displaystyle a\mid b$ and $\displaystyle b\mid a$, then either $\displaystyle a=b$ or $\displaystyle a=-b$
     \end{exercise}
+    \begin{proof}
+        $\displaystyle a\mid b\rightarrow b=ka$ for some integer $\displaystyle k$
+
+        $\displaystyle b\mid a\rightarrow a=kb$ for some integer $\displaystyle k$
+
+        By substituting we have $\displaystyle b=k^{2} b$, which gives us $\displaystyle k^{2} =1$, and thus $\displaystyle k=\pm 1$.
+
+        Therefore, $\displaystyle a\ =\ b\ $or $\displaystyle a=-b$, which completes the proof.
+    \end{proof}
 
     \begin{exercise}
         Prove theorem \ref{mod2}, you may use other theorems or corollary in this chapter.
@@ -172,6 +271,26 @@ division produce an integer as result, while sometimes not. We define division a
     \begin{proof}
         If $a \equiv b (\bmod \ m)$, that means we have $m\mid(a-b)$. There must be a integer $k$, such that $a = b + km$ (theorem \ref{mod2}). Conversely, if we have a integer $k$, such that $a = b+km$, we have $km = a-b$. Hence, $m\mid(a-b)$, $a \equiv b (\bmod \ m)$.
     \end{proof}
+    \begin{exercise}
+        Show that if \( a, b, c, \) and \( d \) are integers, where \( a \neq 0 \), such that \( a \mid c \) and \( b \mid d \), then \( ab \mid cd \).
+    \end{exercise}
+    \begin{proof}
+        Since \( a \mid c \), there exists some integer \( k \in \mathbb{Z} \) such that \( c = ak \). Similarly, since \( b \mid d \), there exists some integer \( l \in \mathbb{Z} \) such that \( d = bl \).
+
+        Consider the product \( cd \):
+        \begin{align*}
+        cd &= (ak)(bl) \\
+        &= a(kb)l \\
+        &= ab(kl).
+        \end{align*}
+        The expression \( ab(kl) \) indicates that \( cd \) is a multiple of \( ab \) since \( kl \) is an integer. Hence, \( ab \mid cd \).
+    \end{proof}
+    
+
+
+
+
+
     \section{Number Representations and Algorithms}
     In everyday life, we use decimal notation to express integers. Though this is not
     for all cases, as we are using a 60 base system for time. However, in computer science, binary, octal, and hexadecimal
@@ -376,6 +495,52 @@ where $n$ denotes the number to be converted and $b$ is the target base.
 
     \section{Primes and Greatest Common Divisors}
 
+        %Fundamental Theorem of Arithmetic
+        \begin{theorem}[Fundamental Theorem of Arithmetic]
+        Every integer greater than 1 can be represented uniquely as a product of prime numbers, up to the ordering of the factors.
+        \end{theorem}
+        \begin{proof}
+        We divide the proof into two parts: existence and uniqueness.
+        
+        \textbf{Existence:} \\
+        We prove by induction that every integer \( n \geq 2 \) can be factored into a product of prime numbers. \\
+        \textit{Base case:} For \( n = 2 \), the number is itself a prime, and the base case holds. \\
+        \textit{Inductive step:} Suppose that every number less than \( n \) can be expressed as a product of primes. If \( n \) is prime, there is nothing to prove. If \( n \) is composite, then by definition, \( n \) can be written as \( n = ab \), where \( a \) and \( b \) are integers greater than 1 and less than \( n \). By the induction hypothesis, both \( a \) and \( b \) can be expressed as a product of prime numbers. Therefore, \( n \) can also be expressed as a product of the prime factors of \( a \) and \( b \), proving the existence.
+        
+        \textbf{Uniqueness:} \\
+        Suppose, to the contrary, that some integer \( n \) has two distinct prime factorizations:
+        \[ n = p_1 p_2 \ldots p_k \]
+        and
+        \[ n = q_1 q_2 \ldots q_m \]
+        without loss of generality, assume that the \( p_i \)'s and \( q_i \)'s are arranged in non-decreasing order and that the two factorizations are distinct. 
+        
+        Since \( p_1 \) divides \( n \) and \( n \) is equal to the product of the \( q_i \)'s, by Euclid's lemma, \( p_1 \) must divide one of the \( q_i \)'s. Because \( q_i \)'s are also prime, it follows that \( p_1 \) must be equal to this \( q_i \). Without loss of generality, let \( p_1 = q_1 \). We can then cancel \( p_1 \) from both sides of the equality. Repeating this argument, we cancel all prime factors, leading to a contradiction if the original factorizations were indeed distinct. Hence, the prime factorization of \( n \) is unique.
+        
+        Therefore, by induction, we have shown that every integer greater than 1 can be uniquely factored into a product of primes, up to the order of multiplication.
+        \end{proof}
+
+        \begin{corollary}
+            Let \( a, b, \) and \( k \) be integers with \( b \neq 0 \), then 
+            \[ \gcd(a, b) = \gcd(a - kb, b). \]
+            In other words, if \( b \mid a \) (that is, if \( b \) divides \( a \)), then the remainder of \( \frac{a}{b} \) has the same gcd with \( b \) as \( \gcd(a, b) \).
+        \end{corollary}
+        \begin{proof}
+            Let \( d \) be the greatest common divisor of \( a \) and \( b \). This means that \( d \) divides \( a \) and \( d \) divides \( b \). Since \( d \) divides \( b \), it must also divide any integer multiple of \( b \), specifically \( kb \) for any integer \( k \). 
+            
+            Now, if \( d \) divides both \( a \) and \( kb \), it must also divide their linear combination, in particular, the difference \( a - kb \) (Recall the modular property if you get confused). 
+            Therefore, \( d \) is a common divisor of \( a - kb \) and \( b \).
+            
+            Conversely, let \( d' \) be a common divisor of \( a - kb \) and \( b \). Then \( d' \) must divide \( (a - kb) + kb \), which is just \( a \). Hence, \( d' \) is a common divisor of \( a \) and \( b \).
+            
+            Since both \( d \) and \( d' \) are common divisors of \( a - kb \) and \( b \), and also of \( a \) and \( b \), and since there can only be one greatest common divisor for a pair of integers, it follows that \( \gcd(a, b) = \gcd(a - kb, b) \).
+        \end{proof}
+        This tells us that the Euclidean algorithm can be represented in the form as follows.
+        \begin{equation}
+        gdc( a,b) =\begin{cases}
+        a & b=0\\
+        gcd( b,a\bmod b) & b\neq 0
+        \end{cases}
+        \end{equation}
     \subsection{Primes and Trial Division}
 
     \subsection{Manipulation of Primes}
