@@ -94,150 +94,149 @@
 \contentsline {section}{\numberline {7.1}Divisibility and Modular Arithmetic}{161}{section.7.1}%
 \contentsline {subsection}{\numberline {7.1.1}Division and Divisibility}{162}{subsection.7.1.1}%
 \contentsline {subsection}{\numberline {7.1.2}Modular Arithmetic}{163}{subsection.7.1.2}%
-\contentsline {subsection}{\numberline {7.1.3}Exercises}{164}{subsection.7.1.3}%
-\contentsline {section}{\numberline {7.2}Number Representations and Algorithms}{166}{section.7.2}%
-\contentsline {subsection}{\numberline {7.2.1}Representations of Numbers and Base Conversion}{166}{subsection.7.2.1}%
-\contentsline {subsection}{\numberline {7.2.2}Base Conversion}{167}{subsection.7.2.2}%
-\contentsline {subsection}{\numberline {7.2.3}Operation Algorithms of Number}{170}{subsection.7.2.3}%
-\contentsline {subsection}{\numberline {7.2.4}Modular Exponentiation}{170}{subsection.7.2.4}%
-\contentsline {subsection}{\numberline {7.2.5}Exercises}{170}{subsection.7.2.5}%
-\contentsline {section}{\numberline {7.3}Primes and Greatest Common Divisors}{170}{section.7.3}%
-\contentsline {subsection}{\numberline {7.3.1}Primes and Trial Division}{170}{subsection.7.3.1}%
-\contentsline {subsection}{\numberline {7.3.2}Manipulation of Primes}{170}{subsection.7.3.2}%
-\contentsline {subsection}{\numberline {7.3.3}Greatest Common Divisors and Least Common Multiples}{170}{subsection.7.3.3}%
-\contentsline {subsection}{\numberline {7.3.4}Greatest Common Divisors as Linear Combinations}{170}{subsection.7.3.4}%
-\contentsline {chapter}{\numberline {8}Search and Sorting with Further Algorithm Analysis}{171}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Searching algorithms}{171}{section.8.1}%
-\contentsline {subsection}{\numberline {8.1.1}Searching in Unordered Array List}{171}{subsection.8.1.1}%
-\contentsline {subsection}{\numberline {8.1.2}Searching in Ordered Array List}{172}{subsection.8.1.2}%
-\contentsline {subsection}{\numberline {8.1.3}Binary Search: Version 2}{177}{subsection.8.1.3}%
-\contentsline {paragraph}{Step 1.}{178}{paragraph*.4}%
-\contentsline {paragraph}{Step 2.}{178}{paragraph*.5}%
-\contentsline {paragraph}{Step 3.}{178}{paragraph*.6}%
-\contentsline {subsection}{\numberline {8.1.4}Exercises}{182}{subsection.8.1.4}%
-\contentsline {chapter}{\numberline {9}Graph Theory}{185}{chapter.9}%
-\contentsline {part}{\numberline {III}Single-variable Calculus}{187}{part.3}%
-\contentsline {chapter}{\numberline {10}Function Monotonicity, Parity and Periodicity}{189}{chapter.10}%
-\contentsline {section}{\numberline {10.1}Monotonicity of Function}{189}{section.10.1}%
-\contentsline {section}{\numberline {10.2}Parity of Function}{189}{section.10.2}%
-\contentsline {section}{\numberline {10.3}Periodicity of Function}{189}{section.10.3}%
-\contentsline {chapter}{\numberline {11}Abstract and Piece-wise Function}{191}{chapter.11}%
-\contentsline {section}{\numberline {11.1}Abstract Function}{191}{section.11.1}%
-\contentsline {section}{\numberline {11.2}Piece-wise Function}{191}{section.11.2}%
-\contentsline {chapter}{\numberline {12}Limit and Continuity}{193}{chapter.12}%
-\contentsline {section}{\numberline {12.1}Limit of Sequence}{193}{section.12.1}%
-\contentsline {section}{\numberline {12.2}limit of Function}{193}{section.12.2}%
-\contentsline {section}{\numberline {12.3}Continuity}{193}{section.12.3}%
-\contentsline {section}{\numberline {12.4}Application of Limit}{193}{section.12.4}%
-\contentsline {chapter}{\numberline {13}Differential Calculus}{195}{chapter.13}%
-\contentsline {section}{\numberline {13.1}Derivative Basics}{196}{section.13.1}%
-\contentsline {subsection}{\numberline {13.1.1}Definition of Derivative}{196}{subsection.13.1.1}%
-\contentsline {subsection}{\numberline {13.1.2}Geometric Meaning of Derivative}{196}{subsection.13.1.2}%
-\contentsline {subsection}{\numberline {13.1.3}Physical Meaning of Derivative}{196}{subsection.13.1.3}%
-\contentsline {section}{\numberline {13.2}Basic Derivative Rules}{196}{section.13.2}%
-\contentsline {subsection}{\numberline {13.2.1}Derivatives of Elementary Functions}{196}{subsection.13.2.1}%
-\contentsline {subsection}{\numberline {13.2.2}Product Rule, Quotient Rule, Chain Rule}{196}{subsection.13.2.2}%
-\contentsline {section}{\numberline {13.3}Higher-order Derivatives}{196}{section.13.3}%
-\contentsline {subsection}{\numberline {13.3.1}Second-order Derivatives and Applications}{196}{subsection.13.3.1}%
-\contentsline {subsection}{\numberline {13.3.2}Calculation and Significance of Higher-order Derivatives}{196}{subsection.13.3.2}%
-\contentsline {section}{\numberline {13.4}Derivatives of Abnormal Function}{196}{section.13.4}%
-\contentsline {subsection}{\numberline {13.4.1}Derivatives of Implicit Functions}{196}{subsection.13.4.1}%
-\contentsline {subsection}{\numberline {13.4.2}Derivatives of Parametric Equations}{196}{subsection.13.4.2}%
-\contentsline {section}{\numberline {13.5}Differentiation}{196}{section.13.5}%
-\contentsline {section}{\numberline {13.6}Related Rates}{196}{section.13.6}%
-\contentsline {subsection}{\numberline {13.6.1}Relationships between Rates of Change of Different Quantities}{196}{subsection.13.6.1}%
-\contentsline {section}{\numberline {13.7}Taylor Series}{196}{section.13.7}%
-\contentsline {subsection}{\numberline {13.7.1}Taylor Expansion of Functions}{196}{subsection.13.7.1}%
-\contentsline {subsection}{\numberline {13.7.2}Application of Taylor Series}{196}{subsection.13.7.2}%
-\contentsline {section}{\numberline {13.8}Applications of Differential Calculus}{196}{section.13.8}%
-\contentsline {subsection}{\numberline {13.8.1}Tangents and Normals of Curves}{196}{subsection.13.8.1}%
-\contentsline {subsection}{\numberline {13.8.2}Mean Value Theorem in Differential Calculus}{196}{subsection.13.8.2}%
-\contentsline {subsubsection}{\numberline {13.8.2.1}Fermat's Theorem}{196}{subsubsection.13.8.2.1}%
-\contentsline {subsubsection}{\numberline {13.8.2.2}Rolle's Theorem}{196}{subsubsection.13.8.2.2}%
-\contentsline {subsubsection}{\numberline {13.8.2.3}Lagrange's Mean Value Theorem}{196}{subsubsection.13.8.2.3}%
-\contentsline {subsubsection}{\numberline {13.8.2.4}Cauchy's Mean Value Theorem}{196}{subsubsection.13.8.2.4}%
-\contentsline {subsubsection}{\numberline {13.8.2.5}Indeterminate Form Limit}{196}{subsubsection.13.8.2.5}%
-\contentsline {subsection}{\numberline {13.8.3}Extrema Problems and Optimization}{196}{subsection.13.8.3}%
-\contentsline {chapter}{\numberline {14}integral calculus}{197}{chapter.14}%
-\contentsline {section}{\numberline {14.1}Fundamentals of Integration}{198}{section.14.1}%
-\contentsline {subsection}{\numberline {14.1.1}Definition of the Integral}{198}{subsection.14.1.1}%
-\contentsline {subsection}{\numberline {14.1.2}Properties of Integrals}{198}{subsection.14.1.2}%
-\contentsline {subsection}{\numberline {14.1.3}The Fundamental Theorem of Calculus}{198}{subsection.14.1.3}%
-\contentsline {section}{\numberline {14.2}Techniques of Integration}{198}{section.14.2}%
-\contentsline {subsection}{\numberline {14.2.1}Basic Integration Formulas}{198}{subsection.14.2.1}%
-\contentsline {subsection}{\numberline {14.2.2}Integration by Substitution}{198}{subsection.14.2.2}%
-\contentsline {subsection}{\numberline {14.2.3}Integration by Parts}{198}{subsection.14.2.3}%
-\contentsline {subsection}{\numberline {14.2.4}Trigonometric Integrals}{198}{subsection.14.2.4}%
-\contentsline {subsection}{\numberline {14.2.5}Partial Fractions}{198}{subsection.14.2.5}%
-\contentsline {section}{\numberline {14.3}Applications of Integration}{198}{section.14.3}%
-\contentsline {subsection}{\numberline {14.3.1}Area Under Curves}{198}{subsection.14.3.1}%
-\contentsline {subsection}{\numberline {14.3.2}Volumes of Solids of Revolution}{198}{subsection.14.3.2}%
-\contentsline {subsection}{\numberline {14.3.3}Arc Length and Surface Area}{198}{subsection.14.3.3}%
-\contentsline {subsection}{\numberline {14.3.4}Center of Mass and Moments}{198}{subsection.14.3.4}%
-\contentsline {section}{\numberline {14.4}Improper Integrals}{198}{section.14.4}%
-\contentsline {subsection}{\numberline {14.4.1}Convergence and Divergence of Improper Integrals}{198}{subsection.14.4.1}%
-\contentsline {subsection}{\numberline {14.4.2}Applications of Improper Integrals}{198}{subsection.14.4.2}%
-\contentsline {section}{\numberline {14.5}Numerical Integration Methods}{198}{section.14.5}%
-\contentsline {subsection}{\numberline {14.5.1}The Trapezoidal Rule}{198}{subsection.14.5.1}%
-\contentsline {subsection}{\numberline {14.5.2}Simpson's Rule}{198}{subsection.14.5.2}%
-\contentsline {chapter}{\numberline {15}Differential Equation}{199}{chapter.15}%
-\contentsline {chapter}{\numberline {16}Infinite Series}{201}{chapter.16}%
-\contentsline {part}{\numberline {IV}Multi-variable and Vector Calculus}{203}{part.4}%
-\contentsline {chapter}{\numberline {17}integral calculus}{205}{chapter.17}%
-\contentsline {chapter}{\numberline {18}Introduction to Multivariable Functions}{207}{chapter.18}%
-\contentsline {subsection}{\numberline {18.0.1}Concepts of Multivariable Functions}{207}{subsection.18.0.1}%
-\contentsline {subsection}{\numberline {18.0.2}Graphs and Contour Plots}{207}{subsection.18.0.2}%
-\contentsline {chapter}{\numberline {19}Partial Derivatives}{209}{chapter.19}%
-\contentsline {subsection}{\numberline {19.0.1}Definition and Interpretation}{209}{subsection.19.0.1}%
-\contentsline {subsection}{\numberline {19.0.2}Higher-Order Partial Derivatives}{209}{subsection.19.0.2}%
-\contentsline {subsection}{\numberline {19.0.3}Chain Rule in Multiple Variables}{209}{subsection.19.0.3}%
-\contentsline {chapter}{\numberline {20}Multiple Integrals}{211}{chapter.20}%
-\contentsline {subsection}{\numberline {20.0.1}Double Integrals}{211}{subsection.20.0.1}%
-\contentsline {subsubsection}{\numberline {20.0.1.1}Iterated Integrals}{211}{subsubsection.20.0.1.1}%
-\contentsline {subsubsection}{\numberline {20.0.1.2}Double Integrals over General Regions}{211}{subsubsection.20.0.1.2}%
-\contentsline {subsection}{\numberline {20.0.2}Triple Integrals}{211}{subsection.20.0.2}%
-\contentsline {subsubsection}{\numberline {20.0.2.1}Cylindrical and Spherical Coordinates}{211}{subsubsection.20.0.2.1}%
-\contentsline {chapter}{\numberline {21}Vector Calculus}{213}{chapter.21}%
-\contentsline {section}{\numberline {21.1}Vector Fields}{213}{section.21.1}%
-\contentsline {section}{\numberline {21.2}Gradient, Divergence, and Curl}{213}{section.21.2}%
-\contentsline {section}{\numberline {21.3}Line and Surface Integrals}{213}{section.21.3}%
-\contentsline {part}{\numberline {V}Linear Algebra}{215}{part.5}%
-\contentsline {chapter}{\numberline {22}Vectors Space and the Geometry of Space}{217}{chapter.22}%
-\contentsline {chapter}{\numberline {23}Matrices and Systems of Equations}{219}{chapter.23}%
-\contentsline {chapter}{\numberline {24}Determinant of Matrix}{221}{chapter.24}%
-\contentsline {chapter}{\numberline {25}Orthogonality}{223}{chapter.25}%
-\contentsline {chapter}{\numberline {26}Linear Transformations}{225}{chapter.26}%
-\contentsline {chapter}{\numberline {27}Eigenvalues and Eigenvector}{227}{chapter.27}%
-\contentsline {chapter}{\numberline {28}Singular Value Decomposition}{229}{chapter.28}%
-\contentsline {chapter}{\numberline {29}Complex Vector and Matrices}{231}{chapter.29}%
-\contentsline {chapter}{\numberline {30}Matrix Differential Calculus}{233}{chapter.30}%
-\contentsline {part}{\numberline {VI}Probability and Combinatorics}{235}{part.6}%
-\contentsline {chapter}{\numberline {31}Counting Method and Basic Combinatorics}{237}{chapter.31}%
-\contentsline {chapter}{\numberline {32}Probability Theorems}{239}{chapter.32}%
-\contentsline {chapter}{\numberline {33}Discrete Distribution}{241}{chapter.33}%
-\contentsline {chapter}{\numberline {34}Continuous Distribution}{243}{chapter.34}%
-\contentsline {chapter}{\numberline {35}Joint Cumulative Distribution}{245}{chapter.35}%
-\contentsline {chapter}{\numberline {36}Joint Cumulative Distribution}{247}{chapter.36}%
-\contentsline {chapter}{\numberline {37}Limit Theory in Probability}{249}{chapter.37}%
-\contentsline {chapter}{\numberline {38}Stochastic Process}{251}{chapter.38}%
-\contentsline {part}{\numberline {VII}Statistics}{253}{part.7}%
-\contentsline {chapter}{\numberline {39}Sampling and Parameters}{255}{chapter.39}%
-\contentsline {chapter}{\numberline {40}Descriptive Statistics}{257}{chapter.40}%
-\contentsline {chapter}{\numberline {41}Graphical Statistics}{259}{chapter.41}%
-\contentsline {chapter}{\numberline {42}Statistical Inference}{261}{chapter.42}%
-\contentsline {section}{\numberline {42.1}Parameter Estimation}{261}{section.42.1}%
-\contentsline {section}{\numberline {42.2}Interval Estimation}{261}{section.42.2}%
-\contentsline {section}{\numberline {42.3}Hypothesis Testing}{261}{section.42.3}%
-\contentsline {section}{\numberline {42.4}Variance Inference}{261}{section.42.4}%
-\contentsline {section}{\numberline {42.5}Bayesian Inference}{261}{section.42.5}%
-\contentsline {chapter}{\numberline {43}Hypothesis Testing}{263}{chapter.43}%
-\contentsline {chapter}{\numberline {44}Regression and Regressive Analysis}{265}{chapter.44}%
-\contentsline {chapter}{\numberline {45}Basic Multi-variable Statistical analysis}{267}{chapter.45}%
-\contentsline {part}{\numberline {VIII}Information Theory}{269}{part.8}%
-\contentsline {chapter}{\numberline {46}Measuring of Information}{271}{chapter.46}%
-\contentsline {chapter}{\numberline {47}Information Entropy}{273}{chapter.47}%
-\contentsline {chapter}{\numberline {48}Joined Entropy and Conditional Entropy}{275}{chapter.48}%
-\contentsline {chapter}{\numberline {49}Cross Entropy and Relative Entropy}{277}{chapter.49}%
-\contentsline {chapter}{\numberline {50}Mutual Information}{279}{chapter.50}%
-\contentsline {chapter}{\numberline {51}Differential Entropy}{281}{chapter.51}%
+\contentsline {subsection}{\numberline {7.1.3}Exercises}{166}{subsection.7.1.3}%
+\contentsline {section}{\numberline {7.2}Number Representations and Algorithms}{168}{section.7.2}%
+\contentsline {subsection}{\numberline {7.2.1}Representations of Numbers and Base Conversion}{168}{subsection.7.2.1}%
+\contentsline {subsection}{\numberline {7.2.2}Base Conversion}{169}{subsection.7.2.2}%
+\contentsline {subsection}{\numberline {7.2.3}Operation Algorithms of Number}{171}{subsection.7.2.3}%
+\contentsline {subsection}{\numberline {7.2.4}Exercises}{175}{subsection.7.2.4}%
+\contentsline {section}{\numberline {7.3}Primes and Greatest Common Divisors}{175}{section.7.3}%
+\contentsline {subsection}{\numberline {7.3.1}Primes and Trial Division}{175}{subsection.7.3.1}%
+\contentsline {subsection}{\numberline {7.3.2}Manipulation of Primes}{175}{subsection.7.3.2}%
+\contentsline {subsection}{\numberline {7.3.3}Greatest Common Divisors and Least Common Multiples}{175}{subsection.7.3.3}%
+\contentsline {subsection}{\numberline {7.3.4}Greatest Common Divisors as Linear Combinations}{175}{subsection.7.3.4}%
+\contentsline {chapter}{\numberline {8}Search and Sorting with Further Algorithm Analysis}{177}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Searching algorithms}{177}{section.8.1}%
+\contentsline {subsection}{\numberline {8.1.1}Searching in Unordered Array List}{177}{subsection.8.1.1}%
+\contentsline {subsection}{\numberline {8.1.2}Searching in Ordered Array List}{178}{subsection.8.1.2}%
+\contentsline {subsection}{\numberline {8.1.3}Binary Search: Version 2}{183}{subsection.8.1.3}%
+\contentsline {paragraph}{Step 1.}{184}{paragraph*.4}%
+\contentsline {paragraph}{Step 2.}{184}{paragraph*.5}%
+\contentsline {paragraph}{Step 3.}{184}{paragraph*.6}%
+\contentsline {subsection}{\numberline {8.1.4}Exercises}{188}{subsection.8.1.4}%
+\contentsline {chapter}{\numberline {9}Graph Theory}{191}{chapter.9}%
+\contentsline {part}{\numberline {III}Single-variable Calculus}{193}{part.3}%
+\contentsline {chapter}{\numberline {10}Function Monotonicity, Parity and Periodicity}{195}{chapter.10}%
+\contentsline {section}{\numberline {10.1}Monotonicity of Function}{195}{section.10.1}%
+\contentsline {section}{\numberline {10.2}Parity of Function}{195}{section.10.2}%
+\contentsline {section}{\numberline {10.3}Periodicity of Function}{195}{section.10.3}%
+\contentsline {chapter}{\numberline {11}Abstract and Piece-wise Function}{197}{chapter.11}%
+\contentsline {section}{\numberline {11.1}Abstract Function}{197}{section.11.1}%
+\contentsline {section}{\numberline {11.2}Piece-wise Function}{197}{section.11.2}%
+\contentsline {chapter}{\numberline {12}Limit and Continuity}{199}{chapter.12}%
+\contentsline {section}{\numberline {12.1}Limit of Sequence}{199}{section.12.1}%
+\contentsline {section}{\numberline {12.2}limit of Function}{199}{section.12.2}%
+\contentsline {section}{\numberline {12.3}Continuity}{199}{section.12.3}%
+\contentsline {section}{\numberline {12.4}Application of Limit}{199}{section.12.4}%
+\contentsline {chapter}{\numberline {13}Differential Calculus}{201}{chapter.13}%
+\contentsline {section}{\numberline {13.1}Derivative Basics}{202}{section.13.1}%
+\contentsline {subsection}{\numberline {13.1.1}Definition of Derivative}{202}{subsection.13.1.1}%
+\contentsline {subsection}{\numberline {13.1.2}Geometric Meaning of Derivative}{202}{subsection.13.1.2}%
+\contentsline {subsection}{\numberline {13.1.3}Physical Meaning of Derivative}{202}{subsection.13.1.3}%
+\contentsline {section}{\numberline {13.2}Basic Derivative Rules}{202}{section.13.2}%
+\contentsline {subsection}{\numberline {13.2.1}Derivatives of Elementary Functions}{202}{subsection.13.2.1}%
+\contentsline {subsection}{\numberline {13.2.2}Product Rule, Quotient Rule, Chain Rule}{202}{subsection.13.2.2}%
+\contentsline {section}{\numberline {13.3}Higher-order Derivatives}{202}{section.13.3}%
+\contentsline {subsection}{\numberline {13.3.1}Second-order Derivatives and Applications}{202}{subsection.13.3.1}%
+\contentsline {subsection}{\numberline {13.3.2}Calculation and Significance of Higher-order Derivatives}{202}{subsection.13.3.2}%
+\contentsline {section}{\numberline {13.4}Derivatives of Abnormal Function}{202}{section.13.4}%
+\contentsline {subsection}{\numberline {13.4.1}Derivatives of Implicit Functions}{202}{subsection.13.4.1}%
+\contentsline {subsection}{\numberline {13.4.2}Derivatives of Parametric Equations}{202}{subsection.13.4.2}%
+\contentsline {section}{\numberline {13.5}Differentiation}{202}{section.13.5}%
+\contentsline {section}{\numberline {13.6}Related Rates}{202}{section.13.6}%
+\contentsline {subsection}{\numberline {13.6.1}Relationships between Rates of Change of Different Quantities}{202}{subsection.13.6.1}%
+\contentsline {section}{\numberline {13.7}Taylor Series}{202}{section.13.7}%
+\contentsline {subsection}{\numberline {13.7.1}Taylor Expansion of Functions}{202}{subsection.13.7.1}%
+\contentsline {subsection}{\numberline {13.7.2}Application of Taylor Series}{202}{subsection.13.7.2}%
+\contentsline {section}{\numberline {13.8}Applications of Differential Calculus}{202}{section.13.8}%
+\contentsline {subsection}{\numberline {13.8.1}Tangents and Normals of Curves}{202}{subsection.13.8.1}%
+\contentsline {subsection}{\numberline {13.8.2}Mean Value Theorem in Differential Calculus}{202}{subsection.13.8.2}%
+\contentsline {subsubsection}{\numberline {13.8.2.1}Fermat's Theorem}{202}{subsubsection.13.8.2.1}%
+\contentsline {subsubsection}{\numberline {13.8.2.2}Rolle's Theorem}{202}{subsubsection.13.8.2.2}%
+\contentsline {subsubsection}{\numberline {13.8.2.3}Lagrange's Mean Value Theorem}{202}{subsubsection.13.8.2.3}%
+\contentsline {subsubsection}{\numberline {13.8.2.4}Cauchy's Mean Value Theorem}{202}{subsubsection.13.8.2.4}%
+\contentsline {subsubsection}{\numberline {13.8.2.5}Indeterminate Form Limit}{202}{subsubsection.13.8.2.5}%
+\contentsline {subsection}{\numberline {13.8.3}Extrema Problems and Optimization}{202}{subsection.13.8.3}%
+\contentsline {chapter}{\numberline {14}integral calculus}{203}{chapter.14}%
+\contentsline {section}{\numberline {14.1}Fundamentals of Integration}{204}{section.14.1}%
+\contentsline {subsection}{\numberline {14.1.1}Definition of the Integral}{204}{subsection.14.1.1}%
+\contentsline {subsection}{\numberline {14.1.2}Properties of Integrals}{204}{subsection.14.1.2}%
+\contentsline {subsection}{\numberline {14.1.3}The Fundamental Theorem of Calculus}{204}{subsection.14.1.3}%
+\contentsline {section}{\numberline {14.2}Techniques of Integration}{204}{section.14.2}%
+\contentsline {subsection}{\numberline {14.2.1}Basic Integration Formulas}{204}{subsection.14.2.1}%
+\contentsline {subsection}{\numberline {14.2.2}Integration by Substitution}{204}{subsection.14.2.2}%
+\contentsline {subsection}{\numberline {14.2.3}Integration by Parts}{204}{subsection.14.2.3}%
+\contentsline {subsection}{\numberline {14.2.4}Trigonometric Integrals}{204}{subsection.14.2.4}%
+\contentsline {subsection}{\numberline {14.2.5}Partial Fractions}{204}{subsection.14.2.5}%
+\contentsline {section}{\numberline {14.3}Applications of Integration}{204}{section.14.3}%
+\contentsline {subsection}{\numberline {14.3.1}Area Under Curves}{204}{subsection.14.3.1}%
+\contentsline {subsection}{\numberline {14.3.2}Volumes of Solids of Revolution}{204}{subsection.14.3.2}%
+\contentsline {subsection}{\numberline {14.3.3}Arc Length and Surface Area}{204}{subsection.14.3.3}%
+\contentsline {subsection}{\numberline {14.3.4}Center of Mass and Moments}{204}{subsection.14.3.4}%
+\contentsline {section}{\numberline {14.4}Improper Integrals}{204}{section.14.4}%
+\contentsline {subsection}{\numberline {14.4.1}Convergence and Divergence of Improper Integrals}{204}{subsection.14.4.1}%
+\contentsline {subsection}{\numberline {14.4.2}Applications of Improper Integrals}{204}{subsection.14.4.2}%
+\contentsline {section}{\numberline {14.5}Numerical Integration Methods}{204}{section.14.5}%
+\contentsline {subsection}{\numberline {14.5.1}The Trapezoidal Rule}{204}{subsection.14.5.1}%
+\contentsline {subsection}{\numberline {14.5.2}Simpson's Rule}{204}{subsection.14.5.2}%
+\contentsline {chapter}{\numberline {15}Differential Equation}{205}{chapter.15}%
+\contentsline {chapter}{\numberline {16}Infinite Series}{207}{chapter.16}%
+\contentsline {part}{\numberline {IV}Multi-variable and Vector Calculus}{209}{part.4}%
+\contentsline {chapter}{\numberline {17}integral calculus}{211}{chapter.17}%
+\contentsline {chapter}{\numberline {18}Introduction to Multivariable Functions}{213}{chapter.18}%
+\contentsline {subsection}{\numberline {18.0.1}Concepts of Multivariable Functions}{213}{subsection.18.0.1}%
+\contentsline {subsection}{\numberline {18.0.2}Graphs and Contour Plots}{213}{subsection.18.0.2}%
+\contentsline {chapter}{\numberline {19}Partial Derivatives}{215}{chapter.19}%
+\contentsline {subsection}{\numberline {19.0.1}Definition and Interpretation}{215}{subsection.19.0.1}%
+\contentsline {subsection}{\numberline {19.0.2}Higher-Order Partial Derivatives}{215}{subsection.19.0.2}%
+\contentsline {subsection}{\numberline {19.0.3}Chain Rule in Multiple Variables}{215}{subsection.19.0.3}%
+\contentsline {chapter}{\numberline {20}Multiple Integrals}{217}{chapter.20}%
+\contentsline {subsection}{\numberline {20.0.1}Double Integrals}{217}{subsection.20.0.1}%
+\contentsline {subsubsection}{\numberline {20.0.1.1}Iterated Integrals}{217}{subsubsection.20.0.1.1}%
+\contentsline {subsubsection}{\numberline {20.0.1.2}Double Integrals over General Regions}{217}{subsubsection.20.0.1.2}%
+\contentsline {subsection}{\numberline {20.0.2}Triple Integrals}{217}{subsection.20.0.2}%
+\contentsline {subsubsection}{\numberline {20.0.2.1}Cylindrical and Spherical Coordinates}{217}{subsubsection.20.0.2.1}%
+\contentsline {chapter}{\numberline {21}Vector Calculus}{219}{chapter.21}%
+\contentsline {section}{\numberline {21.1}Vector Fields}{219}{section.21.1}%
+\contentsline {section}{\numberline {21.2}Gradient, Divergence, and Curl}{219}{section.21.2}%
+\contentsline {section}{\numberline {21.3}Line and Surface Integrals}{219}{section.21.3}%
+\contentsline {part}{\numberline {V}Linear Algebra}{221}{part.5}%
+\contentsline {chapter}{\numberline {22}Vectors Space and the Geometry of Space}{223}{chapter.22}%
+\contentsline {chapter}{\numberline {23}Matrices and Systems of Equations}{225}{chapter.23}%
+\contentsline {chapter}{\numberline {24}Determinant of Matrix}{227}{chapter.24}%
+\contentsline {chapter}{\numberline {25}Orthogonality}{229}{chapter.25}%
+\contentsline {chapter}{\numberline {26}Linear Transformations}{231}{chapter.26}%
+\contentsline {chapter}{\numberline {27}Eigenvalues and Eigenvector}{233}{chapter.27}%
+\contentsline {chapter}{\numberline {28}Singular Value Decomposition}{235}{chapter.28}%
+\contentsline {chapter}{\numberline {29}Complex Vector and Matrices}{237}{chapter.29}%
+\contentsline {chapter}{\numberline {30}Matrix Differential Calculus}{239}{chapter.30}%
+\contentsline {part}{\numberline {VI}Probability and Combinatorics}{241}{part.6}%
+\contentsline {chapter}{\numberline {31}Counting Method and Basic Combinatorics}{243}{chapter.31}%
+\contentsline {chapter}{\numberline {32}Probability Theorems}{245}{chapter.32}%
+\contentsline {chapter}{\numberline {33}Discrete Distribution}{247}{chapter.33}%
+\contentsline {chapter}{\numberline {34}Continuous Distribution}{249}{chapter.34}%
+\contentsline {chapter}{\numberline {35}Joint Cumulative Distribution}{251}{chapter.35}%
+\contentsline {chapter}{\numberline {36}Joint Cumulative Distribution}{253}{chapter.36}%
+\contentsline {chapter}{\numberline {37}Limit Theory in Probability}{255}{chapter.37}%
+\contentsline {chapter}{\numberline {38}Stochastic Process}{257}{chapter.38}%
+\contentsline {part}{\numberline {VII}Statistics}{259}{part.7}%
+\contentsline {chapter}{\numberline {39}Sampling and Parameters}{261}{chapter.39}%
+\contentsline {chapter}{\numberline {40}Descriptive Statistics}{263}{chapter.40}%
+\contentsline {chapter}{\numberline {41}Graphical Statistics}{265}{chapter.41}%
+\contentsline {chapter}{\numberline {42}Statistical Inference}{267}{chapter.42}%
+\contentsline {section}{\numberline {42.1}Parameter Estimation}{267}{section.42.1}%
+\contentsline {section}{\numberline {42.2}Interval Estimation}{267}{section.42.2}%
+\contentsline {section}{\numberline {42.3}Hypothesis Testing}{267}{section.42.3}%
+\contentsline {section}{\numberline {42.4}Variance Inference}{267}{section.42.4}%
+\contentsline {section}{\numberline {42.5}Bayesian Inference}{267}{section.42.5}%
+\contentsline {chapter}{\numberline {43}Hypothesis Testing}{269}{chapter.43}%
+\contentsline {chapter}{\numberline {44}Regression and Regressive Analysis}{271}{chapter.44}%
+\contentsline {chapter}{\numberline {45}Basic Multi-variable Statistical analysis}{273}{chapter.45}%
+\contentsline {part}{\numberline {VIII}Information Theory}{275}{part.8}%
+\contentsline {chapter}{\numberline {46}Measuring of Information}{277}{chapter.46}%
+\contentsline {chapter}{\numberline {47}Information Entropy}{279}{chapter.47}%
+\contentsline {chapter}{\numberline {48}Joined Entropy and Conditional Entropy}{281}{chapter.48}%
+\contentsline {chapter}{\numberline {49}Cross Entropy and Relative Entropy}{283}{chapter.49}%
+\contentsline {chapter}{\numberline {50}Mutual Information}{285}{chapter.50}%
+\contentsline {chapter}{\numberline {51}Differential Entropy}{287}{chapter.51}%
 \contentsfinish 

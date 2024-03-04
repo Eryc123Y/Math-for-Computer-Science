@@ -95,11 +95,7 @@ division produce an integer as result, while sometimes not. We define division a
     The quotient is $93\ \textbf{div}\ 9 = 10 = \lfloor93/9\rfloor = \lfloor10.3333\dots \rfloor = 10$
 
     The remainder is $93\ \textbf{mod}\ 9 = 3 = 93 - 90$
-    \begin{problem}
-        Is it possible for the remainder to be negative?
-    \end{problem}
-    In most cases, we see positive remainder, as if it were the only possibility. However, we can
-    refute this using one example.
+    
     \begin{example}
         What are the quotient and remainder when -93 is divided by 9?
     \end{example}
@@ -147,10 +143,96 @@ division produce an integer as result, while sometimes not. We define division a
     \end{theorem}
     The proof is similar and not complex, try to prove it in the exercise.
 
+    \begin{theorem}
+        Let $m$ be a positive integer. If $a \equiv b \pmod{m}$ and $c \equiv d \pmod{m}$, then
+        \begin{equation*}
+            a + c \equiv b + d \pmod{m}
+        \end{equation*}
+        and
+        \begin{equation*}
+            ac \equiv bd \pmod{m}.
+        \end{equation*}
+        \end{theorem}
+        
+        \begin{proof}
+        We use a direct proof. Because $a \equiv b \pmod{m}$ and $c \equiv d \pmod{m}$, by Theorem 4 there are integers $s$ and $t$ with $b = a + sm$ and $d = c + tm$. Hence,
+        \begin{align*}
+            b + d &= (a + sm) + (c + tm) = (a + c) + m(s + t)
+        \end{align*}
+        and
+        \begin{align*}
+            bd &= (a + sm)(c + tm) = ac + m(at + cs + stm).
+        \end{align*}
+        Hence,
+        \begin{equation*}
+            a + c \equiv b + d \pmod{m}
+        \end{equation*}
+        and
+        \begin{equation*}
+            ac \equiv bd \pmod{m}.
+        \end{equation*}
+        \end{proof}
+        
+        \begin{example}
+        Because $7 \equiv 2 \pmod{5}$ and $11 \equiv 1 \pmod{5}$, it follows that
+        \begin{equation*}
+            18 = 7 + 11 \equiv 2 + 1 = 3 \pmod{5}
+        \end{equation*}
+        and that
+        \begin{equation*}
+            77 = 7 \cdot 11 \equiv 2 \cdot 1 = 2 \pmod{5}.
+        \end{equation*}
+        \end{example}
 
+        \begin{corollary}
+            Let $m$ be a positive integer and let $a$ and $b$ be integers. Then
+            \begin{equation*}
+                (a + b) \bmod m = ((a \bmod m) + (b \bmod m)) \bmod m
+            \end{equation*}
+            and
+            \begin{equation*}
+                ab \bmod m = ((a \bmod m)(b \bmod m)) \bmod m.
+            \end{equation*}
+            \end{corollary}
+            
+            \begin{proof}
+            By the definitions of $\bmod$ and of congruence modulo $m$, we know that $a \equiv (a \bmod m) \pmod{m}$ and $b \equiv (b \bmod m) \pmod{m}$. Hence,
+            \begin{equation*}
+                a + b \equiv (a \bmod m) + (b \bmod m) \pmod{m}
+            \end{equation*}
+            and
+            \begin{equation*}
+                ab \equiv (a \bmod m)(b \bmod m) \pmod{m}.
+            \end{equation*}
+            The equalities in this corollary follow from these last two congruence.
+            \end{proof}
 
+            We can define arithmetic operations on \( \mathbb{Z}_m \), the set of nonnegative integers less than \( m \), that is, the set \( \{0, 1, \ldots, m - 1\} \). In particular, we define addition of these integers, denoted by \( \oplus_m \), by
+        \[
+        a \oplus_m b = (a + b) \bmod m,
+        \]
+        where the addition on the right-hand side of this equation is the ordinary addition of integers, and we define multiplication of these integers, denoted by \( \odot_m \), by
+        \[
+        a \odot_m b = (a \cdot b) \bmod m,
+        \]
+        where the multiplication on the right-hand side of this equation is the ordinary multiplication of integers. The operations \( \oplus_m \) and \( \odot_m \) are called addition and multiplication modulo \( m \) and when we use these operations, we are said to be doing arithmetic modulo \( m \).
 
+        \begin{example}
+        Use the definition of addition and multiplication in \( \mathbb{Z}_m \) to find \( 7 \oplus_{11} 9 \) and \( 7 \odot_{11} 9 \).
 
+        \textbf{Solution:} Using the definition of addition modulo 11, we find that
+        \[
+        7 \oplus_{11} 9 = (7 + 9) \bmod 11 = 16 \bmod 11 = 5,
+        \]
+        and
+        \[
+        7 \odot_{11} 9 = (7 \cdot 9) \bmod 11 = 63 \bmod 11 = 8.
+        \]
+        Hence, \( 7 \oplus_{11} 9 = 5 \) and \( 7 \odot_{11} 9 = 8 \).
+        \end{example}
+        \begin{remark}
+            sometimes, normal notations are also used to express this calculation with subscript.
+        \end{remark}
 
 
     \subsection{Exercises}
@@ -216,8 +298,37 @@ division produce an integer as result, while sometimes not. We define division a
         Therefore, we have proven that for any positive integer $a$, the expression $a^2 + 2$ is not divisible by $4$.
     \end{proof}
 
+    \begin{exercise}
+        Suppose that \( a \) and \( b \) are integers, \( a \equiv 11 \mod{19} \), and \( b \equiv 3 \mod{19} \). 
+        Find the integer \( c \) with \( 0 \leq c \leq 18 \) such that
+        \begin{enumerate}
+            \item \( c \equiv 13a \mod{19} \).
+            \item \( c \equiv 8b \mod{19} \).
+            \item \( c \equiv a - b \mod{19} \).
+            \item \( c \equiv 7a + 3b \mod{19} \).
+            \item \( c \equiv 2a^2 + 3b^2 \mod{19} \).
+            \item \( c \equiv a^3 + 4b^3 \mod{19} \).
+        \end{enumerate}
+    \end{exercise}
 
-    \section{Number Representations and Algorithms}
+    \textbf{Solution:} This problem is equivalent to asking for the right-hand side mod 19. So we just do the arithmetic and compute the remainder upon division by 19.
+    \begin{enumerate}
+        \item \( 13 \cdot 11 = 143 \equiv 10 \mod{19} \)
+        \item \( 8 \cdot 3 = 24 \equiv 5 \mod{19} \)
+        \item \( 11 - 3 = 8 \mod{19} \)
+        \item \( 7 \cdot 11 + 3 \cdot 3 = 86 \equiv 10 \mod{19} \)
+        \item \( 2 \cdot 11^2 + 3 \cdot 3^2 = 269 \equiv 3 \mod{19} \)
+        \item \( 11^3 + 4 \cdot 3^3 = 1439 \equiv 14 \mod{19} \)
+    \end{enumerate}
+
+    \begin{exercise}
+        Let \( m \) be a positive integer. Show that \( a \mod m = b \mod m \) if \( a \equiv b \pmod{m} \).
+    \end{exercise}
+    \begin{proof}
+        Assume that \( a \equiv b \pmod{m} \). This means that \( m \mid a - b \), say \( a - b = mc \), so that \( a = b + mc \). Now let us compute \( a \mod m \). We know that \( b = qm + r \) for some nonnegative \( r \) less than \( m \) (namely, \( r = b \mod m \)). Therefore, we can write \( a = qm + r + mc = (q + c)m + r \). By definition, this means that \( r \) must also equal \( a \mod m \). That is what we wanted to prove.
+    \end{proof}
+
+\section{Number Representations and Algorithms}
     In everyday life, we use decimal notation to express integers. Though this is not
     for all cases, as we are using a 60 base system for time. However, in computer science, binary, octal, and hexadecimal
     systems are widely used for number representation. The reason is that binary system consist of 
@@ -329,7 +440,7 @@ until we obtain a quotient equal to zero. This algorithm produces the base $b$ d
 
 \begin{algorithm}
 \caption{Convert a floating-point number to a different base}
-\begin{algorithmic}[1]
+\begin{algorithmic}[H]
 \Function{ConvertFloatToBase}{$number$, $targetBase$}
     \State $integerPart \gets \lfloor number \rfloor$
     \State $fractionalPart \gets number - integerPart$
@@ -393,7 +504,7 @@ that we just learned? The general base conversion algorithm could be simplified 
 where $n$ denotes the number to be converted and $b$ is the target base.
 \begin{algorithm}
     \caption{Constructing Base \( b \) Expansions}
-    \begin{algorithmic}[1]
+    \begin{algorithmic}[H]
     \Procedure{base \( b \) expansion}{$n, b$: positive integers with $b > 1$}
     \State $q \gets n$
     \State $k \gets 0$
@@ -407,19 +518,146 @@ where $n$ denotes the number to be converted and $b$ is the target base.
     \end{algorithmic}
     \end{algorithm}
     \subsection{Operation Algorithms of Number}
-        
+        This section discusses algorithm of basic operation between numbers, of base2. 
+        In section, we express the binary number in the form of 
+        $$a=(a_{n-1}a_{n-2}\ldots a_1a_0)_2,b=(b_{n-1}b_{n-2}\ldots b_1b_0)_2$$
+        where $a$ and $b$ each have n bits.
     \subsubsection*{Addition Algorithm}
+    Consider the problem of adding two integers in binary notation. A procedure to perform addition can be based on the usual method for adding numbers with pencil and paper. This method proceeds by adding pairs of binary digits together with carries, when they occur, to compute the sum of two integers. This procedure will now be specified in detail.
 
+    To add \( a \) and \( b \), first add their rightmost bits. This gives
+    \[
+    a_0 + b_0 = c_0 \cdot 2 + s_0,
+    \]
+    where \( s_0 \) is the rightmost bit in the binary expansion of \( a + b \) and \( c_0 \) is the carry, which is either 0 or 1. Then add the next pair of bits and the carry,
+    \[
+    a_1 + b_1 + c_0 = c_1 \cdot 2 + s_1,
+    \]
+    where \( s_1 \) is the next bit (from the right) in the binary expansion of \( a + b \), and \( c_1 \) is the carry. Continue this process, adding the corresponding bits in the two binary expansions and the carry, to determine the next bit from the right in the binary expansion of \( a + b \). At the last stage, add \( a_{n-1} \), \( b_{n-1} \), and \( c_{n-2} \) to obtain \( c_{n-1} \cdot 2 + s_{n-1} \). The leading bit of the sum is \( s_n = c_{n-1} \). This procedure produces the binary expansion of the sum, namely, \( a + b = (s_n s_{n-1} \ldots s_1 s_0)_2 \).
+    Consider the binary addition of two numbers, \( 1011_2 \) and \( 1101_2 \).
+
+The addition process is similar to that used in decimal addition, but it is performed in base 2. Below is the columnar addition process:
+
+\begin{center}
+\begin{tabular}{ r >{$}r<{$} }
+   & 1011_2 \\
+  +& 1101_2 \\
+  \hline
+   & 11000_2 \\
+\end{tabular}
+\end{center}
+
+Let's perform the addition step by step:
+
+\begin{enumerate}
+    \item Start with the rightmost bits (least significant bits). Add \( 1 + 1 \). Since this is base 2, \( 1 + 1 = 10_2 \). Write down the \( 0 \) and carry the \( 1 \) over to the next column.
+    \item Move to the next column. Add \( 1 + 0 + 1 \) (including the carry). This equals \( 10_2 \). Write down the \( 0 \) and carry the \( 1 \).
+    \item In the next column, add \( 0 + 1 + 1 \). This equals \( 10_2 \). Write down the \( 0 \) and carry the \( 1 \).
+    \item For the leftmost bits (most significant bits), add \( 1 + 1 + 1 \). This equals \( 11_2 \). Write down the \( 1 \) and carry the \( 1 \) to a new column to the left.
+    \item Write down the carry.
+\end{enumerate}
+The final result is \( 11000_2 \).
+
+This algorithm's pseudocode is as listed below.
+\begin{algorithm}
+    \caption{Addition of Integers}
+    \begin{algorithmic}[H]
+    \Procedure{add}{$a, b$: positive integers}
+    \State {the binary expansions of $a$ and $b$ are $(a_{n-1}a_{n-2}\ldots a_1a_0)_2$}
+    \State {and $(b_{n-1}b_{n-2}\ldots b_1b_0)_2$, respectively}
+    \State $c \gets 0$
+    \For{$j \gets 0$ \textbf{to} $n-1$}
+        \State $d \gets \left\lfloor (a_j + b_j + c)/2 \right\rfloor$
+        \State $s_j \gets a_j + b_j + c - 2d$
+        \State $c \gets d$
+    \EndFor
+    \State $s_n \gets c$
+    \State \textbf{return} $(s_{n}s_{n-1}\ldots s_1s_0)_2$ \Comment{the binary expansion of the sum}
+    \EndProcedure
+    \end{algorithmic}
+    \end{algorithm}
+
+    
+    \textbf{Time Complexity:}
+    The time complexity of the binary addition algorithm is \( O(n) \), where \( n \) is the number of bits in the binary representation of the inputs.
+    \begin{proof}
+        Consider the binary addition algorithm which consists of a single loop that iterates \( n \) times, where \( n \) is the number of bits in the binary representations of the two integers being added.
+        
+        Within the loop, the algorithm performs a constant number of operations for each bit:
+        \begin{itemize}
+            \item An addition of the \( j \)-th bits of the two numbers \( a_j + b_j \).
+            \item An addition of the carry from the previous step \( c \).
+            \item A division by 2 to compute the new carry \( d \).
+            \item A subtraction to determine the \( j \)-th bit of the sum \( s_j \).
+            \item An assignment of the new carry \( c \gets d \).
+        \end{itemize}
+        
+        Since each of these operations has a constant time complexity, and they are all executed once for each bit, the overall time complexity of the loop is linear with respect to the number of bits. Therefore, the time complexity of the entire algorithm is \( O(n) \).
+        
+        Note that this analysis assumes that basic arithmetic operations (addition, division by 2, subtraction) can be performed in constant time.
+        \end{proof}
     \subsubsection*{Multiplication Algorithm}
+        Using the same representation of binary number $a$ and $b$, we can define binary multiplication
+        as $$\begin{aligned}a b & =a\left(b_{0} 2^{0}+b_{1} 2^{1}+\cdots+b_{n-1} 2^{n-1}\right) \\& =a\left(b_{0} 2^{0}\right)+a\left(b_{1} 2^{1}\right)+\cdots+a\left(b_{n-1} 2^{n-1}\right)\end{aligned}$$.
+        The binary multiplication algorithm works similarly to traditional pencil-and-paper multiplication, but with binary digits. Given two binary numbers, we multiply each bit of the second number by the first number, shifting the result left for each subsequent bit.
+        \begin{algorithm}
+            \caption{Addition of Integers}
+            \begin{algorithmic}
+            \Procedure{ADD}{$a, b$: positive integers}
+                \State {the binary expansions of $a$ and $b$ are $(a_{n-1}a_{n-2}\ldots a_1a_0)_2$}
+                \State {and $(b_{n-1}b_{n-2}\ldots b_1b_0)_2$, respectively}
+                \State $c \gets 0$
+                \For {$j \gets 0 \text{ to } n-1$}
+                    \State $d \gets \left\lfloor (a_j + b_j + c)/2 \right\rfloor$
+                    \State $s_j \gets a_j + b_j + c - 2d$
+                    \State $c \gets d$
+                \EndFor
+                \State $s_n \gets c$
+                \State \Return $(s_{n}s_{n-1}\ldots s_1s_0)_2$ \Comment{the binary expansion of the sum}
+            \EndProcedure
+            \end{algorithmic}
+            \end{algorithm}
 
+        \begin{example}
+            \textbf{Find the product of \( a = (110)_2 \) and \( b = (101)_2 \).}
+            First note that
+            \begin{align*}
+            a \cdot b_0 \cdot 2^0 &= (110)_2 \cdot 1 \cdot 2^0 = (110)_2, \\
+            a \cdot b_1 \cdot 2^1 &= (110)_2 \cdot 0 \cdot 2^1 = (0000)_2, \\
+            \text{and} \\
+            a \cdot b_2 \cdot 2^2 &= (110)_2 \cdot 1 \cdot 2^2 = (11000)_2.
+            \end{align*}
+            To find the product, add \( (110)_2, (0000)_2, \) and \( (11000)_2 \). Carrying out these additions (using Algorithm 2, including initial zero bits when necessary) shows that \( ab = (11110)_2 \).
+
+        \textbf{Time Complexity:} The time complexity of binary multiplication is \(O(n^2)\), where \(n\) is the number of bits in the binary numbers. This is because each bit of one number is multiplied by each bit of the other number, resulting in \(n\) multiplications for each of the \(n\) bits.
+        \end{example}
     \subsubsection*{Algorithm for Div and Mod}
-
-    \subsection{Modular Exponentiation}
-
+        The following algorithm is used to find the quotient and remainder of $a \div b$.
+        This is a more general algorithm as it could handle the cases where a is negative
+    \begin{algorithm}
+        \caption{Computing div and mod.}
+        \begin{algorithmic}
+        \Procedure{division\_algorithm}{$a$: integer, $d$: positive integer}
+            \State $q \gets 0$
+            \State $r \gets |a|$
+            \While{$r \geq d$}
+                \State $r \gets r - d$
+                \State $q \gets q + 1$
+            \EndWhile
+            \If{$a < 0$ \textbf{and} $r > 0$}
+                \State $r \gets d - r$
+                \State $q \gets -(q + 1)$
+            \EndIf
+            \State \Return $(q, r)$ \Comment{$q = a \div d$ is the quotient, $r = a \mod d$ is the remainder}
+        \EndProcedure
+        \end{algorithmic}
+        \end{algorithm}
+    %\subsection{Modular Exponentiation}
+        
     \subsection{Exercises}
 
 
-    \section{Primes and Greatest Common Divisors}
+\section{Primes and Greatest Common Divisors}
 
     \subsection{Primes and Trial Division}
 
