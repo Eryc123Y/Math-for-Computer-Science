@@ -653,15 +653,157 @@ This algorithm's pseudocode is as listed below.
         \end{algorithmic}
         \end{algorithm}
     %\subsection{Modular Exponentiation}
-        
+
     \subsection{Exercises}
 
 
 \section{Primes and Greatest Common Divisors}
+        In previous chapter, we learned the properties of division and divisibility, as well as
+        modular arithmetic. These are the most essential parts of the whole number theory. In this section
+        , we will discuss primes and its property. Prime is not something unfamiliar to us, since some may
+        even have learned that from the kindergarten or primary school. We will look into the Algorithms
+        that could help is find primes and delve into the algebraic properties of prime later. All these
+        are foundations of cryptography.
+    \subsection{Primes and Related Algorithms}
+        To learn prime, of course we need to recap on its definition.
+        \begin{definition}[Prime Number]  
+            An integer $p$ greater than 1 is called prime if the only positive factors of $p$ are 1 and $p$.
+            A positive integer that is greater than 1 and is not prime is called \textbf{composite}.
+        \end{definition}    
+        Note that, by this definition, 1 is not a prime, as it is only 1 as the only factor.
 
-    \subsection{Primes and Trial Division}
+        The reason why prime numbers are so fascinating to mathematicians is that they have so many
+        interesting and unique property, even except for what we have seen in its definition. Below is what we call the fundamental theorem of arithmetic.
+        \begin{theorem}[The Fundamental Theorem of Arithmetic]
+            For every integer $n > 1$, there exists a unique factorization into prime numbers, up to the order of the factors. Specifically, $n$ can be expressed as
+            \[ n = p_1^{a_1} \cdot p_2^{a_2} \cdot \ldots \cdot p_k^{a_k} \]
+            where $p_1 < p_2 < \ldots < p_k$ are prime numbers and $a_1, a_2, \ldots, a_k$ are positive integers. This factorization is unique, apart from the order of the prime factors.
+        \end{theorem}
+        \begin{proof}
+            We prove the theorem in two parts: existence and uniqueness.
+            
+            \textbf{Existence:} We prove by mathematical induction that every integer greater than 1 can be written as a product of primes.
+            
+            \textit{Base Case:} For $n = 2$, the statement holds true since 2 is itself a prime number.
+            
+            \textit{Inductive Step:} Assume the statement holds for all integers greater than 1 and less than $n$. Now consider the integer $n$.
+            \begin{itemize}
+                \item If $n$ is prime, then it is trivially a product of primes (itself).
+                \item If $n$ is not prime, it can be written as $n = a \cdot b$ where $1 < a, b < n$. By the inductive hypothesis, both $a$ and $b$ can be factored into a product of primes. Therefore, $n$ can also be expressed as a product of primes by combining the prime factorization of $a$ and $b$.
+            \end{itemize}
+            This completes the proof of existence.
+            
+            \textbf{Uniqueness:} Assume, for the sake of contradiction, that there are two distinct prime factorization of $n$:
+            \[ n = p_1^{a_1} \cdot p_2^{a_2} \cdot \ldots \cdot p_k^{a_k} = q_1^{b_1} \cdot q_2^{b_2} \cdot \ldots \cdot q_m^{b_m} \]
+            where $p_i$ and $q_j$ are prime numbers, and $a_i, b_j$ are positive integers.
+            To proceed to the rest of the proof, we need to use Euclid's lemma.
 
-    \subsection{Manipulation of Primes}
+            \textbf{lemma:}
+
+                Let \(p\) be a prime number. If \(p\) divides the product \(ab\), where \(a\) and \(b\) are integers, then \(p\) divides \(a\) or \(p\) divides \(b\).
+            \begin{proof}
+                Assume \(p\) is a prime that divides \(ab\) but does not divide \(a\). We need to show that \(p\) must divide \(b\).
+
+                Since \(p\) does not divide \(a\), the greatest common divisor (gcd) of \(a\) and \(p\) is 1, i.e., \(\text{gcd}(a, p) = 1\). According to Bezout's identity, there exist integers \(x\) and \(y\) such that:
+
+                \[ax + py = 1\]
+
+                Multiplying both sides of the equation by \(b\), we get:
+
+                \[abx + pby = b\]
+                \begin{remark}
+                    If this proof is not yet understandable for you, skip it, and check it back after we go over the rest of this chapter about linear combination of primes.
+                \end{remark}
+                Since \(p\) divides \(ab\) (by assumption), \(p\) divides \(abx\). Also, \(p\) obviously divides \(pby\). Hence, \(p\) divides the sum \(abx + pby\), which means \(p\) divides \(b\).
+
+                This completes the proof, showing that if \(p\) divides \(ab\) and does not divide \(a\), then \(p\) must divide \(b\), in accordance with Euclid's lemma.
+            \end{proof}
+            By Euclid's lemma, if a prime divides the product of two numbers, it must divide at least one of those numbers. Thus, $p_1$ must divide some $q_j$ on the right-hand side. Since $q_j$ is prime, we conclude that $p_1 = q_j$. Applying this argument symmetrically and repeatedly, we find that each set of prime factors must be identical to the other, contradicting the assumption of two distinct factorization.
+            
+            Therefore, the prime factorization of any integer greater than 1 is unique, up to the order of the factors, which completes the proof of the Fundamental Theorem of Arithmetic.
+            \end{proof}
+            
+        \begin{example}
+            100 can be taken as $100 = 2\cdot 2\cdot 5\cdot 5 = 2^2\cdot 5^2$.
+            Both 2 and 5 are primes.
+        \end{example}
+
+        Now that we know these interesting properties of prime and its significance, how do we find
+        primes, not just correctly, but also efficiently? The most basic algorithm that anyone
+        could find is that we can actually check numbers one by one. To find whether an integer $n$ is prime, what we need to do is to check every number from 2 to $n-1$, and use them to divide $n$ one by one. If anyone of them divides $n$, then $n$ is not prime, and vice versa.
+        \subsubsection*{Trial Division}
+        We actually can apply a more efficient way to determine whether an integer is prime or not.
+        Considering the following theorem.
+        \begin{theorem}
+            If \( n \) is a composite integer, then \( n \) has a prime divisor less than or equal to \( \sqrt{n} \).
+        \end{theorem}
+        \begin{proof}
+            If \( n \) is composite, by the definition of a composite integer, we know that it has a factor \( a \) with \( 1 < a < n \). Hence, by the definition of a factor of a positive integer, we have \( n = ab \), where \( b \) is a positive integer greater than 1. We will show that \( a \leq \sqrt{n} \) or \( b \leq \sqrt{n} \). If \( a > \sqrt{n} \) and \( b > \sqrt{n} \), then \( ab > \sqrt{n} \cdot \sqrt{n} = n \), which is a contradiction. Consequently, \( a \leq \sqrt{n} \) or \( b \leq \sqrt{n} \). Because both \( a \) and \( b \) are divisors of \( n \), we see that \( n \) has a positive divisor not exceeding \( \sqrt{n} \). This divisor is either prime or, by the fundamental theorem of arithmetic, has a prime divisor less than itself. In either case, \( n \) has a prime divisor less than or equal to \( \sqrt{n} \).
+            \end{proof}
+        Below is the pseudocode for this procedure.
+        \begin{algorithm}
+            \caption{Primality Test Using Trial Division}
+            \begin{algorithmic}[1]
+            
+            \Function{IsPrime}{$n$}
+                \If{$n \leq 1$}
+                    \State \Return \textbf{false}
+                \EndIf
+                \For{$i \gets 2$ \textbf{to} $n-1$}
+                    \If{$n \mod i = 0$}
+                        \State \Return \textbf{false}
+                    \EndIf
+                \EndFor
+                \State \Return \textbf{true}
+            \EndFunction
+            
+            \end{algorithmic}
+            \end{algorithm}
+        \begin{example}
+            Show that $\sqrt{105}$ is prime.
+        \end{example} 
+        textbf{Solution:} Primes less than $\sqrt{105}$ are 2, 3, 5, 7. 101 is not divisible
+        by any of them, so it is not composite, and thus it is prime.
+
+        We also need an efficient algorithm to factorize a give number to primes. Here is how is
+        works. It works as follows.
+        \begin{algorithm}
+            \caption{Prime Factorization}
+            \begin{algorithmic}[H]
+            
+            \Function{PrimeFactorization}{$n$}
+                \State $factors \gets \text{an empty list}$
+                \For{$p \gets 2$ \textbf{to} $\infty$}
+                    \While{$n \mod p == 0$}
+                        \State Add $p$ to $factors$
+                        \State $n \gets n / p$
+                    \EndWhile
+                    \If{$p > n / p$}
+                        \State \textbf{break}
+                    \EndIf
+                \EndFor
+                \If{$n > 1$}
+                    \State Add $n$ to $factors$
+                \EndIf
+                \State \Return $factors$
+            \EndFunction
+            
+            \end{algorithmic}
+            \end{algorithm}
+        \begin{example}
+            Find the prime factorization of 8964.
+        \end{example}
+        \textbf{Solution:}
+
+        \begin{enumerate}
+            \item 8964 is even, so start with 2: \( 8964 \div 2 = 4482 \).
+            \item 4482 is also even, divide by 2 again: \( 4482 \div 2 = 2241 \).
+            \item 2241 is not divisible by 2. The next primes to try are 3, 5, 7, 11, and so on. We find that 2241 is not divisible by any of these primes until we reach 31.
+            \item 2241 divided by 31 gives us 71, which is a prime number.
+        \end{enumerate}
+        
+        Thus, the prime factorization of 8964 is \( 2 \times 2 \times 31 \times 71 \), or in exponent form, \( 2^2 \times 31 \times 71 \).
+
 
     \subsection{Greatest Common Divisors and Least Common Multiples}
 
