@@ -804,8 +804,81 @@ This algorithm's pseudocode is as listed below.
         
         Thus, the prime factorization of 8964 is \( 2 \times 2 \times 31 \times 71 \), or in exponent form, \( 2^2 \times 31 \times 71 \).
 
+        There are also other method to finding prime numbers or tell whether a number is prime or not. If you are willing
+        to delve into it, you may check \href{https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes}{Sieve of Eratosthenes}, 
+        \href{https://en.wikipedia.org/wiki/Sieve_of_Atkin}{Sieve of Ktkin}. These are only small part of all possible method,
+        which we will learn later, such as Fermat's Little Theorem in solving congruence, as well as Monte Carlo method in probability.
 
     \subsection{Greatest Common Divisors and Least Common Multiples}
+        Now we will discuss yet another primary school topic, GCD and LCM. Briefyly recap their definitions:
+        \begin{definition}[Greatest Common Divisior]
+            Let $a$ and $b$ be integers, not both zero. The largest integer $d$ such that $d \mid a$ and 
+            $d \mid b $ is called the greatest common divisor of $a$ and $b$. The greatest common divisor of 
+            $a$ and $b$ is denoted by gcd$(a, b)$.
+        \end{definition}
+
+    \begin{example}
+        Find gcd$(12, 24)$ and gcd$(17, 22)$.
+
+        These are easy-to-solve problems. The largest number that divides 12 and 24 is 6, so gcd$(12,24)=6$,while 
+        17 and 22 do not have common divisor other than 1, so gcd$(17, 22)=1$.
+    \end{example}
+
+    For 17 and 22, we have gcd$(17, 22)=1$. In this case, we call that they are \textbf{Relatively Prime}, because
+    their greatest common divisor is 1.
+
+    We can generalize this idea to pairwise Relatively prime.
+    \begin{definition}[Pairwise Relatively Prime]
+        The integers $a_1,a_2,...,a_n$ are pairwise relatively prime if $\gcd(a_i,a_j)=1$ whenever $1\leq i<$ $j\leq n.$
+    \end{definition}
+    For example, 9, 16, 23 are pairwise relatively prime, becuase gcd$(9,16)=0$, gcd$(9,23)=0$, gcd$(16,23)=0$. So we could
+    say that a sequence of number is pairwise relatively prime if and only if any combination of 2 of the numbers in The
+    sequence $a$, $b$, has gcd $(a,b)=1$.
+
+    The other way to find gcd of two number is using their prime factorization. Suppose that the prime factorizations of the positive integers $a$ and 
+    $b$ are $$a=p_1^{a_1}p_2^{a_2}\cdots p_n^{a_n},b=p_1^{b_1}p_2^{b_2}\cdots p_n^{b_n},$$.
+    where each exponent is a nonnegative integer, and where all primes occurring in the prime factorization of either 
+    $a$ or $b$ are included in both factorizations, with zero exponents if necessary. Then gcd$(a, b)$ is given by
+    $$\gcd(a,b)=p_1^{\min(a_1,b_1)}p_2^{\min(a_2,b_2)}\cdotp\cdotp\cdotp p_n^{\min(a_n,b_n)},$$
+    where $\min(x,y)$ represents the minimum of the two numbers $x$ and y. To show that this formula for 
+    $\gcd(a,b)$ is valid, we must show that the integer on the right-hand side divides both $a$ and $b$, and that no larger integer also does. This integer does divide both $\alpha$ and $b$, because the power of each prime in the factorization does not exceed the power of this prime in either the factorization of $a$ or that of $b$. Further, no larger integer can divide both $\alpha$ and $b$, because the exponents of the primes in this factorization cannot be increased, and no other primes can be included.
+    \begin{example}
+        Find $\gcd(100, 250)$.
+
+        $$\gcd(120,500)=2^{\min(3,2)}3^{\min(1,0)}5^{\min(1,3)}=2^23^05^1=20.$$
+    \end{example}  
+
+    This method could be finetuned to find the least common multiple of two integers. Still according to the fundamental
+    theorem of arithmetic, every integer could find a unique factorization as product of prime numbers.
+    \begin{definition}
+        The least common multiple of the positive integers $a$ and $b$ is the smallest positive integer that is 
+        divisible by both $a$ and $b$. The least common multiple of $a$ and $b$ is denoted by lcm$(a, b)$.
+    \end{definition}
+        Suppose the prime factorizations of \(a\) and \(b\) are given by
+        \[ a = p_1^{a_1} p_2^{a_2} \ldots p_n^{a_n}, \quad b = p_1^{b_1} p_2^{b_2} \ldots p_n^{b_n}, \]
+        where \(a_i\) and \(b_i\) are the exponents of the prime factors of \(a\) and \(b\), respectively.
+
+        The product \(ab\) can be expressed as a prime factorization:
+        \[ ab = p_1^{a_1+b_1} p_2^{a_2+b_2} \ldots p_n^{a_n+b_n}. \]
+
+        From this, we can deduce that any common multiple of \(a\) and \(b\) must be a product of their prime factors raised to at least the maximum exponent found in either \(a\) or \(b\). Therefore, the \(\text{lcm}(a, b)\) can be expressed as
+        \[ \text{lcm}(a, b) = p_1^{\max(a_1,b_1)} p_2^{\max(a_2,b_2)} \ldots p_n^{\max(a_n,b_n)}. \]
+        This ensures that \(\text{lcm}(a, b)\) is divisible by both \(a\) and \(b\), and it is the smallest such number with this property.
+
+    \begin{example}
+        Find lcm$(120, 500)$.
+        $$\text{lcm}(120,500)=2^{\max(2,3)}3^{\max(1,0)}5^{\max(1,3)} = 8\times 3 \times 125= 3000$$
+    \end{example}
+
+    Have you noticed, that $ab$ is actually the product of $\text{lcm}(a,b)$ and $\gcd(a,b)$? Becuase the order of each
+    term in the prime factorization of $ab$ is a sum of two number, what ever which number is the maximum of the minimum,
+    we always have the order of $a_n+b_n$. For 120 and 500 we have 
+    $$ab = 120\times 500 = 60000 = \text{lcm}(a,b)\times \gcd(a,b) = 3000\times 20$$
+
+    \begin{theorem}
+        Let $a$ and $b$ be positive integers. Then $ab= \gcd ( a, b) \cdot $lcm$( a, b).$
+    \end{theorem}
+
 
     \subsubsection*{The Euclidean Algorithm}
 

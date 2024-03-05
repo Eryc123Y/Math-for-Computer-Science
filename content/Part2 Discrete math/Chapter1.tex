@@ -250,6 +250,40 @@
 
         This is actually not yet a complete table of Boolean Identities, two laws are still missing
         from the table, because they are relevant to secondary operator, one of which is already mentioned($\oplus$).
+
+        With these basic Boolean laws, we can derive more interesting and useful theorems. A commonly used theorem when simplifying
+        Boolean expression is concensus (or also called redundancy) theorem.
+        \begin{theorem}[Concensus Theorem]
+            The Consensus Theorem helps simplifying Boolean expressions by eliminating a redundant term, and like other laws, it has both
+            OR and AND form. 
+            It states that for any Boolean variables $x$, $y$, and $z$:
+            \begin{equation*}
+                xy\lor\bar{x}z\lor yz=xy\lor\bar{x}z
+            \end{equation*}
+            Which is equivalent to
+            \begin{equation*}
+                (x\lor y)(\bar{x}\lor z)(y\lor z)=(x\lor y)(\bar{x}\lor z)
+            \end{equation*}
+        \end{theorem}
+        \begin{proof}
+            $$\begin{aligned}
+                xy\lor\bar{x}z\lor yz& =xy\lor\bar{x}z\lor(x\lor\bar{x})yz  \\
+                &=xy\lor\bar{x}z\lor xyz\lor\bar{x}yz \\
+                &=(xy\lor xyz)\lor(\bar{x}z\lor\bar{x}yz) \\
+                &=xy(1\lor z)\lor\bar{x}z(1\lor y) \\
+                &=xy\lor\bar{x}z
+                \end{aligned}$$
+            Or in another notation.
+            $$\begin{aligned}
+                xy + \overline{x}z + yz &= xy + \overline{x}z + (x + \overline{x})yz \\
+                &= xy + \overline{x}z + xyz + \overline{x}yz \\
+                &= (xy + xyz) + (\overline{x}z + \overline{x}yz) \\
+                &= xy(1 + z) + \overline{x}z(1 + y) \\
+                &= xy + \overline{x}z
+                \end{aligned}$$
+        \end{proof}
+
+
         \subsubsection*{Secondary Boolean Operators}
         \begin{definition}[Secondary Boolean Operators]
             Secondary operators are derived from basic operators:
@@ -540,6 +574,22 @@
             $(y\rightarrow x)\land(x\rightarrow y)$, which can also be understood as $x$ and $y$
             cannot be true of false in the same time.
         \end{proof}
+
+        \begin{exercise}
+            Show that the concensus theorem's two forms are equivalent.
+                $$xy\lor\bar{x}z\lor yz=xy\lor\bar{x}z$$
+            and
+                $$(x\lor y)(\bar{x}\lor z)(y\lor z)=(x\lor y)(\bar{x}\lor z)$$
+            are equivalent.
+        \end{exercise}
+        \textbf{Solution:}
+        We can simplify the product form to the standard form easily.
+        \begin{align*}
+            (x \lor y)(\overline{x} \lor z)(y \lor z) &= x\overline{x} \lor xz \lor y\overline{x} \lor yz \lor xy \lor xz \lor y^2 \lor yz \\
+            &= 0 \lor xz \lor y\overline{x} \lor yz \lor xy \lor xz \lor y \lor yz \\
+            &= xz \lor y\overline{x} \lor yz \lor xy \\
+            &= xy \lor xz \lor y\overline{x}
+        \end{align*}
 
     \section{Predicates and Quantifiers}
 
