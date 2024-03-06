@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2023.3.5)  5 MAR 2024 15:44
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2023.3.5)  6 MAR 2024 16:24
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1037,7 +1037,8 @@ Package: wrapfig 2003/01/31  v 3.6
 LaTeX Font Info:    Trying to load font information for T1+ptm on input line 66.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
-) (./main.aux)
+)
+No file main.aux.
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 66.
@@ -1050,7 +1051,7 @@ LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 66.
 LaTeX Font Info:    ... okay on input line 66.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 66.
 LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 66.
- (/usr/local/texlive/2022/texmf-dist/tex/latex/base/ts1cmr.fd
+(/usr/local/texlive/2022/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2022/07/10 v2.5l Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 66.
@@ -1129,10 +1130,14 @@ Package biblatex Info: ... file 'main.bbl' found.
 Package biblatex Info: Reference section=0 on input line 66.
 Package biblatex Info: Reference segment=0 on input line 66.
 Package hyperref Info: Link coloring ON on input line 66.
+
+
+Package hyperref Warning: Rerun to get /PageLabels entry.
+
 File: Images//background.pdf Graphic file (type pdf)
 <use Images//background.pdf>
 LaTeX Font Info:    Trying to load font information for T1+pag on input line 81.
- (/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/t1pag.fd
+(/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/t1pag.fd
 File: t1pag.fd 2001/06/04 font definitions for T1/pag.
 )
 Package microtype Info: Loading generic protrusion settings for font family
@@ -1213,87 +1218,34 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17.28> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 107.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 107.
- (./main.toc
-LaTeX Font Info:    Font shape `T1/pag/b/n' in size <17.28> not available
-(Font)              Font shape `T1/pag/db/n' tried instead on input line 1.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1.
 
-Overfull \hbox (390.95769pt too wide) detected at line 1
-[][][][][][] [][][][][][] 
- []
-
-LaTeX Font Info:    Font shape `T1/pag/b/n' in size <14.4> not available
-(Font)              Font shape `T1/pag/db/n' tried instead on input line 2.
-LaTeX Font Info:    Font shape `T1/pag/b/n' in size <12> not available
-(Font)              Font shape `T1/pag/db/n' tried instead on input line 2.
-[3
-
-] [4]
-Overfull \hbox (390.95769pt too wide) detected at line 82
-[][][][][][] [][][][][][] 
- []
-
-
-Overfull \hbox (390.95769pt too wide) detected at line 117
-[][][][][][] [][][][][][] 
- []
-
-[5] [6]
-Overfull \hbox (390.95769pt too wide) detected at line 183
-[][][][][][] [][][][][][] 
- []
-
-[7]
-Overfull \hbox (390.95769pt too wide) detected at line 202
-[][][][][][] [][][][][][] 
- []
-
-
-Overfull \hbox (390.95769pt too wide) detected at line 212
-[][][][][][] [][][][][][] 
- []
-
-[8]
-Overfull \hbox (390.95769pt too wide) detected at line 221
-[][][][][][] [][][][][][] 
- []
-
-
-Overfull \hbox (390.95769pt too wide) detected at line 234
-[][][][][][] [][][][][][] 
- []
-
-)
+No file main.toc.
 \tf@toc=\write6
 \openout6 = `main.toc'.
 
- [9] [10
+[3
+
+] [4
 
 ]
 File: Images//orange1.jpg Graphic file (type bmp)
 <Images//orange1.jpg>
- (./main.lof
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 4.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 4.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 4.
-)
+
+No file main.lof.
 \tf@lof=\write7
 \openout7 = `main.lof'.
 
- [11] [12
+[5] [6
 
 ]
 File: Images//orange1.jpg Graphic file (type bmp)
 <Images//orange1.jpg>
- (./main.lot)
+
+No file main.lot.
 \tf@lot=\write8
 \openout8 = `main.lot'.
 
- [13] [14
+[7] [8
 
 ]
 \c@ttl@toc@part=\count485
@@ -1301,9 +1253,16 @@ LaTeX Font Info:    Font shape `T1/pag/b/n' in size <220> not available
 (Font)              Font shape `T1/pag/db/n' tried instead on input line 121.
 LaTeX Font Info:    Font shape `T1/pag/b/n' in size <30> not available
 (Font)              Font shape `T1/pag/db/n' tried instead on input line 121.
- (./main.ptc) [15
+ (./main.ptc
+LaTeX Font Info:    Font shape `T1/pag/b/n' in size <14.4> not available
+(Font)              Font shape `T1/pag/db/n' tried instead on input line 3.
+LaTeX Font Info:    Font shape `T1/pag/b/n' in size <17.28> not available
+(Font)              Font shape `T1/pag/db/n' tried instead on input line 3.
+LaTeX Font Info:    Font shape `T1/pag/b/n' in size <12> not available
+(Font)              Font shape `T1/pag/db/n' tried instead on input line 3.
+) [9
 
-] [16] (./content/part1 Intro/Chapter1.tex
+] [10] (./content/part1 Intro/Chapter1.tex
 Chapter 1.
 File: Images//chap1.png Graphic file (type bmp)
 <Images//chap1.png>
@@ -1313,7 +1272,10 @@ Package mdframed Info: mdframed detected package amsthm
 (mdframed)              on input line 21.
 LaTeX Font Info:    Font shape `T1/pag/b/n' in size <10.95> not available
 (Font)              Font shape `T1/pag/db/n' tried instead on input line 21.
-[17
+
+LaTeX Warning: Reference `mdf@pagelabel-1' on page 11 undefined on input line 24.
+
+[11
 
 ]
 
@@ -1323,19 +1285,27 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[18]
+[12]
 LaTeX Font Info:    Font shape `T1/pag/b/n' in size <6> not available
 (Font)              Font shape `T1/pag/db/n' tried instead on input line 78.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 78.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 78.
 Package mdframed Info: mdframed works in twoside mode on input line 100.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 100.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-2' on page 13 undefined on input line 102.
+
 Package mdframed Info: mdframed works in twoside mode on input line 114.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 114.
+
+LaTeX Warning: Reference `mdf@pagelabel-3' on page 13 undefined on input line 116.
 
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
@@ -1344,29 +1314,38 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[19]
+[13]
 Package mdframed Info: mdframed works in twoside mode on input line 129.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 129.
 
 
+LaTeX Warning: Reference `mdf@pagelabel-4' on page 14 undefined on input line 131.
+
+
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.49998pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[20]
+[14]
 Package mdframed Info: mdframed works in twoside mode on input line 198.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 198.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-5' on page 15 undefined on input line 200.
+
 Package mdframed Info: mdframed works in twoside mode on input line 213.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 213.
 
+LaTeX Warning: Reference `mdf@pagelabel-6' on page 15 undefined on input line 215.
+
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1374,16 +1353,22 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[21]
+[15]
 Package mdframed Info: mdframed works in twoside mode on input line 231.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 231.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-7' on page 16 undefined on input line 233.
+
 Package mdframed Info: mdframed works in twoside mode on input line 248.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 248.
 
+LaTeX Warning: Reference `mdf@pagelabel-8' on page 16 undefined on input line 252.
+
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1391,7 +1376,7 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[22]
+[16]
 Overfull \hbox (9.16408pt too wide) in paragraph at lines 316--317
 []\T1/ptm/m/n/12 Use log-i-cal rea-son-ing and es-tab-lished math-e-mat-i-cal prin-ci-ples to de-rive con-se-quences
  []
@@ -1403,48 +1388,67 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[23]
+[17]
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 328.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 328.
 Package mdframed Info: mdframed works in twoside mode on input line 359.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 359.
 
 
+LaTeX Warning: Reference `mdf@pagelabel-9' on page 18 undefined on input line 361.
+
+
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.49998pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[24]
+[18]
 Package mdframed Info: mdframed works in twoside mode on input line 406.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 406.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-10' on page 19 undefined on input line 408.
+
 Package mdframed Info: mdframed works in twoside mode on input line 420.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 420.
 Package mdframed Info: Not enough space on this page on input line 422.
 
-
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.49998pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[25]
+[19]
 Package mdframed Info: Not enough space on this page on input line 422.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-11' on page 20 undefined on input line 422.
+
 Package mdframed Info: mdframed works in twoside mode on input line 434.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 434.
+
+LaTeX Warning: Reference `mdf@pagelabel-12' on page 20 undefined on input line 436.
+
 Package mdframed Info: mdframed works in twoside mode on input line 450.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 450.
 
+LaTeX Warning: Reference `mdf@pagelabel-13' on page 20 undefined on input line 452.
+
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1452,7 +1456,7 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[26]
+[20]
 Missing character: There is no “ ("201C) in font ptmr8t!
 Missing character: There is no ” ("201D) in font ptmr8t!
 Missing character: There is no “ ("201C) in font ptmr8t!
@@ -1465,10 +1469,16 @@ Package mdframed Info: mdframed works in twoside mode on input line 492.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 492.
+
+LaTeX Warning: Reference `mdf@pagelabel-14' on page 21 undefined on input line 494.
+
 Package mdframed Info: mdframed works in twoside mode on input line 507.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 507.
+
+LaTeX Warning: Reference `mdf@pagelabel-15' on page 21 undefined on input line 509.
+
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1476,29 +1486,38 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[27]
+[21]
 Package mdframed Info: mdframed works in twoside mode on input line 524.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 524.
 
 
+LaTeX Warning: Reference `mdf@pagelabel-16' on page 22 undefined on input line 526.
+
+
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.49998pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[28]
+[22]
 Package mdframed Info: mdframed works in twoside mode on input line 564.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 564.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-17' on page 23 undefined on input line 570.
+
 Package mdframed Info: mdframed works in twoside mode on input line 601.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 601.
 
+LaTeX Warning: Reference `mdf@pagelabel-18' on page 23 undefined on input line 607.
+
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1506,20 +1525,23 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[29]
+[23]
 Package mdframed Info: mdframed works in twoside mode on input line 654.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 654.
 
 
+LaTeX Warning: Reference `mdf@pagelabel-19' on page 24 undefined on input line 656.
+
+
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.49998pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[30]
+[24]
 Package mdframed Info: mdframed works in twoside mode on input line 691.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
@@ -1536,18 +1558,29 @@ Package mdframed Info: mdframed detected package amsthm
 Package mdframed Info: mdframed inside a box 
  mdframed uses option nobreak mdframed on input line 699.
 
+LaTeX Warning: Reference `mdf@pagelabel-20' on page 25 undefined on input line 699.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-21' on page 25 undefined on input line 701.
+
+
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.49998pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[31]
+[25]
+
+LaTeX Warning: Reference `mdf@pagelabel-22' on page 26 undefined on input line 701.
+
 Package mdframed Info: mdframed works in twoside mode on input line 722.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 722.
 
+LaTeX Warning: Reference `mdf@pagelabel-23' on page 26 undefined on input line 727.
+
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1555,33 +1588,39 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[32]
+[26]
 Package mdframed Info: mdframed works in twoside mode on input line 781.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 781.
 
 
+LaTeX Warning: Reference `mdf@pagelabel-24' on page 27 undefined on input line 786.
+
+
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.49998pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[33]
+[27]
 Package mdframed Info: mdframed works in twoside mode on input line 813.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 813.
 
 
+LaTeX Warning: Reference `mdf@pagelabel-25' on page 28 undefined on input line 817.
+
+
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.49998pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[34]
+[28]
 Overfull \hbox (4.99652pt too wide) in paragraph at lines 845--846
 []\T1/ptm/m/n/12 To sim-plify the right-hand side, fac-tor out the com-mon term $\OT1/ztmcm/m/n/12 (\OML/ztmcm/m/it/12 k \OT1/ztmcm/m/n/12 + 1)(\OML/ztmcm/m/it/12 k \OT1/ztmcm/m/n/12 + 2)(\OML/ztmcm/m/it/12 k \OT1/ztmcm/m/n/12 + 3) [] (\OML/ztmcm/m/it/12 k \OT1/ztmcm/m/n/12 +
  []
@@ -1591,13 +1630,8 @@ Package mdframed Info: mdframed detected package amsthm
  changed the theorem header of amsthm
 (mdframed)              on input line 857.
 
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+LaTeX Warning: Reference `mdf@pagelabel-26' on page 29 undefined on input line 868.
 
-[35]) (./content/part1 Intro/Chapter2.tex
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1605,7 +1639,19 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[36]
+[29]
+
+LaTeX Warning: Reference `mdf@pagelabel-27' on page 30 undefined on input line 868.
+
+) (./content/part1 Intro/Chapter2.tex
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[30]
 Chapter 2.
 File: Images//orange2.jpg Graphic file (type bmp)
 <Images//orange2.jpg>
@@ -1613,27 +1659,42 @@ Package mdframed Info: mdframed works in twoside mode on input line 8.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 8.
+
+LaTeX Warning: Reference `mdf@pagelabel-28' on page 31 undefined on input line 10.
+
 Package mdframed Info: mdframed works in twoside mode on input line 22.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 22.
+
+LaTeX Warning: Reference `mdf@pagelabel-29' on page 31 undefined on input line 25.
+
 Package mdframed Info: mdframed works in twoside mode on input line 29.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 29.
 Package mdframed Info: Not enough space on this page on input line 44.
-[37
+[31
 
 ]
 Package mdframed Info: Not enough space on this page on input line 44.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-30' on page 32 undefined on input line 44.
+
 Package mdframed Info: mdframed works in twoside mode on input line 46.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 46.
+
+LaTeX Warning: Reference `mdf@pagelabel-31' on page 32 undefined on input line 51.
+
 Package mdframed Info: mdframed works in twoside mode on input line 52.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 52.
+
+LaTeX Warning: Reference `mdf@pagelabel-32' on page 32 undefined on input line 54.
 
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
@@ -1642,7 +1703,7 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[38]
+[32]
 Package mdframed Info: mdframed works in twoside mode on input line 134.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
@@ -1656,28 +1717,46 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[39]
+[33]
 Package mdframed Info: Not enough space on this page on input line 136.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-33' on page 34 undefined on input line 136.
+
 Package mdframed Info: mdframed works in twoside mode on input line 140.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 140.
+
+LaTeX Warning: Reference `mdf@pagelabel-34' on page 34 undefined on input line 142.
+
 Package mdframed Info: mdframed works in twoside mode on input line 144.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 144.
+
+LaTeX Warning: Reference `mdf@pagelabel-35' on page 34 undefined on input line 154.
+
 Package mdframed Info: mdframed works in twoside mode on input line 156.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 156.
+
+LaTeX Warning: Reference `mdf@pagelabel-36' on page 34 undefined on input line 163.
+
 Package mdframed Info: mdframed works in twoside mode on input line 164.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 164.
+
+LaTeX Warning: Reference `mdf@pagelabel-37' on page 34 undefined on input line 166.
+
 Package mdframed Info: mdframed works in twoside mode on input line 167.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 167.
+
+LaTeX Warning: Reference `mdf@pagelabel-38' on page 34 undefined on input line 171.
 
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
@@ -1686,51 +1765,75 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[40]
+[34]
 Package mdframed Info: mdframed works in twoside mode on input line 185.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 185.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-39' on page 35 undefined on input line 195.
+
 Package mdframed Info: mdframed works in twoside mode on input line 197.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 197.
+
+LaTeX Warning: Reference `mdf@pagelabel-40' on page 35 undefined on input line 205.
+
 Package mdframed Info: mdframed works in twoside mode on input line 223.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 223.
 Package mdframed Info: Not enough space on this page on input line 233.
 
-
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.49998pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[41]
+[35]
 Package mdframed Info: Not enough space on this page on input line 233.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-41' on page 36 undefined on input line 233.
+
 Package mdframed Info: mdframed works in twoside mode on input line 235.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 235.
+
+LaTeX Warning: Reference `mdf@pagelabel-42' on page 36 undefined on input line 237.
+
 Package mdframed Info: mdframed works in twoside mode on input line 239.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 239.
+
+LaTeX Warning: Reference `mdf@pagelabel-43' on page 36 undefined on input line 247.
+
 Package mdframed Info: mdframed works in twoside mode on input line 249.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 249.
+
+LaTeX Warning: Reference `mdf@pagelabel-44' on page 36 undefined on input line 251.
+
 Package mdframed Info: mdframed works in twoside mode on input line 253.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 253.
+
+LaTeX Warning: Reference `mdf@pagelabel-45' on page 36 undefined on input line 255.
+
 Package mdframed Info: mdframed works in twoside mode on input line 273.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 273.
 
+LaTeX Warning: Reference `mdf@pagelabel-46' on page 36 undefined on input line 275.
+
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1738,20 +1841,29 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[42]
+[36]
 Package mdframed Info: mdframed works in twoside mode on input line 300.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 300.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-47' on page 37 undefined on input line 302.
+
 Package mdframed Info: mdframed works in twoside mode on input line 321.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 321.
+
+LaTeX Warning: Reference `mdf@pagelabel-48' on page 37 undefined on input line 325.
+
 Package mdframed Info: mdframed works in twoside mode on input line 336.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 336.
 
+LaTeX Warning: Reference `mdf@pagelabel-49' on page 37 undefined on input line 340.
+
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1759,23 +1871,36 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[43]
+[37]
 Package mdframed Info: mdframed works in twoside mode on input line 358.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 358.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-50' on page 38 undefined on input line 364.
+
 Package mdframed Info: mdframed works in twoside mode on input line 372.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 372.
+
+LaTeX Warning: Reference `mdf@pagelabel-51' on page 38 undefined on input line 374.
+
 Package mdframed Info: mdframed works in twoside mode on input line 376.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 376.
+
+LaTeX Warning: Reference `mdf@pagelabel-52' on page 38 undefined on input line 378.
+
 Package mdframed Info: mdframed works in twoside mode on input line 380.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 380.
+
+LaTeX Warning: Reference `mdf@pagelabel-53' on page 38 undefined on input line 382.
+
 File: Images/func.jpg Graphic file (type bmp)
 <Images/func.jpg>
 
@@ -1789,30 +1914,16 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[44]
+[38]
+
+LaTeX Warning: Reference `fig:fuc' on page 39 undefined on input line 391.
+
 Package mdframed Info: mdframed works in twoside mode on input line 411.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 411.
 
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
-
-[45]
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
-
-[46]
-
-Package hyperref Warning: No autoref name for `exampleT' on input line 498.
+LaTeX Warning: Reference `mdf@pagelabel-54' on page 39 undefined on input line 417.
 
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
@@ -1821,7 +1932,7 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[47]
+[39]
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1829,7 +1940,10 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[48]
+[40]
+
+LaTeX Warning: Reference `exp:siginvariance' on page 41 undefined on input line 498.
+
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1837,17 +1951,39 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[49]
+[41]
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[42]
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[43]
 Package mdframed Info: mdframed works in twoside mode on input line 618.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 618.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-55' on page 44 undefined on input line 630.
+
 Package mdframed Info: mdframed works in twoside mode on input line 645.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 645.
-
 Missing character: There is no — ("2014) in font ptmr8t!
+
+LaTeX Warning: Reference `mdf@pagelabel-56' on page 44 undefined on input line 652.
+
 Package mdframed Info: mdframed works in twoside mode on input line 665.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
@@ -1859,11 +1995,16 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[50]
+[44]
+
+LaTeX Warning: Reference `mdf@pagelabel-57' on page 45 undefined on input line 672.
+
 Package mdframed Info: mdframed works in twoside mode on input line 688.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 688.
+
+LaTeX Warning: Reference `mdf@pagelabel-58' on page 45 undefined on input line 693.
 
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
@@ -1872,11 +2013,15 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[51]
+[45]
 Package mdframed Info: mdframed works in twoside mode on input line 722.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 722.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-59' on page 46 undefined on input line 729.
+
 File: Images//mtxvis.png Graphic file (type bmp)
 <Images//mtxvis.png>
 
@@ -1890,7 +2035,7 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[52]
+[46]
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1898,47 +2043,63 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[53]
+[47]
 Package mdframed Info: mdframed works in twoside mode on input line 778.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 778.
 
 
+LaTeX Warning: Reference `mdf@pagelabel-60' on page 48 undefined on input line 781.
+
+
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.49998pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[54]
+[48]
 Package mdframed Info: mdframed works in twoside mode on input line 801.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 801.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-61' on page 49 undefined on input line 806.
+
 Package mdframed Info: mdframed works in twoside mode on input line 811.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 811.
+
+LaTeX Warning: Reference `mdf@pagelabel-62' on page 49 undefined on input line 817.
+
 Package mdframed Info: mdframed works in twoside mode on input line 835.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 835.
 Package mdframed Info: Not enough space on this page on input line 837.
 
-
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.49998pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[55]
+[49]
 Package mdframed Info: Not enough space on this page on input line 837.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-63' on page 50 undefined on input line 837.
+
 Package mdframed Info: mdframed works in twoside mode on input line 838.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 838.
+
+LaTeX Warning: Reference `mdf@pagelabel-64' on page 50 undefined on input line 841.
+
 Package mdframed Info: mdframed works in twoside mode on input line 851.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
@@ -1949,13 +2110,16 @@ Overfull \hbox (10.18764pt too wide) in paragraph at lines 852--853
  []
 
 
+LaTeX Warning: Reference `mdf@pagelabel-65' on page 50 undefined on input line 854.
+
+
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.49998pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[56]
+[50]
 Overfull \hbox (2.9369pt too wide) in paragraph at lines 882--887
 \T1/ptm/m/n/12 Geometric se-quence is the other im-por-tant and com-mon se-quence that in-volved in problem-
  []
@@ -1964,27 +2128,39 @@ Package mdframed Info: mdframed works in twoside mode on input line 887.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 887.
+
+LaTeX Warning: Reference `mdf@pagelabel-66' on page 51 undefined on input line 893.
+
 Package mdframed Info: mdframed works in twoside mode on input line 901.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 901.
 
+LaTeX Warning: Reference `mdf@pagelabel-67' on page 51 undefined on input line 903.
+
+
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.49998pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[57]
+[51]
 Package mdframed Info: mdframed works in twoside mode on input line 925.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 925.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-68' on page 52 undefined on input line 935.
+
 Package mdframed Info: mdframed works in twoside mode on input line 973.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 973.
 
+LaTeX Warning: Reference `mdf@pagelabel-69' on page 52 undefined on input line 975.
+
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1992,38 +2168,48 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[58]
+[52]
 Package mdframed Info: mdframed works in twoside mode on input line 1016.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 1016.
 
 
+LaTeX Warning: Reference `mdf@pagelabel-70' on page 53 undefined on input line 1018.
+
+
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.49998pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[59]
+[53]
 Package mdframed Info: mdframed works in twoside mode on input line 1052.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 1052.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-71' on page 54 undefined on input line 1059.
+
 Package mdframed Info: mdframed works in twoside mode on input line 1093.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 1093.
 
-
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.49998pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[60]
+[54]
 Package mdframed Info: Not enough space on this page on input line 1095.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-72' on page 55 undefined on input line 1095.
+
 
 Underfull \hbox (badness 10000) in paragraph at lines 1097--1100
 
@@ -2039,13 +2225,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 1140--1142
  []
 
 
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+LaTeX Warning: Reference `mdf@pagelabel-73' on page 55 undefined on input line 1144.
 
-[61]) (./content/part1 Intro/Chapter3.tex
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2053,11 +2234,19 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[62]
+[55]) (./content/part1 Intro/Chapter3.tex
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[56]
 Chapter 3.
 File: Images//chap2.png Graphic file (type bmp)
 <Images//chap2.png>
-[63
+[57
 
 ]
 File: Images//venn.png Graphic file (type bmp)
@@ -2070,11 +2259,15 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[64]
+[58]
 Package mdframed Info: mdframed works in twoside mode on input line 94.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 94.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-74' on page 59 undefined on input line 111.
+
 Package mdframed Info: mdframed works in twoside mode on input line 117.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
@@ -2090,18 +2283,24 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[65]
+[59]
 Package mdframed Info: Not enough space on this page on input line 130.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-75' on page 60 undefined on input line 130.
+
 Package mdframed Info: mdframed works in twoside mode on input line 131.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 131.
 
+LaTeX Warning: Reference `mdf@pagelabel-76' on page 60 undefined on input line 133.
 
-Package hyperref Warning: No autoref name for `definitionT' on input line 139.
+
+LaTeX Warning: Reference `axi:field' on page 60 undefined on input line 139.
 
 
-Package hyperref Warning: No autoref name for `definitionT' on input line 139.
+LaTeX Warning: Reference `axi:order' on page 60 undefined on input line 139.
 
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
@@ -2110,14 +2309,17 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[66]
+[60]
 Package mdframed Info: mdframed works in twoside mode on input line 193.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 193.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-77' on page 61 undefined on input line 201.
+
 File: Images//intfunc.png Graphic file (type bmp)
 <Images//intfunc.png>
-
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2125,17 +2327,23 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[67]
+[61]
 Package mdframed Info: mdframed works in twoside mode on input line 217.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 217.
 Package mdframed Info: Not enough space on this page on input line 227.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-78' on page 62 undefined on input line 227.
+
 Package mdframed Info: mdframed works in twoside mode on input line 238.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 238.
 
+LaTeX Warning: Reference `mdf@pagelabel-79' on page 62 undefined on input line 240.
+
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2143,16 +2351,22 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[68]
+[62]
 Package mdframed Info: mdframed works in twoside mode on input line 279.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 279.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-80' on page 63 undefined on input line 286.
+
 Package mdframed Info: mdframed works in twoside mode on input line 290.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 290.
 
+LaTeX Warning: Reference `mdf@pagelabel-81' on page 63 undefined on input line 294.
+
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2160,16 +2374,22 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[69]
+[63]
 Package mdframed Info: mdframed works in twoside mode on input line 350.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 350.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-82' on page 64 undefined on input line 360.
+
 Package mdframed Info: mdframed works in twoside mode on input line 375.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 375.
 
+LaTeX Warning: Reference `mdf@pagelabel-83' on page 64 undefined on input line 377.
+
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2177,16 +2397,22 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[70]
+[64]
 Package mdframed Info: mdframed works in twoside mode on input line 396.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 396.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-84' on page 65 undefined on input line 398.
+
 Package mdframed Info: mdframed works in twoside mode on input line 421.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 421.
 
+LaTeX Warning: Reference `mdf@pagelabel-85' on page 65 undefined on input line 428.
+
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2194,9 +2420,9 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[71]
+[65]
 
-Package hyperref Warning: No autoref name for `definitionT' on input line 469.
+LaTeX Warning: Reference `def:algo' on page 66 undefined on input line 469.
 
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on input line 486.
 
@@ -2210,11 +2436,14 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[72]
+[66]
 Package mdframed Info: mdframed works in twoside mode on input line 522.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 522.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-86' on page 67 undefined on input line 526.
 
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
@@ -2223,9 +2452,77 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[73]
+[67]
+
+LaTeX Warning: Reference `mdf@pagelabel-87' on page 68 undefined on input line 526.
+
 File: Images/time complexity.png Graphic file (type bmp)
 <Images/time complexity.png>
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[68]
+Package mdframed Info: mdframed works in twoside mode on input line 585.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 585.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-88' on page 69 undefined on input line 598.
+
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[69]
+
+LaTeX Warning: Reference `mdf@pagelabel-89' on page 70 undefined on input line 598.
+
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[70]) (./content/part1 Intro/Chapter4.tex
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[71] [72
+
+]
+Chapter 4.
+File: Images//orange2.jpg Graphic file (type bmp)
+<Images//orange2.jpg>
+Missing character: There is no “ ("201C) in font ptmr8t!
+Missing character: There is no ” ("201D) in font ptmr8t!
+[73]
+Package mdframed Info: mdframed works in twoside mode on input line 44.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 44.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-90' on page 74 undefined on input line 53.
+
+Package mdframed Info: mdframed works in twoside mode on input line 64.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 64.
+
+LaTeX Warning: Reference `mdf@pagelabel-91' on page 74 undefined on input line 69.
 
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
@@ -2235,60 +2532,6 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
 [74]
-Package mdframed Info: mdframed works in twoside mode on input line 585.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 585.
-
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
-
-[75]
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
-
-[76]) (./content/part1 Intro/Chapter4.tex
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
-
-[77] [78
-
-]
-Chapter 4.
-File: Images//orange2.jpg Graphic file (type bmp)
-<Images//orange2.jpg>
-Missing character: There is no “ ("201C) in font ptmr8t!
-Missing character: There is no ” ("201D) in font ptmr8t!
-[79]
-Package mdframed Info: mdframed works in twoside mode on input line 44.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 44.
-Package mdframed Info: mdframed works in twoside mode on input line 64.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 64.
-
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
-
-[80]
 File: Images//quadratic.png Graphic file (type bmp)
 <Images//quadratic.png>
 
@@ -2299,14 +2542,17 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[81]
+[75]
 Package mdframed Info: mdframed works in twoside mode on input line 117.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 117.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-92' on page 76 undefined on input line 120.
+
 File: Images//triangleablt0.png Graphic file (type bmp)
 <Images//triangleablt0.png>
-
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2314,59 +2560,73 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[82]
+[76]
 Package mdframed Info: mdframed works in twoside mode on input line 158.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 158.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-93' on page 77 undefined on input line 160.
+
 File: Images//triangle2.png Graphic file (type bmp)
 <Images//triangle2.png>
 Package mdframed Info: mdframed works in twoside mode on input line 172.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 172.
+
+LaTeX Warning: Reference `mdf@pagelabel-94' on page 77 undefined on input line 174.
+
 Package mdframed Info: mdframed works in twoside mode on input line 185.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 185.
 Package mdframed Info: Not enough space on this page on input line 188.
 
-
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.49998pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[83]
+[77]
 Package mdframed Info: Not enough space on this page on input line 188.
 
 
-Package hyperref Warning: No autoref name for `corollaryT' on input line 190.
+LaTeX Warning: Reference `mdf@pagelabel-95' on page 78 undefined on input line 188.
+
+
+LaTeX Warning: Reference `trian' on page 78 undefined on input line 190.
 
 Package mdframed Info: mdframed works in twoside mode on input line 198.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 198.
 
+LaTeX Warning: Reference `mdf@pagelabel-96' on page 78 undefined on input line 201.
+
+
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.49998pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[84]
+[78]
+
+LaTeX Warning: Reference `agm1' on page 79 undefined on input line 249.
+
 File: Images//agmx=0.png Graphic file (type bmp)
 <Images//agmx=0.png>
 
-
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.49998pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[85]
+[79]
 File: Images//agmx=5.png Graphic file (type bmp)
 <Images//agmx=5.png>
 File: Images//agm3D.png Graphic file (type bmp)
@@ -2379,7 +2639,7 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[86]
+[80]
 File: Images//agm3dsect.png Graphic file (type bmp)
 <Images//agm3dsect.png>
 Package mdframed Info: mdframed works in twoside mode on input line 318.
@@ -2394,16 +2654,28 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[87]
+[81]
 Package mdframed Info: Not enough space on this page on input line 322.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-97' on page 82 undefined on input line 322.
+
+
+LaTeX Warning: Reference `AGM' on page 82 undefined on input line 325.
+
 Package mdframed Info: mdframed works in twoside mode on input line 345.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 345.
+
+LaTeX Warning: Reference `mdf@pagelabel-98' on page 82 undefined on input line 347.
+
 Package mdframed Info: mdframed works in twoside mode on input line 354.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 354.
+
+LaTeX Warning: Reference `mdf@pagelabel-99' on page 82 undefined on input line 357.
 
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
@@ -2412,15 +2684,144 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[88]
+[82]
 Package mdframed Info: mdframed works in twoside mode on input line 376.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 376.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-100' on page 83 undefined on input line 382.
+
 Package mdframed Info: mdframed works in twoside mode on input line 394.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 394.
+
+LaTeX Warning: Reference `mdf@pagelabel-101' on page 83 undefined on input line 398.
+
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[83]
+Package mdframed Info: mdframed works in twoside mode on input line 427.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 427.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-102' on page 84 undefined on input line 431.
+
+Package mdframed Info: mdframed works in twoside mode on input line 447.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 447.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[84]
+
+LaTeX Warning: Reference `mdf@pagelabel-103' on page 85 undefined on input line 450.
+
+Package mdframed Info: mdframed works in twoside mode on input line 471.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 471.
+
+LaTeX Warning: Reference `mdf@pagelabel-104' on page 85 undefined on input line 474.
+
+Package mdframed Info: mdframed works in twoside mode on input line 494.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 494.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[85]
+Package mdframed Info: Not enough space on this page on input line 497.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-105' on page 86 undefined on input line 497.
+
+Package mdframed Info: mdframed works in twoside mode on input line 526.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 526.
+Package mdframed Info: Not enough space on this page on input line 532.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[86]
+Package mdframed Info: Not enough space on this page on input line 532.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-106' on page 87 undefined on input line 532.
+
+Package mdframed Info: mdframed works in twoside mode on input line 570.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 570.
+Package mdframed Info: Not enough space on this page on input line 575.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[87]
+Package mdframed Info: Not enough space on this page on input line 575.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-107' on page 88 undefined on input line 575.
+
+Package mdframed Info: mdframed works in twoside mode on input line 631.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 631.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[88]
+Package mdframed Info: Not enough space on this page on input line 636.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-108' on page 89 undefined on input line 636.
+
+Missing character: There is no ’ ("2019) in font ptmr8t!
+Missing character: There is no ’ ("2019) in font ptmr8t!
+
+LaTeX Warning: Reference `eq4.3' on page 89 undefined on input line 660.
+
+
+LaTeX Warning: Reference `eq4.4' on page 89 undefined on input line 660.
+
+Package mdframed Info: mdframed works in twoside mode on input line 661.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 661.
+
+LaTeX Warning: Reference `mdf@pagelabel-109' on page 89 undefined on input line 666.
 
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
@@ -2430,109 +2831,18 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
 [89]
-Package mdframed Info: mdframed works in twoside mode on input line 427.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 427.
-Package mdframed Info: mdframed works in twoside mode on input line 447.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 447.
-
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
-
-[90]
-Package mdframed Info: mdframed works in twoside mode on input line 471.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 471.
-Package mdframed Info: mdframed works in twoside mode on input line 494.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 494.
-
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
-
-[91]
-Package mdframed Info: Not enough space on this page on input line 497.
-Package mdframed Info: mdframed works in twoside mode on input line 526.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 526.
-Package mdframed Info: Not enough space on this page on input line 532.
-
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
-
-[92]
-Package mdframed Info: Not enough space on this page on input line 532.
-Package mdframed Info: mdframed works in twoside mode on input line 570.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 570.
-Package mdframed Info: Not enough space on this page on input line 575.
-
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
-
-[93]
-Package mdframed Info: Not enough space on this page on input line 575.
-Package mdframed Info: mdframed works in twoside mode on input line 631.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 631.
-
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
-
-[94]
-Package mdframed Info: Not enough space on this page on input line 636.
-
-Missing character: There is no ’ ("2019) in font ptmr8t!
-Missing character: There is no ’ ("2019) in font ptmr8t!
-Package mdframed Info: mdframed works in twoside mode on input line 661.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 661.
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
-
-[95]
 Package mdframed Info: mdframed works in twoside mode on input line 688.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 688.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-110' on page 90 undefined on input line 693.
+
 Package mdframed Info: mdframed works in twoside mode on input line 705.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 705.
-
 
 Package mdframed Warning: You got a bad break
 (mdframed)                because the last box will be empty
@@ -2544,23 +2854,37 @@ Package mdframed Info: Box was splittet wrong
  starting loop to iterate the splitting point
 (mdframed)              on input line 713.
 
+LaTeX Warning: Reference `mdf@pagelabel-111' on page 90 undefined on input line 713.
+
+
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.49998pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[96]
+[90]
+
+LaTeX Warning: Reference `mdf@pagelabel-112' on page 91 undefined on input line 713.
+
 Package mdframed Info: mdframed works in twoside mode on input line 726.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 726.
+
+LaTeX Warning: Reference `mdf@pagelabel-113' on page 91 undefined on input line 731.
+
 Package mdframed Info: mdframed works in twoside mode on input line 754.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 754.
-Package mdframed Info: Not enough space on this page on input line 757.
 
+LaTeX Warning: Reference `CSvector' on page 91 undefined on input line 755.
+
+
+LaTeX Warning: Reference `CSvec' on page 91 undefined on input line 756.
+
+Package mdframed Info: Not enough space on this page on input line 757.
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2568,32 +2892,44 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[97]
+[91]
 Package mdframed Info: Not enough space on this page on input line 757.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-114' on page 92 undefined on input line 757.
+
 Package mdframed Info: mdframed works in twoside mode on input line 761.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 761.
+
+LaTeX Warning: Reference `mdf@pagelabel-115' on page 92 undefined on input line 766.
+
 Package mdframed Info: mdframed works in twoside mode on input line 803.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 803.
 Package mdframed Info: Not enough space on this page on input line 808.
 
-
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.49998pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[98]
+[92]
 Package mdframed Info: Not enough space on this page on input line 808.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-116' on page 93 undefined on input line 808.
+
 Package mdframed Info: mdframed works in twoside mode on input line 810.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 810.
 
+LaTeX Warning: Reference `mdf@pagelabel-117' on page 93 undefined on input line 816.
+
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2601,7 +2937,7 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[99]
+[93]
 Overfull \hbox (56.33826pt too wide) detected at line 884
 \OML/ztmcm/m/it/10.95 LHS \OT1/ztmcm/m/n/10.95 = \OML/ztmcm/m/it/10.95 a[] [] \OT1/ztmcm/m/n/10.95 + \OML/ztmcm/m/it/10.95 b[] [] \OMS/ztmcm/m/n/10.95 ^^@ \OT1/ztmcm/m/n/10.95 2\OML/ztmcm/m/it/10.95 a[]b[]\OT1/ztmcm/m/n/10.95 (\OML/ztmcm/m/it/10.95 a[]b[] \OT1/ztmcm/m/n/10.95 + \OML/ztmcm/m/it/10.95 a[]b[] \OT1/ztmcm/m/n/10.95 + [] + \OML/ztmcm/m/it/10.95 a[]b[]\OT1/ztmcm/m/n/10.95 )
  []
@@ -2611,13 +2947,19 @@ Package mdframed Info: mdframed detected package amsthm
  changed the theorem header of amsthm
 (mdframed)              on input line 897.
 
+LaTeX Warning: Reference `CSineq' on page 94 undefined on input line 902.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-118' on page 94 undefined on input line 904.
+
+
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.49998pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[100]
+[94]
 Package mdframed Info: mdframed works in twoside mode on input line 932.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
@@ -2633,6 +2975,12 @@ Package mdframed Info: mdframed detected package amsthm
 (mdframed)              on input line 934.
 Package mdframed Info: mdframed inside a box 
  mdframed uses option nobreak mdframed on input line 939.
+
+LaTeX Warning: Reference `mdf@pagelabel-119' on page 95 undefined on input line 939.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-120' on page 95 undefined on input line 943.
+
 Package mdframed Info: mdframed works in twoside mode on input line 954.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
@@ -2644,8 +2992,11 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[101]
+[95]
 Package mdframed Info: Not enough space on this page on input line 956.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-121' on page 96 undefined on input line 956.
 
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
@@ -2654,16 +3005,22 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[102]
+[96]
 Package mdframed Info: mdframed works in twoside mode on input line 1019.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 1019.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-122' on page 97 undefined on input line 1025.
+
 Package mdframed Info: mdframed works in twoside mode on input line 1033.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 1033.
 
+LaTeX Warning: Reference `mdf@pagelabel-123' on page 97 undefined on input line 1044.
+
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2671,16 +3028,19 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[103]
+[97]
 Package mdframed Info: mdframed works in twoside mode on input line 1067.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 1067.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-124' on page 98 undefined on input line 1070.
+
 Package mdframed Info: mdframed works in twoside mode on input line 1093.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 1093.
-
 
 Package mdframed Warning: You got a bad break
 (mdframed)                because the last box will be empty
@@ -2692,17 +3052,23 @@ Package mdframed Info: You first box width is to small
  mdframed fixed it
 (mdframed)              on input line 1100.
 
+LaTeX Warning: Reference `mdf@pagelabel-125' on page 98 undefined on input line 1100.
+
+
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.49998pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[104]
+[98]
 
 Package mdframed Warning: You got a bad break
 (mdframed)                because the last split box is empty
 (mdframed)                You have to change the settings on input line 1100.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-126' on page 99 undefined on input line 1100.
 
 ) (./content/part1 Intro/Chapter5.tex
 
@@ -2712,130 +3078,185 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[105] [106
+[99] [100
 
 ]
 Chapter 5.
 File: Images//orange2.jpg Graphic file (type bmp)
 <Images//orange2.jpg>
+
+LaTeX Warning: Reference `sec:number' on page 101 undefined on input line 5.
+
 Package mdframed Info: mdframed works in twoside mode on input line 14.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 14.
+
+LaTeX Warning: Reference `mdf@pagelabel-127' on page 101 undefined on input line 17.
+
 Package mdframed Info: mdframed works in twoside mode on input line 20.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 20.
+
+LaTeX Warning: Reference `mdf@pagelabel-128' on page 101 undefined on input line 32.
+
 Package mdframed Info: mdframed works in twoside mode on input line 34.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 34.
 
+LaTeX Warning: Reference `mdf@pagelabel-129' on page 101 undefined on input line 42.
+
+
 Underfull \vbox (badness 3579) has occurred while \output is active []
 
- [107]
+ [101]
 Package mdframed Info: mdframed works in twoside mode on input line 81.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 81.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-130' on page 102 undefined on input line 86.
+
 Package mdframed Info: mdframed works in twoside mode on input line 88.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 88.
+
+LaTeX Warning: Reference `mdf@pagelabel-131' on page 102 undefined on input line 94.
+
 Package mdframed Info: mdframed works in twoside mode on input line 98.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 98.
 
-
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.49998pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[108]
+[102]
+
+LaTeX Warning: Reference `mdf@pagelabel-132' on page 103 undefined on input line 103.
+
 Package mdframed Info: mdframed works in twoside mode on input line 120.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 120.
+
+LaTeX Warning: Reference `mdf@pagelabel-133' on page 103 undefined on input line 122.
+
 Package mdframed Info: mdframed works in twoside mode on input line 124.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 124.
-
 Missing character: There is no “ ("201C) in font ptmr8t!
 Missing character: There is no ” ("201D) in font ptmr8t!
+
+LaTeX Warning: Reference `mdf@pagelabel-134' on page 103 undefined on input line 130.
+
 Package mdframed Info: mdframed works in twoside mode on input line 132.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 132.
+
+LaTeX Warning: Reference `mdf@pagelabel-135' on page 103 undefined on input line 134.
+
 Package mdframed Info: mdframed works in twoside mode on input line 136.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 136.
+
+LaTeX Warning: Reference `mdf@pagelabel-136' on page 103 undefined on input line 138.
+
 Package mdframed Info: mdframed works in twoside mode on input line 141.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 141.
 
+LaTeX Warning: Reference `mdf@pagelabel-137' on page 103 undefined on input line 151.
+
+
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.49998pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[109]
+[103]
+
+LaTeX Warning: Reference `mdf@pagelabel-138' on page 104 undefined on input line 151.
+
 Package mdframed Info: mdframed works in twoside mode on input line 177.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 177.
+
+LaTeX Warning: Reference `mdf@pagelabel-139' on page 104 undefined on input line 185.
+
 Package mdframed Info: mdframed works in twoside mode on input line 188.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 188.
+
+LaTeX Warning: Reference `mdf@pagelabel-140' on page 104 undefined on input line 195.
+
 Package mdframed Info: mdframed works in twoside mode on input line 200.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 200.
 Package mdframed Info: Not enough space on this page on input line 205.
 
-
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.49998pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[110]
+[104]
 Package mdframed Info: Not enough space on this page on input line 205.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-141' on page 105 undefined on input line 205.
+
 File: Images//complexplane.png Graphic file (type bmp)
 <Images//complexplane.png>
 
-
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.49998pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[111]
+[105]
 Package mdframed Info: mdframed works in twoside mode on input line 235.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 235.
 Package mdframed Info: Not enough space on this page on input line 237.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-142' on page 106 undefined on input line 237.
+
 Package mdframed Info: mdframed works in twoside mode on input line 240.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 240.
+
+LaTeX Warning: Reference `mdf@pagelabel-143' on page 106 undefined on input line 243.
+
 Package mdframed Info: mdframed works in twoside mode on input line 247.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 247.
+
+LaTeX Warning: Reference `mdf@pagelabel-144' on page 106 undefined on input line 252.
+
 File: Images//locus1.png Graphic file (type bmp)
 <Images//locus1.png>
-
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2843,7 +3264,7 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[112]
+[106]
 File: Images//conjugate.png Graphic file (type bmp)
 <Images//conjugate.png>
 
@@ -2863,42 +3284,60 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[113]
+[107]
 Package mdframed Info: mdframed works in twoside mode on input line 313.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 313.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-145' on page 108 undefined on input line 327.
+
 Package mdframed Info: mdframed works in twoside mode on input line 345.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 345.
+
+LaTeX Warning: Reference `mdf@pagelabel-146' on page 108 undefined on input line 347.
+
 Package mdframed Info: mdframed works in twoside mode on input line 365.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 365.
 
-
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.49998pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[114]
+[108]
 Package mdframed Info: Not enough space on this page on input line 372.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-147' on page 109 undefined on input line 372.
+
 Package mdframed Info: mdframed works in twoside mode on input line 374.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 374.
+
+LaTeX Warning: Reference `mdf@pagelabel-148' on page 109 undefined on input line 383.
+
 Package mdframed Info: mdframed works in twoside mode on input line 384.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 384.
+
+LaTeX Warning: Reference `mdf@pagelabel-149' on page 109 undefined on input line 386.
+
 Package mdframed Info: mdframed works in twoside mode on input line 411.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 411.
 
+LaTeX Warning: Reference `mdf@pagelabel-150' on page 109 undefined on input line 413.
+
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2906,20 +3345,26 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[115]
+[109]
 Package mdframed Info: mdframed works in twoside mode on input line 434.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 434.
 
 
+LaTeX Warning: Reference `mdf@pagelabel-151' on page 110 undefined on input line 437.
+
+
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.49998pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[116]
+[110]
+
+LaTeX Warning: Reference `vec' on page 111 undefined on input line 489.
+
 File: Images//complexvector.png Graphic file (type bmp)
 <Images//complexvector.png>
 
@@ -2933,9 +3378,14 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[117]
+[111]
+
+LaTeX Warning: Reference `parrl' on page 112 undefined on input line 495.
+
 File: Images//paralaw.png Graphic file (type bmp)
 <Images//paralaw.png>
+
+LaTeX Warning: Reference `triangularineq' on page 112 undefined on input line 504.
 
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
@@ -2944,7 +3394,7 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[118]
+[112]
 File: Images//polar2.png Graphic file (type bmp)
 <Images//polar2.png>
 
@@ -2955,11 +3405,144 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[119]
+[113]
 Package mdframed Info: mdframed works in twoside mode on input line 550.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 550.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-152' on page 114 undefined on input line 552.
+
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[114]
+
+LaTeX Warning: Reference `polarprod' on page 115 undefined on input line 606.
+
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[115]
+
+LaTeX Warning: Reference `5.8' on page 116 undefined on input line 643.
+
+Package mdframed Info: mdframed works in twoside mode on input line 650.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 650.
+
+LaTeX Warning: Reference `mdf@pagelabel-153' on page 116 undefined on input line 658.
+
+Package mdframed Info: mdframed works in twoside mode on input line 659.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 659.
+
+LaTeX Warning: Reference `mdf@pagelabel-154' on page 116 undefined on input line 667.
+
+Package mdframed Info: mdframed works in twoside mode on input line 668.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 668.
+
+LaTeX Warning: Reference `mdf@pagelabel-155' on page 116 undefined on input line 680.
+
+Package mdframed Info: mdframed works in twoside mode on input line 681.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 681.
+
+LaTeX Warning: Reference `mdf@pagelabel-156' on page 116 undefined on input line 683.
+
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[116]
+Package mdframed Info: mdframed works in twoside mode on input line 694.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 694.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-157' on page 117 undefined on input line 696.
+
+Package mdframed Info: mdframed works in twoside mode on input line 713.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 713.
+
+LaTeX Warning: Reference `mdf@pagelabel-158' on page 117 undefined on input line 719.
+
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[117]
+Package mdframed Info: mdframed works in twoside mode on input line 768.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 768.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-159' on page 118 undefined on input line 773.
+
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[118]
+Package mdframed Info: mdframed works in twoside mode on input line 820.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 820.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-160' on page 119 undefined on input line 825.
+
+Package mdframed Info: mdframed works in twoside mode on input line 844.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 844.
+Package mdframed Info: Not enough space on this page on input line 849.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[119]
+Package mdframed Info: Not enough space on this page on input line 849.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-161' on page 120 undefined on input line 849.
+
+Package mdframed Info: mdframed works in twoside mode on input line 886.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 886.
+
+LaTeX Warning: Reference `mdf@pagelabel-162' on page 120 undefined on input line 890.
 
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
@@ -2969,101 +3552,6 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
 [120]
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
-
-[121]
-Package mdframed Info: mdframed works in twoside mode on input line 650.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 650.
-Package mdframed Info: mdframed works in twoside mode on input line 659.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 659.
-Package mdframed Info: mdframed works in twoside mode on input line 668.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 668.
-Package mdframed Info: mdframed works in twoside mode on input line 681.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 681.
-
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
-
-[122]
-Package mdframed Info: mdframed works in twoside mode on input line 694.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 694.
-Package mdframed Info: mdframed works in twoside mode on input line 713.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 713.
-
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
-
-[123]
-Package mdframed Info: mdframed works in twoside mode on input line 768.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 768.
-
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
-
-[124]
-Package mdframed Info: mdframed works in twoside mode on input line 820.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 820.
-Package mdframed Info: mdframed works in twoside mode on input line 844.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 844.
-Package mdframed Info: Not enough space on this page on input line 849.
-
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
-
-[125]
-Package mdframed Info: Not enough space on this page on input line 849.
-Package mdframed Info: mdframed works in twoside mode on input line 886.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 886.
-
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
-
-[126]
 Overfull \hbox (3.2118pt too wide) in paragraph at lines 924--926
 \T1/ptm/m/n/12 since co-sine is an even func-tion, $[]\OT1/ztmcm/m/n/12 (\OMS/ztmcm/m/n/12 ^^@\OML/ztmcm/m/it/12 ^^R\OT1/ztmcm/m/n/12 ) = [](\OML/ztmcm/m/it/12 ^^R\OT1/ztmcm/m/n/12 )$\T1/ptm/m/n/12 , and sine is an odd func-tion, $[]\OT1/ztmcm/m/n/12 (\OMS/ztmcm/m/n/12 ^^@\OML/ztmcm/m/it/12 ^^R\OT1/ztmcm/m/n/12 ) =
  []
@@ -3074,6 +3562,129 @@ Overfull \hbox (15.39708pt too wide) in paragraph at lines 936--938
  []
 
 
+LaTeX Warning: Reference `polarform' on page 121 undefined on input line 942.
+
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[121]
+Package mdframed Info: mdframed works in twoside mode on input line 980.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 980.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-163' on page 122 undefined on input line 988.
+
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[122]
+Overfull \hbox (50.09625pt too wide) detected at line 1020
+[]
+ []
+
+Package mdframed Info: mdframed works in twoside mode on input line 1027.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1027.
+
+LaTeX Warning: Reference `mdf@pagelabel-164' on page 123 undefined on input line 1038.
+
+Package mdframed Info: mdframed works in twoside mode on input line 1039.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1039.
+
+LaTeX Warning: Reference `mdf@pagelabel-165' on page 123 undefined on input line 1049.
+
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[123]
+
+LaTeX Warning: Reference `mdf@pagelabel-166' on page 124 undefined on input line 1049.
+
+Package mdframed Info: mdframed works in twoside mode on input line 1051.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1051.
+
+LaTeX Warning: Reference `mdf@pagelabel-167' on page 124 undefined on input line 1054.
+
+Package mdframed Info: mdframed works in twoside mode on input line 1077.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1077.
+
+LaTeX Warning: Reference `mdf@pagelabel-168' on page 124 undefined on input line 1079.
+
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[124]
+Package mdframed Info: mdframed works in twoside mode on input line 1113.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1113.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-169' on page 125 undefined on input line 1119.
+
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[125]
+Package mdframed Info: mdframed works in twoside mode on input line 1153.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1153.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-170' on page 126 undefined on input line 1155.
+
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[126]
+Package mdframed Info: mdframed works in twoside mode on input line 1207.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1207.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-171' on page 127 undefined on input line 1209.
+
+Package mdframed Info: mdframed works in twoside mode on input line 1238.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1238.
+Package mdframed Info: Not enough space on this page on input line 1243.
+
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.49998pt}.
@@ -3081,10 +3692,10 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
 [127]
-Package mdframed Info: mdframed works in twoside mode on input line 980.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 980.
+Package mdframed Info: Not enough space on this page on input line 1243.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-172' on page 128 undefined on input line 1243.
 
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
@@ -3094,18 +3705,28 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
 [128]
-Overfull \hbox (50.09625pt too wide) detected at line 1020
-[]
- []
+Package mdframed Info: mdframed works in twoside mode on input line 1296.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1296.
 
-Package mdframed Info: mdframed works in twoside mode on input line 1027.
+
+LaTeX Warning: Reference `mdf@pagelabel-173' on page 129 undefined on input line 1300.
+
+Package mdframed Info: mdframed works in twoside mode on input line 1309.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1027.
-Package mdframed Info: mdframed works in twoside mode on input line 1039.
+(mdframed)              on input line 1309.
+
+LaTeX Warning: Reference `mdf@pagelabel-174' on page 129 undefined on input line 1311.
+
+Package mdframed Info: mdframed works in twoside mode on input line 1328.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1039.
+(mdframed)              on input line 1328.
+
+LaTeX Warning: Reference `mdf@pagelabel-175' on page 129 undefined on input line 1330.
+
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -3114,14 +3735,15 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
 [129]
-Package mdframed Info: mdframed works in twoside mode on input line 1051.
+
+LaTeX Warning: Reference `conjugate root' on page 130 undefined on input line 1387.
+
+Package mdframed Info: mdframed works in twoside mode on input line 1388.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1051.
-Package mdframed Info: mdframed works in twoside mode on input line 1077.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 1077.
+(mdframed)              on input line 1388.
+
+LaTeX Warning: Reference `mdf@pagelabel-176' on page 130 undefined on input line 1390.
 
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
@@ -3131,11 +3753,6 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
 [130]
-Package mdframed Info: mdframed works in twoside mode on input line 1113.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 1113.
-
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -3144,89 +3761,6 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
 [131]
-Package mdframed Info: mdframed works in twoside mode on input line 1153.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 1153.
-
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
-
-[132]
-Package mdframed Info: mdframed works in twoside mode on input line 1207.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 1207.
-Package mdframed Info: mdframed works in twoside mode on input line 1238.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 1238.
-Package mdframed Info: Not enough space on this page on input line 1243.
-
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
-
-[133]
-Package mdframed Info: Not enough space on this page on input line 1243.
-
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
-
-[134]
-Package mdframed Info: mdframed works in twoside mode on input line 1296.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 1296.
-Package mdframed Info: mdframed works in twoside mode on input line 1309.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 1309.
-Package mdframed Info: mdframed works in twoside mode on input line 1328.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 1328.
-
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
-
-[135]
-Package mdframed Info: mdframed works in twoside mode on input line 1388.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 1388.
-
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
-
-[136]
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
-
-[137]
 Package mdframed Info: mdframed works in twoside mode on input line 1503.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
@@ -3243,30 +3777,39 @@ Package mdframed Info: You first box width is to small
  mdframed fixed it
 (mdframed)              on input line 1505.
 
+LaTeX Warning: Reference `mdf@pagelabel-177' on page 132 undefined on input line 1505.
+
+
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.49998pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[138]
+[132]
 
 Package mdframed Warning: You got a bad break
 (mdframed)                because the last split box is empty
 (mdframed)                You have to change the settings on input line 1505.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-178' on page 133 undefined on input line 1505.
 
 Package mdframed Info: mdframed works in twoside mode on input line 1510.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 1510.
 
+LaTeX Warning: Reference `mdf@pagelabel-179' on page 133 undefined on input line 1513.
+
+
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.49998pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[139]
+[133]
 File: Images//rootdemoivre.png Graphic file (type bmp)
 <Images//rootdemoivre.png>
 
@@ -3277,29 +3820,41 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[140]
+[134]
 Package mdframed Info: mdframed works in twoside mode on input line 1621.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 1621.
 
 
+LaTeX Warning: Reference `mdf@pagelabel-180' on page 135 undefined on input line 1628.
+
+
+LaTeX Warning: Reference `mthroot' on page 135 undefined on input line 1662.
+
+
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.49998pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[141]
+[135]
 Package mdframed Info: mdframed works in twoside mode on input line 1669.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 1669.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-181' on page 136 undefined on input line 1677.
+
 Package mdframed Info: mdframed works in twoside mode on input line 1705.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 1705.
 
+LaTeX Warning: Reference `mdf@pagelabel-182' on page 136 undefined on input line 1707.
+
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -3307,33 +3862,45 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[142]
+[136]
 Package mdframed Info: mdframed works in twoside mode on input line 1740.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 1740.
 
 
+LaTeX Warning: Reference `mdf@pagelabel-183' on page 137 undefined on input line 1742.
+
+
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.49998pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[143]
+[137]
 Package mdframed Info: mdframed works in twoside mode on input line 1770.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 1770.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-184' on page 138 undefined on input line 1773.
+
 Package mdframed Info: mdframed works in twoside mode on input line 1789.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 1789.
+
+LaTeX Warning: Reference `mdf@pagelabel-185' on page 138 undefined on input line 1799.
+
 Package mdframed Info: mdframed works in twoside mode on input line 1803.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 1803.
 
+LaTeX Warning: Reference `mdf@pagelabel-186' on page 138 undefined on input line 1805.
+
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -3341,29 +3908,38 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[144]
+[138]
 Package mdframed Info: mdframed works in twoside mode on input line 1836.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 1836.
 
 
+LaTeX Warning: Reference `mdf@pagelabel-187' on page 139 undefined on input line 1838.
+
+
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.49998pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[145]
+[139]
 Package mdframed Info: mdframed works in twoside mode on input line 1856.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 1856.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-188' on page 140 undefined on input line 1860.
+
 Package mdframed Info: mdframed works in twoside mode on input line 1888.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 1888.
 
+LaTeX Warning: Reference `mdf@pagelabel-189' on page 140 undefined on input line 1890.
+
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -3371,7 +3947,7 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[146])
+[140])
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -3379,29 +3955,149 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[147] [148
+[141] [142
 
 ] (./main.ptc
 Underfull \hbox (badness 2735) in paragraph at lines 96--96
 []|[]| [][][]\T1/pag/db/n/14.4 Preliminary Num-ber The-ory and
  []
 
-) [149] [150] (./content/Part2 Discrete math/Chapter1.tex
+) [143] [144] (./content/Part2 Discrete math/Chapter1.tex
 Chapter 6.
 File: Images//orange2.jpg Graphic file (type bmp)
 <Images//orange2.jpg>
-[151
+[145
 
 ]
 Package mdframed Info: mdframed works in twoside mode on input line 75.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 75.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-190' on page 146 undefined on input line 85.
+
 Package mdframed Info: mdframed works in twoside mode on input line 91.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 91.
 Package mdframed Info: Not enough space on this page on input line 102.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[146]
+Package mdframed Info: Not enough space on this page on input line 102.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-191' on page 147 undefined on input line 102.
+
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[147]
+
+LaTeX Warning: Reference `truthtab' on page 148 undefined on input line 197.
+
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[148]
+Package mdframed Info: mdframed works in twoside mode on input line 256.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 256.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-192' on page 149 undefined on input line 267.
+
+Package mdframed Info: mdframed works in twoside mode on input line 288.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 288.
+
+LaTeX Warning: Reference `mdf@pagelabel-193' on page 149 undefined on input line 295.
+
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[149]
+
+LaTeX Warning: Reference `mdf@pagelabel-194' on page 150 undefined on input line 295.
+
+Missing character: There is no — ("2014) in font ptmr8t!
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[150]
+Package mdframed Info: mdframed works in twoside mode on input line 397.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 397.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-195' on page 151 undefined on input line 400.
+
+Package mdframed Info: mdframed works in twoside mode on input line 406.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 406.
+
+LaTeX Warning: Reference `algelaw' on page 151 undefined on input line 407.
+
+Package mdframed Info: Not enough space on this page on input line 408.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[151]
+Package mdframed Info: Not enough space on this page on input line 408.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-196' on page 152 undefined on input line 408.
+
+Package mdframed Info: mdframed works in twoside mode on input line 416.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 416.
+
+LaTeX Warning: Reference `mdf@pagelabel-197' on page 152 undefined on input line 418.
+
+Package mdframed Info: mdframed works in twoside mode on input line 426.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 426.
+
+LaTeX Warning: Reference `mdf@pagelabel-198' on page 152 undefined on input line 429.
+
+Package mdframed Info: mdframed works in twoside mode on input line 450.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 450.
+
+LaTeX Warning: Reference `mdf@pagelabel-199' on page 152 undefined on input line 452.
 
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
@@ -3411,8 +4107,28 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
 [152]
-Package mdframed Info: Not enough space on this page on input line 102.
+Package mdframed Info: mdframed works in twoside mode on input line 483.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 483.
 
+
+LaTeX Warning: Reference `mdf@pagelabel-200' on page 153 undefined on input line 485.
+
+Package mdframed Info: mdframed works in twoside mode on input line 510.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 510.
+
+LaTeX Warning: Reference `mdf@pagelabel-201' on page 153 undefined on input line 512.
+
+Package mdframed Info: mdframed works in twoside mode on input line 537.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 537.
+Package mdframed Info: You first box width is to small
+ mdframed fixed it
+(mdframed)              on input line 546.
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -3422,103 +4138,9 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 
 [153]
 
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
-
-[154]
-Package mdframed Info: mdframed works in twoside mode on input line 256.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 256.
-Package mdframed Info: mdframed works in twoside mode on input line 288.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 288.
+LaTeX Warning: Reference `mdf@pagelabel-202' on page 154 undefined on input line 546.
 
 
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
-
-[155]
-Missing character: There is no — ("2014) in font ptmr8t!
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
-
-[156]
-Package mdframed Info: mdframed works in twoside mode on input line 397.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 397.
-Package mdframed Info: mdframed works in twoside mode on input line 406.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 406.
-Package mdframed Info: Not enough space on this page on input line 408.
-
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
-
-[157]
-Package mdframed Info: Not enough space on this page on input line 408.
-Package mdframed Info: mdframed works in twoside mode on input line 416.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 416.
-Package mdframed Info: mdframed works in twoside mode on input line 426.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 426.
-Package mdframed Info: mdframed works in twoside mode on input line 450.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 450.
-
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
-
-[158]
-Package mdframed Info: mdframed works in twoside mode on input line 483.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 483.
-Package mdframed Info: mdframed works in twoside mode on input line 510.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 510.
-Package mdframed Info: mdframed works in twoside mode on input line 537.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 537.
-Package mdframed Info: You first box width is to small
- mdframed fixed it
-(mdframed)              on input line 546.
-
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
-
-[159]
 Overfull \hbox (40.69069pt too wide) detected at line 563
 []
  []
@@ -3528,13 +4150,8 @@ Package mdframed Info: mdframed detected package amsthm
  changed the theorem header of amsthm
 (mdframed)              on input line 578.
 
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+LaTeX Warning: Reference `mdf@pagelabel-203' on page 154 undefined on input line 584.
 
-[160]) (./content/Part2 Discrete math/Chapter2.tex
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -3542,7 +4159,15 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[161] [162
+[154]) (./content/Part2 Discrete math/Chapter2.tex
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[155] [156
 
 ]
 Chapter 7.
@@ -3550,19 +4175,29 @@ File: Images//orange2.jpg Graphic file (type bmp)
 <Images//orange2.jpg>
 Missing character: There is no — ("2014) in font ptmr8t!
 Missing character: There is no — ("2014) in font ptmr8t!
-[163]
+[157]
 Package mdframed Info: mdframed works in twoside mode on input line 18.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 18.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-204' on page 158 undefined on input line 24.
+
 Package mdframed Info: mdframed works in twoside mode on input line 30.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 30.
+
+LaTeX Warning: Reference `mdf@pagelabel-205' on page 158 undefined on input line 35.
+
 Package mdframed Info: mdframed works in twoside mode on input line 43.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 43.
+
+LaTeX Warning: Reference `mdf@pagelabel-206' on page 158 undefined on input line 45.
+
 
 Overfull \hbox (6.08116pt too wide) in paragraph at lines 57--58
 []\T1/ptm/m/n/12 Divisibility holds the fol-low-ing prop-er-ties, which could be proven di-rectly.                   
@@ -3579,12 +4214,211 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[164]
+[158]
 Package mdframed Info: Not enough space on this page on input line 65.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-207' on page 159 undefined on input line 65.
+
 Package mdframed Info: mdframed works in twoside mode on input line 74.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 74.
+
+LaTeX Warning: Reference `mdf@pagelabel-208' on page 159 undefined on input line 76.
+
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[159]
+Package mdframed Info: mdframed works in twoside mode on input line 113.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 113.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-209' on page 160 undefined on input line 119.
+
+Package mdframed Info: mdframed works in twoside mode on input line 122.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 122.
+
+LaTeX Warning: Reference `mdf@pagelabel-210' on page 160 undefined on input line 124.
+
+Package mdframed Info: mdframed works in twoside mode on input line 141.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 141.
+
+LaTeX Warning: Reference `mdf@pagelabel-211' on page 160 undefined on input line 143.
+
+Package mdframed Info: mdframed works in twoside mode on input line 146.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 146.
+
+LaTeX Warning: Reference `mdf@pagelabel-212' on page 160 undefined on input line 155.
+
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[160]
+Package mdframed Info: mdframed works in twoside mode on input line 187.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 187.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-213' on page 161 undefined on input line 196.
+
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[161]
+Package mdframed Info: mdframed works in twoside mode on input line 239.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 239.
+
+
+LaTeX Warning: Reference `div1' on page 162 undefined on input line 240.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-214' on page 162 undefined on input line 241.
+
+
+LaTeX Warning: Reference `Properties of Divisibility' on page 162 undefined on input line 243.
+
+Package mdframed Info: mdframed works in twoside mode on input line 247.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 247.
+
+LaTeX Warning: Reference `mod2' on page 162 undefined on input line 248.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-215' on page 162 undefined on input line 249.
+
+
+LaTeX Warning: Reference `mod2' on page 162 undefined on input line 251.
+
+Package mdframed Info: mdframed works in twoside mode on input line 253.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 253.
+
+LaTeX Warning: Reference `mdf@pagelabel-216' on page 162 undefined on input line 255.
+
+Package mdframed Info: mdframed works in twoside mode on input line 259.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 259.
+
+LaTeX Warning: Reference `mdf@pagelabel-217' on page 162 undefined on input line 261.
+
+Package mdframed Info: mdframed works in twoside mode on input line 269.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 269.
+
+LaTeX Warning: Reference `mdf@pagelabel-218' on page 162 undefined on input line 271.
+
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[162]
+Package mdframed Info: mdframed works in twoside mode on input line 297.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 297.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-219' on page 163 undefined on input line 308.
+
+Package mdframed Info: mdframed works in twoside mode on input line 320.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 320.
+
+LaTeX Warning: Reference `mdf@pagelabel-220' on page 163 undefined on input line 322.
+
+Package mdframed Info: mdframed works in twoside mode on input line 327.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 327.
+Package mdframed Info: Not enough space on this page on input line 330.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[163]
+Package mdframed Info: Not enough space on this page on input line 330.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-221' on page 164 undefined on input line 330.
+
+
+Overfull \hbox (10.02995pt too wide) in paragraph at lines 367--368
+\T1/ptm/m/n/12 In whichever base, a num-ber could be ex-pressed us-ing the ex-po-nent of the base.                   
+ []
+
+Package mdframed Info: mdframed works in twoside mode on input line 368.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 368.
+
+Package mdframed Warning: You got a bad break
+(mdframed)                because the last box will be empty
+(mdframed)                you have to change it manually
+(mdframed)                by changing the text, the space
+(mdframed)                or something else on input line 373.
+
+Package mdframed Info: You first box width is to small
+ mdframed fixed it
+(mdframed)              on input line 373.
+
+LaTeX Warning: Reference `mdf@pagelabel-222' on page 164 undefined on input line 373.
+
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[164]
+
+Package mdframed Warning: You got a bad break
+(mdframed)                because the last split box is empty
+(mdframed)                You have to change the settings on input line 373.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-223' on page 165 undefined on input line 373.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 417--423
+
+ []
 
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
@@ -3594,22 +4428,9 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
 [165]
-Package mdframed Info: mdframed works in twoside mode on input line 113.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 113.
-Package mdframed Info: mdframed works in twoside mode on input line 122.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 122.
-Package mdframed Info: mdframed works in twoside mode on input line 141.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 141.
-Package mdframed Info: mdframed works in twoside mode on input line 146.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 146.
+Underfull \hbox (badness 10000) in paragraph at lines 426--427
+
+ []
 
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
@@ -3619,10 +4440,8 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
 [166]
-Package mdframed Info: mdframed works in twoside mode on input line 187.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 187.
+File: Images//converttab.png Graphic file (type bmp)
+<Images//converttab.png>
 
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
@@ -3632,31 +4451,6 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
 [167]
-Package mdframed Info: mdframed works in twoside mode on input line 239.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 239.
-Package mdframed Info: mdframed works in twoside mode on input line 247.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 247.
-Package mdframed Info: mdframed works in twoside mode on input line 251.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 251.
-Package mdframed Info: mdframed works in twoside mode on input line 257.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 257.
-Package mdframed Info: mdframed works in twoside mode on input line 263.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 263.
-Package mdframed Info: mdframed works in twoside mode on input line 273.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 273.
-
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -3665,15 +4459,6 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
 [168]
-Package mdframed Info: mdframed works in twoside mode on input line 301.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 301.
-Package mdframed Info: mdframed works in twoside mode on input line 324.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 324.
-
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -3682,14 +4467,6 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
 [169]
-Overfull \hbox (10.02995pt too wide) in paragraph at lines 342--343
-\T1/ptm/m/n/12 In whichever base, a num-ber could be ex-pressed us-ing the ex-po-nent of the base.                   
- []
-
-Package mdframed Info: mdframed works in twoside mode on input line 343.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 343.
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -3698,15 +4475,19 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
 [170]
-Underfull \hbox (badness 10000) in paragraph at lines 392--398
+Package mdframed Info: mdframed works in twoside mode on input line 695.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 695.
 
- []
 
+LaTeX Warning: Reference `mdf@pagelabel-224' on page 171 undefined on input line 698.
 
-Underfull \hbox (badness 10000) in paragraph at lines 401--402
-
- []
-
+Package mdframed Info: mdframed works in twoside mode on input line 703.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 703.
+Package mdframed Info: Not enough space on this page on input line 707.
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -3715,6 +4496,11 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
 [171]
+Package mdframed Info: Not enough space on this page on input line 707.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-225' on page 172 undefined on input line 707.
+
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -3723,11 +4509,13 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
 [172]
-File: Images//converttab.png Graphic file (type bmp)
-<Images//converttab.png>
+Package mdframed Info: mdframed works in twoside mode on input line 763.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 763.
 
-Underfull \vbox (badness 3525) has occurred while \output is active []
 
+LaTeX Warning: Reference `mdf@pagelabel-226' on page 173 undefined on input line 765.
 
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
@@ -3737,6 +4525,14 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
 [173]
+Package mdframed Info: mdframed works in twoside mode on input line 840.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 840.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-227' on page 174 undefined on input line 844.
+
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -3745,8 +4541,20 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
 [174]
-Underfull \vbox (badness 2065) has occurred while \output is active []
+Package mdframed Info: mdframed works in twoside mode on input line 857.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 857.
 
+
+LaTeX Warning: Reference `mdf@pagelabel-228' on page 175 undefined on input line 859.
+
+Package mdframed Info: mdframed works in twoside mode on input line 879.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 879.
+
+LaTeX Warning: Reference `mdf@pagelabel-229' on page 175 undefined on input line 882.
 
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
@@ -3756,6 +4564,31 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
 [175]
+Package mdframed Info: mdframed works in twoside mode on input line 903.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 903.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-230' on page 176 undefined on input line 905.
+
+
+Overfull \hbox (0.3562pt too wide) in paragraph at lines 915--916
+[]\T1/ptm/m/n/12 This prop-erty of GCD is ex-actlly the Bé-zout's The-o-rem, which states that:                   
+ []
+
+Package mdframed Info: mdframed works in twoside mode on input line 916.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 916.
+
+LaTeX Warning: Reference `mdf@pagelabel-231' on page 176 undefined on input line 923.
+
+
+Overfull \hbox (9.74312pt too wide) in paragraph at lines 925--929
+\T1/ptm/m/n/12 di-vid-ing $\OML/ztmcm/m/it/12 a$ \T1/ptm/m/n/12 by $\OML/ztmcm/m/it/12 b$ \T1/ptm/m/n/12 leaves a re-main-der of $\OML/ztmcm/m/it/12 r[]$ \T1/ptm/m/n/12 strictly less than $\OMS/ztmcm/m/n/12 j\OML/ztmcm/m/it/12 b\OMS/ztmcm/m/n/12 j$ \T1/ptm/m/n/12 and $[]\OT1/ztmcm/m/n/12 (\OML/ztmcm/m/it/12 a; b\OT1/ztmcm/m/n/12 ) =$\T1/ptm/m/n/12 . $[]\OT1/ztmcm/m/n/12 (\OML/ztmcm/m/it/12 r[]; b\OT1/ztmcm/m/n/12 )$\T1/ptm/m/n/12 .Then
+ []
+
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -3764,78 +4597,14 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
 [176]
-Package mdframed Info: mdframed works in twoside mode on input line 669.
+Package mdframed Info: mdframed works in twoside mode on input line 943.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 669.
-Package mdframed Info: mdframed works in twoside mode on input line 677.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 677.
+(mdframed)              on input line 943.
 
 
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+LaTeX Warning: Reference `mdf@pagelabel-232' on page 177 undefined on input line 949.
 
-[177]
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
-
-[178]
-Package mdframed Info: mdframed works in twoside mode on input line 737.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 737.
-
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
-
-[179]
-Package mdframed Info: mdframed works in twoside mode on input line 814.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 814.
-Package mdframed Info: mdframed works in twoside mode on input line 831.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 831.
-
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
-
-[180]
-Package mdframed Info: mdframed works in twoside mode on input line 853.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 853.
-
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
-
-[181]
-Package mdframed Info: mdframed works in twoside mode on input line 878.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 878.
 ) (./content/Part2 Discrete math/Chapter3.tex
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
@@ -3844,7 +4613,9 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[182]
+[177] [178
+
+]
 Chapter 8.
 File: Images//orange2.jpg Graphic file (type bmp)
 <Images//orange2.jpg>
@@ -3852,9 +4623,10 @@ Package mdframed Info: mdframed works in twoside mode on input line 14.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 14.
-[183
 
-]
+LaTeX Warning: Reference `mdf@pagelabel-233' on page 179 undefined on input line 16.
+
+[179]
 Overfull \hbox (18.94572pt too wide) detected at line 52
  $\OT1/ztmcm/m/n/12 ^^B(\OML/ztmcm/m/it/12 g\OT1/ztmcm/m/n/12 (\OML/ztmcm/m/it/12 n\OT1/ztmcm/m/n/12 )) = \OMS/ztmcm/m/n/12 f\OML/ztmcm/m/it/12 f\OT1/ztmcm/m/n/12 (\OML/ztmcm/m/it/12 n\OT1/ztmcm/m/n/12 ) : \OMS/ztmcm/m/n/12 9\OML/ztmcm/m/it/12 c[] > \OT1/ztmcm/m/n/12 0\OML/ztmcm/m/it/12 ; c[] > \OT1/ztmcm/m/n/12 0\OML/ztmcm/m/it/12 ; n[] > \OT1/ztmcm/m/n/12 0[]0 \OMS/ztmcm/m/n/12 ^^T \OML/ztmcm/m/it/12 c[]g\OT1/ztmcm/m/n/12 (\OML/ztmcm/m/it/12 n\OT1/ztmcm/m/n/12 ) \OMS/ztmcm/m/n/12 ^^T \OML/ztmcm/m/it/12 f\OT1/ztmcm/m/n/12 (\OML/ztmcm/m/it/12 n\OT1/ztmcm/m/n/12 ) \OMS/ztmcm/m/n/12 ^^T \OML/ztmcm/m/it/12 c[]g\OT1/ztmcm/m/n/12 (\OML/ztmcm/m/it/12 n\OT1/ztmcm/m/n/12 )[]\OML/ztmcm/m/it/12 n \OMS/ztmcm/m/n/12 ^^U \OML/ztmcm/m/it/12 n[]\OMS/ztmcm/m/n/12 g$ 
  []
@@ -3869,13 +4641,16 @@ Package mdframed Info: mdframed detected package amsthm
  changed the theorem header of amsthm
 (mdframed)              on input line 61.
 
+LaTeX Warning: Reference `mdf@pagelabel-234' on page 180 undefined on input line 64.
+
+
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.49998pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[184]
+[180]
 Underfull \hbox (badness 10000) in paragraph at lines 127--128
 
  []
@@ -3892,19 +4667,95 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[185]
+[181]
 Package mdframed Info: mdframed works in twoside mode on input line 142.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 142.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-235' on page 182 undefined on input line 144.
+
 Package mdframed Info: mdframed works in twoside mode on input line 162.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 162.
+
+LaTeX Warning: Reference `mdf@pagelabel-236' on page 182 undefined on input line 164.
+
 Package mdframed Info: mdframed works in twoside mode on input line 183.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 183.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[182]
+
+LaTeX Warning: Reference `mdf@pagelabel-237' on page 183 undefined on input line 187.
+
+Package mdframed Info: mdframed works in twoside mode on input line 189.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 189.
+
+LaTeX Warning: Reference `mdf@pagelabel-238' on page 183 undefined on input line 191.
+
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[183]
+Package mdframed Info: mdframed works in twoside mode on input line 248.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 248.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-239' on page 184 undefined on input line 251.
+
+File: Images//branchingtree.png Graphic file (type bmp)
+<Images//branchingtree.png>
+Missing character: There is no “ ("201C) in font ptmr8t!
+Missing character: There is no ” ("201D) in font ptmr8t!
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[184]
+
+LaTeX Warning: Reference `bisearch1' on page 185 undefined on input line 314.
+
+Missing character: There is no “ ("201C) in font ptmr8t!
+Missing character: There is no ” ("201D) in font ptmr8t!
+
+LaTeX Warning: Reference `sublistlen' on page 185 undefined on input line 325.
+
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[185]
+Package mdframed Info: mdframed works in twoside mode on input line 345.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 345.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-240' on page 186 undefined on input line 350.
 
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
@@ -3914,11 +4765,6 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
 [186]
-Package mdframed Info: mdframed works in twoside mode on input line 189.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 189.
-
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -3927,15 +4773,17 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
 [187]
-Package mdframed Info: mdframed works in twoside mode on input line 248.
+Package mdframed Info: mdframed works in twoside mode on input line 464.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 248.
-File: Images//branchingtree.png Graphic file (type bmp)
-<Images//branchingtree.png>
+(mdframed)              on input line 464.
 
-Missing character: There is no “ ("201C) in font ptmr8t!
-Missing character: There is no ” ("201D) in font ptmr8t!
+
+LaTeX Warning: Reference `mdf@pagelabel-241' on page 188 undefined on input line 467.
+
+
+LaTeX Warning: Reference `4.2.1' on page 188 undefined on input line 477.
+
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -3944,50 +4792,6 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
 [188]
-Missing character: There is no “ ("201C) in font ptmr8t!
-Missing character: There is no ” ("201D) in font ptmr8t!
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
-
-[189]
-Package mdframed Info: mdframed works in twoside mode on input line 345.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 345.
-
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
-
-[190]
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
-
-[191]
-Package mdframed Info: mdframed works in twoside mode on input line 464.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 464.
-
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
-
-[192]
 File: Images//v2bintree.png Graphic file (type bmp)
 <Images//v2bintree.png>
 Package mdframed Info: mdframed works in twoside mode on input line 513.
@@ -3996,21 +4800,31 @@ Package mdframed Info: mdframed detected package amsthm
 (mdframed)              on input line 513.
 
 
+LaTeX Warning: Reference `mdf@pagelabel-242' on page 189 undefined on input line 515.
+
+
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.49998pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[193]
+[189]
 Package mdframed Info: mdframed works in twoside mode on input line 527.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 527.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-243' on page 190 undefined on input line 536.
+
 Package mdframed Info: mdframed works in twoside mode on input line 547.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 547.
+
+LaTeX Warning: Reference `mdf@pagelabel-244' on page 190 undefined on input line 549.
+
 Package mdframed Info: mdframed works in twoside mode on input line 558.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
@@ -4026,8 +4840,15 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[194]
+[190]
 Package mdframed Info: Not enough space on this page on input line 560.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-245' on page 191 undefined on input line 560.
+
+
+LaTeX Warning: Reference `4.2.1' on page 191 undefined on input line 576.
+
 ) (./content/Part2 Discrete math/Chapter4.tex
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
@@ -4036,33 +4857,33 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[195] [196
+[191] [192
 
 ]
 Chapter 9.
 File: Images//orange2.jpg Graphic file (type bmp)
 <Images//orange2.jpg>
-) [197] [198
+) [193] [194
 
-] (./main.ptc) [199] [200] (./content/Part3 Single-variable Calculus/Chapter1.tex
+] (./main.ptc) [195] [196] (./content/Part3 Single-variable Calculus/Chapter1.tex
 Chapter 10.
 File: Images//orange2.jpg Graphic file (type bmp)
 <Images//orange2.jpg>
-) (./content/Part3 Single-variable Calculus/Chapter2.tex [201
+) (./content/Part3 Single-variable Calculus/Chapter2.tex [197
 
-] [202
+] [198
 
 ]
 Chapter 11.
 File: Images//orange2.jpg Graphic file (type bmp)
 <Images//orange2.jpg>
-) (./content/Part3 Single-variable Calculus/Chapter3.tex [203] [204
+) (./content/Part3 Single-variable Calculus/Chapter3.tex [199] [200
 
 ]
 Chapter 12.
 File: Images//orange2.jpg Graphic file (type bmp)
 <Images//orange2.jpg>
-) (./content/Part3 Single-variable Calculus/Chapter4.tex [205] [206
+) (./content/Part3 Single-variable Calculus/Chapter4.tex [201] [202
 
 ]
 Chapter 13.
@@ -4071,7 +4892,7 @@ File: Images//orange2.jpg Graphic file (type bmp)
 ) (./content/Part3 Single-variable Calculus/Chapter5.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [207]
+ [203]
 Overfull \vbox (208.17586pt too high) has occurred while \output is active []
 
 
@@ -4082,14 +4903,14 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[208]
+[204]
 Chapter 14.
 File: Images//orange2.jpg Graphic file (type bmp)
 <Images//orange2.jpg>
 ) (./content/Part3 Single-variable Calculus/Chapter6.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [209
+ [205
 
 ]
 Overfull \vbox (47.22583pt too high) has occurred while \output is active []
@@ -4102,233 +4923,233 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[210]
+[206]
 Chapter 15.
 File: Images//orange2.jpg Graphic file (type bmp)
 <Images//orange2.jpg>
-) (./content/Part3 Single-variable Calculus/Chapter7.tex [211
+) (./content/Part3 Single-variable Calculus/Chapter7.tex [207
 
-] [212
+] [208
 
 ]
 Chapter 16.
 File: Images//orange2.jpg Graphic file (type bmp)
 <Images//orange2.jpg>
-) [213] [214
+) [209] [210
 
-] (./main.ptc) [215] [216] (./content/Part4 Multi-variable Calculus/Chapter1.tex
+] (./main.ptc) [211] [212] (./content/Part4 Multi-variable Calculus/Chapter1.tex
 Chapter 17.
 File: Images//orange2.jpg Graphic file (type bmp)
 <Images//orange2.jpg>
-[217
+[213
 
-] [218
+] [214
 
 ]
 Chapter 18.
 File: Images//orange2.jpg Graphic file (type bmp)
 <Images//orange2.jpg>
-[219] [220
+[215] [216
 
 ]
 Chapter 19.
 File: Images//orange2.jpg Graphic file (type bmp)
 <Images//orange2.jpg>
-[221] [222
+[217] [218
 
 ]
 Chapter 20.
 File: Images//orange2.jpg Graphic file (type bmp)
 <Images//orange2.jpg>
-[223] [224
+[219] [220
 
 ]
 Chapter 21.
 File: Images//orange2.jpg Graphic file (type bmp)
 <Images//orange2.jpg>
-) [225] [226
+) [221] [222
 
-] (./main.ptc) [227] [228] (./content/Part5 Linear Algebra/Chapter1.tex
+] (./main.ptc) [223] [224] (./content/Part5 Linear Algebra/Chapter1.tex
 Chapter 22.
 File: Images//orange2.jpg Graphic file (type bmp)
 <Images//orange2.jpg>
-[229
+[225
 
-] [230
+] [226
 
 ]
 Chapter 23.
 File: Images//orange2.jpg Graphic file (type bmp)
 <Images//orange2.jpg>
-[231] [232
+[227] [228
 
 ]
 Chapter 24.
 File: Images//orange2.jpg Graphic file (type bmp)
 <Images//orange2.jpg>
-[233] [234
+[229] [230
 
 ]
 Chapter 25.
 File: Images//orange2.jpg Graphic file (type bmp)
 <Images//orange2.jpg>
-[235] [236
+[231] [232
 
 ]
 Chapter 26.
 File: Images//orange2.jpg Graphic file (type bmp)
 <Images//orange2.jpg>
-[237] [238
+[233] [234
 
 ]
 Chapter 27.
 File: Images//orange2.jpg Graphic file (type bmp)
 <Images//orange2.jpg>
-[239] [240
+[235] [236
 
 ]
 Chapter 28.
 File: Images//orange2.jpg Graphic file (type bmp)
 <Images//orange2.jpg>
-[241] [242
+[237] [238
 
 ]
 Chapter 29.
 File: Images//orange2.jpg Graphic file (type bmp)
 <Images//orange2.jpg>
-[243] [244
+[239] [240
 
 ]
 Chapter 30.
 File: Images//orange2.jpg Graphic file (type bmp)
 <Images//orange2.jpg>
-) [245] [246
+) [241] [242
 
-] (./main.ptc) [247] [248] (./content/Part6 Probability and Combinatorics/Chapter1.tex
+] (./main.ptc) [243] [244] (./content/Part6 Probability and Combinatorics/Chapter1.tex
 Chapter 31.
 File: Images//orange2.jpg Graphic file (type bmp)
 <Images//orange2.jpg>
-[249
+[245
 
-] [250
+] [246
 
 ]
 Chapter 32.
 File: Images//orange2.jpg Graphic file (type bmp)
 <Images//orange2.jpg>
-[251] [252
+[247] [248
 
 ]
 Chapter 33.
 File: Images//orange2.jpg Graphic file (type bmp)
 <Images//orange2.jpg>
-[253] [254
+[249] [250
 
 ]
 Chapter 34.
 File: Images//orange2.jpg Graphic file (type bmp)
 <Images//orange2.jpg>
-[255] [256
+[251] [252
 
 ]
 Chapter 35.
 File: Images//orange2.jpg Graphic file (type bmp)
 <Images//orange2.jpg>
-[257] [258
+[253] [254
 
 ]
 Chapter 36.
 File: Images//orange2.jpg Graphic file (type bmp)
 <Images//orange2.jpg>
-[259] [260
+[255] [256
 
 ]
 Chapter 37.
 File: Images//orange2.jpg Graphic file (type bmp)
 <Images//orange2.jpg>
-[261] [262
+[257] [258
 
 ]
 Chapter 38.
 File: Images//orange2.jpg Graphic file (type bmp)
 <Images//orange2.jpg>
-) [263] [264
+) [259] [260
 
-] (./main.ptc) [265] [266] (./content/Part7 Statistics/Chapter1.tex
+] (./main.ptc) [261] [262] (./content/Part7 Statistics/Chapter1.tex
 Chapter 39.
 File: Images//orange2.jpg Graphic file (type bmp)
 <Images//orange2.jpg>
-[267
+[263
 
-] [268
+] [264
 
 ]
 Chapter 40.
 File: Images//orange2.jpg Graphic file (type bmp)
 <Images//orange2.jpg>
-[269] [270
+[265] [266
 
 ]
 Chapter 41.
 File: Images//orange2.jpg Graphic file (type bmp)
 <Images//orange2.jpg>
-[271] [272
+[267] [268
 
 ]
 Chapter 42.
 File: Images//orange2.jpg Graphic file (type bmp)
 <Images//orange2.jpg>
-[273] [274
+[269] [270
 
 ]
 Chapter 43.
 File: Images//orange2.jpg Graphic file (type bmp)
 <Images//orange2.jpg>
-[275] [276
+[271] [272
 
 ]
 Chapter 44.
 File: Images//orange2.jpg Graphic file (type bmp)
 <Images//orange2.jpg>
-[277] [278
+[273] [274
 
 ]
 Chapter 45.
 File: Images//orange2.jpg Graphic file (type bmp)
 <Images//orange2.jpg>
-) [279] [280
+) [275] [276
 
-] (./main.ptc) [281] [282] (./content/Part8 Basic Information Theory/Chapter1.tex
+] (./main.ptc) [277] [278] (./content/Part8 Basic Information Theory/Chapter1.tex
 Chapter 46.
 File: Images//orange2.jpg Graphic file (type bmp)
 <Images//orange2.jpg>
-[283
+[279
 
-] [284
+] [280
 
 ]
 Chapter 47.
 File: Images//orange2.jpg Graphic file (type bmp)
 <Images//orange2.jpg>
-[285] [286
+[281] [282
 
 ]
 Chapter 48.
 File: Images//orange2.jpg Graphic file (type bmp)
 <Images//orange2.jpg>
-[287] [288
+[283] [284
 
 ]
 Chapter 49.
 File: Images//orange2.jpg Graphic file (type bmp)
 <Images//orange2.jpg>
-[289] [290
+[285] [286
 
 ]
 Chapter 50.
 File: Images//orange2.jpg Graphic file (type bmp)
 <Images//orange2.jpg>
-[291] [292
+[287] [288
 
 ]
 Chapter 51.
@@ -4338,18 +5159,29 @@ File: Images//orange2.jpg Graphic file (type bmp)
 \tf@ptc=\write9
 \openout9 = `main.ptc'.
 
- [293] (./main.aux)
+ [289] (./main.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                main
+(biblatex)                and rerun LaTeX afterwards.
+
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 34273 strings out of 476684
- 648490 string characters out of 5804056
+ 34244 strings out of 476684
+ 648033 string characters out of 5804056
  1870018 words of memory out of 5000000
- 53859 multiletter control sequences out of 15000+600000
- 625598 words of font info for 165 fonts, out of 8000000 for 9000
+ 53838 multiletter control sequences out of 15000+600000
+ 617047 words of font info for 154 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  98i,17n,94p,1303b,1071s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.pdf (293 pages).
+Output written on main.pdf (289 pages).

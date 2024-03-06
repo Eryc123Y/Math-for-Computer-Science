@@ -243,10 +243,6 @@ division produce an integer as result, while sometimes not. We define division a
         By theorem \ref{Properties of Divisibility}, $a\mid b$ and $a\mid c$ gives us $a\mid mb$
         and $a\mid nc$ (property 2). Hence, $a\mid (mb+nc)$ (property 1). This completes the proof.
     \end{proof}
-    
-    \begin{exercise}
-        floored division he truncated division
-    \end{exercise}
 
     \begin{exercise}
         Prove theorem \ref{mod2}, you may use other theorems or corollary in this chapter.
@@ -328,6 +324,35 @@ division produce an integer as result, while sometimes not. We define division a
         Assume that \( a \equiv b \pmod{m} \). This means that \( m \mid a - b \), say \( a - b = mc \), so that \( a = b + mc \). Now let us compute \( a \mod m \). We know that \( b = qm + r \) for some nonnegative \( r \) less than \( m \) (namely, \( r = b \mod m \)). Therefore, we can write \( a = qm + r + mc = (q + c)m + r \). By definition, this means that \( r \) must also equal \( a \mod m \). That is what we wanted to prove.
     \end{proof}
 
+    \begin{exercise}
+        Show that if $a \equiv b (\bmod n)$ and $d\mid a$,$d\mid b$, $d\mid n$, then
+        $$\frac{a}{d}\equiv \frac{b}{d} (\bmod \frac{n}{d})$$
+    \end{exercise}
+    \begin{proof}
+        Since \( a \equiv b \mod n \), by definition there exists an integer \( k \) such that \( a = b + kn \). Now, since \( d \mid a \) and \( d \mid b \), we have \( a = dm_1 \) and \( b = dm_2 \) for some integers \( m_1 \) and \( m_2 \). Also, \( d \mid n \) implies \( n = dl \) for some integer \( l \).
+        
+        Substituting these into our first equation we get
+        \[
+        dm_1 = dm_2 + k(dl)
+        \]
+        
+        Dividing through by \( d \) we obtain
+        \[
+        m_1 = m_2 + kl
+        \]
+        
+        This can be rewritten as
+        \[
+        \frac{a}{d} = \frac{b}{d} + k \left(\frac{n}{d}\right)
+        \]
+        
+        Since \( k \left(\frac{n}{d}\right) \) is an integer, this shows that \( \frac{a}{d} \) is congruent to \( \frac{b}{d} \) modulo \( \frac{n}{d} \), which is precisely
+        \[
+        \frac{a}{d} \equiv \frac{b}{d} \mod \frac{n}{d}
+        \]
+        
+        Hence, the statement is proven.
+    \end{proof}
 \section{Number Representations and Algorithms}
     In everyday life, we use decimal notation to express integers. Though this is not
     for all cases, as we are using a 60 base system for time. However, in computer science, binary, octal, and hexadecimal
@@ -657,6 +682,7 @@ This algorithm's pseudocode is as listed below.
     \subsection{Exercises}
 
 
+
 \section{Primes and Greatest Common Divisors}
         In previous chapter, we learned the properties of division and divisibility, as well as
         modular arithmetic. These are the most essential parts of the whole number theory. In this section
@@ -712,7 +738,7 @@ This algorithm's pseudocode is as listed below.
 
                 \[abx + pby = b\]
                 \begin{remark}
-                    If this proof is not yet understandable for you, skip it, and check it back after we go over the rest of this chapter about linear combination of primes.
+                    If this proof is not yet understandable for you, skip it, and check it back after we go over the rest of this chapter about linear combination and this theorem.
                 \end{remark}
                 Since \(p\) divides \(ab\) (by assumption), \(p\) divides \(abx\). Also, \(p\) obviously divides \(pby\). Hence, \(p\) divides the sum \(abx + pby\), which means \(p\) divides \(b\).
 
@@ -869,7 +895,6 @@ This algorithm's pseudocode is as listed below.
         Find lcm$(120, 500)$.
         $$\text{lcm}(120,500)=2^{\max(2,3)}3^{\max(1,0)}5^{\max(1,3)} = 8\times 3 \times 125= 3000$$
     \end{example}
-
     Have you noticed, that $ab$ is actually the product of $\text{lcm}(a,b)$ and $\gcd(a,b)$? Becuase the order of each
     term in the prime factorization of $ab$ is a sum of two number, what ever which number is the maximum of the minimum,
     we always have the order of $a_n+b_n$. For 120 and 500 we have 
@@ -879,7 +904,52 @@ This algorithm's pseudocode is as listed below.
         Let $a$ and $b$ be positive integers. Then $ab= \gcd ( a, b) \cdot $lcm$( a, b).$
     \end{theorem}
 
-
     \subsubsection*{The Euclidean Algorithm}
 
-    \subsection{Greatest Common Divisors as Linear Combinations}
+    \subsubsection*{Greatest Common Divisors as Linear Combinations}
+        The greatest common divisor of two integers $a$ and $b$ can be expressed in the form
+        $$sa + tb$$
+        where $s$ and $t$ are integers. In other words, $\gcd(a, b)$ can be expressed as a linear combination with 
+        integer coefficients of $a$ and $b$. 
+
+        This property of GCD is exactlly the Bézout's Theorem, which states that:
+        \begin{theorem}[Bézout's Theorem]
+            Let $a$ and $b$ be integers, not both zero. There exist integers $x$ and $y$ such that
+            \[
+            ax + by = \gcd(a, b),
+            \]
+            where $\gcd(a, b)$ denotes the greatest common divisor of $a$ and $b$. The integers $x$ and $y$ are known as Bézout coefficients.
+            the equation$ \gcd(a, b) = sa + tb$ is called Bézout's identity.
+        \end{theorem}
+        \begin{proof}
+            The proof of Bézout's identity uses the property that for nonzero integers $a$ and $b$, dividing $a$ by 
+            $b$ leaves a remainder of $r_1$ strictly less than $|b|$ and $\gcd(a,b)=$.
+            $\gcd(r_1,b)$.Then by repeated applications of the Euclidean division algorithm, we have
+            $a=bx_1+r_1$, $0<r_1<|b|$ $b=r_1x_2+r_2$, $0<r_2<r_1$
+            $$r_{n-1}=r_nx_{n+1}+r_{n+1},\quad0<r_{n+1}<r_n$$
+            $$r_n=r_{n+1}x_{n+2}$$
+
+            where the $r_{n+1}$ is the last nonzero remainder in the division process. Now, as illustrated in the example above, we can use the second to last equation to solve for $r_{n+1}$ as a combination of $r_n$ and $r_{n-1}$. Unfolding this, we can solve for $r_n$ as a combination of $r_{n-1}$ and $r_{n-2}$ etc. until we eventually write $r_{n+1}$ as alinear
+            combination of $a$ and $b$. Since $r_{n+1}$ is the last nonzero remainder in the division process, it is the greatest common divisor of $a$ and $b$,which proves Bézout's identity. $\square$
+        \end{proof}
+
+
+
+    \section{Solving Congruence}
+
+    
+
+        \subsection{Linear Congruences}
+            \begin{definition}[Linear Congruence]
+                Congruence of the form as follows
+                $$ax \equiv b (\bmod m)$$
+                is called \textbf{Linear Congruence}, where $a, b,  m \in \mathbb{Z}^+$, and x is the variable to be solved.
+                To solve this congruence, we need to find $\bar{a}$, which we call \textbf{inverse of a modulo m} if $a$, such that
+                $a\bar{a} \equiv 1 (\bmod m)$.
+            \end{definition}
+        \subsection{The Chinese Remainder Theorem}
+
+        %\subsubsection*{Arithmetic of Large Numbers}
+
+
+        \subsection{Fermat's Little Theorem}

@@ -1,9 +1,9 @@
-        \[ a = p_1^{a_1} p_2^{a_2} \ldots p_n^{a_n}, \quad b = p_1^{b_1} p_2^{b_2} \ldots p_n^{b_n}, \]
-        where \(a_i\) and \(b_i\) are the exponents of the prime factors of \(a\) and \(b\), respectively.
+           $\gcd(r_1,b)$.Then by repeated applications of the Euclidean division algorithm, we have
 
-        The product \(ab\) can be expressed as a prime factorization:
-        \[ ab = p_1^{a_1+b_1} p_2^{a_2+b_2} \ldots p_n^{a_n+b_n}. \]
+            $a=bx_1+r_1$, $0<r_1<|b|$ $b=r_1x_2+r_2$, $0<r_2<r_1$
 
-        From this, we can deduce that any common multiple of \(a\) and \(b\) must be a product of their prime factors raised to at least the maximum exponent found in either \(a\) or \(b\). Therefore, the \(\text{lcm}(a, b)\) can be expressed as
-        \[ \text{lcm}(a, b) = p_1^{\max(a_1,b_1)} p_2^{\max(a_2,b_2)} \ldots p_n^{\max(a_n,b_n)}. \]
-        This ensures that \(\text{lcm}(a, b)\) i
+            $r_{n-1}=r_nx_{n+1}+r_{n+1},\quad0<r_{n+1}<r_n$
+            $r_n=r_{n+1}x_{n+2}$,
+
+            where the $r_{n+1}$ is the last nonzero remainder in the division process. Now, as illustrated in the example above, we can use the second to last equation to solve for $r_{n+1}$ as a combination of $r_n$ and $r_{n-1}$. Unfolding this, we can solve for $r_n$ as a combination of $r_{n-1}$ and $r_{n-2}$ etc. until we eventually write $r_{n+1}$ as alinear
+            combination of $a$ and $b$. S
