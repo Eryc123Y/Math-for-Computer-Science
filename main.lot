@@ -1,22 +1,22 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {3.1}{\ignorespaces Execution of RPM}}{66}{table.3.1}%
-\contentsline {table}{\numberline {3.2}{\ignorespaces Common time complexities in Big O notation}}{68}{table.3.2}%
+\contentsline {table}{\numberline {3.1}{\ignorespaces Execution of RPM}}{72}{table.3.1}%
+\contentsline {table}{\numberline {3.2}{\ignorespaces Common time complexities in Big O notation}}{74}{table.3.2}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {6.1}{\ignorespaces Common Algebraic Laws}}{145}{table.6.1}%
-\contentsline {table}{\numberline {6.2}{\ignorespaces Common Boolean Operators Truth Tables}}{147}{table.6.2}%
-\contentsline {table}{\numberline {6.3}{\ignorespaces Addition and Multiplication Rule of 0 and 1}}{148}{table.6.3}%
-\contentsline {table}{\numberline {6.4}{\ignorespaces Truth table for \((A \land \neg B) \lor (\neg A \land B)\)}}{148}{table.6.4}%
-\contentsline {table}{\numberline {6.5}{\ignorespaces Basic Boolean Identities}}{148}{table.6.5}%
-\contentsline {table}{\numberline {6.6}{\ignorespaces Truth values of material conditional, biconditional, and XOR for all possible inputs.}}{150}{table.6.6}%
-\contentsline {table}{\numberline {6.7}{\ignorespaces Truth table for the expression \( x \lor ((\lnot y) \land (\lnot z)) \)}}{153}{table.6.7}%
+\contentsline {table}{\numberline {6.1}{\ignorespaces Common Algebraic Laws}}{151}{table.6.1}%
+\contentsline {table}{\numberline {6.2}{\ignorespaces Common Boolean Operators Truth Tables}}{153}{table.6.2}%
+\contentsline {table}{\numberline {6.3}{\ignorespaces Addition and Multiplication Rule of 0 and 1}}{154}{table.6.3}%
+\contentsline {table}{\numberline {6.4}{\ignorespaces Truth table for \((A \land \neg B) \lor (\neg A \land B)\)}}{154}{table.6.4}%
+\contentsline {table}{\numberline {6.5}{\ignorespaces Basic Boolean Identities}}{154}{table.6.5}%
+\contentsline {table}{\numberline {6.6}{\ignorespaces Truth values of material conditional, biconditional, and XOR for all possible inputs.}}{156}{table.6.6}%
+\contentsline {table}{\numberline {6.7}{\ignorespaces Truth table for the expression \( x \lor ((\lnot y) \land (\lnot z)) \)}}{159}{table.6.7}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {8.1}{\ignorespaces Binary Search Iterations}}{181}{table.8.1}%
-\contentsline {table}{\numberline {8.2}{\ignorespaces Execution steps of Binary Search when $T = 99$}}{185}{table.8.2}%
+\contentsline {table}{\numberline {8.1}{\ignorespaces Binary Search Iterations}}{187}{table.8.1}%
+\contentsline {table}{\numberline {8.2}{\ignorespaces Execution steps of Binary Search when $T = 99$}}{191}{table.8.2}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
