@@ -8,10 +8,13 @@ This textbook (or probably note?) is a work in progress and will be updated irre
 
 ## About the Book
 "Math for CS" aims to cover a wide range of mathematic topics relevant to computer science, including but not limited to:
-- Extention of high school and middle school Knowledge (Finish soon)
+- Extention of high school and middle school Knowledge (done, but there may be revision in future)
 - Discrete Math (To be finished by May)
-- Continuous Math (Calculus) (To be finished by the end of the year)
+- Continuous Math (complete Calculus) (To be finished by the end of the year)
 - Probability, combinatorics, and statistics. (---)
+- Linear Algebra(with advanced contents)
+- Information Theory(basics)
+- Important Pure Math knowledge(scattered in important contents, no current plan to make it a independent chapter)
 Each topic is accompanied by exercises and examples to reinforce learning and understanding.
 All suggestions or corrections are welcome.
 
