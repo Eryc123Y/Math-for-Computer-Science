@@ -104,9 +104,9 @@
 \contentsline {subsection}{\numberline {7.3.1}Primes and Related Algorithms}{177}{subsection.7.3.1}%
 \contentsline {subsection}{\numberline {7.3.2}Greatest Common Divisors and Least Common Multiples}{180}{subsection.7.3.2}%
 \contentsline {section}{\numberline {7.4}Solving Congruence}{183}{section.7.4}%
-\contentsline {subsection}{\numberline {7.4.1}Linear Congruences}{183}{subsection.7.4.1}%
-\contentsline {subsection}{\numberline {7.4.2}The Chinese Remainder Theorem}{183}{subsection.7.4.2}%
-\contentsline {subsection}{\numberline {7.4.3}Fermat's Little Theorem}{183}{subsection.7.4.3}%
+\contentsline {subsection}{\numberline {7.4.1}Linear Congruences}{184}{subsection.7.4.1}%
+\contentsline {subsection}{\numberline {7.4.2}The Chinese Remainder Theorem}{184}{subsection.7.4.2}%
+\contentsline {subsection}{\numberline {7.4.3}Fermat's Little Theorem}{184}{subsection.7.4.3}%
 \contentsline {chapter}{\numberline {8}Search and Sorting with Further Algorithm Analysis}{185}{chapter.8}%
 \contentsline {section}{\numberline {8.1}Searching algorithms}{185}{section.8.1}%
 \contentsline {subsection}{\numberline {8.1.1}Searching in Unordered Array List}{185}{subsection.8.1.1}%

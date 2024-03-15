@@ -930,14 +930,49 @@ This algorithm's pseudocode is as listed below.
             $$r_n=r_{n+1}x_{n+2}$$
 
             where the $r_{n+1}$ is the last nonzero remainder in the division process. Now, as illustrated in the example above, we can use the second to last equation to solve for $r_{n+1}$ as a combination of $r_n$ and $r_{n-1}$. Unfolding this, we can solve for $r_n$ as a combination of $r_{n-1}$ and $r_{n-2}$ etc. until we eventually write $r_{n+1}$ as alinear
-            combination of $a$ and $b$. Since $r_{n+1}$ is the last nonzero remainder in the division process, it is the greatest common divisor of $a$ and $b$,which proves Bézout's identity. $\square$
+            combination of $a$ and $b$. Since $r_{n+1}$ is the last nonzero remainder in the division process, it is the greatest common divisor of $a$ and $b$,which proves Bézout's identity.
         \end{proof}
+        \begin{remark}
+            Bezout's Theorem is closely related to Linear Diophantine Equations, which we will
+            discuss further in solving linear congruence.
+        \end{remark}
+
+        We use a example to explain further on the theorem. Recall that Euclidean algorithm is actually a recursive algorithm, to find
+        gcd of $a$ and $b$, it requires multiple usage of the algorithm.
+        \begin{example} 
+            Use the Euclidean algorithm to find the greatest common divisor of 1022 and 400.
+        \end{example}   
+        \textbf{Solution:}
+$$
+        \begin{aligned}\\
+            1022&=2\times400+222\\
+            400&=1\times 222+178\\
+            222&=1\times 178+44\\
+            178&=4\times 44+2\\
+            44&=22\times2+0
+            \end{aligned}
+   $$ 
+        In this way, we find $\gcd(1022,400)=2$ easily. Writing the step-by-step of using Euclidean like this is what we call \textbf{the
+        Extended Euclidean Algorithm}. 
+
+        Notice further that as the terms in the extended algorithm could be expressed by previous lines, we can finally get a linear combination
+        of the gcd over 1022 and 400. In this case, we have $2 = 23\times 400-9\times 1022$.
+
+        Now consider an equivalent expression for the problem.  Find integers $a$ and $b$ such that $\gcd(1022, 400) = a \times 1022 + b \times 400$.
+        In this case, we do exactly the same thing, and straightforward, we have $a=-9$ and $b=23$.
+
+        There is still another equivalent expression to this, and it will be discussed with linear congruence in the next section.
 
 
 
     \section{Solving Congruence}
-
-    
+        Earlier in this chapter, we introduced divisibility, and thus defined division and modular arithmetic, as well as modular congruence.
+        We have also introduced algebraic properties of congruence, and surprisingly, many of which are just like "copying" from the real number
+        , or we generally say, normal algebra system. Now think about how we learn math for real number. We learnt all the way from basic operations
+        and finally we just donot use the numbers any more in the expression, but in stead, letters, and we call this algebra. Now that modular congruence
+        shares so many basic property with that, can we extend to more algebra on modular congruence? This section introduces solving equation, or only
+        linear equations, of modular congruence, and it has much to do with Euclidean algorithm.
+            
 
         \subsection{Linear Congruences}
             \begin{definition}[Linear Congruence]

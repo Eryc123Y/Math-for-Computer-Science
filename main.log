@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2023.3.5)  9 MAR 2024 15:40
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2023.3.5)  15 MAR 2024 10:05
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -3873,10 +3873,18 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
 [182]
-Package mdframed Info: mdframed works in twoside mode on input line 943.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[183]
+Package mdframed Info: mdframed works in twoside mode on input line 978.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 943.
+(mdframed)              on input line 978.
 ) (./content/Part2 Discrete math/Chapter3.tex
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
@@ -3885,9 +3893,7 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[183] [184
-
-]
+[184]
 Chapter 8.
 File: Images//orange2.jpg Graphic file (type bmp)
 <Images//orange2.jpg>
@@ -3895,7 +3901,9 @@ Package mdframed Info: mdframed works in twoside mode on input line 14.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 14.
-[185]
+[185
+
+]
 Overfull \hbox (18.94572pt too wide) detected at line 52
  $\OT1/ztmcm/m/n/12 ^^B(\OML/ztmcm/m/it/12 g\OT1/ztmcm/m/n/12 (\OML/ztmcm/m/it/12 n\OT1/ztmcm/m/n/12 )) = \OMS/ztmcm/m/n/12 f\OML/ztmcm/m/it/12 f\OT1/ztmcm/m/n/12 (\OML/ztmcm/m/it/12 n\OT1/ztmcm/m/n/12 ) : \OMS/ztmcm/m/n/12 9\OML/ztmcm/m/it/12 c[] > \OT1/ztmcm/m/n/12 0\OML/ztmcm/m/it/12 ; c[] > \OT1/ztmcm/m/n/12 0\OML/ztmcm/m/it/12 ; n[] > \OT1/ztmcm/m/n/12 0[]0 \OMS/ztmcm/m/n/12 ^^T \OML/ztmcm/m/it/12 c[]g\OT1/ztmcm/m/n/12 (\OML/ztmcm/m/it/12 n\OT1/ztmcm/m/n/12 ) \OMS/ztmcm/m/n/12 ^^T \OML/ztmcm/m/it/12 f\OT1/ztmcm/m/n/12 (\OML/ztmcm/m/it/12 n\OT1/ztmcm/m/n/12 ) \OMS/ztmcm/m/n/12 ^^T \OML/ztmcm/m/it/12 c[]g\OT1/ztmcm/m/n/12 (\OML/ztmcm/m/it/12 n\OT1/ztmcm/m/n/12 )[]\OML/ztmcm/m/it/12 n \OMS/ztmcm/m/n/12 ^^U \OML/ztmcm/m/it/12 n[]\OMS/ztmcm/m/n/12 g$ 
  []
@@ -4380,6 +4388,9 @@ File: Images//orange2.jpg Graphic file (type bmp)
 \openout9 = `main.ptc'.
 
  [295] (./main.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
