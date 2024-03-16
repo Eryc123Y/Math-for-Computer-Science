@@ -913,7 +913,7 @@ This algorithm's pseudocode is as listed below.
         integer coefficients of $a$ and $b$. 
 
         This property of GCD is exactlly the Bézout's Theorem, which states that:
-        \begin{theorem}[Bézout's Theorem]
+        \begin{theorem}[Bézout's Theorem]\label{Bezout}
             Let $a$ and $b$ be integers, not both zero. There exist integers $x$ and $y$ such that
             \[
             ax + by = \gcd(a, b),
@@ -965,26 +965,212 @@ $$
 
 
 
+    \subsection{Exercises}
+
+
+    
+    
     \section{Solving Congruence}
         Earlier in this chapter, we introduced divisibility, and thus defined division and modular arithmetic, as well as modular congruence.
         We have also introduced algebraic properties of congruence, and surprisingly, many of which are just like "copying" from the real number
-        , or we generally say, normal algebra system. Now think about how we learn math for real number. We learnt all the way from basic operations
-        and finally we just donot use the numbers any more in the expression, but in stead, letters, and we call this algebra. Now that modular congruence
-        shares so many basic property with that, can we extend to more algebra on modular congruence? This section introduces solving equation, or only
+        , or we generally say, normal algebra system. Now think about how we learn math for real number. We learnt all the way from basic operations, and finally we just do not use the numbers anymore in the expression, but in stead, letters, and we call this algebra. Now that modular congruence
+        shares so many basic properties with that, can we extend to more algebra on modular congruence? This section introduces solving equation, or only
         linear equations, of modular congruence, and it has much to do with Euclidean algorithm.
             
 
-        \subsection{Linear Congruences}
+        \subsection{Linear Congruence}
             \begin{definition}[Linear Congruence]
                 Congruence of the form as follows
                 $$ax \equiv b (\bmod m)$$
-                is called \textbf{Linear Congruence}, where $a, b,  m \in \mathbb{Z}^+$, and x is the variable to be solved.
+                is called \textbf{Linear Congruence}, where $a, b,  m \in \mathbb{Z}^+$, and $x$ is the variable to be solved.
                 To solve this congruence, we need to find $\bar{a}$, which we call \textbf{inverse of a modulo m} if $a$, such that
                 $a\bar{a} \equiv 1 (\bmod m)$.
             \end{definition}
-        \subsection{The Chinese Remainder Theorem}
+        If we are to find the $x$ of a given expression, what kind of solution we will get? Do we get 
+        specific solution or infinitely many solutions? The fact is that we will get infinitely many
+        solutions, since modular congruence has periodicity.
 
+        \begin{theorem}
+            If \( a \) and \( m \) are relatively prime integers and \( m > 1 \), then an inverse of \( a \) modulo \( m \) exists. Furthermore, this inverse is unique modulo \( m \). (That is, there is a unique positive integer \( \bar{a} \) that is an inverse of \( a \) modulo \( m \) and every other inverse of \( a \) modulo \( m \) is congruent to \( \bar{a} \) modulo \( m \).)
+            \end{theorem}
+            
+            \begin{proof}
+            By Bezout's Theorem, because \( \gcd(a, m) = 1 \), there are integers \( s \) and \( t \) such that
+            \[
+            sa + tm = 1.
+            \]
+            This implies that
+            \[
+            sa + tm \equiv 1 \pmod{m}.
+            \]
+            Because \( tm \equiv 0 \pmod{m} \), it follows that
+            \[
+            sa \equiv 1 \pmod{m}.
+            \]
+            Consequently, \( s \) is an inverse of \( a \) modulo \( m \).
+
+            Now we try to prove the uniqueness of $s$ as an inverse of \( a \) modulo \( m \).
+            Suppose there are other integers than $s$ ($x$) that satisfies  
+            \[ xa \equiv 1 \pmod{m} \text{ and } x \neq s + km\]
+            So, by definition of modular congruence we have $xa \bmod m = 1$ and $sa \bmod m = 1$, which
+            gives
+            $$xa \equiv sa \pmod m$$
+            So $m\mid xa - sa$, and this means that $xa - sa = km$ for some integer $k$ must be true.
+            If that is true, then $x-s$ is also multiple of $m$, which means $x\equiv s \pmod m$.
+            Now recall our assumption that $x\neq s + km$, so $x = s + km$ for some integer $k$ refutes
+            our assumption. Therefore, there is a unique positive integer $\bar{a}$ that is an inverse of a 
+            modulo $m$ and every other inverse of $a$ modulo $m$ is congruent to $\bar{a}$ modulo m.
+            \end{proof}
+        
+        \begin{example}
+            Find an inverse of 101 modulo 5000.
+        \end{example}
+        \paragraph{Solution:}
+we present all steps used to compute an inverse of 101 modulo 5000. First, we use the Euclidean algorithm to show that $\gcd(101, 5000) = 1$. Then we will reverse the steps to find B\'ezout coefficients $a$ and $b$ such that $101a + 5000b = 1$. It will then follow that $a$ is an inverse of 101 modulo 5000. The steps used by the Euclidean algorithm to find $\gcd(101, 5000)$ are
+\begin{align*}
+5000 &= 49 \cdot 101 + 51 \\
+101 &= 1 \cdot 51 + 50 \\
+51 &= 1 \cdot 50 + 1 \\
+50 &= 50 \cdot 1.
+\end{align*}
+Because the last nonzero remainder is 1, we know that $\gcd(101, 5000) = 1$. We can now find the Bezout coefficients for 101 and 5000 by working backwards through these steps, expressing the gcd of 101 and 5000 as $1$ in terms of each successive pair of remainders. In each step we eliminate the remainder by expressing it as a linear combination of the divisor and the dividend. We obtain
+\begin{align*}
+1 &= 51 - 1 \cdot 50 \\
+&= 51 - 1 \cdot (101 - 1 \cdot 51) \\
+&= 2 \cdot 51 - 101 \\
+&= 2 \cdot (5000 - 49 \cdot 101) - 101 \\
+&= 2 \cdot 5000 - 99 \cdot 101.
+\end{align*}
+
+That $-99 \cdot 5000 + 2 \cdot 101 = 1$ tells us that $2$ and $-99$ are Bezout coefficients of 5000 and 101, and $-99$ is an inverse of 101 modulo 5000.
         %\subsubsection*{Arithmetic of Large Numbers}
+    \begin{example}
+        What are the solutions of the linear congruence $101x \equiv 3 \pmod {5000}$?
+    \end{example}
+    We know that -99 is a modular inverse of $101 \bmod 5000$. So we multiply the inverse on the both
+    side, this gives
+    $$-99 \cdot 101x \equiv -99\cdot 3 \pmod {5000} $$
+    $-99\cdot 101 \equiv 1 \pmod{5000}$, so $x\equiv -99 \cdot3 \pmod{5000}$.
+    From here we can see that $x$ is not a single number, but a set of numbers. We can have$x = -297, -5293, 4703\cdots$.
+    So the general solution $x$ is $x = x_0 + km$, where $k$ is some integer, and $x_0$ is one of the specific solution we can
+    find.
 
+    Great, now you can solve any solutions for any linear congruence, as long as it is solvable (has inverse).
+    But can we generalize this problem? Because in the previous discussion of solving linear congruence and
+    finding the inverse are all based on the condition that the two numbers are coprime, i.e., $\gcd(a,b)=1$.
+    What will be the case when they are not coprime?
 
+    Actually, solving linear congruence is a subset of a greater concept, \textbf{Diophantine Equation}.
+    \begin{definition}[Diophantine Equation]
+        A Diophantine equation is an equation or a system of equations that allows for polynomial expressions in several variables and requires the solutions to be integers. These equations are studied within number theory and are named after Diophantus of Alexandria, a Greek mathematician. Specifically,
+        a Diophantine equation can be interpreted by the following expression.
+        $$a_{1}x_{1}^{b_{1}}+a_{2}x_{2}^{b_{2}}+......+a_{n}x_{n}^{b_{n}}=c$$
+        Where $a$, $b$, $x$, $c \in \mathbb{Z}$. 
+    \end{definition}
+    You may realize at the first glance that this equation is hard to solve and has infinitely many
+    solutions, because for the most basic system of linear equation, we can only get specific solution
+    when the number of unknowns is equal to the number of equations in the system. But no worries,
+    we discuss only the simplest form of this type of equation for now, which is
+    $$ax+by=c \text{.}$$
+    Isn't it familiar to you? This is exactly what were shown in Bezout's Theorem (you may check theorem \ref{Bezout})
+    This means that, as long as we are finding the relation between between a pair of number $a,b$ with their
+    GCD, we are doing exactly the same thing as solving linear congruence, because the latter is
+    a subset of the former, as Diophantine equation.
+
+    Now let's work out the general solution of such equation.
+    Consider the linear Diophantine equation
+
+\begin{equation}
+ax + by = c
+\end{equation}
+
+where \(a\), \(b\), and \(c\) are given integers, and \(x\) and \(y\) are unknown integers that we want to solve for. 
+
+\textbf{Step 1: Finding a particular solution}
+
+By the Extended Euclidean Algorithm, we can find integers \(x_0\) and \(y_0\) such that
+
+\begin{equation}
+ax_0 + by_0 = \gcd(a, b)
+\end{equation}
+
+\textbf{Step 2: The general solution form}
+
+If \(c\) is a multiple of \(\gcd(a, b)\), say \(c = k \cdot \gcd(a, b)\), then by multiplying the equation \(ax_0 + by_0 = \gcd(a, b)\) by \(k\), we get a particular solution to \(ax + by = c\):
+
+\begin{equation}
+ax_0k + by_0k = ck
+\end{equation}
+
+Now, consider that for any integer \(t\), the following holds:
+
+\begin{equation}
+a(x_0 + tb/d) + b(y_0 - ta/d) = ax_0 + by_0 = ck
+\end{equation}
+
+where \(d = \gcd(a, b)\). 
+
+This is because the multiples of \(b/d\) added to \(x\) and multiples of \(a/d\) subtracted from \(y\) will cancel each other out when multiplied by \(a\) and \(b\), respectively.
+
+\textbf{Step 3: General solution}
+
+Thus, the general solution to the equation \(ax + by = c\) can be expressed as:
+
+\begin{equation}
+x = kx_0 + t\left(\frac{b}{d}\right)
+\end{equation}
+
+\begin{equation}
+y = ky_0 - t\left(\frac{a}{d}\right)
+\end{equation}
+
+where \(t, k\) are any integer and $d = \gcd(a,b)$. This represents an infinite set of solutions if \(a\) and \(b\) are coprime.
+\begin{corollary}[Solvability of Linear Diophantine Equation]
+    Now consider the cases for solutions, when $a,b$ are coprime ($\gcd(a,b)=1$), there must be integer solutions for the equation,
+as shown in the proof, because 1 is a divisor of any integer. However, when $c$ is not a multiple
+of $\gcd(a, b)$, we cannot find any integer solution. As for other general cases, i.e., $\gcd(a, b)\neq 1$,
+but $\gcd(a,b)\mid c$, there are integer solutions.
+\end{corollary}
+
+Now that we have known the idea of Diophantine Equation, we can relate the concept to linear
+congruence easily. 
+\begin{proposition}[Linear Congruence is a subproblem of Douphantine Equation]
+    Solving linear congruence is a subproblem of solving linear Diophantine equation.
+    Suppose we are looking for linear combination of $c=sa+tb$, which is equivalent
+to solving this Diophantine equation. This is equivalent to find $ax\equiv c \pmod b$.
+\end{proposition}
+\begin{proof}
+    $ax\equiv c \pmod b$ means that $ax \bmod b = c \bmod b$. By division algorithm
+    $ax = q_1b + r$, $c = q_2b + r$, where $q$ is the quotient and $q\in \mathbb{Z}$. 
+    $c-q_2b = ax-q_1b$, and thus $c = ax + (q_2-q_1)b$, where $a, (q_2-q_1)\in \mathbb{Z}$.
+    So we have shown that solving linear congruence could be treated as solving a Diophantine Equation.
+\end{proof}
+\begin{example}
+    Solve $400z\equiv 8 (\bmod1022)$
+\end{example}
+\textbf{Solution:} 
+
+    We can straightaway treat it as solving the Diophantine equation
+    $$8 = 400x + 1022y$$
+    We need to know their gcd, so we use extended Euclidean algorithm.
+   $$ \begin{aligned}
+        1022&=2\times400+222\\
+        400&=1\times 222+178\\
+        222&=1\times 178+44\\
+        178&=4\times 44+2\\
+        44&=22\times2+0
+        \end{aligned}$$
+    
+        By Bezout theorem, we use substitution repetitively to get the linear combination of
+        their gcd in terms of 400 and 1022, which is $2 = 23\times 400 -9\times 1022$.
+        Because 8 is multiple of 2, so we can get $z$ by $8 = -36\times 1022 + 92\times 400$, 
+        which is a set of specific solution ($x = 92, y=-36$).
+
+        With the specific solution, we can get the general solution:
+        $$ \begin{aligned}\\
+            x&=k\cdot 92+t(\frac{1022}{\gcd(400,1022)})\\
+            y&=k\cdot(-36)+t(\frac{400}{\gcd(400,1022)} )
+            \end{aligned}$$
+        
+        \subsection{The Chinese Remainder Theorem}
         \subsection{Fermat's Little Theorem}

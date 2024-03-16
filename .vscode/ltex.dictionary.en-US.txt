@@ -17,3 +17,8 @@ Normals
 Extrema
 Rolle
 sublist
+Bezout
+coprime
+Diophantus
+subproblem
+gcd
