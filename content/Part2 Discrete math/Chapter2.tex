@@ -990,7 +990,7 @@ $$
         specific solution or infinitely many solutions? The fact is that we will get infinitely many
         solutions, since modular congruence has periodicity.
 
-        \begin{theorem}
+        \begin{theorem}[Existence of Inverses Theorem]\label{exist_inverse}
             If \( a \) and \( m \) are relatively prime integers and \( m > 1 \), then an inverse of \( a \) modulo \( m \) exists. Furthermore, this inverse is unique modulo \( m \). (That is, there is a unique positive integer \( \bar{a} \) that is an inverse of \( a \) modulo \( m \) and every other inverse of \( a \) modulo \( m \) is congruent to \( \bar{a} \) modulo \( m \).)
             \end{theorem}
             
@@ -1173,4 +1173,82 @@ to solving this Diophantine equation. This is equivalent to find $ax\equiv c \pm
             \end{aligned}$$
         
         \subsection{The Chinese Remainder Theorem}
+        In the last section, we relate linear congruence to linear equation. Now we will try to relate it to system of linear equations.
+        Recall that a \textit{system of linear equations} is a collection of one or more linear equations involving the same variables. 
+        \begin{definition}[System of Linear Equations]
+        In the context of real numbers, a system of $n$ linear equations in $n$ unknowns $x_1, x_2, \ldots, x_n$ can be written as:
+        \begin{align*}
+        a_{11}x_1 + a_{12}x_2 + \cdots + a_{1n}x_n &= b_1 \\
+        a_{21}x_1 + a_{22}x_2 + \cdots + a_{2n}x_n &= b_2 \\
+        \vdots &\\
+        a_{n1}x_1 + a_{n2}x_2 + \cdots + a_{nn}x_n &= b_n
+        \end{align*}
+        where $a_{ij}$ and $b_i$ are real numbers.
+        \begin{remark}
+            Just a kind reminder that "Linear" basically means the order of polynomial is at most 1, just in case some don't know
+            the definition.
+        \end{remark}
+        \end{definition}
+        \begin{definition}[System of Linear Congruences]
+        Similarly, a \textit{system of linear congruences} is a collection of linear congruences in the same variables over a ring of integers modulo $m$. A system of $n$ linear congruences in $n$ unknowns $x_1, x_2, \ldots, x_n$ can be written as:
+        \begin{align*}
+        a_{11}x_1 + a_{12}x_2 + \cdots + a_{1n}x_n &\equiv b_1 \pmod{m_1} \\
+        a_{21}x_1 + a_{22}x_2 + \cdots + a_{2n}x_n &\equiv b_2 \pmod{m_2} \\
+        \vdots &\\
+        a_{n1}x_1 + a_{n2}x_2 + \cdots + a_{nn}x_n &\equiv b_n \pmod{m_n}
+        \end{align*}
+        where $a_{ij}$, $b_i$, and $m_i$ are integers. The goal in both cases is to find values for the unknowns that simultaneously 
+        satisfy all the equations or congruences in the system.
+        \end{definition}
+        Actually, we cannot solve such complex problems, which  requires further knowledge on matrix and linear algebra. However, just like
+        what we do to Diophantine Equations, we are trying to find solution for a specific case of basic form, which, in this case, is 
+        discussed in \textbf{Chinese Remainder Theorem}.
+        In the first century, the Chinese mathematician Sun-Tsu asked: 
+        There are certain things whose number is unknown. When divided by 3, the remainder is 2; when divided by 5, the remainder is 3; 
+        and when divided by 7, the remainder is 2. What will be the number of things?
+
+        This problem could be transfered in the a system of linear congruences that
+        $${\begin{array}{c}x\equiv2\pmod{3}\\x\equiv3\pmod{5}\\x\equiv2\pmod{7}\end{array}}$$
+        The algorithm to find the solution for such problem is known as Chinese Remainder Theorem.
+        \begin{theorem}[Chinese Remainder Theorem]
+            Let $m_1,m_2,...,m_n$ be pairwise relatively prime positive integers greater than one and $a_1,a_2,...,a_n$ arbitrary integers. Then the system
+            \begin{align*}
+                x&\equiv a_1\pmod{m_1}\\
+                x&\equiv a_2 \pmod{m_2}\\
+                \vdots&\\
+                x&\equiv a_n \pmod{m_n}
+            \end{align*}
+            has a unique solution modulo $m=m_1m_2...m_n.$ (That is, there is a solution $x$ with
+            $0\leq x<m$, and all other solutions are congruent modulo $m$ to this solution.)
+        \end{theorem}
+        \begin{proof}
+            To establish this theorem, we need to show that a solution exists and that it is unique modulo $M$. We will show that a solution exists by describing a way to construct this solution, and then we will prove that the solution is unique modulo $M$.
+            
+            \textbf{Existence of a solution:}
+            To construct a simultaneous solution, first let
+            $$M_k = \frac{M}{m_k} = m_1m_2 \cdots m_{k-1}m_{k+1} \cdots m_n$$
+            for $k = 1, 2, \ldots, n$. That is, $M_k$ is the product of the moduli except for $m_k$. Because $m_i$ and $m_k$ have no common factors greater than 1 when $i \neq k$, it follows that $\gcd(m_k, M_k) = 1$. Consequently, by Bézout's identity, we know that there exist integers $y_k$ and $z_k$ such that
+            $$M_ky_k + m_kz_k = 1$$
+            This implies that (refer to theorem \ref{exist_inverse})
+            $$M_ky_k \equiv 1 \pmod{m_k}$$
+            Where $y_k$ is one of the unique modular inverse of $M_k$.
+            To construct a simultaneous solution, form the sum
+            $$x = a_1M_1y_1 + a_2M_2y_2 + \cdots + a_nM_ny_n.$$
+            
+            We will now show that $x$ is a simultaneous solution. First, note that because $M_j \equiv 0 \pmod{m_k}$ whenever $j \neq k$, all terms except the $k$th term in this sum are congruent to 0 modulo $m_k$. Because $M_ky_k \equiv 1 \pmod{m_k}$, we see that
+            $$x \equiv a_kM_ky_k \equiv a_k \pmod{m_k}$$
+            for $k = 1, 2, \ldots, n$. We have shown that $x$ is a simultaneous solution to the $n$ congruences.
+            
+            \textbf{Uniqueness of the solution modulo $M$:}
+            
+            Suppose that $x$ and $x'$ are two solutions to the system of congruences. Then, for each $k = 1, 2, \ldots, n$, we have
+            $$x \equiv a_k \pmod{m_k} \quad \text{and} \quad x' \equiv a_k \pmod{m_k}$$
+            This implies that
+            $$x \equiv x' \pmod{m_k}$$
+            for all $k = 1, 2, \ldots, n$. Since $m_1, m_2, \ldots, m_n$ are pairwise coprime, by the Chinese Remainder Theorem for Ideals, we have
+            $$x \equiv x' \pmod{M}$$
+            where $M = m_1m_2 \cdots m_n$. This proves that the solution is unique modulo $M$.
+            \end{proof}
+
+
         \subsection{Fermat's Little Theorem}
