@@ -1250,5 +1250,55 @@ to solving this Diophantine equation. This is equivalent to find $ax\equiv c \pm
             where $M = m_1m_2 \cdots m_n$. This proves that the solution is unique modulo $M$.
             \end{proof}
 
+        \begin{example}
+            Solve
+            \begin{align*}
+                x &\equiv 2 \pmod{3} \\
+                x &\equiv 3 \pmod{5} \\
+                x &\equiv 2 \pmod{7}
+                \end{align*}
+                where $m_1 = 3$, $m_2 = 5$, $m_3 = 7$ are pairwise coprime
 
+                we can use the Chinese Remainder Theorem. The solution is:
+                \[x \equiv a_1M_1y_1 + a_2M_2y_2 + a_3M_3y_3 \pmod{m_1m_2m_3}\]
+                where $M_i = \frac{m_1m_2m_3}{m_i}$ and $y_i$ satisfies $M_iy_i \equiv 1 \pmod{m_i}$ for each $i$.
+                \begin{align*}
+                    x\equiv a_{1}M_{1}y_{1}+a_{2}M_{2}y_{2}+a_{3}M_{3}y_{3}& =2\cdot35\cdot2+3\cdot21\cdot1+2\cdot15\cdot1  \\
+                    &=233\equiv23\mathrm{~(mod~}105).
+                \end{align*}
+                The solution $x \equiv 233 \equiv 23 \pmod{105}$ is the smallest positive integer that leaves a remainder of 2 when divided by 3, a remainder of 3 when divided by 5, and a remainder of 2 when divided by 7.
+        \end{example}
+
+        This is indeed a general solution to such problem, however, you may have already realized that finding 
+        modular inverse for a given number is not that easy. And also, when the problem scale up, the complexity of computing
+        is not ideal. Hence, we introduce back substitution as a shortcut, here is how it works.
+
+        \begin{example}
+            Solving 
+            \begin{align*}
+                x &\equiv 2 \pmod{3} \\
+                x &\equiv 3 \pmod{5} \\
+                x &\equiv 2 \pmod{7}
+                \end{align*}
+            by back substitution.
+        
+
+        By the definition of modular congruence, $x\equiv 2 \pmod 3$ is equivalent to $x = 3i+2$ for some integer $i$.
+        Substituting this into the second modular congruence gives us $$3i+2 \equiv 3 \pmod 5.$$
+        Subtracting 2 on both side we have
+        $$3i\equiv 1 \pmod 5.$$
+        Now we can find that $i$ is actually a modular inverse of 3 by 5, and the smallest positive integer that
+        satisfies this is $i=2$, so we have $i\equiv 2 \pmod 5$. Similarly, we have $i = 5j + 2$ for some integer
+        $j$. Substituting $i = 5j + 2$ into $x = 3i+2$, we have $x = 15j + 8$. Apply this to the third 
+        expression we have $$15j + 8\equiv 2 \pmod{7},$$ and $15j \equiv 1 \pmod 7$,because $8 \equiv 1\pmod 7$. We 
+        find that $j$ is also a modular inverse of 15 by 7, and the smallest positive integer for this is 1, so 
+        $j \equiv 1 \pmod 7$. Again, we have $j = 7k + 1$ for some integer $k$, now substitute this into 
+        $x = 15j + 8$, we have $x = 15(7k + 1) + 8$. So we have $$x = 105k + 23$$.
+        We can translate this easily into the following congruence:
+        $$x \equiv 23 \pmod{105}.$$ That is exactly the solution to the system of linear congruences.
+        \end{example}
+        \begin{remark}
+            In summary, back substitution works because multiplying both sides of a linear congruence by the modular multiplicative inverse of the coefficient allows us to isolate the variable and find its value modulo $m$.
+        \end{remark}
+        
         \subsection{Fermat's Little Theorem}
