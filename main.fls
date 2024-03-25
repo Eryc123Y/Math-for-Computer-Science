@@ -323,6 +323,24 @@ INPUT c:/texlive-full/2023/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
 INPUT c:/texlive-full/2023/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
 INPUT c:/texlive-full/2023/texmf-dist/tex/latex/wrapfig/wrapfig.sty
 INPUT c:/texlive-full/2023/texmf-dist/tex/latex/wrapfig/wrapfig.sty
+INPUT c:/texlive-full/2023/texmf-dist/tex/latex/thmtools/thmtools.sty
+INPUT c:/texlive-full/2023/texmf-dist/tex/latex/thmtools/thmtools.sty
+INPUT c:/texlive-full/2023/texmf-dist/tex/latex/thmtools/thm-patch.sty
+INPUT c:/texlive-full/2023/texmf-dist/tex/latex/thmtools/thm-patch.sty
+INPUT c:/texlive-full/2023/texmf-dist/tex/latex/thmtools/parseargs.sty
+INPUT c:/texlive-full/2023/texmf-dist/tex/latex/thmtools/parseargs.sty
+INPUT c:/texlive-full/2023/texmf-dist/tex/latex/thmtools/thm-kv.sty
+INPUT c:/texlive-full/2023/texmf-dist/tex/latex/thmtools/thm-kv.sty
+INPUT c:/texlive-full/2023/texmf-dist/tex/latex/thmtools/thm-autoref.sty
+INPUT c:/texlive-full/2023/texmf-dist/tex/latex/thmtools/thm-autoref.sty
+INPUT c:/texlive-full/2023/texmf-dist/tex/latex/thmtools/aliasctr.sty
+INPUT c:/texlive-full/2023/texmf-dist/tex/latex/thmtools/aliasctr.sty
+INPUT c:/texlive-full/2023/texmf-dist/tex/latex/thmtools/thm-listof.sty
+INPUT c:/texlive-full/2023/texmf-dist/tex/latex/thmtools/thm-listof.sty
+INPUT c:/texlive-full/2023/texmf-dist/tex/latex/thmtools/thm-restate.sty
+INPUT c:/texlive-full/2023/texmf-dist/tex/latex/thmtools/thm-restate.sty
+INPUT c:/texlive-full/2023/texmf-dist/tex/latex/thmtools/thm-amsthm.sty
+INPUT c:/texlive-full/2023/texmf-dist/tex/latex/thmtools/thm-amsthm.sty
 INPUT c:/texlive-full/2023/texmf-dist/tex/latex/psnfss/t1ptm.fd
 INPUT c:/texlive-full/2023/texmf-dist/tex/latex/psnfss/t1ptm.fd
 INPUT c:/texlive-full/2023/texmf-dist/tex/latex/psnfss/t1ptm.fd
@@ -777,6 +795,8 @@ INPUT ./Images/converttab.png
 INPUT ./Images/converttab.png
 INPUT ./Images/converttab.png
 INPUT ./Images/converttab.png
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/ptmri8t.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/ptmri8t.tfm
 INPUT ./content/Part2 Discrete math/Chapter3.tex
 INPUT ./content/Part2 Discrete math/Chapter3.tex
 INPUT content/Part2 Discrete math/Chapter3.tex

@@ -53,6 +53,41 @@
 \usepackage{algpseudocode}
 \usepackage{wrapfig}
 \usepackage{hyperref}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{thmtools}
+\usepackage{etoolbox}
+
+\newtheoremstyle{lemmastyle}
+  {9pt}  
+  {9pt} 
+  {\slshape} 
+  {}    
+  {\bfseries} 
+  {.}  
+  {5pt} 
+  {}   
+
+\theoremstyle{lemmastyle}
+\newtheorem{lemma}{Lemma}[chapter]
+
+
+
+\newtheoremstyle{solutionStyle}
+  {5pt}  
+  {5pt} 
+  {\upshape} 
+  {\parindent} 
+  {\bfseries}
+  {:}    
+  {3pt}  
+  {}     
+
+
+
+\theoremstyle{solutionStyle}  
+\newtheorem*{solution}{Solution}
+
 \addbibresource{sample.bib} % Bibliography file
 
 \definecolor{ocre}{RGB}{243, 102, 25} % Define the color used for highlighting throughout the book

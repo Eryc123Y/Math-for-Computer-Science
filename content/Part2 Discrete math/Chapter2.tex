@@ -233,6 +233,9 @@ division produce an integer as result, while sometimes not. We define division a
         \begin{remark}
             sometimes, normal notations are also used to express this calculation with subscript.
         \end{remark}
+    
+        
+
 
 
     \subsection{Exercises}
@@ -677,8 +680,95 @@ This algorithm's pseudocode is as listed below.
         \EndProcedure
         \end{algorithmic}
         \end{algorithm}
-    %\subsection{Modular Exponentiation}
+    
+    \subsection{Modular Exponentiation Algorithm}
+    An important application of modular arithmetic is finding \( b^n \bmod m\) efficiently, which is crucial for cryptography. $b^n$ could be a huge
+    number that takes a lot of time to calculate, so we need this algorithm to speed up this process. to implement this algorithm, we need to use the
+    binary expansion of the number $n=(a_{k-1}\ldots a_1a_0)_2$.
+    Since 
+    $$
+    b^n=b^{a_{k-1}\cdot2^{k-1}+\cdots+a_1\cdot2+a_0}=b^{a_{k-1}\cdot2^{k-1}}\cdots b^{a_1\cdot2}\cdot b^{a_0}.
+    $$
 
+    This shows that to compute $b^n$, we need only compute the values of $b,b^2,(b^2)^2=b^4,(b^4)^2=$ $b^8,...,b^{2^k}$.
+    Once we have these values, we multiply the terms $b^{2j}$ in this list, where $a_j=1$ .(For efficiency and to reduce space requirements, after multiplying by each term, we reduce the result modulo $m.)$
+    \begin{example}
+        Compute $4^9$\\
+        \textbf{Solution: } To compute $4^9$ we first note that $9 = (1001)_2$, so that $4^9 = 4^8 3^2 4^1$. 
+        By successively squaring, we find that $4^2 = 16$, $4^4 = 16^2 = 256$, and $4^8 = (256)^2 = 65536$. Consequently, $4^9 = 4^8 4^2 4^1 = 65536 \cdot 16 \cdot 4 = 4,194,304$. 
+    \end{example}
+    Now we have already finished the part of algorithm to find $b^n$. With this, we can define the algorithm to find $b^n \bmod m$.
+    The pseudocode of the algorithm is in the listing below.
+    \begin{algorithm} \label{modulare}
+        \caption{Fast Modular Exponentiation.}
+        \begin{algorithmic}
+        \Procedure{modular exponentiation}{$b$: integer, $n = (a_{k-1}a_{k-2} \ldots a_1a_0)_2$, $m$: positive integers}
+        \State $x := 1$
+        \State $power := b \mod m$
+        \For{$i := 0$ to $k-1$}
+        \If{$a_i = 1$} \textbf{then} $x := (x \cdot power) \mod m$
+        \EndIf
+        \State $power := (power \cdot power) \mod m$
+        \EndFor
+        \State \textbf{return} $x$ {$x$ equals $b^n \mod m$}
+        \EndProcedure
+        \end{algorithmic}
+    \end{algorithm}
+
+    \begin{example}
+        Find the value of $3^{644} \mod 645$ using the Algorithm.
+        
+        \textit{Solution:} The algorithm starts by initializing $x = 1$ and $power = 3 \mod 645 = 3$. It then calculates
+        $3^{2j} \mod 645$ for $j = 1, 2, \ldots, 9$ by repeatedly squaring and reducing modulo 645. When the $j$th bit of 644 
+        (in binary, $(1010000100)_2$) is 1, the algorithm multiplies the current $x$ by $3^{2j} \mod 645$ and reduces the product modulo 645. The steps are as follows:
+        
+        \begin{tabular}{ll}
+        $i = 0$: & $a_0 = 0$, so $x = 1$ and $power = 3^2 \mod 645 = 9$. \\
+        $i = 1$: & $a_1 = 0$, so $x = 1$ and $power = 9^2 \mod 645 = 81$. \\
+        $i = 2$: & $a_2 = 1$, so $x = 1 \cdot 81 \mod 645 = 81$ and $power = 81^2 \mod 645 = 111$. \\
+        $i = 3$: & $a_3 = 0$, so $x = 81$ and $power = 111^2 \mod 645 = 66$. \\
+        $i = 4$: & $a_4 = 0$, so $x = 81$ and $power = 66^2 \mod 645 = 486$. \\
+        $i = 5$: & $a_5 = 0$, so $x = 81$ and $power = 486^2 \mod 645 = 126$. \\
+        $i = 6$: & $a_6 = 0$, so $x = 81$ and $power = 126^2 \mod 645 = 396$. \\
+        $i = 7$: & $a_7 = 1$, so $x = (81 \cdot 396) \mod 645 = 471$ and $power = 396^2 \mod 645 = 81$. \\
+        $i = 8$: & $a_8 = 0$, so $x = 471$ and $power = 81^2 \mod 645 = 111$. \\
+        $i = 9$: & $a_9 = 1$, so $x = (471 \cdot 111) \mod 645 = 36$.
+        \end{tabular}
+        
+        Thus, the value of $3^{644} \mod 645$ is 36.
+        \end{example}
+
+        \paragraph{Time Complexity of Algorithm 5}
+        The time complexity of Algorithm \ref{modulare} is determined by the number of iterations in the for loop, which is equal to the number of 
+        bits in the binary representation of the exponent $n$. In each iteration, the algorithm performs a constant number of modular multiplications and 
+        squarings. Therefore, the time complexity of Algorithm \ref{modulare} is $O(\log n)$, where $n$ is the exponent. This is a significant improvement over the naive method of modular exponentiation, 
+        which has a time complexity of $O(n)$. The fast modular exponentiation algorithm is particularly useful in cryptographic applications, such as the RSA algorithm, 
+        where the exponents are typically large numbers.
+
+        To prove that the time complexity of Algorithm \ref{modulare} is $O(\log n)$, we can analyze the number of operations performed by the algorithm in relation to the size of the input exponent $n$.
+
+        \begin{proof}
+        Let $n$ be the exponent in the modular exponentiation problem, and let $k$ be the number of bits in the binary representation of $n$. We can express $n$ as:
+
+        \[n = \sum_{i=0}^{k-1} a_i \cdot 2^i, \text{ where } a_i \in \{0, 1\}\]
+
+        The algorithm iterates through the bits of $n$ from right to left (from the least significant bit to the most significant bit). In each iteration, the algorithm performs the following operations:
+
+        \begin{enumerate}
+        \item If $a_i = 1$, it performs a modular multiplication to update the value of $x$.
+        \item It performs a modular squaring to update the value of $\textit{power}$.
+        \end{enumerate}
+
+        The modular multiplication and squaring operations can be performed in $O(1)$ time using a constant number of arithmetic operations modulo $m$.
+
+        Since the algorithm iterates through all $k$ bits of $n$, the total number of iterations is $k$. Therefore, the time complexity of the algorithm is proportional to $k$, which is the number of bits in the binary representation of $n$.
+
+        We know that the number of bits in the binary representation of $n$ is $\lfloor \log_2 n \rfloor + 1$. Thus, $k = O(\log n)$.
+
+        Consequently, the time complexity of Algorithm \ref{modulare} is $O(\log n)$.
+        \end{proof}
+
+        This logarithmic time complexity makes Algorithm \ref{modulare} (fast modular exponentiation) much more efficient than the naive method of modular exponentiation, which has a linear time complexity of $O(n)$.
     \subsection{Exercises}
 
 
@@ -1300,5 +1390,99 @@ to solving this Diophantine equation. This is equivalent to find $ax\equiv c \pm
         \begin{remark}
             In summary, back substitution works because multiplying both sides of a linear congruence by the modular multiplicative inverse of the coefficient allows us to isolate the variable and find its value modulo $m$.
         \end{remark}
+
+                
         
         \subsection{Fermat's Little Theorem}
+        This section discusses Fermat's Little Theorem. This theorem is named after the French mathematician Pierre de Fermat, who first stated it in 1640. 
+        Fermat's Little Theorem is a fundamental result in number theory and has numerous applications in cryptography, computer science, and other fields.
+        It provides a way to reduce large powers modulo a prime number, which is essential for efficient computation in many algorithms.
+        \begin{theorem}[Fermat's Little Theorem]
+            Let $p$ be a prime number and $a$ be any integer not divisible by $p$. Then, the following congruence relation holds:
+            \[a^{p-1} \equiv 1 \pmod{p}\]
+            In other words, if we raise $a$ to the power of $p-1$ and divide the result by $p$, the remainder is always $1$. 
+        \end{theorem}
+        In previous chapter, we introduced the fast modular exponential algorithm to calculate exponentiation modulo $m$. Fermat's Little Theorem
+        provides another pathway that sometimes could even be faster.
+        \begin{proof}
+            Let $p$ be a prime number and $a$ be an integer not divisible by $p$. Consider the set of integers $\{1, 2, \ldots, p-1\}$ and multiply each element by $a$ modulo $p$. This operation permutes the set, as no two elements will have the same product modulo $p$ (if $ax \equiv ay \pmod{p}$, then $a(x-y) \equiv 0 \pmod{p}$, which implies $x \equiv y \pmod{p}$ since $a$ is not divisible by $p$).
+            
+            Therefore, the set $\{a \cdot 1, a \cdot 2, \ldots, a \cdot (p-1)\}$ is a permutation of $\{1, 2, \ldots, p-1\}$ modulo $p$. Multiplying all elements in each set, we get:
+            \[
+            \prod_{i=1}^{p-1} (a \cdot i) \equiv \prod_{i=1}^{p-1} i \pmod{p}
+            \]
+            which can be rewritten as:
+            \[
+            a^{p-1} \prod_{i=1}^{p-1} i \equiv \prod_{i=1}^{p-1} i \pmod{p}
+            \]
+            Canceling the common factor $\prod_{i=1}^{p-1} i$ (which is not divisible by $p$), we obtain:
+            \[
+            a^{p-1} \equiv 1 \pmod{p}
+            \]
+            Thus, Fermat's Little Theorem is proved.
+        \end{proof}
+
+        To clarify the key points of this theorem, consider the following table. This table shows the case where p = 7 for $a^b\equiv 1 \pmod p$.
+        The row number represents $a$, and column number represents $b (=p-1)$, among the combination we see exactly the every six column gives a whole 
+        column that satisfies $a^b\equiv 1 \pmod p$.
+        \begin{center}
+            \begin{tabular}{|c|c|c|c|c|c|c|c|}
+            \hline
+            $a \backslash b$ & $0$ & $1$ & $2$ & $3$ & $4$ & $5$ & $6$ \\
+            \hline
+            $1$ & $1$ & $1$ & $1$ & $1$ & $1$ & $1$ & $1$ \\
+            \hline
+            $2$ & $1$ & $2$ & $4$ & $1$ & $2$ & $4$ & $1$ \\
+            \hline
+            $3$ & $1$ & $3$ & $2$ & $6$ & $4$ & $5$ & $1$ \\
+            \hline
+            $4$ & $1$ & $4$ & $2$ & $1$ & $4$ & $2$ & $1$ \\
+            \hline
+            $5$ & $1$ & $5$ & $4$ & $6$ & $2$ & $3$ & $1$ \\
+            \hline
+            $6$ & $1$ & $6$ & $1$ & $6$ & $1$ & $6$ & $1$ \\
+            \hline
+            \end{tabular}
+        \end{center}
+        \begin{example}[Fermat's Little Theorem]
+            Compute $3^{100} \pmod{7}$ using Fermat's Little Theorem.
+        \end{example}
+            \begin{solution}
+            First, we check that the conditions for Fermat's Little Theorem are satisfied:
+            \begin{itemize}
+            \item $7$ is a prime number.
+            \item $3$ is not divisible by $7$.
+            \end{itemize}
+            
+            By Fermat's Little Theorem, we know that:
+            \[
+            3^{7-1} \equiv 1 \pmod{7}
+            \]
+            which can be rewritten as:
+            \[
+            3^6 \equiv 1 \pmod{7}
+            \]
+            
+            Now, we can use this result to simplify the calculation of $3^{100} \pmod{7}$:
+            \begin{align*}
+            3^{100} &= (3^6)^{16} \cdot 3^4 \\
+            &\equiv 1^{16} \cdot 3^4 \pmod{7} \\
+            &\equiv 1 \cdot 81 \pmod{7} \\
+            &\equiv 4 \pmod{7}
+            \end{align*}
+            
+            Therefore, $3^{100} \equiv 4 \pmod{7}$.
+            \end{solution}
+            
+            In this example, we first check that the conditions for Fermat's Little Theorem are met: $7$ is a prime number, and $3$ is not divisible by $7$. Then, we use Fermat's Little Theorem to establish that $3^6 \equiv 1 \pmod{7}$.
+            
+            To compute $3^{100} \pmod{7}$, we break down the exponent into smaller parts:
+            \begin{itemize}
+            \item We write $3^{100}$ as $(3^6)^{16} \cdot 3^4$.
+            \item Since $3^6 \equiv 1 \pmod{7}$, we can replace $(3^6)^{16}$ with $1^{16}$, which is equal to $1$.
+            \item We compute $3^4 \pmod{7}$, which is $81 \equiv 4 \pmod{7}$.
+            \item Finally, we multiply $1$ and $4$ modulo $7$ to get the result: $3^{100} \equiv 4 \pmod{7}$.
+            \end{itemize}
+
+
+
