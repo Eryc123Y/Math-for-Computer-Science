@@ -111,15 +111,21 @@
 \contentsline {paragraph}{Solution:}{186}{paragraph*.5}%
 \contentsline {subsection}{\numberline {7.4.2}The Chinese Remainder Theorem}{189}{subsection.7.4.2}%
 \contentsline {subsection}{\numberline {7.4.3}Fermat's Little Theorem}{193}{subsection.7.4.3}%
-\contentsline {chapter}{\numberline {8}Search and Sorting with Further Algorithm Analysis}{195}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Searching algorithms}{195}{section.8.1}%
-\contentsline {subsection}{\numberline {8.1.1}Searching in Unordered Array List}{195}{subsection.8.1.1}%
-\contentsline {subsection}{\numberline {8.1.2}Searching in Ordered Array List}{196}{subsection.8.1.2}%
-\contentsline {subsection}{\numberline {8.1.3}Binary Search: Version 2}{201}{subsection.8.1.3}%
-\contentsline {paragraph}{Step 1.}{202}{paragraph*.6}%
-\contentsline {paragraph}{Step 2.}{202}{paragraph*.7}%
-\contentsline {paragraph}{Step 3.}{202}{paragraph*.8}%
-\contentsline {subsection}{\numberline {8.1.4}Exercises}{206}{subsection.8.1.4}%
+\contentsline {chapter}{\numberline {8}Relation and Further Algorithm Analysis}{195}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Relations}{195}{section.8.1}%
+\contentsline {subsection}{\numberline {8.1.1}Equivalent Relation}{195}{subsection.8.1.1}%
+\contentsline {subsection}{\numberline {8.1.2}Inverse Relation}{195}{subsection.8.1.2}%
+\contentsline {subsection}{\numberline {8.1.3}Recursive Relation}{195}{subsection.8.1.3}%
+\contentsline {subsection}{\numberline {8.1.4}$n$-ray Relation}{195}{subsection.8.1.4}%
+\contentsline {subsection}{\numberline {8.1.5}Closure}{195}{subsection.8.1.5}%
+\contentsline {section}{\numberline {8.2}Searching algorithms}{195}{section.8.2}%
+\contentsline {subsection}{\numberline {8.2.1}Searching in Unordered Array List}{195}{subsection.8.2.1}%
+\contentsline {subsection}{\numberline {8.2.2}Searching in Ordered Array List}{196}{subsection.8.2.2}%
+\contentsline {subsection}{\numberline {8.2.3}Binary Search: Version 2}{201}{subsection.8.2.3}%
+\contentsline {paragraph}{Step 1.}{203}{paragraph*.6}%
+\contentsline {paragraph}{Step 2.}{203}{paragraph*.7}%
+\contentsline {paragraph}{Step 3.}{203}{paragraph*.8}%
+\contentsline {subsection}{\numberline {8.2.4}Exercises}{206}{subsection.8.2.4}%
 \contentsline {chapter}{\numberline {9}Graph Theory}{209}{chapter.9}%
 \contentsline {part}{\numberline {III}Single-variable Calculus}{211}{part.3}%
 \contentsline {chapter}{\numberline {10}Function Monotonicity, Parity and Periodicity}{213}{chapter.10}%

@@ -25,3 +25,4 @@ gcd
 congruences
 solutionStyle
 LinearSearch
+moduli
