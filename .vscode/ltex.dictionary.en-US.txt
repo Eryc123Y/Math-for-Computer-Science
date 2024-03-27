@@ -24,3 +24,4 @@ subproblem
 gcd
 congruences
 solutionStyle
+LinearSearch
