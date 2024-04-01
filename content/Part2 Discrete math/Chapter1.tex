@@ -389,15 +389,7 @@
         thing as simplifying Boolean expressions, where all the laws could be used so that we don't
         need to draw truth table again and again.
 
-        \subsection{Boolean Function}
-        Now we have learned most of the rules of Boolean operations; we use the rest of this section
-        to bring you some further ideas of Boolean operation. Just like we can take a normal algebra
-        expression, such as $2x+3$, as a function $f(x)=2x+3$; we can define \textbf{Boolean Function}
-        with Boolean operation.
-        \begin{definition}[Boolean Function]
-        A Boolean function is a function that returns a Boolean value (true or false) for each possible combination of Boolean inputs. 
-        $f: B^n \rightarrow B$ is a function from the set of  $n$-tuples of Boolean values to the set of Boolean values, where  $B = \{0, 1\}$.
-        \end{definition} 
+        
 
 
 
@@ -591,8 +583,350 @@
             &= xy \lor xz \lor y\overline{x}
         \end{align*}
 
+    \section{Boolean Function}
+    This section will bring you some further ideas of Boolean operation. Just like we can take a normal algebra
+    expression, such as $2x+3$, as a function $f(x)=2x+3$; we can define \textbf{Boolean Function}
+    with Boolean operation.
+    \begin{definition}[Boolean Function]
+    A Boolean function is a function that returns a Boolean value (true or false) for each possible combination of Boolean inputs. 
+    $f: B^n \rightarrow B$ is a function from the set of  $n$-tuples of Boolean values to the set of Boolean values, where  $B = \{0, 1\}$.
+    \end{definition} 
+    For example, we can write the basic operations we just went over in Boolean Functions:
+    \begin{enumerate}
+        \item Algebraic notation:
+        \begin{itemize}
+            \item AND: $f(x, y) = x \cdot y$ or $f(x, y) = xy$
+            \item OR: $f(x, y) = x + y$
+            \item NOT: $f(x) = x'$ or $f(x) = \overline{x}$
+        \end{itemize}
+        
+        \item Logical notation:
+        \begin{itemize}
+            \item AND: $f(x, y) = x \wedge y$
+            \item OR: $f(x, y) = x \vee y$
+            \item NOT: $f(x) = \neg x$
+        \end{itemize}
+    \end{enumerate}
+
+    We have actually learned about this earlier in the chapter. Think about what we have done using truth tables. Just like what you have done at the beginning of 
+    learning functions, you were making tables to show all results of each input with their output. For Preliminary functions, we always have 
+    $f: R\rightarrow R$, which makes the mapping hard to make table, because there are infinite many real numbers. But things is much easier for Boolean function,
+    because we have known in the definition that each function generate only one single output, and the most important part is that we always have limited inputs.
+    Since $|B|=2$ for the Boolean Domain, so each input gives us 2 choices only, and therefore when we have $n$ inputs, we have $2^n$ cases only. $2^n$ seems huge,
+    but in most cases we have less than 5 inputs in a Boolean function, so the size of the table is still manageable.
+
+    \subsection{Representation of Boolean Function}
+    In most cases, we construct a Boolean Function from a given truth table. All Boolean functions could be represented in both
+    Disjunctive Normal Form (also known as sum of product;SOP form) and Conjunctive Normal Form (also known as Product of Sum;POS form).
+    \begin{definition}[SOP Form]
+        The Sum of Products (SOP) form, also known as the Disjunctive Normal Form (DNF), is a way to represent a Boolean function as a sum (logical OR) of product (logical AND) terms. Each product term consists of literals (variables or their complements) that correspond to the function's minterms, which are the input combinations that result in a function value of 1.
+        The general form of an SOP expression is:
+        \[f(x_1, x_2, \ldots, x_n) = \sum_{i=1}^{m} \prod_{j=1}^{n} x_j^{(i)},\]
+        where $m$ is the number of minterms, $n$ is the number of variables, and $x_j^{(i)}$ is either $x_j$ or $x_j'$ (complement of $x_j$) depending on the value of $x_j$ in the $i$-th minterm.
+    \end{definition}
+
+    \begin{definition}[POS Form]
+        The Product of Sums (POS) form, also known as the Conjunctive Normal Form (CNF), is a way to represent a Boolean function as a product (logical AND) of sum (logical OR) terms. Each sum term consists of literals (variables or their complements) that correspond to the function's maxterms, which are the input combinations that result in a function value of 0.
+        The general form of a POS expression is:
+        \[f(x_1, x_2, \ldots, x_n) = \prod_{i=1}^{M} \sum_{j=1}^{n} x_j^{(i)},\]
+        where $M$ is the number of maxterms, $n$ is the number of variables, and $x_j^{(i)}$ is either $x_j$ or $x_j'$ (complement of $x_j$) depending on the value of $x_j$ in the $i$-th maxterm.
+        \end{definition}
+    \begin{remark}
+        Minterms and maxterms are fundamental building blocks for representing Boolean functions, corresponding to the input combinations that result in function values of 1 and 0, respectively.
+    \end{remark}
+    \begin{example}
+        Considering
+        \begin{tabular}{|c|c|c|}
+            \hline
+            x & y & f(x, y) \\
+            \hline
+            0 & 0 & 1 \\
+            \hline
+            0 & 1 & 0 \\
+            \hline
+            1 & 0 & 0 \\
+            \hline
+            1 & 1 & 1 \\
+            \hline
+            \end{tabular}
+            .If you are familiar with the Boolean operations, you may have realized this is actually a XNOR operation, which negates XOR.
+            We will try to get the Algebra expression of this function in both POS and SOP.
+             
+    \end{example}
+    \begin{solution}
+                For the SOP form:
+                \begin{itemize}
+                    \item Function value is 1 for the corresponding input combinations.
+                    \item Smallest terms: $m_0 = x'y'$, $m_3 = xy$.
+                    \item SOP form of the Boolean function: $f(x, y) = m_0 + m_3 = x'y' + xy$.
+                \end{itemize}
+            
+                For the POS form:
+                \begin{itemize}
+                    \item Function value is 0 for the corresponding input combinations.
+                    \item Largest terms: $M_1 = x + y'$, $M_2 = x' + y$.
+                    \item POS form of the Boolean function: $f(x, y) = M_1 \cdot M_2 = (x + y')(x' + y)$.
+                \end{itemize}
+                
+             These two forms can be converted to each other based on the truth table of a Boolean function.
+            \end{solution}
+
+    This method also works for Boolean functions with more variables, and the only difference is that it may take a little more time.
+    You may check more relevant problems in the exercises.
+
+    \subsection{Properties of Boolean Function}
+    In this part of the chapter, we will look into further details of Boolean Expression, specifically, Boolean Function. As an intro, we start with completeness
+    and duality of Boolean Function. After this, we will introduce the Fundamental Theorem of Boolean Algebra, also known as Boole's expansion theorem (or Shannon expansion), 
+    which in the foundation of logic circuit design and implementation.
+    \begin{definition}[Completeness of Boolean Function]
+        A set of Boolean operators is said to be \textit{functionally complete} if every Boolean function can be expressed using only those operators. The following sets are known to be functionally complete:
+
+        \begin{enumerate}
+            \item The set \{AND, OR, NOT\}, also known as the standard or canonical basis.
+            \item The set \{NAND\}, known as the NAND-only implementation.
+            \item The set \{NOR\}, known as the NOR-only implementation.
+        \end{enumerate}
+
+        The completeness property is important in digital logic design, as it allows designers to create any desired Boolean function using a minimal set of logic gates.
+    \end{definition}
+
+    \begin{remark}
+        If you are getting confused by the word "Logic Gate", just take it as another way we call Boolean or Logic Operators. Logic gates are what electric engineers use
+        to construct Boolean circuits, which is not discussed in details in this book, since we only discuss the mathematical aspect of this practice. You may refer
+        to \href{https://www.wikiwand.com/en/Logic_gate}{this link}
+        if you want to get more details. 
+    \end{remark}
+    To further illustrate, we could say that all Boolean Functions, or Boolean expressions can be expressed by either combinations of \{AND, OR, NOT\}, or NAND gates(s), or NOR gate(s).
+    The first point is already quite clear, we have shown that all secondary operators can be written equivalently in basic operators, \{AND, OR, NOT\}. While NAND and NOR are general 
+    logic gates that could construct any logic gates. Below is a simplified proof.
+    \begin{proof}
+        We start the proof with the fact that all Boolean operations can be written by $\lnot, \land, \lor$ operators.
+        To show that all Boolean operations could be implemented by NAND and NOR gate, we only need to show that \{AND, OR, NOT\} can be expressed by both NAND and NOR operator.
+        \begin{enumerate}
+            \item Using NAND gates:
+            \begin{itemize}
+                \item NOT gate: A NAND gate with its inputs connected together acts as a NOT gate.
+                \item AND gate: A NAND gate with its output inverted by a NOT gate (another NAND gate) acts as an AND gate.
+                \item OR gate: An OR gate can be constructed using NAND gates and De Morgan's Law: $x + y = (x' \cdot y')'$.
+            \end{itemize}
+        
+            \item Using NOR gates:
+            \begin{itemize}
+                \item NOT gate: A NOR gate with its inputs connected together acts as a NOT gate.
+                \item OR gate: A NOR gate with its output inverted by a NOT gate (another NOR gate) acts as an OR gate.
+                \item AND gate: An AND gate can be constructed using NOR gates and De Morgan's Law: $x \cdot y = (x' + y')'$.
+            \end{itemize}
+        \end{enumerate}
+    Now, we have shown that all the three basic logic gates could be expressed by only NAND and NOR gate(s), which completes the proof.
+    \end{proof}
+    \begin{remark}
+        You can get more details of the logic gates \href{https://www.wikiwand.com/simple/Logic_gate}{here}. This fact is more used in engineering practice but not in mathematics. So you
+        just need to know the basic idea (in this book).
+    \end{remark}
+
+    \begin{definition}[Duality of Boolean Function]  
+        The duality principle states that for every Boolean function $f(x_1, x_2, \ldots, x_n)$, there exists a dual function $f^D(x_1, x_2, \ldots, x_n)$ that can be obtained by:
+        \begin{enumerate}
+            \item Replacing every occurrence of 0 with 1 and vice versa.
+            \item Replacing every occurrence of AND ($\cdot$) with OR ($+$) and vice versa.
+        \end{enumerate}
+        Important properties related to duality include:
+        \begin{enumerate}
+            \item Double duality: $(f^D)^D = f$.
+            \item De Morgan's Laws:
+            \begin{itemize}
+                \item $(x + y)^D = x^D \cdot y^D$
+                \item $(x \cdot y)^D = x^D + y^D$
+            \end{itemize}
+        \end{enumerate}
+
+        The duality principle also holds for other pairs of dual operators, such as NAND and NOR, or implication and converse implication.
+    \end{definition}    
+    
+    \begin{example}[Duality in Boolean Function]
+        Here are some examples:
+        \begin{enumerate}
+            \item Consider the Boolean function $f(x, y) = x + y'$.
+            To find the dual of this function, we follow the steps:
+            \begin{enumerate}
+                \item Replace every occurrence of 0 with 1 and vice versa.
+                \item Replace every occurrence of AND ($\cdot$) with OR ($+$) and vice versa.
+            \end{enumerate}
+            
+            Applying these steps to $f(x, y)$, we get:
+            $f^D(x, y) = x' \cdot y$
+            
+            \item Consider the Boolean function $g(a, b, c) = (a + b) \cdot c'$.
+            
+            To find the dual of this function, we apply the same steps:
+            
+            $g^D(a, b, c) = (a' \cdot b') + c$
+            
+            \item Demonstrating double duality:
+            
+            Let's take the function $f(x, y) = x + y'$ from Example 1 and find the dual of its dual.
+            
+            $f(x, y) = x + y'$
+            $f^D(x, y) = x' \cdot y$
+            
+            Now, let's find the dual of $f^D(x, y)$:
+            $(f^D)^D(x, y) = (x')' + y' = x + y'$
+            
+            As we can see, $(f^D)^D(x, y) = f(x, y)$, demonstrating the property of double duality.
+        \end{enumerate}
+    \end{example}
+    
+    To explain this further, we can just take it as that for each and every Boolean expression, there is only one specific dual to be obtained by negate each T(1) and F(0)
+    and inverse each $\land$ and $\lor$. We can actually find a base case for this. We know that T and F are negation to each other, so we say that T and F are dual
+    to one another. With this, we can prove the duality of Boolean Function by MI.
+
+    \begin{proof}
+        Let $x_1, x_2, \ldots, x_n$ be Boolean variables. We will prove that for any Boolean function $f(x_1, x_2, \ldots, x_n)$, its dual function $f^D(x_1, x_2, \ldots, x_n)$ satisfies:
+
+        \[f^D(x_1, x_2, \ldots, x_n) = (f(x_1', x_2', \ldots, x_n'))'\]
+
+        \textbf{Base case:} Prove that the duality principle holds for the simplest Boolean functions (i.e., single variables and constants).
+        \begin{itemize}
+            \item For a single variable $x$, we have $x^D = x'$ and $(x')^D = x$.
+            \item For constants 0 and 1, we have $0^D = 1$ and $1^D = 0$.
+        \end{itemize}
+
+        \textbf{Inductive step:} Assume that the duality principle holds for Boolean functions $f(x_1, x_2, \ldots, x_n)$ and $g(x_1, x_2, \ldots, x_n)$, i.e., $f^D(x_1, x_2, \ldots, x_n) = (f(x_1', x_2', \ldots, x_n'))'$ and $g^D(x_1, x_2, \ldots, x_n) = (g(x_1', x_2', \ldots, x_n'))'$. Prove that the duality principle also holds for more complex Boolean functions composed of $f$ and $g$.
+
+        For the AND operation:
+        \begin{align*}
+        (f \cdot g)^D &= f^D + g^D = (f(x_1', x_2', \ldots, x_n'))' + (g(x_1', x_2', \ldots, x_n'))' \\
+        &= ((f(x_1', x_2', \ldots, x_n')) \cdot (g(x_1', x_2', \ldots, x_n')))' \\
+        &= (f \cdot g)(x_1', x_2', \ldots, x_n')'
+        \end{align*}
+
+        For the OR operation:
+        \begin{align*}
+        (f + g)^D &= f^D \cdot g^D = (f(x_1', x_2', \ldots, x_n'))' \cdot (g(x_1', x_2', \ldots, x_n'))' \\
+        &= ((f(x_1', x_2', \ldots, x_n')) + (g(x_1', x_2', \ldots, x_n')))' \\
+        &= (f + g)(x_1', x_2', \ldots, x_n')'
+        \end{align*}
+
+        \textbf{Induction principle:} Since the duality principle holds for the simplest Boolean functions, and if the duality principle holds for $f$ and $g$, it also holds for more complex Boolean functions composed of $f$ and $g$, we can conclude that the duality principle holds for all Boolean functions.
+
+        This proof uses the basic properties of Boolean algebra, such as double negation ($x'' = x$) and De Morgan's laws. By applying mathematical induction, we start with the simplest Boolean functions and gradually extend the proof to more complex Boolean functions, ultimately proving that the duality principle holds for all Boolean functions.
+    \end{proof}
+    The proof can also be done using Boolean Algebra Laws, which will be one of the exercises.
+
+    Shannon's expansion theorem, proposed by the American mathematician Claude Shannon, is a fundamental result in Boolean algebra and switching theory. 
+    It provides a systematic method to decompose a Boolean function into simpler subfunctions based on the values of a selected variable. 
+    This theorem plays a crucial role in the analysis, synthesis, and minimization of Boolean functions, which are essential in digital logic design, computer 
+    science, and various other fields involving logical operations.
+
+    \begin{theorem}[Boole's expansion theorem]
+        Boole's expansion theorem, often referred to as the Shannon expansion or decomposition, is the identity: $F=x\cdot\dot{F}_x+x^{\prime}\cdot F_{x^{\prime}}$,where $F$ is any Boolean function, $x$ is a variable, $x^{\prime}$ is the complement of $x$, and $F_x$ and $F_{x^{\prime}}$ are $F$
+        with the argument $x$ set equal to 1 and to 0 respectively.
+        The terms $F_x$ and $F_{x^{\prime}}$ are sometimes called the positive and negative Shannon cofactors, respectively, of $F$ with respect to
+        $x$. These are functions, computed by restrict operator, restrict$(F,x,0)$ and restrict$(F,x,1)$. The former represents  the function $F$ where the variable $x$  
+        is set to 0, and the latter represents the restriction of the function $F$ where the variable $x$ is set to 1.
+        $$\begin{aligned}&\text{A more explicit way of stating the theorem is:}\\&f(X_1,X_2,\ldots,X_n)=X_1\cdot f(1,X_2,\ldots,X_n)+X_1^{\prime}\cdot f(0,X_2,\ldots,X_n)\end{aligned}$$
+    \end{theorem}
+    \begin{proof}[Proof of Shannon's Expansion Theorem]
+        Let $f(x_1, x_2, \ldots, x_n)$ be a Boolean function of $n$ variables, and let $x_i$ be a selected variable. We want to express $f$ in terms of two subfunctions: one where $x_i$ is true and the other where $x_i$ is false.
+        
+        First, we define two subfunctions:
+        \begin{align*}
+        f_{x_i} &= f(x_1, x_2, \ldots, x_i=1, \ldots, x_n) \\
+        f_{\overline{x_i}} &= f(x_1, x_2, \ldots, x_i=0, \ldots, x_n)
+        \end{align*}
+        
+        Now, consider the following expression:
+        \begin{align*}
+        f &= x_i \cdot f_{x_i} + \overline{x_i} \cdot f_{\overline{x_i}} \\
+           &= (x_i \cdot 1 + \overline{x_i} \cdot 0) \cdot f_{x_i} + (x_i \cdot 0 + \overline{x_i} \cdot 1) \cdot f_{\overline{x_i}} \\
+           &= x_i \cdot f_{x_i} + \overline{x_i} \cdot f_{\overline{x_i}}
+        \end{align*}
+        
+        We need to prove that this expression is equal to the original function $f(x_1, x_2, \ldots, x_n)$.
+        
+        For any combination of input values $(x_1, x_2, \ldots, x_n)$, either $x_i$ is true or $\overline{x_i}$ is true (but not both). Therefore, one of the two product terms in the expression will be zero, and the other will be equal to the value of $f$ for that input combination.
+        
+        If $x_i$ is true, then $x_i \cdot f_{x_i} = f_{x_i}$ and $\overline{x_i} \cdot f_{\overline{x_i}} = 0$, so the expression evaluates to $f_{x_i}$, which is the correct value of $f$ when $x_i$ is true.
+        
+        If $x_i$ is false, then $x_i \cdot f_{x_i} = 0$ and $\overline{x_i} \cdot f_{\overline{x_i}} = f_{\overline{x_i}}$, so the expression evaluates to $f_{\overline{x_i}}$, which is the correct value of $f$ when $x_i$ is false.
+        
+        Therefore, the expression $x_i \cdot f_{x_i} + \overline{x_i} \cdot f_{\overline{x_i}}$ correctly represents the Boolean function $f(x_1, x_2, \ldots, x_n)$ for all possible input combinations, proving Shannon's expansion theorem.
+        \end{proof}
+    \subsection{Simplification of Boolean Function}
+
+
+    \subsection{Exercises}
+    \begin{exercise}
+        Express XOR and implication in Boolean Function.
+    \end{exercise}
+    \begin{solution}
+        \begin{align*}
+            F(x,y)= x \oplus y &= (x \land \lnot y) \lor (\lnot x \land y)\\
+                       &= xy' + x'y
+            \end{align*}
+
+            \begin{align*}
+                F(x,y)= x \rightarrow y &= \lnot x \lor y\\
+                                &= x' + y
+                \end{align*}
+    \end{solution}
+
+    \begin{exercise}
+        Use a table to express the values of each of these Boolean functions.
+        \begin{enumerate}[label=\alph*)]
+            \item $F(x, y, z) = xy$
+            \item $F(x, y, z) = x + yz$
+            \item $F(x, y, z) = xy + (xyz)$
+            \item $F(x, y, z) = x(yz + \overline{y}z)$
+        \end{enumerate}
+            Solution is omitted since it's a simple problem.
+    \end{exercise}
+
+    \begin{exercise}
+        Prove duality of Boolean Function in Algebra method.
+    \end{exercise}
+    \begin{proof}
+        Let $x_1, x_2, \ldots, x_n$ be Boolean variables. We will prove that for any Boolean function $f(x_1, x_2, \ldots, x_n)$, its dual function $f^D(x_1, x_2, \ldots, x_n)$ satisfies:
+
+\[f^D(x_1, x_2, \ldots, x_n) = (f(x_1', x_2', \ldots, x_n'))'\]
+
+\textbf{Step 1:} Express the dual function $f^D(x_1, x_2, \ldots, x_n)$ in terms of the original function $f(x_1, x_2, \ldots, x_n)$ by replacing each variable $x_i$ with its complement $x_i'$ and each operation (AND, OR) with its dual operation (OR, AND).
+
+\textbf{Step 2:} Apply De Morgan's laws to the resulting expression:
+\begin{itemize}
+    \item $(x + y)' = x' \cdot y'$
+    \item $(x \cdot y)' = x' + y'$
+\end{itemize}
+
+\textbf{Step 3:} Simplify the expression using the basic properties of Boolean algebra, such as:
+\begin{itemize}
+    \item $x + x' = 1$
+    \item $x \cdot x' = 0$
+    \item $x + 0 = x$
+    \item $x \cdot 1 = x$
+\end{itemize}
+
+\textbf{Step 4:} Show that the simplified expression is equal to $(f(x_1', x_2', \ldots, x_n'))'$.
+
+\textbf{Example:}
+Let $f(x, y) = x + y'$. We will prove that $f^D(x, y) = (f(x', y'))'$.
+
+\textbf{Step 1:} Express the dual function:
+$f^D(x, y) = x' \cdot y$
+
+\textbf{Step 2:} Apply De Morgan's laws:
+$(f(x', y'))' = (x' + (y')')' = (x' + y)' = x'' \cdot y' = x \cdot y'$
+
+\textbf{Step 3:} Simplify the expression:
+$x \cdot y' = (x + y')'$
+
+\textbf{Step 4:} The simplified expression is equal to $(f(x', y'))'$, thus proving the duality principle for $f(x, y) = x + y'$.
+
+This algebraic proof demonstrates that the duality principle holds for any Boolean function by directly manipulating the expressions using the basic properties of Boolean algebra and De Morgan's laws.
+    \end{proof}
+
+
     \section{Predicates and Quantifiers}
 
-    \section{Digital Circuits of Logic}
 
     \section{Logic of Deduction and Induction}
