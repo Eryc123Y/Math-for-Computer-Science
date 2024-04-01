@@ -634,6 +634,42 @@
     \begin{remark}
         Minterms and maxterms are fundamental building blocks for representing Boolean functions, corresponding to the input combinations that result in function values of 1 and 0, respectively.
     \end{remark}
+
+    But why we are so obsessed with whether the output for one single row is 1(T) or 0 (F)?
+    This is because, when we are constructing a Boolean function, we are trying to make the mapping
+    from $B^n$ to $B$, while $B = {0,1}$. Hence, we could conclude that the result of boolean function
+    is actually binary, meaning only two cases for the output(we will talk about it later in the chapter).   
+    So, we only need to figure out either of all the cases where the output is 0, or all the cases where the 
+    output  is 1. This actually explains what are stated in the \textbf{Canonical Form Theorem}.
+    \begin{theorem}[Canonical Form Theorem]
+        Any Boolean function can be expressed in either of two canonical forms:
+        \begin{enumerate}
+        \item Sum of Products (SOP) form, also known as the Disjunctive Normal Form (DNF): Any Boolean function can be represented as a disjunction (OR) of one or more minterms, where a minterm is a product (AND) of literals corresponding to the rows in the truth table where the function value is 1.
+        \item Product of Sums (POS) form, also known as the Conjunctive Normal Form (CNF): Any Boolean function can be represented as a conjunction (AND) of one or more maxterms, where a maxterm is a sum (OR) of literals corresponding to the rows in the truth table where the function value is 0.
+        \end{enumerate}
+        \end{theorem}
+        
+        \begin{proof}
+        To prove the Canonical Form Theorem, we will consider an arbitrary Boolean function $f(x_1, x_2, \ldots, x_n)$ and show that it can be expressed in both SOP and POS forms.
+        
+        \textbf{Proof of SOP form (DNF):}
+        \begin{enumerate}
+        \item For each row in the truth table where the function value is 1, create a minterm by taking the conjunction (AND) of the literals corresponding to the input values in that row. If the input variable is 1, use the original variable; if the input variable is 0, use the complement of the variable.
+        \item Take the disjunction (OR) of all the minterms obtained in step 1. This resulting expression is the SOP form of the Boolean function.
+        \end{enumerate}
+        
+        Since every row where the function value is 1 is represented by a minterm, and the disjunction of these minterms covers all the cases where the function is 1, the resulting SOP form is equivalent to the original Boolean function.
+        
+        \textbf{Proof of POS form (CNF):}
+        \begin{enumerate}
+        \item For each row in the truth table where the function value is 0, create a maxterm by taking the disjunction (OR) of the literals corresponding to the input values in that row. If the input variable is 0, use the original variable; if the input variable is 1, use the complement of the variable.
+        \item Take the conjunction (AND) of all the maxterms obtained in step 1. This resulting expression is the POS form of the Boolean function.
+        \end{enumerate}
+        
+        Since every row where the function value is 0 is represented by a maxterm, and the conjunction of these maxterms covers all the cases where the function is 0, the resulting POS form is equivalent to the original Boolean function.
+        
+        Therefore, any Boolean function can be expressed in either SOP or POS form, proving the Canonical Form Theorem.
+        \end{proof}
     \begin{example}
         Considering
         \begin{tabular}{|c|c|c|}
@@ -673,7 +709,7 @@
 
     This method also works for Boolean functions with more variables, and the only difference is that it may take a little more time.
     You may check more relevant problems in the exercises.
-
+    
     \subsection{Properties of Boolean Function}
     In this part of the chapter, we will look into further details of Boolean Expression, specifically, Boolean Function. As an intro, we start with completeness
     and duality of Boolean Function. After this, we will introduce the Fundamental Theorem of Boolean Algebra, also known as Boole's expansion theorem (or Shannon expansion), 
@@ -859,9 +895,9 @@
     The relationship between Shannon's Expansion and the Duality of Boolean Functions can be seen by applying the dual operation to Shannon's Expansion:
 
     \begin{align*}
-    f^d(x_1, x_2, \ldots, x_n) &= \overline{f(\bar{x_1}, \bar{x_2}, \ldots, \bar{x_n})} \
-    &= \overline{\bar{x_i} \cdot f(\bar{x_1}, \bar{x_2}, \ldots, \bar{x_{i-1}}, 0, \bar{x_{i+1}}, \ldots, \bar{x_n}) + x_i \cdot f(\bar{x_1}, \bar{x_2}, \ldots, \bar{x_{i-1}}, 1, \bar{x_{i+1}}, \ldots, \bar{x_n})} \
-    &= x_i + f^d(x_1, x_2, \ldots, x_{i-1}, 0, x_{i+1}, \ldots, x_n) \cdot \bar{x_i} + f^d(x_1, x_2, \ldots, x_{i-1}, 1, x_{i+1}, \ldots, x_n)
+    f^d(x_1, x_2, \ldots, x_n) &= \overline{f(\bar{x_1}, \bar{x_2}, \ldots, \bar{x_n})} \\
+    &= \overline{\bar{x_i} \cdot f(\bar{x_1}, \bar{x_2}, \ldots,0, \ldots, \bar{x_n}) + x_i \cdot f(\bar{x_1}, \bar{x_2}, \ldots, 1,\ldots, \bar{x_n})} \\
+    &= x_i + f^d(x_1, x_2, \ldots,0, \ldots, x_n) \cdot \bar{x_i} + f^d(x_1, x_2, \ldots, 1,\ldots, x_n)
     \end{align*}
 
     This shows that the dual of Shannon's Expansion with respect to $x_i$ is equivalent to Shannon's Expansion of the dual function with respect to $\bar{x_i}$.

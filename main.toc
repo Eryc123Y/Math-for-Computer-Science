@@ -88,11 +88,11 @@
 \contentsline {subsection}{\numberline {6.1.4}Exercises}{157}{subsection.6.1.4}%
 \contentsline {section}{\numberline {6.2}Boolean Function}{160}{section.6.2}%
 \contentsline {subsection}{\numberline {6.2.1}Representation of Boolean Function}{161}{subsection.6.2.1}%
-\contentsline {subsection}{\numberline {6.2.2}Properties of Boolean Function}{162}{subsection.6.2.2}%
-\contentsline {subsection}{\numberline {6.2.3}Simplification of Boolean Function}{166}{subsection.6.2.3}%
-\contentsline {subsection}{\numberline {6.2.4}Exercises}{166}{subsection.6.2.4}%
-\contentsline {section}{\numberline {6.3}Predicates and Quantifiers}{167}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Logic of Deduction and Induction}{167}{section.6.4}%
+\contentsline {subsection}{\numberline {6.2.2}Properties of Boolean Function}{163}{subsection.6.2.2}%
+\contentsline {subsection}{\numberline {6.2.3}Simplification of Boolean Function}{167}{subsection.6.2.3}%
+\contentsline {subsection}{\numberline {6.2.4}Exercises}{167}{subsection.6.2.4}%
+\contentsline {section}{\numberline {6.3}Predicates and Quantifiers}{168}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Logic of Deduction and Induction}{168}{section.6.4}%
 \contentsline {chapter}{\numberline {7}Preliminary Number Theory and Cryptography}{169}{chapter.7}%
 \contentsline {section}{\numberline {7.1}Divisibility and Modular Arithmetic}{169}{section.7.1}%
 \contentsline {subsection}{\numberline {7.1.1}Division and Divisibility}{170}{subsection.7.1.1}%
@@ -114,7 +114,7 @@
 \contentsline {paragraph}{Solution:}{192}{paragraph*.5}%
 \contentsline {subsection}{\numberline {7.4.2}The Chinese Remainder Theorem}{195}{subsection.7.4.2}%
 \contentsline {subsection}{\numberline {7.4.3}Fermat's Little Theorem}{199}{subsection.7.4.3}%
-\contentsline {chapter}{\numberline {8}Relation and Further Algorithm Analysis}{201}{chapter.8}%
+\contentsline {chapter}{\numberline {8}Relations, Abstract Algebra, and Category Theory Introduction}{201}{chapter.8}%
 \contentsline {section}{\numberline {8.1}Relations}{201}{section.8.1}%
 \contentsline {subsection}{\numberline {8.1.1}Equivalent Relation}{201}{subsection.8.1.1}%
 \contentsline {subsection}{\numberline {8.1.2}Inverse Relation}{201}{subsection.8.1.2}%
