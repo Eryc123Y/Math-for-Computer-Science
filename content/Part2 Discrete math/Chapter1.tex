@@ -678,7 +678,7 @@
     In this part of the chapter, we will look into further details of Boolean Expression, specifically, Boolean Function. As an intro, we start with completeness
     and duality of Boolean Function. After this, we will introduce the Fundamental Theorem of Boolean Algebra, also known as Boole's expansion theorem (or Shannon expansion), 
     which in the foundation of logic circuit design and implementation.
-    \begin{definition}[Completeness of Boolean Function]
+    \begin{theorem}[Completeness of Boolean Function]
         A set of Boolean operators is said to be \textit{functionally complete} if every Boolean function can be expressed using only those operators. The following sets are known to be functionally complete:
 
         \begin{enumerate}
@@ -688,7 +688,7 @@
         \end{enumerate}
 
         The completeness property is important in digital logic design, as it allows designers to create any desired Boolean function using a minimal set of logic gates.
-    \end{definition}
+    \end{theorem}
 
     \begin{remark}
         If you are getting confused by the word "Logic Gate", just take it as another way we call Boolean or Logic Operators. Logic gates are what electric engineers use
@@ -724,7 +724,7 @@
         just need to know the basic idea (in this book).
     \end{remark}
 
-    \begin{definition}[Duality of Boolean Function]  
+    \begin{theorem}[Duality of Boolean Function]  
         The duality principle states that for every Boolean function $f(x_1, x_2, \ldots, x_n)$, there exists a dual function $f^D(x_1, x_2, \ldots, x_n)$ that can be obtained by:
         \begin{enumerate}
             \item Replacing every occurrence of 0 with 1 and vice versa.
@@ -741,7 +741,7 @@
         \end{enumerate}
 
         The duality principle also holds for other pairs of dual operators, such as NAND and NOR, or implication and converse implication.
-    \end{definition}    
+    \end{theorem}    
     
     \begin{example}[Duality in Boolean Function]
         Here are some examples:
@@ -813,6 +813,7 @@
     \end{proof}
     The proof can also be done using Boolean Algebra Laws, which will be one of the exercises.
 
+    Another important property, or theorem in Boolean Function related to its duality, is Boole's expansion theorem, or also known as Shannon's expansion theorem.
     Shannon's expansion theorem, proposed by the American mathematician Claude Shannon, is a fundamental result in Boolean algebra and switching theory. 
     It provides a systematic method to decompose a Boolean function into simpler subfunctions based on the values of a selected variable. 
     This theorem plays a crucial role in the analysis, synthesis, and minimization of Boolean functions, which are essential in digital logic design, computer 
@@ -843,17 +844,15 @@
         \end{align*}
         
         We need to prove that this expression is equal to the original function $f(x_1, x_2, \ldots, x_n)$.
-        
         For any combination of input values $(x_1, x_2, \ldots, x_n)$, either $x_i$ is true or $\overline{x_i}$ is true (but not both). Therefore, one of the two product terms in the expression will be zero, and the other will be equal to the value of $f$ for that input combination.
-        
-        If $x_i$ is true, then $x_i \cdot f_{x_i} = f_{x_i}$ and $\overline{x_i} \cdot f_{\overline{x_i}} = 0$, so the expression evaluates to $f_{x_i}$, which is the correct value of $f$ when $x_i$ is true.
-        
-        If $x_i$ is false, then $x_i \cdot f_{x_i} = 0$ and $\overline{x_i} \cdot f_{\overline{x_i}} = f_{\overline{x_i}}$, so the expression evaluates to $f_{\overline{x_i}}$, which is the correct value of $f$ when $x_i$ is false.
-        
+        If $x_i$ is true, then $x_i \cdot f_{x_i} = f_{x_i}$ and $\overline{x_i} \cdot f_{\overline{x_i}} = 0$, so the expression evaluates to $f_{x_i}$, which is the correct value of $f$ when $x_i$ is true.      
+        If $x_i$ is false, then $x_i \cdot f_{x_i} = 0$ and $\overline{x_i} \cdot f_{\overline{x_i}} = f_{{x_i}}$, so the expression evaluates to $f_{\overline{x_i}}$, which is the correct value of $f$ when $x_i$ is false.
         Therefore, the expression $x_i \cdot f_{x_i} + \overline{x_i} \cdot f_{\overline{x_i}}$ correctly represents the Boolean function $f(x_1, x_2, \ldots, x_n)$ for all possible input combinations, proving Shannon's expansion theorem.
         \end{proof}
+        
+    Now let's talk about how the duality of Boolean Function are related to Shannon's Expansion Theorem.
     \subsection{Simplification of Boolean Function}
-
+        
 
     \subsection{Exercises}
     \begin{exercise}

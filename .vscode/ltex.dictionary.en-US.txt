@@ -30,3 +30,6 @@ XNOR
 Minterms
 maxterms
 subfunctions
+minterm
+minterms
+maxterm
