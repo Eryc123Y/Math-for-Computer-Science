@@ -1,17 +1,17 @@
 # Fdb version 4
-["biber main"] 1711969165.72551 "main.bcf" "main.bbl" "main" 1711985155.67431 0
-  "main.bcf" 1711985155 107347 1f51a2be7d23f3423c0e59ffd4ef65c6 "pdflatex"
+["biber main"] 1711969165.72551 "main.bcf" "main.bbl" "main" 1711985521.5871 0
+  "main.bcf" 1711985521 107347 1f51a2be7d23f3423c0e59ffd4ef65c6 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["makeindex main.idx"] 1711984789.01466 "main.idx" "main.ind" "main" 1711985155.67405 2
-  "main.idx" 1711985150 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+["makeindex main.idx"] 1711984789.01466 "main.idx" "main.ind" "main" 1711985521.58684 2
+  "main.idx" 1711985516 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   (generated)
   "main.ilg"
   "main.ind"
   (rewritten before read)
-["pdflatex"] 1711985149.40602 "c:/Programming/GitProjects/Math-for-Computer-Science/main.tex" "main.pdf" "main" 1711985155.67468 0
+["pdflatex"] 1711985515.39258 "c:/Programming/GitProjects/Math-for-Computer-Science/main.tex" "main.pdf" "main" 1711985521.58756 0
   "Images/agm3D.png" 1707481231 97995 3c8707993f2acdfb1f5fe89cecae6e4e ""
   "Images/agm3dsect.png" 1707481231 44643 73eb57f3840cb5ff6c2c67bcf1c7b93d ""
   "Images/agmx=0.png" 1707481231 26598 bd43746e4060570704283b475eedb198 ""
@@ -312,7 +312,7 @@
   "c:/texlive-full/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1707381911 5518062 7a057142cd386699904724be19e2b854 ""
   "c:/texlive-full/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1707382065 8211147 811c16a8b9887a9bc34df061f4beda64 ""
   "c:/texlive-full/2023/texmf.cnf" 1707381885 713 e69b156964470283e0530f5060668171 ""
-  "content/Part2 Discrete math/Chapter1.tex" 1711985122 53234 91cebf5c316e59a6c732bddab262f10a ""
+  "content/Part2 Discrete math/Chapter1.tex" 1711985494 54276 3bcf63fc70b0f4169119b595c4774898 ""
   "content/Part2 Discrete math/Chapter2.tex" 1711648363 93510 e0efbbc9638ada4da16ff4b96753a9a2 ""
   "content/Part2 Discrete math/Chapter3.tex" 1711648363 34791 76d5e1f0789ab5d2561fd173736ddce0 ""
   "content/Part2 Discrete math/Chapter4.tex" 1707481232 108 75644d9f2dfb719db49f3f5f256a9bdb ""
@@ -333,15 +333,15 @@
   "content/part1 Intro/Chapter3.tex" 1709135656 38936 96463bbfb7efa777383c53bee41a1c3a ""
   "content/part1 Intro/Chapter4.tex" 1707481232 57259 bed4375ef85716f26b0ae4705146b46d ""
   "content/part1 Intro/Chapter5.tex" 1707481232 88243 989a2fe9a0123e4b52072bab758ecc3f ""
-  "main.aux" 1711985155 120602 4d39d868cdf203b618cce7cb1d6cc344 "pdflatex"
+  "main.aux" 1711985521 120602 e9d0079689d96b28dcb4e1b08f8bb32f "pdflatex"
   "main.bbl" 1711969200 486 ee04f40f768daeed26442158e95aba61 "biber main"
   "main.ind" 0 -1 0 "makeindex main.idx"
-  "main.lof" 1711985155 3159 041ffa40d02e4dd4b2ce35bb71fca4e0 "pdflatex"
-  "main.lot" 1711985155 2316 0446110e1730ec126459dade6acf24fc "pdflatex"
-  "main.ptc" 1711985155 23540 d74137a4feaba9880784801138f7ca82 "pdflatex"
-  "main.run.xml" 1711985155 2301 f06af3099c978185a0ac5347b2a69dfa "pdflatex"
+  "main.lof" 1711985521 3159 041ffa40d02e4dd4b2ce35bb71fca4e0 "pdflatex"
+  "main.lot" 1711985521 2316 0446110e1730ec126459dade6acf24fc "pdflatex"
+  "main.ptc" 1711985521 23540 d74137a4feaba9880784801138f7ca82 "pdflatex"
+  "main.run.xml" 1711985521 2301 f06af3099c978185a0ac5347b2a69dfa "pdflatex"
   "main.tex" 1711963048 8012 64713f6d78747e7b2ba553daef3ce7d0 ""
-  "main.toc" 1711985155 23180 b19c9747a004b4899aa0d05d02d27efc "pdflatex"
+  "main.toc" 1711985521 23180 b19c9747a004b4899aa0d05d02d27efc "pdflatex"
   (generated)
   "main.aux"
   "main.bcf"
