@@ -1,31 +1,34 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Examples of Special Mappings}}{45}{figure.2.1}%
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Visualization of $\sum _{i=1}^{n} \sum _{j=1}^{n} (a_ib_j-a_jb_i)$}}{53}{figure.2.2}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces $f(x,y)=x+y$}}{46}{figure.2.1}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Visualization of $\mathbb {R}^1$ and $\mathbb {R}^2$}}{47}{figure.2.2}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces }}{48}{figure.2.3}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Examples of Special Mappings}}{51}{figure.2.4}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Visualization of $\sum _{i=1}^{n} \sum _{j=1}^{n} (a_ib_j-a_jb_i)$}}{62}{figure.2.5}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Venn Diagram of Number Sets}}{65}{figure.3.1}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Visualization of $\lceil x \rceil \text { and } \lfloor x \rfloor $}}{67}{figure.3.2}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Time Complexity Visualization}}{74}{figure.3.3}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Venn Diagram of Number Sets}}{75}{figure.3.1}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Visualization of $\lceil x \rceil \text { and } \lfloor x \rfloor $}}{77}{figure.3.2}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Time Complexity Visualization}}{84}{figure.3.3}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Quadratic function graphs based on the discriminant.}}{81}{figure.4.1}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Triangular Inequality: $ab < 0$}}{83}{figure.4.2}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces AGM when $x_2 = 0$}}{86}{figure.4.3}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces AGM when $x_2 = 5$}}{86}{figure.4.4}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces AGM 3D Visualization}}{87}{figure.4.5}%
-\contentsline {figure}{\numberline {4.6}{\ignorespaces AGM 3D Visualization (Front)}}{87}{figure.4.6}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Quadratic function graphs based on the discriminant.}}{91}{figure.4.1}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Triangular Inequality: $ab < 0$}}{93}{figure.4.2}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces AGM when $x_2 = 0$}}{96}{figure.4.3}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces AGM when $x_2 = 5$}}{96}{figure.4.4}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces AGM 3D Visualization}}{97}{figure.4.5}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces AGM 3D Visualization (Front)}}{97}{figure.4.6}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Complex Plane}}{111}{figure.5.1}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Complex Conjugate}}{113}{figure.5.2}%
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Complex Number as Vector}}{118}{figure.5.3}%
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Parallelogram Law}}{118}{figure.5.4}%
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Complex Number in Polar Coordinate}}{119}{figure.5.5}%
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Solutions for $z^3=1$}}{140}{figure.5.6}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Complex Plane}}{121}{figure.5.1}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Complex Conjugate}}{123}{figure.5.2}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Complex Number as Vector}}{128}{figure.5.3}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Parallelogram Law}}{128}{figure.5.4}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Complex Number in Polar Coordinate}}{129}{figure.5.5}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Solutions for $z^3=1$}}{150}{figure.5.6}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {7.1}{\ignorespaces Binary, Octal and Hexadecimal Representation}}{179}{figure.7.1}%
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Binary, Octal and Hexadecimal Representation}}{189}{figure.7.1}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {8.1}{\ignorespaces Branching Tree of Binary Search}}{207}{figure.8.1}%
-\contentsline {figure}{\numberline {8.2}{\ignorespaces Binary Search V2 with $n=12$}}{212}{figure.8.2}%
+\contentsline {figure}{\numberline {8.1}{\ignorespaces Branching Tree of Binary Search}}{217}{figure.8.1}%
+\contentsline {figure}{\numberline {8.2}{\ignorespaces Binary Search V2 with $n=12$}}{222}{figure.8.2}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

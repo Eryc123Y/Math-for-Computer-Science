@@ -333,6 +333,7 @@ so $P \subseteq S$; thus, by definition, $S = P$.
 %------------------------------------------------
 \section{Function: a perspective of Set Theory}
 This section discusses function from a perspective of set. We clarify this by the relation between sets.
+\subsection{Function and Operation on Function}
 \begin{definition}[Function]
 
 Let \( A \) and \( B \) be nonempty sets. A function \( f \) from \( A \) to \( B \) is an assignment of exactly one element of \( B \) to each element of \( A \). We write \( f(a) = b \) if \( b \) is the unique element of \( B \) assigned by the function \( f \) to the element \( a \) of \( A \). If \( f \) is a function from \( A \) to \( B \), we write \( f : A \rightarrow B \).
@@ -348,9 +349,11 @@ Think about this problem:
 \begin{problem}
     Is $f(x) = \frac{1}{x}$ equal to $f(x) = x^{-1} $?
 \end{problem}
+\begin{solution}
 Even someone with limited algebra knowledge could know that, even though $\frac{1} {x}$ could be expressed in the same why, it has a different domain to $x$, as for $x \neq 0$ for the first function, while $x\in \mathbb{R}$ for the latter. Their domain and codomain are different.
+\end{solution}
 
-This example helps to distinguish codomain and range:
+Here is an example that helps to distinguish codomain and domain:
 \begin{example}
     Let \( f: \mathbb{Z} \rightarrow \mathbb{Z} \) assign the square of an integer to this integer. Then, \( f(x) = x^2 \), where the domain of \( f \) is the set of all integers, the codomain of \( f \) is the set of all integers, and the range of \( f \) is the set of all integers that are perfect squares, namely, \( \{0, 1, 4, 9, \ldots \} \).
 \end{example}
@@ -365,6 +368,227 @@ Let \( f_1 \) and \( f_2 \) be functions from \( A \) to \( \mathbb{R} \). Then 
 \begin{problem}
     Let \( f_1 \) and \( f_2 \) be functions from \( \mathbb{R} \) to \( \mathbb{R} \) such that \( f_1(x) = x^2 \) and \( f_2(x) = -x^2 \). What are the functions \( f_1 + f_2 \) and \( f_1f_2 \)?
 \end{problem}
+
+\subsection{Elementary Functions and More on Cartesian Product}
+As a new undergrad, most of the functions that we have seen so far are actually categorized under only \textbf{The Basic Elementary Functions}.
+\begin{definition}[The Basic Elementary Functions]
+	The basic elementary functions are a set of fundamental functions that are widely used in various branches of mathematics and science. These functions can be defined as follows:
+	
+	\begin{enumerate}
+		\item \textbf{Power Functions:}
+		\begin{itemize}
+			\item $x^n$, where $n$ is a positive integer.
+			\item $x^{1/n}$, where $n$ is a positive integer. This is the $n$-th root of $x$.
+			\item $x^r$, where $r$ is any real number.
+		\end{itemize}
+		\item \textbf{Exponential Function:} $e^x$, where $e \approx 2.71828$ is the base of the natural logarithm.
+		\item \textbf{Logarithmic Functions:}
+		\begin{itemize}
+			\item $\log_a x$, the logarithm of $x$ with base $a$, where $a > 0$ and $a \neq 1$.
+			\item $\ln x$, the natural logarithm of $x$, which is the logarithm with base $e$.
+		\end{itemize}
+		\item \textbf{Trigonometric Functions:} $\sin x$, $\cos x$, $\tan x$, $\cot x$, $\sec x$, $\csc x$.
+		\item \textbf{Inverse Trigonometric Functions:} $\sin^{-1} x$, $\cos^{-1} x$, $\tan^{-1} x$, $\cot^{-1} x$, $\sec^{-1} x$, $\csc^{-1} x$.
+	\end{enumerate}
+	\begin{table}[H]
+		\centering
+		\caption{Basic Elementary Functions}
+		\begin{tabular}{|l|l|}
+			\hline
+			\textbf{Function} & \textbf{Expression} \\
+			\hline
+			Power functions & $x^n$, $x^{1/n}$, $x^r$ \\
+			Exponential function & $e^x$ \\
+			Logarithmic functions & $\log_a x$, $\ln x$ \\
+			Trigonometric functions & $\sin x$, $\cos x$, $\tan x$, $\cot x$, $\sec x$, $\csc x$ \\
+			Inverse trigonometric functions & $\sin^{-1} x$, $\cos^{-1} x$, $\tan^{-1} x$, $\cot^{-1} x$, $\sec^{-1} x$, $\csc^{-1} x$ \\
+			\hline
+		\end{tabular}
+		\label{tab:basic_functions}
+	\end{table}
+\end{definition}
+All these functions have on thing in common: they are all defined as $f: \mathbb{R}\rightarrow \mathbb{R}$. Now we can consider functions with more variables, or we just
+say, the output of  function is affected by more than one variable. Let's look at a simple example.
+
+\begin{example}[Bivariate Function]
+	The function $f(x,y)=x+y$ is a function with two independent variables. How can we write a reflection, or mapping in $f: \rightarrow$ notation?
+	
+	\begin{solution}
+		It could be a little complex to consider two variables in the same time, and for beginners, it is pretty hard to imagine how the graph of  function looks like.
+		Now we introduce a new method called \textbf{Function Slicing}.
+		\begin{definition}[Function Slicing]
+			Let $f: \mathbb{R}^n \to \mathbb{R}$ be an $n$-variable real-valued function. A function slice of $f$ is a function obtained by fixing one or more variables to specific values, thus reducing the number of variables in the function.
+			
+			Formally, let $\mathbf{a} = (a_1, \ldots, a_k) \in \mathbb{R}^k$ be a vector of fixed values, where $1 \leq k < n$. Let ${i_1, \ldots, i_k} \subset {1, \ldots, n}$ be a subset of indices. The function slice of $f$ with respect to $\mathbf{a}$ and ${i_1, \ldots, i_k}$ is the function $g: \mathbb{R}^{n-k} \to \mathbb{R}$ defined by:
+			
+			\[
+			g(x_1, \ldots, x_{n-k}) = f(y_1, \ldots, y_n),
+			\]
+			
+			where
+			\[
+			y_i =
+			\begin{cases}
+				a_j, & \text{if } i = i_j \text{ for some } j \in {1, \ldots, k}, \\
+				x_{\ell}, & \text{if } i \text{ is the } \ell\text{-th element of } {1, \ldots, n} \setminus {i_1, \ldots, i_k}.
+			\end{cases}
+			\]
+			\begin{remark}
+				In other words, function slicing is the process of fixing some variables of a multivariate function to specific values, thus creating a new function with fewer variables. This technique is useful for simplifying and visualizing the behavior of multivariate functions under specific conditions. 
+			\end{remark}
+		\end{definition}
+		
+		We apply this technique straightaway in this example, since we want to make this function more easy to analyze, we can fix $y$ to 0. So we can reduce it
+		to a univariate function. With this as a prerequisite, the bivariate function is equivalent to a basic linear function with gradient 1.$$f(x,0) = x + 0 \equiv f(x) = x.$$
+		For $f(x) = x$, we can know without any doubt that it is defined by $f: \R \to \R$. But how does this help us to find out how to express of mapping of $f(x,y)$? The mapping is
+		always from one set to the other set, so for multivariable functions, the mapping must also be from one set to another set. Obviously, the image is $\R$, and the tricky part
+		is the preimage. Let's recap on what we have covered in the set theory. We have actually already know how to deal with multiple elements from one set, like in this case, 
+		we have $x, y\in \R$. How can we describe a set consisted of $x$ and $y$? The fact is that we can take them as Cartesian product. We know that the Cartesian product of two number set 
+		will produce a set of ordered pairs with two elements, so we have infinitely many pairs of $(x, y)$, where $x, y\in \R$, which can be denoted by $\R \times \R$, or $\R^2$ by convention.
+		Therefore, we have $f: \R^2 \to \R$ for $f(x,y)=x+y$.
+		\end{solution}
+		The complete graph of this function is shown below. 
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.7\linewidth]{Images/x+y}
+			\caption{$f(x,y)=x+y$}
+			\label{fig:xy}
+		\end{figure}
+		Let's see how the bivariate function $f(x, y) = x + y$ is related to the univariate functions $f(x) = x$ and $f(y) = y$.
+		
+		When we fix the value of $y$, say $y = y_0$, the function $f(x, y)$ becomes a univariate function in $x$: $f(x, y_0) = x + y_0$. This is essentially a vertical translation of the function $f(x) = x$ by a distance of $y_0$. In the 3D graph, this is represented by a line parallel to the $xz$-plane.
+		Similarly, when we fix the value of $x$, say $x = x_0$, the function $f(x, y)$ becomes a univariate function in $y$: $f(x_0, y) = x_0 + y$. This is a vertical translation of the function $f(y) = y$ by a distance of $x_0$. In the 3D graph, this is represented by a line parallel to the $yz$-plane.
+		When $y = 0$, $f(x, 0) = x$, which is the graph of the function $f(x) = x$. In the 3D graph, this is a line on the $xy$-plane.
+		When $x = 0$, $f(0, y) = y$, which is the graph of the function $f(y) = y$. In the 3D graph, this is also a line on the $xy$-plane.
+		The graphs of the functions $f(x) = x$ and $f(y) = y$ intersect on the $xy$-plane at the point $(0, 0)$, which corresponds to the point $(0, 0, 0)$ in the 3D graph.
+		You can imagine that the graph of the function $f(x, y) = x + y$ is composed of countless lines parallel to the $xz$-plane and $yz$-plane, which correspond to the translations of $f(x) = x$ and $f(y) = y$ respectively. These lines form a plane in the 3D space.
+		
+		This plane can be seen as the result of translating $f(x) = x$ along the $y$-axis, or translating $f(y) = y$ along the $x$-axis. The combination of these two univariate functions in the 3D space forms the graph of the bivariate function $f(x, y) = x + y$.
+	    \end{example}
+	    
+	    \begin{remark}
+	    	Do not mix it up with function addition and multiplication earlier, because for the cases earlier, all functions are with respect to $x$, the same variable,
+	    	while in this case a new variable is introduced.
+	    \end{remark}
+	    
+	    
+		We have worked out this example, however, here I'd like to give some extra knowledge on Cartesian product, especially its geometrical meaning. We just mentioned that two number set 
+		will produce a set of ordered pairs with two elements, and in this case, we denote the set formed by Cartesian product of the same real number set as $\R^2$. Nevertheless, ordered pairs'
+		elements are not always in pairs. We can even define an ordered pair of one single real number $(a)$, where $a \in \R$, or even three or more elements. We first examine $\R$ and $(a)$, 
+		it is clear that $\R$ is just the set of real number that is already defined, while the ordered pair $(a)$ represents some $a\in \R$. Now we introduce another $b\in \R$ to
+		form ordered pair $(a,b)$, and we have concluded that $(a,b) \in \R^2$. The process of developing $(a)$ to $(a,b)$,  is just creating a Cartesian product of real number set 
+		to itself. To visualize this process, we need to find a suitable carrier for real number. We know that a real number could be infinitely huge or infinitely small, as there is no
+		biggest or smallest real number (even though we haven't proven this, we just take it as common sense). We take some real number $-2 <r < 2$ as example. We can see that this interval is
+		actually defined by a line on the Cartesian plane (or the Cartesian Coordinates). Since real number are infinite, so the whole set ordered pair $(a), a\in \R$, are defined in a line
+		extending to both left and right-hand-side of the plane, giving us a whole line that extents forever.
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.8\linewidth]{Images/R^2}
+			\caption{Visualization of $\R^1$ and $\R^2$}
+			\label{fig:r2}
+		\end{figure}
+		Now we consider $(a,b)$, where both elements are from $\R$, so for the Cartesian products, we will get all possible combination of any $\R\times \R$. In this way, we can get a plane, just as
+		shown in the graph. This is why call this system "Cartesian Coordinate". Naturally, we can also conclude that a function $f: \R^3 \to \R$ will be like a solid cubic in the 3D space.
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.7\linewidth]{Images/R^3}
+			\caption[]{Visualization of $\R^3$}
+			\label{fig:r3}
+		\end{figure}
+		But what about functions whose preimage are above $\R^3$? Sadly, there is no easy way to plot a function that are in 4D space, even though we can still use many techniques to analyze these
+		high dimension functions, including function slicing. We will discuss $\R^n$ further in linear algebra and multivariable calculus. 
+		
+		Just now, we have somewhat shown another law about dimension or graphical representation of function, called \textbf{Sard's Theorem}.
+		\begin{theorem}[Sard's theorem]
+			For any \textbf{n-variable function}\\ with variables $x_1, x_2, \cdots, x_n$, for function $f(x_1,x_2,\cdots, x_n)$, ($x\in \R$), whose mapping is $\R \times \R \times \cdots \times \R = \R^n \to R$.
+			we need $n+1$ dimensions to plot a complete graph for the function. 
+		\end{theorem}
+		\begin{remark}
+			The description here is actually a simplified version with only main idea, the complete concept is available \href{https://www.wikiwand.com/en/Sard%27s_theorem}{here}. To fully
+			explain the theorem, we need more knowledge in real analysis.
+		\end{remark}
+		
+		Additionally, $\R^n$ is defined as \textbf{The n-dimensional Euclidean Space}.
+		\begin{definition}[The n-dimensional Euclidean Space]
+		The n-dimensional Euclidean Space can be defined as the set of all real-valued functions defined on the index set $\{1, 2, \ldots, n\}$.
+			\[\mathbb{R}^n = \{f \colon \{1, 2, \ldots, n\} \to \mathbb{R}\}\]
+			
+			where each function $f$ assigns a real number to each element of the index set $\{1, 2, \ldots, n\}$. We can represent these functions as n-tuples or vectors:
+			
+			\[f = (f(1), f(2), \ldots, f(n)) = (x_1, x_2, \ldots, x_n)\]
+			
+			where $x_i = f(i)$ for $i = 1, 2, \ldots, n$. Thus, each point in $\mathbb{R}^n$ can be identified with an n-tuple of real numbers $(x_1, x_2, \ldots, x_n)$.
+			
+			The set $\mathbb{R}^n$ is equipped with various algebraic and geometric structures, such as vector addition, scalar multiplication, and an inner product, which make it a real vector space of dimension $n$. Don't worry if you are confused by this, we will explore this topic further in linear algebra and other topics.
+		\end{definition}
+		
+\subsection{Partial and Total Function}
+Now we will introduce some ways to categorize functions. Earlier, we have discussed many functions where $f: \R \to \R$, but functions cannot always 
+have a domain in a complete set. So we first introduce the idea of partial function.
+\begin{definition}[Partial Function]
+	A partial function from a set $A$ to a set $B$ is a function $f$ that satisfies the following conditions:
+	\begin{enumerate}
+		\item The domain of $f$, denoted by $\text{dom}(f)$, is a subset of $A$, i.e., $\text{dom}(f) \subseteq A$.
+		\item For each $x \in \text{dom}(f)$, there is a unique $y \in B$ such that $f(x) = y$.
+	\end{enumerate}
+	
+	In other words, a partial function is a function that may not be defined for all elements of its source set. Partial functions allow some input values to have no corresponding output values.
+\end{definition}
+\begin{example}
+	Consider the function $f: \mathbb{R} \to \mathbb{R}$ defined as:
+	$$
+	f(x) = \begin{cases}
+		\frac{1}{x}, & \text{if } x \neq 0 \\
+		\text{undefined}, & \text{if } x = 0
+	\end{cases}
+	$$
+	This function $f$ is a partial function because it is not defined for $x = 0$. The domain of $f$ is the set of all real numbers except zero, i.e., $\text{dom}(f) = \mathbb{R} \setminus {0}$.
+\end{example}
+
+By analogy, we can define total function as follows.
+\begin{definition}[Total Function]
+	A total function from a set $A$ to a set $B$ is a function $f$ that satisfies the following conditions:
+	\begin{enumerate}
+		\item The domain of $f$, denoted by $\text{dom}(f)$, is equal to $A$, i.e., $\text{dom}(f) = A$.
+		\item For each $x \in A$, there is a unique $y \in B$ such that $f(x) = y$.
+	\end{enumerate}
+	
+	In other words, a total function is a function that is defined for all elements of its source set. Every input value of a total function has a unique corresponding output value.
+\end{definition}
+\begin{example}
+	Consider the function $g: \mathbb{R} \to \mathbb{R}$ defined as:
+	$$
+	g(x) = x^2
+	$$
+	
+	This function $g$ is a total function because it is defined for all real numbers. The domain of $g$ is the entire set of real numbers, i.e., $\text{dom}(g) = \mathbb{R}$. For any input value $x \in \mathbb{R}$, the function $g$ assigns the unique output value $x^2$.
+	
+	A total function is a special case of a partial function where the domain is equal to the source set.
+	
+\end{example}
+
+Another thing that worth discussing is that, earlier, we introduced function slicing that reduce the number of variable of a function. Function slicing has 
+much to do with partial function.
+\begin{proposition}[Function Slicing is Always a Partial Function]
+	Function slicing is a technique that involves restricting the domain of a function to a specific subset. Given a function $f: A \to B$ and a subset $C \subseteq A$, the slice of $f$ over $C$, denoted by $f|_C$, is defined as:
+	$$
+	f|_C(x) = \begin{cases}
+		f(x), & \text{if } x \in C \\
+		\text{undefined}, & \text{if } x \notin C
+	\end{cases}
+	$$
+	The function $f|_C$ has the same output values as $f$ for inputs in $C$, but it is undefined for inputs not in $C$.
+	
+	If the original function $f$ is a total function, then the slice $f|_C$ is a partial function, unless $C = A$. In the case where $C = A$, the slice $f|_C$ is the same as the original function $f$ and remains a total function.
+	
+	On the other hand, if the original function $f$ is already a partial function, then the slice $f|_C$ is also a partial function, regardless of the choice of $C$.
+\end{proposition}
+
+
+
+
+
+
 
 \subsection{Injective, Surjective, and Bijective Function}
 We have known that functions are actually reflection from one set to the other set. We will look into several special mapping.
@@ -405,9 +629,39 @@ Using $A$, $B$, and $C$ to denote the set of injective, surjective, and bijectiv
 
 Which means that if a function is injective and surjective in the same time, it is bijective. 
 
-And these will be all we need to know about function for now, since the rest of the properties will be discussed in single-variable calculus. This section aims only introduce the idea of injectivity, surjectivity, and bijectivity, 
+And these will be all we need to know about function for now, since the rest of the properties will be discussed in single-variable calculus. This section aims only introduce the idea of injectivity, surjectivity, and bijectivity.
 
 \subsection{Exercises}
+
+\begin{exercise}
+	Let $f : \{0, 1\} \times \mathcal{P}(\mathbb{Z}) \to \mathbb{N}$ be a function. Which of the following correctly gives an example of an element from its domain and an element from its codomain?
+	\begin{enumerate}
+		\item $(8, -7)$ is an element of the domain and ${1, 9, 85}$ is an element of the codomain.
+		\item $1$ is an element of the domain and ${6, 8}$ is an element of the codomain.
+		\item ${0, 14}$ is an element of the domain and $19$ is an element of the codomain.
+		\item $(1, \{-3, 6\})$ is an element of the domain and $9$ is an element of the codomain.
+	\end{enumerate}
+\end{exercise}
+\begin{solution}
+	Let's break down the domain and codomain of the function $f$:
+	
+	\begin{itemize}
+		\item The domain of $f$ is ${0, 1} \times \mathcal{P}(\mathbb{Z})$, which means it consists of ordered pairs $(a, B)$, where $a$ is either $0$ or $1$, and $B$ is a subset of the set of integers $\mathbb{Z}$.
+		\item The codomain of $f$ is $\mathbb{N}$, which is the set of natural numbers.
+	\end{itemize}
+	
+	Now, let's examine each choice:
+	
+	\begin{enumerate}
+		\item $(8, -7)$ is not an element of the domain because $8 \notin \{0, 1\}$, and $-7$ is not a subset of $\mathbb{Z}$. $\{1, 9, 85\}$ is a subset of $\mathbb{N}$, but not an element of $\mathbb{N}$.
+		\item $1$ is an element of $\{0, 1\}$, but not an element of $\{0, 1\} \times \mathcal{P}(\mathbb{Z})$. $\{6, 8\}$ is a subset of $\mathbb{N}$, but not an element of $\mathbb{N}$.
+		\item $\{0, 14\}$ is not an element of $\{0, 1\} \times \mathcal{P}(\mathbb{Z})$ because it is not an ordered pair. $19$ is an element of $\mathbb{N}$.
+		\item $(1, \{-3, 6\})$ is an element of $\{0, 1\} \times \mathcal{P}(\mathbb{Z})$ because $1 \in \{0, 1\}$ and $\{-3, 6\} \subseteq \mathbb{Z}$. $9$ is an element of $\mathbb{N}$.
+	\end{enumerate}
+	
+	Therefore, the correct answer is 4.
+\end{solution}
+
 \begin{exercise}
     Determine the images of the functions \( f: \mathbb{R} \rightarrow \mathbb{R} \) defined as follows:
     \begin{enumerate}
@@ -415,7 +669,7 @@ And these will be all we need to know about function for now, since the rest of 
         \item[b)] \( f(x) = \frac{x}{1 + |x|} \).
     \end{enumerate}
 \end{exercise}
-\begin{proof}[Solution for a)]
+\begin{solution}
     We analyze the function \( f(x) = \frac{x^2}{1 + x^2} \):
     \begin{itemize}
         \item This function is defined for all \( x \in \mathbb{R} \).
@@ -424,9 +678,8 @@ And these will be all we need to know about function for now, since the rest of 
         \item As \( x \) approaches infinity, \( f(x) \) approaches 1.
     \end{itemize}
     Thus, the image of \( f \) is \( (0, 1] \).
-    \end{proof}
     
-    \begin{proof}[Solution for b)]
+
     We analyze the function \( f(x) = \frac{x}{1 + |x|} \):
     \begin{itemize}
         \item This function is defined for all \( x \in \mathbb{R} \).
@@ -434,10 +687,138 @@ And these will be all we need to know about function for now, since the rest of 
         \item For \( x < 0 \), as \( x \) decreases, \( f(x) \) approaches -1.
     \end{itemize}
     Thus, the image of \( f \) is \( (-1, 1) \).
-    \end{proof}
+    \end{solution}
 
+\begin{exercise}
+	Let $f:\mathbb{Z}^+\times\mathbb{Z}^+\to\mathbb{Z}$ be the function defined by $f((a,b))=\gcd(a,b)+b$ where $\mathbb{Z}^+$ is the set of positive integers and $\gcd(a,b)$ is the greatest common divisor of $a$ and $b$.
+	Is this a one-to-one (bijective) function? What is the image of the function?
+\end{exercise}
+\begin{solution}
+	Take $(a_1, b_1) = (2, 2)$ and $(a_2, b_2) = (1, 3)$. Both $(2, 2)$ and $(1, 3)$ are elements of the domain $\mathbb{Z}^+ \times \mathbb{Z}^+$.
+	
+	Now, let's calculate $f((2, 2))$ and $f((1, 3))$:
+	
+	$f((2, 2)) = \gcd(2, 2) + 2 = 2 + 2 = 4$
+	$f((1, 3)) = \gcd(1, 3) + 3 = 1 + 3 = 4$
+	
+	As we can see, $f((2, 2)) = f((1, 3)) = 4$, even though $(2, 2) \neq (1, 3)$. This demonstrates that $f$ is not one-to-one, as there exist distinct elements in the domain that map to the same element in the codomain.
+	
+	Now, let's determine the image of $f$. The image of a function is the set of all elements in the codomain that are mapped to by at least one element in the domain.
+	
+	Observe that for any $(a, b) \in \mathbb{Z}^+ \times \mathbb{Z}^+$:
+	
+	$\gcd(a, b) \geq 1$, because the greatest common divisor of two positive integers is always a positive integer.
+	$b \geq 1$, because $b$ is a positive integer.
+	Therefore, $f((a, b)) = \gcd(a, b) + b \geq 1 + 1 = 2$.
+	
+	This means that the smallest possible value of $f((a, b))$ is 2, and there is no upper limit on the value of $f((a, b))$ as $b$ can be arbitrarily large.
+	
+	Thus, the image of $f$ is the set ${x : x \in \mathbb{Z} \text{ and } x \geq 2}$, which is the set of all integers greater than or equal to 2.
+	
+	In conclusion, $f$ is not a one-to-one function, and its image is ${x : x \in \mathbb{Z} \text{ and } x \geq 2}$.
+\end{solution}
 
+\begin{exercise}
+	Considering $X=\{1,2,3\}$ and $Y=\{a,b\}$. How to define a total function $f: X\to Y$?
+	How many are there? List all the total functions. Also try to find the way to calculate
+	the number of total functions obtained by $X$ and $Y$ with respect to $|X|, |Y|$.
+\end{exercise}
+\begin{solution}
+	To obtain a total function, we must make sure that the preimage is exactly $X=\{1,2,3\}$, so we can pick which ever combinations of members of $Y$, so we have
+	$(a, a, a)$,
+	$(a, a, b)$,
+	$(a, b, a)$,
+	$(a, b, b)$,
+	$(b, a, a)$,
+	$(b, a, b)$,
+	$(b, b, a)$,
+	$(b, b, b)$.
+	There are 8 total functions from $X$ to $Y$.
+	 The number of total functions can be calculated using the formula $|Y|^{|X|}$, which in this case is $2^3 = 8$.
+\end{solution}
+\begin{exercise}
+	Let $f$ and $g$ be the following functions.\\ $f:\mathcal{P}(\{1,2,3,4\})\to\mathcal{P}(\{1,2,3,4\})$ defined by $f(X)=\{1,2,3,4\}-X$.
+	
+	\noindent $g:\mathcal{P}(\{1,2,3,4\})\cdot\to\{0,1,2,3,4\}$ defined by $g(X)=|X|$.
+	Discuss the existence of $f(f(x)), f(g(x)), g(f(x)), and g(g(x))$. If any
+	of them exists, give a example.
+\end{exercise}
+\begin{solution}
+	\textbf{1. $f(f(x))$:}
+	$f(f(x))$ exists for all $x \in \mathcal{P}({1,2,3,4})$ because the codomain of $f$ is the same as its domain. This means that for any $x \subseteq {1,2,3,4}$, $f(x) \subseteq {1,2,3,4}$, so $f(f(x))$ is well-defined.
+	
+	Example:
+	Let $x = {1,3}$. Then:
+	\begin{align*}
+		f(x) &= {1,2,3,4} - {1,3} = {2,4} \\
+		f(f(x)) &= f({2,4}) = {1,2,3,4} - {2,4} = {1,3}
+	\end{align*}
+	
+	\textbf{2. $f(g(x))$:}
+	$f(g(x))$ does not exist because the codomain of $g$ is ${0,1,2,3,4}$, which is not a subset of the domain of $f$, $\mathcal{P}({1,2,3,4})$. Therefore, $g(x)$ is not a valid input for $f$.
+	
+	\textbf{3. $g(f(x))$:}
+	$g(f(x))$ exists for all $x \in \mathcal{P}({1,2,3,4})$ because the codomain of $f$ is $\mathcal{P}({1,2,3,4})$, which is the domain of $g$. This means that for any $x \subseteq {1,2,3,4}$, $f(x) \subseteq {1,2,3,4}$, so $g(f(x))$ is well-defined.
+	
+	Example:
+	Let $x = {2,3}$. Then:
+	\begin{align*}
+		f(x) &= {1,2,3,4} - {2,3} = {1,4} \\
+		g(f(x)) &= g({1,4}) = |{1,4}| = 2
+	\end{align*}
+	
+	\textbf{4. $g(g(x))$:}
+	$g(g(x))$ does not exist because the codomain of $g$ is ${0,1,2,3,4}$, which is not a subset of the domain of $g$, $\mathcal{P}({1,2,3,4})$. Therefore, $g(x)$ is not a valid input for $g$.
+	
+	In summary, $f(f(x))$ and $g(f(x))$ exist for all $x \in \mathcal{P}({1,2,3,4})$, while $f(g(x))$ and $g(g(x))$ do not exist.
+\end{solution}
 
+\begin{exercise}
+	We have discussed $\R^1$ to $\R^n$ in this section. Try to postulate that
+	whether $R^0$ exists? If it exists, can it be defined by Cartesian Product.
+	Try to prove your conclusion by deduction, and explain how can we visualize it, and
+	is it necessary to visualize it in Cartesian Coordinate system.
+	\begin{remark}
+		Deduction is also known as "inverse induction".
+	\end{remark}
+\end{exercise}
+\begin{proof}
+	First, let's recall the definition of the Cartesian product for a finite collection of sets $A_1, A_2, \ldots, A_n$:
+	
+	\begin{align*}
+		A_1 \times A_2 \times \cdots \times A_n = {(a_1, a_2, \ldots, a_n) \mid a_1 \in A_1, a_2 \in A_2, \ldots, a_n \in A_n}
+	\end{align*}
+	
+	Now, consider the case where $n = 0$. We have an empty collection of sets, denoted by $\emptyset$. The Cartesian product of an empty collection of sets is defined as:
+	
+	\begin{align*}
+		\prod_{i \in \emptyset} A_i = {()}
+	\end{align*}
+	
+	This is a singleton set containing the empty tuple $()$. The empty tuple is a tuple with no components and is denoted by $()$.
+	
+	By definition, $\mathbb{R}^n$ is the Cartesian product of $n$ copies of $\mathbb{R}$:
+	
+	\begin{align*}
+		\mathbb{R}^n = \underbrace{\mathbb{R} \times \mathbb{R} \times \cdots \times \mathbb{R}}_{n \text{ times}}
+	\end{align*}
+	
+	When $n = 0$, we have:
+	
+	\begin{align*}
+		\mathbb{R}^0 = \prod_{i \in \emptyset} \mathbb{R} = {()}
+	\end{align*}
+	
+	Therefore, $\mathbb{R}^0$ exists and is equal to the singleton set containing the empty tuple $()$.
+	
+	\textbf{Visualization:}
+	As mentioned earlier, visualizing $\mathbb{R}^0$ is not necessary, as it is a singleton set containing only the empty tuple. However, if we were to visualize it, it would be represented by a single point in a 0-dimensional space.
+	
+	In the Cartesian coordinate system, $\mathbb{R}^1$ is represented by a line, $\mathbb{R}^2$ by a plane, and $\mathbb{R}^3$ by a 3-dimensional space. As the dimension increases, the visualization becomes more complex. For $\mathbb{R}^0$, there are no axes to represent it in the Cartesian coordinate system, as it is a 0-dimensional space.
+	
+	\textbf{Conclusion:}
+	$\mathbb{R}^0$ exists and can be defined as the Cartesian product of zero copies of $\mathbb{R}$, resulting in a singleton set containing the empty tuple $()$. While it is not necessary to visualize $\mathbb{R}^0$ in the Cartesian coordinate system, it can be thought of as a single point in a 0-dimensional space.
+\end{proof}
 %------------------------------------------------
 \section{Summation}
 Before we move on to the most important part of this chapter, sequence, we use this section to introduce a prerequisite for studying its properties. We introduce the Sigma sign.
@@ -568,7 +949,7 @@ By interchanging the order of summation, we observe that:
 \sum_{j}\sum_{k} a_{j,k} [P(j,k)] = \sum_{k}\sum_{j} a_{j,k} [P(j,k)].
 \end{equation}
 
-This property allows us to switch the order of summation without changing the result, which can be particularly useful in various mathematical analyses.
+This property allows us to switch the order of summation without changing the result, which can be particularly useful in various mathematical analyzes.
 
 Double summation could also be used to simplify a given summation.
 Considering the expression at the beginning of this section:
@@ -715,7 +1096,7 @@ Hence, the proper expansion of the double sum should be written as:
 \]
 where the first sum on the right-hand side counts the \( n \) instances where \( i = j \), and the second sum accounts for the \( n(n-1) \) instances where \( i \neq j \).
 
-The claim would only be true if all \( a_i \) are equal, which is a special case, not the general case. In the general case, the expression evaluates to something different than \( n \) due to the presence of terms where \( i \neq j \). 
+The claim would only be true if all \( a_i \) are equal, which is a special case, not the general case. In the general case, the expression evaluates to something different from \( n \) due to the presence of terms where \( i \neq j \). 
 
 Therefore, the original statement is incorrect unless the condition that all \( a_i \) are equal is specified.
 

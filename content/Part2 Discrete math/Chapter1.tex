@@ -939,42 +939,43 @@
     \begin{proof}
         Let $x_1, x_2, \ldots, x_n$ be Boolean variables. We will prove that for any Boolean function $f(x_1, x_2, \ldots, x_n)$, its dual function $f^D(x_1, x_2, \ldots, x_n)$ satisfies:
 
-\[f^D(x_1, x_2, \ldots, x_n) = (f(x_1', x_2', \ldots, x_n'))'\]
+		\[f^D(x_1, x_2, \ldots, x_n) = (f(x_1', x_2', \ldots, x_n'))'\]
+		
+		\textbf{Step 1:} Express the dual function $f^D(x_1, x_2, \ldots, x_n)$ in terms of the original function $f(x_1, x_2, \ldots, x_n)$ by replacing each variable $x_i$ with its complement $x_i'$ and each operation (AND, OR) with its dual operation (OR, AND).
+		
+		\textbf{Step 2:} Apply De Morgan's laws to the resulting expression:
+		\begin{itemize}
+		    \item $(x + y)' = x' \cdot y'$
+		    \item $(x \cdot y)' = x' + y'$
+		\end{itemize}
+		
+		\textbf{Step 3:} Simplify the expression using the basic properties of Boolean algebra, such as:
+		\begin{itemize}
+		    \item $x + x' = 1$
+		    \item $x \cdot x' = 0$
+		    \item $x + 0 = x$
+		    \item $x \cdot 1 = x$
+		\end{itemize}
+		
+		\textbf{Step 4:} Show that the simplified expression is equal to $(f(x_1', x_2', \ldots, x_n'))'$.
+		
+		\textbf{Example:}
+		Let $f(x, y) = x + y'$. We will prove that $f^D(x, y) = (f(x', y'))'$.
+		
+		\textbf{Step 1:} Express the dual function:
+		$f^D(x, y) = x' \cdot y$
+		
+		\textbf{Step 2:} Apply De Morgan's laws:
+		$(f(x', y'))' = (x' + (y')')' = (x' + y)' = x'' \cdot y' = x \cdot y'$
+		
+		\textbf{Step 3:} Simplify the expression:
+		$x \cdot y' = (x + y')'$
+		
+		\textbf{Step 4:} The simplified expression is equal to $(f(x', y'))'$, thus proving the duality principle for $f(x, y) = x + y'$.
 
-\textbf{Step 1:} Express the dual function $f^D(x_1, x_2, \ldots, x_n)$ in terms of the original function $f(x_1, x_2, \ldots, x_n)$ by replacing each variable $x_i$ with its complement $x_i'$ and each operation (AND, OR) with its dual operation (OR, AND).
-
-\textbf{Step 2:} Apply De Morgan's laws to the resulting expression:
-\begin{itemize}
-    \item $(x + y)' = x' \cdot y'$
-    \item $(x \cdot y)' = x' + y'$
-\end{itemize}
-
-\textbf{Step 3:} Simplify the expression using the basic properties of Boolean algebra, such as:
-\begin{itemize}
-    \item $x + x' = 1$
-    \item $x \cdot x' = 0$
-    \item $x + 0 = x$
-    \item $x \cdot 1 = x$
-\end{itemize}
-
-\textbf{Step 4:} Show that the simplified expression is equal to $(f(x_1', x_2', \ldots, x_n'))'$.
-
-\textbf{Example:}
-Let $f(x, y) = x + y'$. We will prove that $f^D(x, y) = (f(x', y'))'$.
-
-\textbf{Step 1:} Express the dual function:
-$f^D(x, y) = x' \cdot y$
-
-\textbf{Step 2:} Apply De Morgan's laws:
-$(f(x', y'))' = (x' + (y')')' = (x' + y)' = x'' \cdot y' = x \cdot y'$
-
-\textbf{Step 3:} Simplify the expression:
-$x \cdot y' = (x + y')'$
-
-\textbf{Step 4:} The simplified expression is equal to $(f(x', y'))'$, thus proving the duality principle for $f(x, y) = x + y'$.
-
-This algebraic proof demonstrates that the duality principle holds for any Boolean function by directly manipulating the expressions using the basic properties of Boolean algebra and De Morgan's laws.
+		This algebraic proof demonstrates that the duality principle holds for any Boolean function by directly manipulating the expressions using basic properties of Boolean algebra and De Morgan's laws. 
     \end{proof}
+
 
 
     \section{Predicates and Quantifiers}

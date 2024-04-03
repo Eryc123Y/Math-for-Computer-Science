@@ -57,7 +57,10 @@
 \usepackage{amsmath}
 \usepackage{thmtools}
 \usepackage{etoolbox}
-\usepackage{circuitikz}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newtheoremstyle{lemmastyle}
   {9pt}  
   {9pt} 
@@ -88,7 +91,7 @@
 \theoremstyle{solutionStyle}  
 \newtheorem*{solution}{Solution}
 
-\addbibresource{sample.bib} % Bibliography file
+%\addbibresource{sample.bib} % Bibliography file
 
 \definecolor{ocre}{RGB}{243, 102, 25} % Define the color used for highlighting throughout the book
 
@@ -110,7 +113,7 @@
 		\centering\sffamily % Font styling
 		{\Huge\bfseries Math for Computer Science\par} % Book title
 		\vspace{16pt} % Vertical whitespace
-		{\LARGE Bridging Theory and Practice} % Subtitle
+		{\LARGE A Journey Through Rigorous Mathematical Foundations} % Subtitle
 		\vspace{24pt} % Vertical whitespace
 		{\huge\bfseries \\ Eric Yang Xingyu\par} % Author name
 	}
@@ -192,7 +195,7 @@ This \LaTeX \space template is from
 
 
 
-\stopcontents[part] % Manually stop the 'part' table of contents here so the previous Part page table of contents doesn't list the following chapters
+%\stopcontents[part] % Manually stop the 'part' table of contents here so the previous Part page table of contents doesn't list the following chapters
 
 
 \end{document}

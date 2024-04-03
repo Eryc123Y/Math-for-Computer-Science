@@ -341,36 +341,6 @@ INPUT c:/texlive-full/2023/texmf-dist/tex/latex/thmtools/thm-restate.sty
 INPUT c:/texlive-full/2023/texmf-dist/tex/latex/thmtools/thm-restate.sty
 INPUT c:/texlive-full/2023/texmf-dist/tex/latex/thmtools/thm-amsthm.sty
 INPUT c:/texlive-full/2023/texmf-dist/tex/latex/thmtools/thm-amsthm.sty
-INPUT c:/texlive-full/2023/texmf-dist/tex/latex/circuitikz/circuitikz.sty
-INPUT c:/texlive-full/2023/texmf-dist/tex/latex/circuitikz/circuitikz.sty
-INPUT c:/texlive-full/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarycalc.code.tex
-INPUT c:/texlive-full/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarycalc.code.tex
-INPUT c:/texlive-full/2023/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.meta.code.tex
-INPUT c:/texlive-full/2023/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.meta.code.tex
-INPUT c:/texlive-full/2023/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.meta.code.tex
-INPUT c:/texlive-full/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarybending.code.tex
-INPUT c:/texlive-full/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarybending.code.tex
-INPUT c:/texlive-full/2023/texmf-dist/tex/generic/pgf/modules/pgfmodulebending.code.tex
-INPUT c:/texlive-full/2023/texmf-dist/tex/generic/pgf/modules/pgfmodulenonlineartransformations.code.tex
-INPUT c:/texlive-full/2023/texmf-dist/tex/generic/pgf/libraries/pgflibrarycurvilinear.code.tex
-INPUT c:/texlive-full/2023/texmf-dist/tex/generic/pgf/libraries/pgflibrarycurvilinear.code.tex
-INPUT c:/texlive-full/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryfpu.code.tex
-INPUT c:/texlive-full/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryfpu.code.tex
-INPUT c:/texlive-full/2023/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.code.tex
-INPUT c:/texlive-full/2023/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.code.tex
-INPUT c:/texlive-full/2023/texmf-dist/tex/generic/circuitikz/pgfcirc.defines.tex
-INPUT c:/texlive-full/2023/texmf-dist/tex/generic/circuitikz/pgfcircutils.tex
-INPUT c:/texlive-full/2023/texmf-dist/tex/generic/circuitikz/pgfcircpath.tex
-INPUT c:/texlive-full/2023/texmf-dist/tex/generic/circuitikz/pgfcircshapes.tex
-INPUT c:/texlive-full/2023/texmf-dist/tex/generic/circuitikz/pgfcircmonopoles.tex
-INPUT c:/texlive-full/2023/texmf-dist/tex/generic/circuitikz/pgfcircbipoles.tex
-INPUT c:/texlive-full/2023/texmf-dist/tex/generic/circuitikz/pgfcirctripoles.tex
-INPUT c:/texlive-full/2023/texmf-dist/tex/generic/circuitikz/pgfcircquadpoles.tex
-INPUT c:/texlive-full/2023/texmf-dist/tex/generic/circuitikz/pgfcircmultipoles.tex
-INPUT c:/texlive-full/2023/texmf-dist/tex/generic/circuitikz/pgfcirclabel.tex
-INPUT c:/texlive-full/2023/texmf-dist/tex/generic/circuitikz/pgfcircvoltage.tex
-INPUT c:/texlive-full/2023/texmf-dist/tex/generic/circuitikz/pgfcirccurrent.tex
-INPUT c:/texlive-full/2023/texmf-dist/tex/generic/circuitikz/pgfcircflow.tex
 INPUT c:/texlive-full/2023/texmf-dist/tex/latex/psnfss/t1ptm.fd
 INPUT c:/texlive-full/2023/texmf-dist/tex/latex/psnfss/t1ptm.fd
 INPUT c:/texlive-full/2023/texmf-dist/tex/latex/psnfss/t1ptm.fd
@@ -578,22 +548,22 @@ INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/ptmr8t.tfm
 INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/avantgar/pagk8t.tfm
 INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/avantgar/pagk8t.tfm
 OUTPUT main.lof
+INPUT c:/texlive-full/2023/texmf-dist/fonts/vf/adobe/times/zptmcm7t.vf
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/symbol/psyr.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/ptmr8r.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/vf/adobe/times/zptmcm7t.vf
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/symbol/psyr.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/ptmr8r.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
 INPUT c:/texlive-full/2023/texmf-dist/fonts/vf/adobe/times/zptmcm7v.vf
 INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
 INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
-INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/symbol/psyr.tfm
 INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/symbol/psyr.tfm
 INPUT c:/texlive-full/2023/texmf-dist/fonts/vf/adobe/times/zptmcm7m.vf
 INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/psyro.tfm
 INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm
 INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/ptmri8r.tfm
-INPUT c:/texlive-full/2023/texmf-dist/fonts/vf/adobe/times/zptmcm7t.vf
-INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/symbol/psyr.tfm
-INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/ptmr8r.tfm
-INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
-INPUT c:/texlive-full/2023/texmf-dist/fonts/vf/adobe/times/zptmcm7t.vf
-INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/ptmr8r.tfm
-INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
 INPUT c:/texlive-full/2023/texmf-dist/fonts/vf/adobe/times/zptmcm7y.vf
 INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
 INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm
@@ -688,6 +658,20 @@ INPUT ./Images/orange2.jpg
 INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/ptmr8t.tfm
 INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/ptmri8t.tfm
 INPUT c:/texlive-full/2023/texmf-dist/fonts/vf/adobe/times/ptmri8t.vf
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/ptmb8t.tfm
+INPUT ./Images/x+y.png
+INPUT ./Images/x+y.png
+INPUT ./Images/x+y.png
+INPUT ./Images/x+y.png
+INPUT c:/texlive-full/2023/texmf-dist/fonts/vf/adobe/times/ptmb7t.vf
+INPUT ./Images/R^2.png
+INPUT ./Images/R^2.png
+INPUT ./Images/R^2.png
+INPUT ./Images/R^2.png
+INPUT ./Images/R^3.png
+INPUT ./Images/R^3.png
+INPUT ./Images/R^3.png
+INPUT ./Images/R^3.png
 INPUT ./Images/func.jpg
 INPUT ./Images/func.jpg
 INPUT ./Images/func.jpg
@@ -726,7 +710,6 @@ INPUT ./Images/time complexity.png
 INPUT ./Images/time complexity.png
 INPUT ./Images/time complexity.png
 INPUT ./Images/time complexity.png
-INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/ptmb8t.tfm
 INPUT c:/texlive-full/2023/texmf-dist/fonts/vf/adobe/times/ptmb8t.vf
 INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/ptmb8r.tfm
 INPUT ./content/part1 Intro/Chapter4.tex
@@ -767,7 +750,6 @@ INPUT ./Images/agm3dsect.png
 INPUT ./Images/agm3dsect.png
 INPUT ./Images/agm3dsect.png
 INPUT ./Images/agm3dsect.png
-INPUT c:/texlive-full/2023/texmf-dist/fonts/vf/adobe/times/ptmb7t.vf
 INPUT ./content/part1 Intro/Chapter5.tex
 INPUT ./content/part1 Intro/Chapter5.tex
 INPUT content/part1 Intro/Chapter5.tex
