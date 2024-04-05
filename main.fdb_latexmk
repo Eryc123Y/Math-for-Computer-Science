@@ -1,19 +1,19 @@
 # Fdb version 4
-["biber main"] 1712173518.42662 "main.bcf" "main.bbl" "main" 1712173676.44596 0
-  "main.bcf" 1712173676 107256 cda255eed6b0d0df027a0b54e0d84d42 "pdflatex"
+["biber main"] 1712173518.42662 "main.bcf" "main.bbl" "main" 1712337039.14513 0
+  "main.bcf" 1712337038 107256 cda255eed6b0d0df027a0b54e0d84d42 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["makeindex main.idx"] 1712173517.94444 "main.idx" "main.ind" "main" 1712173676.44571 0
-  "main.idx" 1712173671 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+["makeindex main.idx"] 1712334036.90285 "main.idx" "main.ind" "main" 1712337039.14489 0
+  "main.idx" 1712337033 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   (generated)
   "main.ilg"
   "main.ind"
   (rewritten before read)
-["pdflatex"] 1712173670.15333 "c:/Programming/GitProjects/Math-for-Computer-Science/main.tex" "main.pdf" "main" 1712173676.44632 0
+["pdflatex"] 1712337033.1737 "c:/Programming/GitProjects/Math-for-Computer-Science/main.tex" "main.pdf" "main" 1712337039.14548 0
   "Images/R^2.png" 1712142752 64840 5aae617f29bd5e5d2c41b0b9dc40ef22 ""
-  "Images/R^3.png" 1712142822 148917 0776f4c2609864ef93a29886993b3240 ""
+  "Images/R^3.png" 1712312456 153114 e1ae9d1019216090c34455e35abf3082 ""
   "Images/agm3D.png" 1707481231 97995 3c8707993f2acdfb1f5fe89cecae6e4e ""
   "Images/agm3dsect.png" 1707481231 44643 73eb57f3840cb5ff6c2c67bcf1c7b93d ""
   "Images/agmx=0.png" 1707481231 26598 bd43746e4060570704283b475eedb198 ""
@@ -41,7 +41,7 @@
   "Images/triangleablt0.png" 1707481232 3895 bd43a8c51df6653f51e14e40e5512280 ""
   "Images/v2bintree.png" 1708157216 71771 6a0a69715e418412d9427449dbfbe394 ""
   "Images/venn.png" 1707481232 101167 627b3f359fe3b8844e7f344c0e38c3ca ""
-  "Images/x+y.png" 1712160560 50424 89c7afc8d7949fd3d1b6c6c655b19912 ""
+  "Images/x+y.png" 1712312431 62314 86a47240dcd91098e26e5fa12ca48aa4 ""
   "LegrandOrangeBook.cls" 1707481232 35066 8b54c63dbc2df44de404d2768f953f7c ""
   "c:/Programming/GitProjects/Math-for-Computer-Science/main.tex" 1712171148 8249 efa75acefa86e0f3c0aed13c08478086 ""
   "c:/texlive-full/2023/texmf-dist/fonts/enc/dvips/base/8r.enc" 1707378777 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -310,19 +310,19 @@
   "content/Part7 Statistics/Chapter1.tex" 1707481232 1068 b2c1f9d83977613a5dc61bf7e4818b34 ""
   "content/Part8 Basic Information Theory/Chapter1.tex" 1707481232 759 1d99886bef6f1271d83ef03a8d03a6fa ""
   "content/part1 Intro/Chapter1.tex" 1707481232 50103 cd203b578cf781b806a4d4c04682a394 ""
-  "content/part1 Intro/Chapter2.tex" 1712173668 81089 9e1ea0536f41024a5e5ebc3eccb38760 ""
+  "content/part1 Intro/Chapter2.tex" 1712337025 92901 754b0cea5751cf6810a0d6b51b289257 ""
   "content/part1 Intro/Chapter3.tex" 1709135656 38936 96463bbfb7efa777383c53bee41a1c3a ""
   "content/part1 Intro/Chapter4.tex" 1707481232 57259 bed4375ef85716f26b0ae4705146b46d ""
   "content/part1 Intro/Chapter5.tex" 1707481232 88243 989a2fe9a0123e4b52072bab758ecc3f ""
-  "main.aux" 1712173675 124702 9c6b4e746530bb7ba175d9eb5fa75529 "pdflatex"
+  "main.aux" 1712337038 126045 0cd5ba4bf365be5e8f8aa1b2b19d3fab "pdflatex"
   "main.bbl" 1712173523 0 d41d8cd98f00b204e9800998ecf8427e "biber main"
-  "main.ind" 1712173518 0 d41d8cd98f00b204e9800998ecf8427e "makeindex main.idx"
-  "main.lof" 1712173676 3448 ea8196ab53e9c5bba43a2678d856c762 "pdflatex"
-  "main.lot" 1712173676 2415 200fa845e02eef6df43af42c9b3cf029 "pdflatex"
-  "main.ptc" 1712173676 23866 08f01a8765d07fab96a8c126ab529678 "pdflatex"
-  "main.run.xml" 1712173676 2224 bc6149f5caee4074188e1b81a66978d0 "pdflatex"
+  "main.ind" 1712334037 0 d41d8cd98f00b204e9800998ecf8427e "makeindex main.idx"
+  "main.lof" 1712337038 3448 5f8b2bb9d0fb66e053ffcc9ee26847f9 "pdflatex"
+  "main.lot" 1712337038 2415 db18df43c9b02d8bb2710f4fb38b3b09 "pdflatex"
+  "main.ptc" 1712337038 23869 0729daff0ac999cbd148a7ce1c2f2408 "pdflatex"
+  "main.run.xml" 1712337038 2224 bc6149f5caee4074188e1b81a66978d0 "pdflatex"
   "main.tex" 1712171148 8249 efa75acefa86e0f3c0aed13c08478086 ""
-  "main.toc" 1712173676 23528 34d1e7648fc7f5bddf97863a6c249ae6 "pdflatex"
+  "main.toc" 1712337038 23531 7b076d2d00dd93bf6361c6895d181ed4 "pdflatex"
   (generated)
   "main.aux"
   "main.bcf"

@@ -33,3 +33,5 @@ subfunctions
 minterm
 minterms
 maxterm
+surjections
+surjection

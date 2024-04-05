@@ -331,7 +331,7 @@ Now let $x \in P$, then $x = 20p + 16q = 4(5p + 4q) = 12(5p + 4q) + 8(-5p - 4q) 
 
 so $P \subseteq S$; thus, by definition, $S = P$.
 %------------------------------------------------
-\section{Function: a perspective of Set Theory}
+\section{Function: a perspective from Set Theory}
 This section discusses function from a perspective of set. We clarify this by the relation between sets.
 \subsection{Function and Operation on Function}
 \begin{definition}[Function]
@@ -368,6 +368,20 @@ Let \( f_1 \) and \( f_2 \) be functions from \( A \) to \( \mathbb{R} \). Then 
 \begin{problem}
     Let \( f_1 \) and \( f_2 \) be functions from \( \mathbb{R} \) to \( \mathbb{R} \) such that \( f_1(x) = x^2 \) and \( f_2(x) = -x^2 \). What are the functions \( f_1 + f_2 \) and \( f_1f_2 \)?
 \end{problem}
+
+
+
+
+Sometimes we may use the output of one function as the input of another function, we call that \textbf{Composition of
+Function}
+\begin{definition}[Composition of Functions]
+	Let $f: A \rightarrow B$ and $g: B \rightarrow C$ be two functions. The \emph{composition} of $g$ and $f$ is the function $g \circ f: A \rightarrow C$ defined by
+	\[
+	(g \circ f)(x) = g(f(x))
+	\]
+	for all $x \in A$. The function $g \circ f$ is read as "g composed with f" or "g of f".
+	\end{definition}
+
 
 \subsection{Elementary Functions and More on Cartesian Product}
 As a new undergrad, most of the functions that we have seen so far are actually categorized under only \textbf{The Basic Elementary Functions}.
@@ -488,7 +502,7 @@ say, the output of  function is affected by more than one variable. Let's look a
 			\label{fig:r2}
 		\end{figure}
 		Now we consider $(a,b)$, where both elements are from $\R$, so for the Cartesian products, we will get all possible combination of any $\R\times \R$. In this way, we can get a plane, just as
-		shown in the graph. This is why call this system "Cartesian Coordinate". Naturally, we can also conclude that a function $f: \R^3 \to \R$ will be like a solid cubic in the 3D space.
+		shown in the graph. This is why call this system "Cartesian Coordinate". Naturally, we can also conclude that $\R^3 $ is a solid cubic in the 3D space.
 		\begin{figure}[H]
 			\centering
 			\includegraphics[width=0.7\linewidth]{Images/R^3}
@@ -498,15 +512,12 @@ say, the output of  function is affected by more than one variable. Let's look a
 		But what about functions whose preimage are above $\R^3$? Sadly, there is no easy way to plot a function that are in 4D space, even though we can still use many techniques to analyze these
 		high dimension functions, including function slicing. We will discuss $\R^n$ further in linear algebra and multivariable calculus. 
 		
-		Just now, we have somewhat shown another law about dimension or graphical representation of function, called \textbf{Sard's Theorem}.
-		\begin{theorem}[Sard's theorem]
-			For any \textbf{n-variable function}\\ with variables $x_1, x_2, \cdots, x_n$, for function $f(x_1,x_2,\cdots, x_n)$, ($x\in \R$), whose mapping is $\R \times \R \times \cdots \times \R = \R^n \to R$.
+		Just now, we have somewhat shown another law about dimension or graphical representation of function.
+		\begin{proposition}
+			For any \textbf{n-variable function} with variables $x_1, x_2, \cdots, x_n$, for function $f(x_1,x_2,\cdots, x_n)$, ($x\in \R$), whose mapping is $\R \times \R \times \cdots \times \R = \R^n \to \R$.
 			we need $n+1$ dimensions to plot a complete graph for the function. 
-		\end{theorem}
-		\begin{remark}
-			The description here is actually a simplified version with only main idea, the complete concept is available \href{https://www.wikiwand.com/en/Sard%27s_theorem}{here}. To fully
-			explain the theorem, we need more knowledge in real analysis.
-		\end{remark}
+		\end{proposition}
+		
 		
 		Additionally, $\R^n$ is defined as \textbf{The n-dimensional Euclidean Space}.
 		\begin{definition}[The n-dimensional Euclidean Space]
@@ -629,6 +640,23 @@ Using $A$, $B$, and $C$ to denote the set of injective, surjective, and bijectiv
 
 Which means that if a function is injective and surjective in the same time, it is bijective. 
 
+Additionally, we need to distinguish bijective function with well-defined function.
+\begin{definition}[Well-defined Function]
+	A function \( f: A \rightarrow B \) is said to be \emph{well-defined} if for every element \( a \) 
+	in the domain \( A \), there is a unique element \( b \) in the codomain \( B \) such that \( f(a) = b \). 
+	This means that the function assigns exactly one output to each input. A well-defined function does not 
+	assign multiple outputs to a single input, and every input for which the function is defined has an 
+	output.
+\end{definition}
+\begin{remark}
+	While all bijective functions are well-defined, not all well-defined functions are bijective. 
+	Being well-defined is a minimal requirement for being a function at all. A well-defined function may 
+	fail to be bijective if it is not injective, allowing different inputs to have the same output, or if 
+	it is not surjective, meaning that some elements in the codomain do not correspond to any input from 
+	the domain. Thus, while bijectivity implies a specific one-to-one correspondence between the entire 
+	domain and codomain, well-definedness merely ensures that the function is consistently defined across 
+	its domain.
+\end{remark}
 And these will be all we need to know about function for now, since the rest of the properties will be discussed in single-variable calculus. This section aims only introduce the idea of injectivity, surjectivity, and bijectivity.
 
 \subsection{Exercises}
@@ -661,7 +689,44 @@ And these will be all we need to know about function for now, since the rest of 
 	
 	Therefore, the correct answer is 4.
 \end{solution}
-
+\begin{exercise}
+	Determine whether the rules below define functions from $\mathbb{R}$ to $\mathbb{R}$.
+	\begin{enumerate}
+		\item[a)] \( f(x) = 
+		\begin{cases} 
+		|x - 1| & \text{if } x < 4 \\
+		|x| - 1 & \text{if } x > 2.
+		\end{cases} \)
+		
+		\item[b)] \( f(x) = 
+		\begin{cases} 
+		|x - 1| & \text{if } x < 2 \\
+		|x| - 1 & \text{if } x > -1.
+		\end{cases} \)
+		
+		\item[c)] \( f(x) = 
+		\begin{cases} 
+		\frac{(x + 3)^2 - 9}{x} & \text{if } x \neq 0 \\
+		6 & \text{if } x = 0.
+		\end{cases} \)
+		
+		\item[d)] \( f(x) = 
+		\begin{cases} 
+		\frac{(x + 3)^2 - 9}{x} & \text{if } x > 0 \\
+		x + 6 & \text{if } x < 7.
+		\end{cases} \)
+		
+		\item[e)] \( f(x) = 
+		\begin{cases} 
+		\sqrt{x^2} & \text{if } x \geq 2 \\
+		x & \text{if } 0 \leq x \leq 4 \\
+		-x & \text{if } x < 0.
+		\end{cases} \)
+	\end{enumerate}
+\end{exercise}
+\begin{remark}
+	You only need to check whether the domain covers the whole $\R$.
+\end{remark}
 \begin{exercise}
     Determine the images of the functions \( f: \mathbb{R} \rightarrow \mathbb{R} \) defined as follows:
     \begin{enumerate}
@@ -819,6 +884,148 @@ And these will be all we need to know about function for now, since the rest of 
 	\textbf{Conclusion:}
 	$\mathbb{R}^0$ exists and can be defined as the Cartesian product of zero copies of $\mathbb{R}$, resulting in a singleton set containing the empty tuple $()$. While it is not necessary to visualize $\mathbb{R}^0$ in the Cartesian coordinate system, it can be thought of as a single point in a 0-dimensional space.
 \end{proof}
+
+\begin{exercise}
+	If $f:A\to B$ and $g:B\to C$ are bijections (both injections and surjections), prove that 
+	$g\circ f:A\to C$ is also a bijection.
+\end{exercise}
+\begin{proof}
+	We aim to prove that the composition of two bijective functions is also a bijection.
+
+	Let \(f: A \to B\) and \(g: B \to C\) be bijections. We need to show that \(g \circ f: A \to C\) is both an injection and a surjection.
+
+	Assume \(x_1, x_2 \in A\) and \(g(f(x_1)) = g(f(x_2))\). Since \(g\) is an injection, if \(g(y_1) = g(y_2)\) then \(y_1 = y_2\) for any \(y_1, y_2 \in B\), which implies \(f(x_1) = f(x_2)\). Furthermore, since \(f\) is also an injection, \(x_1 = x_2\). Hence, \(g \circ f\) is an injection.
+
+	Let \(z \in C\). Since \(g\) is a surjection, there exists \(y \in B\) such that \(g(y) = z\). Similarly, since \(f\) is a surjection, there exists \(x \in A\) such that \(f(x) = y\). Therefore, for \(z \in C\), there exists \(x \in A\) such that \(g(f(x)) = z\). Thus, \(g \circ f\) is a surjection.
+
+	Combining both, we conclude that \(g \circ f\) is a bijection.
+\end{proof}
+
+\begin{exercise}
+	is the inverse proposition of last statement true, if so prove it.
+\end{exercise}
+\begin{proof}
+	We can use proof by contradiction here.\\
+	Suppose that $g: A\to B$ and $f: B\to C, $ so that $f\circ g: A\to C$ . We will prove that if 
+	$f\circ g$ is one-to-one, then $g$ is also one-to-one, so not only is the answer to the question “yes”. 
+	Suppose that $g$ were not one-to-one. By definition this means that there are distinct elements 
+	$a_1$ and $a_2$ in $A$ such that $g( a_1) = g( a_2) .$ Then certainly $f(g(a_1))=f(g(a_2))$, which is 
+	the same statement as $(f\circ g)(a_1)=(f\circ g)(a_2).$ By definition this means that $f\circ g$ is not
+	one-to-one, and our proof is complete.
+
+\end{proof}
+\begin{exercise}
+	Let \( f \) be a function with domain \( \mathcal{D} \) and \( f(S) = \{ f(x) : x \in S \} \) for any subset \( S \) of \( \mathcal{D} \). Suppose \( C \) and \( D \) are subsets of \( \mathcal{D} \).
+\begin{enumerate}
+    \item[a)] Prove that \( f(C \cup D) \subseteq f(C) \cup f(D) \).
+    \item[b)] Give an example where equality does not hold in part (a).
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+	Below is solution for a).
+	\begin{proof}
+		Take any element \( y \in f(C \cup D) \). By definition of \( f(S) \), there exists an 
+		\( x \in C \cup D \) such that \( f(x) = y \). Since \( x \) is in the union \( C \cup D \), 
+		\( x \) must be in either \( C \) or \( D \). If \( x \in C \), then \( y = f(x) \in f(C) \). 
+		Similarly, if \( x \in D \), then \( y = f(x) \in f(D) \). Therefore, in either case, 
+		\( y \in f(C) \cup f(D) \), proving that \( f(C \cup D) \subseteq f(C) \cup f(D) \).
+	\end{proof}
+	Below is an example that the inequality holds.
+	\begin{align*}
+		f: \mathbb{R} \to \mathbb{R}, \quad f(x) &= x^2 \\
+		C &= \{-1, 1\} \\
+		D &= \{0, 2\} \\
+		f(C) &= \{f(x) \mid x \in C\} = \{1\} \\
+		f(D) &= \{f(x) \mid x \in D\} = \{0, 4\} \\
+		f(C) \cup f(D) &= \{0, 1, 4\} \\
+		f(C \cup D) &= \{f(x) \mid x \in C \cup D\} = \{0, 1, 4, 9\} \\
+		\therefore f(C \cup D) &\neq f(C) \cup f(D)
+	\end{align*}
+	The equality does not hold when the function f is not injective,
+	meaning that it maps distinct elements in the domain to the same element in the codomain. 
+\end{solution}
+
+\begin{exercise}
+	Determine whether \( f: \mathbb{Z} \times \mathbb{Z} \rightarrow \mathbb{Z} \) is onto if
+	\begin{enumerate}[label=(\alph*)]
+		\item \( f(m, n) = 2m - n. \)
+		\item \( f(m, n) = m^2 - n^2. \)
+		\item \( f(m, n) = m + n + 1. \)
+		\item \( f(m, n) = |m| - |n|. \)
+		\item \( f(m, n) = m^2 - 4. \)
+	\end{enumerate}
+	\end{exercise}
+	
+	\begin{solution} 
+	\begin{enumerate}[label=(\alph*)]
+		\item This is clearly onto, since \( f(0, -n) = n \) for every integer \( n \).
+		\item This is not onto, since, for example, \( 2 \) is not in the range. To see this, if \( m^2 - n^2 = (m - n)(m + n) = 2 \), then \( m \) and \( n \) must have the same parity (both even or both odd). In either case, both \( m - n \) and \( m + n \) are then even, so this expression is divisible by 4 and hence cannot equal 2.
+		\item This is clearly onto, since \( f(0, n - 1) = n \) for every integer \( n \).
+		\item This is onto. To achieve negative values we set \( m = 0 \), and to achieve nonnegative values we set \( n = 0 \).
+		\item This is not onto, for the same reason as in part (b). In fact, the range here is clearly a subset of the range in that part.
+	\end{enumerate}
+	\end{solution}
+
+	\begin{exercise}
+		Let \( f \) be a function from the set \( A \) to the set \( B \). Let \( S \) and \( T \) be subsets of \( A \). Show that
+		\begin{enumerate}[label=(\alph*)]
+			\item \( f(S \cup T) = f(S) \cup f(T) \).
+			\item \( f(S \cap T) \subseteq f(S) \cap f(T) \).
+		\end{enumerate}
+		\end{exercise}
+		
+		\begin{solution}
+		\begin{enumerate}[label=(\alph*)]
+			\item We need to show two inclusions:
+			\begin{itemize}
+				\item Suppose \( b \in f(S \cup T) \). This implies \( b = f(a) \) for some \( a \in S \cup T \). Thus, \( a \in S \) or \( a \in T \), and consequently, \( b \in f(S) \) or \( b \in f(T) \). Hence, \( b \in f(S) \cup f(T) \).
+				
+				\item Conversely, assume \( b \in f(S) \cup f(T) \). Then either \( b \in f(S) \) or \( b \in f(T) \), which means there exists an \( a \in S \) or \( a \in T \) such that \( b = f(a) \). Thus, \( a \in S \cup T \) and \( b \in f(S \cup T) \).
+			\end{itemize}
+			This shows that \( f(S \cup T) = f(S) \cup f(T) \), completing the proof.
+		
+			\item To prove the subset relation:
+			\begin{itemize}
+				\item Let \( b \in f(S \cap T) \). Then \( b = f(a) \) for some \( a \in S \cap T \). This means \( a \in S \) and \( a \in T \), hence \( b \in f(S) \) and \( b \in f(T) \). Therefore, \( b \in f(S) \cap f(T) \).
+			\end{itemize}
+			This establishes that \( f(S \cap T) \subseteq f(S) \cap f(T) \), as desired.
+		\end{enumerate}
+		\end{solution}
+
+		\begin{exercise}
+			Show that a partial function from \( A \) to \( B \) can be viewed as a function \( f^* \) from \( A \) to \( B \cup \{u\} \), where \( u \) is not an element of \( B \) and
+			\[
+			f^*(a) = 
+			\begin{cases} 
+			f(a) & \text{if } a \text{ belongs to the domain of definition of } f \\
+			u & \text{if } f \text{ is undefined at } a.
+			\end{cases}
+			\]
+			\end{exercise}
+			
+			\begin{solution}
+			To show that a partial function \( f \) from \( A \) to \( B \) can be extended to a total function \( f^* \) from \( A \) to \( B \cup \{u\} \), we need to verify that for every element \( a \) in \( A \), the function \( f^* \) assigns exactly one element in \( B \cup \{u\} \).
+			
+			Consider any element \( a \) in \( A \). There are two possibilities:
+			
+			\begin{enumerate}
+				\item If \( a \) is in the domain of definition of \( f \), then by the definition of \( f \), there is an associated element \( f(a) \) in \( B \). In this case, we define \( f^*(a) = f(a) \). Since \( f(a) \) is an element of \( B \), and \( B \) is a subset of \( B \cup \{u\} \), \( f^*(a) \) is an element of \( B \cup \{u\} \).
+				
+				\item If \( a \) is not in the domain of \( f \), which means \( f \) is undefined at \( a \), we assign a special element \( u \) that is not in \( B \) to \( a \). Specifically, we define \( f^*(a) = u \). By the choice of \( u \), we ensure that \( f^*(a) \) is in \( B \cup \{u\} \).
+			\end{enumerate}
+			
+			In both cases, \( f^*(a) \) is a well-defined element of \( B \cup \{u\} \). Furthermore, the definition of \( f^* \) is such that each \( a \) in \( A \) is associated with exactly one element in \( B \cup \{u\} \), making \( f^* \) a total function. Therefore, \( f^* \) satisfies the definition of a function and extends \( f \) to the entire set \( A \) by assigning \( u \) where \( f \) is undefined.
+			
+			Thus, every partial function \( f: A \rightarrow B \) can indeed be considered a total function \( f^*: A \rightarrow B \cup \{u\} \) with the addition of a special element \( u \) to handle the undefined cases in \( f \).
+			\end{solution}
+
+			\begin{remark}
+				The extension of a partial function \( f: A \rightarrow B \) to a total function \( f^*: A \rightarrow B \cup \{u\} \) relates closely to the concept of function slicing presented in Proposition 2.2 of the book. Function slicing involves restricting the domain of a function to a subset \( C \subseteq A \), whereas extending a partial function involves expanding the codomain to include an element \( u \) that handles undefined cases.
+				
+				In essence, slicing a total function can create a partial function \( f|_C \) which is only defined for inputs in subset \( C \). Extending a partial function \( f \) to \( f^* \) can be viewed as reversing this process, by adding an element to the codomain for the undefined cases, thereby making it total. 
+				
+				The slice \( f|_C \) has the same output values as \( f \) for inputs in \( C \), and is undefined for inputs not in \( C \). Similarly, \( f^* \) maintains the output values of \( f \) for inputs where \( f \) is defined and assigns the value \( u \) for inputs where \( f \) is not defined. Both processes — slicing and extending — are techniques to manipulate the domain and codomain of functions to achieve desired properties of partiality or totality.
+			\end{remark}			
 %------------------------------------------------
 \section{Summation}
 Before we move on to the most important part of this chapter, sequence, we use this section to introduce a prerequisite for studying its properties. We introduce the Sigma sign.
