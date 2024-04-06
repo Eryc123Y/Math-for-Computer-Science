@@ -14,10 +14,13 @@
 \contentsline {table}{\numberline {6.5}{\ignorespaces Basic Boolean Identities}}{166}{table.6.5}%
 \contentsline {table}{\numberline {6.6}{\ignorespaces Truth values of material conditional, biconditional, and XOR for all possible inputs.}}{168}{table.6.6}%
 \contentsline {table}{\numberline {6.7}{\ignorespaces Truth table for the expression \( x \lor ((\lnot y) \land (\lnot z)) \)}}{171}{table.6.7}%
+\contentsline {table}{\numberline {6.8}{\ignorespaces Minterms represented by bit strings}}{183}{table.6.8}%
+\contentsline {table}{\numberline {6.9}{\ignorespaces Combining minterms}}{184}{table.6.9}%
+\contentsline {table}{\numberline {6.10}{\ignorespaces Prime Implicant Chart}}{184}{table.6.10}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {8.1}{\ignorespaces Binary Search Iterations}}{215}{table.8.1}%
-\contentsline {table}{\numberline {8.2}{\ignorespaces Execution steps of Binary Search when $T = 99$}}{220}{table.8.2}%
+\contentsline {table}{\numberline {8.1}{\ignorespaces Binary Search Iterations}}{230}{table.8.1}%
+\contentsline {table}{\numberline {8.2}{\ignorespaces Execution steps of Binary Search when $T = 99$}}{234}{table.8.2}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

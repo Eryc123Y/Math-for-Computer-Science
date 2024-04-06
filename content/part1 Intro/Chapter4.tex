@@ -807,7 +807,7 @@ which completes the proof.
     Try to express it in an open form (summation).
 \end{exercise}
 \textbf{Solutions:}
-\begin{theorem}[Generalized Cauchy-Schwarz Inequality(vector)]\label{gcsineq}
+\begin{theorem}[Generalized Cauchy-Schwarz Inequality (vector)]\label{gcsineq}
     We consider vectors in n-dimentional space.
     Let \( \mathbf{a} = (a_1, a_2, \ldots, a_n) \) and \( \mathbf{b} = (b_1, b_2, \ldots, b_n) \) be two \( n \)-dimensional vectors. Then the following inequality holds:
 \[
@@ -956,27 +956,22 @@ Thus, by rearranging the terms and recognizing that the right-hand side sum is a
 \end{exercise}
 Hint: Try to fit Cauchy-Schwarz inequality. There are more than one method.
 \begin{proof}
-    We will prove that \( \frac{(x+k)^2}{x^2+1} \leq k^2 + 1 \), which is equivalent to \( (x+k)^2 \leq (k^2 + 1)(x^2 + 1) \).
-
-Notice that \( (k^2 + 1)(x^2 + 1) \) has (by Cauchy-Schwarz Inequality):
-\[ (k^2 + 1)(x^2 + 1) \geq (kx + 1)^2 = k^2x^2 + 2kx + 1 \]
-
-where \( x \in \mathbb{R} \) and \( k \in \mathbb{Z}^+ \).
-
-We also have \( (x+k)^2 = x^2 + 2kx + k^2 \), now we need to compare \( k^2x^2 + 1 \) and \( x^2 + k^2 \).
-
-Cancel the $2kx$ term, we need to show that
-\[ x^2 + k^2 \leq k^2x^2 + 1 \]
-Simplifying, we see:
-\[ x^2(1 - k^2) \leq 1 - k^2 \]
-
-Since \( 1 - k^2 \) is non-positive for \( k \in \mathbb{Z}^+ \), dividing by \( 1 - k^2 \) (which reverses the inequality due to the negative sign) gives us:
-\[ x^2 \geq 1 \]
-
-Which holds true for all real \( x \). Therefore, the original inequality is proven.
-
-\textbf{Below is how you can construct a new inequality to prove it}.
-
+    We aim to show that
+    \[ \frac{(x+k)^2}{x^2+1} \leq k^2 + 1 \]
+    for all \( x \in \mathbb{R} \) and \( k \in \mathbb{Z}^+ \). This is equivalent to proving
+    \[ (x+k)^2 \leq (k^2 + 1)(x^2 + 1) \]
+    Starting with the left-hand side and applying the distributive property, we have
+    \[ (x+k)^2 = x^2 + 2kx + k^2 \]
+    We can rewrite the right-hand side as
+    \[ (k^2 + 1)(x^2 + 1) = k^2x^2 + x^2 + k^2 + 1 \]
+    Combining the two, we want to show that
+    \[ x^2 + 2kx + k^2 \leq k^2x^2 + x^2 + k^2 + 1 \]
+    which simplifies to
+    \[ 0 \leq k^2x^2 - 2kx + 1 \]
+    Notice that this can be written as a square of a binomial:
+    \[ 0 \leq (kx - 1)^2 \]
+    Since the square of any real number is non-negative, the inequality holds true for all \( x \). Hence, the original inequality is proven.\\\\
+\textbf{Below is how you can construct a new inequality to prove it}.\\\\
 Firstly, we utilize the vector dot product form of the Cauchy-Schwarz Inequality over the real numbers. To apply the vector dot product form, we identify corresponding elements for two vectors. Let's choose vectors \( \mathbf{a} \) and \( \mathbf{b} \):
 
 \[

@@ -904,8 +904,232 @@
 
     In summary, Shannon's Expansion and the Duality of Boolean Functions are related through the dual operation, which can be applied to Shannon's Expansion to obtain the expansion of the dual function.
     \subsection{Simplification of Boolean Function}
-        
-
+    Simplifying boolean functions is a crucial step in digital logic design. It involves reducing the complexity of a boolean expression without changing its truth table or output behavior. The method of simplification is
+    manifold. This chapter shows several most commonly used ways.
+    
+    \subsubsection{Simplification by Boolean Laws (Algebra)}
+	In last chapter, we have discussed Boolean laws and identities. Boolean algebra provides identities and laws that help simplify boolean expressions. But does is mean we have found the panacea for Boolean simplification?
+	Now suppose we have a truth table of 4 inputs, that means we have $2^4 = 16$ cases in total. In the worst cases, there will be eight cases that make True output, and another eight make False output. That means, in POS form, we will simplify an expression consisted of eight subexpression in parenthesis, and we have to
+	use Boolean laws many times. Things will also get worse when we have more than 4 inputs, so this method basically only work well for expression with less than 4 inputs. Since we have done many exercises on this
+	method, we will not discuss further on this.
+	
+	\subsubsection{Simplification by Karnaugh Maps}
+	Karnaugh Maps (K-maps) are visual tools for simplifying boolean functions of up to six variables. They reduce the need for extensive calculations by taking advantage of human pattern recognition. 
+	
+	The K-map is essentially a truth table arranged in a grid that helps in the identification of common patterns and the elimination of redundant terms. Each cell in a K-map represents a possible input configuration of the variables, and the cells are arranged such that only one variable changes between adjacent cells. This adjacency allows for the visual grouping of terms, which corresponds to combining terms in the Boolean function that differ by only a single variable. As a result, K-maps make it easy to apply the combining rule: when two terms differ by only a single variable, that variable can be eliminated from the combined term.
+	
+	\begin{example}[Simplifying 4-variable Function with K-map]
+		Considering this truth table.
+		\begin{table}[H]
+			\centering
+			\begin{tabular}{|c|c|c|c||c|}
+				\hline
+				\( X_1 \) & \( X_2 \) & \( X_3 \) & \( X_4 \) & \( Z_1 \) \\
+				\hline
+				0 & 0 & 0 & 0 & 1 \\
+				0 & 0 & 0 & 1 & 1 \\
+				0 & 0 & 1 & 0 & 0 \\
+				0 & 0 & 1 & 1 & 1 \\
+				0 & 1 & 0 & 0 & 1 \\
+				0 & 1 & 0 & 1 & 0 \\
+				0 & 1 & 1 & 0 & 1 \\
+				0 & 1 & 1 & 1 & 1 \\
+				1 & 0 & 0 & 0 & 0 \\
+				1 & 0 & 0 & 1 & 1 \\
+				1 & 0 & 1 & 0 & 1 \\
+				1 & 0 & 1 & 1 & 0 \\
+				1 & 1 & 0 & 0 & 1 \\
+				1 & 1 & 0 & 1 & 1 \\
+				1 & 1 & 1 & 0 & 0 \\
+				1 & 1 & 1 & 1 & 0 \\
+				\hline
+			\end{tabular}
+		\end{table}
+		By finding the minterms, we have a four variable SOP function.
+		\begin{align*}
+			F_1(X1,X2,X3,X4) = & \overline{X1}\ \overline{X2}\ \overline{X3}\ \overline{X4}+\overline{X1}\ \overline{X2}\ \overline{X3}{X4}\\
+			&+\overline{X1}\ \overline{X2}{X3}{X4}+{X1}\overline{X2}{X3}{X4}\\
+			&+ \overline{X1}{X2}{X3} \overline{X4}+\overline{X1}{X2}{X3}{X4}\\
+			&+{X1}\ \overline{X2}\ \overline{X3}{X4}+{X1} \overline{X2}{X3} \overline{X4}\\
+			&+{X1}{X2}\overline{X3}\ \overline{X4}+{X1}{X2}\overline{X3}{X4}
+		\end{align*}
+		Of course we don't want to simplify such thing using Boolean Laws, which is definitely time-consuming. What we do here is to make a K-map for the graph. Notice that the sequence of the combination for the variables must follow \href{https://www.wikiwand.com/en/Gray_code}{Gray code sequence}. In brief, change one bit at one time. Such as 01, 10, 11, 10 for combination of two variables. On the left we can see the K-map. To find the expression (here we try to get the SOP form), we need to group all 1s by the following pattern.
+		
+		Grouping in Karnaugh Maps follows specific rules to ensure the correct simplification of a Boolean function. These rules are rooted in the principles of Boolean algebra and help to minimize the number of logical terms. Here are the key rules for grouping in K-maps:
+		
+		\begin{enumerate}
+			\item \textbf{Power of Two:} Groups must contain either 1, 2, 4, 8, ... (powers of two) cells. This is to ensure that each group can be represented by a simplified product term.
+			
+			\item \textbf{Maximize Group Size:} Groups should be as large as possible to maximize simplification. Larger groups result in fewer variables in the corresponding product term.
+			
+			\item \textbf{Overlap Allowed:} Groups may overlap if doing so allows for larger groups to be formed, further simplifying the expression.
+			
+			\item \textbf{Wrap Around:} Groups can wrap around the edges of the K-map, thanks to the toroidal topology of K-maps. This means that cells on the top edge are considered adjacent to those on the bottom edge, and similarly, the left edge is adjacent to the right edge.
+			
+			\item \textbf{Include All Ones:} Each '1' in the K-map must be included in at least one group. The aim is to cover all minterms represented by the '1's.
+			
+			\item \textbf{Unused Cells:} Cells with '0' values are not included in the groups unless they contribute to making a larger group with '1's.
+			
+			\item \textbf{Essential Prime Implicants:} After grouping, any group that covers a minterm not covered by any other group represents an essential prime implicant and must be included in the final expression.
+		\end{enumerate}
+		
+		 
+		\begin{figure}[H]
+			\centering
+		\begin{karnaugh-map}[4][4][1][$X3X4$][$X1X2$]
+			\minterms{0,1,3,4,6,7,9,10,12,13}
+			\maxterms{2,5,8,11,14,15}
+			\draw[color=black, ultra thick] (0, 0) rectangle (4, 4);
+		\end{karnaugh-map}
+		\hfill
+		\begin{karnaugh-map}[4][4][1][$X3X4$][$X1X2$]
+			\minterms{0,1,3,4,6,7,9,10,12,13}
+			\maxterms{2,5,8,11,14,15}
+			\implicantedge{1}{1}{9}{9}
+			\implicant{0}{4}
+			\implicant{12}{13}
+			\implicant{3}{7}
+			\implicant{7}{6}
+			\implicant{10}{10}
+			\draw[color=black, ultra thick] (0, 0) rectangle (4, 4);
+		\end{karnaugh-map}
+		\caption{K-map and Grouped K-map of $F_1$}
+		\end{figure}	
+		
+		Applying these rules gives us the grouped graph on the right-hand-side. Now we only need to analyze group by group to rule out inconsistent variables among the group. Below are the breakdowns.
+		
+		\begin{enumerate}
+			\item The first group (green) gives $\overline{X1}\ \overline{X2}\ \overline{X3}\ \overline{X4}$ and $\overline{X1}{X2}\overline{X3}\ \overline{X4}$, which rules out the $X2$ term, so we have $\overline{X1}\ \overline{X3}\ \overline{X4}$ in the expression.
+			\item The second group (red) gives $\overline{X1}\ \overline{X2}\ \overline{X3}{X4}$ and ${X1}\overline{X2}\ \overline{X3}{X4}$, which rules out the $X1$ term, so we have $\overline{X2}\ \overline{X3}{X4}$ in the expression.
+			\item The third group (blue) gives  $\overline{X1}\ \overline{X2}{X3}{X4}$ and $\overline{X1}{X2}{X3}{X4}$, so we can rule out $X2$ terms, so we have $\overline{X1}{X3}{X4}$ in the expression.
+			\item The fourth group (purple) gives $\overline{X1}{X2}{X3}{X4}$ and $\overline{X1}{X2}{X3}\overline{X4}$, which rules out $X4$ terms, so we have $\overline{X1}{X2}{X3}$ in the expression.
+			\item The fifth group (yellow) gives ${X1}{X2}\overline{X3}\ \overline{X4}$ and ${X1}{X2}\overline{X3}{X4}$, which rules out $X4$ terms, so we have ${X1}{X2}\overline{X3}$ in the expression.
+			\item The last group (pink) is a single block, so we must also include ${X1}\overline{X2}{X3}\overline{X4}$ in the expression.
+		\end{enumerate}
+		Each term we have found will be joined by + sign. Hence, we get the simplified SOP form for $F_1$.
+		\begin{align*}
+			F_1=\overline{X1}\ \overline{X3}\ \overline{X4}+\overline{X2}\ \overline{X3}{X4}+ \overline{X1}{X3}{X4}+\overline{X1}{X2}{X3}+{X1}{X2}\overline{X3}+{X1}\overline{X2}{X3}\overline{X4}
+		\end{align*}
+		
+	\end{example}
+	Don't you think it's like magic? We have reduced this to a sum of six terms from ten terms. Does this method can help us to solve all the problems? Sadly no, because when we have seven or more variables in the k-map, something unexpected will happen.
+	
+	We obtained the SOP form in this method, is it possible to get the POS form of the expression? Yes it is. All we need to do is repeating this process to 0s in the graph and apply same grouping rules. In the end, we rule out inconsistent variables for each turn and write them in a product of sum.
+	
+	While Karnaugh Maps are powerful tools for simplifying Boolean expressions, they are commonly only used for functions with up to four to six variables due to several practical limitations:
+	\begin{enumerate}
+		\item \textbf{Visualization Complexity:} K-maps rely on spatial arrangements that allow the human eye to detect patterns and groupings. As the number of variables increases beyond six, the map becomes excessively complex, making it challenging to discern such patterns effectively.
+		\item \textbf{Cognitive Load:} The human brain has a limited capacity for processing complex information visually. The cognitive load increases significantly with each additional variable, making it difficult to perform the simplification accurately.
+		\item \textbf{Physical Representation:} A K-map's size doubles with each additional variable, leading to an exponential growth in the number of cells. A 6-variable K-map already has 64 cells, and a 7-variable map would have 128 cells, which becomes unwieldy for manual simplification.
+		\item \textbf{Efficiency and Errors:} With a large number of variables, the probability of making errors in grouping increases. It also becomes less efficient compared to computerized methods, such as the Quine-McCluskey algorithm (to be discussed later) or \href{https://www.wikiwand.com/en/Binary_decision_diagram}{Binary Decision Diagrams (BDDs)}, which can handle a large number of variables systematically.
+	\end{enumerate}
+	
+	For these reasons, while theoretically possible, using K-maps for more than six variables is not practical, and alternative methods are preferred for simplifying larger Boolean functions.
+	
+	
+	To give a clearer idea on the nature of it and why it works, we can explain this mechanism by set theory.
+	Each cell in a K-map corresponds to an element in the power set (the set of all subsets) of the Boolean variables' domain, reflecting a unique combination of variable values. Adjacent cells in the map are defined such that they only differ by one variable state, conforming to the principle of adjacency in set theory, where the intersection of sets differs by the least possible criteria.
+	
+	Grouping cells in a K-map is akin to finding the union of subsets that share a common feature, thus simplifying the Boolean expression to include only the necessary variables. The simplified function represents the union of all such groups. The goal is to cover all the '1's in the K-map (the truth set of the function) with the fewest and largest possible groups of adjacent cells (subsets). These groups are then translated back into a minimized Boolean expression.
+	
+	\subsection{Simplification by Quine-McCluskey Method}
+	Quine-McCluskey Method was developed in the 1950s by W. V. Quine and E. J. McCluskey, Jr. This method truly provides a mechanized way to simplify Boolean functions, which is more generalized.
+	
+	The Quine–McCluskey algorithm, also known as the method of prime implicants, is a systematic technique used for minimizing Boolean functions. Similar to Karnaugh maps, the Quine–McCluskey algorithm finds the prime implicants of the function, which can then be used to extract the essential prime implicants, resulting in the simplified Boolean expression. However, unlike Karnaugh maps, the Quine–McCluskey algorithm does not rely on visual patterns and is therefore well-suited to computerization and can handle functions with many variables.
+	
+	The algorithm consists of several steps:
+	\begin{enumerate}
+		\item List the minterms of the function in binary form.
+		\item Group the minterms based on the number of ones in their binary representation.
+		\item Compare each pair of minterms within adjacent groups to find pairs that differ by exactly one bit. Combine these pairs to form new terms, and mark the minterms that were combined.
+		\item Repeat the process until no further combinations are possible. The terms that remain are the prime implicants.
+		\item Use a prime implicant chart to identify essential prime implicants and select a minimal cover for the function.
+	\end{enumerate}
+	
+	In pseudo code it will be.
+	\begin{algorithm}
+		\caption{Quine–McCluskey Algorithm}\label{alg:quine_mccluskey}
+		\begin{algorithmic}[1]
+			\Procedure{QuineMcCluskey}{$f$}
+			\State Convert each term of $f$ into binary form to get minterms
+			\State Group the minterms based on the number of ones in them
+			\Repeat
+			\State For each group, find pairs of minterms that differ by one bit
+			\State Combine these pairs to form new terms
+			\State Mark combined minterms
+			\Until{no further combinations are possible}
+			\State Collect unmarked minterms as prime implicants
+			\State Create a prime implicant chart
+			\State Select a minimal set that covers all minterms
+			\State Translate the minimal set back into algebraic form
+			\State \textbf{return} simplified function
+			\EndProcedure
+		\end{algorithmic}
+	\end{algorithm}
+	
+	\begin{example}
+		Use the Quine--McCluskey method to simplify the sum-of-products expansion $wxyz + \overline{w}xyz + w\overline{x}yz + w\overline{x}y\overline{z} + \overline{w}\overline{x}\overline{y}\overline{z}$.
+		\begin{solution}
+		First, we represent the minterms in binary form and group them according to the number of 1s in their bit strings.
+		
+		\begin{table}[H]
+			\centering
+			\caption{Minterms represented by bit strings}
+			\begin{tabular}{@{}ccc@{}}
+				\toprule
+				Minterm & Bit String & Number of 1s \\
+				\midrule
+				\( xyz \) & 111 & 3 \\
+				\( \overline{w}yz \) & 011 & 2 \\
+				\( w\overline{x}yz \) & 101 & 2 \\
+				\( w\overline{x}y\overline{z} \) & 001 & 1 \\
+				\( \overline{w}\overline{x}\overline{y}\overline{z} \) & 000 & 0 \\
+				\bottomrule
+			\end{tabular}
+		\end{table}
+		
+		Next, we combine minterms with only one bit of difference:
+		
+		\begin{table}[H]
+			\centering
+			\caption{ Combining minterms}
+			\begin{tabular}{@{}cccccc@{}}
+				\toprule
+				Term & Bit String & \multicolumn{2}{c}{Step 1} & \multicolumn{2}{c}{Step 2} \\
+				\cmidrule(r){3-4} \cmidrule(l){5-6}
+				& & Term & String & Term & String \\
+				\midrule
+				1 & 111 & (1,2) & \( xz \) & (1,2,3,4) & \( z \) \\
+				2 & 101 & (1,3) & \( yz \) & & \( \overline{w} \) \\
+				3 & 011 & (2,4) & \( y\overline{z} \) & & \( x \) \\
+				4 & 001 & (3,4) & \( \overline{x}z \) & & \( y \) \\
+				5 & 000 & (4,5) & \( \overline{x}y \) & & \( \overline{z} \) \\
+				\bottomrule
+			\end{tabular}
+		\end{table}
+		
+		Finally, we use the prime implicant chart to determine the necessary prime implicants:
+		
+		\begin{table}[H]
+			\centering
+			\caption{Prime Implicant Chart}
+			\begin{tabular}{@{}cccccc@{}}
+				\toprule
+				& \( xz \) & \( yz \) & \( y\overline{z} \) & \( \overline{x}z \) & \( \overline{x}y \) \\
+				\midrule
+				\( z \) & X & X & & X & \\
+				\( \overline{x}y \) & & & X & & X \\
+				\bottomrule
+			\end{tabular}
+		\end{table}
+		
+		From Table 4, we see that both \( z \) and \( \overline{x}y \) are necessary to cover all minterms. Hence, the simplified Boolean expression is \( z + \overline{x}y \).
+		
+		\end{solution}
+		
+	\end{example}
+	
+	
     \subsection{Exercises}
     \begin{exercise}
         Express XOR and implication in Boolean Function.
@@ -976,8 +1200,122 @@
 		This algebraic proof demonstrates that the duality principle holds for any Boolean function by directly manipulating the expressions using basic properties of Boolean algebra and De Morgan's laws. 
     \end{proof}
 
+\begin{exercise}
+	Use K-map to simplify the Boolean Function from the following truth table.
+	\begin{table}[H]
+		\centering
+		\begin{tabular}{|c|c|c|c||c|}
+			\hline
+			\( X_1 \) & \( X_2 \) & \( X_3 \) & \( X_4 \) & \( Z_1 \) \\
+			\hline
+			0 & 0 & 0 & 0 & 1 \\
+			0 & 0 & 0 & 1 & 1 \\
+			0 & 0 & 1 & 0 & 0 \\
+			0 & 0 & 1 & 1 & 1 \\
+			0 & 1 & 0 & 0 & 1 \\
+			0 & 1 & 0 & 1 & 0 \\
+			0 & 1 & 1 & 0 & 1 \\
+			0 & 1 & 1 & 1 & 1 \\
+			1 & 0 & 0 & 0 & 0 \\
+			1 & 0 & 0 & 1 & 1 \\
+			1 & 0 & 1 & 0 & 1 \\
+			1 & 0 & 1 & 1 & 0 \\
+			1 & 1 & 0 & 0 & 1 \\
+			1 & 1 & 0 & 1 & 1 \\
+			1 & 1 & 1 & 0 & 0 \\
+			1 & 1 & 1 & 1 & 0 \\
+			\hline
+		\end{tabular}
+	\end{table}
+\end{exercise}
+\begin{solution}
+	The function is given by:
+	\begin{align*}
+		F_2(X1,X2,X3,X4) = &\overline{X1}\ \overline{X2}\ \overline{X3}{X4}+\overline{X1}\ \overline{X2}{X3}\overline{X4}\\
+		&+\overline{X1}\ \overline{X2}{X3}{X4}+\overline{X1}{X2}\overline{X3}\ \overline{X4}\\
+		&+\overline{X1}{X2}{X3}\overline{X4}+{X1}\overline{X2}\ \overline{X3}\ \overline{X4}\\
+		&+{X1}\overline{X2}\ \overline{X3}{X4}+{X1}\overline{X2}{X3}{X4}\\
+		&+{X1}{X2}\overline{X3}\ \overline{X4}+{X1}{X2}\overline{X3}{X4}.
+	\end{align*}
+	The K-map is as follows.
+	\begin{figure}[H]
+		\centering
+		\begin{karnaugh-map}[4][4][1][$X3X4$][$X1X2$]
+			\minterms{1,2,3,4,6,8,9,11,12,13}
+			\maxterms{0,5,7,10,14,15}
+			\draw[color=black, ultra thick] (0, 0) rectangle (4, 4);
+		\end{karnaugh-map}
+		\hfill
+		\begin{karnaugh-map}[4][4][1][$X3X4$][$X1X2$]
+			\minterms{1,2,3,4,6,8,9,11,12,13}
+			\maxterms{0,5,7,10,14,15}
+			\implicantedge{1}{3}{9}{11}
+			\implicant{12}{9}
+			\implicant{4}{12}
+			\implicant{2}{6}
+			\draw[color=black, ultra thick] (0, 0) rectangle (4, 4);
+		\end{karnaugh-map}
+		\caption{Karnaugh Map of $F_1$ and $F_2$ after Grouping}
+	\end{figure}
+	\begin{enumerate}
+		\item The first group (blue) gives $\overline{X1}\ \overline{X2}{X3}\overline{X4}$ and $\overline{X1}{X2}{X3}\overline{X4}$, which rules out $X2$ terms, so we have$\overline{X1}{X3}\overline{X4}$ in the expression.
+		\item The second group (yellow) gives $\overline{X1}{X2}\overline{X3}\ \overline{X4}$ and ${X1}{X2}\overline{X3}\ \overline{X4}$, which rules out $X1$ terms, so we have ${X2}\overline{X3}\ \overline{X4}$ in the expression.
+		\item The third group (red) has four blocks, so we can exclude two terms from it, and in this case we find that $X3$ and $X1$ terms differ, so we have $\overline{X2}{4}$ in the expression.
+		\item The last group (green) is also four-block, in the same way we rule out ${X2}$ and $X{4}$ terms, and we have $X1\overline{X3}$ in the expression.
+	\end{enumerate}
+	Hence we get the simplified SOP form for $F_2$.
+	\begin{align*}
+		F_2=\overline{X1}{X3}\ \overline{X4}+{X2}\overline{X3}\ \overline{X4}+\overline{X2}{X4}+{X1}\overline{X3}
+	\end{align*}
+	\end{solution}
+	\begin{exercise}
+		Express each of these Boolean functions using the operators $\cdot$ (AND) and $-$ (NOT).
+		
+		\begin{enumerate}
+			\item[a)] $x + y + z$
+			\item[b)] $x + \overline{y}(x + z)$
+			\item[c)] $x + \overline{y}$
+			\item[d)] $x(\overline{x} + y + z)$
+		\end{enumerate}
+		
+	\end{exercise}
+	\begin{solution}
+		We need to use De Morgan's law to replace each occurrence of $s + t$ by $\overline{\overline{s} \cdot \overline{t}}$, simplifying by use of the double complement law if possible.
+		
+		\begin{enumerate}
+			\item[a)] $(x + y) + z = \overline{(\overline{x + y}) \cdot \overline{z}} = \overline{\overline{x} \cdot \overline{y}} \cdot \overline{z} = \overline{x} \cdot \overline{y} \cdot \overline{z}$
+			\item[b)] $x + \overline{y}(x + z) = x + \overline{y}(\overline{\overline{x} \cdot \overline{z}}) = x + \overline{y}\overline{\overline{x} \cdot \overline{z}} = x + \overline{y}\overline{x} \cdot \overline{z}$
+			\item[c)] In this case, we can just apply De Morgan's law directly, to obtain $\overline{x \cdot \overline{y}} = \overline{x} + y$.
+			\item[d)] The second factor is changed in a manner similar to part (a). Thus, the answer is $\overline{x} \cdot (\overline{x} \cdot y)$.
+		\end{enumerate}
+		
+	\end{solution}
 
-
+\begin{exercise}
+	Find the sum-of-products expansion of the Boolean function \[ F(x_1, x_2, x_3, x_4, x_5) \] that has the value 1 if and only if three or more of the variables \( x_1, x_2, x_3, x_4 \), and \( x_5 \) have the value 1.
+\end{exercise}
+\begin{solution}
+	We need to include all terms that have three or more of the variables in their uncomplemented form. This will give us a total of \( 1 + 5 + 10 = 16 \) terms. The answer is:
+	\begin{align*}
+		F(x_1, x_2, x_3, x_4, x_5) = \ & x_1 x_2 x_3 x_4 x_5+ x_1 x_2 \overline{x_3} x_4 x_5\\
+		+ \ & x_1 x_2 x_3 x_4 \overline{x_5} + x_1 x_2 x_3 \overline{x_4} x_5  \\
+		+ \ & x_1 \overline{x_2} x_3 x_4 x_5 + \overline{x_1} x_2 x_3 x_4 x_5 \\
+		+ \ & x_1 x_2 x_3 \overline{x_4} \overline{x_5} + x_1 x_2 \overline{x_3} x_4 \overline{x_5} \\
+		+ \ & x_1 \overline{x_2} x_3 x_4 \overline{x_5} + \overline{x_1} x_2 x_3 x_4 \overline{x_5} \\
+		+ \ & x_1 x_2 \overline{x_3} \overline{x_4} x_5 + x_1 \overline{x_2} x_3 \overline{x_4} x_5 \\
+		+ \ & \overline{x_1} x_2 x_3 \overline{x_4} x_5 + x_1 \overline{x_2} \overline{x_3} x_4 x_5 \\
+		+ \ & \overline{x_1} x_2 \overline{x_3} x_4 x_5 + \overline{x_1} \overline{x_2} x_3 x_4 x_5.
+	\end{align*}
+\end{solution}
+\begin{exercise}
+	How many different Boolean functions \( F(x, y, z) \) are there such that 
+	\[ F(\overline{x}, y, z) = F(x, \overline{y}, z) = F(x, y, \overline{z}) \]
+	for all values of the Boolean variables \( x, y \), and \( z \)?
+\end{exercise}
+\begin{solution}
+	Suppose that you specify \( F(0, 0, 0) \). Then the equations determine \( F(0, 0, 0) = F(1, 1, 0) \) and \( F(0, 0, 0) = F(1, 0, 1) \). It also therefore determines \( F(1, 1, 0) = F(0, 1, 1) \), but nothing else. If we now also specify \( F(1, 1, 1) \) (and there are no restrictions imposed so far), then the equations tell us, in a similar way, what \( F(0, 0, 1) \), \( F(0, 1, 0) \), and \( F(1, 0, 0) \) are. This completes the definition of \( F \). Since we had two choices in specifying \( F(0, 0, 0) \) and two choices in specifying \( F(1, 1, 1) \), the answer is \( 2 \times 2 = 4 \).
+	
+\end{solution}
     \section{Predicates and Quantifiers}
 
 
