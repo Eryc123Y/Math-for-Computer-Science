@@ -1,0 +1,47 @@
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
+from itertools import product
+
+# Define the vertices of a unit cube
+vertices = list(product([0, 1], repeat=3))
+
+# Create the figure and 3D axis
+fig = plt.figure(figsize=(18, 5))
+
+# Add subplots for B^2, B^3 and an illustration for B^4
+# B^2
+ax1 = fig.add_subplot(131)
+ax1.set_title('2D Boolean Domain $\\mathbb{B}^2$')
+ax1.set_xticks([0, 1])
+ax1.set_yticks([0, 1])
+for s, t in product([0, 1], repeat=2):
+    ax1.text(s, t, f'({s}{t})', ha='center', va='center')
+ax1.set_xlim(-0.5, 1.5)
+ax1.set_ylim(-0.5, 1.5)
+ax1.grid(True)
+
+# B^3
+ax2 = fig.add_subplot(132, projection='3d')
+ax2.set_title('3D Boolean Domain $\\mathbb{B}^3$')
+for (s, t, u) in vertices:
+    ax2.text(s, t, u, f'({s}{t}{u})', ha='center', va='center')
+ax2.set_xlim(-0.5, 1.5)
+ax2.set_ylim(-0.5, 1.5)
+ax2.set_zlim(-0.5, 1.5)
+ax2.set_xticks([0, 1])
+ax2.set_yticks([0, 1])
+ax2.set_zticks([0, 1])
+ax2.view_init(30, 30)
+
+# B^4 visualization would require a 4D space which we cannot represent in a 3D plot.
+# Instead, we'll create an illustration with placeholder texts.
+ax3 = fig.add_subplot(133)
+ax3.text(0.5, 0.5, '4D Boolean Domain $\\mathbb{B}^4$\n(Tesseract)', ha='center', va='center', fontsize=12)
+ax3.set_xticks([])
+ax3.set_yticks([])
+for spine in ax3.spines.values():
+    spine.set_visible(False)
+
+# Show the plots
+plt.tight_layout()
+plt.show()

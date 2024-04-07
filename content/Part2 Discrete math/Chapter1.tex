@@ -75,7 +75,7 @@
         \begin{definition}[Boolean Values]
         In mathematics and computer science, a Boolean value is defined as an element of the Boolean domain \(B\), which can be mathematically represented as:
         \[
-        B = \{0, 1\}
+        \B = \{0, 1\}
         \]
         where:
         \begin{itemize}
@@ -1313,9 +1313,73 @@
 	for all values of the Boolean variables \( x, y \), and \( z \)?
 \end{exercise}
 \begin{solution}
-	Suppose that you specify \( F(0, 0, 0) \). Then the equations determine \( F(0, 0, 0) = F(1, 1, 0) \) and \( F(0, 0, 0) = F(1, 0, 1) \). It also therefore determines \( F(1, 1, 0) = F(0, 1, 1) \), but nothing else. If we now also specify \( F(1, 1, 1) \) (and there are no restrictions imposed so far), then the equations tell us, in a similar way, what \( F(0, 0, 1) \), \( F(0, 1, 0) \), and \( F(1, 0, 0) \) are. This completes the definition of \( F \). Since we had two choices in specifying \( F(0, 0, 0) \) and two choices in specifying \( F(1, 1, 1) \), the answer is \( 2 \times 2 = 4 \).
+	Suppose that you specify \( F(0, 0, 0) \). Then the equations determine \( F(0, 0, 0) = 
+    F(1, 1, 0) \) and \( F(0, 0, 0) = F(1, 0, 1) \). It also therefore determines 
+    \( F(1, 1, 0) = F(0, 1, 1) \), but nothing else. If we now also specify \( F(1, 1, 1) \)
+     (and there are no restrictions imposed so far), then the equations tell us, in a similar way, 
+     what \( F(0, 0, 1) \), \( F(0, 1, 0) \), and \( F(1, 0, 0) \) are. This completes the definition 
+     of \( F \). Since we had two choices in specifying \( F(0, 0, 0) \) and two choices in 
+     specifying \( F(1, 1, 1) \), the answer is \( 2 \times 2 = 4 \).
 	
 \end{solution}
+
+\begin{exercise}\label{bool_func_vis}
+    We discussed in part 1 of the book about visualization of Euclidean Space. Now, can you try to
+    explain that how can we define $\B^n$'s visualization.
+    \begin{itemize}
+        \item How can we visualize $\B, \B^2, \B^3$? What kind of geometrical objects are they?
+        \item Can you try to explain how $\B^4$ could be explained in terms of $\B^3$?
+    \end{itemize}
+\end{exercise}
+\begin{solution}
+    The set \( \mathbb{B} \) represents the Boolean domain, which consists of two elements: 0 and 1. For higher dimensions:
+    \begin{itemize}
+        \item \( \mathbb{B}^2 \) can be visualized as a square on a binary (2D) grid, where each corner corresponds to a pair of Boolean values (00, 01, 10, 11).
+        \item \( \mathbb{B}^3 \) extends this to a cube in a three-dimensional binary grid, with each corner representing a triplet of Boolean values (000, 001, 010, 011, 100, 101, 110, 111).
+    \end{itemize}
+
+    Visualizing \( \mathbb{B}^4 \) is more abstract since we cannot directly perceive four dimensions. However, we can understand \( \mathbb{B}^4 \) in terms of \( \mathbb{B}^3 \) by considering a hypercube or tesseract, which is a theoretical shape in four-dimensional space. Each vertex of the tesseract corresponds to a unique 4-tuple of Boolean values (e.g., 0000, 0001, ..., 1111). 
+
+    While we can't visualize four dimensions spatially, we can represent \( \mathbb{B}^4 \) using a four-dimensional binary grid, where each point is uniquely identified by its four Boolean coordinates.
+\end{solution}
+    Below is the visualization of Boolean Domain in Euclidean Space as collection of 
+    points. 
+\begin{figure}[H]
+        % B1 Visualization
+\begin{tikzpicture}[scale=2]
+    \draw (0,0) -- (1,0);
+    \foreach \x in {0,1}
+        \filldraw (\x,0) circle (2pt) node[below] {$\x$};
+    \end{tikzpicture}
+    \hfill
+    % B2 Visualization
+    \begin{tikzpicture}[scale=2]
+    \draw (0,0) rectangle (1,1);
+    \foreach \x in {0,1}
+      \foreach \y in {0,1}
+        \filldraw (\x,\y) circle (2pt) node[below left] {$\x\y$};
+    \end{tikzpicture}
+    \hfill
+    % B3 Visualization
+    \begin{tikzpicture}[scale=2]
+        % Define style for the nodes
+        \tikzstyle{vertex}=[circle,fill,inner sep=1.5pt]
+        
+        % Draw the back square
+        \draw (0,0) node[vertex,label=left:{000}] {} -- (0,1) node[vertex,label=left:{010}] {} -- (1,1) node[vertex,label=above:{110}] {} -- (1,0) node[vertex,label=below:{100}] {} -- cycle;
+        
+        % Draw the front square
+        \draw (0.5,0.5) node[vertex,label=below:{001}] {} -- (0.5,1.5) node[vertex,label=above:{011}] {} -- (1.5,1.5) node[vertex,label=right:{111}] {} -- (1.5,0.5) node[vertex,label=below:{101}] {} -- cycle;
+        
+        % Connect the vertices
+        \draw (0,0) -- (0.5,0.5);
+        \draw (0,1) -- (0.5,1.5);
+        \draw (1,1) -- (1.5,1.5);
+        \draw (1,0) -- (1.5,0.5);
+        \end{tikzpicture}
+        \caption{Visualization of Boolean Domain}
+\end{figure}
+
     \section{Predicates and Quantifiers}
 
 

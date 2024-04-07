@@ -1,8 +1,8 @@
-PWD C:/Programming/GitProjects/Math-for-Computer-Science
+PWD c:/Programming/GitProjects/Math-for-Computer-Science
 INPUT c:/texlive-full/2023/texmf.cnf
 INPUT c:/texlive-full/2023/texmf-dist/web2c/texmf.cnf
 INPUT c:/texlive-full/2023/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT main.tex
+INPUT c:/Programming/GitProjects/Math-for-Computer-Science/main.tex
 OUTPUT main.log
 INPUT ./LegrandOrangeBook.cls
 INPUT LegrandOrangeBook.cls
@@ -356,6 +356,8 @@ INPUT c:/texlive-full/2023/texmf-dist/tex/latex/thmtools/thm-restate.sty
 INPUT c:/texlive-full/2023/texmf-dist/tex/latex/thmtools/thm-restate.sty
 INPUT c:/texlive-full/2023/texmf-dist/tex/latex/thmtools/thm-amsthm.sty
 INPUT c:/texlive-full/2023/texmf-dist/tex/latex/thmtools/thm-amsthm.sty
+INPUT c:/texlive-full/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary3d.code.tex
+INPUT c:/texlive-full/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary3d.code.tex
 INPUT c:/texlive-full/2023/texmf-dist/tex/latex/psnfss/t1ptm.fd
 INPUT c:/texlive-full/2023/texmf-dist/tex/latex/psnfss/t1ptm.fd
 INPUT c:/texlive-full/2023/texmf-dist/tex/latex/psnfss/t1ptm.fd
