@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.2.8)  7 APR 2024 23:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.2.8)  8 APR 2024 00:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1289,23 +1289,4225 @@ Package biblatex Info: ... file 'main.bbl' found.
 Package biblatex Info: Reference section=0 on input line 110.
 Package biblatex Info: Reference segment=0 on input line 110.
 Package hyperref Info: Link coloring ON on input line 110.
-! I can't write on file `main.pdf'.
-(Press Enter to retry, or Control-Z to exit; default file extension is `.pdf')
-Please type another file name for output
-! Emergency stop.
-<to be read again> 
-                   \edef 
-l.110 \begin{document}
-                      
-*** (job aborted, file error in nonstop mode)
+<Images/background.pdf, id=7, 584.1825pt x 835.12pt>
+File: Images/background.pdf Graphic file (type pdf)
+<use Images/background.pdf>
+Package pdftex.def Info: Images/background.pdf  used on input line 125.
+(pdftex.def)             Requested size: 597.50787pt x 854.24503pt.
+LaTeX Font Info:    Trying to load font information for T1+pag on input line 12
+5.
+(c:/texlive-full/2023/texmf-dist/tex/latex/psnfss/t1pag.fd
+File: t1pag.fd 2001/06/04 font definitions for T1/pag.
+)
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `pag' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+LaTeX Font Info:    Font shape `T1/pag/b/n' in size <24.88> not available
+(Font)              Font shape `T1/pag/db/n' tried instead on input line 125.
+[1
 
- 
+{c:/texlive-full/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive-
+full/2023/texmf-dist/fonts/enc/dvips/base/8r.enc} <./Images/background.pdf>]
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 1
+35.
+(c:/texlive-full/2023/texmf-dist/tex/latex/psnfss/ts1ptm.fd
+File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
+)
+Underfull \hbox (badness 10000) in paragraph at lines 135--136
+
+ []
+
+LaTeX Font Info:    Trying to load font information for OT1+ztmcm on input line
+ 138.
+(c:/texlive-full/2023/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd
+File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
+)
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `ztmcm' (encoding: OT1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+LaTeX Font Info:    Trying to load font information for OML+ztmcm on input line
+ 138.
+(c:/texlive-full/2023/texmf-dist/tex/latex/psnfss/omlztmcm.fd
+File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
+)
+LaTeX Font Info:    Trying to load font information for OMS+ztmcm on input line
+ 138.
+(c:/texlive-full/2023/texmf-dist/tex/latex/psnfss/omsztmcm.fd
+File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
+)
+LaTeX Font Info:    Trying to load font information for OMX+ztmcm on input line
+ 138.
+(c:/texlive-full/2023/texmf-dist/tex/latex/psnfss/omxztmcm.fd
+File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
+)
+LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 1
+38.
+(c:/texlive-full/2023/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
+)
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 138.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 138.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 138.
+(c:/texlive-full/2023/texmf-dist/tex/latex/microtype/mt-msa.cfg
+File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
+) (c:/texlive-full/2023/texmf-dist/tex/latex/microtype/mt-msb.cfg
+File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
+)
+Underfull \hbox (badness 10000) in paragraph at lines 137--140
+
+ []
+
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 1
+41.
+(c:/texlive-full/2023/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
+)
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `cmtt' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+
+Underfull \hbox (badness 10000) in paragraph at lines 141--142
+
+ []
+
+[2{c:/texlive-full/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}]
+<Images/orange1.jpg, id=26, 1644.1425pt x 734.745pt>
+File: Images/orange1.jpg Graphic file (type jpg)
+<use Images/orange1.jpg>
+Package pdftex.def Info: Images/orange1.jpg  used on input line 151.
+(pdftex.def)             Requested size: 597.50787pt x 267.01932pt.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24.88> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 151.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17.28> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 151.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 151.
+(./main.toc
+LaTeX Font Info:    Font shape `T1/pag/b/n' in size <17.28> not available
+(Font)              Font shape `T1/pag/db/n' tried instead on input line 1.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1.
+
+Overfull \hbox (390.95769pt too wide) detected at line 1
+[][][][][][] [][][][][][] 
+ []
+
+LaTeX Font Info:    Font shape `T1/pag/b/n' in size <14.4> not available
+(Font)              Font shape `T1/pag/db/n' tried instead on input line 2.
+LaTeX Font Info:    Font shape `T1/pag/b/n' in size <12> not available
+(Font)              Font shape `T1/pag/db/n' tried instead on input line 2.
+[3
+
+ <./Images/orange1.jpg>] [4]
+Overfull \hbox (390.95769pt too wide) detected at line 85
+[][][][][][] [][][][][][] 
+ []
+
+[5]
+Overfull \hbox (390.95769pt too wide) detected at line 186
+[][][][][][] [][][][][][] 
+ []
+
+[6] [7]
+Overfull \hbox (390.95769pt too wide) detected at line 252
+[][][][][][] [][][][][][] 
+ []
+
+
+Overfull \hbox (390.95769pt too wide) detected at line 271
+[][][][][][] [][][][][][] 
+ []
+
+[8]
+Overfull \hbox (390.95769pt too wide) detected at line 281
+[][][][][][] [][][][][][] 
+ []
+
+
+Overfull \hbox (390.95769pt too wide) detected at line 290
+[][][][][][] [][][][][][] 
+ []
+
+[9]
+Overfull \hbox (390.95769pt too wide) detected at line 303
+[][][][][][] [][][][][][] 
+ []
+
+)
+\tf@toc=\write6
+\openout6 = `main.toc'.
+
+[10]
+File: Images/orange1.jpg Graphic file (type jpg)
+<use Images/orange1.jpg>
+Package pdftex.def Info: Images/orange1.jpg  used on input line 153.
+(pdftex.def)             Requested size: 597.50787pt x 267.01932pt.
+(./main.lof
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 3.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 3.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 3.
+)
+\tf@lof=\write7
+\openout7 = `main.lof'.
+
+[11
+
+] [12]
+File: Images/orange1.jpg Graphic file (type jpg)
+<use Images/orange1.jpg>
+Package pdftex.def Info: Images/orange1.jpg  used on input line 155.
+(pdftex.def)             Requested size: 597.50787pt x 267.01932pt.
+(./main.lot)
+\tf@lot=\write8
+\openout8 = `main.lot'.
+
+[13
+
+] [14
+
+]
+\c@ttl@toc@part=\count500
+LaTeX Font Info:    Font shape `T1/pag/b/n' in size <220> not available
+(Font)              Font shape `T1/pag/db/n' tried instead on input line 165.
+LaTeX Font Info:    Font shape `T1/pag/b/n' in size <30> not available
+(Font)              Font shape `T1/pag/db/n' tried instead on input line 165.
+(./main.ptc) [15
+
+] [16] (./content/part1 Intro/Chapter1.tex
+Chapter 1.
+<Images/chap1.png, id=1325, 975.645pt x 451.6875pt>
+File: Images/chap1.png Graphic file (type png)
+<use Images/chap1.png>
+Package pdftex.def Info: Images/chap1.png  used on input line 9.
+(pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
+Package mdframed Info: mdframed works in twoside mode on input line 21.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 21.
+LaTeX Font Info:    Font shape `T1/pag/b/n' in size <10.95> not available
+(Font)              Font shape `T1/pag/db/n' tried instead on input line 21.
+[17
+
+ <./Images/chap1.png>]
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[18]
+LaTeX Font Info:    Font shape `T1/pag/b/n' in size <6> not available
+(Font)              Font shape `T1/pag/db/n' tried instead on input line 78.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 78.
+Package mdframed Info: mdframed works in twoside mode on input line 100.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 100.
+Package mdframed Info: mdframed works in twoside mode on input line 114.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 114.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[19]
+Package mdframed Info: mdframed works in twoside mode on input line 129.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 129.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[20]
+Package mdframed Info: mdframed works in twoside mode on input line 198.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 198.
+Package mdframed Info: mdframed works in twoside mode on input line 213.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 213.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[21]
+Package mdframed Info: mdframed works in twoside mode on input line 231.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 231.
+Package mdframed Info: mdframed works in twoside mode on input line 248.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 248.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[22]
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[23]
+Package mdframed Info: mdframed works in twoside mode on input line 359.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 359.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[24]
+Package mdframed Info: mdframed works in twoside mode on input line 406.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 406.
+Package mdframed Info: mdframed works in twoside mode on input line 420.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 420.
+Package mdframed Info: Not enough space on this page on input line 422.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[25]
+Package mdframed Info: Not enough space on this page on input line 422.
+Package mdframed Info: mdframed works in twoside mode on input line 434.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 434.
+Package mdframed Info: mdframed works in twoside mode on input line 450.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 450.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[26]
+Package mdframed Info: mdframed works in twoside mode on input line 492.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 492.
+Package mdframed Info: mdframed works in twoside mode on input line 507.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 507.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[27]
+Package mdframed Info: mdframed works in twoside mode on input line 524.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 524.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[28]
+Package mdframed Info: mdframed works in twoside mode on input line 564.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 564.
+Package mdframed Info: mdframed works in twoside mode on input line 601.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 601.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[29]
+Package mdframed Info: mdframed works in twoside mode on input line 654.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 654.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[30]
+Package mdframed Info: mdframed works in twoside mode on input line 691.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 691.
+
+Overfull \hbox (2.65399pt too wide) in paragraph at lines 692--693
+[][][]\T1/pag/db/n/10.95 (-20) Exercise 1.16  [][]\T1/ptm/m/n/12 (-20) Prove, u
+s-ing math-e-mat-i-cal in-duc-tion, the fol-low-ing the-o-rem.                 
+  
+ []
+
+Package mdframed Info: mdframed works in twoside mode on input line 693.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 693.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 699.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[31]
+Package mdframed Info: mdframed works in twoside mode on input line 722.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 722.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[32]
+Package mdframed Info: mdframed works in twoside mode on input line 781.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 781.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[33]
+Package mdframed Info: mdframed works in twoside mode on input line 813.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 813.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[34]
+Package mdframed Info: mdframed works in twoside mode on input line 857.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 857.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[35]) (./content/part1 Intro/Chapter2.tex
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[36]
+Chapter 2.
+<Images/orange2.jpg, id=1479, 1300.86pt x 602.25pt>
+File: Images/orange2.jpg Graphic file (type jpg)
+<use Images/orange2.jpg>
+Package pdftex.def Info: Images/orange2.jpg  used on input line 4.
+(pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
+Package mdframed Info: mdframed works in twoside mode on input line 8.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 8.
+Package mdframed Info: mdframed works in twoside mode on input line 22.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 22.
+Package mdframed Info: mdframed works in twoside mode on input line 29.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 29.
+Package mdframed Info: Not enough space on this page on input line 44.
+[37
+
+ <./Images/orange2.jpg>]
+Package mdframed Info: Not enough space on this page on input line 44.
+Package mdframed Info: mdframed works in twoside mode on input line 46.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 46.
+Package mdframed Info: mdframed works in twoside mode on input line 52.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 52.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[38]
+Package mdframed Info: mdframed works in twoside mode on input line 134.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 134.
+Package mdframed Info: mdframed works in twoside mode on input line 140.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 140.
+Package mdframed Info: Not enough space on this page on input line 142.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[39]
+Package mdframed Info: Not enough space on this page on input line 142.
+Package mdframed Info: mdframed works in twoside mode on input line 144.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 144.
+Package mdframed Info: mdframed works in twoside mode on input line 156.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 156.
+Package mdframed Info: mdframed works in twoside mode on input line 164.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 164.
+Package mdframed Info: mdframed works in twoside mode on input line 167.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 167.
+Package mdframed Info: mdframed works in twoside mode on input line 185.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 185.
+Package mdframed Info: Not enough space on this page on input line 195.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[40]
+Package mdframed Info: Not enough space on this page on input line 195.
+Package mdframed Info: mdframed works in twoside mode on input line 197.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 197.
+Package mdframed Info: mdframed works in twoside mode on input line 223.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 223.
+
+Package mdframed Warning: You got a bad break
+(mdframed)                because the last box will be empty
+(mdframed)                you have to change it manually
+(mdframed)                by changing the text, the space
+(mdframed)                or something else on input line 233.
+
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[41]
+Package mdframed Info: mdframed works in twoside mode on input line 235.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 235.
+Package mdframed Info: mdframed works in twoside mode on input line 239.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 239.
+Package mdframed Info: mdframed works in twoside mode on input line 249.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 249.
+Package mdframed Info: mdframed works in twoside mode on input line 253.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 253.
+Package mdframed Info: mdframed works in twoside mode on input line 273.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 273.
+Package mdframed Info: mdframed works in twoside mode on input line 300.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 300.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[42]
+Package mdframed Info: Not enough space on this page on input line 302.
+Package mdframed Info: mdframed works in twoside mode on input line 321.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 321.
+Package mdframed Info: mdframed works in twoside mode on input line 337.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 337.
+Package hyperref Info: bookmark level for unknown solution defaults to 0 on inp
+ut line 353.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[43]
+Package mdframed Info: mdframed works in twoside mode on input line 361.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 361.
+Package mdframed Info: mdframed works in twoside mode on input line 377.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 377.
+Package mdframed Info: mdframed works in twoside mode on input line 388.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 388.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[44]
+Package mdframed Info: mdframed works in twoside mode on input line 433.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 433.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[45]
+<Images/x+y.png, id=1558, 361.35pt x 259.56975pt>
+File: Images/x+y.png Graphic file (type png)
+<use Images/x+y.png>
+Package pdftex.def Info: Images/x+y.png  used on input line 467.
+(pdftex.def)             Requested size: 298.75264pt x 214.60712pt.
+<Images/R^2.png, id=1559, 570.933pt x 281.853pt>
+File: Images/R^2.png Graphic file (type png)
+<use Images/R^2.png>
+Package pdftex.def Info: Images/R^2.png  used on input line 500.
+(pdftex.def)             Requested size: 341.43437pt x 168.5626pt.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[46 <./Images/x+y.png>]
+<Images/R^3.png, id=1565, 309.3156pt x 260.172pt>
+File: Images/R^3.png Graphic file (type png)
+<use Images/R^3.png>
+Package pdftex.def Info: Images/R^3.png  used on input line 508.
+(pdftex.def)             Requested size: 298.75264pt x 251.2867pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[47 <./Images/R^2.png>]
+Package mdframed Info: mdframed works in twoside mode on input line 523.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 523.
+Package mdframed Info: Box was splittet wrong
+ starting loop to iterate the splitting point
+(mdframed)              on input line 534.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[48 <./Images/R^3.png>]
+Package mdframed Info: mdframed works in twoside mode on input line 539.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 539.
+Package mdframed Info: mdframed works in twoside mode on input line 560.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 560.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[49]
+Package mdframed Info: mdframed works in twoside mode on input line 607.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 607.
+Package mdframed Info: mdframed works in twoside mode on input line 611.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 611.
+Package mdframed Info: mdframed works in twoside mode on input line 615.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 615.
+<Images/func.jpg, id=1593, 623.32875pt x 384.11505pt>
+File: Images/func.jpg Graphic file (type jpg)
+<use Images/func.jpg>
+Package pdftex.def Info: Images/func.jpg  used on input line 621.
+(pdftex.def)             Requested size: 320.0935pt x 197.25586pt.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[50 <./Images/func.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 643--644
+
+ []
+
+Package mdframed Info: mdframed works in twoside mode on input line 644.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 644.
+Package mdframed Info: mdframed works in twoside mode on input line 664.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 664.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[51]
+Package mdframed Info: mdframed works in twoside mode on input line 692.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 692.
+Package mdframed Info: mdframed works in twoside mode on input line 730.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 730.
+Package mdframed Info: mdframed works in twoside mode on input line 757.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 757.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[52]
+Package mdframed Info: Not enough space on this page on input line 760.
+Package mdframed Info: mdframed works in twoside mode on input line 786.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 786.
+Package mdframed Info: mdframed works in twoside mode on input line 804.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 804.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[53]
+Package mdframed Info: mdframed works in twoside mode on input line 841.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 841.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[54]
+Package mdframed Info: mdframed works in twoside mode on input line 888.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 888.
+Package mdframed Info: mdframed works in twoside mode on input line 904.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 904.
+Package mdframed Info: mdframed works in twoside mode on input line 917.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 917.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[55]
+Package mdframed Info: mdframed works in twoside mode on input line 948.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 948.
+Package mdframed Info: mdframed works in twoside mode on input line 969.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 969.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[56]
+Package mdframed Info: mdframed works in twoside mode on input line 995.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 995.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[57]
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[58]
+
+Package hyperref Warning: No autoref name for `exampleT' on input line 1086.
+
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[59]
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[60]
+Package mdframed Info: mdframed works in twoside mode on input line 1206.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1206.
+Package mdframed Info: Not enough space on this page on input line 1218.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[61]
+Package mdframed Info: Not enough space on this page on input line 1218.
+Package mdframed Info: mdframed works in twoside mode on input line 1233.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1233.
+Package mdframed Info: mdframed works in twoside mode on input line 1253.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1253.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[62]
+Package mdframed Info: mdframed works in twoside mode on input line 1276.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1276.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[63]
+Package mdframed Info: mdframed works in twoside mode on input line 1310.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1310.
+<Images/mtxvis.png, id=1731, 569.84895pt x 422.0568pt>
+File: Images/mtxvis.png Graphic file (type png)
+<use Images/mtxvis.png>
+Package pdftex.def Info: Images/mtxvis.png  used on input line 1328.
+(pdftex.def)             Requested size: 341.43437pt x 252.88182pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[64]
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[65 <./Images/mtxvis.png>]
+Package mdframed Info: mdframed works in twoside mode on input line 1366.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1366.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[66]
+Package mdframed Info: mdframed works in twoside mode on input line 1389.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1389.
+Package mdframed Info: mdframed works in twoside mode on input line 1399.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1399.
+Package mdframed Info: mdframed works in twoside mode on input line 1423.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1423.
+Package mdframed Info: Not enough space on this page on input line 1425.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[67]
+Package mdframed Info: Not enough space on this page on input line 1425.
+Package mdframed Info: mdframed works in twoside mode on input line 1426.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1426.
+Package mdframed Info: mdframed works in twoside mode on input line 1439.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1439.
+
+Overfull \hbox (3.38432pt too wide) in paragraph at lines 1440--1441
+[][][]\T1/pag/db/n/10.95 (-20) Theorem 2.3 []--- Sum of Arith-metic Se-quence. 
+ [][][]\T1/ptm/m/n/12 (-20) For arith-metic se-quence $\OML/ztmcm/m/it/12 a[]; 
+a[]; [] ; a[]$\T1/ptm/m/n/12 (-20) ,
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[68]
+Package mdframed Info: mdframed works in twoside mode on input line 1475.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1475.
+Package mdframed Info: mdframed works in twoside mode on input line 1489.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1489.
+Package mdframed Info: mdframed works in twoside mode on input line 1513.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1513.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[69]
+Package mdframed Info: mdframed works in twoside mode on input line 1561.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1561.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[70]
+Package mdframed Info: mdframed works in twoside mode on input line 1604.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1604.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[71]
+Package mdframed Info: mdframed works in twoside mode on input line 1640.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1640.
+Package mdframed Info: mdframed works in twoside mode on input line 1681.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1681.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[72]
+Package mdframed Info: Not enough space on this page on input line 1683.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1685--1688
+
+ []
+
+Package mdframed Info: mdframed works in twoside mode on input line 1725.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1725.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1728--1730
+
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[73]) (./content/part1 Intro/Chapter3.tex
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[74]
+Chapter 3.
+<Images/chap2.png, id=1806, 770.88pt x 481.8pt>
+File: Images/chap2.png Graphic file (type png)
+<use Images/chap2.png>
+Package pdftex.def Info: Images/chap2.png  used on input line 4.
+(pdftex.def)             Requested size: 597.50787pt x 373.4426pt.
+[75
+
+ <./Images/chap2.png>]
+<Images/venn.png, id=1814, 581.17125pt x 415.5525pt>
+File: Images/venn.png Graphic file (type png)
+<use Images/venn.png>
+Package pdftex.def Info: Images/venn.png  used on input line 83.
+(pdftex.def)             Requested size: 213.39568pt x 152.5853pt.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[76]
+Package mdframed Info: mdframed works in twoside mode on input line 94.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 94.
+Package mdframed Info: mdframed works in twoside mode on input line 117.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 117.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[77 <./Images/venn.png>]
+Package mdframed Info: mdframed works in twoside mode on input line 131.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 131.
+
+Package hyperref Warning: No autoref name for `definitionT' on input line 139.
+
+
+Package hyperref Warning: No autoref name for `definitionT' on input line 139.
+
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[78]
+Package mdframed Info: mdframed works in twoside mode on input line 193.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 193.
+<Images/intfunc.png, id=1842, 500.1084pt x 379.4175pt>
+File: Images/intfunc.png Graphic file (type png)
+<use Images/intfunc.png>
+Package pdftex.def Info: Images/intfunc.png  used on input line 213.
+(pdftex.def)             Requested size: 320.0935pt x 242.84952pt.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[79 <./Images/intfunc.png>]
+Package mdframed Info: mdframed works in twoside mode on input line 217.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 217.
+Package mdframed Info: Not enough space on this page on input line 227.
+Package mdframed Info: mdframed works in twoside mode on input line 238.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 238.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[80]
+Package mdframed Info: mdframed works in twoside mode on input line 279.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 279.
+Package mdframed Info: mdframed works in twoside mode on input line 290.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 290.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[81]
+Package mdframed Info: mdframed works in twoside mode on input line 350.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 350.
+Package mdframed Info: mdframed works in twoside mode on input line 375.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 375.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[82]
+Package mdframed Info: mdframed works in twoside mode on input line 396.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 396.
+Package mdframed Info: mdframed works in twoside mode on input line 421.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 421.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[83]
+
+Package hyperref Warning: No autoref name for `definitionT' on input line 469.
+
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
+put line 486.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[84]
+Package mdframed Info: mdframed works in twoside mode on input line 522.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 522.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[85]
+<Images/time complexity.png, id=1918, 715.11165pt x 570.933pt>
+File: Images/time complexity.png Graphic file (type png)
+<use Images/time complexity.png>
+Package pdftex.def Info: Images/time complexity.png  used on input line 550.
+(pdftex.def)             Requested size: 341.43437pt x 272.59857pt.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[86 <./Images/time complexity.png>]
+Package mdframed Info: mdframed works in twoside mode on input line 585.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 585.
+Package mdframed Info: Box was splittet wrong
+ starting loop to iterate the splitting point
+(mdframed)              on input line 598.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[87]
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[88]) (./content/part1 Intro/Chapter4.tex
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[89] [90
+
+]
+Chapter 4.
+File: Images/orange2.jpg Graphic file (type jpg)
+<use Images/orange2.jpg>
+Package pdftex.def Info: Images/orange2.jpg  used on input line 4.
+(pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
+[91]
+Package mdframed Info: mdframed works in twoside mode on input line 44.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 44.
+Package mdframed Info: mdframed works in twoside mode on input line 64.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 64.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[92]
+<Images/quadratic.png, id=1967, 1293.633pt x 354.123pt>
+File: Images/quadratic.png Graphic file (type png)
+<use Images/quadratic.png>
+Package pdftex.def Info: Images/quadratic.png  used on input line 89.
+(pdftex.def)             Requested size: 341.43437pt x 93.4639pt.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[93 <./Images/quadratic.png>]
+Package mdframed Info: mdframed works in twoside mode on input line 117.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 117.
+<Images/triangleablt0.png, id=1982, 476.982pt x 150.5625pt>
+File: Images/triangleablt0.png Graphic file (type png)
+<use Images/triangleablt0.png>
+Package pdftex.def Info: Images/triangleablt0.png  used on input line 152.
+(pdftex.def)             Requested size: 256.07741pt x 80.83386pt.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[94]
+Package mdframed Info: mdframed works in twoside mode on input line 158.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 158.
+<Images/triangle2.png, id=1989, 233.07076pt x 205.9695pt>
+File: Images/triangle2.png Graphic file (type png)
+<use Images/triangle2.png>
+Package pdftex.def Info: Images/triangle2.png  used on input line 163.
+(pdftex.def)             Requested size: 213.39568pt x 188.58594pt.
+Package mdframed Info: mdframed works in twoside mode on input line 172.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 172.
+Package mdframed Info: mdframed works in twoside mode on input line 185.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 185.
+Package mdframed Info: Not enough space on this page on input line 188.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[95 <./Images/triangleablt0.png> <./Images/triangle2.png>]
+Package mdframed Info: Not enough space on this page on input line 188.
+
+Package hyperref Warning: No autoref name for `corollaryT' on input line 190.
+
+Package mdframed Info: mdframed works in twoside mode on input line 198.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 198.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[96]
+<Images/agmx=0.png, id=2006, 576.35326pt x 319.1925pt>
+File: Images/agmx=0.png Graphic file (type png)
+<use Images/agmx=0.png>
+Package pdftex.def Info: Images/agmx=0.png  used on input line 268.
+(pdftex.def)             Requested size: 341.43437pt x 189.09148pt.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[97]
+<Images/agmx=5.png, id=2013, 573.342pt x 314.97675pt>
+File: Images/agmx=5.png Graphic file (type png)
+<use Images/agmx=5.png>
+Package pdftex.def Info: Images/agmx=5.png  used on input line 277.
+(pdftex.def)             Requested size: 341.43437pt x 187.5793pt.
+<Images/agm3D.png, id=2014, 361.35pt x 291.489pt>
+File: Images/agm3D.png Graphic file (type png)
+<use Images/agm3D.png>
+Package pdftex.def Info: Images/agm3D.png  used on input line 296.
+(pdftex.def)             Requested size: 256.07741pt x 206.57167pt.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[98 <./Images/agmx=0.png> <./Images/agmx=5.png>]
+<Images/agm3dsect.png, id=2022, 420.3705pt x 180.675pt>
+File: Images/agm3dsect.png Graphic file (type png)
+<use Images/agm3dsect.png>
+Package pdftex.def Info: Images/agm3dsect.png  used on input line 310.
+(pdftex.def)             Requested size: 256.07741pt x 110.06822pt.
+Package mdframed Info: mdframed works in twoside mode on input line 318.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 318.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[99 <./Images/agm3D.png (PNG copy)> <./Images/agm3dsect.png (PNG copy)>]
+Package mdframed Info: Not enough space on this page on input line 322.
+Package mdframed Info: mdframed works in twoside mode on input line 345.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 345.
+Package mdframed Info: mdframed works in twoside mode on input line 354.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 354.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[100]
+Package mdframed Info: mdframed works in twoside mode on input line 376.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 376.
+Package mdframed Info: mdframed works in twoside mode on input line 394.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 394.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[101]
+Package mdframed Info: mdframed works in twoside mode on input line 427.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 427.
+Package mdframed Info: mdframed works in twoside mode on input line 447.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 447.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[102]
+Package mdframed Info: mdframed works in twoside mode on input line 471.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 471.
+Package mdframed Info: mdframed works in twoside mode on input line 494.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 494.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[103]
+Package mdframed Info: Not enough space on this page on input line 497.
+Package mdframed Info: mdframed works in twoside mode on input line 526.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 526.
+Package mdframed Info: Not enough space on this page on input line 532.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[104]
+Package mdframed Info: Not enough space on this page on input line 532.
+Package mdframed Info: mdframed works in twoside mode on input line 570.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 570.
+Package mdframed Info: Not enough space on this page on input line 575.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[105]
+Package mdframed Info: Not enough space on this page on input line 575.
+Package mdframed Info: mdframed works in twoside mode on input line 631.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 631.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[106]
+Package mdframed Info: Not enough space on this page on input line 636.
+Package mdframed Info: mdframed works in twoside mode on input line 661.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 661.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[107]
+Package mdframed Info: mdframed works in twoside mode on input line 688.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 688.
+Package mdframed Info: mdframed works in twoside mode on input line 705.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 705.
+
+Package mdframed Warning: You got a bad break
+(mdframed)                because the last box will be empty
+(mdframed)                you have to change it manually
+(mdframed)                by changing the text, the space
+(mdframed)                or something else on input line 713.
+
+Package mdframed Info: Box was splittet wrong
+ starting loop to iterate the splitting point
+(mdframed)              on input line 713.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[108]
+Package mdframed Info: mdframed works in twoside mode on input line 726.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 726.
+Package mdframed Info: mdframed works in twoside mode on input line 754.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 754.
+Package mdframed Info: Not enough space on this page on input line 757.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[109]
+Package mdframed Info: Not enough space on this page on input line 757.
+Package mdframed Info: mdframed works in twoside mode on input line 761.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 761.
+Package mdframed Info: mdframed works in twoside mode on input line 803.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 803.
+Package mdframed Info: Not enough space on this page on input line 808.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[110]
+Package mdframed Info: Not enough space on this page on input line 808.
+Package mdframed Info: mdframed works in twoside mode on input line 810.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 810.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[111]
+Overfull \hbox (56.33826pt too wide) detected at line 884
+\OML/ztmcm/m/it/10.95 LHS \OT1/ztmcm/m/n/10.95 = \OML/ztmcm/m/it/10.95 a[] [] \
+OT1/ztmcm/m/n/10.95 + \OML/ztmcm/m/it/10.95 b[] [] \OMS/ztmcm/m/n/10.95 ^^@ \OT
+1/ztmcm/m/n/10.95 2\OML/ztmcm/m/it/10.95 a[]b[]\OT1/ztmcm/m/n/10.95 (\OML/ztmcm
+/m/it/10.95 a[]b[] \OT1/ztmcm/m/n/10.95 + \OML/ztmcm/m/it/10.95 a[]b[] \OT1/ztm
+cm/m/n/10.95 + [] + \OML/ztmcm/m/it/10.95 a[]b[]\OT1/ztmcm/m/n/10.95 )
+ []
+
+Package mdframed Info: mdframed works in twoside mode on input line 897.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 897.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[112]
+Package mdframed Info: mdframed works in twoside mode on input line 932.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 932.
+Package mdframed Info: mdframed works in twoside mode on input line 934.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 934.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 939.
+Package mdframed Info: mdframed works in twoside mode on input line 954.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 954.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[113]
+Package mdframed Info: Not enough space on this page on input line 956.
+
+Underfull \hbox (badness 10000) in paragraph at lines 972--976
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 972--976
+
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[114]
+Package mdframed Info: mdframed works in twoside mode on input line 1014.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1014.
+Package mdframed Info: mdframed works in twoside mode on input line 1028.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1028.
+
+Package mdframed Warning: You got a bad break
+(mdframed)                because the last box will be empty
+(mdframed)                you have to change it manually
+(mdframed)                by changing the text, the space
+(mdframed)                or something else on input line 1039.
+
+Package mdframed Info: You first box width is to small
+ mdframed fixed it
+(mdframed)              on input line 1039.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[115]
+
+Package mdframed Warning: You got a bad break
+(mdframed)                because the last split box is empty
+(mdframed)                You have to change the settings on input line 1039.
+
+Package mdframed Info: mdframed works in twoside mode on input line 1062.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1062.
+Package mdframed Info: mdframed works in twoside mode on input line 1088.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1088.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[116]
+Package mdframed Info: Not enough space on this page on input line 1095.
+) (./content/part1 Intro/Chapter5.tex
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[117] [118
+
+]
+Chapter 5.
+File: Images/orange2.jpg Graphic file (type jpg)
+<use Images/orange2.jpg>
+Package pdftex.def Info: Images/orange2.jpg  used on input line 4.
+(pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
+Package mdframed Info: mdframed works in twoside mode on input line 14.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 14.
+Package mdframed Info: mdframed works in twoside mode on input line 20.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 20.
+Package mdframed Info: mdframed works in twoside mode on input line 34.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 34.
+
+Underfull \vbox (badness 3579) has occurred while \output is active []
+
+[119]
+Package mdframed Info: mdframed works in twoside mode on input line 81.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 81.
+Package mdframed Info: mdframed works in twoside mode on input line 88.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 88.
+Package mdframed Info: mdframed works in twoside mode on input line 98.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 98.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[120]
+Package mdframed Info: mdframed works in twoside mode on input line 120.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 120.
+Package mdframed Info: mdframed works in twoside mode on input line 124.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 124.
+Package mdframed Info: mdframed works in twoside mode on input line 132.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 132.
+Package mdframed Info: mdframed works in twoside mode on input line 136.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 136.
+Package mdframed Info: mdframed works in twoside mode on input line 141.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 141.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[121]
+Package mdframed Info: mdframed works in twoside mode on input line 177.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 177.
+Package mdframed Info: mdframed works in twoside mode on input line 188.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 188.
+Package mdframed Info: mdframed works in twoside mode on input line 200.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 200.
+Package mdframed Info: Not enough space on this page on input line 205.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[122]
+Package mdframed Info: Not enough space on this page on input line 205.
+<Images/complexplane.png, id=2192, 392.77174pt x 254.51608pt>
+File: Images/complexplane.png Graphic file (type png)
+<use Images/complexplane.png>
+Package pdftex.def Info: Images/complexplane.png  used on input line 231.
+(pdftex.def)             Requested size: 392.77077pt x 254.51546pt.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[123 <./Images/complexplane.png (PNG copy)>]
+Package mdframed Info: mdframed works in twoside mode on input line 235.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 235.
+Package mdframed Info: Not enough space on this page on input line 237.
+Package mdframed Info: mdframed works in twoside mode on input line 240.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 240.
+Package mdframed Info: mdframed works in twoside mode on input line 247.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 247.
+<Images/locus1.png, id=2199, 382.66965pt x 358.4592pt>
+File: Images/locus1.png Graphic file (type png)
+<use Images/locus1.png>
+Package pdftex.def Info: Images/locus1.png  used on input line 261.
+(pdftex.def)             Requested size: 213.39568pt x 199.89891pt.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[124 <./Images/locus1.png>]
+<Images/conjugate.png, id=2211, 277.87814pt x 490.7133pt>
+File: Images/conjugate.png Graphic file (type png)
+<use Images/conjugate.png>
+Package pdftex.def Info: Images/conjugate.png  used on input line 294.
+(pdftex.def)             Requested size: 204.85802pt x 361.76688pt.
+
+Underfull \hbox (badness 1762) in paragraph at lines 307--310
+\T1/ptm/m/n/12 (+20) is there-fore ex-er-cises for this sec-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 307--310
+
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[125 <./Images/conjugate.png>]
+Package mdframed Info: mdframed works in twoside mode on input line 313.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 313.
+Package mdframed Info: mdframed works in twoside mode on input line 345.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 345.
+Package mdframed Info: mdframed works in twoside mode on input line 365.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 365.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[126]
+Package mdframed Info: Not enough space on this page on input line 372.
+Package mdframed Info: mdframed works in twoside mode on input line 374.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 374.
+Package mdframed Info: mdframed works in twoside mode on input line 384.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 384.
+Package mdframed Info: mdframed works in twoside mode on input line 411.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 411.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[127]
+Package mdframed Info: mdframed works in twoside mode on input line 434.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 434.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[128]
+<Images/complexvector.png, id=2238, 392.77174pt x 380.98859pt>
+File: Images/complexvector.png Graphic file (type png)
+<use Images/complexvector.png>
+Package pdftex.def Info: Images/complexvector.png  used on input line 492.
+(pdftex.def)             Requested size: 213.39568pt x 206.99226pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[129]
+<Images/paralaw.png, id=2244, 392.77174pt x 380.98859pt>
+File: Images/paralaw.png Graphic file (type png)
+<use Images/paralaw.png>
+Package pdftex.def Info: Images/paralaw.png  used on input line 498.
+(pdftex.def)             Requested size: 213.39568pt x 206.99226pt.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[130 <./Images/complexvector.png (PNG copy)> <./Images/paralaw.png (PNG copy)>]
+<Images/polar2.png, id=2250, 390.61935pt x 368.21565pt>
+File: Images/polar2.png Graphic file (type png)
+<use Images/polar2.png>
+Package pdftex.def Info: Images/polar2.png  used on input line 514.
+(pdftex.def)             Requested size: 213.39568pt x 201.15955pt.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[131 <./Images/polar2.png>]
+Package mdframed Info: mdframed works in twoside mode on input line 550.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 550.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[132]
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[133]
+Package mdframed Info: mdframed works in twoside mode on input line 650.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 650.
+Package mdframed Info: mdframed works in twoside mode on input line 659.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 659.
+Package mdframed Info: mdframed works in twoside mode on input line 668.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 668.
+Package mdframed Info: mdframed works in twoside mode on input line 681.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 681.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[134]
+Package mdframed Info: mdframed works in twoside mode on input line 694.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 694.
+Package mdframed Info: mdframed works in twoside mode on input line 713.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 713.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[135]
+Package mdframed Info: mdframed works in twoside mode on input line 768.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 768.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[136]
+Package mdframed Info: mdframed works in twoside mode on input line 820.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 820.
+Package mdframed Info: mdframed works in twoside mode on input line 844.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 844.
+Package mdframed Info: Not enough space on this page on input line 849.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[137]
+Package mdframed Info: Not enough space on this page on input line 849.
+Package mdframed Info: mdframed works in twoside mode on input line 886.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 886.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[138]
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[139]
+Package mdframed Info: mdframed works in twoside mode on input line 980.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 980.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[140]
+Overfull \hbox (49.47095pt too wide) detected at line 1020
+[]
+ []
+
+Package mdframed Info: mdframed works in twoside mode on input line 1027.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1027.
+Package mdframed Info: mdframed works in twoside mode on input line 1039.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1039.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[141]
+Package mdframed Info: mdframed works in twoside mode on input line 1051.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1051.
+Package mdframed Info: mdframed works in twoside mode on input line 1077.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1077.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[142]
+Package mdframed Info: mdframed works in twoside mode on input line 1113.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1113.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[143]
+Package mdframed Info: mdframed works in twoside mode on input line 1153.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1153.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[144]
+Package mdframed Info: mdframed works in twoside mode on input line 1207.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1207.
+Package mdframed Info: mdframed works in twoside mode on input line 1238.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1238.
+Package mdframed Info: Not enough space on this page on input line 1243.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[145]
+Package mdframed Info: Not enough space on this page on input line 1243.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[146]
+Package mdframed Info: mdframed works in twoside mode on input line 1296.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1296.
+Package mdframed Info: mdframed works in twoside mode on input line 1309.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1309.
+Package mdframed Info: mdframed works in twoside mode on input line 1328.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1328.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[147]
+Package mdframed Info: mdframed works in twoside mode on input line 1388.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1388.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[148]
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[149]
+Package mdframed Info: mdframed works in twoside mode on input line 1503.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1503.
+
+Package mdframed Warning: You got a bad break
+(mdframed)                because the last box will be empty
+(mdframed)                you have to change it manually
+(mdframed)                by changing the text, the space
+(mdframed)                or something else on input line 1505.
+
+Package mdframed Info: You first box width is to small
+ mdframed fixed it
+(mdframed)              on input line 1505.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[150]
+
+Package mdframed Warning: You got a bad break
+(mdframed)                because the last split box is empty
+(mdframed)                You have to change the settings on input line 1505.
+
+Package mdframed Info: mdframed works in twoside mode on input line 1510.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1510.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[151]
+<Images/rootdemoivre.png, id=2416, 392.77174pt x 355.8512pt>
+File: Images/rootdemoivre.png Graphic file (type png)
+<use Images/rootdemoivre.png>
+Package pdftex.def Info: Images/rootdemoivre.png  used on input line 1609.
+(pdftex.def)             Requested size: 213.39568pt x 193.33505pt.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[152 <./Images/rootdemoivre.png (PNG copy)>]
+Package mdframed Info: mdframed works in twoside mode on input line 1621.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1621.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[153]
+Package mdframed Info: mdframed works in twoside mode on input line 1669.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1669.
+Package mdframed Info: mdframed works in twoside mode on input line 1705.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1705.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[154]
+Package mdframed Info: mdframed works in twoside mode on input line 1740.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1740.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[155]
+Package mdframed Info: mdframed works in twoside mode on input line 1770.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1770.
+Package mdframed Info: mdframed works in twoside mode on input line 1789.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1789.
+Package mdframed Info: mdframed works in twoside mode on input line 1803.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1803.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[156]
+Package mdframed Info: mdframed works in twoside mode on input line 1836.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1836.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[157]
+Package mdframed Info: mdframed works in twoside mode on input line 1856.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1856.
+Package mdframed Info: mdframed works in twoside mode on input line 1888.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1888.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[158])
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[159] [160
+
+] (./main.ptc
+Underfull \hbox (badness 1460) in paragraph at lines 105--105
+[]|[]| [][][]\T1/pag/db/n/14.4 (+20) Preliminary Num-ber The-ory and
+ []
+
+) [161] [162] (./content/Part2 Discrete math/Chapter1.tex
+Chapter 6.
+File: Images/orange2.jpg Graphic file (type jpg)
+<use Images/orange2.jpg>
+Package pdftex.def Info: Images/orange2.jpg  used on input line 4.
+(pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
+[163
+
+]
+Package mdframed Info: mdframed works in twoside mode on input line 75.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 75.
+Package mdframed Info: mdframed works in twoside mode on input line 91.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 91.
+Package mdframed Info: Not enough space on this page on input line 102.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[164]
+Package mdframed Info: Not enough space on this page on input line 102.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[165]
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[166]
+Package mdframed Info: mdframed works in twoside mode on input line 256.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 256.
+Package mdframed Info: mdframed works in twoside mode on input line 288.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 288.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[167]
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[168]
+Package mdframed Info: mdframed works in twoside mode on input line 398.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 398.
+Package mdframed Info: mdframed works in twoside mode on input line 408.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 408.
+Package mdframed Info: Not enough space on this page on input line 410.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[169]
+Package mdframed Info: Not enough space on this page on input line 410.
+Package mdframed Info: mdframed works in twoside mode on input line 418.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 418.
+Package mdframed Info: mdframed works in twoside mode on input line 442.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 442.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[170]
+Package mdframed Info: mdframed works in twoside mode on input line 475.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 475.
+Package mdframed Info: Not enough space on this page on input line 477.
+Package mdframed Info: mdframed works in twoside mode on input line 502.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 502.
+Package mdframed Info: mdframed works in twoside mode on input line 529.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 529.
+
+Overfull \hbox (40.06538pt too wide) detected at line 555
+[]
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[171]
+Package mdframed Info: mdframed works in twoside mode on input line 570.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 570.
+Package mdframed Info: mdframed works in twoside mode on input line 590.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 590.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[172]
+Package mdframed Info: mdframed works in twoside mode on input line 621.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 621.
+Package mdframed Info: mdframed works in twoside mode on input line 628.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 628.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[173]
+Package mdframed Info: mdframed works in twoside mode on input line 644.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 644.
+
+Underfull \vbox (badness 1546) has occurred while \output is active []
+
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[174]
+Package mdframed Info: mdframed works in twoside mode on input line 717.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 717.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[175]
+Package mdframed Info: mdframed works in twoside mode on input line 763.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 763.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[176]
+Overfull \hbox (29.34602pt too wide) in paragraph at lines 830--831
+[]\T1/ptm/b/n/12 (-20) Inductive step: \T1/ptm/m/n/12 (-20) As-sume that the du
+-al-ity prin-ci-ple holds for Boolean func-tions $\OML/ztmcm/m/it/12 f\OT1/ztmc
+m/m/n/12 (\OML/ztmcm/m/it/12 x[]; x[]; [] ; x[]\OT1/ztmcm/m/n/12 )$
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[177]
+Package mdframed Info: mdframed works in twoside mode on input line 858.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 858.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[178]
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[179]
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[180]
+
+Package karnaugh-map Warning: The API for specifying variable labels have been 
+updated. You are currently using the old API(v1). In the new API each variable 
+label is specified separately. See the documentation for more details. Backward
+ compatibility may disappear in a future release. on input line 980.
+
+
+Package karnaugh-map Warning: The API for specifying variable labels have been 
+updated. You are currently using the old API(v1). In the new API each variable 
+label is specified separately. See the documentation for more details. Backward
+ compatibility may disappear in a future release. on input line 986.
+
+\@karnaughmap@local@testcaseone@=\count501
+\@karnaughmap@local@testcasetwo@=\count502
+\@karnaughmap@local@coordinateonecounter@=\count503
+\@karnaughmap@local@coordinatetwocounter@=\count504
+\@karnaughmap@local@coordinateonecounter@=\count505
+\@karnaughmap@local@coordinatetwocounter@=\count506
+\@karnaughmap@local@northwest@=\count507
+\@karnaughmap@local@southeast@=\count508
+\@karnaughmap@local@northwest@=\count509
+\@karnaughmap@local@southeast@=\count510
+\@karnaughmap@local@northwest@=\count511
+\@karnaughmap@local@southeast@=\count512
+\@karnaughmap@local@northwest@=\count513
+\@karnaughmap@local@southeast@=\count514
+\@karnaughmap@local@northwest@=\count515
+\@karnaughmap@local@southeast@=\count516
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[181]
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[182]
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[183]
+Package mdframed Info: mdframed works in twoside mode on input line 1134.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1134.
+Package mdframed Info: mdframed works in twoside mode on input line 1149.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1149.
+Package mdframed Info: mdframed works in twoside mode on input line 1160.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1160.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[184]
+Package mdframed Info: mdframed works in twoside mode on input line 1203.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1203.
+Package mdframed Info: Box was splittet wrong
+ starting loop to iterate the splitting point
+(mdframed)              on input line 1230.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[185]
+
+Package karnaugh-map Warning: The API for specifying variable labels have been 
+updated. You are currently using the old API(v1). In the new API each variable 
+label is specified separately. See the documentation for more details. Backward
+ compatibility may disappear in a future release. on input line 1244.
+
+
+Package karnaugh-map Warning: The API for specifying variable labels have been 
+updated. You are currently using the old API(v1). In the new API each variable 
+label is specified separately. See the documentation for more details. Backward
+ compatibility may disappear in a future release. on input line 1250.
+
+\@karnaughmap@local@testcaseone@=\count517
+\@karnaughmap@local@testcasetwo@=\count518
+\@karnaughmap@local@coordinateonecounter@=\count519
+\@karnaughmap@local@coordinatetwocounter@=\count520
+\@karnaughmap@local@coordinateonecounter@=\count521
+\@karnaughmap@local@coordinatetwocounter@=\count522
+\@karnaughmap@local@northwest@=\count523
+\@karnaughmap@local@southeast@=\count524
+\@karnaughmap@local@northwest@=\count525
+\@karnaughmap@local@southeast@=\count526
+\@karnaughmap@local@northwest@=\count527
+\@karnaughmap@local@southeast@=\count528
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[186]
+Package mdframed Info: mdframed works in twoside mode on input line 1271.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1271.
+Package mdframed Info: mdframed works in twoside mode on input line 1294.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1294.
+Package mdframed Info: mdframed works in twoside mode on input line 1310.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1310.
+Package mdframed Info: Not enough space on this page on input line 1314.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[187]
+Package mdframed Info: Not enough space on this page on input line 1314.
+
+Overfull \hbox (5.23253pt too wide) in paragraph at lines 1316--1323
+[][]\T1/ptm/b/n/12 (-20) Solution: []\T1/ptm/m/n/12 (-20) Sup-pose that you spe
+c-ify $\OML/ztmcm/m/it/12 F\OT1/ztmcm/m/n/12 (0\OML/ztmcm/m/it/12 ; \OT1/ztmcm/
+m/n/12 0\OML/ztmcm/m/it/12 ; \OT1/ztmcm/m/n/12 0)$\T1/ptm/m/n/12 (-20) . Then t
+he equa-tions de-ter-mine $\OML/ztmcm/m/it/12 F\OT1/ztmcm/m/n/12 (0\OML/ztmcm/m
+/it/12 ; \OT1/ztmcm/m/n/12 0\OML/ztmcm/m/it/12 ; \OT1/ztmcm/m/n/12 0) =
+ []
+
+Package mdframed Info: mdframed works in twoside mode on input line 1326.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1326.
+) (./content/Part2 Discrete math/Chapter2.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[188]
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[189] [190
+
+]
+Chapter 7.
+File: Images/orange2.jpg Graphic file (type jpg)
+<use Images/orange2.jpg>
+Package pdftex.def Info: Images/orange2.jpg  used on input line 4.
+(pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
+[191]
+Package mdframed Info: mdframed works in twoside mode on input line 18.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 18.
+Package mdframed Info: mdframed works in twoside mode on input line 30.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 30.
+Package mdframed Info: mdframed works in twoside mode on input line 43.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 43.
+Package mdframed Info: mdframed works in twoside mode on input line 58.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 58.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[192]
+Package mdframed Info: Not enough space on this page on input line 65.
+Package mdframed Info: mdframed works in twoside mode on input line 74.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 74.
+Package mdframed Info: mdframed works in twoside mode on input line 113.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 113.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[193]
+Package mdframed Info: Not enough space on this page on input line 119.
+Package mdframed Info: mdframed works in twoside mode on input line 122.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 122.
+Package mdframed Info: mdframed works in twoside mode on input line 141.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 141.
+Package mdframed Info: mdframed works in twoside mode on input line 146.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 146.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[194]
+Package mdframed Info: mdframed works in twoside mode on input line 187.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 187.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[195]
+Package mdframed Info: mdframed works in twoside mode on input line 242.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 242.
+Package mdframed Info: mdframed works in twoside mode on input line 250.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 250.
+Package mdframed Info: mdframed works in twoside mode on input line 256.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 256.
+Package mdframed Info: mdframed works in twoside mode on input line 262.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 262.
+Package mdframed Info: mdframed works in twoside mode on input line 272.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 272.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[196]
+Package mdframed Info: mdframed works in twoside mode on input line 300.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 300.
+Package mdframed Info: mdframed works in twoside mode on input line 323.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 323.
+Package mdframed Info: mdframed works in twoside mode on input line 330.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 330.
+Package mdframed Info: Not enough space on this page on input line 333.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[197]
+Package mdframed Info: Not enough space on this page on input line 333.
+
+Overfull \hbox (3.12549pt too wide) in paragraph at lines 370--371
+\T1/ptm/m/n/12 (-20) In whichever base, a num-ber could be ex-pressed us-ing th
+e ex-po-nent of the base.                   
+ []
+
+Package mdframed Info: mdframed works in twoside mode on input line 371.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 371.
+
+Package mdframed Warning: You got a bad break
+(mdframed)                because the last box will be empty
+(mdframed)                you have to change it manually
+(mdframed)                by changing the text, the space
+(mdframed)                or something else on input line 376.
+
+Package mdframed Info: You first box width is to small
+ mdframed fixed it
+(mdframed)              on input line 376.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[198]
+
+Package mdframed Warning: You got a bad break
+(mdframed)                because the last split box is empty
+(mdframed)                You have to change the settings on input line 376.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 420--426
+
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[199]
+Underfull \hbox (badness 10000) in paragraph at lines 429--430
+
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[200]
+<Images/converttab.png, id=2852, 918.43124pt x 193.32225pt>
+File: Images/converttab.png Graphic file (type png)
+<use Images/converttab.png>
+Package pdftex.def Info: Images/converttab.png  used on input line 509.
+(pdftex.def)             Requested size: 426.79135pt x 89.83786pt.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[201 <./Images/converttab.png>]
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[202]
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[203]
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[204]
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[205]
+Overfull \hbox (13.95683pt too wide) in paragraph at lines 725--737
+[][] 
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[206]
+Package mdframed Info: mdframed works in twoside mode on input line 785.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 785.
+Package mdframed Info: mdframed works in twoside mode on input line 793.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 793.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[207]
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[208]
+Package mdframed Info: mdframed works in twoside mode on input line 853.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 853.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[209]
+Package mdframed Info: mdframed works in twoside mode on input line 930.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 930.
+Package mdframed Info: mdframed works in twoside mode on input line 947.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 947.
+
+Underfull \vbox (badness 4266) has occurred while \output is active []
+
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[210]
+Package mdframed Info: Not enough space on this page on input line 949.
+Package mdframed Info: mdframed works in twoside mode on input line 969.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 969.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[211]
+Package mdframed Info: mdframed works in twoside mode on input line 993.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 993.
+Package mdframed Info: mdframed works in twoside mode on input line 1006.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1006.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[212]
+Package mdframed Info: mdframed works in twoside mode on input line 1072.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1072.
+Package mdframed Info: Box was splittet wrong
+ starting loop to iterate the splitting point
+(mdframed)              on input line 1078.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[213]
+Package mdframed Info: mdframed works in twoside mode on input line 1083.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1083.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[214]
+Package mdframed Info: mdframed works in twoside mode on input line 1154.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1154.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[215]
+Package mdframed Info: mdframed works in twoside mode on input line 1218.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1218.
+
+Package mdframed Warning: You got a bad break
+(mdframed)                because the last box will be empty
+(mdframed)                you have to change it manually
+(mdframed)                by changing the text, the space
+(mdframed)                or something else on input line 1223.
+
+Package mdframed Info: You first box width is to small
+ mdframed fixed it
+(mdframed)              on input line 1223.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[216]
+
+Package mdframed Warning: You got a bad break
+(mdframed)                because the last split box is empty
+(mdframed)                You have to change the settings on input line 1223.
+
+Package mdframed Info: mdframed works in twoside mode on input line 1268.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1268.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[217]
+Package mdframed Info: mdframed works in twoside mode on input line 1282.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1282.
+Package mdframed Info: mdframed works in twoside mode on input line 1303.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1303.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[218]
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[219]
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[220]
+Package mdframed Info: mdframed works in twoside mode on input line 1400.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1400.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[221]
+Package mdframed Info: mdframed works in twoside mode on input line 1487.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1487.
+
+Package mdframed Warning: You got a bad break
+(mdframed)                because the last box will be empty
+(mdframed)                you have to change it manually
+(mdframed)                by changing the text, the space
+(mdframed)                or something else on input line 1494.
+
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[222]) (./content/Part2 Discrete math/Chapter3.tex
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[223] [224
+
+]
+Chapter 8.
+File: Images/orange2.jpg Graphic file (type jpg)
+<use Images/orange2.jpg>
+Package pdftex.def Info: Images/orange2.jpg  used on input line 4.
+(pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
+[225]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 28.06596pt, for example:
+(fancyhdr)                \setlength{\headheight}{28.06596pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-13.8396pt}.
+
+[226]
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[227]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 28.06596pt, for example:
+(fancyhdr)                \setlength{\headheight}{28.06596pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-13.8396pt}.
+
+[228]
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[229]
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 28.06596pt, for example:
+(fancyhdr)                \setlength{\headheight}{28.06596pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-13.8396pt}.
+
+[230]
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[231]
+Package mdframed Info: mdframed works in twoside mode on input line 71.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 71.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 28.06596pt, for example:
+(fancyhdr)                \setlength{\headheight}{28.06596pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-13.8396pt}.
+
+[232]
+Overfull \hbox (18.94572pt too wide) detected at line 109
+ $\OT1/ztmcm/m/n/12 ^^B(\OML/ztmcm/m/it/12 g\OT1/ztmcm/m/n/12 (\OML/ztmcm/m/it/
+12 n\OT1/ztmcm/m/n/12 )) = \OMS/ztmcm/m/n/12 f\OML/ztmcm/m/it/12 f\OT1/ztmcm/m/
+n/12 (\OML/ztmcm/m/it/12 n\OT1/ztmcm/m/n/12 ) : \OMS/ztmcm/m/n/12 9\OML/ztmcm/m
+/it/12 c[] > \OT1/ztmcm/m/n/12 0\OML/ztmcm/m/it/12 ; c[] > \OT1/ztmcm/m/n/12 0\
+OML/ztmcm/m/it/12 ; n[] > \OT1/ztmcm/m/n/12 0[]0 \OMS/ztmcm/m/n/12 ^^T \OML/ztm
+cm/m/it/12 c[]g\OT1/ztmcm/m/n/12 (\OML/ztmcm/m/it/12 n\OT1/ztmcm/m/n/12 ) \OMS/
+ztmcm/m/n/12 ^^T \OML/ztmcm/m/it/12 f\OT1/ztmcm/m/n/12 (\OML/ztmcm/m/it/12 n\OT
+1/ztmcm/m/n/12 ) \OMS/ztmcm/m/n/12 ^^T \OML/ztmcm/m/it/12 c[]g\OT1/ztmcm/m/n/12
+ (\OML/ztmcm/m/it/12 n\OT1/ztmcm/m/n/12 )[]\OML/ztmcm/m/it/12 n \OMS/ztmcm/m/n/
+12 ^^U \OML/ztmcm/m/it/12 n[]\OMS/ztmcm/m/n/12 g$ 
+ []
+
+Package mdframed Info: mdframed works in twoside mode on input line 118.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 118.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[233]
+Underfull \hbox (badness 10000) in paragraph at lines 184--185
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 186--187
+
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 28.06596pt, for example:
+(fancyhdr)                \setlength{\headheight}{28.06596pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-13.8396pt}.
+
+[234]
+Package mdframed Info: mdframed works in twoside mode on input line 199.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 199.
+Package mdframed Info: mdframed works in twoside mode on input line 219.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 219.
+Package mdframed Info: mdframed works in twoside mode on input line 240.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 240.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[235]
+Package mdframed Info: mdframed works in twoside mode on input line 246.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 246.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 28.06596pt, for example:
+(fancyhdr)                \setlength{\headheight}{28.06596pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-13.8396pt}.
+
+[236]
+Package mdframed Info: mdframed works in twoside mode on input line 305.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 305.
+<Images/branchingtree.png, id=3124, 1098.504pt x 592.25266pt>
+File: Images/branchingtree.png Graphic file (type png)
+<use Images/branchingtree.png>
+Package pdftex.def Info: Images/branchingtree.png  used on input line 317.
+(pdftex.def)             Requested size: 341.43437pt x 184.07538pt.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[237 <./Images/branchingtree.png>]
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 28.06596pt, for example:
+(fancyhdr)                \setlength{\headheight}{28.06596pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-13.8396pt}.
+
+[238]
+Package mdframed Info: mdframed works in twoside mode on input line 402.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 402.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[239]
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 28.06596pt, for example:
+(fancyhdr)                \setlength{\headheight}{28.06596pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-13.8396pt}.
+
+[240]
+Package mdframed Info: mdframed works in twoside mode on input line 521.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 521.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[241]
+<Images/v2bintree.png, id=3157, 736.79265pt x 447.71265pt>
+File: Images/v2bintree.png Graphic file (type png)
+<use Images/v2bintree.png>
+Package pdftex.def Info: Images/v2bintree.png  used on input line 564.
+(pdftex.def)             Requested size: 426.79135pt x 259.33876pt.
+Package mdframed Info: mdframed works in twoside mode on input line 570.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 570.
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 28.06596pt, for example:
+(fancyhdr)                \setlength{\headheight}{28.06596pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-13.8396pt}.
+
+[242 <./Images/v2bintree.png (PNG copy)>]
+Package mdframed Info: mdframed works in twoside mode on input line 584.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 584.
+Package mdframed Info: mdframed works in twoside mode on input line 604.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 604.
+Package mdframed Info: mdframed works in twoside mode on input line 615.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 615.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[243]
+Package mdframed Info: Not enough space on this page on input line 617.
+) (./content/Part2 Discrete math/Chapter4.tex
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 28.06596pt, for example:
+(fancyhdr)                \setlength{\headheight}{28.06596pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-13.8396pt}.
+
+[244]
+Chapter 9.
+File: Images/orange2.jpg Graphic file (type jpg)
+<use Images/orange2.jpg>
+Package pdftex.def Info: Images/orange2.jpg  used on input line 4.
+(pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
+) [245
+
+] [246
+
+] (./main.ptc) [247] [248] (./content/Part3 Single-variable Calculus/Chapter1.t
+ex
+Chapter 10.
+File: Images/orange2.jpg Graphic file (type jpg)
+<use Images/orange2.jpg>
+Package pdftex.def Info: Images/orange2.jpg  used on input line 4.
+(pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
+) (./content/Part3 Single-variable Calculus/Chapter2.tex [249
+
+] [250
+
+]
+Chapter 11.
+File: Images/orange2.jpg Graphic file (type jpg)
+<use Images/orange2.jpg>
+Package pdftex.def Info: Images/orange2.jpg  used on input line 4.
+(pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
+) (./content/Part3 Single-variable Calculus/Chapter3.tex [251] [252
+
+]
+Chapter 12.
+File: Images/orange2.jpg Graphic file (type jpg)
+<use Images/orange2.jpg>
+Package pdftex.def Info: Images/orange2.jpg  used on input line 4.
+(pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
+) (./content/Part3 Single-variable Calculus/Chapter4.tex [253] [254
+
+]
+Chapter 13.
+File: Images/orange2.jpg Graphic file (type jpg)
+<use Images/orange2.jpg>
+Package pdftex.def Info: Images/orange2.jpg  used on input line 4.
+(pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
+) (./content/Part3 Single-variable Calculus/Chapter5.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[255]
+Overfull \vbox (208.17586pt too high) has occurred while \output is active []
+
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[256]
+Chapter 14.
+File: Images/orange2.jpg Graphic file (type jpg)
+<use Images/orange2.jpg>
+Package pdftex.def Info: Images/orange2.jpg  used on input line 4.
+(pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
+) (./content/Part3 Single-variable Calculus/Chapter6.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[257
+
+]
+Overfull \vbox (47.22583pt too high) has occurred while \output is active []
+
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[258]
+Chapter 15.
+File: Images/orange2.jpg Graphic file (type jpg)
+<use Images/orange2.jpg>
+Package pdftex.def Info: Images/orange2.jpg  used on input line 4.
+(pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
+) (./content/Part3 Single-variable Calculus/Chapter7.tex [259
+
+] [260
+
+]
+Chapter 16.
+File: Images/orange2.jpg Graphic file (type jpg)
+<use Images/orange2.jpg>
+Package pdftex.def Info: Images/orange2.jpg  used on input line 4.
+(pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
+) [261] [262
+
+] (./main.ptc) [263] [264] (./content/Part4 Multi-variable Calculus/Chapter1.te
+x
+Chapter 17.
+File: Images/orange2.jpg Graphic file (type jpg)
+<use Images/orange2.jpg>
+Package pdftex.def Info: Images/orange2.jpg  used on input line 4.
+(pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
+[265
+
+] [266
+
+]
+Chapter 18.
+File: Images/orange2.jpg Graphic file (type jpg)
+<use Images/orange2.jpg>
+Package pdftex.def Info: Images/orange2.jpg  used on input line 10.
+(pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
+[267] [268
+
+]
+Chapter 19.
+File: Images/orange2.jpg Graphic file (type jpg)
+<use Images/orange2.jpg>
+Package pdftex.def Info: Images/orange2.jpg  used on input line 18.
+(pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
+[269] [270
+
+]
+Chapter 20.
+File: Images/orange2.jpg Graphic file (type jpg)
+<use Images/orange2.jpg>
+Package pdftex.def Info: Images/orange2.jpg  used on input line 27.
+(pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
+[271] [272
+
+]
+Chapter 21.
+File: Images/orange2.jpg Graphic file (type jpg)
+<use Images/orange2.jpg>
+Package pdftex.def Info: Images/orange2.jpg  used on input line 38.
+(pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
+) [273] [274
+
+] (./main.ptc) [275] [276] (./content/Part5 Linear Algebra/Chapter1.tex
+Chapter 22.
+File: Images/orange2.jpg Graphic file (type jpg)
+<use Images/orange2.jpg>
+Package pdftex.def Info: Images/orange2.jpg  used on input line 4.
+(pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
+[277
+
+] [278
+
+]
+Chapter 23.
+File: Images/orange2.jpg Graphic file (type jpg)
+<use Images/orange2.jpg>
+Package pdftex.def Info: Images/orange2.jpg  used on input line 14.
+(pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
+[279] [280
+
+]
+Chapter 24.
+File: Images/orange2.jpg Graphic file (type jpg)
+<use Images/orange2.jpg>
+Package pdftex.def Info: Images/orange2.jpg  used on input line 20.
+(pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
+[281] [282
+
+]
+Chapter 25.
+File: Images/orange2.jpg Graphic file (type jpg)
+<use Images/orange2.jpg>
+Package pdftex.def Info: Images/orange2.jpg  used on input line 26.
+(pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
+[283] [284
+
+]
+Chapter 26.
+File: Images/orange2.jpg Graphic file (type jpg)
+<use Images/orange2.jpg>
+Package pdftex.def Info: Images/orange2.jpg  used on input line 32.
+(pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
+[285] [286
+
+]
+Chapter 27.
+File: Images/orange2.jpg Graphic file (type jpg)
+<use Images/orange2.jpg>
+Package pdftex.def Info: Images/orange2.jpg  used on input line 37.
+(pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
+[287] [288
+
+]
+Chapter 28.
+File: Images/orange2.jpg Graphic file (type jpg)
+<use Images/orange2.jpg>
+Package pdftex.def Info: Images/orange2.jpg  used on input line 43.
+(pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
+[289] [290
+
+]
+Chapter 29.
+File: Images/orange2.jpg Graphic file (type jpg)
+<use Images/orange2.jpg>
+Package pdftex.def Info: Images/orange2.jpg  used on input line 49.
+(pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
+[291] [292
+
+]
+Chapter 30.
+File: Images/orange2.jpg Graphic file (type jpg)
+<use Images/orange2.jpg>
+Package pdftex.def Info: Images/orange2.jpg  used on input line 56.
+(pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
+) [293] [294
+
+] (./main.ptc) [295] [296] (./content/Part6 Probability and Combinatorics/Chapt
+er1.tex
+Chapter 31.
+File: Images/orange2.jpg Graphic file (type jpg)
+<use Images/orange2.jpg>
+Package pdftex.def Info: Images/orange2.jpg  used on input line 4.
+(pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
+[297
+
+] [298
+
+]
+Chapter 32.
+File: Images/orange2.jpg Graphic file (type jpg)
+<use Images/orange2.jpg>
+Package pdftex.def Info: Images/orange2.jpg  used on input line 10.
+(pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
+[299] [300
+
+]
+Chapter 33.
+File: Images/orange2.jpg Graphic file (type jpg)
+<use Images/orange2.jpg>
+Package pdftex.def Info: Images/orange2.jpg  used on input line 16.
+(pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
+[301] [302
+
+]
+Chapter 34.
+File: Images/orange2.jpg Graphic file (type jpg)
+<use Images/orange2.jpg>
+Package pdftex.def Info: Images/orange2.jpg  used on input line 22.
+(pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
+[303] [304
+
+]
+Chapter 35.
+File: Images/orange2.jpg Graphic file (type jpg)
+<use Images/orange2.jpg>
+Package pdftex.def Info: Images/orange2.jpg  used on input line 28.
+(pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
+[305] [306
+
+]
+Chapter 36.
+File: Images/orange2.jpg Graphic file (type jpg)
+<use Images/orange2.jpg>
+Package pdftex.def Info: Images/orange2.jpg  used on input line 35.
+(pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
+[307] [308
+
+]
+Chapter 37.
+File: Images/orange2.jpg Graphic file (type jpg)
+<use Images/orange2.jpg>
+Package pdftex.def Info: Images/orange2.jpg  used on input line 42.
+(pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
+[309] [310
+
+]
+Chapter 38.
+File: Images/orange2.jpg Graphic file (type jpg)
+<use Images/orange2.jpg>
+Package pdftex.def Info: Images/orange2.jpg  used on input line 48.
+(pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
+) [311] [312
+
+] (./main.ptc) [313] [314] (./content/Part7 Statistics/Chapter1.tex
+Chapter 39.
+File: Images/orange2.jpg Graphic file (type jpg)
+<use Images/orange2.jpg>
+Package pdftex.def Info: Images/orange2.jpg  used on input line 4.
+(pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
+[315
+
+] [316
+
+]
+Chapter 40.
+File: Images/orange2.jpg Graphic file (type jpg)
+<use Images/orange2.jpg>
+Package pdftex.def Info: Images/orange2.jpg  used on input line 10.
+(pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
+[317] [318
+
+]
+Chapter 41.
+File: Images/orange2.jpg Graphic file (type jpg)
+<use Images/orange2.jpg>
+Package pdftex.def Info: Images/orange2.jpg  used on input line 16.
+(pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
+[319] [320
+
+]
+Chapter 42.
+File: Images/orange2.jpg Graphic file (type jpg)
+<use Images/orange2.jpg>
+Package pdftex.def Info: Images/orange2.jpg  used on input line 23.
+(pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
+[321] [322
+
+]
+Chapter 43.
+File: Images/orange2.jpg Graphic file (type jpg)
+<use Images/orange2.jpg>
+Package pdftex.def Info: Images/orange2.jpg  used on input line 34.
+(pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
+[323] [324
+
+]
+Chapter 44.
+File: Images/orange2.jpg Graphic file (type jpg)
+<use Images/orange2.jpg>
+Package pdftex.def Info: Images/orange2.jpg  used on input line 40.
+(pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
+[325] [326
+
+]
+Chapter 45.
+File: Images/orange2.jpg Graphic file (type jpg)
+<use Images/orange2.jpg>
+Package pdftex.def Info: Images/orange2.jpg  used on input line 46.
+(pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
+) [327] [328
+
+] (./main.ptc) [329] [330] (./content/Part8 Basic Information Theory/Chapter1.t
+ex
+Chapter 46.
+File: Images/orange2.jpg Graphic file (type jpg)
+<use Images/orange2.jpg>
+Package pdftex.def Info: Images/orange2.jpg  used on input line 4.
+(pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
+[331
+
+] [332
+
+]
+Chapter 47.
+File: Images/orange2.jpg Graphic file (type jpg)
+<use Images/orange2.jpg>
+Package pdftex.def Info: Images/orange2.jpg  used on input line 10.
+(pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
+[333] [334
+
+]
+Chapter 48.
+File: Images/orange2.jpg Graphic file (type jpg)
+<use Images/orange2.jpg>
+Package pdftex.def Info: Images/orange2.jpg  used on input line 16.
+(pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
+[335] [336
+
+]
+Chapter 49.
+File: Images/orange2.jpg Graphic file (type jpg)
+<use Images/orange2.jpg>
+Package pdftex.def Info: Images/orange2.jpg  used on input line 22.
+(pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
+[337] [338
+
+]
+Chapter 50.
+File: Images/orange2.jpg Graphic file (type jpg)
+<use Images/orange2.jpg>
+Package pdftex.def Info: Images/orange2.jpg  used on input line 28.
+(pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
+[339] [340
+
+]
+Chapter 51.
+File: Images/orange2.jpg Graphic file (type jpg)
+<use Images/orange2.jpg>
+Package pdftex.def Info: Images/orange2.jpg  used on input line 34.
+(pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
+)
+\tf@ptc=\write9
+\openout9 = `main.ptc'.
+
+[341] (./main.aux)
+ ***********
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-01-22>
+ ***********
+Package logreq Info: Writing requests to 'main.run.xml'.
+\openout1 = `main.run.xml'.
+
+ ) 
 Here is how much of TeX's memory you used:
- 34981 strings out of 474222
- 654433 string characters out of 5747695
- 1924978 words of memory out of 5000000
- 56693 multiletter control sequences out of 15000+600000
- 560903 words of font info for 41 fonts, out of 8000000 for 9000
+ 39273 strings out of 474222
+ 723221 string characters out of 5747695
+ 1989978 words of memory out of 5000000
+ 58595 multiletter control sequences out of 15000+600000
+ 754024 words of font info for 732 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 98i,0n,101p,1001b,803s stack positions out of 10000i,1000n,20000p,200000b,200000s
-!  ==> Fatal error occurred, no output PDF file produced!
+ 98i,18n,101p,1371b,1351s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive-full/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c
+:/texlive-full/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/te
+xlive-full/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive
+-full/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive-ful
+l/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/texlive-fu
+ll/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive-f
+ull/2023/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb><c:/texlive-full/2023/te
+xmf-dist/fonts/type1/public/cm-super/sftt1200.pfb><c:/texlive-full/2023/texmf-d
+ist/fonts/type1/urw/avantgar/uagd8a.pfb><c:/texlive-full/2023/texmf-dist/fonts/
+type1/urw/avantgar/uagk8a.pfb><c:/texlive-full/2023/texmf-dist/fonts/type1/urw/
+symbol/usyr.pfb><c:/texlive-full/2023/texmf-dist/fonts/type1/urw/symbol/usyr.pf
+b><c:/texlive-full/2023/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive
+-full/2023/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive-full/2023/te
+xmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on main.pdf (341 pages, 6187518 bytes).
+PDF statistics:
+ 4553 PDF objects out of 5155 (max. 8388607)
+ 3687 compressed objects within 37 object streams
+ 1371 named destinations out of 1440 (max. 500000)
+ 181363 words of extra memory for PDF output out of 184870 (max. 10000000)
+

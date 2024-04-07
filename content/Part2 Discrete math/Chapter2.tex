@@ -1486,11 +1486,49 @@ to solving this Diophantine equation. This is equivalent to find $ax\equiv c \pm
 
 \begin{exercise}
 	Use the Euclidean algorithm to find the greatest common divisor of 504 and 385.
-	And consider
+	consider
 	\begin{itemize}
 		\item Is it possible to find an integer \(y\) such that \(504y \equiv 10 \mod 385\)? If it is, find one. If it isn't, explain why not.
 		\item Is it possible to find an integer \(z\) such that \(504z \equiv 7 \mod 385\)? If it is, find one. If it isn't, explain why not.
 	\end{itemize}
 \end{exercise}
+\begin{solution}
+	By extended Euclidean Algorithm
+	\begin{align*}
+		504 & =1\times 385+119\\
+		385 & =3\times 119+28\\
+		119 & =4\times 28+7\\
+		28 & =4\times 7+0
+	\end{align*}
+	We conclude that $\gcd(504, 385)=7$
+	
+	Since solving linear congruence is equivalent to solving Linear Diophantine Equation. So we need to solve 
+	$$\begin{aligned}
+		10 &=504x+385y\\
+		\text{and}\\
+		7 &= 504x+385y
+	\end{aligned}$$
+	The equation \(504z \equiv 7 \mod 385\) can be simplified to \(119z \equiv 7 \mod 385\) since \(504 \equiv 119 \mod 385\). Because the gcd(119, 385) = 7 does divide 7, a solution exists. Dividing the equation by 7 gives \(17z \equiv 1 \mod 55\). Testing multiples of 17 modulo 55, we find that \(17 \cdot 13 \equiv 1 \mod 55\), so \(z = 13\) is a solution. 
+	
+	For the second function, we cannot find any linear combination of integers for the expression, because $ 7\nmid 10$.
+	
+	For the general solution, we can use the conclusion obtained earlier in this chapter that 
+$$
+	\begin{cases}
+		x = k \times x_0 + t (\frac{385}{\gcd(504,385)})\\
+		y = k \times y_0 + t (\frac{504}{\gcd(504,385)})
+	\end{cases}
+$$
+	where $k,t$ are just some integers, and $x_0,y_0$ are a set of specific solution, which could be found by back substitution.
+	By back substitution in the lines of extended Euclidean algorithm, we have $\gcd(504,385) = 13\times 504-17\times385$.
+	So
+	$$
+	\begin{cases}
+		x = k \times 13 + t (\frac{385}{\gcd(504,385)})\\
+		y = k \times (-17) + t (\frac{504}{\gcd(504,385)})
+	\end{cases}
+	$$
+	is the general solution for the equation.
+\end{solution}
 
 
