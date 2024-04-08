@@ -1,22 +1,22 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {2.1}{\ignorespaces Basic Elementary Functions}}{45}{table.2.1}%
+\contentsline {table}{\numberline {2.1}{\ignorespaces Basic Elementary Functions}}{47}{table.2.1}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {3.1}{\ignorespaces Execution of RPM}}{84}{table.3.1}%
-\contentsline {table}{\numberline {3.2}{\ignorespaces Common time complexities in Big O notation}}{86}{table.3.2}%
+\contentsline {table}{\numberline {3.1}{\ignorespaces Execution of RPM}}{86}{table.3.1}%
+\contentsline {table}{\numberline {3.2}{\ignorespaces Common time complexities in Big O notation}}{88}{table.3.2}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {6.1}{\ignorespaces Common Algebraic Laws}}{163}{table.6.1}%
-\contentsline {table}{\numberline {6.2}{\ignorespaces Common Boolean Operators Truth Tables}}{165}{table.6.2}%
-\contentsline {table}{\numberline {6.3}{\ignorespaces Addition and Multiplication Rule of 0 and 1}}{166}{table.6.3}%
-\contentsline {table}{\numberline {6.4}{\ignorespaces Truth table for \((A \land \neg B) \lor (\neg A \land B)\)}}{166}{table.6.4}%
-\contentsline {table}{\numberline {6.5}{\ignorespaces Basic Boolean Identities}}{166}{table.6.5}%
-\contentsline {table}{\numberline {6.6}{\ignorespaces Truth values of material conditional, biconditional, and XOR for all possible inputs.}}{168}{table.6.6}%
-\contentsline {table}{\numberline {6.7}{\ignorespaces Truth table for the expression \( x \lor ((\lnot y) \land (\lnot z)) \)}}{171}{table.6.7}%
-\contentsline {table}{\numberline {6.8}{\ignorespaces Minterms represented by bit strings}}{183}{table.6.8}%
-\contentsline {table}{\numberline {6.9}{\ignorespaces Combining minterms}}{184}{table.6.9}%
-\contentsline {table}{\numberline {6.10}{\ignorespaces Prime Implicant Chart}}{184}{table.6.10}%
+\contentsline {table}{\numberline {6.1}{\ignorespaces Common Algebraic Laws}}{165}{table.6.1}%
+\contentsline {table}{\numberline {6.2}{\ignorespaces Common Boolean Operators Truth Tables}}{167}{table.6.2}%
+\contentsline {table}{\numberline {6.3}{\ignorespaces Addition and Multiplication Rule of 0 and 1}}{168}{table.6.3}%
+\contentsline {table}{\numberline {6.4}{\ignorespaces Truth table for \((A \land \neg B) \lor (\neg A \land B)\)}}{168}{table.6.4}%
+\contentsline {table}{\numberline {6.5}{\ignorespaces Basic Boolean Identities}}{168}{table.6.5}%
+\contentsline {table}{\numberline {6.6}{\ignorespaces Truth values of material conditional, biconditional, and XOR for all possible inputs.}}{170}{table.6.6}%
+\contentsline {table}{\numberline {6.7}{\ignorespaces Truth table for the expression \( x \lor ((\lnot y) \land (\lnot z)) \)}}{173}{table.6.7}%
+\contentsline {table}{\numberline {6.8}{\ignorespaces Minterms represented by bit strings}}{185}{table.6.8}%
+\contentsline {table}{\numberline {6.9}{\ignorespaces Combining minterms}}{186}{table.6.9}%
+\contentsline {table}{\numberline {6.10}{\ignorespaces Prime Implicant Chart}}{186}{table.6.10}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

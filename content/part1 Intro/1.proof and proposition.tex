@@ -898,4 +898,32 @@ Therefore, when \( r = 2, \forall n \in \mathbb{N}, \sum_{j=0}^{n} (j + 1)2^j = 
 and when \( r = 3, \forall n \in \mathbb{N}, \sum_{j=0}^{n} (j + 1)3^j = \frac{[(3 - 1)n + (3 - 2)]3^{n+1} + 1}{(3 - 1)^2} = \frac{[2n + 1]3^{n+1} + 1}{4} \).
 \end{proof}
 
+\begin{exercise}
+Suppose that $a(0) = 4$, $a(1) = 6$ and $a(n+1)=2a(n)$ - a(n-1) for $n > = 1$.
+By writing down a few terms of this sequence, suggest a (non-recursive) formula for $a(n)$ and prove that your formula is correct using strong induction.
+\end{exercise}
+\begin{proof}[Solution]
+	First we calculate the first few terms of the sequence:
+	\begin{align*}
+		a(2) &= 2a(1) - a(0) = 2 \cdot 6 - 4 = 8, \\
+		a(3) &= 2a(2) - a(1) = 2 \cdot 8 - 6 = 10, \\
+		a(4) &= 2a(3) - a(2) = 2 \cdot 10 - 8 = 12, \\
+		&\vdots
+	\end{align*}
+	It appears that \( a(n) = 2n + 4 \). Now we prove by strong induction.
+	
+	\textbf{Base case:} \( a(0) = 4 \) and \( a(1) = 6 \) satisfy the formula \( a(n) = 2n + 4 \).
+	
+	\textbf{Inductive step:} Assume \( a(k) = 2k + 4 \) holds for all \( k \leq n \). Then for \( n+1 \),
+	\begin{align*}
+		a(n+1) &= 2a(n) - a(n-1) \\
+		&= 2(2n + 4) - (2(n-1) + 4) \\
+		&= 4n + 8 - 2n + 2 - 4 \\
+		&= 2n + 6 \\
+		&= 2(n+1) + 4,
+	\end{align*}
+	which is the desired formula. Therefore, by strong induction, the formula holds for all \( n \geq 0 \).
+\end{proof}
+
+
 %------------------------------------------------
