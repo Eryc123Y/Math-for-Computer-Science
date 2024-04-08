@@ -1,18 +1,18 @@
 # Fdb version 4
-["biber main"] 1712540770 "main.bcf" "main.bbl" "main" 1712540785 0
-  "main.bcf" 1712540785 106744 d633c18b3344f88d3b4a9110489c01b7 "pdflatex"
+["biber main"] 1712553062 "main.bcf" "main.bbl" "main" 1712553611 0
+  "main.bcf" 1712553611 106744 d633c18b3344f88d3b4a9110489c01b7 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["makeindex main.idx"] 1712507255.33782 "main.idx" "main.ind" "main" 1712540785 0
-  "main.idx" 1712540780 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+["makeindex main.idx"] 1712553057 "main.idx" "main.ind" "main" 1712553611 0
+  "main.idx" 1712553606 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   (generated)
   "main.ilg"
   "main.ind"
   (rewritten before read)
-["pdflatex"] 1712540779 "/Users/ericyang/Documents/GitHub/Math-for-Computer-Science/main.tex" "main.pdf" "main" 1712540785 0
-  "/Users/ericyang/Documents/GitHub/Math-for-Computer-Science/main.tex" 1712540764 8229 9a96561be3e04fcff4146303a0ca4591 ""
+["pdflatex"] 1712553606 "/Users/ericyang/Documents/GitHub/Math-for-Computer-Science/main.tex" "main.pdf" "main" 1712553611 0
+  "/Users/ericyang/Documents/GitHub/Math-for-Computer-Science/main.tex" 1712553600 8509 9865212ddfdfb7ca4c3bfb9db2b09a6b ""
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -302,10 +302,12 @@
   "Images/time complexity.png" 1707727964 150606 94ea2a0fcf04baeca0cbde80ec8e15ac ""
   "Images/x+y.png" 1712535353 62314 a7c8a1a7255f4aa540ab83347c78e418 ""
   "LegrandOrangeBook.cls" 1707727964 34330 8b54c63dbc2df44de404d2768f953f7c ""
-  "content/Part2 Discrete math/Chapter1.tex" 1712535353 81352 39ceb7d0f4451343f02cb6b30e5b260f ""
-  "content/Part2 Discrete math/Chapter2.tex" 1712535353 94021 d694a88ecc4d489e2cd778d1f333455b ""
-  "content/Part2 Discrete math/Chapter3.tex" 1712540764 36779 c5e080f6b76208fb860bcf3241effacb ""
-  "content/Part2 Discrete math/Chapter4.tex" 1707727964 105 75644d9f2dfb719db49f3f5f256a9bdb ""
+  "content/Part2 Discrete math/1.Boolean Algebra.tex" 1712535353 81352 39ceb7d0f4451343f02cb6b30e5b260f ""
+  "content/Part2 Discrete math/2.Number Theory.tex" 1712535353 94021 d694a88ecc4d489e2cd778d1f333455b ""
+  "content/Part2 Discrete math/3.Relation and Order.tex" 1712553600 35351 192551c2f518abf26d0c79df089a0910 ""
+  "content/Part2 Discrete math/4.Graph Theory.tex" 1707727964 105 75644d9f2dfb719db49f3f5f256a9bdb ""
+  "content/Part2 Discrete math/5.Basics of Abstract Algebra.tex" 1712553433 541 d9531ec798e7634b81b6aa1c607be08d ""
+  "content/Part2 Discrete math/6.Introductory Topology and Category Theory.tex" 1712553595 1233 9d11972a035b20d5a0c160cab7cabf59 ""
   "content/Part3 Single-variable Calculus/Chapter1.tex" 1707727964 253 9fd8e282897f99bcd0b71fc264a23be9 ""
   "content/Part3 Single-variable Calculus/Chapter2.tex" 1707727964 193 ac4eabbcd266e7d94f3b5804a736917a ""
   "content/Part3 Single-variable Calculus/Chapter3.tex" 1707727964 243 df30c90f25bfa10cd6290e6bc0c3d47e ""
@@ -318,20 +320,20 @@
   "content/Part6 Probability and Combinatorics/Chapter1.tex" 1707727964 973 afe36b06010a633e7b82334c7a12778d ""
   "content/Part7 Statistics/Chapter1.tex" 1707727964 1022 b2c1f9d83977613a5dc61bf7e4818b34 ""
   "content/Part8 Basic Information Theory/Chapter1.tex" 1707727964 726 1d99886bef6f1271d83ef03a8d03a6fa ""
-  "content/part1 Intro/Chapter1.tex" 1707727964 49203 cd203b578cf781b806a4d4c04682a394 ""
-  "content/part1 Intro/Chapter2.tex" 1712535353 91119 754b0cea5751cf6810a0d6b51b289257 ""
-  "content/part1 Intro/Chapter3.tex" 1709097745 38240 96463bbfb7efa777383c53bee41a1c3a ""
-  "content/part1 Intro/Chapter4.tex" 1712535353 56143 12d7e1c9df0285c6cb6debb9f9449b00 ""
-  "content/part1 Intro/Chapter5.tex" 1707727964 86335 989a2fe9a0123e4b52072bab758ecc3f ""
-  "main.aux" 1712540785 134093 ce9341bc6020dcb75678d9d1bc3409cb "pdflatex"
-  "main.bbl" 1712540774 0 d41d8cd98f00b204e9800998ecf8427e "biber main"
-  "main.ind" 1711066343 0 d41d8cd98f00b204e9800998ecf8427e "makeindex main.idx"
-  "main.lof" 1712540785 3574 a17b9c7ddf9244090f85deb276790731 "pdflatex"
-  "main.lot" 1712540785 2495 d3ba97ccf86d542ef61f6d48dc565445 "pdflatex"
-  "main.ptc" 1712540785 28428 b23eaa1fefd7431c45880e8744cccb79 "pdflatex"
-  "main.run.xml" 1712540785 2224 bc6149f5caee4074188e1b81a66978d0 "pdflatex"
-  "main.tex" 1712540764 8229 9a96561be3e04fcff4146303a0ca4591 ""
-  "main.toc" 1712540785 28090 c1e26e4e432fafa9de52b9ffbce0ef28 "pdflatex"
+  "content/part1 Intro/1.proof and proposition.tex" 1707727964 49203 cd203b578cf781b806a4d4c04682a394 ""
+  "content/part1 Intro/2.Set, Sequence, Function, and Summation.tex" 1712535353 91119 754b0cea5751cf6810a0d6b51b289257 ""
+  "content/part1 Intro/3.Algorithm and Number System.tex" 1712551333 38247 7a595ea93e0ca3cb74a0582db11b87a3 ""
+  "content/part1 Intro/4.Inequality.tex" 1712535353 56143 12d7e1c9df0285c6cb6debb9f9449b00 ""
+  "content/part1 Intro/5.Complex Number.tex" 1707727964 86335 989a2fe9a0123e4b52072bab758ecc3f ""
+  "main.aux" 1712553611 136664 dc704973ff957eaab768f93a62eb1f55 "pdflatex"
+  "main.bbl" 1712553066 0 d41d8cd98f00b204e9800998ecf8427e "biber main"
+  "main.ind" 1712553057 0 d41d8cd98f00b204e9800998ecf8427e "makeindex main.idx"
+  "main.lof" 1712553611 3614 7fa2fe95e7e51886021f3bb4d89f158b "pdflatex"
+  "main.lot" 1712553611 2535 ede006630e5ee0c8972c4c3ab0a048e4 "pdflatex"
+  "main.ptc" 1712553611 28723 71339d8caa5b5b1a44a342587b1ba8ac "pdflatex"
+  "main.run.xml" 1712553611 2224 bc6149f5caee4074188e1b81a66978d0 "pdflatex"
+  "main.tex" 1712553600 8509 9865212ddfdfb7ca4c3bfb9db2b09a6b ""
+  "main.toc" 1712553611 28385 15173c7c7dc1aace2ab8515b3aa0001a "pdflatex"
   (generated)
   "main.aux"
   "main.bcf"

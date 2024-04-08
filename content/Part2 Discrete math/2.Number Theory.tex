@@ -1,0 +1,1534 @@
+\chapterimage{orange2.jpg}
+\chapterspaceabove{6.75cm} 
+\chapterspacebelow{7.25cm} 
+\chapter{Preliminary Number Theory and Cryptography}
+%intro
+In this chapter, we will look into one of the most exciting part of mathematics, and it is also a
+crucial cornerstone for computer science. The inception of number theory can be traced back to ancient civilizations, but it began to emerge as a distinct mathematical discipline with the work of the Greek mathematician Euclid. His monumental work, "Elements," laid the groundwork for the study of prime numbers and proved fundamental theorems, such as the infinitude of primes, which are still central to number theory today. The nature of whole numbers, especially the intriguing properties of prime numbers—the building blocks of all natural numbers—has fascinated mathematicians for centuries. Over time, the field has expanded to include a rich array of topics such as the distribution of primes, the solutions of Diophantine equations, modular arithmetic, and the exploration of number-theoretic functions like the Riemann zeta function. Number theory's initial focus on prime numbers and divisibility has blossomed into a diverse and vibrant branch of mathematics, with applications ranging from cryptography to the theory of chaos.
+
+\section{Divisibility and Modular Arithmetic}
+We start with the divisibility of number, as it is the basis of many further topics.
+Divisibility serves as the cornerstone of number theory due to several pivotal reasons. It is the bedrock upon which the Fundamental Theorem of Arithmetic stands, declaring that each integer greater than 1 is uniquely decomposable into a product of prime numbers. These primes are the elemental units, akin to atoms in chemistry, from which all other numbers are constructed. The concepts of greatest common divisors and least common multiples emerge from divisibility, forming the basis of crucial algebraic structures such as rings and fields, and thereby extending number theory into algebraic realms. Furthermore, the pursuit of integer solutions to equations, known as Diophantine analysis, is deeply reliant on principles of divisibility. In the modern context, divisibility underpins cryptographic systems, leveraging the challenging task of prime factorization to secure digital communication. Moreover, divisibility naturally extends to modular arithmetic, enriching number theory with the study of congruences, which has profound implications across mathematics and its myriad applications. Therefore, the study of divisibility is not just foundational but also a connective thread that weaves through the entire fabric of number theory.
+
+\subsection{Division and Divisibility}
+To figure out problems related to \textbf{Divisibility}, we must figure out the definition and properties
+of \textbf{Division}. We were taught in the primary school that a division is an operation  that
+divides a number to a certain part. For instance, $6\div2=3$, and $6\div4=1.5$. Sometimes, the
+division produce an integer as result, while sometimes not. We define division as follows:
+    \begin{definition}[Division]
+        The division of a number \( a \) by a non-zero number \( b \) is denoted by \( a \div b \) or \( \frac{a}{b} \), and it gives the quotient \( q \) and possibly a remainder \( r \). The operation can be written as:
+        \[
+        a = b \times q + r
+        \]
+        where \( 0 \leq r < b \) and \(q \in \mathbb{Z}\).
+    \end{definition}
+    In $6\div2=3$, clearly we have $6=2\times3+0$, with $r=0$, $q=3$. But how could we explain
+    $6\div4=1.5$? The quotient is a decimal instead of an integer. Fundamentally, we cannot separate
+    the number 6 in to 4 parts to be represented as integer. In this case the division can be represented
+    as $6 = 4\times0+6$, meaning $q=0$ and $r=6$. Actually, $6\div4=1.5$ is not defined as only
+    division, but \textbf{True Division}.
+    \begin{definition}[True Division]
+        True division is concerned with the quotient including the remainder as a fractional part. In true division, when \( a \) is divided by \( b \), the quotient \( q \) is a real number that can be represented as:
+        \[
+        q = \frac{a}{b}
+        \]
+    \end{definition}
+    You may find that true division doesn't have a remainder. This is just because the purpose of 
+    these two operations are different, as true division only focus on the scale of each part of
+    $a$, but division involves the divisibility and remainder, which will be discussed further
+    in this chapter.
+
+    Now that we have defined division and true division, you may understand the following definition
+    of divisibility easier.
+    \begin{definition}[Divisibility]
+        If $a$ and $b$ are integers with $a \neq 0$, we say that $a$ divides $b$ if there is an integer $c$ such that $b = a\times c$ (or equivalently, if $b$ an is an integer). When $a$ divides $b$ we say that $a$ is a factor or divisor of $b$, and that $b$ is a multiple of $a$. The notation a $\mid$ b denotes that $a$ divides $b$. We write $a \nmid b$ when $a$ does not divide $b$
+    \end{definition}
+    For example, we have $4\mid 20$, because $20\div4$ gives an integer, however, $4\nmid 21$, as the answer
+    cannot be represented as integer. Besides, we have:
+    \begin{equation}
+        a\mid b \iff \exists c(ac=b).
+    \end{equation}
+
+    \begin{problem}
+        Let \( n \) and \( d \) be positive integers. How many positive integers not exceeding \( n \) are divisible by \( d \)?
+    \end{problem}
+    \textbf{Solution:} The positive integers divisible by \( d \) are all the integers of the form \( dk \), where \( k \) is a positive integer. Hence, the number of positive integers divisible by \( d \) that do not exceed \( n \) equals the number of integers \( k \) with \( 0 < dk \leq n \), or with \( 0 < k \leq \frac{n}{d} \). Therefore, there are \( \left\lfloor \frac{n}{d} \right\rfloor \) positive integers not exceeding \( n \) that are divisible by \( d \).
+
+    Divisibility holds the following properties, which could be proven directly.
+    \begin{theorem}[Properties of Divisibility] \label{Properties of Divisibility}
+        Let $a$, $b$, and $c$ be integers, where $a\neq 0$, then:
+        \begin{enumerate}
+            \item if $a \mid b$ and $a \mid c$, then $a \mid (b+c)$
+            \item if $a \mid b$ then $a \mid bc$ for all integers $c$
+            \item if $a \mid b$ and $b\mid c$, then $a \mid c$
+        \end{enumerate}
+    \end{theorem}
+    \begin{proof}
+        Since \( a \mid b \) and \( a \mid c \), there exist integers \( m \) and \( n \) such that \( b = am \) and \( c = an \). Therefore, \( b+c = am + an = a(m+n) \), and since \( m+n \) is an integer, it follows that \( a \mid (b+c) \).
+        
+        Given \( a \mid b \), there exists an integer \( k \) such that \( b = ak \). For any integer \( c \), \( bc = a(kc) \). Since \( kc \) is an integer (because the product of two integers is an integer), \( a \mid bc \).
+        
+        If \( a \mid b \) and \( b \mid c \), then there exist integers \( p \) and \( q \) such that \( b = ap \) and \( c = bq \). Substituting the expression for \( b \) into the equation for \( c \) gives \( c = (ap)q = a(pq) \). Since \( pq \) is an integer, \( a \mid c \).
+    \end{proof}
+    With this we have the following conclusion.
+    \begin{corollary}\label{div1}
+        if $a$, $b$, and $c$ are integers, where $a\neq 0$, such that $a\mid b$ and $a\mid c$, then $a\mid mb + nc$ whenever $m$ and $n$ are integers.
+    \end{corollary}
+    This could be proven in direct proof, which you will finish in the exercise.
+
+    \subsection{Modular Arithmetic}
+    In this section, we will focus on the remainder of division, as well as modular arithmetic.
+    In the definition of division, we involved $q$ and $r$, which denotes the quotient and
+    the remainder of the operation. We use the following notations to denote each of both.
+    \begin{notation}[div and mod]
+        For $a$, $b\in \mathbb{R}$.
+        $a = b\times q + r$    
+        $$q = a\ \text{\textbf{div}}\ b$$
+        $$r = a\ \text{\textbf{mod}}\ b$$
+    \end{notation}
+    Besides, when $a$ is an integer and $b$ is a positive integer, we have $a\ \text{\textbf{div}}\ b = \left \lfloor  a/b \right \rfloor$.
+    \begin{example}
+        What are the quotient and remainder when 93 is divided by 9?
+    \end{example}
+    \textbf{Solution:} $93 = 9\times 10 + 3$. $q = 10$, $r = 3$.
+
+    The quotient is $93\ \textbf{div}\ 9 = 10 = \lfloor93/9\rfloor = \lfloor10.3333\dots \rfloor = 10$
+
+    The remainder is $93\ \textbf{mod}\ 9 = 3 = 93 - 90$
+    
+    \begin{example}
+        What are the quotient and remainder when -93 is divided by 9?
+    \end{example}
+    \textbf{Solution:} $-93 = 9\times (-11) + 6$. $q = -11$, $r = 6$.
+    
+    Remember that we must make sure $r\geq0$ as we defined earlier, even though $-93 = 9\times(-10) - 3$.
+    But remainder could be positive in other division algorithm, which we will discuss in the exercise.
+
+    We have already introduced the notation $ a\ \textbf{mod}\ m $ to represent the remainder when an integer
+    $a$ is divided by the positive integer $m$. We now introduce a different, but related, notation
+    that indicates that two integers have the same remainder when they are divided by the positive
+    integer $m$. But why we need to find and study the numbers with the same remainder by dividing 
+    the same positive integer? Studying numbers that yield the same remainder when divided by a given positive integer is a
+    fundamental part of number theory; later you will understand why say so.
+    \begin{definition}
+        If $a$ and $b$ are integers and $m$ is a positive integer, then $a$ is \textbf{congruent} 
+        to $b$ \textbf{modulo} $m$ if $m$ divides $a - b$. 
+        We use the notation $a \equiv b (\bmod m)$ to indicate that $a$ is congruent to $b$ modulo 
+        $m$. We say that $a \equiv b (\bmod m)$ is a congruence and that $m$ is its modulus 
+        (plural moduli). If $a$ and $b$ are not congruent modulo $m$, we write $a \not\equiv b (\bmod m)$.
+    \end{definition}
+    Do note that mod and \textbf{mod} are different notations. The first represents a relation on the set of integers, whereas the
+    second represents a function. However, they are still related.
+    \begin{theorem}
+        Let $a$ and $b$ be integers, and let $m$ be a positive integer. $a \equiv b (\bmod \  m)$ if and only if $a\ \textbf{mod}\ m$ = $b\ \textbf{mod}\ m$.
+    \end{theorem}
+    \begin{proof}
+        First, suppose \( a \equiv b \pmod{m} \). By definition of congruence modulo \( m \), \( m \) divides \( a - b \), which means there exists some integer \( k \) such that \( a - b = km \).
+
+        Dividing \( a \) and \( b \) by \( m \), they both leave the same remainder \( r \), since \( a = q_1m + r \) and \( b = q_2m + r \) for some integers \( q_1 \) and \( q_2 \). The remainder \( r \) in both cases is the same because the difference \( a - b \) is a multiple of \( m \), which does not affect the remainder.
+
+        Conversely, if \( a \mod m = b \mod m \), then both \( a \) and \( b \) leave the same remainder when divided by \( m \). Denote this common remainder as \( r \).
+
+        We can write \( a = q_1m + r \) and \( b = q_2m + r \) for some integers \( q_1 \) and \( q_2 \). Subtracting these two equations, we get \( a - b = (q_1 - q_2)m \), which shows that \( a - b \) is a multiple of \( m \).
+
+        Therefore, \( m \) divides \( a - b \), and by definition of congruence modulo \( m \), we have \( a \equiv b \pmod{m} \).
+
+        This completes the proof.
+    \end{proof}
+    \begin{remark}
+        Remember, when we say if and only if, we need proof from each of the both statements to the other.
+    \end{remark}
+    \begin{theorem}\label{mod2}
+        Let $m$ be a positive integer. The integers $a$ and $b$ are congruent modulo $m$ if and only if there is an integer $k$ such that $a = b + km$.
+    \end{theorem}
+    The proof is similar and not complex, try to prove it in the exercise.
+
+    \begin{theorem}
+        Let $m$ be a positive integer. If $a \equiv b \pmod{m}$ and $c \equiv d \pmod{m}$, then
+        \begin{equation*}
+            a + c \equiv b + d \pmod{m}
+        \end{equation*}
+        and
+        \begin{equation*}
+            ac \equiv bd \pmod{m}.
+        \end{equation*}
+        \end{theorem}
+        
+        \begin{proof}
+        We use a direct proof. Because $a \equiv b \pmod{m}$ and $c \equiv d \pmod{m}$, by Theorem 4 there are integers $s$ and $t$ with $b = a + sm$ and $d = c + tm$. Hence,
+        \begin{align*}
+            b + d &= (a + sm) + (c + tm) = (a + c) + m(s + t)
+        \end{align*}
+        and
+        \begin{align*}
+            bd &= (a + sm)(c + tm) = ac + m(at + cs + stm).
+        \end{align*}
+        Hence,
+        \begin{equation*}
+            a + c \equiv b + d \pmod{m}
+        \end{equation*}
+        and
+        \begin{equation*}
+            ac \equiv bd \pmod{m}.
+        \end{equation*}
+        \end{proof}
+        
+        \begin{example}
+        Because $7 \equiv 2 \pmod{5}$ and $11 \equiv 1 \pmod{5}$, it follows that
+        \begin{equation*}
+            18 = 7 + 11 \equiv 2 + 1 = 3 \pmod{5}
+        \end{equation*}
+        and that
+        \begin{equation*}
+            77 = 7 \cdot 11 \equiv 2 \cdot 1 = 2 \pmod{5}.
+        \end{equation*}
+        \end{example}
+
+        \begin{corollary}
+            Let $m$ be a positive integer and let $a$ and $b$ be integers. Then
+            \begin{equation*}
+                (a + b) \bmod m = ((a \bmod m) + (b \bmod m)) \bmod m
+            \end{equation*}
+            and
+            \begin{equation*}
+                ab \bmod m = ((a \bmod m)(b \bmod m)) \bmod m.
+            \end{equation*}
+            \end{corollary}
+            
+            \begin{proof}
+            By the definitions of $\bmod$ and of congruence modulo $m$, we know that $a \equiv (a \bmod m) \pmod{m}$ and $b \equiv (b \bmod m) \pmod{m}$. Hence,
+            \begin{equation*}
+                a + b \equiv (a \bmod m) + (b \bmod m) \pmod{m}
+            \end{equation*}
+            and
+            \begin{equation*}
+                ab \equiv (a \bmod m)(b \bmod m) \pmod{m}.
+            \end{equation*}
+            The equalities in this corollary follow from these last two congruence.
+            \end{proof}
+
+            We can define arithmetic operations on \( \mathbb{Z}_m \), the set of nonnegative integers less than \( m \), that is, the set \( \{0, 1, \ldots, m - 1\} \). In particular, we define addition of these integers, denoted by \( \oplus_m \), by
+        \[
+        a \oplus_m b = (a + b) \bmod m,
+        \]
+        where the addition on the right-hand side of this equation is the ordinary addition of integers, and we define multiplication of these integers, denoted by \( \odot_m \), by
+        \[
+        a \odot_m b = (a \cdot b) \bmod m,
+        \]
+        where the multiplication on the right-hand side of this equation is the ordinary multiplication of integers. The operations \( \oplus_m \) and \( \odot_m \) are called addition and multiplication modulo \( m \) and when we use these operations, we are said to be doing arithmetic modulo \( m \).
+
+        \begin{example}
+        Use the definition of addition and multiplication in \( \mathbb{Z}_m \) to find \( 7 \oplus_{11} 9 \) and \( 7 \odot_{11} 9 \).
+
+        \textbf{Solution:} Using the definition of addition modulo 11, we find that
+        \[
+        7 \oplus_{11} 9 = (7 + 9) \bmod 11 = 16 \bmod 11 = 5,
+        \]
+        and
+        \[
+        7 \odot_{11} 9 = (7 \cdot 9) \bmod 11 = 63 \bmod 11 = 8.
+        \]
+        Hence, \( 7 \oplus_{11} 9 = 5 \) and \( 7 \odot_{11} 9 = 8 \).
+        \end{example}
+        \begin{remark}
+            sometimes, normal notations are also used to express this calculation with subscript.
+        \end{remark}
+    
+        
+
+
+
+    \subsection{Exercises}
+    \begin{exercise}
+        Prove corollary \ref{div1} that if $a$, $b$, and $c$ are integers, where $a\neq 0$, such that $a\mid b$ and $a\mid c$, then $a\mid mb + nc$ whenever $m$ and $n$ are integers.
+    \end{exercise}
+    \begin{proof}
+        By theorem \ref{Properties of Divisibility}, $a\mid b$ and $a\mid c$ gives us $a\mid mb$
+        and $a\mid nc$ (property 2). Hence, $a\mid (mb+nc)$ (property 1). This completes the proof.
+    \end{proof}
+
+    \begin{exercise}
+        Prove theorem \ref{mod2}, you may use other theorems or corollary in this chapter.
+    \end{exercise}
+    \begin{proof}
+        If $a \equiv b (\bmod \ m)$, that means we have $m\mid(a-b)$. There must be a integer $k$, such that $a = b + km$ (theorem \ref{mod2}). Conversely, if we have a integer $k$, such that $a = b+km$, we have $km = a-b$. Hence, $m\mid(a-b)$, $a \equiv b (\bmod \ m)$.
+    \end{proof}
+    \begin{exercise}
+        show that for integer $\displaystyle a,\ b,\ c\ \in \mathbb{Z}^{+}$, $\displaystyle a,c\neq 0$ and $\displaystyle ac\mid bc,$then $\displaystyle a\mid b$.
+    \end{exercise}
+    \begin{proof}
+        $\displaystyle ac\mid bc$ means that $\displaystyle bc=k( ac)$ for some integer $\displaystyle k$, so we have $\displaystyle b=ka$, this means $\displaystyle a\mid b$.
+    \end{proof}
+    \begin{exercise}
+        Prove that if $\displaystyle a$ and $\displaystyle b$ are integers and $\displaystyle a$ divides $\displaystyle b$, then $\displaystyle a$ is odd or $\displaystyle b$ is even.
+    \end{exercise}
+    \begin{proof}
+        We could try proof by contrapositive. Suppose for $\displaystyle a$ is even and $\displaystyle b$ is odd, 
+        $\displaystyle a,b\in \mathbb{Z} ,\ a\mid b$. Then $\displaystyle b=ka$ for some integer $\displaystyle k$. 
+        Make $\displaystyle a=2n,\ b=2n+1,\ n\in \mathbb{Z}$, then there should be $\displaystyle 2n+1=2kn$. 
+        However, in this case we have $\displaystyle k=\frac{2n+1}{2n}$, meaning that $\displaystyle k$ is not an 
+        integer, which contradict the assumption. This completes the proof.
+    \end{proof}
+    \begin{exercise}
+        Prove that if $a$ is a positive integer, then $4\nmid (a^2+2)$.
+    \end{exercise}
+    \begin{proof}
+        Consider any positive integer $a$. We know that $a$ can be expressed in one of the following forms where $n$ is an integer:
+        \begin{itemize}
+            \item $a = 4n$
+            \item $a = 4n + 1$
+            \item $a = 4n + 2$
+            \item $a = 4n + 3$
+        \end{itemize}
+        Now, we examine $a^2$ modulo 4 for each case:
+        \begin{align*}
+            (4n)^2 &= 16n^2 = 4 \cdot 4n^2 \equiv 0 \pmod{4}, \\
+            (4n + 1)^2 &= 16n^2 + 8n + 1 = 4(4n^2 + 2n) + 1 \equiv 1 \pmod{4}, \\
+            (4n + 2)^2 &= 16n^2 + 16n + 4 = 4(4n^2 + 4n + 1) \equiv 0 \pmod{4}, \\
+            (4n + 3)^2 &= 16n^2 + 24n + 9 = 4(4n^2 + 6n + 2) + 1 \equiv 1 \pmod{4}.
+        \end{align*}
+        Adding 2 to $a^2$ in each case yields:
+        \begin{align*}
+            a^2 + 2 &\equiv 2 \pmod{4} \quad \text{if } a^2 \equiv 0 \pmod{4}, \\
+            a^2 + 2 &\equiv 3 \pmod{4} \quad \text{if } a^2 \equiv 1 \pmod{4}.
+        \end{align*}
+        In both cases, $a^2 + 2$ does not yield a remainder of $0$ modulo $4$. Thus, it cannot be divisible by $4$.
+
+        Therefore, we have proven that for any positive integer $a$, the expression $a^2 + 2$ is not divisible by $4$.
+    \end{proof}
+
+    \begin{exercise}
+        Suppose that \( a \) and \( b \) are integers, \( a \equiv 11 \mod{19} \), and \( b \equiv 3 \mod{19} \). 
+        Find the integer \( c \) with \( 0 \leq c \leq 18 \) such that
+        \begin{enumerate}
+            \item \( c \equiv 13a \mod{19} \).
+            \item \( c \equiv 8b \mod{19} \).
+            \item \( c \equiv a - b \mod{19} \).
+            \item \( c \equiv 7a + 3b \mod{19} \).
+            \item \( c \equiv 2a^2 + 3b^2 \mod{19} \).
+            \item \( c \equiv a^3 + 4b^3 \mod{19} \).
+        \end{enumerate}
+    \end{exercise}
+
+    \textbf{Solution:} This problem is equivalent to asking for the right-hand side mod 19. So we just do the arithmetic and compute the remainder upon division by 19.
+    \begin{enumerate}
+        \item \( 13 \cdot 11 = 143 \equiv 10 \mod{19} \)
+        \item \( 8 \cdot 3 = 24 \equiv 5 \mod{19} \)
+        \item \( 11 - 3 = 8 \mod{19} \)
+        \item \( 7 \cdot 11 + 3 \cdot 3 = 86 \equiv 10 \mod{19} \)
+        \item \( 2 \cdot 11^2 + 3 \cdot 3^2 = 269 \equiv 3 \mod{19} \)
+        \item \( 11^3 + 4 \cdot 3^3 = 1439 \equiv 14 \mod{19} \)
+    \end{enumerate}
+
+    \begin{exercise}
+        Let \( m \) be a positive integer. Show that \( a \mod m = b \mod m \) if \( a \equiv b \pmod{m} \).
+    \end{exercise}
+    \begin{proof}
+        Assume that \( a \equiv b \pmod{m} \). This means that \( m \mid a - b \), say \( a - b = mc \), so that \( a = b + mc \). Now let us compute \( a \mod m \). We know that \( b = qm + r \) for some nonnegative \( r \) less than \( m \) (namely, \( r = b \mod m \)). Therefore, we can write \( a = qm + r + mc = (q + c)m + r \). By definition, this means that \( r \) must also equal \( a \mod m \). That is what we wanted to prove.
+    \end{proof}
+
+    \begin{exercise}
+        Show that if $a \equiv b (\bmod n)$ and $d\mid a$,$d\mid b$, $d\mid n$, then
+        $$\frac{a}{d}\equiv \frac{b}{d} (\bmod \frac{n}{d})$$
+    \end{exercise}
+    \begin{proof}
+        Since \( a \equiv b \mod n \), by definition there exists an integer \( k \) such that \( a = b + kn \). Now, since \( d \mid a \) and \( d \mid b \), we have \( a = dm_1 \) and \( b = dm_2 \) for some integers \( m_1 \) and \( m_2 \). Also, \( d \mid n \) implies \( n = dl \) for some integer \( l \).
+        
+        Substituting these into our first equation we get
+        \[
+        dm_1 = dm_2 + k(dl)
+        \]
+        
+        Dividing through by \( d \) we obtain
+        \[
+        m_1 = m_2 + kl
+        \]
+        
+        This can be rewritten as
+        \[
+        \frac{a}{d} = \frac{b}{d} + k \left(\frac{n}{d}\right)
+        \]
+        
+        Since \( k \left(\frac{n}{d}\right) \) is an integer, this shows that \( \frac{a}{d} \) is congruent to \( \frac{b}{d} \) modulo \( \frac{n}{d} \), which is precisely
+        \[
+        \frac{a}{d} \equiv \frac{b}{d} \mod \frac{n}{d}
+        \]
+        
+        Hence, the statement is proven.
+    \end{proof}
+\section{Number Representations and Algorithms}
+    In everyday life, we use decimal notation to express integers. Though this is not
+    for all cases, as we are using a 60 base system for time. However, in computer science, binary, octal, and hexadecimal
+    systems are widely used for number representation. The reason is that binary system consist of 
+    only 0 and 1, as we have mentioned in Boolean algebra, this system is perfect for logic operations
+    in side the computer. What's more, 0 and 1 could be easily represented by the on and off of tiny
+    switches in the integrated circuits. This chapter looks into the representation of number
+    in different bases and their relationship, with a tress on binary representation that computer
+    system uses. Meanwhile, we will go through algorithm of some operations between number, and
+    analyze them accordingly.
+    \subsection{Representations of Numbers and Base Conversion}
+    In whichever base, a number could be expressed using the exponent of the base.
+    \begin{theorem}[Representation of Number]
+		Let $b$ be an integer greater than 1. Then if $n$ is a positive integer, it can be expressed uniquely 
+		in the form:\\
+		$n=a_{k} b^{k}+a_{k-1} b^{k-1}+\cdots+a_{1} b+a_{0}$\\
+		where $k$ is a nonnegative integer, $a_0, a_1,\cdots, a_k$ are negative integers less than b, and $a_k \neq 0$
+	\end{theorem}
+    For example, 1024 could be interpreted as $1024 = 1\times10^3+\times10^2+2\times10^1+4\times10^0$.
+    Besides, the base of number constraints the possible numbers to be used on the bits. For example,
+    under decimal system, we cannot take 10 as one digit, instead it is a number with two digits 1 and 0,
+    because for bits under decimal system, the maximum only goes to 9. Therefore, you could take it as
+    a fact that for a system of base $b$, the biggest value for one bit is $b-1$. Similarly, we see
+    only 0 and 1 in binary, 1-7 in ocatl, 1-15 in hexadecimal expression.
+
+    To indicate the base of a number, we use the following subscript.
+    \begin{notation}[$xxxx_b$]
+        We use $_b$ to show the base of a number, where $b$ is the base number.
+    \end{notation}
+
+    The other important fact is that numbers are just numbers, base is only the way we gauge them.
+    However you change $121_{10}$, to whatever base, it is still 121 in decimal, but just expressed 
+    in a different way.
+    \subsubsection*{Binary, Octal, and Hexadecimal Expression}
+    In \textbf{binary expansion}, the base on any integer is 2, that is to say, the number in each digit is either 0 or 1.
+We can expand binary integer in the same ways as mentioned in last section.
+
+\begin{example}
+	What is the decimal expansion of the integer that has $(101011111)_2$ as its binary expansion?
+
+		$(101011111)_2$ has nine digits, so we have:\\
+		$(101011111)_2$ = $1\times 2^9 + 1\times 2^7+1\times 2^5+1\times 2^4+1\times 2^3+1\times 2^2+1\times 2^1+1\times 2^0 = 351$
+
+\end{example}
+Decimal expansion of octal expansions could be calculated in the same way as the binary expansion. However, 
+Sixteen different digits are required for hexadecimal expansions. Usually, the hexadecimal digits used are 
+0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, and F, where the letters A through F represent the digits 
+corresponding to the numbers 10 through 15 (in decimal notation). 
+\begin{example}
+	What is the decimal expansion of the number with hexadecimal expansion $(2AE0B)_{16}$?
+\end{example}
+In hexadecimal cases, the only difference is that capital latters are used to represent two-digit number in
+		one digit. We still have:\\
+		$(2AE0B)_{16}$ = $2\times 16^4 + 10\times 16^3 + 14\times 16^2 + 0 \times 16^1 + 11 \times 16^0=175627$
+
+        \textbf{NOTICE: } Each hexadecimal digit can be represented using four bits. For instance, 
+we see that $(1110 0101)_2$ = $(E5)_{16}$ because $(1110)_2$ = $(E)_{16}$ and $(0101)_2 = (5)_{16}$. Bytes, which are bit strings 
+of length eight, can be represented by two hexadecimal digits.
+
+    \subsection{Base Conversion}
+    \subsubsection*{Base conversion of Integer}
+    Now we have learned how to express numbers in different base systems, but is there any way to
+    convert them from one base to the other? You may have realized that a general solution is to
+    convert the number back to decimal form, and then to the target base. Yes, it works, but can we
+    make it better? One way to this is to use the general base conversion algorithm.
+    The most common algorithm to constructing the base $b$ expansion of an integer n is as follows:\\
+First, divide $n$ by $b$ to obtain a quotient and remainder, that is: \\
+\begin{center}
+	$\displaystyle n\ =\ bq_{0} \ +\ a_{0} \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ( 0\ \leq \ a_{0} \ < \ b)$
+\end{center}
+The remainder, $a_0$, is the rightmost digit in the base b expansion of $n$. Next, divide $q_0$ by $b$ toobtain:\\
+\begin{center}
+	$\displaystyle q_0\ =\ bq_{1} \ +\ a_{1} \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ( 0\ \leq \ a_{1} \ < \ b)$
+\end{center}
+We see that $a_1$ is the second digit from the right in the base b expansion of n. Then, we just continue this process
+until we obtain a quotient equal to zero. This algorithm produces the base $b$ digits of $n$ from the right to the left.
+
+\begin{example}
+	Find the hexadecimal expansion of $(177130)_{10}$.
+		\begin{center}
+		$177130 = 16 \cdot 11070 + 10$\\
+		$11070 = 16 \cdot 691 + 14$\\
+		$691 = 16 \cdot 43 + 3$\\
+		$43 = 16 \cdot 2 + 11$\\
+		$2 = 16 \cdot 0 + 2 $\\
+		\end{center}
+		Therefore, $(177130)_{10} = (2B3EA)_{16}$
+\end{example}
+    This method is equivalent to the following pseudocode.
+    \begin{algorithm}
+        \caption{Base conversion of an integer $n$ to base $b$}
+        \begin{algorithmic}[H]
+        \Require{An integer $n$ and a base $b$ to convert to}
+        \Ensure{The base $b$ expansion of $n$}
+        \Function{ConvertToBase}{$n, b$}
+            \State $digits \gets$ empty list
+            \While{$n > 0$}
+                \State $remainder \gets n \bmod b$
+                \State Append $remainder$ to $digits$
+                \State $n \gets \left\lfloor n / b \right\rfloor$
+            \EndWhile
+            \State $digits \gets$ reverse $digits$
+            \State \textbf{return} $digits$
+        \EndFunction
+        \end{algorithmic}
+        \end{algorithm}
+    \subsubsection*{Base Conversion of Float}
+    The previous algorithm only deals with integers, so we need a different approach for decimals.
+    The algorithm for converting a floating-point number from base 10 to base $b$ is given as follows:
+
+\begin{algorithm}
+\caption{Convert a floating-point number to a different base}
+\begin{algorithmic}[H]
+\Function{ConvertFloatToBase}{$number$, $targetBase$}
+    \State $integerPart \gets \lfloor number \rfloor$
+    \State $fractionalPart \gets number - integerPart$
+    \State $baseInteger \gets \Call{ConvertIntegerToBase}{integerPart, targetBase}$
+    \State $baseFraction \gets ``"$
+    \While{$fractionalPart > 0$ \textbf{and} length of $baseFraction$ is less than limit}
+        \State $fractionalPart \gets fractionalPart \times targetBase$
+        \State $baseFraction \gets baseFraction + \lfloor fractionalPart \rfloor$
+        \State $fractionalPart \gets fractionalPart - \lfloor fractionalPart \rfloor$
+    \EndWhile
+    \State \Return $baseInteger + ``." + baseFraction$
+\EndFunction
+\end{algorithmic}
+\end{algorithm}
+
+\begin{example}
+Convert the floating-point number 12.375 from base 10 to base 2.
+\begin{itemize}
+\item Integer part: 12 in base 10 is 1100 in base 2.
+\item Fractional part: 0.375 in base 10 to base 2.
+\begin{align*}
+0.375 \times 2 &= 0.75 \rightarrow \text{integer part is 0} \\
+0.75 \times 2 &= 1.5 \rightarrow \text{integer part is 1} \\
+0.5 \times 2 &= 1 \rightarrow \text{integer part is 1} \\
+\end{align*}
+\item The fractional part in base 2 is .011.
+\end{itemize}
+
+Therefore, $12.375_{10}$ is $1100.011_{2}$.
+\end{example}
+Also, when a number consist of both integer and decimal parts, we just deal with them separately
+and them put them back together later. You will see these exercises in the problem set.
+
+\subsubsection*{Base Conversion between Binary, Octal, and Hexadecimal number}
+The base conversion between Binary, Octal and Hexadecimal numbers are much easier.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{converttab.png}
+    \caption{Binary, Octal and Hexadecimal Representation}
+\end{figure}
+The conversion between binary, octal, and hexadecimal systems is straightforward because the bases of these systems (2 for binary, 8 for octal, and 16 for hexadecimal) are related by powers of 2. Specifically:
+\begin{itemize}
+    \item Octal digits correspond to three binary digits since \(8 = 2^3\). Each octal digit can be directly mapped to a unique combination of three binary bits.
+    \item Hexadecimal digits correspond to four binary digits since \(16 = 2^4\). Each hexadecimal digit can be directly mapped to a unique combination of four binary bits.
+\end{itemize}
+This relationship allows for simple grouping of binary bits into sets of three or four to convert 
+to octal or hexadecimal, respectively, without any complex calculation or division. 
+\begin{example}
+	Find the octal and hexadecimal expansions of $(11\ 1110\ 1011\  1100)_2$ and the binary expansions of $(765)_{8}$ and $(A8D)_{16}$.
+\end{example}
+\textbf{Solution:} To convert $(11\ 1110\ 1011\  1100)_2$ into octal notation we group the binary digits
+into blocks of three, adding initial zeros at the start of the leftmost block if necessary.
+These blocks, from left to right, are 011, 111, 010, 111, and 100, corresponding to 3, 7, 2, 7, and 4 respectively. Consequently, we get $(11\ 1110\ 1011\  1100)_2 = (37274)_8$
+\par We do the hexadecimal convention in the same way. These blocks, from left to right, are 0011,
+1110, 1011, and 1100, corresponding to the hexadecimal digits 3, E, B, and C, respectively. Consequently, $(11\ 1110\ 1011\  1100)_2 = (3EBC)_{16}$
+\par \textbf{NOTE: } The conversion could be done inversely in the same way. If the number of bit is not the multiple of 4 when you are converting between 2 and 16 base
+number, fill those missing digits/bits with 0.
+
+Whether you noticed or that the base conversion, essentially, is about division and modular arithmetic
+that we just learned? The general base conversion algorithm could be simplified to the following algorithm,
+where $n$ denotes the number to be converted and $b$ is the target base.
+\begin{algorithm}
+    \caption{Constructing Base \( b \) Expansions}
+    \begin{algorithmic}[H]
+    \Procedure{base \( b \) expansion}{$n, b$: positive integers with $b > 1$}
+    \State $q \gets n$
+    \State $k \gets 0$
+    \While{$q \neq 0$}
+    \State $a_k \gets q \mod b$
+    \State $q \gets \lfloor q / b \rfloor$
+    \State $k \gets k + 1$
+    \EndWhile
+    \State \textbf{return} $(a_{k-1}, \ldots, a_1, a_0)$ \Comment{The base \( b \) expansion of \( n \)}
+    \EndProcedure
+    \end{algorithmic}
+    \end{algorithm}
+    \subsection{Operation Algorithms of Number}
+        This section discusses algorithm of basic operation between numbers, of base2. 
+        In section, we express the binary number in the form of 
+        $$a=(a_{n-1}a_{n-2}\ldots a_1a_0)_2,b=(b_{n-1}b_{n-2}\ldots b_1b_0)_2$$
+        where $a$ and $b$ each have n bits.
+    \subsubsection*{Addition Algorithm}
+    Consider the problem of adding two integers in binary notation. A procedure to perform addition can be based on the usual method for adding numbers with pencil and paper. This method proceeds by adding pairs of binary digits together with carries, when they occur, to compute the sum of two integers. This procedure will now be specified in detail.
+
+    To add \( a \) and \( b \), first add their rightmost bits. This gives
+    \[
+    a_0 + b_0 = c_0 \cdot 2 + s_0,
+    \]
+    where \( s_0 \) is the rightmost bit in the binary expansion of \( a + b \) and \( c_0 \) is the carry, which is either 0 or 1. Then add the next pair of bits and the carry,
+    \[
+    a_1 + b_1 + c_0 = c_1 \cdot 2 + s_1,
+    \]
+    where \( s_1 \) is the next bit (from the right) in the binary expansion of \( a + b \), and \( c_1 \) is the carry. Continue this process, adding the corresponding bits in the two binary expansions and the carry, to determine the next bit from the right in the binary expansion of \( a + b \). At the last stage, add \( a_{n-1} \), \( b_{n-1} \), and \( c_{n-2} \) to obtain \( c_{n-1} \cdot 2 + s_{n-1} \). The leading bit of the sum is \( s_n = c_{n-1} \). This procedure produces the binary expansion of the sum, namely, \( a + b = (s_n s_{n-1} \ldots s_1 s_0)_2 \).
+    Consider the binary addition of two numbers, \( 1011_2 \) and \( 1101_2 \).
+
+The addition process is similar to that used in decimal addition, but it is performed in base 2. Below is the columnar addition process:
+
+\begin{center}
+\begin{tabular}{ r >{$}r<{$} }
+   & 1011_2 \\
+  +& 1101_2 \\
+  \hline
+   & 11000_2 \\
+\end{tabular}
+\end{center}
+
+Let's perform the addition step by step:
+
+\begin{enumerate}
+    \item Start with the rightmost bits (least significant bits). Add \( 1 + 1 \). Since this is base 2, \( 1 + 1 = 10_2 \). Write down the \( 0 \) and carry the \( 1 \) over to the next column.
+    \item Move to the next column. Add \( 1 + 0 + 1 \) (including the carry). This equals \( 10_2 \). Write down the \( 0 \) and carry the \( 1 \).
+    \item In the next column, add \( 0 + 1 + 1 \). This equals \( 10_2 \). Write down the \( 0 \) and carry the \( 1 \).
+    \item For the leftmost bits (most significant bits), add \( 1 + 1 + 1 \). This equals \( 11_2 \). Write down the \( 1 \) and carry the \( 1 \) to a new column to the left.
+    \item Write down the carry.
+\end{enumerate}
+The final result is \( 11000_2 \).
+
+This algorithm's pseudocode is as listed below.
+\begin{algorithm}
+    \caption{Addition of Integers}
+    \begin{algorithmic}[H]
+    \Procedure{add}{$a, b$: positive integers}
+    \State {the binary expansions of $a$ and $b$ are $(a_{n-1}a_{n-2}\ldots a_1a_0)_2$}
+    \State {and $(b_{n-1}b_{n-2}\ldots b_1b_0)_2$, respectively}
+    \State $c \gets 0$
+    \For{$j \gets 0$ \textbf{to} $n-1$}
+        \State $d \gets \left\lfloor (a_j + b_j + c)/2 \right\rfloor$
+        \State $s_j \gets a_j + b_j + c - 2d$
+        \State $c \gets d$
+    \EndFor
+    \State $s_n \gets c$
+    \State \textbf{return} $(s_{n}s_{n-1}\ldots s_1s_0)_2$ \Comment{the binary expansion of the sum}
+    \EndProcedure
+    \end{algorithmic}
+    \end{algorithm}
+
+    
+    \textbf{Time Complexity:}
+    The time complexity of the binary addition algorithm is \( O(n) \), where \( n \) is the number of bits in the binary representation of the inputs.
+    \begin{proof}
+        Consider the binary addition algorithm which consists of a single loop that iterates \( n \) times, where \( n \) is the number of bits in the binary representations of the two integers being added.
+        
+        Within the loop, the algorithm performs a constant number of operations for each bit:
+        \begin{itemize}
+            \item An addition of the \( j \)-th bits of the two numbers \( a_j + b_j \).
+            \item An addition of the carry from the previous step \( c \).
+            \item A division by 2 to compute the new carry \( d \).
+            \item A subtraction to determine the \( j \)-th bit of the sum \( s_j \).
+            \item An assignment of the new carry \( c \gets d \).
+        \end{itemize}
+        
+        Since each of these operations has a constant time complexity, and they are all executed once for each bit, the overall time complexity of the loop is linear with respect to the number of bits. Therefore, the time complexity of the entire algorithm is \( O(n) \).
+        
+        Note that this analysis assumes that basic arithmetic operations (addition, division by 2, subtraction) can be performed in constant time.
+        \end{proof}
+    \subsubsection*{Multiplication Algorithm}
+        Using the same representation of binary number $a$ and $b$, we can define binary multiplication
+        as $$\begin{aligned}a b & =a\left(b_{0} 2^{0}+b_{1} 2^{1}+\cdots+b_{n-1} 2^{n-1}\right) \\& =a\left(b_{0} 2^{0}\right)+a\left(b_{1} 2^{1}\right)+\cdots+a\left(b_{n-1} 2^{n-1}\right)\end{aligned}$$.
+        The binary multiplication algorithm works similarly to traditional pencil-and-paper multiplication, but with binary digits. Given two binary numbers, we multiply each bit of the second number by the first number, shifting the result left for each subsequent bit.
+        \begin{algorithm}
+            \caption{Addition of Integers}
+            \begin{algorithmic}
+            \Procedure{ADD}{$a, b$: positive integers}
+                \State {the binary expansions of $a$ and $b$ are $(a_{n-1}a_{n-2}\ldots a_1a_0)_2$}
+                \State {and $(b_{n-1}b_{n-2}\ldots b_1b_0)_2$, respectively}
+                \State $c \gets 0$
+                \For {$j \gets 0 \text{ to } n-1$}
+                    \State $d \gets \left\lfloor (a_j + b_j + c)/2 \right\rfloor$
+                    \State $s_j \gets a_j + b_j + c - 2d$
+                    \State $c \gets d$
+                \EndFor
+                \State $s_n \gets c$
+                \State \Return $(s_{n}s_{n-1}\ldots s_1s_0)_2$ \Comment{the binary expansion of the sum}
+            \EndProcedure
+            \end{algorithmic}
+            \end{algorithm}
+
+        \begin{example}
+            \textbf{Find the product of \( a = (110)_2 \) and \( b = (101)_2 \).}
+            First note that
+            \begin{align*}
+            a \cdot b_0 \cdot 2^0 &= (110)_2 \cdot 1 \cdot 2^0 = (110)_2, \\
+            a \cdot b_1 \cdot 2^1 &= (110)_2 \cdot 0 \cdot 2^1 = (0000)_2, \\
+            \text{and} \\
+            a \cdot b_2 \cdot 2^2 &= (110)_2 \cdot 1 \cdot 2^2 = (11000)_2.
+            \end{align*}
+            To find the product, add \( (110)_2, (0000)_2, \) and \( (11000)_2 \). Carrying out these additions (using Algorithm 2, including initial zero bits when necessary) shows that \( ab = (11110)_2 \).
+
+        \textbf{Time Complexity:} The time complexity of binary multiplication is \(O(n^2)\), where \(n\) is the number of bits in the binary numbers. This is because each bit of one number is multiplied by each bit of the other number, resulting in \(n\) multiplications for each of the \(n\) bits.
+        \end{example}
+    \subsubsection*{Algorithm for Div and Mod}
+        The following algorithm is used to find the quotient and remainder of $a \div b$.
+        This is a more general algorithm as it could handle the cases where a is negative
+    \begin{algorithm}
+        \caption{Computing div and mod.}
+        \begin{algorithmic}
+        \Procedure{division\_algorithm}{$a$: integer, $d$: positive integer}
+            \State $q \gets 0$
+            \State $r \gets |a|$
+            \While{$r \geq d$}
+                \State $r \gets r - d$
+                \State $q \gets q + 1$
+            \EndWhile
+            \If{$a < 0$ \textbf{and} $r > 0$}
+                \State $r \gets d - r$
+                \State $q \gets -(q + 1)$
+            \EndIf
+            \State \Return $(q, r)$ \Comment{$q = a \div d$ is the quotient, $r = a \mod d$ is the remainder}
+        \EndProcedure
+        \end{algorithmic}
+        \end{algorithm}
+    
+    \subsection{Modular Exponentiation Algorithm}
+    An important application of modular arithmetic is finding \( b^n \bmod m\) efficiently, which is crucial for cryptography. $b^n$ could be a huge
+    number that takes a lot of time to calculate, so we need this algorithm to speed up this process. to implement this algorithm, we need to use the
+    binary expansion of the number $n=(a_{k-1}\ldots a_1a_0)_2$.
+    Since 
+    $$
+    b^n=b^{a_{k-1}\cdot2^{k-1}+\cdots+a_1\cdot2+a_0}=b^{a_{k-1}\cdot2^{k-1}}\cdots b^{a_1\cdot2}\cdot b^{a_0}.
+    $$
+
+    This shows that to compute $b^n$, we need only compute the values of $b,b^2,(b^2)^2=b^4,(b^4)^2=$ $b^8,...,b^{2^k}$.
+    Once we have these values, we multiply the terms $b^{2j}$ in this list, where $a_j=1$ .(For efficiency and to reduce space requirements, after multiplying by each term, we reduce the result modulo $m.)$
+    \begin{example}
+        Compute $4^9$\\
+        \textbf{Solution: } To compute $4^9$ we first note that $9 = (1001)_2$, so that $4^9 = 4^8 3^2 4^1$. 
+        By successively squaring, we find that $4^2 = 16$, $4^4 = 16^2 = 256$, and $4^8 = (256)^2 = 65536$. Consequently, $4^9 = 4^8 4^2 4^1 = 65536 \cdot 16 \cdot 4 = 4,194,304$. 
+    \end{example}
+    Now we have already finished the part of algorithm to find $b^n$. With this, we can define the algorithm to find $b^n \bmod m$.
+    The pseudocode of the algorithm is in the listing below.
+    \begin{algorithm} \label{modulare}
+        \caption{Fast Modular Exponentiation.}
+        \begin{algorithmic}
+        \Procedure{modular exponentiation}{$b$: integer, $n = (a_{k-1}a_{k-2} \ldots a_1a_0)_2$, $m$: positive integers}
+        \State $x := 1$
+        \State $power := b \mod m$
+        \For{$i := 0$ to $k-1$}
+        \If{$a_i = 1$} \textbf{then} $x := (x \cdot power) \mod m$
+        \EndIf
+        \State $power := (power \cdot power) \mod m$
+        \EndFor
+        \State \textbf{return} $x$ {$x$ equals $b^n \mod m$}
+        \EndProcedure
+        \end{algorithmic}
+    \end{algorithm}
+
+    \begin{example}
+        Find the value of $3^{644} \mod 645$ using the Algorithm.
+        
+        \textit{Solution:} The algorithm starts by initializing $x = 1$ and $power = 3 \mod 645 = 3$. It then calculates
+        $3^{2j} \mod 645$ for $j = 1, 2, \ldots, 9$ by repeatedly squaring and reducing modulo 645. When the $j$th bit of 644 
+        (in binary, $(1010000100)_2$) is 1, the algorithm multiplies the current $x$ by $3^{2j} \mod 645$ and reduces the product modulo 645. The steps are as follows:
+        
+        \begin{tabular}{ll}
+        $i = 0$: & $a_0 = 0$, so $x = 1$ and $power = 3^2 \mod 645 = 9$. \\
+        $i = 1$: & $a_1 = 0$, so $x = 1$ and $power = 9^2 \mod 645 = 81$. \\
+        $i = 2$: & $a_2 = 1$, so $x = 1 \cdot 81 \mod 645 = 81$ and $power = 81^2 \mod 645 = 111$. \\
+        $i = 3$: & $a_3 = 0$, so $x = 81$ and $power = 111^2 \mod 645 = 66$. \\
+        $i = 4$: & $a_4 = 0$, so $x = 81$ and $power = 66^2 \mod 645 = 486$. \\
+        $i = 5$: & $a_5 = 0$, so $x = 81$ and $power = 486^2 \mod 645 = 126$. \\
+        $i = 6$: & $a_6 = 0$, so $x = 81$ and $power = 126^2 \mod 645 = 396$. \\
+        $i = 7$: & $a_7 = 1$, so $x = (81 \cdot 396) \mod 645 = 471$ and $power = 396^2 \mod 645 = 81$. \\
+        $i = 8$: & $a_8 = 0$, so $x = 471$ and $power = 81^2 \mod 645 = 111$. \\
+        $i = 9$: & $a_9 = 1$, so $x = (471 \cdot 111) \mod 645 = 36$.
+        \end{tabular}
+        
+        Thus, the value of $3^{644} \mod 645$ is 36.
+        \end{example}
+
+        \paragraph{Time Complexity of Algorithm 5}
+        The time complexity of Algorithm \ref{modulare} is determined by the number of iterations in the for loop, which is equal to the number of 
+        bits in the binary representation of the exponent $n$. In each iteration, the algorithm performs a constant number of modular multiplications and 
+        squarings. Therefore, the time complexity of Algorithm \ref{modulare} is $O(\log n)$, where $n$ is the exponent. This is a significant improvement over the naive method of modular exponentiation, 
+        which has a time complexity of $O(n)$. The fast modular exponentiation algorithm is particularly useful in cryptographic applications, such as the RSA algorithm, 
+        where the exponents are typically large numbers.
+
+        To prove that the time complexity of Algorithm \ref{modulare} is $O(\log n)$, we can analyze the number of operations performed by the algorithm in relation to the size of the input exponent $n$.
+
+        \begin{proof}
+        Let $n$ be the exponent in the modular exponentiation problem, and let $k$ be the number of bits in the binary representation of $n$. We can express $n$ as:
+
+        \[n = \sum_{i=0}^{k-1} a_i \cdot 2^i, \text{ where } a_i \in \{0, 1\}\]
+
+        The algorithm iterates through the bits of $n$ from right to left (from the least significant bit to the most significant bit). In each iteration, the algorithm performs the following operations:
+
+        \begin{enumerate}
+        \item If $a_i = 1$, it performs a modular multiplication to update the value of $x$.
+        \item It performs a modular squaring to update the value of $\textit{power}$.
+        \end{enumerate}
+
+        The modular multiplication and squaring operations can be performed in $O(1)$ time using a constant number of arithmetic operations modulo $m$.
+
+        Since the algorithm iterates through all $k$ bits of $n$, the total number of iterations is $k$. Therefore, the time complexity of the algorithm is proportional to $k$, which is the number of bits in the binary representation of $n$.
+
+        We know that the number of bits in the binary representation of $n$ is $\lfloor \log_2 n \rfloor + 1$. Thus, $k = O(\log n)$.
+
+        Consequently, the time complexity of Algorithm \ref{modulare} is $O(\log n)$.
+        \end{proof}
+
+        This logarithmic time complexity makes Algorithm \ref{modulare} (fast modular exponentiation) much more efficient than the naive method of modular exponentiation, which has a linear time complexity of $O(n)$.
+    \subsection{Exercises}
+
+
+
+\section{Primes and Greatest Common Divisors}
+        In previous chapter, we learned the properties of division and divisibility, as well as
+        modular arithmetic. These are the most essential parts of the whole number theory. In this section
+        , we will discuss primes and its property. Prime is not something unfamiliar to us, since some may
+        even have learned that from the kindergarten or primary school. We will look into the Algorithms
+        that could help is find primes and delve into the algebraic properties of prime later. All these
+        are foundations of cryptography.
+    \subsection{Primes and Related Algorithms}
+        To learn prime, of course we need to recap on its definition.
+        \begin{definition}[Prime Number]  
+            An integer $p$ greater than 1 is called prime if the only positive factors of $p$ are 1 and $p$.
+            A positive integer that is greater than 1 and is not prime is called \textbf{composite}.
+        \end{definition}    
+        Note that, by this definition, 1 is not a prime, as it is only 1 as the only factor.
+
+        The reason why prime numbers are so fascinating to mathematicians is that they have so many
+        interesting and unique property, even except for what we have seen in its definition. Below is what we call the fundamental theorem of arithmetic.
+        \begin{theorem}[The Fundamental Theorem of Arithmetic]
+            For every integer $n > 1$, there exists a unique factorization into prime numbers, up to the order of the factors. Specifically, $n$ can be expressed as
+            \[ n = p_1^{a_1} \cdot p_2^{a_2} \cdot \ldots \cdot p_k^{a_k} \]
+            where $p_1 < p_2 < \ldots < p_k$ are prime numbers and $a_1, a_2, \ldots, a_k$ are positive integers. This factorization is unique, apart from the order of the prime factors.
+        \end{theorem}
+        \begin{proof}
+            We prove the theorem in two parts: existence and uniqueness.
+            
+            \textbf{Existence:} We prove by mathematical induction that every integer greater than 1 can be written as a product of primes.
+            
+            \textit{Base Case:} For $n = 2$, the statement holds true since 2 is itself a prime number.
+            
+            \textit{Inductive Step:} Assume the statement holds for all integers greater than 1 and less than $n$. Now consider the integer $n$.
+            \begin{itemize}
+                \item If $n$ is prime, then it is trivially a product of primes (itself).
+                \item If $n$ is not prime, it can be written as $n = a \cdot b$ where $1 < a, b < n$. By the inductive hypothesis, both $a$ and $b$ can be factored into a product of primes. Therefore, $n$ can also be expressed as a product of primes by combining the prime factorization of $a$ and $b$.
+            \end{itemize}
+            This completes the proof of existence.
+            
+            \textbf{Uniqueness:} Assume, for the sake of contradiction, that there are two distinct prime factorization of $n$:
+            \[ n = p_1^{a_1} \cdot p_2^{a_2} \cdot \ldots \cdot p_k^{a_k} = q_1^{b_1} \cdot q_2^{b_2} \cdot \ldots \cdot q_m^{b_m} \]
+            where $p_i$ and $q_j$ are prime numbers, and $a_i, b_j$ are positive integers.
+            To proceed to the rest of the proof, we need to use Euclid's lemma.
+
+            \textbf{lemma:}
+
+                Let \(p\) be a prime number. If \(p\) divides the product \(ab\), where \(a\) and \(b\) are integers, then \(p\) divides \(a\) or \(p\) divides \(b\).
+            \begin{proof}
+                Assume \(p\) is a prime that divides \(ab\) but does not divide \(a\). We need to show that \(p\) must divide \(b\).
+
+                Since \(p\) does not divide \(a\), the greatest common divisor (gcd) of \(a\) and \(p\) is 1, i.e., \(\text{gcd}(a, p) = 1\). According to Bezout's identity, there exist integers \(x\) and \(y\) such that:
+
+                \[ax + py = 1\]
+
+                Multiplying both sides of the equation by \(b\), we get:
+
+                \[abx + pby = b\]
+                \begin{remark}
+                    If this proof is not yet understandable for you, skip it, and check it back after we go over the rest of this chapter about linear combination and this theorem.
+                \end{remark}
+                Since \(p\) divides \(ab\) (by assumption), \(p\) divides \(abx\). Also, \(p\) obviously divides \(pby\). Hence, \(p\) divides the sum \(abx + pby\), which means \(p\) divides \(b\).
+
+                This completes the proof, showing that if \(p\) divides \(ab\) and does not divide \(a\), then \(p\) must divide \(b\), in accordance with Euclid's lemma.
+            \end{proof}
+            By Euclid's lemma, if a prime divides the product of two numbers, it must divide at least one of those numbers. Thus, $p_1$ must divide some $q_j$ on the right-hand side. Since $q_j$ is prime, we conclude that $p_1 = q_j$. Applying this argument symmetrically and repeatedly, we find that each set of prime factors must be identical to the other, contradicting the assumption of two distinct factorization.
+            
+            Therefore, the prime factorization of any integer greater than 1 is unique, up to the order of the factors, which completes the proof of the Fundamental Theorem of Arithmetic.
+            \end{proof}
+            
+        \begin{example}
+            100 can be taken as $100 = 2\cdot 2\cdot 5\cdot 5 = 2^2\cdot 5^2$.
+            Both 2 and 5 are primes.
+        \end{example}
+
+        Now that we know these interesting properties of prime and its significance, how do we find
+        primes, not just correctly, but also efficiently? The most basic algorithm that anyone
+        could find is that we can actually check numbers one by one. To find whether an integer $n$ is prime, what we need to do is to check every number from 2 to $n-1$, and use them to divide $n$ one by one. If anyone of them divides $n$, then $n$ is not prime, and vice versa.
+        \subsubsection*{Trial Division}
+        We actually can apply a more efficient way to determine whether an integer is prime or not.
+        Considering the following theorem.
+        \begin{theorem}
+            If \( n \) is a composite integer, then \( n \) has a prime divisor less than or equal to \( \sqrt{n} \).
+        \end{theorem}
+        \begin{proof}
+            If \( n \) is composite, by the definition of a composite integer, we know that it has a factor \( a \) with \( 1 < a < n \). Hence, by the definition of a factor of a positive integer, we have \( n = ab \), where \( b \) is a positive integer greater than 1. We will show that \( a \leq \sqrt{n} \) or \( b \leq \sqrt{n} \). If \( a > \sqrt{n} \) and \( b > \sqrt{n} \), then \( ab > \sqrt{n} \cdot \sqrt{n} = n \), which is a contradiction. Consequently, \( a \leq \sqrt{n} \) or \( b \leq \sqrt{n} \). Because both \( a \) and \( b \) are divisors of \( n \), we see that \( n \) has a positive divisor not exceeding \( \sqrt{n} \). This divisor is either prime or, by the fundamental theorem of arithmetic, has a prime divisor less than itself. In either case, \( n \) has a prime divisor less than or equal to \( \sqrt{n} \).
+            \end{proof}
+        Below is the pseudocode for this procedure.
+        \begin{algorithm}
+            \caption{Primality Test Using Trial Division}
+            \begin{algorithmic}[1]
+            
+            \Function{IsPrime}{$n$}
+                \If{$n \leq 1$}
+                    \State \Return \textbf{false}
+                \EndIf
+                \For{$i \gets 2$ \textbf{to} $n-1$}
+                    \If{$n \mod i = 0$}
+                        \State \Return \textbf{false}
+                    \EndIf
+                \EndFor
+                \State \Return \textbf{true}
+            \EndFunction
+            
+            \end{algorithmic}
+            \end{algorithm}
+        \begin{example}
+            Show that $\sqrt{105}$ is prime.
+        \end{example} 
+        textbf{Solution:} Primes less than $\sqrt{105}$ are 2, 3, 5, 7. 101 is not divisible
+        by any of them, so it is not composite, and thus it is prime.
+
+        We also need an efficient algorithm to factorize a give number to primes. Here is how is
+        works. It works as follows.
+        \begin{algorithm}
+            \caption{Prime Factorization}
+            \begin{algorithmic}[H]
+            
+            \Function{PrimeFactorization}{$n$}
+                \State $factors \gets \text{an empty list}$
+                \For{$p \gets 2$ \textbf{to} $\infty$}
+                    \While{$n \mod p == 0$}
+                        \State Add $p$ to $factors$
+                        \State $n \gets n / p$
+                    \EndWhile
+                    \If{$p > n / p$}
+                        \State \textbf{break}
+                    \EndIf
+                \EndFor
+                \If{$n > 1$}
+                    \State Add $n$ to $factors$
+                \EndIf
+                \State \Return $factors$
+            \EndFunction
+            
+            \end{algorithmic}
+            \end{algorithm}
+        \begin{example}
+            Find the prime factorization of 8964.
+        \end{example}
+        \textbf{Solution:}
+
+        \begin{enumerate}
+            \item 8964 is even, so start with 2: \( 8964 \div 2 = 4482 \).
+            \item 4482 is also even, divide by 2 again: \( 4482 \div 2 = 2241 \).
+            \item 2241 is not divisible by 2. The next primes to try are 3, 5, 7, 11, and so on. We find that 2241 is not divisible by any of these primes until we reach 31.
+            \item 2241 divided by 31 gives us 71, which is a prime number.
+        \end{enumerate}
+        
+        Thus, the prime factorization of 8964 is \( 2 \times 2 \times 31 \times 71 \), or in exponent form, \( 2^2 \times 31 \times 71 \).
+
+        There are also other method to finding prime numbers or tell whether a number is prime or not. If you are willing
+        to delve into it, you may check \href{https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes}{Sieve of Eratosthenes}, 
+        \href{https://en.wikipedia.org/wiki/Sieve_of_Atkin}{Sieve of Ktkin}. These are only small part of all possible method,
+        which we will learn later, such as Fermat's Little Theorem in solving congruence, as well as Monte Carlo method in probability.
+
+    \subsection{Greatest Common Divisors and Least Common Multiples}
+        Now we will discuss yet another primary school topic, GCD and LCM. Briefyly recap their definitions:
+        \begin{definition}[Greatest Common Divisior]
+            Let $a$ and $b$ be integers, not both zero. The largest integer $d$ such that $d \mid a$ and 
+            $d \mid b $ is called the greatest common divisor of $a$ and $b$. The greatest common divisor of 
+            $a$ and $b$ is denoted by gcd$(a, b)$.
+        \end{definition}
+
+    \begin{example}
+        Find gcd$(12, 24)$ and gcd$(17, 22)$.
+
+        These are easy-to-solve problems. The largest number that divides 12 and 24 is 6, so gcd$(12,24)=6$,while 
+        17 and 22 do not have common divisor other than 1, so gcd$(17, 22)=1$.
+    \end{example}
+
+    For 17 and 22, we have gcd$(17, 22)=1$. In this case, we call that they are \textbf{Relatively Prime}, because
+    their greatest common divisor is 1.
+
+    We can generalize this idea to pairwise Relatively prime.
+    \begin{definition}[Pairwise Relatively Prime]
+        The integers $a_1,a_2,...,a_n$ are pairwise relatively prime if $\gcd(a_i,a_j)=1$ whenever $1\leq i<$ $j\leq n.$
+    \end{definition}
+    For example, 9, 16, 23 are pairwise relatively prime, becuase gcd$(9,16)=0$, gcd$(9,23)=0$, gcd$(16,23)=0$. So we could
+    say that a sequence of number is pairwise relatively prime if and only if any combination of 2 of the numbers in The
+    sequence $a$, $b$, has gcd $(a,b)=1$.
+
+    The other way to find gcd of two number is using their prime factorization. Suppose that the prime factorizations of the positive integers $a$ and 
+    $b$ are $$a=p_1^{a_1}p_2^{a_2}\cdots p_n^{a_n},b=p_1^{b_1}p_2^{b_2}\cdots p_n^{b_n},$$.
+    where each exponent is a nonnegative integer, and where all primes occurring in the prime factorization of either 
+    $a$ or $b$ are included in both factorizations, with zero exponents if necessary. Then gcd$(a, b)$ is given by
+    $$\gcd(a,b)=p_1^{\min(a_1,b_1)}p_2^{\min(a_2,b_2)}\cdotp\cdotp\cdotp p_n^{\min(a_n,b_n)},$$
+    where $\min(x,y)$ represents the minimum of the two numbers $x$ and y. To show that this formula for 
+    $\gcd(a,b)$ is valid, we must show that the integer on the right-hand side divides both $a$ and $b$, and that no larger integer also does. This integer does divide both $\alpha$ and $b$, because the power of each prime in the factorization does not exceed the power of this prime in either the factorization of $a$ or that of $b$. Further, no larger integer can divide both $\alpha$ and $b$, because the exponents of the primes in this factorization cannot be increased, and no other primes can be included.
+    \begin{example}
+        Find $\gcd(100, 250)$.
+
+        $$\gcd(120,500)=2^{\min(3,2)}3^{\min(1,0)}5^{\min(1,3)}=2^23^05^1=20.$$
+    \end{example}  
+
+    This method could be finetuned to find the least common multiple of two integers. Still according to the fundamental
+    theorem of arithmetic, every integer could find a unique factorization as product of prime numbers.
+    \begin{definition}
+        The least common multiple of the positive integers $a$ and $b$ is the smallest positive integer that is 
+        divisible by both $a$ and $b$. The least common multiple of $a$ and $b$ is denoted by lcm$(a, b)$.
+    \end{definition}
+        Suppose the prime factorizations of \(a\) and \(b\) are given by
+        \[ a = p_1^{a_1} p_2^{a_2} \ldots p_n^{a_n}, \quad b = p_1^{b_1} p_2^{b_2} \ldots p_n^{b_n}, \]
+        where \(a_i\) and \(b_i\) are the exponents of the prime factors of \(a\) and \(b\), respectively.
+
+        The product \(ab\) can be expressed as a prime factorization:
+        \[ ab = p_1^{a_1+b_1} p_2^{a_2+b_2} \ldots p_n^{a_n+b_n}. \]
+
+        From this, we can deduce that any common multiple of \(a\) and \(b\) must be a product of their prime factors raised to at least the maximum exponent found in either \(a\) or \(b\). Therefore, the \(\text{lcm}(a, b)\) can be expressed as
+        \[ \text{lcm}(a, b) = p_1^{\max(a_1,b_1)} p_2^{\max(a_2,b_2)} \ldots p_n^{\max(a_n,b_n)}. \]
+        This ensures that \(\text{lcm}(a, b)\) is divisible by both \(a\) and \(b\), and it is the smallest such number with this property.
+
+    \begin{example}
+        Find lcm$(120, 500)$.
+        $$\text{lcm}(120,500)=2^{\max(2,3)}3^{\max(1,0)}5^{\max(1,3)} = 8\times 3 \times 125= 3000$$
+    \end{example}
+    Have you noticed, that $ab$ is actually the product of $\text{lcm}(a,b)$ and $\gcd(a,b)$? Becuase the order of each
+    term in the prime factorization of $ab$ is a sum of two number, what ever which number is the maximum of the minimum,
+    we always have the order of $a_n+b_n$. For 120 and 500 we have 
+    $$ab = 120\times 500 = 60000 = \text{lcm}(a,b)\times \gcd(a,b) = 3000\times 20$$
+
+    \begin{theorem}
+        Let $a$ and $b$ be positive integers. Then $ab= \gcd ( a, b) \cdot $lcm$( a, b).$
+    \end{theorem}
+
+    \subsubsection*{The Euclidean Algorithm}
+
+    \subsubsection*{Greatest Common Divisors as Linear Combinations}
+        The greatest common divisor of two integers $a$ and $b$ can be expressed in the form
+        $$sa + tb$$
+        where $s$ and $t$ are integers. In other words, $\gcd(a, b)$ can be expressed as a linear combination with 
+        integer coefficients of $a$ and $b$. 
+
+        This property of GCD is exactlly the Bézout's Theorem, which states that:
+        \begin{theorem}[Bézout's Theorem]\label{Bezout}
+            Let $a$ and $b$ be integers, not both zero. There exist integers $x$ and $y$ such that
+            \[
+            ax + by = \gcd(a, b),
+            \]
+            where $\gcd(a, b)$ denotes the greatest common divisor of $a$ and $b$. The integers $x$ and $y$ are known as Bézout coefficients.
+            the equation$ \gcd(a, b) = sa + tb$ is called Bézout's identity.
+        \end{theorem}
+        \begin{proof}
+            The proof of Bézout's identity uses the property that for nonzero integers $a$ and $b$, dividing $a$ by 
+            $b$ leaves a remainder of $r_1$ strictly less than $|b|$ and $\gcd(a,b)=$.
+            $\gcd(r_1,b)$.Then by repeated applications of the Euclidean division algorithm, we have
+            $a=bx_1+r_1$, $0<r_1<|b|$, $b=r_1x_2+r_2$, $0<r_2<r_1$,
+            $$r_{n-1}=r_nx_{n+1}+r_{n+1},\quad0<r_{n+1}<r_n$$
+            $$r_n=r_{n+1}x_{n+2}$$
+
+            where the $r_{n+1}$ is the last nonzero remainder in the division process. Now, as illustrated in the example above, we can use the second to last equation to solve for $r_{n+1}$ as a combination of $r_n$ and $r_{n-1}$. Unfolding this, we can solve for $r_n$ as a combination of $r_{n-1}$ and $r_{n-2}$ etc. until we eventually write $r_{n+1}$ as alinear
+            combination of $a$ and $b$. Since $r_{n+1}$ is the last nonzero remainder in the division process, it is the greatest common divisor of $a$ and $b$,which proves Bézout's identity.
+        \end{proof}
+        \begin{remark}
+            Bezout's Theorem is closely related to Linear Diophantine Equations, which we will
+            discuss further in solving linear congruence.
+        \end{remark}
+
+        We use a example to explain further on the theorem. Recall that Euclidean algorithm is actually a recursive algorithm, to find
+        gcd of $a$ and $b$, it requires multiple usage of the algorithm.
+        \begin{example} 
+            Use the Euclidean algorithm to find the greatest common divisor of 1022 and 400.
+        \end{example}   
+        \textbf{Solution:}
+$$
+        \begin{aligned}\\
+            1022&=2\times400+222\\
+            400&=1\times 222+178\\
+            222&=1\times 178+44\\
+            178&=4\times 44+2\\
+            44&=22\times2+0
+            \end{aligned}
+   $$ 
+        In this way, we find $\gcd(1022,400)=2$ easily. Writing the step-by-step of using Euclidean like this is what we call \textbf{the
+        Extended Euclidean Algorithm}. 
+
+        Notice further that as the terms in the extended algorithm could be expressed by previous lines, we can finally get a linear combination
+        of the gcd over 1022 and 400. In this case, we have $2 = 23\times 400-9\times 1022$.
+
+        Now consider an equivalent expression for the problem.  Find integers $a$ and $b$ such that $\gcd(1022, 400) = a \times 1022 + b \times 400$.
+        In this case, we do exactly the same thing, and straightforward, we have $a=-9$ and $b=23$.
+
+        There is still another equivalent expression to this, and it will be discussed with linear congruence in the next section.
+
+
+
+    \subsection{Exercises}
+
+
+    
+    
+    \section{Solving Congruence}
+        Earlier in this chapter, we introduced divisibility, and thus defined division and modular arithmetic, as well as modular congruence.
+        We have also introduced algebraic properties of congruence, and surprisingly, many of which are just like "copying" from the real number
+        , or we generally say, normal algebra system. Now think about how we learn math for real number. We learnt all the way from basic operations, and finally we just do not use the numbers anymore in the expression, but in stead, letters, and we call this algebra. Now that modular congruence
+        shares so many basic properties with that, can we extend to more algebra on modular congruence? This section introduces solving equation, or only
+        linear equations, of modular congruence, and it has much to do with Euclidean algorithm.
+            
+
+        \subsection{Linear Congruence}
+            \begin{definition}[Linear Congruence]
+                Congruence of the form as follows
+                $$ax \equiv b (\bmod m)$$
+                is called \textbf{Linear Congruence}, where $a, b,  m \in \mathbb{Z}^+$, and $x$ is the variable to be solved.
+                To solve this congruence, we need to find $\bar{a}$, which we call \textbf{inverse of a modulo m} if $a$, such that
+                $a\bar{a} \equiv 1 (\bmod m)$.
+            \end{definition}
+        If we are to find the $x$ of a given expression, what kind of solution we will get? Do we get 
+        specific solution or infinitely many solutions? The fact is that we will get infinitely many
+        solutions, since modular congruence has periodicity.
+
+        \begin{theorem}[Existence of Inverses Theorem]\label{exist_inverse}
+            If \( a \) and \( m \) are relatively prime integers and \( m > 1 \), then an inverse of \( a \) modulo \( m \) exists. Furthermore, this inverse is unique modulo \( m \). (That is, there is a unique positive integer \( \bar{a} \) that is an inverse of \( a \) modulo \( m \) and every other inverse of \( a \) modulo \( m \) is congruent to \( \bar{a} \) modulo \( m \).)
+            \end{theorem}
+            
+            \begin{proof}
+            By Bezout's Theorem, because \( \gcd(a, m) = 1 \), there are integers \( s \) and \( t \) such that
+            \[
+            sa + tm = 1.
+            \]
+            This implies that
+            \[
+            sa + tm \equiv 1 \pmod{m}.
+            \]
+            Because \( tm \equiv 0 \pmod{m} \), it follows that
+            \[
+            sa \equiv 1 \pmod{m}.
+            \]
+            Consequently, \( s \) is an inverse of \( a \) modulo \( m \).
+
+            Now we try to prove the uniqueness of $s$ as an inverse of \( a \) modulo \( m \).
+            Suppose there are other integers than $s$ ($x$) that satisfies  
+            \[ xa \equiv 1 \pmod{m} \text{ and } x \neq s + km\]
+            So, by definition of modular congruence we have $xa \bmod m = 1$ and $sa \bmod m = 1$, which
+            gives
+            $$xa \equiv sa \pmod m$$
+            So $m\mid xa - sa$, and this means that $xa - sa = km$ for some integer $k$ must be true.
+            If that is true, then $x-s$ is also multiple of $m$, which means $x\equiv s \pmod m$.
+            Now recall our assumption that $x\neq s + km$, so $x = s + km$ for some integer $k$ refutes
+            our assumption. Therefore, there is a unique positive integer $\bar{a}$ that is an inverse of a 
+            modulo $m$ and every other inverse of $a$ modulo $m$ is congruent to $\bar{a}$ modulo m.
+            \end{proof}
+        
+        \begin{example}
+            Find an inverse of 101 modulo 5000.
+        \end{example}
+        \paragraph{Solution:}
+we present all steps used to compute an inverse of 101 modulo 5000. First, we use the Euclidean algorithm to show that $\gcd(101, 5000) = 1$. Then we will reverse the steps to find B\'ezout coefficients $a$ and $b$ such that $101a + 5000b = 1$. It will then follow that $a$ is an inverse of 101 modulo 5000. The steps used by the Euclidean algorithm to find $\gcd(101, 5000)$ are
+\begin{align*}
+5000 &= 49 \cdot 101 + 51 \\
+101 &= 1 \cdot 51 + 50 \\
+51 &= 1 \cdot 50 + 1 \\
+50 &= 50 \cdot 1.
+\end{align*}
+Because the last nonzero remainder is 1, we know that $\gcd(101, 5000) = 1$. We can now find the Bezout coefficients for 101 and 5000 by working backwards through these steps, expressing the gcd of 101 and 5000 as $1$ in terms of each successive pair of remainders. In each step we eliminate the remainder by expressing it as a linear combination of the divisor and the dividend. We obtain
+\begin{align*}
+1 &= 51 - 1 \cdot 50 \\
+&= 51 - 1 \cdot (101 - 1 \cdot 51) \\
+&= 2 \cdot 51 - 101 \\
+&= 2 \cdot (5000 - 49 \cdot 101) - 101 \\
+&= 2 \cdot 5000 - 99 \cdot 101.
+\end{align*}
+
+That $-99 \cdot 5000 + 2 \cdot 101 = 1$ tells us that $2$ and $-99$ are Bezout coefficients of 5000 and 101, and $-99$ is an inverse of 101 modulo 5000.
+        %\subsubsection*{Arithmetic of Large Numbers}
+    \begin{example}
+        What are the solutions of the linear congruence $101x \equiv 3 \pmod {5000}$?
+    \end{example}
+    We know that -99 is a modular inverse of $101 \bmod 5000$. So we multiply the inverse on the both
+    side, this gives
+    $$-99 \cdot 101x \equiv -99\cdot 3 \pmod {5000} $$
+    $-99\cdot 101 \equiv 1 \pmod{5000}$, so $x\equiv -99 \cdot3 \pmod{5000}$.
+    From here we can see that $x$ is not a single number, but a set of numbers. We can have$x = -297, -5293, 4703\cdots$.
+    So the general solution $x$ is $x = x_0 + km$, where $k$ is some integer, and $x_0$ is one of the specific solution we can
+    find.
+
+    Great, now you can solve any solutions for any linear congruence, as long as it is solvable (has inverse).
+    But can we generalize this problem? Because in the previous discussion of solving linear congruence and
+    finding the inverse are all based on the condition that the two numbers are coprime, i.e., $\gcd(a,b)=1$.
+    What will be the case when they are not coprime?
+
+    Actually, solving linear congruence is a subset of a greater concept, \textbf{Diophantine Equation}.
+    \begin{definition}[Diophantine Equation]
+        A Diophantine equation is an equation or a system of equations that allows for polynomial expressions in several variables and requires the solutions to be integers. These equations are studied within number theory and are named after Diophantus of Alexandria, a Greek mathematician. Specifically,
+        a Diophantine equation can be interpreted by the following expression.
+        $$a_{1}x_{1}^{b_{1}}+a_{2}x_{2}^{b_{2}}+......+a_{n}x_{n}^{b_{n}}=c$$
+        Where $a$, $b$, $x$, $c \in \mathbb{Z}$. 
+    \end{definition}
+    You may realize at the first glance that this equation is hard to solve and has infinitely many
+    solutions, because for the most basic system of linear equation, we can only get specific solution
+    when the number of unknowns is equal to the number of equations in the system. But no worries,
+    we discuss only the simplest form of this type of equation for now, which is
+    $$ax+by=c \text{.}$$
+    Isn't it familiar to you? This is exactly what were shown in Bezout's Theorem (you may check theorem \ref{Bezout})
+    This means that, as long as we are finding the relation between between a pair of number $a,b$ with their
+    GCD, we are doing exactly the same thing as solving linear congruence, because the latter is
+    a subset of the former, as Diophantine equation.
+
+    Now let's work out the general solution of such equation.
+    Consider the linear Diophantine equation
+
+\begin{equation}
+ax + by = c
+\end{equation}
+
+where \(a\), \(b\), and \(c\) are given integers, and \(x\) and \(y\) are unknown integers that we want to solve for. 
+
+\textbf{Step 1: Finding a particular solution}
+
+By the Extended Euclidean Algorithm, we can find integers \(x_0\) and \(y_0\) such that
+
+\begin{equation}
+ax_0 + by_0 = \gcd(a, b)
+\end{equation}
+
+\textbf{Step 2: The general solution form}
+
+If \(c\) is a multiple of \(\gcd(a, b)\), say \(c = k \cdot \gcd(a, b)\), then by multiplying the equation \(ax_0 + by_0 = \gcd(a, b)\) by \(k\), we get a particular solution to \(ax + by = c\):
+
+\begin{equation}
+ax_0k + by_0k = ck
+\end{equation}
+
+Now, consider that for any integer \(t\), the following holds:
+
+\begin{equation}
+a(x_0 + tb/d) + b(y_0 - ta/d) = ax_0 + by_0 = ck
+\end{equation}
+
+where \(d = \gcd(a, b)\). 
+
+This is because the multiples of \(b/d\) added to \(x\) and multiples of \(a/d\) subtracted from \(y\) will cancel each other out when multiplied by \(a\) and \(b\), respectively.
+
+\textbf{Step 3: General solution}
+
+Thus, the general solution to the equation \(ax + by = c\) can be expressed as:
+
+\begin{equation}
+x = kx_0 + t\left(\frac{b}{d}\right)
+\end{equation}
+
+\begin{equation}
+y = ky_0 - t\left(\frac{a}{d}\right)
+\end{equation}
+
+where \(t, k\) are any integer and $d = \gcd(a,b)$. This represents an infinite set of solutions if \(a\) and \(b\) are coprime.
+\begin{corollary}[Solvability of Linear Diophantine Equation]
+    Now consider the cases for solutions, when $a,b$ are coprime ($\gcd(a,b)=1$), there must be integer solutions for the equation,
+as shown in the proof, because 1 is a divisor of any integer. However, when $c$ is not a multiple
+of $\gcd(a, b)$, we cannot find any integer solution. As for other general cases, i.e., $\gcd(a, b)\neq 1$,
+but $\gcd(a,b)\mid c$, there are integer solutions.
+\end{corollary}
+
+Now that we have known the idea of Diophantine Equation, we can relate the concept to linear
+congruence easily. 
+\begin{proposition}[Linear Congruence is a subproblem of Douphantine Equation]
+    Solving linear congruence is a subproblem of solving linear Diophantine equation.
+    Suppose we are looking for linear combination of $c=sa+tb$, which is equivalent
+to solving this Diophantine equation. This is equivalent to find $ax\equiv c \pmod b$.
+\end{proposition}
+\begin{proof}
+    $ax\equiv c \pmod b$ means that $ax \bmod b = c \bmod b$. By division algorithm
+    $ax = q_1b + r$, $c = q_2b + r$, where $q$ is the quotient and $q\in \mathbb{Z}$. 
+    $c-q_2b = ax-q_1b$, and thus $c = ax + (q_2-q_1)b$, where $a, (q_2-q_1)\in \mathbb{Z}$.
+    So we have shown that solving linear congruence could be treated as solving a Diophantine Equation.
+\end{proof}
+\begin{example}
+    Solve $400z\equiv 8 (\bmod1022)$
+\end{example}
+\textbf{Solution:} 
+
+    We can straightaway treat it as solving the Diophantine equation
+    $$8 = 400x + 1022y$$
+    We need to know their gcd, so we use extended Euclidean algorithm.
+   $$ \begin{aligned}
+        1022&=2\times400+222\\
+        400&=1\times 222+178\\
+        222&=1\times 178+44\\
+        178&=4\times 44+2\\
+        44&=22\times2+0
+        \end{aligned}$$
+    
+        By Bezout theorem, we use substitution repetitively to get the linear combination of
+        their gcd in terms of 400 and 1022, which is $2 = 23\times 400 -9\times 1022$.
+        Because 8 is multiple of 2, so we can get $z$ by $8 = -36\times 1022 + 92\times 400$, 
+        which is a set of specific solution ($x = 92, y=-36$).
+
+        With the specific solution, we can get the general solution:
+        $$ \begin{aligned}\\
+            x&=k\cdot 92+t(\frac{1022}{\gcd(400,1022)})\\
+            y&=k\cdot(-36)+t(\frac{400}{\gcd(400,1022)} )
+            \end{aligned}$$
+        
+        \subsection{The Chinese Remainder Theorem}
+        In the last section, we relate linear congruence to linear equation. Now we will try to relate it to system of linear equations.
+        Recall that a \textit{system of linear equations} is a collection of one or more linear equations involving the same variables. 
+        \begin{definition}[System of Linear Equations]
+        In the context of real numbers, a system of $n$ linear equations in $n$ unknowns $x_1, x_2, \ldots, x_n$ can be written as:
+        \begin{align*}
+        a_{11}x_1 + a_{12}x_2 + \cdots + a_{1n}x_n &= b_1 \\
+        a_{21}x_1 + a_{22}x_2 + \cdots + a_{2n}x_n &= b_2 \\
+        \vdots &\\
+        a_{n1}x_1 + a_{n2}x_2 + \cdots + a_{nn}x_n &= b_n
+        \end{align*}
+        where $a_{ij}$ and $b_i$ are real numbers.
+        \begin{remark}
+            Just a kind reminder that "Linear" basically means the order of polynomial is at most 1, just in case some don't know
+            the definition.
+        \end{remark}
+        \end{definition}
+        \begin{definition}[System of Linear Congruences]
+        Similarly, a \textit{system of linear congruences} is a collection of linear congruences in the same variables over a ring of integers modulo $m$. A system of $n$ linear congruences in $n$ unknowns $x_1, x_2, \ldots, x_n$ can be written as:
+        \begin{align*}
+        a_{11}x_1 + a_{12}x_2 + \cdots + a_{1n}x_n &\equiv b_1 \pmod{m_1} \\
+        a_{21}x_1 + a_{22}x_2 + \cdots + a_{2n}x_n &\equiv b_2 \pmod{m_2} \\
+        \vdots &\\
+        a_{n1}x_1 + a_{n2}x_2 + \cdots + a_{nn}x_n &\equiv b_n \pmod{m_n}
+        \end{align*}
+        where $a_{ij}$, $b_i$, and $m_i$ are integers. The goal in both cases is to find values for the unknowns that simultaneously 
+        satisfy all the equations or congruences in the system.
+        \end{definition}
+        Actually, we cannot solve such complex problems, which  requires further knowledge on matrix and linear algebra. However, just like
+        what we do to Diophantine Equations, we are trying to find solution for a specific case of basic form, which, in this case, is 
+        discussed in \textbf{Chinese Remainder Theorem}.
+        In the first century, the Chinese mathematician Sun-Tsu asked: 
+        There are certain things whose number is unknown. When divided by 3, the remainder is 2; when divided by 5, the remainder is 3; 
+        and when divided by 7, the remainder is 2. What will be the number of things?
+
+        This problem could be transfered in the a system of linear congruences that
+        $${\begin{array}{c}x\equiv2\pmod{3}\\x\equiv3\pmod{5}\\x\equiv2\pmod{7}\end{array}}$$
+        The algorithm to find the solution for such problem is known as Chinese Remainder Theorem.
+        \begin{theorem}[Chinese Remainder Theorem]
+            Let $m_1,m_2,...,m_n$ be pairwise relatively prime positive integers greater than one and $a_1,a_2,...,a_n$ arbitrary integers. Then the system
+            \begin{align*}
+                x&\equiv a_1\pmod{m_1}\\
+                x&\equiv a_2 \pmod{m_2}\\
+                \vdots&\\
+                x&\equiv a_n \pmod{m_n}
+            \end{align*}
+            has a unique solution modulo $m=m_1m_2...m_n.$ (That is, there is a solution $x$ with
+            $0\leq x<m$, and all other solutions are congruent modulo $m$ to this solution.)
+        \end{theorem}
+        \begin{proof}
+            To establish this theorem, we need to show that a solution exists and that it is unique modulo $M$. We will show that a solution exists by describing a way to construct this solution, and then we will prove that the solution is unique modulo $M$.
+            
+            \textbf{Existence of a solution:}
+            To construct a simultaneous solution, first let
+            $$M_k = \frac{M}{m_k} = m_1m_2 \cdots m_{k-1}m_{k+1} \cdots m_n$$
+            for $k = 1, 2, \ldots, n$. That is, $M_k$ is the product of the moduli except for $m_k$. Because $m_i$ and $m_k$ have no common factors greater than 1 when $i \neq k$, it follows that $\gcd(m_k, M_k) = 1$. Consequently, by Bézout's identity, we know that there exist integers $y_k$ and $z_k$ such that
+            $$M_ky_k + m_kz_k = 1$$
+            This implies that (refer to theorem \ref{exist_inverse})
+            $$M_ky_k \equiv 1 \pmod{m_k}$$
+            Where $y_k$ is one of the unique modular inverse of $M_k$.
+            To construct a simultaneous solution, form the sum
+            $$x = a_1M_1y_1 + a_2M_2y_2 + \cdots + a_nM_ny_n.$$
+            
+            We will now show that $x$ is a simultaneous solution. First, note that because $M_j \equiv 0 \pmod{m_k}$ whenever $j \neq k$, all terms except the $k$th term in this sum are congruent to 0 modulo $m_k$. Because $M_ky_k \equiv 1 \pmod{m_k}$, we see that
+            $$x \equiv a_kM_ky_k \equiv a_k \pmod{m_k}$$
+            for $k = 1, 2, \ldots, n$. We have shown that $x$ is a simultaneous solution to the $n$ congruences.
+            
+            \textbf{Uniqueness of the solution modulo $M$:}
+            
+            Suppose that $x$ and $x'$ are two solutions to the system of congruences. Then, for each $k = 1, 2, \ldots, n$, we have
+            $$x \equiv a_k \pmod{m_k} \quad \text{and} \quad x' \equiv a_k \pmod{m_k}$$
+            This implies that
+            $$x \equiv x' \pmod{m_k}$$
+            for all $k = 1, 2, \ldots, n$. Since $m_1, m_2, \ldots, m_n$ are pairwise coprime, by the Chinese Remainder Theorem for Ideals, we have
+            $$x \equiv x' \pmod{M}$$
+            where $M = m_1m_2 \cdots m_n$. This proves that the solution is unique modulo $M$.
+            \end{proof}
+
+        \begin{example}
+            Solve
+            \begin{align*}
+                x &\equiv 2 \pmod{3} \\
+                x &\equiv 3 \pmod{5} \\
+                x &\equiv 2 \pmod{7}
+                \end{align*}
+                where $m_1 = 3$, $m_2 = 5$, $m_3 = 7$ are pairwise coprime
+
+                we can use the Chinese Remainder Theorem. The solution is:
+                \[x \equiv a_1M_1y_1 + a_2M_2y_2 + a_3M_3y_3 \pmod{m_1m_2m_3}\]
+                where $M_i = \frac{m_1m_2m_3}{m_i}$ and $y_i$ satisfies $M_iy_i \equiv 1 \pmod{m_i}$ for each $i$.
+                \begin{align*}
+                    x\equiv a_{1}M_{1}y_{1}+a_{2}M_{2}y_{2}+a_{3}M_{3}y_{3}& =2\cdot35\cdot2+3\cdot21\cdot1+2\cdot15\cdot1  \\
+                    &=233\equiv23\mathrm{~(mod~}105).
+                \end{align*}
+                The solution $x \equiv 233 \equiv 23 \pmod{105}$ is the smallest positive integer that leaves a remainder of 2 when divided by 3, a remainder of 3 when divided by 5, and a remainder of 2 when divided by 7.
+        \end{example}
+
+        This is indeed a general solution to such problem, however, you may have already realized that finding 
+        modular inverse for a given number is not that easy. And also, when the problem scale up, the complexity of computing
+        is not ideal. Hence, we introduce back substitution as a shortcut, here is how it works.
+
+        \begin{example}
+            Solving 
+            \begin{align*}
+                x &\equiv 2 \pmod{3} \\
+                x &\equiv 3 \pmod{5} \\
+                x &\equiv 2 \pmod{7}
+                \end{align*}
+            by back substitution.
+        
+
+        By the definition of modular congruence, $x\equiv 2 \pmod 3$ is equivalent to $x = 3i+2$ for some integer $i$.
+        Substituting this into the second modular congruence gives us $$3i+2 \equiv 3 \pmod 5.$$
+        Subtracting 2 on both side we have
+        $$3i\equiv 1 \pmod 5.$$
+        Now we can find that $i$ is actually a modular inverse of 3 by 5, and the smallest positive integer that
+        satisfies this is $i=2$, so we have $i\equiv 2 \pmod 5$. Similarly, we have $i = 5j + 2$ for some integer
+        $j$. Substituting $i = 5j + 2$ into $x = 3i+2$, we have $x = 15j + 8$. Apply this to the third 
+        expression we have $$15j + 8\equiv 2 \pmod{7},$$ and $15j \equiv 1 \pmod 7$,because $8 \equiv 1\pmod 7$. We 
+        find that $j$ is also a modular inverse of 15 by 7, and the smallest positive integer for this is 1, so 
+        $j \equiv 1 \pmod 7$. Again, we have $j = 7k + 1$ for some integer $k$, now substitute this into 
+        $x = 15j + 8$, we have $x = 15(7k + 1) + 8$. So we have $$x = 105k + 23$$.
+        We can translate this easily into the following congruence:
+        $$x \equiv 23 \pmod{105}.$$ That is exactly the solution to the system of linear congruences.
+        \end{example}
+        \begin{remark}
+            In summary, back substitution works because multiplying both sides of a linear congruence by the modular multiplicative inverse of the coefficient allows us to isolate the variable and find its value modulo $m$.
+        \end{remark}
+
+                
+        
+        \subsection{Fermat's Little Theorem}
+        This section discusses Fermat's Little Theorem. This theorem is named after the French mathematician Pierre de Fermat, who first stated it in 1640. 
+        Fermat's Little Theorem is a fundamental result in number theory and has numerous applications in cryptography, computer science, and other fields.
+        It provides a way to reduce large powers modulo a prime number, which is essential for efficient computation in many algorithms.
+        \begin{theorem}[Fermat's Little Theorem]
+            Let $p$ be a prime number and $a$ be any integer not divisible by $p$. Then, the following congruence relation holds:
+            \[a^{p-1} \equiv 1 \pmod{p}\]
+            In other words, if we raise $a$ to the power of $p-1$ and divide the result by $p$, the remainder is always $1$. 
+        \end{theorem}
+        In previous chapter, we introduced the fast modular exponential algorithm to calculate exponentiation modulo $m$. Fermat's Little Theorem
+        provides another pathway that sometimes could even be faster.
+        \begin{proof}
+            Let $p$ be a prime number and $a$ be an integer not divisible by $p$. Consider the set of integers $\{1, 2, \ldots, p-1\}$ and multiply each element by $a$ modulo $p$. This operation permutes the set, as no two elements will have the same product modulo $p$ (if $ax \equiv ay \pmod{p}$, then $a(x-y) \equiv 0 \pmod{p}$, which implies $x \equiv y \pmod{p}$ since $a$ is not divisible by $p$).
+            
+            Therefore, the set $\{a \cdot 1, a \cdot 2, \ldots, a \cdot (p-1)\}$ is a permutation of $\{1, 2, \ldots, p-1\}$ modulo $p$. Multiplying all elements in each set, we get:
+            \[
+            \prod_{i=1}^{p-1} (a \cdot i) \equiv \prod_{i=1}^{p-1} i \pmod{p}
+            \]
+            which can be rewritten as:
+            \[
+            a^{p-1} \prod_{i=1}^{p-1} i \equiv \prod_{i=1}^{p-1} i \pmod{p}
+            \]
+            Canceling the common factor $\prod_{i=1}^{p-1} i$ (which is not divisible by $p$), we obtain:
+            \[
+            a^{p-1} \equiv 1 \pmod{p}
+            \]
+            Thus, Fermat's Little Theorem is proved.
+        \end{proof}
+
+        To clarify the key points of this theorem, consider the following table. This table shows the case where p = 7 for $a^b\equiv 1 \pmod p$.
+        The row number represents $a$, and column number represents $b (=p-1)$, among the combination we see exactly the every six column gives a whole 
+        column that satisfies $a^b\equiv 1 \pmod p$.
+        \begin{center}
+            \begin{tabular}{|c|c|c|c|c|c|c|c|}
+            \hline
+            $a \backslash b$ & $0$ & $1$ & $2$ & $3$ & $4$ & $5$ & $6$ \\
+            \hline
+            $1$ & $1$ & $1$ & $1$ & $1$ & $1$ & $1$ & $1$ \\
+            \hline
+            $2$ & $1$ & $2$ & $4$ & $1$ & $2$ & $4$ & $1$ \\
+            \hline
+            $3$ & $1$ & $3$ & $2$ & $6$ & $4$ & $5$ & $1$ \\
+            \hline
+            $4$ & $1$ & $4$ & $2$ & $1$ & $4$ & $2$ & $1$ \\
+            \hline
+            $5$ & $1$ & $5$ & $4$ & $6$ & $2$ & $3$ & $1$ \\
+            \hline
+            $6$ & $1$ & $6$ & $1$ & $6$ & $1$ & $6$ & $1$ \\
+            \hline
+            \end{tabular}
+        \end{center}
+        \begin{example}[Fermat's Little Theorem]
+            Compute $3^{100} \pmod{7}$ using Fermat's Little Theorem.
+        \end{example}
+            \begin{solution}
+            First, we check that the conditions for Fermat's Little Theorem are satisfied:
+            \begin{itemize}
+            \item $7$ is a prime number.
+            \item $3$ is not divisible by $7$.
+            \end{itemize}
+            
+            By Fermat's Little Theorem, we know that:
+            \[
+            3^{7-1} \equiv 1 \pmod{7}
+            \]
+            which can be rewritten as:
+            \[
+            3^6 \equiv 1 \pmod{7}
+            \]
+            
+            Now, we can use this result to simplify the calculation of $3^{100} \pmod{7}$:
+            \begin{align*}
+            3^{100} &= (3^6)^{16} \cdot 3^4 \\
+            &\equiv 1^{16} \cdot 3^4 \pmod{7} \\
+            &\equiv 1 \cdot 81 \pmod{7} \\
+            &\equiv 4 \pmod{7}
+            \end{align*}
+            
+            Therefore, $3^{100} \equiv 4 \pmod{7}$.
+            \end{solution}
+            
+            In this example, we first check that the conditions for Fermat's Little Theorem are met: $7$ is a prime number, and $3$ is not divisible by $7$. Then, we use Fermat's Little Theorem to establish that $3^6 \equiv 1 \pmod{7}$.
+            
+            To compute $3^{100} \pmod{7}$, we break down the exponent into smaller parts:
+            \begin{itemize}
+            \item We write $3^{100}$ as $(3^6)^{16} \cdot 3^4$.
+            \item Since $3^6 \equiv 1 \pmod{7}$, we can replace $(3^6)^{16}$ with $1^{16}$, which is equal to $1$.
+            \item We compute $3^4 \pmod{7}$, which is $81 \equiv 4 \pmod{7}$.
+            \item Finally, we multiply $1$ and $4$ modulo $7$ to get the result: $3^{100} \equiv 4 \pmod{7}$.
+            \end{itemize}
+
+\begin{exercise}
+	Use the Euclidean algorithm to find the greatest common divisor of 504 and 385.
+	consider
+	\begin{itemize}
+		\item Is it possible to find an integer \(y\) such that \(504y \equiv 10 \mod 385\)? If it is, find one. If it isn't, explain why not.
+		\item Is it possible to find an integer \(z\) such that \(504z \equiv 7 \mod 385\)? If it is, find one. If it isn't, explain why not.
+	\end{itemize}
+\end{exercise}
+\begin{solution}
+	By extended Euclidean Algorithm
+	\begin{align*}
+		504 & =1\times 385+119\\
+		385 & =3\times 119+28\\
+		119 & =4\times 28+7\\
+		28 & =4\times 7+0
+	\end{align*}
+	We conclude that $\gcd(504, 385)=7$
+	
+	Since solving linear congruence is equivalent to solving Linear Diophantine Equation. So we need to solve 
+	$$\begin{aligned}
+		10 &=504x+385y\\
+		\text{and}\\
+		7 &= 504x+385y
+	\end{aligned}$$
+	The equation \(504z \equiv 7 \mod 385\) can be simplified to \(119z \equiv 7 \mod 385\) since \(504 \equiv 119 \mod 385\). Because the gcd(119, 385) = 7 does divide 7, a solution exists. Dividing the equation by 7 gives \(17z \equiv 1 \mod 55\). Testing multiples of 17 modulo 55, we find that \(17 \cdot 13 \equiv 1 \mod 55\), so \(z = 13\) is a solution. 
+	
+	For the second function, we cannot find any linear combination of integers for the expression, because $ 7\nmid 10$.
+	
+	For the general solution, we can use the conclusion obtained earlier in this chapter that 
+$$
+	\begin{cases}
+		x = k \times x_0 + t (\frac{385}{\gcd(504,385)})\\
+		y = k \times y_0 + t (\frac{504}{\gcd(504,385)})
+	\end{cases}
+$$
+	where $k,t$ are just some integers, and $x_0,y_0$ are a set of specific solution, which could be found by back substitution.
+	By back substitution in the lines of extended Euclidean algorithm, we have $\gcd(504,385) = 13\times 504-17\times385$.
+	So
+	$$
+	\begin{cases}
+		x = k \times 13 + t (\frac{385}{\gcd(504,385)})\\
+		y = k \times (-17) + t (\frac{504}{\gcd(504,385)})
+	\end{cases}
+	$$
+	is the general solution for the equation.
+\end{solution}
+
+

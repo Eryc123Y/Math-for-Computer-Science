@@ -1,4 +1,4 @@
 [0] Config.pm:306> INFO - This is Biber 2.18
 [0] Config.pm:309> INFO - Logfile is 'main.blg'
-[35] biber-darwin:340> INFO - === Mon Apr  8, 2024, 09:46:14
-[43] Biber.pm:418> INFO - Reading 'main.bcf'
+[38] biber-darwin:340> INFO - === Mon Apr  8, 2024, 13:11:06
+[46] Biber.pm:418> INFO - Reading 'main.bcf'
