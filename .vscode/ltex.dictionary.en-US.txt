@@ -35,3 +35,5 @@ minterms
 maxterm
 surjections
 surjection
+Extensionality
+Dom

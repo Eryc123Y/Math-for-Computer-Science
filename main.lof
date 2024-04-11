@@ -1,35 +1,36 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces $f(x,y)=x+y$}}{48}{figure.2.1}%
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Visualization of $\mathbb {R}^1$ and $\mathbb {R}^2$}}{49}{figure.2.2}%
-\contentsline {figure}{\numberline {2.3}{\ignorespaces }}{50}{figure.2.3}%
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Examples of Special Mappings}}{52}{figure.2.4}%
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Visualization of $\sum _{i=1}^{n} \sum _{j=1}^{n} (a_ib_j-a_jb_i)$}}{67}{figure.2.5}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces $f(x,y)=x+y$}}{50}{figure.2.1}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Visualization of $\mathbb {R}^1$ and $\mathbb {R}^2$}}{51}{figure.2.2}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces }}{52}{figure.2.3}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Examples of Special Mappings}}{54}{figure.2.4}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Visualization of $\sum _{i=1}^{n} \sum _{j=1}^{n} (a_ib_j-a_jb_i)$}}{69}{figure.2.5}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Venn Diagram of Number Sets}}{79}{figure.3.1}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Visualization of $\lceil x \rceil \text { and } \lfloor x \rfloor $}}{81}{figure.3.2}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Time Complexity Visualization}}{88}{figure.3.3}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Venn Diagram of Number Sets}}{81}{figure.3.1}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Visualization of $\lceil x \rceil \text { and } \lfloor x \rfloor $}}{83}{figure.3.2}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Time Complexity Visualization}}{90}{figure.3.3}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Quadratic function graphs based on the discriminant.}}{95}{figure.4.1}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Triangular Inequality: $ab < 0$}}{97}{figure.4.2}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces AGM when $x_2 = 0$}}{100}{figure.4.3}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces AGM when $x_2 = 5$}}{100}{figure.4.4}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces AGM 3D Visualization}}{101}{figure.4.5}%
-\contentsline {figure}{\numberline {4.6}{\ignorespaces AGM 3D Visualization (Front)}}{101}{figure.4.6}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Quadratic function graphs based on the discriminant.}}{97}{figure.4.1}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Triangular Inequality: $ab < 0$}}{99}{figure.4.2}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces AGM when $x_2 = 0$}}{102}{figure.4.3}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces AGM when $x_2 = 5$}}{102}{figure.4.4}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces AGM 3D Visualization}}{103}{figure.4.5}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces AGM 3D Visualization (Front)}}{103}{figure.4.6}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Complex Plane}}{125}{figure.5.1}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Complex Conjugate}}{127}{figure.5.2}%
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Complex Number as Vector}}{132}{figure.5.3}%
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Parallelogram Law}}{132}{figure.5.4}%
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Complex Number in Polar Coordinate}}{133}{figure.5.5}%
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Solutions for $z^3=1$}}{154}{figure.5.6}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Complex Plane}}{127}{figure.5.1}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Complex Conjugate}}{129}{figure.5.2}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Complex Number as Vector}}{134}{figure.5.3}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Parallelogram Law}}{134}{figure.5.4}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Complex Number in Polar Coordinate}}{135}{figure.5.5}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Solutions for $z^3=1$}}{156}{figure.5.6}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces K-map and Grouped K-map of $F_1$}}{183}{figure.6.1}%
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Karnaugh Map of $F_1$ and $F_2$ after Grouping}}{188}{figure.6.2}%
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Visualization of Boolean Domain}}{190}{figure.6.3}%
+\contentsline {figure}{\numberline {6.1}{\ignorespaces K-map and Grouped K-map of $F_1$}}{185}{figure.6.1}%
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Karnaugh Map of $F_1$ and $F_2$ after Grouping}}{190}{figure.6.2}%
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Visualization of Boolean Domain}}{192}{figure.6.3}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {7.1}{\ignorespaces Binary, Octal and Hexadecimal Representation}}{203}{figure.7.1}%
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Binary, Octal and Hexadecimal Representation}}{205}{figure.7.1}%
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {8.1}{\ignorespaces Visual Comparison of a Relation and a Function}}{235}{figure.8.1}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

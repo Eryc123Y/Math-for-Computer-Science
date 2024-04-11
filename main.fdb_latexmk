@@ -1,17 +1,17 @@
 # Fdb version 4
-["biber main"] 1712581242.12882 "main.bcf" "main.bbl" "main" 1712588985.31194 0
-  "main.bcf" 1712588984 107256 cda255eed6b0d0df027a0b54e0d84d42 "pdflatex"
+["biber main"] 1712679161.84989 "main.bcf" "main.bbl" "main" 1712788085.19904 0
+  "main.bcf" 1712788084 107256 cda255eed6b0d0df027a0b54e0d84d42 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["makeindex main.idx"] 1712553057 "main.idx" "main.ind" "main" 1712588985.31169 0
-  "main.idx" 1712588979 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+["makeindex main.idx"] 1712770948.89629 "main.idx" "main.ind" "main" 1712788085.19876 0
+  "main.idx" 1712788079 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   (generated)
   "main.ilg"
   "main.ind"
   (rewritten before read)
-["pdflatex"] 1712588979.02833 "main.tex" "main.pdf" "main" 1712588985.3123 0
+["pdflatex"] 1712788078.36694 "c:/Programming/GitProjects/Math-for-Computer-Science/main.tex" "main.pdf" "main" 1712788085.19941 0
   "Images/R^2.png" 1712142752 64840 5aae617f29bd5e5d2c41b0b9dc40ef22 ""
   "Images/R^3.png" 1712312456 153114 e1ae9d1019216090c34455e35abf3082 ""
   "Images/agm3D.png" 1707481231 97995 3c8707993f2acdfb1f5fe89cecae6e4e ""
@@ -26,6 +26,7 @@
   "Images/conjugate.png" 1707481231 39265 80a7f6725222d3c39b29943769851308 ""
   "Images/converttab.png" 1708273274 48471 d2ef8e82633b9a2c9e4c07804c89efa1 ""
   "Images/func.jpg" 1707481231 134188 1a7175266a6c8bac24a1df855dc41b1d ""
+  "Images/function&relation.png" 1712776987 47911 1feb8c838596a0db540d9afcf1ed7e7c ""
   "Images/intfunc.png" 1707481231 80329 f1ecbdf3434e6e810189a21692583509 ""
   "Images/locus1.png" 1707481231 57923 a85dc7890fd0a18f5d84fc2097cc55c5 ""
   "Images/mtxvis.png" 1707481231 92842 2ba8228e52657824bfe682d7838c1016 ""
@@ -41,6 +42,7 @@
   "Images/venn.png" 1707481232 101167 627b3f359fe3b8844e7f344c0e38c3ca ""
   "Images/x+y.png" 1712312431 62314 86a47240dcd91098e26e5fa12ca48aa4 ""
   "LegrandOrangeBook.cls" 1707481232 35066 8b54c63dbc2df44de404d2768f953f7c ""
+  "c:/Programming/GitProjects/Math-for-Computer-Science/main.tex" 1712746220 8746 9be668695aa47c17f9931e81fd2f2338 ""
   "c:/texlive-full/2023/texmf-dist/fonts/enc/dvips/base/8r.enc" 1707378777 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "c:/texlive-full/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1707378440 2971 def0b6c1f0b107b3b936def894055589 ""
   "c:/texlive-full/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1707379080 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -60,6 +62,8 @@
   "c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/ptmri7t.tfm" 1707381381 2288 f478fc8fed18759effb59f3dad7f3084 ""
   "c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/ptmri8r.tfm" 1707381381 4640 532ca3305aad10cc01d769f3f91f1029 ""
   "c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/ptmri8t.tfm" 1707381381 6944 94c55ad86e6ea2826f78ba2240d50df9 ""
+  "c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/ptmro8r.tfm" 1707381381 4548 f370a182a02c40d95c5554802dc0f174 ""
+  "c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/ptmro8t.tfm" 1707381381 6792 47ec25d9cde9feef87a90c47a9fbc4d5 ""
   "c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/zptmcm7m.tfm" 1707381381 2232 db256afffc8202da192b4641df14d602 ""
   "c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/zptmcm7t.tfm" 1707381381 2172 1d00c2a0d10f23031be62329457a870c ""
   "c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/zptmcm7v.tfm" 1707381381 1032 20febbd0f0c9a48eb78616f897008286 ""
@@ -96,6 +100,7 @@
   "c:/texlive-full/2023/texmf-dist/fonts/vf/adobe/times/ptmr8t.vf" 1707381381 2348 91706c542228501c410c266421fbe30c ""
   "c:/texlive-full/2023/texmf-dist/fonts/vf/adobe/times/ptmrc8t.vf" 1707381381 3608 eb048a634708cbf5eda8def0ce93c7bb ""
   "c:/texlive-full/2023/texmf-dist/fonts/vf/adobe/times/ptmri8t.vf" 1707381381 2328 6cd7df782b09b29cfc4d93e55b6b9a59 ""
+  "c:/texlive-full/2023/texmf-dist/fonts/vf/adobe/times/ptmro8t.vf" 1707381381 2356 c62a9e3d92ec3ebab0f81e654c0829a1 ""
   "c:/texlive-full/2023/texmf-dist/fonts/vf/adobe/times/zptmcm7m.vf" 1707381381 1132 27520247d3fe18d4266a226b461885c2 ""
   "c:/texlive-full/2023/texmf-dist/fonts/vf/adobe/times/zptmcm7t.vf" 1707381381 1108 d271d6f9de4122c3f8d3b65666167fac ""
   "c:/texlive-full/2023/texmf-dist/fonts/vf/adobe/times/zptmcm7v.vf" 1707381381 1012 046369ac6a83af997c3aa05a43256ad5 ""
@@ -302,7 +307,7 @@
   "c:/texlive-full/2023/texmf.cnf" 1707381885 713 e69b156964470283e0530f5060668171 ""
   "content/Part2 Discrete math/1.Boolean Algebra.tex" 1712581190 82737 39ceb7d0f4451343f02cb6b30e5b260f ""
   "content/Part2 Discrete math/2.Number Theory.tex" 1712581190 95555 d694a88ecc4d489e2cd778d1f333455b ""
-  "content/Part2 Discrete math/3.Relation and Order.tex" 1712581190 35956 192551c2f518abf26d0c79df089a0910 ""
+  "content/Part2 Discrete math/3.Relation and Order.tex" 1712788077 60281 78981a84e3a65a682ce8b9a2fab0dabb ""
   "content/Part2 Discrete math/4.Graph Theory.tex" 1712581190 108 75644d9f2dfb719db49f3f5f256a9bdb ""
   "content/Part2 Discrete math/5.Basics of Abstract Algebra.tex" 1712581190 559 d9531ec798e7634b81b6aa1c607be08d ""
   "content/Part2 Discrete math/6.Introductory Topology and Category Theory.tex" 1712581190 1268 9d11972a035b20d5a0c160cab7cabf59 ""
@@ -323,15 +328,15 @@
   "content/part1 Intro/3.Algorithm and Number System.tex" 1712581190 38943 7a595ea93e0ca3cb74a0582db11b87a3 ""
   "content/part1 Intro/4.Inequality.tex" 1712581190 57251 12d7e1c9df0285c6cb6debb9f9449b00 ""
   "content/part1 Intro/5.Complex Number.tex" 1712581190 88243 989a2fe9a0123e4b52072bab758ecc3f ""
-  "main.aux" 1712588984 136366 494997eb8345c0a922ec86215c4eec51 "pdflatex"
-  "main.bbl" 1712581243 0 d41d8cd98f00b204e9800998ecf8427e "biber main"
-  "main.ind" 1712507255 0 d41d8cd98f00b204e9800998ecf8427e "makeindex main.idx"
-  "main.lof" 1712588984 3618 4968da91f76503a95909fa4f0d7ad7d8 "pdflatex"
-  "main.lot" 1712588984 2535 0b3cf985cc3864630b7becfe4b27d189 "pdflatex"
-  "main.ptc" 1712588984 28723 55138c0464c7905ba2b6b8ef823eed28 "pdflatex"
-  "main.run.xml" 1712588984 2224 bc6149f5caee4074188e1b81a66978d0 "pdflatex"
-  "main.tex" 1712581190 8719 9865212ddfdfb7ca4c3bfb9db2b09a6b ""
-  "main.toc" 1712588984 28385 61e03c4c90bf52e2539b19197102632a "pdflatex"
+  "main.aux" 1712788084 140422 e2643e81fede058e66ef37bbce454476 "pdflatex"
+  "main.bbl" 1712679195 0 d41d8cd98f00b204e9800998ecf8427e "biber main"
+  "main.ind" 1712770949 0 d41d8cd98f00b204e9800998ecf8427e "makeindex main.idx"
+  "main.lof" 1712788084 3740 be037b6bfedee22d9c31037f63a6e1bc "pdflatex"
+  "main.lot" 1712788084 2535 133577b3aad953f9427693a597c78bc2 "pdflatex"
+  "main.ptc" 1712788084 28460 d2fd83f18c6bcaf1193a2dfb4798dce7 "pdflatex"
+  "main.run.xml" 1712788084 2224 bc6149f5caee4074188e1b81a66978d0 "pdflatex"
+  "main.tex" 1712746220 8746 9be668695aa47c17f9931e81fd2f2338 ""
+  "main.toc" 1712788084 28122 b493332de41aaa4369526cdae5720ddf "pdflatex"
   (generated)
   "main.aux"
   "main.bcf"

@@ -2,27 +2,437 @@
 \chapterspaceabove{6.75cm} 
 \chapterspacebelow{7.25cm} 
 \chapter{Relation and Order}
-%\chapter{Relations, Algebra Structure, Topology, and Category Theory Fundamentals}
-In this chapter, we delve into the core mathematical concepts of relations, algebraic structures, topology, and category theory, each serving as a cornerstone in the vast edifice of mathematics. Relations, with their ability to associate elements from one set with another, lay the groundwork for understanding complex interactions within and between sets. Algebraic structures, including groups, rings, and fields, provide us with a formal framework for exploring operations on elements, revealing patterns and properties that are central to both abstract and applied mathematics. Topology, often described as "rubber-sheet geometry," stretches our imagination and understanding beyond the rigid confines of conventional geometry, exploring properties that remain invariant through continuous deformations. Category theory, the abstract study of mathematical structures and their relationships, offers a unifying language that transcends traditional boundaries, encapsulating mathematical concepts in terms of objects and arrows in a way that highlights their intrinsic similarities and differences. Together, these areas not only enrich our understanding of mathematics but also equip us with powerful tools and perspectives for tackling complex problems across a wide range of disciplines.
 
-\section{Relations}
-\lipsum
-\subsection{Understanding Relations in Mathematics}
-\subsection{Types of Relations}
-\subsubsection{Binary Relations}
-\subsubsection{Equivalence Relations}
-\subsubsection{Partial and Total Order Relations}
-\subsection{Properties of Relations}
-\subsubsection{Reflexivity, Symmetry, and Transitivity}
-\subsubsection{Anti-symmetry and Asymmetry}
-\subsection{Special Types of Relations}
-\subsubsection{Inverse Relations}
-\subsubsection{Recursive Relations}
-\subsubsection{\(n\)-ary Relations}
-\subsection{Applications of Relations}
-\subsubsection{Graph Theory and Network Analysis}
-\subsubsection{Database Theory}
+\section{Basic Relation and class}
+In this chapter, we will discuss further topics on set theory, or more specifically, 
+relations. With set as tool, we can categorize things and try to build connections 
+between them, like defining a function from a preimage to an image. Relation is a superset
+, i.e., generalization of function, which is crucial to topics that we will discuss
+later in this chapter.
 
+In real life, relation is referred to as some connections between one person or 
+one group of people to the other. 
+\begin{enumerate}
+    \item Imagine a list of students and their grades in a class. Each student 
+    (let's say, by their student ID) is linked to a specific grade. 
+    This "student-to-grade" pairing is an example of a functional relation, 
+    because every student has one and only one grade assigned.
+    \item Consider the relationship "has the same birthday as" among people. If person A has the same birthday as person B, and person B has the same birthday as person C, then person A also has the same birthday as person C. This relationship is an equivalence relation because it's reflexive (everyone has the same birthday as themselves), symmetric (if A shares a birthday with B, then B shares a birthday with A), and transitive (if A shares a birthday with B, and B with C, then A shares a birthday with C).
+    \item Think about the books on a shelf organized by height. Each book can be considered as "shorter than or equal to" the book next to it if you move from left to right. This arrangement demonstrates an order relation because it's reflexive (each book is the same height as itself), antisymmetric (if one book is both taller and shorter than another, they must be the same book), and transitive (if one book is shorter than a second, and the second is shorter than a third, then the first book is shorter than the third).
+\end{enumerate} 
+The notion is still quite similar in the context of
+mathematics. From many examples we can see this. Like all the mathematical operations
+we have defined, the mapping in a function, congruence...
+To sum up, relation is am abstract topic, yet not hard to understand, wince it can be
+related to the material world easily. 
+\subsection{Class}
+Additionally, we introduce a new concept related to set to explain what is relation.
+The set theory we discussed in the first part of this book is called \textbf{Naive Set Theory}, which Is
+actually not the modern set theory. In many aspects, it is not reliable and causes a lot of issues.
+A very famous example is Russell's Paradox initiated by the British Philosopher and Mathematician.
+
+Russell's Paradox illustrates a significant problem in the naive set theory, 
+which assumed sets could include themselves. The paradox is encapsulated in whether the 
+"set of all sets that do not contain themselves" contains itself. 
+If it contains itself, it contradicts its defining property. Conversely, if it does not contain 
+itself, then by definition, it must contain itself. This dilemma indicated the limitations 
+of the naive set theory approach, leading to contradictions. To address these issues, the 
+concept of classes was introduced in \href{https://www.wikiwand.com/en/Von_Neumann%E2%80%93Bernays%E2%80%93G%C3%B6del_set_theory}{\textbf{NBG Set Theory} (von Neumann-Bernays-Gödel set theory)}. 
+
+Classes allow for the conceptualization of collections too large or abstract to be considered as sets, thereby circumventing the paradoxes 
+associated with a more naive interpretation of set theory.
+\begin{remark}
+    An interesting fact is that the von Neumann here is exactly \href{https://www.wikiwand.com/en/John_von_Neumann}{John von Neumann},
+    who initiated von Neumann Architecture for computer. It seems that a great Computer Scientist is always also a great Mathematician.
+\end{remark}
+\begin{definition}[Class]
+    A \emph{class} is a collection of objects that are grouped together based on a shared property. 
+    Classes differ from sets in that they can represent collections of any size, including 
+    those too large to be considered as sets, such as the "class of all sets". 
+    This concept is essential for avoiding paradoxes in set theory, 
+    allowing the discussion of large and abstract collections that cannot 
+    otherwise be accommodated within the framework of sets.
+\end{definition}
+
+We also introduce some of the axioms that is really important for the content here, they are
+easy to understand, but are important prerequisite for our further discussion.
+\begin{axiom}[Axiom of Extensionality]
+    For two classes $x, y$, we have $x=y$ if and only if $\forall z, z\in x \equiv z\in y$.
+    In brief, two classes are equal if and only if every member of each is also
+    a member of the other.
+\end{axiom}
+
+The other Axiom is on creating new classes.
+\begin{axiom}[Axiom Scheme of Classification]
+    For each open sentence \( P(x) \) there exists a class which consists precisely of those sets which satisfy the condition \( P(x) \).
+    
+    The class whose existence is postulated by the Axiom is denoted by \( \{x : P(x)\} \); thus 
+    \( \{x : P(x)\} \) is a term of the theory NBG and the assertion \( u \in \{x : P(x)\} \) is true if 
+    and only if \( u \) is a set and \( P(u) \) is true.
+\end{axiom}
+\subsubsection*{Properties and Operations of Class}
+Since the definition of Class and set are related, there are a lot of overlap in their properties.
+The union and intersection of two classes are defined in exactly the same way as the union and intersection of two sets in naïve set theory: if \( A \) and \( B \) are classes, then
+\begin{align*}
+    A \cup B &= \{x : (x \in A) \vee (x \in B)\}, \\
+    A \cap B &= \{x : (x \in A) \wedge (x \in B)\}.
+\end{align*}
+So a set \( x \) is a member of \( A \cup B \) if and only if it is a member of either \( A \) or \( B \) (or both); \( x \) is a member of \( A \cap B \) if and only if it is a member of both \( A \) and \( B \).
+
+The usual properties of these unions and intersections are established as in naïve set theory. Namely, we have the properties known as idempotence,
+\begin{align*}
+    \forall X(X \cup X = X), \quad \forall X(X \cap X = X),
+\end{align*}
+associativity,
+\begin{align*}
+    \forall X \forall Y \forall Z (X \cup (Y \cup Z) = (X \cup Y) \cup Z), \\
+    \forall X \forall Y \forall Z (X \cap (Y \cap Z) = (X \cap Y) \cap Z),
+\end{align*}
+commutativity,
+\begin{align*}
+    \forall X \forall Y (X \cup Y = Y \cup X), \quad \forall X \forall Y (X \cap Y = Y \cap X),
+\end{align*}
+and distributivity,
+\begin{align*}
+    \forall X \forall Y \forall Z (X \cup (Y \cap Z) = (X \cup Y) \cap (X \cup Z)), \\
+    \forall X \forall Y \forall Z (X \cap (Y \cup Z) = (X \cap Y) \cup (X \cap Z)).
+\end{align*}
+
+\begin{definition}[Complement of Class]
+We write \( x \notin y \) as an abbreviation for \( \neg(x \in y) \). Then for each class \( A \) we define the complement of \( A \) to be the class
+\begin{align*}
+    \sim A = \{x : x \notin A\}.
+\end{align*}
+\end{definition}
+
+\begin{definition}[Difference of Classes]
+For two classes $A$ and $B$, the difference $A~B$ is defined as:
+$$
+A\sim B=\{x:(x\in A)\land(x\not\in B)\}=A\cap(\thicksim B).
+$$
+\end{definition}
+Also, note that double negation and De Morgan's Law also work for class.
+
+As what we have discussed in set theory that there exist some empty sets, we also have null class and
+universe class.
+\begin{definition}[Null Class and Universe Class]
+    Empty class $\emptyset$ and universe class $V$ are defined by
+    $$\emptyset=\{x:x\neq x\}\ \ \ V=\{x:x=x\}.$$
+\end{definition}
+Classes also have their exclusive operations, including intersection and union.
+\begin{definition}[Intersection and Union of Class(of one single class)]
+    Let $A$ be a class; the union and intersection of the class $A$ are
+    the classes
+    $$
+    \begin{array}{rcl}\bigcup A&=&\{x:(\exists y)((y\in A)\land(x\in y))\},\\
+        \bigcap A&=&\{x:(\forall y)((y\in A)\to (x\in y))\}\end{array}
+    $$
+    Where $x$ is a set and $y$ is a class.
+\end{definition}
+Thus a class $C$ belongs to $\bigcup A$ if and only if $C$ is a set and $C$ belongs to at least one of the 
+members of $A;C$ belongs to $\bigcap A$ if and only if $C$ is a set and $C$ belongs to every member of $A.$
+
+The definition is quite different from intersection and union of sets, as class is a generalization
+of set from higher level abstraction. Also, the intersection and union for sets are binary operations,
+while unary for one class. 
+
+Below is a brief comparison.
+
+\textbf{Set Union and Intersection:}
+\begin{enumerate}
+\item For two sets $A$ and $B$, their union $A \cup B$ is the set of all elements that belong to either $A$ or $B$. Formally: $A \cup B = \{x : x \in A \lor x \in B\}$.
+\item For two sets $A$ and $B$, their intersection $A \cap B$ is the set of all elements that belong to both $A$ and $B$. Formally: $A \cap B = \{x : x \in A \land x \in B\}$.
+\end{enumerate}
+
+\textbf{Class Union and Intersection:}
+\begin{enumerate}
+\item For a class $A$, the class union $\bigcup A$ is the set of all elements $x$ such that there exists a class $y$, where $y$ is a member of $A$, and $x$ is an element of $y$. Formally: $\bigcup A = \{x : (\exists y)((y \in A) \land (x \in y))\}$.
+\item For a class $A$, the class intersection $\bigcap A$ is the set of all elements $x$ such that for every class $y$, if $y$ is a member of $A$, then $x$ is an element of $y$. Formally: $\bigcap A = \{x : (\forall y)((y \in A) \to (x \in y))\}$.
+\end{enumerate}
+
+\textbf{Comparison:}
+\begin{enumerate}
+\item Set union and intersection operate on two sets, while class union and intersection operate on all member sets of a class.
+\item Set union includes elements that are in either $A$ or $B$, while class union includes elements that are in at least one member of $A$.
+\item Set intersection includes elements that are in both $A$ and $B$, while class intersection includes elements that are in all members of $A$.
+\item The result of set union and intersection is always a set, while the result of class union and intersection is not necessarily a set
+, but more likely a class that contains sets.
+\end{enumerate}
+
+By comparing these concepts, we can see that class union and intersection are generalizations of set 
+operations at a higher level of abstraction. They allow us to perform operations on the member sets of a 
+class to obtain new sets, which is particularly useful when studying advanced topics in mathematical 
+foundations and set theory.
+
+There are several lemmas related to intersection and union of class.
+
+\begin{lemma}
+    $\bigcap \emptyset= V$ and $\bigcup \emptyset= \emptyset.$ 
+    \end{lemma}
+    \begin{proof}
+        Let \( C \) be a class. Then we have
+        \[
+        C \in \bigcap \emptyset \iff C \text{ is a set and } C \text{ belongs to every member of } \emptyset
+        \]
+        Since $\emptyset$ does not literally have any member.
+        \[
+        \iff C \text{ is a set}
+        \]
+        Any set is a member of universe class
+        \[
+        \iff C \in V.
+        \]
+        Thus
+        \[
+        \bigcap \emptyset = V
+        \]
+        by the Axiom of Extensionality.
+
+        Again let \( C \) be a class. Then
+        \[
+        C \in \bigcup \emptyset \iff C \text{ is a set and there is a member } x \text{ of } \emptyset \text{ such that } C \in x
+        \]
+        \[
+        \iff C \in \emptyset
+        \]
+        (since \( \emptyset \) has no members).
+
+        So
+        \[
+        \bigcup \emptyset = \emptyset
+        \]
+        by the Axiom of Extensionality.
+    \end{proof}
+    The inclusive relation of class is very similar to set.
+    \begin{definition}[Inclusion of Classes]
+        If \( A \) and \( B \) are classes such that every member of \( A \) is also a member of \( B \), 
+        i.e., such that we have
+        \[
+        \forall x ((x \in A) \to (x \in B)),
+        \]
+        we say that \( A \) is included in \( B \), \( B \) includes \( A \) or \( A \) is a subclass of 
+        \( B \), and we write \( A \subseteq B \) or \( B \supseteq A \). (If \( A \) is a set and 
+        \( A \subseteq B \) we say that \( A \) is a subset of \( B \).) If \( A \subseteq B \) and there 
+        is at least one set \( b \) such that \( b \in B \) but \( b \not\in A \), we say that \( A \) is 
+        properly included in \( B \), \( B \) properly includes \( A \) or \( A \) is a proper subclass of 
+        \( B \), and we write \( A \subset B \) or \( B \supset A \).
+        \end{definition}
+
+        We can also extend power set to power class.
+        For every class \( A \) we define the power class \( P(A) \) of \( A \) to be the class of all subsets of \( A \), i.e., \( P(A) = \{x : x \subseteq A\} \).
+        This brings us to another axiom in NBG set theory.
+        \begin{axiom}[Power Set Axiom]
+        For every set \( x \) there exists a set \( y \) such that \( u \in y \) if and only if \( u \subseteq x \).
+        \end{axiom}
+        
+        The Power Set Axiom thus asserts that every subclass \( u \) of a set \( x \) is actually a set (since it is an element of the set \( y \) whose existence is asserted by the axiom) and furthermore that the power class \( P(x) \) of a set \( x \) is also a set (and so is usually referred to as the power set of \( x \)).
+        
+        The rest of the axioms are as follows.
+        \begin{axiom}[Pairing Axiom]
+        For all sets \( x \) and \( y \) the class \( \{z : (z = x) \vee (z = y)\} \) is a set.
+        \end{axiom}
+        
+        The set \( \{z : (z = x) \vee (z = y)\} \) is denoted by \( \{x, y\} \) and such a set is called an 
+        unordered pair. If \( x = y \) the unordered pair \( \{x, y\} \) is denoted by \( \{x\} \) and is 
+        called singleton \( x \).
+        \begin{remark}
+            In set theory, an \emph{unordered pair} refers to a collection of two elements in which the sequence of the elements does not matter. This is represented as $\{a, b\}$, indicating a set that contains exactly two distinct elements $a$ and $b$. The fundamental property of unordered pairs is that $\{a, b\} = \{b, a\}$, asserting that the order of elements is immaterial.
+
+The concept of an unordered pair is not limited to sets; it extends to classes in certain set theories that distinguish between sets and proper classes. While sets are collections of elements that themselves can be elements of other sets, proper classes are collections too large to be sets and hence cannot be elements of other collections. Nonetheless, the notion of grouping two objects into an unordered pair applies analogously, symbolizing the collection of those objects without regard to order.
+        \end{remark}
+        \begin{axiom}[Union Axiom]
+        For every set \( x \) the class \( \bigcup x \) is a set.
+        \end{axiom}
+
+        We can also extend Cartesian Product to class.
+        Let $a$ and $b$ be sets. Then the set $\{\{a\},\{a,b\}\}$ is denoted by $(a,b)$ and is called the ordered pair with first coordinate $a$ and second coordinate $b$. Lét $A$ and $B$ be classes; then the Cartesian product of $A$ and $B$ is the $c$lass
+
+        $$
+        A\times B=\{t:(\exists x)(\exists y)((x\in A)\land(y\in B)\land(t=(x,y)))\},
+        $$
+
+        i.e. $A\times B$ is the class of all ordered pairs with first coordinate in $A$ and second coordinate in $B.$
+
+        If $P(x,y)$ is an open sentence involving the free variables $x$ and $y$ we shall allow ourselves to write
+
+        $$
+        \{(x,y):P(x,y)\}
+        $$
+
+        as an abbreviation for
+
+        $$
+        \{t:(\exists x)(\exists y)((t=(x,y))\land P(x,y))\}.
+        $$
+
+        So we can abbreviate the definition of $A\times B$ to
+
+        $$
+        A\times B=\{(x,y):(x\in A)\wedge(y\in B)\}.
+        $$
+
+
+\subsection{Binary Relations, Composition and Inverse}
+In mathematics, the most fundamental and ubiquitous type of relation is the \emph{binary relation}. This term refers to a relationship between two objects or sets. We understand that a `set' may encompass any concept, not solely in the mathematical sense but also in a material one. Relations may exist objectively between certain objects and not at all for others. Similarly, objects or sets of objects, which exist objectively, hold the potential for an infinite number of relationships with one another. This perspective can seem philosophically abstract, positing that any scenario is conceivable. However, we can convey this more clearly. Recall our discussion of the \emph{Cartesian product} as a set extension, where we consider two sets, \( A \) and \( B \). These sets could represent any discernible entity or indiscernible concept. Theoretically, there could be countless relationships among all elements of these sets, and the capacity of two sets to form a Cartesian product is indicative of a general type of relationship. Consequently, the elements of the power set \( P(A \times B) \) exemplify all possible cases of a certain kind of relationship.
+
+A vivid mathematical example is the definition of Euclidean spaces, where an infinite number of subspaces can be defined, each representing a unique binary relation within the space.
+
+We first introduce the definition of a binary relation in terms of sets. 
+\begin{definition}[Binary Relation]
+    A \textbf{Binary Relation} $R$ from a set $A$ to a set $B$ is a subset of the 
+    Cartesian product $A \times B$. For elements $a \in A$ and $b \in B$, if the pair 
+    $(a, b)$ belongs to the subset $R$, then we say $a$ is related to $b$ by the 
+    relation $R$, denoted as $aRb$, whose negation is $a\not R b$.
+\end{definition}
+
+In last section, we introduced the higher abstraction of sets, which is class. Classes also have Cartesian
+product,thus, we can give a general definition to all relations using class.
+\begin{definition}[Relation]
+    A relation is a class of ordered pairs.
+
+    Let $R$ be a relation. We define the domain and range of $R$ to be the classes Dom $R$ and Range $R$ 
+    given by
+$$
+\begin{array}{rcl}\text{Dom }R&=&\{x:(\exists y)((x,y)\in R)\},\\\text{Range }R&=&\{y:(\exists x)((x,y)\in R)\}.\end{array}
+$$
+If $R$ is a relation and $(x,y)\in R$ we say that $x$ is $R$-related to $y$ and that $y$ is an $R$-relative of $x$. 
+Thus Dom $R$ is the class of all sets which $have$ $R$-relatives and Range $R$ is the class of all sets which 
+$are$ $R$-relatives.
+\end{definition}
+
+Now we look into several concrete examples of relation.
+\begin{example}
+    Consider the set of all points on a plane. The relation defined by the equation of a circle, $x^2 + y^2 = r^2$, includes all points $(x, y)$ that satisfy this equation. This relation is not a function because, for most values of $x$, there are two possible values of $y$ that satisfy the equation, one positive and one negative (except for the points where $x = \pm r$, where there is only one value of $y$).
+    
+    In contrast, a function would allow each $x$ to be associated with exactly one $y$. For instance, the square function $y = x^2$ is a function because each value of $x$ corresponds to exactly one value of $y$.
+
+    In the figure we have defined a circle and a quadratic function, clearly 
+    we see that a function can never have two $y$ value for one $x$, while 
+    this is possible for the circle.
+    \end{example}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.75\linewidth]{function&relation.png}
+    \caption{Visual Comparison of a Relation and a Function}
+\end{figure}
+\begin{definition}[Functional Relation]
+    A relation $R$ is said to be \textbf{functional} if each element of its domain has exactly one $R$-relative; 
+    a functional relation is also called a \textbf{function}. If $R$ is a functional relation then for each element 
+    $a$ of its domain we denote the unique $R$-relative of $a$ by $R(a).$ 
+\end{definition}
+
+    This leads us to the next axiom of NBG theory.
+    \begin{axiom}[Replacement Axiom]
+        For every functional relation $R$, if the domain of $R$ is a set then the range 
+        of $R$ is also a set.
+    \end{axiom}
+
+    In naive set theory and function in part 1 of the book, we gave a rough 
+    definitions to mappings. With class, we can make it more concrete.
+    \begin{definition}[mapping]
+        A mapping is an ordered pair $((A,B),R)$ where $A$ and $B$ are sets and $R$ is a 
+        functional relation between $A$ and $B$ such that Dom $R=A.$ If 
+        $f= ( ( A, B) , R) $ is a mapping we say that $f$ is a mapping from 
+        $A$ to $B;$ we call $A$ the domain of $f,B$ the codomain of $f$ and $R$ the 
+        graph of $f$. If $f$ is a mapping with domain $A$ and codomain $B$ we often write $f:A\to B.$ 
+        If $a$ is any element of the set $A$ then the set $R^{\to}(\{a\})$ consists of a single element of 
+        $B$ which we denote by $f(a);$ we call it the image of $a\textbf{ under }f$ or the value of $f\textbf{ at }a.$
+    \end{definition} 
+    It is clear from the definition of the term “mapping” that in order to describe a mapping $f$ we must give the domain $A$ and codomain $B$ of $f$ and also, for each element $a$ of the domain we must describe the unique element $b_a$ of the codomain such that $(a,b_a)$ belongs to the graph of $f$, i.e. we must describe for each element $a$ of $A$ its image under $f$ in $B.$
+    Let $f= ( ( A, B) , R) $ be a mapping from $A$ to $B$. For each subset $X$ of $A$ we denote the subset 
+    $R^{\to}(X)$ of $B$ by $f^{\to}(X);$ in particular, if $a$ is any element of $A$ we have
+    $f^{\to}(\{a\})=\{f(a)\}.$ For each subset $Y$ of $B$ we denote the subset $R^{\leftarrow }( Y) $ 
+    of $A$ by $f^{\leftarrow }( Y) .$
+
+    Let $ f=((A,B),R)$ be a mapping from $A$ to $B;\operatorname*{let}A_1$ be a subset of $A.$ Then the restriction of $f$ to $A_1$ is the mapping $f\mid A_1=$
+    $$
+    ((A_1,B),R\cap(A_1\times B)).
+    $$
+
+    Earlier, we discussed composition and inverse of function. Now that we have known that function is a kind of 
+    relation, can we compose or inverse all other relations? Naturally the answer is yes.
+
+    \begin{definition}[Composite Relation]
+        If $R$ and $S$ are relations, the composition of $R$ and $S$ is the relation $S\circ R$ given by
+        $$
+        S\circ R=\{(x,z):(\exists y)(((x,y)\in R)\wedge((y,z)\in S))\}.
+        $$
+        If $R$ is a relation between $A$ and $B$ and $S$ is a relation between $B$ and $C$ then clearly 
+        $S\circ R$ is a relation between $A$ and $C$, and we have $\operatorname{Dom}\left(S\circ R\right)\subseteq\operatorname{Dom}R$ and Range $(S\circ R)\subseteq\operatorname{Range}S.$
+    \end{definition}
+
+    Let $f= ( ( A, B) , R) $ and $g= ( ( B, C) , S) $ be mappings. Then clearly 
+    $((A,C),S\circ R)$ is also a mapping, which we denote by $g\circ f$ and call the composition or 
+    composed mapping of $f$ and $g$. For each element $a$ of $A$ we have $( g\circ f) ( a) = g( f( a) ) .$
+
+
+    Similarly, we can define inverse relation.
+    \begin{definition}[Inverse Relation]
+        If $A$ and $B$ are classes then a relation between $A\textbf{ and }B$ is a subclass of $A\times B$, 
+        i.e. a relation $R$ such that Dom $R\subseteq A$ and Range $R\subseteq B.$ A relation on a class $A$ 
+        is a subclass of $A\times A.$
+
+        If $R$ is a relation, the inverse of $R$ is the relation $R^{-1}$ given by
+        $$
+        R^{-1}=\{(x,y):(y,x)\in R\}.
+        $$
+        If $R$ is a relation between $A$ and $B$ then $R^{-1}$ is a relation between $B$ and $A;$ 
+        clearly Dom $R^{-1}=\operatorname{Range}R$ and Range $R^{-1}=\operatorname{Dom}R.$
+    \end{definition}
+
+    Let $R$ be a relation, $A$ any class. Then the image of $A\textbf{ under }R$ is the class consisting of all $R$-relatives of all members of $A.$ We denote this class by $R^{\to}(A).$ Thus
+    $$
+    R^{\to}(A)=\{y:(\exists x)((x\in A)\land((x,y)\in R))\}.
+    $$
+    Again let $R$ be a relation and $\ker B$ be any class. Then the inverse image of $B$ under $R$ is the class $( R^{- 1}) ^{\to }( B) , $ which we write $R^{\leftarrow}( B) .$ Thus
+    $$
+    \begin{aligned}R^{\leftarrow}(B)=\{x:(\exists y)((y\in B)\land((x,y)\in R))\}.\end{aligned}
+    $$
+\subsection{Reflexivity, Symmetry, and Transitivity}
+\subsection{Anti-symmetry and Asymmetry}
+\subsection{Representation of Relation}
+\subsection{Exercises}
+\begin{exercise}
+    Russel's Paradox is fixed by introducing more strict set axioms to the set theory. In NBG theory, a
+    proper class is defined as a top-level class that cannot be subclass of any other classes or sets, and
+    this is the key to avoid the paradox in naive set theory. Explain in details that how 
+    this concept avoids the case in Russel's Paradox.
+\end{exercise}
+\begin{solution}
+    With the introduction of the concept of classes, we can discuss collections 
+    that are too large to be considered as sets, such as the ``class of all sets.'' 
+    Therefore, the set described by Russell's Paradox, denoted by \( R \), 
+    is no longer considered a legitimate set but rather a ``proper class.'' 
+    This means that we refrain from discussing \( R \) as a set, thereby avoiding 
+    the paradox because proper classes are not subject to the operations and 
+    axioms that constrain sets. As a result, the axiomatic system does not 
+    permit the formation of sets that would lead to Russell's Paradox.
+
+\end{solution}
+\begin{exercise}
+    Let $A,B,C$ be classes such that $A\subseteq B,B\subseteq C$, $C\subseteq A.$ Prove that $A=B=C.$
+\end{exercise}
+
+\begin{exercise}
+    Let $A,B,C$ be classes such that $A\subset B,B\subset C.$ Prove that $A\subset C.$
+\end{exercise}
+
+
+\section{Equivalence Relations}
+
+
+
+\subsection{Exercises}
+\section{Partial and Total Order Relations}
+
+
+
+\subsection{Exercises}
+\section{Special Types of Relations}
+\subsection{Recursive Relations}
+\subsection{\(n\)-ary Relations}
+
+\subsection{Exercises}
 
 
 
