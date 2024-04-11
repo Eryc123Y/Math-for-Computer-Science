@@ -1,17 +1,17 @@
 # Fdb version 4
-["biber main"] 1712679161.84989 "main.bcf" "main.bbl" "main" 1712788085.19904 0
-  "main.bcf" 1712788084 107256 cda255eed6b0d0df027a0b54e0d84d42 "pdflatex"
+["biber main"] 1712679161.84989 "main.bcf" "main.bbl" "main" 1712872968.16166 0
+  "main.bcf" 1712872967 107256 cda255eed6b0d0df027a0b54e0d84d42 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["makeindex main.idx"] 1712770948.89629 "main.idx" "main.ind" "main" 1712788085.19876 0
-  "main.idx" 1712788079 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+["makeindex main.idx"] 1712770948.89629 "main.idx" "main.ind" "main" 1712872968.16136 0
+  "main.idx" 1712872962 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   (generated)
   "main.ilg"
   "main.ind"
   (rewritten before read)
-["pdflatex"] 1712788078.36694 "c:/Programming/GitProjects/Math-for-Computer-Science/main.tex" "main.pdf" "main" 1712788085.19941 0
+["pdflatex"] 1712872961.13235 "main.tex" "main.pdf" "main" 1712872968.16204 0
   "Images/R^2.png" 1712142752 64840 5aae617f29bd5e5d2c41b0b9dc40ef22 ""
   "Images/R^3.png" 1712312456 153114 e1ae9d1019216090c34455e35abf3082 ""
   "Images/agm3D.png" 1707481231 97995 3c8707993f2acdfb1f5fe89cecae6e4e ""
@@ -42,7 +42,6 @@
   "Images/venn.png" 1707481232 101167 627b3f359fe3b8844e7f344c0e38c3ca ""
   "Images/x+y.png" 1712312431 62314 86a47240dcd91098e26e5fa12ca48aa4 ""
   "LegrandOrangeBook.cls" 1707481232 35066 8b54c63dbc2df44de404d2768f953f7c ""
-  "c:/Programming/GitProjects/Math-for-Computer-Science/main.tex" 1712746220 8746 9be668695aa47c17f9931e81fd2f2338 ""
   "c:/texlive-full/2023/texmf-dist/fonts/enc/dvips/base/8r.enc" 1707378777 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "c:/texlive-full/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1707378440 2971 def0b6c1f0b107b3b936def894055589 ""
   "c:/texlive-full/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1707379080 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -307,7 +306,7 @@
   "c:/texlive-full/2023/texmf.cnf" 1707381885 713 e69b156964470283e0530f5060668171 ""
   "content/Part2 Discrete math/1.Boolean Algebra.tex" 1712581190 82737 39ceb7d0f4451343f02cb6b30e5b260f ""
   "content/Part2 Discrete math/2.Number Theory.tex" 1712581190 95555 d694a88ecc4d489e2cd778d1f333455b ""
-  "content/Part2 Discrete math/3.Relation and Order.tex" 1712788077 60281 78981a84e3a65a682ce8b9a2fab0dabb ""
+  "content/Part2 Discrete math/3.Relation and Order.tex" 1712872953 69351 0bc1ca174bec5ca60c1b11abc6d0d80b ""
   "content/Part2 Discrete math/4.Graph Theory.tex" 1712581190 108 75644d9f2dfb719db49f3f5f256a9bdb ""
   "content/Part2 Discrete math/5.Basics of Abstract Algebra.tex" 1712581190 559 d9531ec798e7634b81b6aa1c607be08d ""
   "content/Part2 Discrete math/6.Introductory Topology and Category Theory.tex" 1712581190 1268 9d11972a035b20d5a0c160cab7cabf59 ""
@@ -324,19 +323,19 @@
   "content/Part7 Statistics/Chapter1.tex" 1707481232 1068 b2c1f9d83977613a5dc61bf7e4818b34 ""
   "content/Part8 Basic Information Theory/Chapter1.tex" 1707481232 759 1d99886bef6f1271d83ef03a8d03a6fa ""
   "content/part1 Intro/1.proof and proposition.tex" 1712588972 51208 79de18b43630b5ca92b2f15387d85a78 ""
-  "content/part1 Intro/2.Set, Sequence, Function, and Summation.tex" 1712581190 92901 754b0cea5751cf6810a0d6b51b289257 ""
+  "content/part1 Intro/2.Set, Sequence, Function, and Summation.tex" 1712870722 92931 4ccb5e8fce75d5f2c06dcfe6d78ed7c1 ""
   "content/part1 Intro/3.Algorithm and Number System.tex" 1712581190 38943 7a595ea93e0ca3cb74a0582db11b87a3 ""
   "content/part1 Intro/4.Inequality.tex" 1712581190 57251 12d7e1c9df0285c6cb6debb9f9449b00 ""
   "content/part1 Intro/5.Complex Number.tex" 1712581190 88243 989a2fe9a0123e4b52072bab758ecc3f ""
-  "main.aux" 1712788084 140422 e2643e81fede058e66ef37bbce454476 "pdflatex"
+  "main.aux" 1712872967 141645 2fcbf97120037e722a19910544910ca8 "pdflatex"
   "main.bbl" 1712679195 0 d41d8cd98f00b204e9800998ecf8427e "biber main"
   "main.ind" 1712770949 0 d41d8cd98f00b204e9800998ecf8427e "makeindex main.idx"
-  "main.lof" 1712788084 3740 be037b6bfedee22d9c31037f63a6e1bc "pdflatex"
-  "main.lot" 1712788084 2535 133577b3aad953f9427693a597c78bc2 "pdflatex"
-  "main.ptc" 1712788084 28460 d2fd83f18c6bcaf1193a2dfb4798dce7 "pdflatex"
-  "main.run.xml" 1712788084 2224 bc6149f5caee4074188e1b81a66978d0 "pdflatex"
-  "main.tex" 1712746220 8746 9be668695aa47c17f9931e81fd2f2338 ""
-  "main.toc" 1712788084 28122 b493332de41aaa4369526cdae5720ddf "pdflatex"
+  "main.lof" 1712872967 3847 75441009a4f744390e3882e313c143cd "pdflatex"
+  "main.lot" 1712872967 2535 133577b3aad953f9427693a597c78bc2 "pdflatex"
+  "main.ptc" 1712872967 28469 05e24070da7e86e7ff6b9e574dba7163 "pdflatex"
+  "main.run.xml" 1712872967 2224 bc6149f5caee4074188e1b81a66978d0 "pdflatex"
+  "main.tex" 1712871422 8775 3cdc5f2a17d8c5c155868121184c54cb ""
+  "main.toc" 1712872967 28131 85ca00c21aa45d43f055e945c1202a5e "pdflatex"
   (generated)
   "main.aux"
   "main.bcf"

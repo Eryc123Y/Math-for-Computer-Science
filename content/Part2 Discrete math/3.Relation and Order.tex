@@ -3,7 +3,7 @@
 \chapterspacebelow{7.25cm} 
 \chapter{Relation and Order}
 
-\section{Basic Relation and class}
+\section{Basic Relation and NBG Set Theory}
 In this chapter, we will discuss further topics on set theory, or more specifically, 
 relations. With set as tool, we can categorize things and try to build connections 
 between them, like defining a function from a preimage to an image. Relation is a superset
@@ -52,14 +52,29 @@ associated with a more naive interpretation of set theory.
     This concept is essential for avoiding paradoxes in set theory, 
     allowing the discussion of large and abstract collections that cannot 
     otherwise be accommodated within the framework of sets.
+    
+    In \textbf{NBG set theory}, a \emph{class} is a collection of sets that can be unambiguously defined by a property that all its members share. Formally, a class $C$ is defined as:
+    $$
+    C = \{ x : P(x) \}
+    $$
+    where $P(x)$ is a property or predicate formulable in the language of set theory, applicable to sets $x$. If a class is not a set, it is called a \emph{proper class}. For example, the class of all sets, which cannot be a member of any class, is a proper class.
 \end{definition}
 
+\subsubsection*{Distinguishing set and class in NBG and Naive theory}
+Naive set theory operates under the general principle that any well-defined collection of objects forms a set. This unrestricted comprehension leads to paradoxes such as Russell's paradox. In contrast, NBG set theory distinguishes between \emph{sets}, which are elements of other classes, and \emph{classes}, which may not necessarily be elements of other classes. 
+
+A key distinction in NBG set theory is that a \emph{set} is a class that is an element of another class, while a \emph{proper class}, such as the class of all sets, cannot be an element of any class. This distinction helps avoid the paradoxes typical of naive set theory by restricting certain collections from being members of other collections.
+
+Furthermore, in NBG, sets form a subclass of classes, meaning all sets are classes but not all classes are sets. This hierarchical structure allows for a more rigorous foundation for set theory, accommodating larger collections like the class of all sets or the class of all ordinal numbers, which themselves cannot be sets due to their extensive size.
 We also introduce some of the axioms that is really important for the content here, they are
 easy to understand, but are important prerequisite for our further discussion.
 \begin{axiom}[Axiom of Extensionality]
-    For two classes $x, y$, we have $x=y$ if and only if $\forall z, z\in x \equiv z\in y$.
-    In brief, two classes are equal if and only if every member of each is also
-    a member of the other.
+    Two classes are equal if and only if they have the same elements.
+    Formally, the axiom is expressed as:
+    \[
+    \forall A \forall B (\forall x (x \in A \leftrightarrow x \in B) \rightarrow A = B)
+    \]
+    
 \end{axiom}
 
 The other Axiom is on creating new classes.
@@ -315,6 +330,50 @@ Now we look into several concrete examples of relation.
     \includegraphics[width = 0.75\linewidth]{function&relation.png}
     \caption{Visual Comparison of a Relation and a Function}
 \end{figure}
+\begin{example}
+	Let A be the set {1,2,3,4}. Which ordered pairs are in the relation $R=\{(a,b)\mid a$ divides $b\}?$
+	\begin{solution}
+		 Because $(a,b)$ is in R if and only if $a$ and $b$ are positive integers not exceeding 4 such that $a$ divides $b$,we see that
+		$$
+		R=\{(1,1),(1,2),(1,3),(1,4),(2,2),(2,4),(3,3),(4,4)\}.
+		$$
+	\end{solution}
+\begin{figure}[H]
+	\centering
+\begin{tikzpicture}
+	
+	% Define style for the nodes
+	\tikzstyle{number}=[circle, draw, inner sep=2pt]
+	
+	% Draw nodes
+	\node[number] (1l) at (0,3) {1};
+	\node[number] (2l) at (0,2) {2};
+	\node[number] (3l) at (0,1) {3};
+	\node[number] (4l) at (0,0) {4};
+	
+	\node[number] (1r) at (2,3) {1};
+	\node[number] (2r) at (2,2) {2};
+	\node[number] (3r) at (2,1) {3};
+	\node[number] (4r) at (2,0) {4};
+	
+	% Draw arrows
+	\draw[->] (1l) -- (1r);
+	\draw[->] (1l) -- (2r);
+	\draw[->] (1l) -- (3r);
+	\draw[->] (1l) -- (4r);
+	
+	\draw[->] (2l) -- (2r);
+	\draw[->] (2l) -- (4r);
+	
+	\draw[->] (3l) -- (3r);
+	
+	\draw[->] (4l) -- (4r);
+\end{tikzpicture}
+\caption{$R=\{(a,b)\mid a$ divides $b\}$}
+\end{figure}
+This relation also differs from function, since for member of $a$, it is possible
+to map to multiple members in $b$.
+\end{example}
 \begin{definition}[Functional Relation]
     A relation $R$ is said to be \textbf{functional} if each element of its domain has exactly one $R$-relative; 
     a functional relation is also called a \textbf{function}. If $R$ is a functional relation then for each element 
@@ -360,12 +419,17 @@ Now we look into several concrete examples of relation.
         If $R$ is a relation between $A$ and $B$ and $S$ is a relation between $B$ and $C$ then clearly 
         $S\circ R$ is a relation between $A$ and $C$, and we have $\operatorname{Dom}\left(S\circ R\right)\subseteq\operatorname{Dom}R$ and Range $(S\circ R)\subseteq\operatorname{Range}S.$
     \end{definition}
-
+    The idea of composition also works for mappings.
+\begin{definition}[Composite Mapping]
     Let $f= ( ( A, B) , R) $ and $g= ( ( B, C) , S) $ be mappings. Then clearly 
     $((A,C),S\circ R)$ is also a mapping, which we denote by $g\circ f$ and call the composition or 
-    composed mapping of $f$ and $g$. For each element $a$ of $A$ we have $( g\circ f) ( a) = g( f( a) ) .$
+    composed mapping of $f$ and $g$. For each element $a$ of $A$ we have $( g\circ f) ( a) = g( f( a) ).$
 
-
+\end{definition}
+\begin{remark}
+	The other equivalent definition is that
+	Let $R$ be a relation from a set $A$ to a set $B$ and S a relation from $B$ to a set $C$. The $composite$ of $R$ and S is the relation consisting of ordered pairs $(a,c)$, where $a\in A, c\in C$ , and for which there exists an element $b\in B$ such that $( a, b) \in R$ and $( b, c) \in S.$ We denote the composite of $R$ and $S$ by $S\circ R.$
+\end{remark}
     Similarly, we can define inverse relation.
     \begin{definition}[Inverse Relation]
         If $A$ and $B$ are classes then a relation between $A\textbf{ and }B$ is a subclass of $A\times B$, 
@@ -388,10 +452,77 @@ Now we look into several concrete examples of relation.
     $$
     \begin{aligned}R^{\leftarrow}(B)=\{x:(\exists y)((y\in B)\land((x,y)\in R))\}.\end{aligned}
     $$
+    With functional relation and mapping, we can define a more specific relation, which very special and practical.
+    \begin{definition}[Diagonal (Relation) and Identity Mapping]
+    	Let $A$ be any set; let $D_A=\{x:(\exists a)((a\in A)\land(x=(a,a)))\}$ (we call $D_A$ the diagonal of $A\times A).$ Then $D_A$ is a functional relation between $A$ and $A$ with domain $A.$ The mapping $I_A=((A,A),D_A)$ from $A$ to $A$ is called the identity mapping of $A.$ Clearly we have $I_{A}(a)=a$ for each element $a$ of $A.$
+    \end{definition}
+   \begin{example}
+   	The identity mapping $I_A$ for a set $A$ is a function that maps every element to itself. Here are some examples of identity mappings on various sets:
+   	
+   	\begin{itemize}
+   		\item Let $B = \{x \in \mathbb{R} \mid -1 \leq x \leq 1\}$. The identity mapping on $B$ is $I_B : B \to B$ where $I_B(x) = x$ for all $x \in B$.
+   		
+   		\item Let $C = \{\text{apple}, \text{banana}, \text{cherry}\}$. The identity mapping on $C$ is $I_C : C \to C$ where $I_C(\text{fruit}) = \text{fruit}$ for each fruit in set $C$.
+   		
+   		\item Let $D = \mathbb{Z}$. The identity mapping on $D$ is $I_D : \mathbb{Z} \to \mathbb{Z}$ where $I_D(n) = n$ for all $n \in \mathbb{Z}$.
+   	\end{itemize}
+   	
+   	The diagonal for each of these sets would be as follows:
+   	\begin{itemize}
+   		\item The diagonal of $B$, $D_B$, would be the set of all ordered pairs $(x, x)$ such that $x \in B$.
+   		
+   		\item The diagonal of $C$, $D_C$, would be the set $\{(\text{apple}, \text{apple}), (\text{banana}, \text{banana}), (\text{cherry}, \text{cherry})\}$.
+   		
+   		\item The diagonal of $D$, $D_D$, would be the set of all ordered pairs $(n, n)$ such that $n \in \mathbb{Z}$.
+   	\end{itemize}
+   	
+   	In all these cases, the identity mapping illustrates the concept of a function where the input is the same as the output for each element of the set.
+   \end{example}
+\subsubsection*{Families of Sets}
+In part 1, we discussed sequence. Sequence is defined (see definition \ref{def_sequence}) by a relation between index and a mathematical expression related to the index, and commonly the index $i$ has $i\in \N$. Sequence is actually a special \textbf{family of set}.
+\begin{definition}[Family of Set]
+	Let $I$ and $A$ be classes, and $F$ is a functional relation between $I$ and $A$. Then $F$ is sometimes called a family of elements of $A$ indexed by $I$ (or with $I\textbf{ as index class}) $ and we write $(F(i))_{i\in I}$ instead of $F$. In particular, if $E$ is a set then a family of elements of $\mathbf{P}(E)$ is called a family of subsets of $E$ indexed by $I.$ If $F$ is such a family and we write $X_i=F(i)$ for each element $i$ in $I$ then we denote the family $F$ by$\left ( X_i\right ) _i\in I.$
+\end{definition} 
+If $X$ is a set of subsets of a set $E$ then the diagonal $D_X$ is a family of subsets of $E$ which may sometimes be denoted by $(x)_{x\in X}.$
+
+Let $F= ( X_{i}) _{i\in I}$ be a family of subsets of a set $E.$ We define the union of the family to be
+$$
+\bigcup_{i\in I}X_i=\{x:(\exists i)((i\in I)\land(x\in X_i))\}.
+$$
+Thus $x$ belongs to the union of the family $(X_i)_{i\in I}$ if and only if it belongs to at least one of the sets $X_i$ with $i$ in $I.$ Of course if $X$ is a set of subsets of $E$ the union of the corresponding family $D_X$ coincides with the union of the set $X$ as previously defined: $\left(\bigcup_{x\in X}x=\left(\right.\right)X.$
+
+Again let $(X_i)_{i\in I}$ be a family of subsets of a set $E.$ The intersection of this family is defined to be
+$$
+\bigcap_{i\in I}X_i=\{x:(x\in E)\land(\forall i)((i\in I)\Longrightarrow(x\in X_i))\}.
+$$
+So $x$ belongs to the intersection of the family $(X_i)_{i\in I}$ if and only if it belongs to all the sets $X_i$ with $i$ in $I.$
+
+We notice that if $I$ is empty then we have $\bigcap_{i\in I}X_i=E.$ If X i a non-empty set of subsets of $E$ the intersection of the corresponding family $D_X$ coincides with the intersection of the set $X$ as previously defined${: }\bigcap _{x\in X}x= \bigcap X.$
+
+
+\begin{definition}[Sequence as Family of Set]
+A sequence in a set \( X \) can be defined as a function \( s: \mathbb{N} \to X \), where \( \mathbb{N} \) denotes the set of natural numbers. For each \( n \in \mathbb{N} \), the element \( s(n) \) is referred to as the \( n \)-th element of the sequence. The sequence is often denoted by \( (a_n)_{n \in \mathbb{N}} \), which signifies a family of elements \( a_n \) indexed by \( n \).
+\end{definition}
 \subsection{Reflexivity, Symmetry, and Transitivity}
 \subsection{Anti-symmetry and Asymmetry}
 \subsection{Representation of Relation}
 \subsection{Exercises}
+\begin{exercise}
+	 Determine whether each of the following is a set or a class in NBG set theory, and explain why.
+	\begin{enumerate}
+		\item The collection of all sets that do not contain themselves.
+		\item The set of all natural numbers.
+		\item The class of all ordinal numbers.
+	\end{enumerate}
+\end{exercise}
+\begin{solution}
+	Below are the solutions.
+	\begin{enumerate}
+		\item The collection of all sets that do not contain themselves is a \textbf{proper class}. This is because any attempt to consider it as a set leads to Russell's paradox, thus it cannot be a set within any consistent set theory including NBG.
+		\item The set of all natural numbers is a \textbf{set}. It is well-defined and does not lead to any paradoxes within NBG set theory. Furthermore, it is an element of the class of all sets.
+		\item The class of all ordinal numbers is a \textbf{proper class} because it is too large to be a set. If it were a set, it would lead to contradictions similar to those arising from considering the "set of all sets."
+	\end{enumerate}
+\end{solution}
 \begin{exercise}
     Russel's Paradox is fixed by introducing more strict set axioms to the set theory. In NBG theory, a
     proper class is defined as a top-level class that cannot be subclass of any other classes or sets, and

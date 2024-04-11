@@ -1,8 +1,8 @@
-PWD c:/Programming/GitProjects/Math-for-Computer-Science
+PWD C:/Programming/GitProjects/Math-for-Computer-Science
 INPUT c:/texlive-full/2023/texmf.cnf
 INPUT c:/texlive-full/2023/texmf-dist/web2c/texmf.cnf
 INPUT c:/texlive-full/2023/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT c:/Programming/GitProjects/Math-for-Computer-Science/main.tex
+INPUT main.tex
 OUTPUT main.log
 INPUT ./LegrandOrangeBook.cls
 INPUT LegrandOrangeBook.cls
