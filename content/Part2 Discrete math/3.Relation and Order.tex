@@ -123,7 +123,7 @@ We write \( x \notin y \) as an abbreviation for \( \neg(x \in y) \). Then for e
 \begin{definition}[Difference of Classes]
 For two classes $A$ and $B$, the difference $A~B$ is defined as:
 $$
-A\sim B=\{x:(x\in A)\land(x\not\in B)\}=A\cap(\thicksim B).
+A\sim B \text{ or } A-B=\{x:(x\in A)\land(x\not\in B)\}=A\cap(\thicksim B).
 $$
 \end{definition}
 Also, note that double negation and De Morgan's Law also work for class.
@@ -331,7 +331,7 @@ Now we look into several concrete examples of relation.
     \caption{Visual Comparison of a Relation and a Function}
 \end{figure}
 \begin{example}
-	Let A be the set {1,2,3,4}. Which ordered pairs are in the relation $R=\{(a,b)\mid a$ divides $b\}?$
+	Let A be the set \{1,2,3,4\}. Which ordered pairs are in the relation $R=\{(a,b)\mid a$ divides $b\}?$
 	\begin{solution}
 		 Because $(a,b)$ is in R if and only if $a$ and $b$ are positive integers not exceeding 4 such that $a$ divides $b$,we see that
 		$$
@@ -385,7 +385,7 @@ to map to multiple members in $b$.
         For every functional relation $R$, if the domain of $R$ is a set then the range 
         of $R$ is also a set.
     \end{axiom}
-
+\subsection{Mapping, Composition, and Inverse}
     In naive set theory and function in part 1 of the book, we gave a rough 
     definitions to mappings. With class, we can make it more concrete.
     \begin{definition}[mapping]
@@ -398,19 +398,48 @@ to map to multiple members in $b$.
         $B$ which we denote by $f(a);$ we call it the image of $a\textbf{ under }f$ or the value of $f\textbf{ at }a.$
     \end{definition} 
     It is clear from the definition of the term “mapping” that in order to describe a mapping $f$ we must give the domain $A$ and codomain $B$ of $f$ and also, for each element $a$ of the domain we must describe the unique element $b_a$ of the codomain such that $(a,b_a)$ belongs to the graph of $f$, i.e. we must describe for each element $a$ of $A$ its image under $f$ in $B.$
+    
     Let $f= ( ( A, B) , R) $ be a mapping from $A$ to $B$. For each subset $X$ of $A$ we denote the subset 
     $R^{\to}(X)$ of $B$ by $f^{\to}(X);$ in particular, if $a$ is any element of $A$ we have
     $f^{\to}(\{a\})=\{f(a)\}.$ For each subset $Y$ of $B$ we denote the subset $R^{\leftarrow }( Y) $ 
     of $A$ by $f^{\leftarrow }( Y) .$
 
-    Let $ f=((A,B),R)$ be a mapping from $A$ to $B;\operatorname*{let}A_1$ be a subset of $A.$ Then the restriction of $f$ to $A_1$ is the mapping $f\mid A_1=$
+    Let $ f=((A,B),R)$ be a mapping from $A$ to $B;\operatorname*{let}A_1$ be a subset of $A.$ Then the restriction of $f$ to $A_1$ is the mapping
     $$
-    ((A_1,B),R\cap(A_1\times B)).
+    f\mid A_1= \left((A_1,B\\),R\cap(A_1\times B)\right).
     $$
 
     Earlier, we discussed composition and inverse of function. Now that we have known that function is a kind of 
     relation, can we compose or inverse all other relations? Naturally the answer is yes.
-
+	
+	\begin{definition}[Special Mappings]
+		Let $f= ( ( A, B) , R) $ be a mapping. Then $f$ is said to be \textbf{surjective} or to be a \textbf{surjection} if we have
+		Range $R$ $= B, $i.e. if every element of $B$ is the image under $f$ of at least one element of $A.$
+		
+		Next, $f$ is said to be \textbf{injective} or to be an \textbf{injection} if the inverse relation $R^{-1}$ is functional. Thus $f$ is an injection if and only if for every element $b$ in Range $R$ there is exactly one element $a$ of $A$ such chat $( b, a) \in R^{- 1}, $i.e.$\quad ( a, b) \in R$ and so $b=f(a).$ So $f$ is injective if and only if each element of the range of $R$ is the image under $f$ of exactly one element of $A.$ Again, $f$ is injective if and only if whenever $f( a_{1}) = f( a_{2}) , $ where $a_{1}, a_{2}\in A, $ then $a_{1}= a_{2}.$
+		
+		The mapping $f$ is said to be \textbf{bijective} or to be a \textbf{bijection} if it is both injective and surjective. If $A$ and $B$ are sets we say that $A\textbf{is}$ equipotent to $B$ or that $A\textbf{is equinumerous with }B$ if there exists a bijective mapping from $A$ to $B.$
+		
+		Let $f=((A,B),R)$ be a mapping. Then $((B,A),R^{-1})$ is a mapping if and only if $f$ is bijective; in this case we write $((B,A),R^{-1})=f^{-1}$ and call $f^{-1}$ the inverse mapping of $f.$ Clearly $f^{-1}$ is a bijection from $B$ to $A$ with inverse $f.$
+		\end{definition}
+		Here are some examples of special mappings.
+		\begin{example}[Surjective Function]
+			A function \( f: A \to B \) is surjective if for every element \( y \) in \( B \), there is at least one element \( x \) in \( A \) such that \( f(x) = y \). For instance, let \( A = \{1, 2, 3\} \) and \( B = \{a, b\} \). Define \( f \) by \( f(1) = a \), \( f(2) = a \), and \( f(3) = b \). This function is surjective because every element of \( B \) is the image of at least one element of \( A \).
+		\end{example}
+		
+		\begin{example}[Injective Function]
+			A function \( f: A \to B \) is injective if no two different elements in \( A \) map to the same element in \( B \). For example, let \( A = \{1, 2, 3\} \) and \( B = \{a, b, c, d\} \). Define \( f \) by \( f(1) = a \), \( f(2) = b \), and \( f(3) = c \). This function is injective because each element of \( A \) maps to a unique element of \( B \).
+		\end{example}
+		
+		\begin{example}[Bijective Function]
+			A function \( f: A \to B \) is bijective if it is both injective and surjective. For instance, let \( A = \{1, 2, 3\} \) and \( B = \{a, b, c\} \). Define \( f \) by \( f(1) = a \), \( f(2) = b \), and \( f(3) = c \). This function is bijective, making \( A \) and \( B \) equinumerous.
+		\end{example}
+		
+		\begin{example}[Inverse Mapping]
+			If \( f \) is a bijective function from \( A \) to \( B \), then the inverse \( f^{-1} \) is a function from \( B \) to \( A \) that reverses the mapping of \( f \). Using the bijective function \( f \) from the previous example, we define \( f^{-1} \) by \( f^{-1}(a) = 1 \), \( f^{-1}(b) = 2 \), and \( f^{-1}(c) = 3 \).
+		\end{example}
+		
+	
     \begin{definition}[Composite Relation]
         If $R$ and $S$ are relations, the composition of $R$ and $S$ is the relation $S\circ R$ given by
         $$
@@ -453,7 +482,7 @@ to map to multiple members in $b$.
     \begin{aligned}R^{\leftarrow}(B)=\{x:(\exists y)((y\in B)\land((x,y)\in R))\}.\end{aligned}
     $$
     With functional relation and mapping, we can define a more specific relation, which very special and practical.
-    \begin{definition}[Diagonal (Relation) and Identity Mapping]
+    \begin{definition}[Diagonal (Relation) and Identity Mapping]\label{diagonalR}
     	Let $A$ be any set; let $D_A=\{x:(\exists a)((a\in A)\land(x=(a,a)))\}$ (we call $D_A$ the diagonal of $A\times A).$ Then $D_A$ is a functional relation between $A$ and $A$ with domain $A.$ The mapping $I_A=((A,A),D_A)$ from $A$ to $A$ is called the identity mapping of $A.$ Clearly we have $I_{A}(a)=a$ for each element $a$ of $A.$
     \end{definition}
    \begin{example}
@@ -478,10 +507,10 @@ to map to multiple members in $b$.
    	
    	In all these cases, the identity mapping illustrates the concept of a function where the input is the same as the output for each element of the set.
    \end{example}
-\subsubsection*{Families of Sets}
+\subsection{Families of Sets}
 In part 1, we discussed sequence. Sequence is defined (see definition \ref{def_sequence}) by a relation between index and a mathematical expression related to the index, and commonly the index $i$ has $i\in \N$. Sequence is actually a special \textbf{family of set}.
 \begin{definition}[Family of Set]
-	Let $I$ and $A$ be classes, and $F$ is a functional relation between $I$ and $A$. Then $F$ is sometimes called a family of elements of $A$ indexed by $I$ (or with $I\textbf{ as index class}) $ and we write $(F(i))_{i\in I}$ instead of $F$. In particular, if $E$ is a set then a family of elements of $\mathbf{P}(E)$ is called a family of subsets of $E$ indexed by $I.$ If $F$ is such a family and we write $X_i=F(i)$ for each element $i$ in $I$ then we denote the family $F$ by$\left ( X_i\right ) _i\in I.$
+	Let $I$ and $A$ be classes, and $F$ is a functional relation between $I$ and $A$. Then $F$ is sometimes called a family of elements of $A$ indexed by $I$ (or with $I\textbf{ as index class}) $ and we write $(F(i))_{i\in I}$ instead of $F$. In particular, if $E$ is a set then a family of elements of $\mathbf{P}(E)$ is called a family of subsets of $E$ indexed by $I.$ If $F$ is such a family and we write $X_i=F(i)$ for each element $i$ in $I$ then we denote the family $F$ by$\left ( X_i\right ) _{i\in I}.$
 \end{definition} 
 If $X$ is a set of subsets of a set $E$ then the diagonal $D_X$ is a family of subsets of $E$ which may sometimes be denoted by $(x)_{x\in X}.$
 
@@ -489,7 +518,7 @@ Let $F= ( X_{i}) _{i\in I}$ be a family of subsets of a set $E.$ We define the u
 $$
 \bigcup_{i\in I}X_i=\{x:(\exists i)((i\in I)\land(x\in X_i))\}.
 $$
-Thus $x$ belongs to the union of the family $(X_i)_{i\in I}$ if and only if it belongs to at least one of the sets $X_i$ with $i$ in $I.$ Of course if $X$ is a set of subsets of $E$ the union of the corresponding family $D_X$ coincides with the union of the set $X$ as previously defined: $\left(\bigcup_{x\in X}x=\left(\right.\right)X.$
+Thus $x$ belongs to the union of the family $(X_i)_{i\in I}$ if and only if it belongs to at least one of the sets $X_i$ with $i$ in $I.$ Of course if $X$ is a set of subsets of $E$ the union of the corresponding family $D_X$ coincides with the union of the set $X$ as previously defined: $\bigcup_{x\in X}x=\bigcup X.$
 
 Again let $(X_i)_{i\in I}$ be a family of subsets of a set $E.$ The intersection of this family is defined to be
 $$
@@ -498,15 +527,151 @@ $$
 So $x$ belongs to the intersection of the family $(X_i)_{i\in I}$ if and only if it belongs to all the sets $X_i$ with $i$ in $I.$
 
 We notice that if $I$ is empty then we have $\bigcap_{i\in I}X_i=E.$ If X i a non-empty set of subsets of $E$ the intersection of the corresponding family $D_X$ coincides with the intersection of the set $X$ as previously defined${: }\bigcap _{x\in X}x= \bigcap X.$
+\begin{example}
+Consider the set $E$ and a family of its subsets $(X_i)_{i \in I}$, where $I = \{1, 2, 3\}$ and
+\begin{itemize}
+	\item $X_1 = \{a, b\}$
+	\item $X_2 = \{b, c\}$
+	\item $X_3 = \{a, c, d\}$
+\end{itemize}
 
+The union of the family $(X_i)_{i \in I}$ is the set of elements that are in at least one of the sets $X_i$:
+\[ \bigcup_{i \in I} X_i = X_1 \cup X_2 \cup X_3 = \{a, b, c, d\} \]
+
+The intersection of the family $(X_i)_{i \in I}$ is the set of elements that are in every one of the sets $X_i$:
+\[ \bigcap_{i \in I} X_i = X_1 \cap X_2 \cap X_3 = \emptyset \]
+\end{example}
 
 \begin{definition}[Sequence as Family of Set]
-A sequence in a set \( X \) can be defined as a function \( s: \mathbb{N} \to X \), where \( \mathbb{N} \) denotes the set of natural numbers. For each \( n \in \mathbb{N} \), the element \( s(n) \) is referred to as the \( n \)-th element of the sequence. The sequence is often denoted by \( (a_n)_{n \in \mathbb{N}} \), which signifies a family of elements \( a_n \) indexed by \( n \).
+Let \( E \) be a set. A sequence in \( E \) is a function from the set of natural numbers \( \mathbb{N} \) to \( E \). The sequence can be represented as a family of sets \( (x_i)_{i \in \mathbb{N}} \), where each \( x_i \) is an element of \( E \), and \( i \) is the index representing the position of the element in the sequence.
+
+The \( n \)-th term of the sequence is denoted by \( x_n \), and the sequence itself can be written as \( (x_n)_{n=1}^{\infty} \), which is the family of elements of \( E \) indexed by \( \mathbb{N} \).
 \end{definition}
+
+Let $(X_i)_{i\in I}$ be a family of sets with index set $I.$ Let $X=\bigcup_{i\in I}X_i.$ Then the product of the family $(X_i)_{i\in I}$ is the set
+
+$$
+\prod_{i\in I}X_i=\{f:(f\in\operatorname{Map}(I,X))\wedge(\forall i)((i\in I)\Longrightarrow(f(i)\in X_i))\}.
+$$
+If we write $f(i)=x_i$ for each index $i$ in $I$ it is sometimes helpful to denote the element $f$ of $\prod_{i\in I}X_i$ by $\prod_{i\in I}x_i.$
+
+For each index $j$ in $I$ we define a mapping $\pi_j$ from $\prod_{i\in I}X_i$ to $X_j$ by setting
+
+$$
+\pi_j(f)=f(j)\text{ for every }f\mathrm{~in~}\prod_{i\in I}X_i.
+$$
+
+The mapping $\pi_j$ is called the $j$ -th projection mapping from $\prod_{i\in I}X_i.$
+\begin{example}
+	Consider two sets $X_1 = \{a, b\}$ and $X_2 = \{1, 2\}$. The index set is $I = \{1, 2\}$.
+	The product of the family of sets $(X_i)_{i \in I}$, which is $X_1 \times X_2$, consists of all ordered pairs where the first element is from $X_1$ and the second is from $X_2$. Thus, the product is:
+	\[ \prod_{i \in I} X_i = X_1 \times X_2 = \{(a, 1), (a, 2), (b, 1), (b, 2)\} \]
+	
+	Each ordered pair represents a function $f$ mapping $I$ to the union of $X_1$ and $X_2$. For instance, one such function corresponding to the ordered pair $(a, 1)$ is defined by:
+	\[ f(1) = a, \quad f(2) = 1 \]
+	
+	Projection mappings $\pi_j$ from $\prod_{i \in I} X_i$ to $X_j$ are defined for each index $j \in I$ by setting:
+	\[ \pi_1(f) = f(1), \quad \pi_2(f) = f(2) \]
+	
+	Hence, for our function $f$, the projections are:
+	\[ \pi_1(f) = a, \quad \pi_2(f) = 1 \]
+\end{example}
+
+Family of Sets is related to another axiom of NBG set theory.
+\begin{axiom}[Axiom of Choice]
+	 Let $(E_i)_{i\in I}$ be a family of nonempty sets indexed by a set $I$. Then the product $\prod_{i\in I}E_i$ is non-empty.
+\end{axiom}
+We can also define choice function of class.
+\begin{definition}[Choice Function and Selection Set]
+	Let $(E_i)_{i\in I}$ be a family of non-empty sets. By a \textbf{choice function} for this family we mean a mapping $f$ from $I$ to $\bigcup_{i\in I}E_i$ such that for every index $i$ in $I$ we have $f(i)\in E_i;$ thus a choice function is an element of the product $\prod_{i\in I}E_i.$ If we have $E_i\cap E_j=\emptyset$ for every pair of distinct elements $i, j$ of $I$ we say that the family $( E_i) _{i\in I}$ is $pairwise$ $disjoint)$ then the range of a choice function for $(E_i)_{i\in I}$ is a subset of $\bigcup_{i\in I}E_i$ which contains exactly one element from each set of the family. Such a set is called a \textbf{selection set} for the (pairwise disjoint) family $(E_i)_{i\in I}.$
+\end{definition}
+Thus the Axiom of Choice asserts that for every family of non-empty
+sets there exists a choice function and so for every pairwise disjoint family
+of non-empty sets there exists a selection set.
+\begin{example}[Choice Function and Selection Set]
+	Consider the family of non-empty, pairwise disjoint sets:
+	\begin{align*}
+		E_1 &= \{1, 2\}, \\
+		E_2 &= \{3, 4\}, \\
+		E_3 &= \{5, 6\},
+	\end{align*}
+	with the index set \( I = \{1, 2, 3\} \).
+	
+	A choice function \( f \) for this family might be defined as:
+	\begin{align*}
+		f(1) &= 1, \\
+		f(2) &= 4, \\
+		f(3) &= 5.
+	\end{align*}
+	This function \( f \) chooses one element from each set \( E_i \), making the selection set for this family \(\{ f(1), f(2), f(3) \} = \{1, 4, 5\}\).
+\end{example}
 \subsection{Reflexivity, Symmetry, and Transitivity}
-\subsection{Anti-symmetry and Asymmetry}
-\subsection{Representation of Relation}
+With basic relation we have defined, we can now look into some special relations with some specific properties. These properties are important, since these property will be used to further classify relations for us. All special relations could be related to the diagonal of the sets or classes involved in that specific relation.
+
+The first special relation is actually already covered in the diagonal of class, which is the idea of reflexivity, meaning a relation from an object to itself.
+\begin{definition}[Reflexive Relation]
+	Let \( R \) be a relation on a set \( X \). The relation \( R \) is said to be \textbf{reflexive} if \( D_X \subseteq R \), where \( D_X = \{(x, x) \mid x \in X\} \). That is, for every element \( x \) in \( X \), the pair \( (x, x) \) belongs to \( R \).
+\end{definition}
+\begin{example}
+	Consider the following relations on the set \(\{1, 2, 3, 4\}\):
+	
+	\begin{itemize}
+		\item \( R_1 = \{(1, 1), (1, 2), (2, 1), (2, 2), (3, 4), (4, 1), (4, 4)\} \)
+		\item \( R_2 = \{(1, 1), (1, 2), (2, 1)\} \)
+		\item \( R_3 = \{(1, 1), (1, 2), (1, 4), (2, 1), (2, 2), (3, 3), (4, 1), (4, 4)\} \)
+		\item \( R_4 = \{(2, 1), (3, 1), (3, 2), (4, 1), (4, 2), (4, 3)\} \)
+		\item \( R_5 = \{(1, 1), (1, 2), (1, 3), (1, 4), (2, 2), (2, 3), (2, 4), (3, 3), (3, 4), (4, 4)\} \)
+		\item \( R_6 = \{(3, 4)\} \)
+	\end{itemize}
+	
+	Which of these relations are reflexive?
+	
+	\textbf{Solution:} The relations \( R_3 \) and \( R_5 \) are reflexive because they both contain all pairs of the form \( (a, a) \), namely, \( (1, 1), (2, 2), (3, 3), \) and \( (4, 4) \). The other relations are not reflexive because they do not contain all of these ordered pairs. In particular, \( R_1, R_2, R_4, \) and \( R_6 \) are not reflexive because \( (3, 3) \) is not in any of these relations.
+\end{example}
+And as a complement of Reflexivity, we can define Irreflexivity
+\begin{definition}[Irreflexive Relation]
+	A relation \( R \) on a set \( X \) is called \textbf{irreflexive} if \( D_X \cap R = \emptyset \), i.e., no pair of the form \( (x, x) \) belongs to \( R \) for any \( x \) in \( X \).
+\end{definition}
+
+Now we discuss symmetry of relation.
+\begin{definition}[Symmetric Relation]
+	A relation \( R \) on a set \( X \) is \textbf{symmetric} if for every \( x, y \) in \( X \), if \( (x, y) \in R \) then \( (y, x) \) is also in \( R \), i.e., $R = R^{-1}$
+\end{definition}
+
+We can also define the complement of this kind of relation.
+\begin{definition}[Asymmetric Relation]
+	Let \( R \) be a relation on a set \( X \). The relation \( R \) is said to be \textbf{asymmetric} if for any \( x, y \) in \( X \), whenever \( (x, y) \in R \), then \( (y, x) \notin R \). This implies that no pair can be in both \( R \) and \( R^{-1} \) unless \( x = y \), which is not permitted for asymmetric relations, thus \( R \cap R^{-1} = \emptyset \), i.e. $R \neq R^{-1}$, .
+\end{definition}
+There is also a type of relation called antisymmetric relation.
+\begin{definition}[Antisymmetric Relation]
+	A relation \( R \) on a set \( X \) is \textbf{antisymmetric} if for all \( x, y \) in \( X \), if \( (x, y) \in R \) and \( (y, x) \in R \), then \( x = y \). That is, \( R \cap R^{-1} \subseteq D_X \).
+\end{definition}
+Some may confused by these similar terms. Below are the clarification and some examples.
+\begin{itemize}
+	\item A relation \( R \) on a set \( X \) is \textbf{symmetric} if for any \( x, y \in X \), whenever \( (x, y) \) is in \( R \), then \( (y, x) \) is also in \( R \). Symmetry implies a mutual relationship.
+	
+	\item A relation \( R \) is \textbf{asymmetric} if for any \( x, y \in X \), whenever \( (x, y) \) is in \( R \), \( (y, x) \) is not in \( R \). Asymmetry denotes a one-way relationship.
+	
+	\item A relation \( R \) is \textbf{antisymmetric} if for any \( x, y \in X \), whenever both \( (x, y) \) and \( (y, x) \) are in \( R \), it must be that \( x = y \). Antisymmetry allows for a hierarchical ordering.
+\end{itemize}
+
+Let's explore these properties through examples:
+
+\begin{example}[Symmetric Relation]
+	The relation "is a sibling of" is symmetric. If Tom is a sibling of Jerry, then Jerry is a sibling of Tom.
+\end{example}
+
+\begin{example}[Asymmetric Relation]
+	The "less than" relation on the real numbers is asymmetric. If \( 3 < 4 \), then it is not the case that \( 4 < 3 \).
+\end{example}
+
+\begin{example}[Antisymmetric Relation]
+	The "divides" relation for integers is antisymmetric. For example, \( 6 \) divides \( 12 \), and \( 12 \) does not divide \( 6 \). But we can have 6 divides 6 itself.
+\end{example}
 \subsection{Exercises}
+
+
+
 \begin{exercise}
 	 Determine whether each of the following is a set or a class in NBG set theory, and explain why.
 	\begin{enumerate}
@@ -548,6 +713,17 @@ A sequence in a set \( X \) can be defined as a function \( s: \mathbb{N} \to X 
     Let $A,B,C$ be classes such that $A\subset B,B\subset C.$ Prove that $A\subset C.$
 \end{exercise}
 
+Below are exercises for binary relation.
+
+
+
+
+\section{Representation of Relations}
+	\subsection{By Matrix}
+	
+	\subsection{By Digraph}
+
+\subsection{Exercises}
 
 \section{Equivalence Relations}
 
