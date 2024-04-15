@@ -609,7 +609,7 @@ of non-empty sets there exists a selection set.
 With basic relation we have defined, we can now look into some special relations with some specific properties. These properties are important, since these property will be used to further classify relations for us. All special relations could be related to the diagonal of the sets or classes involved in that specific relation.
 
 The first special relation is actually already covered in the diagonal of class, which is the idea of reflexivity, meaning a relation from an object to itself.
-\begin{definition}[Reflexive Relation]
+\begin{definition}[Reflexive Relation]\label{reflexR}
 	Let \( R \) be a relation on a set \( X \). The relation \( R \) is said to be \textbf{reflexive} if \( D_X \subseteq R \), where \( D_X = \{(x, x) \mid x \in X\} \). That is, for every element \( x \) in \( X \), the pair \( (x, x) \) belongs to \( R \).
 \end{definition}
 \begin{example}
@@ -719,9 +719,412 @@ Below are exercises for binary relation.
 
 
 \section{Representation of Relations}
-	\subsection{By Matrix}
+In last section. we discussed binary relation and their properties. This section focuses on ways of representation. Symbolic language is accurate and not prone to make misunderstanding, yet it is not quite easy to understand to human minds. Therefore, we need straightforward ways to visualize them and assure the accuracy in the same time.
+	\subsection{Representation By Matrix}
+	The first commonly used method is matrix. A relation between finite sets can be represented using a zero-one matrix. Suppose that $R$ is a relation from $A=\{a_1,a_2,\ldots,a_m\}$ to $B=\{b_1,b_2,\ldots,b_n\}.$ (Here the elements of the sets $A$ and $B$ have been listed in a particular, but arbitrary, order. Furthermore, when $A=B$ we use the same ordering for $A$ and $B.)$ The relation $R$ can be represented by the matrix $\mathbf{M}_R=[m_{ij}]$, where
+	$$
+	m_{ij}=\left\{\begin{matrix}1\text{ if}(a_i,b_j)\in R,\\0\text{ if}(a_i,b_j)\notin R.\end{matrix}\right.
+	$$
+	\begin{example}
+		Consider the binary relation \( R \) on the set \( X = \{1, 2, 3\} \) defined by the pairs \( R = \{(1, 2), (2, 3), (3, 1)\} \). We can represent \( R \) as a matrix \( M \) where the entry \( m_{ij} \) is 1 if \( (i, j) \in R \) and 0 otherwise. Thus, the matrix \( M \) representing \( R \) is given by:
+		$$
+		M = \begin{bmatrix}
+			0 & 1 & 0 \\
+			0 & 0 & 1 \\
+			1 & 0 & 0
+		\end{bmatrix}
+		$$
+		This matrix shows that there is a relation from 1 to 2, 2 to 3, and 3 to 1, as indicated by the ones in the matrix.
+	\end{example}
+	What about some other special relations? Here are more examples.
+	\subsubsection*{Reflective Relation in Matrix}
+	We have defined the reflexivity of relation upon the property of diagonal of the relation in definition \ref{reflexR}. We have a reflective relation if and only if all elements of it's diagonal are in the relation. Without a second thought you may think that a reflexive relation represented by a matrix will has all $m_{ij}$ where $i=j$ to be 1, and we can arrange the rest of the places randomly, since however we change other ordered pairs, the relation is still reflective.
+	\begin{example}
+		A reflexive relation on a set \( X = \{1, 2, 3\} \) requires that every element is related to itself. Thus, for the relation \( R \) to be reflexive, it must include the pairs \( R = \{(1, 1), (2, 2), (3, 3)\}\) at minimum. The matrix \( M \) representing such a reflexive relation \( R \) is given by:
+		$$
+		M = \begin{bmatrix}
+			1 & a & b \\
+			c & 1 & d \\
+			e & f & 1
+		\end{bmatrix}
+		$$
+		Here, the diagonal elements of the matrix are all set to 1, reflecting the reflexive property that each element is related to itself. This diagonal structure is reminiscent of an identity matrix, where all diagonal elements are 1, and all off-diagonal elements are 0. In the context of relations, the presence of 1s on the diagonal is crucial for reflexivity. However, the values of \( a, b, c, d, e, \) and \( f \) (the off-diagonal elements) do not influence the reflexivity of the relation and can be either 0 or 1. This highlights that while the matrix representing a reflexive relation must have 1s along its diagonal, it does not necessarily need to be an identity matrix.
+	\end{example}
+	\subsubsection*{Symmetric/Antisymmetric/Asymmetry Relation in Matrix}
+	In symmetric relations, we have $(a,b)\in R \iff (b,a)\in R$. This actually means that we still have a identical diagonal in the matrix where every $m_{ij}$ where $i=j$ is 1. Also we have $m_{ij} = m_{ji}=1$ in the matrix. In terms of the relation matrix $M$ of relation $R$, we have $R$ is symmetric if and only if $M=M^T$.
+	\begin{example}[Symmetry]
+		A relation \( R \) on a set \( X = \{1, 2, 3\} \) is symmetric if for any two elements \( a \) and \( b \) in \( X \), whenever \( (a, b) \in R \), then \( (b, a) \) is also in \( R \). Consider the symmetric relation \( R \) defined by the pairs \( R = \{(1, 1), (3, 3), (1, 2), (2, 1)\} \). The matrix \( M \) representing this symmetric relation \( R \) is given by:
+		$$
+		M = \begin{bmatrix}
+			1 & 1 & 0 \\
+			1 & 0 & 0 \\
+			0 & 0 & 1
+		\end{bmatrix}
+		$$
+		In this matrix, the entries are symmetric about the main diagonal. The presence of \( 1 \) at positions \( (1,2) \) and \( (2,1) \) illustrates the symmetric nature of the relation, as both \( (1,2) \) and \( (2,1) \) are included in \( R \).
+		
+		A reflexive relation, on the other hand, requires that each element be related to itself, leading to \( 1 \)s along the main diagonal of its matrix. In the example above, the relation is not reflexive because it does not contain \( (2, 2) \). 
+		
+		Although both reflexive and symmetric properties concern the main diagonal, they describe different aspects of a relation:
+		\begin{itemize}
+			\item Reflexivity is about individual elements being self-connected, evidenced by \( 1 \)s on the diagonal.
+			\item Symmetry involves pairs of elements and requires that if an element \( a \) is related to an element \( b \), then \( b \) must also be related to \( a \), leading to a mirrored symmetry across the diagonal.
+		\end{itemize}
+		A relation can be both reflexive and symmetric but does not need to be one to be the other. For instance, a purely symmetric relation need not include self-pairs like \( (1, 1) \) unless it is also intended to be reflexive.
+	\end{example}
+	An antisymmetric relation on a set $X$ involves a specific condition: for any two distinct elements $\alpha$ and $b$ in $X$,if both $(a,b)$ and $(b,a)$ are in the relation $R$, then $\alpha$ must be equal to $b$. This means that if $a\neq$ $b$,it cannot be the case that both $(a,b)$ and $(b,a)$ are in $R$.In terms of matrix representation:
 	
-	\subsection{By Digraph}
+	\begin{example}[Antisymmetry]
+		Consider the set \( X = \{1, 2, 3\} \) and define the relation \( R \) on \( X \) by the pairs \( R = \{(1, 2), (2, 3), (3, 3)\} \). This relation is antisymmetric, which we can observe through its matrix representation. The matrix \( M \) representing the relation \( R \) is given by:
+		$$
+		M = \begin{bmatrix}
+			0 & 1 & 0 \\
+			0 & 0 & 1 \\
+			0 & 0 & 1
+		\end{bmatrix}
+		$$
+		In this matrix, note the following:
+		\begin{itemize}
+		\item The entry \( m_{12} = 1 \) (relation from 1 to 2), and \( m_{21} = 0 \) (no relation from 2 to 1), satisfying the antisymmetric condition.
+		\item Similarly, \( m_{23} = 1 \) and \( m_{32} = 0 \).
+		\item The diagonal entry \( m_{33} = 1 \) does not violate antisymmetry as self-relations do not affect antisymmetry.
+		\end{itemize}
+		Antisymmetric relations allow entries on the main diagonal (self-relations) but restrict how elements can relate symmetrically off the diagonal, ensuring that if one direction is permitted, the opposite is not unless they are the same element.
+	\end{example}
+	An asymmetric relation is a stronger form of an antisymmetric relation. A relation $R$ on a set $X$ is asymmetric if, for any elements $a$ and $b$ in $X$,whenever $(a,b)$ is in $R$, then $(b,a)$ cannot be in $R$. This implies that if one direction between two different elements is allowed, the opposite direction is strictly forbidden, making it impossible for both $(a,b)$ and $(b,a)$ to exist in $R$ for any $a\neq b.$
+	\begin{example}[Asymmetry]
+		Consider the set \( X = \{1, 2, 3\} \) and define an asymmetric relation \( R \) on \( X \) by including the pairs \( R = \{(1, 2), (2, 3)\} \). This relation is asymmetric as it does not contain both \( (a, b) \) and \( (b, a) \) for any \( a \) and \( b \) in \( X \). The matrix \( M \) representing this relation \( R \) is given by:
+		\[
+		M = \begin{bmatrix}
+			0 & 1 & 0 \\
+			0 & 0 & 1 \\
+			0 & 0 & 0
+		\end{bmatrix}
+		\]
+		In this matrix:
+		- The entry \( m_{12} = 1 \) and \( m_{21} = 0 \), supporting the asymmetric nature by the absence of the reverse relation.
+		- The entry \( m_{23} = 1 \) and \( m_{32} = 0 \), further demonstrating asymmetry.
+		
+		This matrix shows no reciprocal relations between different elements, which is a defining characteristic of asymmetric relations. Note that self-relations (diagonal entries) are not present in this matrix, aligning with the strict definition of asymmetry which typically excludes self-relations as well.
+	\end{example}
+	\subsubsection*{Operation of Relation Matrix}
+	We can find intersection or union of two relations easily by examining their matrices. This could be done by comparing each element with the same index one by one.
+	\begin{example}
+		Let \( A = \begin{bmatrix} 0 & 1 & 0 \\ 0 & 0 & 1 \\ 0 & 0 & 0 \end{bmatrix} \) and \( B = \begin{bmatrix} 1 & 1 & 0 \\ 0 & 0 & 0 \\ 1 & 0 & 0 \end{bmatrix} \) be two relations.
+		
+		The union \( A \cup B \) is:
+		$$ A \cup B = \begin{bmatrix} 1 & 1 & 0 \\ 0 & 0 & 1 \\ 1 & 0 & 0 \end{bmatrix} $$
+		
+		The intersection \( A \cap B \) is:
+		$$ A \cap B = \begin{bmatrix} 0 & 1 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & 0 \end{bmatrix} $$
+	\end{example}
+	Matrix is also possible to represent composition of relations. For these relations, in particular, suppose that \( R \) is a relation from \( A \) to \( B \) and \( S \) is a relation from \( B \) to \( C \). Suppose that \( A \), \( B \), and \( C \) have \( m \), \( n \), and \( p \) elements, respectively. Let the zero-one matrices for \( S \circ R \), \( R \), and \( S \) be \( M_{S \circ R} = [t_{ij}] \), \( M_R = [r_{ij}] \), and \( M_S = [s_{ij}] \), respectively (these matrices have sizes \( m \times p \), \( m \times n \), and \( n \times p \), respectively). The ordered pair \( (a_i, c_j) \) belongs to \( S \circ R \) if and only if there is an element \( b_k \) such that \( (a_i, b_k) \) belongs to \( R \) and \( (b_k, c_j) \) belongs to \( S \). It follows that \( t_{ij} = 1 \) if and only if \( r_{ik} = s_{kj} = 1 \) for some \( k \). From the definition of the Boolean product, this means that
+	$$ M_{S \circ R} = M_R \otimes M_S. $$
+	\begin{example}[Find the matrix representing the relations $S \circ R$
+		where the matrices representing $R$ and $S$ are ]
+		$$
+		M_R = \begin{bmatrix}
+			1 & 0 & 1 \\
+			1 & 1 & 0 \\
+			0 & 0 & 0 \\
+		\end{bmatrix}
+		\quad \text{and} \quad
+		M_S = \begin{bmatrix}
+			0 & 1 & 0 \\
+			0 & 0 & 1 \\
+			1 & 0 & 1 \\
+		\end{bmatrix}.
+		$$
+	\end{example}
+	\begin{solution}
+		The matrix for $S \otimes R$ is obtained by performing the Boolean product of $M_R$ and $M_S$. This operation is similar to matrix multiplication, except that addition is replaced by the logical OR operation, and multiplication is replaced by the logical AND operation. The result is a matrix that represents the composition of the two relations:
+		$$
+		M_{S \circ R} = M_R \otimes M_S = \begin{bmatrix}
+			1 & 1 & 1 \\
+			0 & 1 & 1 \\
+			0 & 0 & 0 \\
+		\end{bmatrix}.
+		$$
+		Each entry in $M_{S \circ R}$ is computed by taking the logical OR of the ANDs of the corresponding row from $M_R$ and the column from $M_S$.
+	\end{solution}
+	\begin{example}[Find the matrix representing the relation $R^2$]
+		where the matrix representing $R$ is
+		$$
+		M_R = \begin{bmatrix}
+			0 & 1 & 0 \\
+			0 & 1 & 1 \\
+			1 & 0 & 0 \\
+		\end{bmatrix}.
+		$$
+	\end{example}
+	\begin{solution}
+		The matrix for $R^2$ is found by taking the Boolean product of $M_R$ with itself. This operation is analogous to squaring a matrix, where we use Boolean algebra for addition and multiplication:
+		$$
+		M_{R_2} = M_{R}^{[2]} = \begin{bmatrix}
+			0 & 1 & 1 \\
+			1 & 1 & 1 \\
+			0 & 1 & 0 \\
+		\end{bmatrix}.
+		$$
+		The entries of $M_{R_2}$ indicate whether there is a path of length 2 between the nodes represented by the matrix indices in the relation $R$.
+	\end{solution}
+	\subsection{Representation By Digraph}
+	The other way to visualize relation is by using Directed Graph, or Digraph.
+	\begin{definition}[Digraph]
+		A \textit{digraph} or \textit{directed graph} is an ordered pair $G = (V, A)$ comprising:
+		\begin{itemize}
+			\item A non-empty set $V$, whose elements are called \textit{vertices} or \textit{nodes}.
+			\item A set $A$ of ordered pairs of vertices, called \textit{arcs}, \textit{directed edges}, \textit{arrows}, or \textit{directed lines}.
+		\end{itemize}
+		The directed edge $(x, y) \in A$ is said to point from the vertex $x$ to the vertex $y$. Unlike in an undirected graph, the edges in a digraph have a direction associated with them, indicated by the ordering of the vertices in the pair.
+	\end{definition}
+	We will discuss further on graph in graph theory, now we just need to know that we will use it to visualize relation.
+	A directed graph can be used to represent a binary relation between a set of elements. Here is an example.
+\begin{example}
+	Let set $A = \{a,b,c\}, B = \{a,d\}$, the relation $$R=\{(a,a),(a,d), (b,a),(c,a),(c,d)\}$$ could be represented by the following graph.
+
+	\begin{center}
+		\begin{tikzpicture}
+			\newnode{a}{0}{0}
+			\newnode{b}{0}{2}
+			\newnode{c}{2}{0}
+			\newnode{d}{2}{2}
+			\selfloop{a}{below}
+			\arrow{a}{d}
+			\arrow{b}{a}
+			\arrow{c}{a}
+			\arrow{c}{d}
+		\end{tikzpicture}
+	\end{center}
+\end{example}
+Using Digraph is a very intuitive approach to visualize relation. In the graph, we use the element in the domain and codomain of the relation as vertex, and the relations are represented using the edges, which are also ordered pairs.
+
+Using a graph is also easy to determine special patterns of relations such as reflexivity, symmetry, etc.
+\begin{example}
+	Consider the relation defined from set $A=\{a,b,c\}$ to itself, $R = \{(a,a),(b,b)(c,c),(b,a)\}$. This relation could be visualized by the following graph, which is reflective.
+	\begin{center}
+		\begin{tikzpicture}
+			\newnode{a}{0}{0}
+			\newnode{b}{0}{2}
+			\newnode{c}{2}{0}
+			\selfloop{a}{below}
+			\selfloop{b}{above}
+			\selfloop{c}{below}
+			\arrow{b}{a}
+		\end{tikzpicture}
+	\end{center}
+	We see that each object has a loop for a reflective relation.
+\end{example}
+\begin{example}
+	Consider the relation defined from set $A=\{a,b,c\}$ to itself, $R_1 = \{(a,b),(b,a)(a,c),(c,a)\}$, and $R_2=\{(a,a),(b,b)(c,c),(a,b),(b,c) \}$. This relation could be visualized by the following graphs.
+	\begin{figure}[H]
+		\centering
+		\begin{tikzpicture}
+			\newnode{a}{0}{0}
+			\newnode{b}{0}{2}
+			\newnode{c}{2}{0}
+			\arrow{a}{b}
+			\arrow{b}{a}
+			\arrow{a}{c}
+			\arrow{c}{a}
+		\end{tikzpicture}
+		\hspace{2cm}
+		\begin{tikzpicture}
+			\newnode{a}{0}{0}
+			\newnode{b}{0}{2}
+			\newnode{c}{2}{0}
+			\selfloop{a}{below}
+			\selfloop{b}{above}
+			\selfloop{c}{below}
+			\arrow{a}{b}
+			\arrow{b}{c}
+		\end{tikzpicture}
+	\caption{$R_1$ and $R_2$ in Digraph}
+	\end{figure}
+	$R_1$ is symmetrical, because for every edge between different objects, we see double arrow, while $R_2$ is antisymmetrical since we only see reflectivity (which equivalent to double arrow between one object itself), but there are only single arrow between objects.
+\end{example}
+	
+	For the cases of transitivity, it's also quite clear in the following example.
+	\begin{example}
+		Still consider the same set $A$ and the relation $R_1 = \{(a,b), (b,c), (a,c)\}, R_2 = \{(a,a), (a,b),(b,b)\}$.
+	\begin{figure}[H]
+		\centering
+		\begin{tikzpicture}
+			\newnode{a}{0}{0}
+			\newnode{b}{0}{2}
+			\newnode{c}{2}{0}
+			\arrow{a}{b}
+			\arrow{b}{c}
+			\arrow{a}{c}
+		\end{tikzpicture}
+		\hspace{2cm}
+		\begin{tikzpicture}
+			\newnode{a}{0}{0}
+			\newnode{b}{0}{2}
+			\selfloop{a}{below}
+			\selfloop{b}{above}
+			\arrow{a}{b}
+			\arrow{b}{a}
+		\end{tikzpicture}
+	\end{figure}
+	 Both $R_1,R_2$ are transitive. $R_1$ is the most common case where we can see the property, so we will not give further explanation. Fir $R_2$, it is a bit different, since the transitivity holds even though there are only two objects. This is because we have reflective relation on both $a$ and $b$, so the transitivity exist between the two elements. Actually, this graph is transitive, symmetric, and reflective, which is what we call equivalent relation, which we will discuss in the next section.
+	
+	\end{example}
+
+
+
+
+\subsection{Exercises}
+\begin{exercise}
+	List the ordered pairs in the relations on $\{1, 2, 3, 4\}$ corresponding to these matrices (where the rows and columns correspond to the integers listed in increasing order).
+	
+	\begin{enumerate}
+		\item[a)]
+		$\begin{bmatrix}
+			1 & 1 & 0 & 1 \\
+			1 & 0 & 1 & 0 \\
+			0 & 1 & 1 & 1 \\
+			1 & 0 & 1 & 1 \\
+		\end{bmatrix}$
+		\item[b)]
+		$\begin{bmatrix}
+			1 & 1 & 1 & 0 \\
+			0 & 1 & 0 & 0 \\
+			0 & 0 & 1 & 1 \\
+			1 & 0 & 0 & 1 \\
+		\end{bmatrix}$
+		\item[c)]
+		$\begin{bmatrix}
+			0 & 1 & 0 & 1 \\
+			1 & 0 & 1 & 0 \\
+			0 & 1 & 0 & 1 \\
+			1 & 0 & 1 & 0 \\
+		\end{bmatrix}$
+	\end{enumerate}
+\end{exercise}
+
+\begin{solution}
+	\begin{enumerate}
+		\item[a)] Since the $(1,1)^{th}$ entry is a $1$, $(1,1)$ is in the relation. Since $(1,3)^{th}$ entry is a $0$, $(1,3)$ is not in the relation. Continuing in this manner, we see that the relation contains $(1,1)$, $(1,2)$, $(1,4)$, $(2,1)$, $(2,3)$, $(3,2)$, $(3,3)$, $(3,4)$, $(4,1)$, $(4,3)$, and $(4,4)$.
+		\item[b)] The relation contains $(1,1)$, $(1,2)$, $(1,3)$, $(2,2)$, $(3,3)$, $(3,4)$, $(4,1)$, and $(4,4)$.
+		\item[c)] The relation contains $(1,2)$, $(1,4)$, $(2,1)$, $(2,3)$, $(3,2)$, $(3,4)$, $(4,1)$, and $(4,3)$.
+	\end{enumerate}
+\end{solution}
+
+\begin{exercise}
+	Represent each of these relations on \(\{1, 2, 3, 4\}\) with a matrix (with the elements of this set listed in increasing order).
+	\begin{enumerate}
+		\item[a)] \(\{(1, 2), (1, 3), (1, 4), (2, 3), (2, 4), (3, 4)\}\)
+		\item[b)] \(\{(1, 1), (1, 4), (2, 2), (3, 3), (4, 1)\}\)
+		\item[c)] \(\{(1, 2), (1, 3), (1, 4), (2, 1), (2, 3), (2, 4), (3, 1), (3, 2), (3, 4), (4, 1), (4, 2), (4, 3)\}\)
+		\item[d)] \(\{(2, 4), (3, 1), (3, 2), (3, 4)\}\)
+	\end{enumerate}
+\end{exercise}
+
+\begin{solution}
+	The relations corresponding to these matrices are:
+	\begin{enumerate}
+		\item[a)]
+		\[
+		\begin{pmatrix}
+			0 & 1 & 1 & 1 \\
+			0 & 0 & 1 & 1 \\
+			0 & 0 & 0 & 1 \\
+			0 & 0 & 0 & 0
+		\end{pmatrix}
+		\]
+		\item[b)]
+		\[
+		\begin{pmatrix}
+			1 & 0 & 0 & 1 \\
+			0 & 1 & 0 & 0 \\
+			0 & 0 & 1 & 0 \\
+			1 & 0 & 0 & 0
+		\end{pmatrix}
+		\]
+		\item[c)]
+		\[
+		\begin{pmatrix}
+			0 & 1 & 1 & 1 \\
+			1 & 0 & 1 & 1 \\
+			1 & 1 & 0 & 1 \\
+			1 & 1 & 1 & 0
+		\end{pmatrix}
+		\]
+		\item[d)]
+		\[
+		\begin{pmatrix}
+			0 & 0 & 0 & 0 \\
+			0 & 0 & 0 & 1 \\
+			1 & 1 & 0 & 1 \\
+			0 & 0 & 0 & 0
+		\end{pmatrix}
+		\]
+	\end{enumerate}
+\end{solution}
+
+\begin{exercise}
+	How many nonzero entries does the matrix representing the relation \( R \) on \( A = \{1, 2, 3, ..., 1000\} \) consisting of the first 1000 positive integers have if \( R \) is
+	\begin{enumerate}
+		\item[a)] \(\{(a, b) \mid a \leq b\}\)?
+		\item[b)] \(\{(a, b) \mid a = b \pm 1\}\)?
+		\item[c)] \(\{(a, b) \mid a + b = 1000\}\)?
+		\item[d)] \(\{(a, b) \mid a + b \leq 1001\}\)?
+		\item[e)] \(\{(a, b) \mid a \neq 0\}\)?
+	\end{enumerate}
+\end{exercise}
+
+\begin{solution}
+	Note that the total number of entries in the matrix is \(1000^2 = 1,000,000\).
+	\begin{enumerate}
+		\item[a)] There is a \(1\) in the matrix for each pair of distinct positive integers not exceeding \(1000\), namely in position \((a, b)\) where \(a \leq b\), as well as \(1\)'s along the diagonal. Thus the answer is the number of subsets of size \(2\) from a set of \(1000\) elements, plus \(1000\), i.e., \(C(1000, 2) + 1000 = 499500 + 1000 = 500,500\).
+		
+		\item[b)] There two \(1\)'s in each row of the matrix except the first and last rows, in which there is one \(1\). Therefore the answer is \(998 \cdot 2 + 2 = 1998\).
+		
+		\item[c)] There is a \(1\) in the matrix at each entry just above and to the left of the "anti-diagonal" (i.e., in positions \((1, 999), (2, 998), ..., (999, 1)\). Therefore the answer is \(999\).
+		
+		\item[d)] There is a \(1\) in the matrix at each entry on or above (to the left of) the "anti-diagonal." This is the same number of \(1\)'s as in part (a), so the answer is again \(500,500\).
+		
+		\item[e)] The condition is trivially true (since \(1 \leq a \leq 1000\)), so all \(1,000,000\) entries are \(1\).
+	\end{enumerate}
+\end{solution}
+
+\begin{exercise}
+	Draw the directed graph that represents the relation
+	$$\{(a, a), (a, b), (b, c), (c, b), (c, d), (d, a), (d, b).\}$$
+\end{exercise}
+	\begin{figure}[H]
+		\centering
+		\begin{tikzpicture}
+			\newnode{a}{0}{0}
+			\newnode{b}{2}{0}
+			\newnode{c}{2}{2}
+			\newnode{d}{0}{2}
+			\selfloop{a}{left}
+			\arrow{a}{b}
+			\arrow{b}{c}
+			\arrow{c}{b}
+			\arrow{c}{d}
+			\arrow{d}{a}
+			\arrow{d}{b}
+		\end{tikzpicture}
+	\end{figure}
+
+\begin{exercise}
+	Let \( R \) be a relation on a set \( A \). Explain how to use the directed graph representing \( R \) to obtain the directed graph representing the complementary relation \( \overline{R} \).
+\end{exercise}
+\begin{solution}
+	For each pair \( (a, b) \) of vertices (including the pairs \( (a, a) \) in which the two vertices are the same), if there is an edge from \( a \) to \( b \), then erase it, and if there is no edge from \( a \) to \( b \), put add it in.
+\end{solution}
+
+\begin{exercise}
+	Given the directed graphs representing two relations, how can the directed graph of the union, intersection, symmetric difference, difference, and composition of these relations be found?
+\end{exercise}
+\begin{solution}
+	We assume that the two relations are on the same set. For the union, we simply take the union of the directed graphs, i.e., take the directed graph on the same vertices and put in an edge from \( i \) to \( j \) whenever there is an edge from \( i \) to \( j \) in either of them. For intersection, we simply take the intersection of the directed graphs, i.e., take the directed graph on the same vertices and put in an edge from \( i \) to \( j \) whenever there are edges from \( i \) to \( j \) in both of them. For symmetric difference, we simply take the symmetric difference of the directed graphs, i.e., take the directed graph on the same vertices and put in an edge from \( i \) to \( j \) whenever there is an edge from \( i \) to \( j \) in one, but not both, of them. Similarly, to form the difference, we take the difference of the directed graphs, i.e., take the directed graph on the same vertices and put in an edge from \( i \) to \( j \) whenever there is an edge from \( i \) to \( j \) in the first but not the second. To form the directed graph for the composition \( S \circ R \) of relations \( R \) and \( S \), we draw a directed graph on the same set of vertices and put in an edge from \( i \) to \( j \) whenever there is a vertex \( k \) such that there is an edge from \( i \) to \( k \) in \( R \), and an edge from \( k \) to \( j \) in \( S \).
+\end{solution}
+
+\section{Closure of Relations}
 
 \subsection{Exercises}
 

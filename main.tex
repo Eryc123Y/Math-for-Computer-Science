@@ -61,6 +61,8 @@
 \usepackage{thmtools}
 \usepackage{etoolbox}
 \usepackage{tikz}
+\usetikzlibrary{automata}
+\usetikzlibrary{arrows.meta}
 \usepackage{comment}
 \usetikzlibrary{3d}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -68,6 +70,36 @@
 \newcommand{\Z}{\mathbb{Z}}
 \newcommand{\B}{\mathbb{B}}
 \newcommand{\N}{\mathbb{N}}
+
+\newcommand{\tikzinit}{
+	\tikzset{
+		circlenode/.style={
+			circle,
+			draw,
+			thick,
+			align=center 
+		},
+		edge/.style={
+			->,          
+			>={Latex},   
+			thick        
+		}
+	}
+	
+}
+
+\newcommand{\newnode}[3]{
+	\node[circlenode] (#1) at (#2,#3) {#1};
+}
+
+
+\newcommand{\arrow}[2]{
+	\draw[edge] (#1) -- (#2);
+}
+
+\newcommand{\selfloop}[2]{
+	\draw[edge, loop #2] (#1) to (#1);
+}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newtheoremstyle{lemmastyle}
   {9pt}  
@@ -109,7 +141,7 @@
 \chapterspacebelow{6.75cm} % Default amount of vertical whitespace from the top margin to the start of the text on chapter pages
 
 %----------------------------------------------------------------------------------------
-
+\tikzinit
 \begin{document}
 
 %----------------------------------------------------------------------------------------
