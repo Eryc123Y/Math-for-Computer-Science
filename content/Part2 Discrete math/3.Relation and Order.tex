@@ -978,29 +978,30 @@ Using a graph is also easy to determine special patterns of relations such as re
 \begin{exercise}
 	List the ordered pairs in the relations on $\{1, 2, 3, 4\}$ corresponding to these matrices (where the rows and columns correspond to the integers listed in increasing order).
 	
-	\begin{enumerate}
-		\item[a)]
-		$\begin{bmatrix}
+		
+		$$\tx{a)}
+		\begin{bmatrix}
 			1 & 1 & 0 & 1 \\
 			1 & 0 & 1 & 0 \\
 			0 & 1 & 1 & 1 \\
 			1 & 0 & 1 & 1 \\
-		\end{bmatrix}$
-		\item[b)]
-		$\begin{bmatrix}
+		\end{bmatrix}
+		\tx{b)}
+		\begin{bmatrix}
 			1 & 1 & 1 & 0 \\
 			0 & 1 & 0 & 0 \\
 			0 & 0 & 1 & 1 \\
 			1 & 0 & 0 & 1 \\
-		\end{bmatrix}$
-		\item[c)]
-		$\begin{bmatrix}
+		\end{bmatrix}
+		\tx{c)}
+		\begin{bmatrix}
 			0 & 1 & 0 & 1 \\
 			1 & 0 & 1 & 0 \\
 			0 & 1 & 0 & 1 \\
 			1 & 0 & 1 & 0 \\
-		\end{bmatrix}$
-	\end{enumerate}
+		\end{bmatrix}$$
+		
+
 \end{exercise}
 
 \begin{solution}
@@ -1022,45 +1023,36 @@ Using a graph is also easy to determine special patterns of relations such as re
 \end{exercise}
 
 \begin{solution}
-	The relations corresponding to these matrices are:
-	\begin{enumerate}
-		\item[a)]
-		\[
-		\begin{pmatrix}
+	The relations corresponding to these matrices (from a to d) are:
+
+		$$
+		\begin{bmatrix}
 			0 & 1 & 1 & 1 \\
 			0 & 0 & 1 & 1 \\
 			0 & 0 & 0 & 1 \\
 			0 & 0 & 0 & 0
-		\end{pmatrix}
-		\]
-		\item[b)]
-		\[
-		\begin{pmatrix}
+		\end{bmatrix}
+		\begin{bmatrix}
 			1 & 0 & 0 & 1 \\
 			0 & 1 & 0 & 0 \\
 			0 & 0 & 1 & 0 \\
 			1 & 0 & 0 & 0
-		\end{pmatrix}
-		\]
-		\item[c)]
-		\[
-		\begin{pmatrix}
+		\end{bmatrix}
+		\begin{bmatrix}
 			0 & 1 & 1 & 1 \\
 			1 & 0 & 1 & 1 \\
 			1 & 1 & 0 & 1 \\
 			1 & 1 & 1 & 0
-		\end{pmatrix}
-		\]
-		\item[d)]
-		\[
-		\begin{pmatrix}
+		\end{bmatrix}
+		\begin{bmatrix}
 			0 & 0 & 0 & 0 \\
 			0 & 0 & 0 & 1 \\
 			1 & 1 & 0 & 1 \\
 			0 & 0 & 0 & 0
-		\end{pmatrix}
-		\]
-	\end{enumerate}
+		\end{bmatrix}
+		$$
+		
+
 \end{solution}
 
 \begin{exercise}
@@ -1129,10 +1121,153 @@ Using a graph is also easy to determine special patterns of relations such as re
 \subsection{Exercises}
 
 \section{Equivalence Relations}
+In mathematics, an equivalence relation is a special type of binary relation that allows us to group elements of a set into disjoint subsets called \textit{equivalence classes}. The idea behind equivalence relations is to capture a meaningful notion of "sameness'' or "interchangeability'' among elements.
 
+Equivalence relations are characterized by three key properties: reflexivity, symmetry, and transitivity. These properties ensure that the relation partitions the set into equivalence classes, each containing elements that are equivalent in some sense.
 
+\subsection{Equivalence}
+\begin{definition}[equivalence relation]
+	A relation on a set $A$ is called an \textbf{equivalence relation} if it is reflexive, symmetric, and
+	transitive. Two elements $a$ and $b$ that are related by an equivalence relation are called \textbf{equivalent}. The notation $a\sim b$ is often used to denote that $a$ and $b$ are equivalent elements with respect to a particular equivalence relation.
+\end{definition}
+The concept of equivalence relations is a fundamental tool in many branches of mathematics. They allow us to focus on essential characteristics that elements share, abstracting away extraneous details. Some common examples include:
 
+\begin{itemize}
+	\item Equality of numbers
+	\item Congruence modulo $n$ in number theory
+	\item Similarity of triangles in geometry
+	\item Having the same cardinality for sets
+\end{itemize}
+
+Equivalence relations provide a way to decompose a set into a collection of equivalence classes, revealing important structural insights. They are essential for understanding quotient structures, modular arithmetic, and the role of abstraction in mathematical thought.
+
+\begin{example}[Congruence Modulo \(m\)]
+	Let \(m\) be an integer with \(m > 1\). Show that the relation
+	\[ R = \{(a, b) \mid a \equiv b \ (\mathrm{mod} \ m)\} \]
+	is an equivalence relation on the set of integers.
+\end{example}
+
+\begin{solution}
+	Recall from Section 4.1 that \(a \equiv b \ (\mathrm{mod} \ m)\) if and only if \(m\) divides \(a - b\). Note that \(a - a = 0\) is divisible by \(m\), because \(0 = 0 \cdot m\). Hence, \(a \equiv a \ (\mathrm{mod} \ m)\), so congruence modulo \(m\) is reflexive.
+	
+	Now suppose that \(a \equiv b \ (\mathrm{mod} \ m)\). Then \(a - b\) is divisible by \(m\), so \(a - b = km\), where \(k\) is an integer. It follows that \(b - a = (-k)m\), so \(b \equiv a \ (\mathrm{mod} \ m)\). Hence, congruence modulo \(m\) is symmetric.
+	
+	Next, suppose that \(a \equiv b \ (\mathrm{mod} \ m)\) and \(b \equiv c \ (\mathrm{mod} \ m)\). Then \(m\) divides both \(a - b\) and \(b - c\). Therefore, there are integers \(k\) and \(l\) with \(a - b = km\) and \(b - c = lm\). Adding these two equations shows that \(a - c = (a - b) + (b - c) = km + lm = (k + l) m\). Thus, \(a \equiv c \ (\mathrm{mod} \ m)\). Therefore, congruence modulo \(m\) is transitive.
+	
+	It follows that congruence modulo \(m\) is an equivalence relation.
+\end{solution}
+
+\begin{example}
+	Let $A$ be a non-empty set, and define a relation $\sim$ on the power set $\mathcal{P}(A)$ (the set of all subsets of $A$) as follows: for any subsets $X, Y \subseteq A$,
+	$$
+	X \sim Y \iff |X| = |Y|
+	$$
+	where $|X|$ denotes the cardinality (number of elements) of the set $X$. In other words, two subsets are related by $\sim$ if and only if they have the same number of elements.
+\end{example}
+
+\begin{solution}
+	We can show that the relation $\sim$ defined above is an equivalence relation on $\mathcal{P}(A)$:
+	
+	\begin{enumerate}
+		\item \textbf{Reflexivity}: For any subset $X \subseteq A$, we have $|X| = |X|$, so $X \sim X$.
+		\item \textbf{Symmetry}: If $X \sim Y$, then $|X| = |Y|$. Since equality of cardinalities is symmetric, we also have $|Y| = |X|$, so $Y \sim X$.
+		\item \textbf{Transitivity}: If $X \sim Y$ and $Y \sim Z$, then $|X| = |Y|$ and $|Y| = |Z|$. By the transitivity of equality, we have $|X| = |Z|$, so $X \sim Z$.
+	\end{enumerate}
+	%% use ltr
+	The equivalence classes under this relation are called \textit{cardinality classes}. For a subset $X \subseteq A$, its cardinality class $[X]$ consists of all subsets of $A$ that have the same cardinality as $X$:
+	
+	$$
+	[X] = {Y \subseteq A \mid |Y| = |X|}
+	$$
+	
+	In other words, the cardinality classes partition $\mathcal{P}(A)$ into disjoint subsets based on the number of elements in each subset. For example, if $A = {1, 2, 3}$, then the cardinality classes are:
+	
+	\begin{itemize}
+	\item $[\emptyset] = { \emptyset }$ (subsets with 0 elements)
+	\item $[{1}] = {{1}, {2}, {3}}$ (subsets with 1 element)
+	\item $[{1, 2}] = {{1, 2}, {1, 3}, {2, 3}}$ (subsets with 2 elements)
+	\item $[A] = {A}$ (subsets with 3 elements)
+	\end{itemize}
+	
+	This equivalence relation captures the idea that two sets are "equivalent" if they have the same cardinality, regardless of their specific elements. The study of cardinality and the relationships between sets of different sizes is a fundamental aspect of set theory and plays a crucial role in the development of modern mathematics, including the theory of infinite sets and the foundations of mathematics.
+\end{solution}
+
+\begin{example}[Relation on Real Numbers]
+	Let \( R \) be the relation on the set of real numbers such that \( xRy \) if and only if \( x \) and \( y \) are real numbers that differ by less than 1, that is, \( |x - y| < 1 \). Show that \( R \) is not an equivalence relation.
+\end{example}
+\begin{solution}
+	\( R \) is reflexive because \( |x - x| = 0 < 1 \) whenever \( x \in \mathbb{R} \). \( R \) is symmetric, for if \( xRy \), where \( x \) and \( y \) are real numbers, then \( |x - y| < 1 \), which tells us that \( |y - x| = |x - y| < 1 \), so that \( yRx \). However, \( R \) is not an equivalence relation because it is not transitive. Take \( x = 2.8 \), \( y = 1.9 \), and \( z = 1.1 \), so that \( |x - y| = |2.8 - 1.9| = 0.9 < 1 \), \( |y - z| = |1.9 - 1.1| = 0.8 < 1 \), but \( |x - z| = |2.8 - 1.1| = 1.7 > 1 \). That is, \( 2.8R1.9 \), \( 1.9R1.1 \), but not \( 2.8R1.1 \).
+\end{solution}
+
+\subsection{Equivalence Classes}
+We can dig deeper into equivalence by partitioning the set where the relation is built upon with respect to a member of the subset. We call this a \textbf{Equivalence Class}. 
+
+\begin{definition}[Equivalence Class]
+	Let $R$ be an equivalence relation on a set A. The set of all elements that are related to an element $\alpha$ of $A$ is called the $equivalence$ class of $a$. The equivalence class of $a$ with respect to $R$ is denoted by $[a]_R$. When only one relation is under consideration, we can delete the subscript $R$ and write $[a]$ for this equivalence class.
+\end{definition}
+\begin{remark}
+	In set notation we have $$[a]_R = \{ (a,s) \in R\}$$. For some member $e\in [a]_R$, we call $e$ a representative of the equivalence class
+\end{remark}
+
+\begin{example}
+	What is the equivalence class of an integer for the equivalence relation $a = |b|$?
+\end{example}
+\begin{solution}
+	Since $a = b \tx{ or } a = -b$, so $[a] = \{-a,a\}$, which holds for all integer, including 0. We have $[3] = \{ -3, 3\}$, etc.
+\end{solution}
+
+\begin{example}[Equivalence Classes for Congruence Modulo 2]
+	What are the equivalence classes of 0 and 1 for congruence modulo 2?
+\end{example}
+\begin{solution}
+	The equivalence class of 0 contains all integers \( a \) such that \( a \equiv 0 \pmod{4} \). The integers in this class are those divisible by 4. Hence, the equivalence class of 0 for this relation is
+	\[ [0] = \{ \ldots, -8, -4, 0, 4, 8, \ldots \}. \]
+	
+	The equivalence class of 1 contains all the integers \( a \) such that \( a \equiv 1 \pmod{4} \). The integers in this class are those that have a remainder of 1 when divided by 4. Hence, the equivalence class of 1 for this relation is
+	\[ [1] = \{ \ldots, -7, -3, 1, 5, 9, \ldots \}. \]
+\end{solution}
+
+This notion actually allows us to further abstract to congruence classes modulo $m$.
+\begin{definition}[Congruence Class Modulo \( m \)]
+	Let \( m \) be a positive integer. The congruence class of an integer \( a \) modulo \( m \), denoted by \( [a]_m \), is the set of all integers \( b \) such that \( b \equiv a \ (\mathrm{mod} \ m) \), which means that \( m \) divides \( b - a \). Formally, the congruence class \( [a]_m \) is defined as:
+	\[ [a]_m = \{ b \in \mathbb{Z} \ | \ b \equiv a \ (\mathrm{mod} \ m) \} = \{ b \in \mathbb{Z} \ | \ \exists k \in \mathbb{Z}, \ b = a + km \}. \]
+	%The set of all such congruence classes for a given \( m \) is denoted by \( \mathbb{Z}/m\mathbb{Z} \) and is called the quotient set or the set of integers modulo \( m \).
+\end{definition}
+
+Here are some other examples on equivalence class.
+\begin{example}
+	Find the equivalence class for \( \frac{1}{2} \) under the relation of fraction simplification.
+\end{example}
+
+\begin{solution}
+	The equivalence class of \( \frac{1}{2} \) consists of all fractions that simplify to \( \frac{1}{2} \), which includes all rational numbers where the numerator is half the denominator. Hence, the equivalence class is:
+	\[ [1/2] = \left\{ \frac{2}{4}, \frac{3}{6}, \frac{4}{8}, \frac{5}{10}, \ldots \right\} \]
+\end{solution}
+
+\begin{example}
+	Find the equivalence class for the string "cat" under the relation of having the same length.
+\end{example}
+
+\begin{solution}
+	The equivalence class of the string "cat" consists of all strings of length 3. Examples include:
+	\[ ["cat"] = \{ \text{"dog"}, \text{"pen"}, \text{"sun"}, \text{"mom"}, \ldots \} \]
+\end{solution}
 \subsection{Exercises}
+
+\begin{exercise}
+	content...
+\end{exercise}
+\begin{exercise}
+		Determine the equivalence class of \( 2 \) under the relation of congruence modulo \( 5 \).
+\end{exercise}
+	\begin{solution}
+		The equivalence class of \( 2 \) modulo \( 5 \), denoted \( [2]_5 \), consists of all integers that leave a remainder of \( 2 \) when divided by \( 5 \). This can be expressed as:
+		\[ [2]_5 = \{ \ldots, -8, -3, 2, 7, 12, \ldots \} \]
+		where each element is of the form \( 2 + 5k \) for some integer \( k \).
+	\end{solution}
+
+
+
 \section{Partial and Total Order Relations}
 
 

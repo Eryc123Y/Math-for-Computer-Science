@@ -1,17 +1,17 @@
 # Fdb version 4
-["biber main"] 1713005512.83383 "main.bcf" "main.bbl" "main" 1713172634.30122 0
-  "main.bcf" 1713172633 107256 cda255eed6b0d0df027a0b54e0d84d42 "pdflatex"
+["biber main"] 1713005512.83383 "main.bcf" "main.bbl" "main" 1713298779.21732 0
+  "main.bcf" 1713298778 107256 cda255eed6b0d0df027a0b54e0d84d42 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["makeindex main.idx"] 1712770948.89629 "main.idx" "main.ind" "main" 1713172634.3008 0
-  "main.idx" 1713172627 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+["makeindex main.idx"] 1712770948.89629 "main.idx" "main.ind" "main" 1713298779.2171 0
+  "main.idx" 1713298773 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   (generated)
   "main.ilg"
   "main.ind"
   (rewritten before read)
-["pdflatex"] 1713172626.93461 "main.tex" "main.pdf" "main" 1713172634.30188 0
+["pdflatex"] 1713298772.42742 "main.tex" "main.pdf" "main" 1713298779.21766 0
   "Images/R^2.png" 1712142752 64840 5aae617f29bd5e5d2c41b0b9dc40ef22 ""
   "Images/R^3.png" 1712312456 153114 e1ae9d1019216090c34455e35abf3082 ""
   "Images/agm3D.png" 1707481231 97995 3c8707993f2acdfb1f5fe89cecae6e4e ""
@@ -310,7 +310,7 @@
   "c:/texlive-full/2023/texmf.cnf" 1707381885 713 e69b156964470283e0530f5060668171 ""
   "content/Part2 Discrete math/1.Boolean Algebra.tex" 1713088742 82755 c89bbf8e2378c515f311cf50fe12ede7 ""
   "content/Part2 Discrete math/2.Number Theory.tex" 1712581190 95555 d694a88ecc4d489e2cd778d1f333455b ""
-  "content/Part2 Discrete math/3.Relation and Order.tex" 1713172619 104248 ee7d549926fb941215d7803cb7a952fd ""
+  "content/Part2 Discrete math/3.Relation and Order.tex" 1713298765 114243 a238ae9ae51679e8d7d3d27a65834cd0 ""
   "content/Part2 Discrete math/4.Graph Theory.tex" 1713168535 127 7b5fd526c8cd39cb7b20d80fb2d55b2f ""
   "content/Part2 Discrete math/5.Basics of Abstract Algebra.tex" 1712581190 559 d9531ec798e7634b81b6aa1c607be08d ""
   "content/Part2 Discrete math/6.Introductory Topology and Category Theory.tex" 1712581190 1268 9d11972a035b20d5a0c160cab7cabf59 ""
@@ -331,15 +331,15 @@
   "content/part1 Intro/3.Algorithm and Number System.tex" 1712581190 38943 7a595ea93e0ca3cb74a0582db11b87a3 ""
   "content/part1 Intro/4.Inequality.tex" 1712581190 57251 12d7e1c9df0285c6cb6debb9f9449b00 ""
   "content/part1 Intro/5.Complex Number.tex" 1712581190 88243 989a2fe9a0123e4b52072bab758ecc3f ""
-  "main.aux" 1713172633 146683 293f16cce86b72936b59fe03b3011f2e "pdflatex"
+  "main.aux" 1713298778 148757 d2e2a37c6daadb4c8eaf255e2fd256db "pdflatex"
   "main.bbl" 1713005514 0 d41d8cd98f00b204e9800998ecf8427e "biber main"
   "main.ind" 1712770949 0 d41d8cd98f00b204e9800998ecf8427e "makeindex main.idx"
-  "main.lof" 1713172633 3949 c834791b473fe390d68bcf0c2d1faf7d "pdflatex"
-  "main.lot" 1713172633 2535 133577b3aad953f9427693a597c78bc2 "pdflatex"
-  "main.ptc" 1713172633 29028 3ef484b0f97eb3a5515734ec58b53b96 "pdflatex"
-  "main.run.xml" 1713172633 2224 bc6149f5caee4074188e1b81a66978d0 "pdflatex"
-  "main.tex" 1713158507 9250 3c404af45e9b1df769081a5cc471f377 ""
-  "main.toc" 1713172633 28690 3d9d4d0edc582d59f9e8cb681f1c6e6e "pdflatex"
+  "main.lof" 1713298778 3949 c834791b473fe390d68bcf0c2d1faf7d "pdflatex"
+  "main.lot" 1713298778 2535 133577b3aad953f9427693a597c78bc2 "pdflatex"
+  "main.ptc" 1713298778 29202 aeaa077d2af13fdc4260a8f86ca6d854 "pdflatex"
+  "main.run.xml" 1713298778 2224 bc6149f5caee4074188e1b81a66978d0 "pdflatex"
+  "main.tex" 1713297666 9325 d7f53db1bf1ee49ca66101883c45028e ""
+  "main.toc" 1713298778 28864 ad593da7a02c3e44687c7bc9d12254f2 "pdflatex"
   (generated)
   "main.aux"
   "main.bcf"
