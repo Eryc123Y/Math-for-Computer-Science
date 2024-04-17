@@ -794,13 +794,13 @@ In last section. we discussed binary relation and their properties. This section
 	An asymmetric relation is a stronger form of an antisymmetric relation. A relation $R$ on a set $X$ is asymmetric if, for any elements $a$ and $b$ in $X$,whenever $(a,b)$ is in $R$, then $(b,a)$ cannot be in $R$. This implies that if one direction between two different elements is allowed, the opposite direction is strictly forbidden, making it impossible for both $(a,b)$ and $(b,a)$ to exist in $R$ for any $a\neq b.$
 	\begin{example}[Asymmetry]
 		Consider the set \( X = \{1, 2, 3\} \) and define an asymmetric relation \( R \) on \( X \) by including the pairs \( R = \{(1, 2), (2, 3)\} \). This relation is asymmetric as it does not contain both \( (a, b) \) and \( (b, a) \) for any \( a \) and \( b \) in \( X \). The matrix \( M \) representing this relation \( R \) is given by:
-		\[
+		$$
 		M = \begin{bmatrix}
 			0 & 1 & 0 \\
 			0 & 0 & 1 \\
 			0 & 0 & 0
 		\end{bmatrix}
-		\]
+		$$
 		In this matrix:
 		- The entry \( m_{12} = 1 \) and \( m_{21} = 0 \), supporting the asymmetric nature by the absence of the reverse relation.
 		- The entry \( m_{23} = 1 \) and \( m_{32} = 0 \), further demonstrating asymmetry.
@@ -1203,10 +1203,10 @@ Equivalence relations provide a way to decompose a set into a collection of equi
 We can dig deeper into equivalence by partitioning the set where the relation is built upon with respect to a member of the subset. We call this a \textbf{Equivalence Class}. 
 
 \begin{definition}[Equivalence Class]
-	Let $R$ be an equivalence relation on a set A. The set of all elements that are related to an element $\alpha$ of $A$ is called the $equivalence$ class of $a$. The equivalence class of $a$ with respect to $R$ is denoted by $[a]_R$. When only one relation is under consideration, we can delete the subscript $R$ and write $[a]$ for this equivalence class.
+	Let $R$ be an equivalence relation on a set A. The set of all elements that are related to an element $a$ of $A$ is called the $equivalence$ class of $a$. The equivalence class of $a$ with respect to $R$ is denoted by $[a]_R$. When only one relation is under consideration, we can delete the subscript $R$ and write $[a]$ for this equivalence class.
 \end{definition}
 \begin{remark}
-	In set notation we have $$[a]_R = \{ (a,s) \in R\}$$. For some member $e\in [a]_R$, we call $e$ a representative of the equivalence class
+	In set notation we have $$[a]_R = \{ (a,s) \in R\}.$$ For some member $e\in [a]_R$, we call $e$ a representative of the equivalence class.
 \end{remark}
 
 \begin{example}
@@ -1250,8 +1250,60 @@ Here are some other examples on equivalence class.
 
 \begin{solution}
 	The equivalence class of the string "cat" consists of all strings of length 3. Examples include:
-	\[ ["cat"] = \{ \text{"dog"}, \text{"pen"}, \text{"sun"}, \text{"mom"}, \ldots \} \]
+	\[ [\tx{"cat"}] = \{ \text{"dog"}, \text{"pen"}, \text{"sun"}, \text{"mom"}, \ldots \} \]
 \end{solution}
+Congruence Class can be further interpreted by introducing partition of set. Recall (in definition \ref{def:algo}) that the partition of a set are a possible combination of mutually disjoint subsets of a set. Suppose we have some set $R$, than we can make form some three-member partition $(P_1\cup P_2\cup P_3) = R$, where $P_1,P_2,P_3,\subseteq R$. Also we have $|R| = |P_1|+|P_2|+|P_3|$. But notice that $P_i\cap P_j, i,j \in\{1,2,3\}$ is $\emptyset$.
+
+Now let's relate this to congruence class.
+\begin{theorem}
+	Let $R$ be an equivalence relation on a set $A$. These statements for elements $a$ and $b$ of $A$ are equivalent:
+	
+	$(i)\:aRb\quad(ii)\:[a]=[b]\quad(iii)\:[a]\cap[b]\neq\emptyset$
+\end{theorem}
+\begin{proof}
+	We first show that (i) implies (ii). Assume that \( aRb \). We will prove that \( [a] = [b] \) by showing \( [a] \subseteq [b] \) and \( [b] \subseteq [a] \). Suppose \( c \in [a] \), where $c$ is any arbitrary member of $[a]$. Then \( aRc \). Because \( aRb \) and \( R \) is symmetric, we know that \( bRa \). Furthermore, because \( R \) is transitive and \( bRa \) and \( aRc \), it follows that \( bRc \). Hence, \( c \in [b] \). This shows that \( [a] \subseteq [b] \), since all elements of $[a]$ is also an element of $[b]$. The proof that \( [b] \subseteq [a] \) is similar.
+	
+	Second, we will show that (ii) implies (iii). Assume that \( [a] = [b] \). It follows that \( [a] \cap [b] \neq \emptyset \) because \( [a] \) is nonempty (because \( a \in [a] \) since \( R \) is reflexive).
+	
+	Next, we will show that (iii) implies (i). Suppose that \( [a] \cap [b] \neq \emptyset \). Then there is an element \( c \) with \( c \in [a] \) and \( c \in [b] \). In other words, \( aRc \) and \( bRc \). By the symmetric property, \( cRb \). Then by transitivity, because \( aRc \) and \( cRb \), we have \( aRb \).
+	
+	Because (i) implies (ii), (ii) implies (iii), and (iii) implies (i), the three statements, (i), (ii), and (iii), are equivalent.
+\end{proof}
+
+Let $R$ be an equivalence relation on a set $A$. The union of the equivalence classes is the whole set $A$, because an element a of $A$ is in its own equivalence class, and there is no intersection between equivalence class of different elements.
+\begin{equation} 
+	\bigcup_{a\in A}[a]_R=A.
+\end{equation}
+This is because from theorem one we have
+\begin{lemma}
+	If $[a]_R \neq [b]_R$, then $[a]_R\cap[b]_R=\emptyset.$
+\end{lemma}
+This is because when $[a]_R = [b]_R$, the intersection cannot be empty.
+\begin{lemma}
+	The partition of a set S exists if and only if the family of set index by $i \in I$ with respect to subsets $A_i$, $A_i \neq \emptyset, \forall i \in I$, and $A_i\cap A_j = \emptyset$ when $i\neq j$.
+	And we have S as a family of set index by $i$
+	$$\bigcup_{i \in I}A_i = S.$$
+\end{lemma}
+
+
+\begin{example}
+	Let \( A = \mathbb{Z} \), the set of all integers, and let \( R \) be the equivalence relation of congruence modulo \( 3 \). Determine if the following statements are true:
+	\begin{enumerate}
+		\item[(i)] \( 1R4 \)
+		\item[(ii)] \( [1] = [4] \)
+		\item[(iii)] \( [1] \cap [4] \neq \emptyset \)
+	\end{enumerate}
+\end{example}
+
+\begin{solution}
+	\begin{enumerate}
+		\item[(i)] \( 1R4 \) is true because \( 4 \equiv 1 \mod 3 \).
+		\item[(ii)] \( [1] = [4] \) is true because both \( 1 \) and \( 4 \) have the same remainder when divided by \( 3 \), which means they are in the same equivalence class modulo \( 3 \).
+		\item[(iii)] \( [1] \cap [4] \neq \emptyset \) is true because \( [1] \) contains \( 4 \) since \( 4 \equiv 1 \mod 3 \), hence \( 4 \) is in both \( [1] \) and \( [4] \).
+	\end{enumerate}
+	As all three statements are true, the statements (i), (ii), and (iii) are equivalent for the given equivalence relation.
+\end{solution}
+
 \subsection{Exercises}
 
 \begin{exercise}
@@ -1267,8 +1319,43 @@ Here are some other examples on equivalence class.
 	\end{solution}
 
 
+\begin{exercise}
+	Let \( A = \mathbb{Z} \), and define \( R \) on \( A \) by \( xRy \) if and only if \( x - y \) is even. Determine if the following statements are true for \( a = 2 \) and \( b = 5 \):
+	\begin{enumerate}
+		\item[(i)] \( aRb \)
+		\item[(ii)] \( [2] = [5] \)
+		\item[(iii)] \( [2] \cap [5] \neq \emptyset \)
+	\end{enumerate}
+\end{exercise}
 
-\section{Partial and Total Order Relations}
+\begin{solution}
+	\begin{enumerate}
+		\item[(i)] \( aRb \) is false because \( 2 - 5 \) is odd.
+		\item[(ii)] \( [2] = [5] \) is false because \( 2 \) is in the equivalence class of even remainders while \( 5 \) is in the class of odd remainders.
+		\item[(iii)] \( [2] \cap [5] \neq \emptyset \) is false because \( [2] \) contains all even numbers and \( [5] \) contains all odd numbers, so they have no elements in common.
+	\end{enumerate}
+	In this case, statements (i), (ii), and (iii) are not equivalent because the relation \( R \) is not defined as congruence modulo some number but rather by the parity of the difference between elements.
+\end{solution}
+
+No that we can get partition of a set from a equivalence relation, can we inverse this process? That is, define a equivalence relation with some given set partitions? The answer is yes. 
+
+To see this, assume that \( \{A_i \mid i \in I\} \) is a partition on \( S \). Let \( R \) be the relation on \( S \) consisting of the pairs \( (x, y) \), where \( x \) and \( y \) belong to the same subset \( A_i \), in the partition. To show that \( R \) is an equivalence relation we must show that \( R \) is reflexive, symmetric, and transitive.
+
+We see that \( (a, a) \in R \) for every \( a \in S \), because \( a \) is in the same subset of \( S \) as itself. Hence, \( R \) is reflexive. If \( (a, b) \in R \), then \( b \) and \( a \) are in the same subset of \( S \) in the partition, so that \( (b, a) \in R \) as well. Hence, \( R \) is symmetric. If \( (a, b) \in R \) and \( (b, c) \in R \), then \( a \) and \( b \) are in the same subset \( X \) of \( S \) in the partition, and \( b \) and \( c \) are in the same subset \( Y \) of \( S \) of the partition. Because the subsets of \( S \) in the partition are disjoint and \( b \) belongs to \( X \) and \( Y \), it follows that \( X = Y \). Consequently, \( a \) and \( c \) belong to the same subset of \( S \) in the partition, so \( (a, c) \in R \). Thus, \( R \) is transitive.
+
+It follows that \( R \) is an equivalence relation. The equivalence classes of \( R \) consist of subsets of \( S \) containing related elements, and by the definition of \( R \), these are the subsets of \( S \) in the partition. The theorem summarizes the connections we have established between equivalence relations and partitions.
+\begin{theorem}
+	Let \( R \) be an equivalence relation on a set \( S \). Then the equivalence classes of \( R \) form a partition of \( S \). Conversely, given a partition \( \{A_i \mid i \in I\} \) of the set \( S \), there is an equivalence relation \( R \) that has the sets \( A_i, i \in I \), as its equivalence classes.
+\end{theorem}
+
+\begin{example}
+	For example, consider the set \( S = \{1, 2, 3, 4, 5, 6\} \). 
+	
+	One possible equivalence relation \( R \) on \( S \) is "congruence modulo 3". This relation partitions \( S \) into the equivalence classes \( [1] = \{1, 4\} \), \( [2] = \{2, 5\} \), and \( [3] = \{3, 6\} \).
+	
+	Conversely, consider a partition of \( S \) into subsets \( A_1 = \{1, 2\} \), \( A_2 = \{3, 4\} \), and \( A_3 = \{5, 6\} \). The equivalence relation \( R \) induced by this partition is such that two numbers are related if and only if they are in the same subset \( A_i \).
+\end{example}
+\section{Order Relations}
 
 
 

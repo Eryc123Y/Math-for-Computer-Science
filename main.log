@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.2.8)  17 APR 2024 04:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.2.8)  17 APR 2024 15:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -5296,15 +5296,10 @@ Package mdframed Info: mdframed works in twoside mode on input line 1231.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 1231.
-Package mdframed Info: mdframed works in twoside mode on input line 1257.
+Package mdframed Info: mdframed works in twoside mode on input line 1258.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1257.
-Package mdframed Info: mdframed works in twoside mode on input line 1260.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 1260.
-Excluding 'comment' comment.) (./content/Part2 Discrete math/4.Graph Theory.tex
+(mdframed)              on input line 1258.
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -5314,6 +5309,14 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
 [254]
+Package mdframed Info: mdframed works in twoside mode on input line 1309.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1309.
+Package mdframed Info: mdframed works in twoside mode on input line 1312.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1312.
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -5322,23 +5325,25 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[255] [256
+[255]
+Package mdframed Info: Not enough space on this page on input line 1314.
+Package mdframed Info: mdframed works in twoside mode on input line 1322.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1322.
+Package mdframed Info: mdframed works in twoside mode on input line 1347.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1347.
 
-]
-Chapter 9.
-File: Images/orange2.jpg Graphic file (type jpg)
-<use Images/orange2.jpg>
-Package pdftex.def Info: Images/orange2.jpg  used on input line 4.
-(pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
-) (./content/Part2 Discrete math/5.Basics of Abstract Algebra.tex [257] [258
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
 
-]
-Chapter 10.
-File: Images/orange2.jpg Graphic file (type jpg)
-<use Images/orange2.jpg>
-Package pdftex.def Info: Images/orange2.jpg  used on input line 4.
-(pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
-[259]) (./content/Part2 Discrete math/6.Introductory Topology and Category Theo
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[256] Excluding 'comment' comment.) (./content/Part2 Discrete math/4.Graph Theo
 ry.tex
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
@@ -5348,13 +5353,39 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[260]
+[257] [258
+
+]
+Chapter 9.
+File: Images/orange2.jpg Graphic file (type jpg)
+<use Images/orange2.jpg>
+Package pdftex.def Info: Images/orange2.jpg  used on input line 4.
+(pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
+) (./content/Part2 Discrete math/5.Basics of Abstract Algebra.tex [259] [260
+
+]
+Chapter 10.
+File: Images/orange2.jpg Graphic file (type jpg)
+<use Images/orange2.jpg>
+Package pdftex.def Info: Images/orange2.jpg  used on input line 4.
+(pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
+[261]) (./content/Part2 Discrete math/6.Introductory Topology and Category Theo
+ry.tex
+
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
+
+[262]
 Chapter 11.
 File: Images/orange2.jpg Graphic file (type jpg)
 <use Images/orange2.jpg>
 Package pdftex.def Info: Images/orange2.jpg  used on input line 4.
 (pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
-[261
+[263
 
 ]
 
@@ -5365,7 +5396,7 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[262]
+[264]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -5376,7 +5407,7 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[263]
+[265]
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -5385,7 +5416,7 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[264])
+[266])
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -5394,18 +5425,18 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[265] [266
+[267] [268
 
-] (./main.ptc) [267] [268] (./content/Part3 Single-variable Calculus/Chapter1.t
+] (./main.ptc) [269] [270] (./content/Part3 Single-variable Calculus/Chapter1.t
 ex
 Chapter 12.
 File: Images/orange2.jpg Graphic file (type jpg)
 <use Images/orange2.jpg>
 Package pdftex.def Info: Images/orange2.jpg  used on input line 4.
 (pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
-) (./content/Part3 Single-variable Calculus/Chapter2.tex [269
+) (./content/Part3 Single-variable Calculus/Chapter2.tex [271
 
-] [270
+] [272
 
 ]
 Chapter 13.
@@ -5413,7 +5444,7 @@ File: Images/orange2.jpg Graphic file (type jpg)
 <use Images/orange2.jpg>
 Package pdftex.def Info: Images/orange2.jpg  used on input line 4.
 (pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
-) (./content/Part3 Single-variable Calculus/Chapter3.tex [271] [272
+) (./content/Part3 Single-variable Calculus/Chapter3.tex [273] [274
 
 ]
 Chapter 14.
@@ -5421,7 +5452,7 @@ File: Images/orange2.jpg Graphic file (type jpg)
 <use Images/orange2.jpg>
 Package pdftex.def Info: Images/orange2.jpg  used on input line 4.
 (pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
-) (./content/Part3 Single-variable Calculus/Chapter4.tex [273] [274
+) (./content/Part3 Single-variable Calculus/Chapter4.tex [275] [276
 
 ]
 Chapter 15.
@@ -5432,7 +5463,7 @@ Package pdftex.def Info: Images/orange2.jpg  used on input line 4.
 ) (./content/Part3 Single-variable Calculus/Chapter5.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[275]
+[277]
 Overfull \vbox (208.17586pt too high) has occurred while \output is active []
 
 
@@ -5443,7 +5474,7 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[276]
+[278]
 Chapter 16.
 File: Images/orange2.jpg Graphic file (type jpg)
 <use Images/orange2.jpg>
@@ -5452,7 +5483,7 @@ Package pdftex.def Info: Images/orange2.jpg  used on input line 4.
 ) (./content/Part3 Single-variable Calculus/Chapter6.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[277
+[279
 
 ]
 Overfull \vbox (47.22583pt too high) has occurred while \output is active []
@@ -5465,15 +5496,15 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.27362pt}.
 
-[278]
+[280]
 Chapter 17.
 File: Images/orange2.jpg Graphic file (type jpg)
 <use Images/orange2.jpg>
 Package pdftex.def Info: Images/orange2.jpg  used on input line 4.
 (pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
-) (./content/Part3 Single-variable Calculus/Chapter7.tex [279
+) (./content/Part3 Single-variable Calculus/Chapter7.tex [281
 
-] [280
+] [282
 
 ]
 Chapter 18.
@@ -5481,18 +5512,18 @@ File: Images/orange2.jpg Graphic file (type jpg)
 <use Images/orange2.jpg>
 Package pdftex.def Info: Images/orange2.jpg  used on input line 4.
 (pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
-) [281] [282
+) [283] [284
 
-] (./main.ptc) [283] [284] (./content/Part4 Multi-variable Calculus/Chapter1.te
+] (./main.ptc) [285] [286] (./content/Part4 Multi-variable Calculus/Chapter1.te
 x
 Chapter 19.
 File: Images/orange2.jpg Graphic file (type jpg)
 <use Images/orange2.jpg>
 Package pdftex.def Info: Images/orange2.jpg  used on input line 4.
 (pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
-[285
+[287
 
-] [286
+] [288
 
 ]
 Chapter 20.
@@ -5500,7 +5531,7 @@ File: Images/orange2.jpg Graphic file (type jpg)
 <use Images/orange2.jpg>
 Package pdftex.def Info: Images/orange2.jpg  used on input line 10.
 (pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
-[287] [288
+[289] [290
 
 ]
 Chapter 21.
@@ -5508,7 +5539,7 @@ File: Images/orange2.jpg Graphic file (type jpg)
 <use Images/orange2.jpg>
 Package pdftex.def Info: Images/orange2.jpg  used on input line 18.
 (pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
-[289] [290
+[291] [292
 
 ]
 Chapter 22.
@@ -5516,7 +5547,7 @@ File: Images/orange2.jpg Graphic file (type jpg)
 <use Images/orange2.jpg>
 Package pdftex.def Info: Images/orange2.jpg  used on input line 27.
 (pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
-[291] [292
+[293] [294
 
 ]
 Chapter 23.
@@ -5524,17 +5555,17 @@ File: Images/orange2.jpg Graphic file (type jpg)
 <use Images/orange2.jpg>
 Package pdftex.def Info: Images/orange2.jpg  used on input line 38.
 (pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
-) [293] [294
+) [295] [296
 
-] (./main.ptc) [295] [296] (./content/Part5 Linear Algebra/Chapter1.tex
+] (./main.ptc) [297] [298] (./content/Part5 Linear Algebra/Chapter1.tex
 Chapter 24.
 File: Images/orange2.jpg Graphic file (type jpg)
 <use Images/orange2.jpg>
 Package pdftex.def Info: Images/orange2.jpg  used on input line 4.
 (pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
-[297
+[299
 
-] [298
+] [300
 
 ]
 Chapter 25.
@@ -5542,7 +5573,7 @@ File: Images/orange2.jpg Graphic file (type jpg)
 <use Images/orange2.jpg>
 Package pdftex.def Info: Images/orange2.jpg  used on input line 14.
 (pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
-[299] [300
+[301] [302
 
 ]
 Chapter 26.
@@ -5550,7 +5581,7 @@ File: Images/orange2.jpg Graphic file (type jpg)
 <use Images/orange2.jpg>
 Package pdftex.def Info: Images/orange2.jpg  used on input line 20.
 (pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
-[301] [302
+[303] [304
 
 ]
 Chapter 27.
@@ -5558,7 +5589,7 @@ File: Images/orange2.jpg Graphic file (type jpg)
 <use Images/orange2.jpg>
 Package pdftex.def Info: Images/orange2.jpg  used on input line 26.
 (pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
-[303] [304
+[305] [306
 
 ]
 Chapter 28.
@@ -5566,7 +5597,7 @@ File: Images/orange2.jpg Graphic file (type jpg)
 <use Images/orange2.jpg>
 Package pdftex.def Info: Images/orange2.jpg  used on input line 32.
 (pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
-[305] [306
+[307] [308
 
 ]
 Chapter 29.
@@ -5574,7 +5605,7 @@ File: Images/orange2.jpg Graphic file (type jpg)
 <use Images/orange2.jpg>
 Package pdftex.def Info: Images/orange2.jpg  used on input line 37.
 (pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
-[307] [308
+[309] [310
 
 ]
 Chapter 30.
@@ -5582,7 +5613,7 @@ File: Images/orange2.jpg Graphic file (type jpg)
 <use Images/orange2.jpg>
 Package pdftex.def Info: Images/orange2.jpg  used on input line 43.
 (pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
-[309] [310
+[311] [312
 
 ]
 Chapter 31.
@@ -5590,7 +5621,7 @@ File: Images/orange2.jpg Graphic file (type jpg)
 <use Images/orange2.jpg>
 Package pdftex.def Info: Images/orange2.jpg  used on input line 49.
 (pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
-[311] [312
+[313] [314
 
 ]
 Chapter 32.
@@ -5598,18 +5629,18 @@ File: Images/orange2.jpg Graphic file (type jpg)
 <use Images/orange2.jpg>
 Package pdftex.def Info: Images/orange2.jpg  used on input line 56.
 (pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
-) [313] [314
+) [315] [316
 
-] (./main.ptc) [315] [316] (./content/Part6 Probability and Combinatorics/Chapt
+] (./main.ptc) [317] [318] (./content/Part6 Probability and Combinatorics/Chapt
 er1.tex
 Chapter 33.
 File: Images/orange2.jpg Graphic file (type jpg)
 <use Images/orange2.jpg>
 Package pdftex.def Info: Images/orange2.jpg  used on input line 4.
 (pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
-[317
+[319
 
-] [318
+] [320
 
 ]
 Chapter 34.
@@ -5617,7 +5648,7 @@ File: Images/orange2.jpg Graphic file (type jpg)
 <use Images/orange2.jpg>
 Package pdftex.def Info: Images/orange2.jpg  used on input line 10.
 (pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
-[319] [320
+[321] [322
 
 ]
 Chapter 35.
@@ -5625,7 +5656,7 @@ File: Images/orange2.jpg Graphic file (type jpg)
 <use Images/orange2.jpg>
 Package pdftex.def Info: Images/orange2.jpg  used on input line 16.
 (pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
-[321] [322
+[323] [324
 
 ]
 Chapter 36.
@@ -5633,7 +5664,7 @@ File: Images/orange2.jpg Graphic file (type jpg)
 <use Images/orange2.jpg>
 Package pdftex.def Info: Images/orange2.jpg  used on input line 22.
 (pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
-[323] [324
+[325] [326
 
 ]
 Chapter 37.
@@ -5641,7 +5672,7 @@ File: Images/orange2.jpg Graphic file (type jpg)
 <use Images/orange2.jpg>
 Package pdftex.def Info: Images/orange2.jpg  used on input line 28.
 (pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
-[325] [326
+[327] [328
 
 ]
 Chapter 38.
@@ -5649,7 +5680,7 @@ File: Images/orange2.jpg Graphic file (type jpg)
 <use Images/orange2.jpg>
 Package pdftex.def Info: Images/orange2.jpg  used on input line 35.
 (pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
-[327] [328
+[329] [330
 
 ]
 Chapter 39.
@@ -5657,7 +5688,7 @@ File: Images/orange2.jpg Graphic file (type jpg)
 <use Images/orange2.jpg>
 Package pdftex.def Info: Images/orange2.jpg  used on input line 42.
 (pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
-[329] [330
+[331] [332
 
 ]
 Chapter 40.
@@ -5665,17 +5696,17 @@ File: Images/orange2.jpg Graphic file (type jpg)
 <use Images/orange2.jpg>
 Package pdftex.def Info: Images/orange2.jpg  used on input line 48.
 (pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
-) [331] [332
+) [333] [334
 
-] (./main.ptc) [333] [334] (./content/Part7 Statistics/Chapter1.tex
+] (./main.ptc) [335] [336] (./content/Part7 Statistics/Chapter1.tex
 Chapter 41.
 File: Images/orange2.jpg Graphic file (type jpg)
 <use Images/orange2.jpg>
 Package pdftex.def Info: Images/orange2.jpg  used on input line 4.
 (pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
-[335
+[337
 
-] [336
+] [338
 
 ]
 Chapter 42.
@@ -5683,7 +5714,7 @@ File: Images/orange2.jpg Graphic file (type jpg)
 <use Images/orange2.jpg>
 Package pdftex.def Info: Images/orange2.jpg  used on input line 10.
 (pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
-[337] [338
+[339] [340
 
 ]
 Chapter 43.
@@ -5691,7 +5722,7 @@ File: Images/orange2.jpg Graphic file (type jpg)
 <use Images/orange2.jpg>
 Package pdftex.def Info: Images/orange2.jpg  used on input line 16.
 (pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
-[339] [340
+[341] [342
 
 ]
 Chapter 44.
@@ -5699,7 +5730,7 @@ File: Images/orange2.jpg Graphic file (type jpg)
 <use Images/orange2.jpg>
 Package pdftex.def Info: Images/orange2.jpg  used on input line 23.
 (pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
-[341] [342
+[343] [344
 
 ]
 Chapter 45.
@@ -5707,7 +5738,7 @@ File: Images/orange2.jpg Graphic file (type jpg)
 <use Images/orange2.jpg>
 Package pdftex.def Info: Images/orange2.jpg  used on input line 34.
 (pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
-[343] [344
+[345] [346
 
 ]
 Chapter 46.
@@ -5715,7 +5746,7 @@ File: Images/orange2.jpg Graphic file (type jpg)
 <use Images/orange2.jpg>
 Package pdftex.def Info: Images/orange2.jpg  used on input line 40.
 (pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
-[345] [346
+[347] [348
 
 ]
 Chapter 47.
@@ -5723,18 +5754,18 @@ File: Images/orange2.jpg Graphic file (type jpg)
 <use Images/orange2.jpg>
 Package pdftex.def Info: Images/orange2.jpg  used on input line 46.
 (pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
-) [347] [348
+) [349] [350
 
-] (./main.ptc) [349] [350] (./content/Part8 Basic Information Theory/Chapter1.t
+] (./main.ptc) [351] [352] (./content/Part8 Basic Information Theory/Chapter1.t
 ex
 Chapter 48.
 File: Images/orange2.jpg Graphic file (type jpg)
 <use Images/orange2.jpg>
 Package pdftex.def Info: Images/orange2.jpg  used on input line 4.
 (pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
-[351
+[353
 
-] [352
+] [354
 
 ]
 Chapter 49.
@@ -5742,7 +5773,7 @@ File: Images/orange2.jpg Graphic file (type jpg)
 <use Images/orange2.jpg>
 Package pdftex.def Info: Images/orange2.jpg  used on input line 10.
 (pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
-[353] [354
+[355] [356
 
 ]
 Chapter 50.
@@ -5750,7 +5781,7 @@ File: Images/orange2.jpg Graphic file (type jpg)
 <use Images/orange2.jpg>
 Package pdftex.def Info: Images/orange2.jpg  used on input line 16.
 (pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
-[355] [356
+[357] [358
 
 ]
 Chapter 51.
@@ -5758,7 +5789,7 @@ File: Images/orange2.jpg Graphic file (type jpg)
 <use Images/orange2.jpg>
 Package pdftex.def Info: Images/orange2.jpg  used on input line 22.
 (pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
-[357] [358
+[359] [360
 
 ]
 Chapter 52.
@@ -5766,7 +5797,7 @@ File: Images/orange2.jpg Graphic file (type jpg)
 <use Images/orange2.jpg>
 Package pdftex.def Info: Images/orange2.jpg  used on input line 28.
 (pdftex.def)             Requested size: 597.50787pt x 276.62482pt.
-[359] [360
+[361] [362
 
 ]
 Chapter 53.
@@ -5778,7 +5809,7 @@ Package pdftex.def Info: Images/orange2.jpg  used on input line 34.
 \tf@ptc=\write10
 \openout10 = `main.ptc'.
 
-[361] (./main.aux)
+[363] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
@@ -5788,11 +5819,11 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 40603 strings out of 474222
- 760247 string characters out of 5747695
+ 40627 strings out of 474222
+ 760584 string characters out of 5747695
  1988978 words of memory out of 5000000
- 59730 multiletter control sequences out of 15000+600000
- 760670 words of font info for 759 fonts, out of 8000000 for 9000
+ 59734 multiletter control sequences out of 15000+600000
+ 761060 words of font info for 763 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  98i,18n,101p,1490b,1351s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive-full/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c
@@ -5810,10 +5841,10 @@ b><c:/texlive-full/2023/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive
 -full/2023/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive-full/2023/te
 xmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive-full/2023/texmf-dist/font
 s/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (361 pages, 6123867 bytes).
+Output written on main.pdf (363 pages, 6140033 bytes).
 PDF statistics:
- 4882 PDF objects out of 5155 (max. 8388607)
- 3962 compressed objects within 40 object streams
- 1494 named destinations out of 1728 (max. 500000)
+ 4906 PDF objects out of 5155 (max. 8388607)
+ 3984 compressed objects within 40 object streams
+ 1508 named destinations out of 1728 (max. 500000)
  185518 words of extra memory for PDF output out of 221844 (max. 10000000)
 
