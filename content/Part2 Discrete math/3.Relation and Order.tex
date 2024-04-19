@@ -1355,7 +1355,127 @@ It follows that \( R \) is an equivalence relation. The equivalence classes of \
 	
 	Conversely, consider a partition of \( S \) into subsets \( A_1 = \{1, 2\} \), \( A_2 = \{3, 4\} \), and \( A_3 = \{5, 6\} \). The equivalence relation \( R \) induced by this partition is such that two numbers are related if and only if they are in the same subset \( A_i \).
 \end{example}
+
 \section{Order Relations}
+The other commonly used special relation is order relation, which can be further categorized in to partial order, total order, and well order relations. We will
+introduce with the most generic one among them and then narrow down to the rest. We first look into partial order relation.
+\subsection{Partial, Total, and Well Ordering}
+\begin{definition}[Partial Order]
+    A relation $R$ on a set S is called a partial ordering or partial order if it is reflexive, antisymmetric, and transitive. A set $S$ together with a partial ordering $R$ is 
+    called a partial ordered set, or poset, and is denoted by $(S,R)$. Members of S are called elements of the poset.
+\end{definition}
+\begin{remark}
+    The reason why partial order relation has a specific notation for poset is because that order relation is usually defined on the same set(for the domain and codomain). For 
+    equivalence relation, however, we see more relation between different sets.
+\end{remark}
+
+The most common partial order relation is "greater than or equal to", "is subset to", and "divides".
+\begin{example}
+    Show that the greater than or equal to relation $\geq$ is a partial ordering on the set of integers.
+\end{example}
+    
+    \textbf{Solution:} Because $a \geq a$ for every integer $a$, $\geq$ is reflexive. If $a \geq b$ and $b \geq a$, then $a = b$. Hence, $\geq$ is antisymmetric. 
+    Finally, $\geq$ is transitive because $a \geq b$ and $b \geq c$ imply that $a \geq c$. It follows that $\geq$ is a partial ordering on the set of integers and 
+    $(\mathbb{Z}, \geq)$ is a poset.
+
+\begin{example}
+    The divisibility relation $|$ is a partial ordering on the set of positive integers, because it is reflexive, antisymmetric, and transitive, as was shown in Section 9.1. We see that $(\mathbb{Z}^+, |)$ is a poset.
+\end{example}
+        
+\begin{example}
+    Show that the inclusion relation $\subseteq$ is a partial ordering on the power set of a set $S$.
+\end{example}
+        
+\textbf{Solution:} Because $A \subseteq A$ whenever $A$ is a subset of $S$, $\subseteq$ is reflexive. It is antisymmetric because $A \subseteq B$ and $B \subseteq A$ imply 
+that $A = B$. Finally, $\subseteq$ is transitive, because $A \subseteq B$ and $B \subseteq C$ imply that $A \subseteq C$. Hence, $\subseteq$ is a partial ordering on $P(S)$, 
+and $(P(S), \subseteq)$ is a poset.
+
+For convenience of representation, we need a symbol to define the operator for an arbitrary partial ordering.
+\begin{notation}[Precedes or Equal to]
+    $\prceq$ is used to define any arbitrary partial order relation $a \prceq b$ on set $S$.
+    Alternatively, we also have $a \prec b$ to denote that $a\prceq b$ but $a \neq b$.
+\end{notation}
+
+With this, we can define comparability of the relation. This helps us to distinguish different types of special partial orderings.
+\begin{definition}[Comparability]
+    The elements $a$ and $b$ of a poset (S, $\prceq)$ are called comparable if either $a\prceq b$ or $b\prceq a$. When $a$ and $b$ are elements of S 
+    such that neither $a\prceq b$ nor $b\prceq a,a$ and $b$ are called incomparable.
+\end{definition}
+
+\begin{example}
+	In the poset $(\Z^+ ,\mid)$, are 3 and 9 comparable? Also consider 4 and 5.
+\end{example}
+\begin{solution}
+	3 and 9 are obviously comparable, since even though $9 \ndiv 3 $, we still have $3 \mid 9$. So 3 and 9 are comparable. While $4\ndiv 5$ and $5\ndiv 4$, so they are not comparable.
+\end{solution}
+
+We see that for divisibility, there are cases that the relation is not comparable among the elements that are involved here. Actually this is why we call it partial order, because there are cases that things cannot be compared or cannot build relation. If we can have a very special partial ordering on $S$ that is comparable for every member of the set, we call it a total ordering or total order relation.
+
+\begin{definition}[Total Ordering]
+	If \( (S, \prceq) \) is a poset and every two elements of \( S \) are comparable, \( S \) is called a \emph{totally ordered} or \emph{linearly ordered set}, and \( \prceq \) is called a \emph{total order} or a \emph{linear order}. A totally ordered set is also called a \emph{chain}.
+\end{definition}
+
+Total ordering is also very quite familiar to us, actually, the $\leq$ relation we just mentioned is also a total order relation, and so as $\geq$. 
+
+Here are some other examples.
+\begin{example}
+	The set of words in a dictionary with the alphabetical order is a totally ordered set because any two words can be compared based on lexicographic order.
+\end{example}
+
+\begin{example}
+	The set of points on a line with a defined direction is a totally ordered set, where any two points can be compared based on their position relative to each other along the line.
+\end{example}
+So we know that total orderings are special partial orderings. Now, can we manage to find a kind of special relation with respect to total ordering? The answer is yes, and we have actually known this relation, as it is the foundation of the principal of mathematical induction (theorem \ref{principle/induc}).
+
+\begin{definition}[Well Ordering]
+	The poset $(S, \prceq)$ is a well-ordered set if $\prceq$ is total ordering and every nonempty subset of $S$ has a least element.
+\end{definition}
+
+Here are some example of well-ordering.
+
+\begin{example}
+	The set of natural numbers \( \mathbb{N} \) with the usual order \( \leq \) is not only a totally ordered set but also a well-ordered set because every non-empty subset of \( \mathbb{N} \) has a smallest element.
+\end{example}
+
+
+\begin{example}
+	Consider the set \( S = \{\frac{1}{n} \mid n \in \mathbb{N}\} \). The set \( S \) with the order \( \leq \) is a well-ordered set because for any non-empty subset of \( S \), the element with the largest \( n \) (which exists because \( \mathbb{N} \) is well-ordered) will be the least element of that subset.
+\end{example}
+
+\begin{example}
+	The set of positive integers up to 100, \( \{1, 2, \ldots, 100\} \), is well-ordered by the usual \( \leq \) relation. Any non-empty subset has a minimum element since it is a finite subset of the well-ordered set \( \mathbb{N} \).
+\end{example}
+
+Well ordering secures that each step we made with mathematical induction is correct, since the least element allows us to define a solid base case, so that the rest of the statement could be proved one by one by applying our hypothesis, so that the inductive step could be proven. This could be encapsulated by the following theorem.
+\begin{theorem}[The Principle of Well-Ordered Induction]
+	Suppose that \( S \) is a well-ordered set. Then \( P(x) \) is true for all \( x \in S \), if
+
+		\textbf{Inductive Step:} For every \( y \in S \), if \( P(x) \) is true for all \( x \in S \) with \( x < y \), then \( P(y) \) is true.
+
+\end{theorem}
+
+\begin{proof}
+	Suppose it is not the case that \( P(x) \) is true for all \( x \in S \). Then there is an element \( y \in S \) such that \( P(y) \) is false. Consequently, the set \( A = \{ x \in S \mid P(x) \text{ is false} \} \) is nonempty. Because \( S \) is well-ordered, \( A \) has a least element \( a \). By the choice of \( a \) as a least element of \( A \), we know that \( P(x) \) is true for all \( x \in S \) with \( x < a \). This implies by the inductive step \( P(a) \) is true. This contradiction shows that \( P(x) \) must be true for all \( x \in S \).
+\end{proof}
+
+\begin{remark}
+	We do not need a basis step in a proof using the principle of well-ordered induction because if \( x_0 \) is the least element of a well-ordered set, the inductive step tells us that \( P(x_0) \) is true. This follows because there are no elements \( x \in S \) with \( x < x_0 \), so we know (using a vacuous proof) that \( P(x) \) is true for all \( x \in S \) with \( x < x_0 \).
+\end{remark}
+
+\subsection{Lexicographic Order}
+
+
+
+\subsection{Hasse Diagram}
+
+
+\subsection{Maximal and Minimal Elements}
+
+
+\subsection{Lattices}
+
+\subsection{Topological Sorting}
+
 
 
 
