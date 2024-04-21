@@ -1463,8 +1463,57 @@ Well ordering secures that each step we made with mathematical induction is corr
 \end{remark}
 
 \subsection{Lexicographic Order}
+In a dictionary, all words are ordered in alphabetical order by the first letter that is different from the other previous words. For example, we have this array of string in alphabetical order: ["a", "abnormal", "acknowledge", "acquire"...]. We can conceptualize this ordering in mathematics with partial order relation, calling lexicographic order. 
 
+The concept of lexicographic ordering can be extended beyond strings and applied to the Cartesian product of two posets. We formalize this concept as follows:
+\begin{definition}[Lexicographic Ordering]\label{lexord}
+	Given two posets \( (A_1, \prceq_1) \) and \( (A_2, \prceq_2) \), the \textbf{lexicographic ordering} \( \prceq \) on \( A_1 \times A_2 \) is defined such that for any pairs \( (a_1, a_2) \), \( (b_1, b_2) \) in \( A_1 \times A_2 \), we have:
+	\[
+	(a_1, a_2) \prec (b_1, b_2),
+	\]
+	if either \( a_1 \prec_1 b_1 \) or both \( a_1 = b_1 \) and \( a_2 \prec_2 b_2 \). This ordering sets up a framework where the first elements' order takes precedence, and the second elements' order is considered only when the first elements are equivalent.
+\end{definition}
+We achieve a partial ordering \( \prceq \) by combining this lexicographic ordering with equality. 
+Here is how we verify it.
+\begin{proof}
+	We need to show that we have $(a_1, a_2) \prceq (b_1, b_2)$ if either \( a_1 \prceq_1 b_1 \) or both \( a_1 = b_1 \) and \( a_2 \prceq_2 b_2 \), and we have the poset $(A_1\times A_2, \prceq)$.
+	
+	Since  either \( a_1 \prceq_1 b_1 \) or both \( a_1 = b_1 \) and \( a_2 \prceq_2 b_2 \). Suppose that \(a_1=a_2=b_1=b_2 \in A_1\cap A_2\), we have \( (a_1,a_2) = (b_1,b_2)\) for some $a_1=b_1 \in A_1 $ and some $a_2=b_2\in A_2$. So\((a_1,a_2) \prceq (b_1,b_2) \iff (a_2,b_2) \prceq (a_1,b_1)\), so \(\prceq\) is \textbf{reflective} (because \((a_1,a_2) = (b_1,b_2)\)). 
+	\begin{remark}
+		Notice that we are using the definition of $\prceq$ repetitively, for $b_1 \prceq b_2$, since they are only one number instead of ordered pair, we only need to consider $b_1 = b_2$, which is already be assumed true.
+	\end{remark}
+	Now we consider \textbf{antisymmetry}. Suppose the same scenario, but the ordered pairs $(a_1,a_2), (b_1,b_2)$ are formed by some random $a_1, b_1 \in A_1 \tx{ and } a_2, b_2 \in A_2$. The relation is antisymmetric if and only if 
+	\[[((a_1,a_2) \prceq (b_1, b_2) \iff (b_1, b_2) \prceq (a_1,a_2)] \implies (a_1,a_2) = (b_1,b_2).\]
+	It is obvious true here from left to right, we can use the similar reasoning in reflectivity.  Suppose that $(a_1,a_2) \prceq (b_1, b_2) \iff (b_1, b_2) \prceq (a_1,a_2)$, then we must have $(a_1,a_2) = (b_1, b_2)$, because we must have $a_1 = b_1$ for the part inside square bracket, we only need to consider $a_2, b_2$. If $a_2 \prceq b_2$ we prove the antisymmetry, or else not. However, the latter contradict our assumption, so we must have $a_2 \prec b_2$, which implies implies $a_2 = b_2$. Thus we have $a_1 = a_2 = b_1 = b_2 \implies (a_1,a_2) = (b_1, b_2)$. Hence, $\prceq$ is \textbf{antisymmetric}.
+	
+	Now considering the \textbf{Transitivity}. Suppose we have \((a_1,a_2), (b_1,b_2), (c_1,c_2)\) from $A_1\times A_2$, where \((a_1,a_2) \prceq (b_1,b_2) \) and $(b_1,b_2)\prceq (c_1,c_2)$. From these relations we have 
+	\[(a_1 \prceq b_1) \lor (a_1 = b_1 \land a_2 \prceq b_2),\]
+	\[(b_1 \prceq c_1) \lor (b_1 = c_1 \land b_2 \prceq c_2).\]
+	Since we have already included $x\prceq y\gets x = y$ as part of the premises of the proof, by Boolean Laws:
+	\[(a_1=b_1) \lor (a_1=b_1 \land a_2 = b_2) \equiv (a_1=b_1 \land a_2 = b_2),\]
+	\[(b_1=c_1) \lor (b_1=c_1 \land b_2 = c_2) \equiv (b_1=c_1 \land b_2 = c_2).\]
+	Thus, $a_1 = b_1 = c_1$, $a_2 = b_2 = c_2$. Therefore,
+	\[(a_1,a_2) \prceq (b_1,b_2) \land (b_1,b_2)\prceq (c_1,c_2) \implies (a_1,a_2) \prceq (c_1,c_2),\]
+	$\prceq$ is \textbf{transitive}.
+	
+	Hence, $\prceq$ is reflective, antisymmetric, and transitive, and we conclude that it's a partial ordering.
+	\begin{remark}
+		More precisely, it is a total ordering, because we have this relation for any member of $A_1\times A_2$, of course a total ordering must be partial ordering as mentioned.
+	\end{remark}
+\end{proof}
 
+\begin{example}
+	Consider two posets, \( (A_1, \leq_1) \) where \( A_1 = \{1, 2\} \) with the usual less than or equal relation, and \( (A_2, \leq_2) \) where \( A_2 = \{a, b\} \) with \( a \leq_2 b \). The lexicographic order \( \leq \) on \( A_1 \times A_2 \) is given as follows:
+	
+	For any two elements \( (a_1, a_2), (b_1, b_2) \in A_1 \times A_2 \), we say that \( (a_1, a_2) \leq (b_1, b_2) \) if:
+	
+	\begin{enumerate}
+		\item \( a_1 <_1 b_1 \), or
+		\item \( a_1 = b_1 \) and \( a_2 \leq_2 b_2 \).
+	\end{enumerate}
+	
+	For example, \( (1, a) \leq (2, a) \) because \( 1 <_1 2 \), and \( (2, a) \leq (2, b) \) because \( 2 = 2 \) and \( a \leq_2 b \). Thus, the pair \( (1, a) \) is considered less than \( (2, b) \) in the lexicographic ordering because the first element of the first pair (1) is less than the first element of the second pair (2), even though we do not compare the second elements in this case.
+\end{example}
 
 \subsection{Hasse Diagram}
 
@@ -1480,6 +1529,16 @@ Well ordering secures that each step we made with mathematical induction is corr
 
 
 \subsection{Exercises}
+
+
+The following exercises are on lexicographic ordering.
+\begin{exercise}
+	Do some tricks to the result of the proof in definition \ref{lexord} to make it a well order relation.
+\end{exercise}
+\begin{solution}
+	This could be solve without a second thought that we can make $A_1,A_2$ any sets with smallest element, such as $\Z^{>1}$, all integer greater than 1.
+\end{solution}
+
 \section{Special Types of Relations}
 \subsection{Recursive Relations}
 \subsection{\(n\)-ary Relations}
