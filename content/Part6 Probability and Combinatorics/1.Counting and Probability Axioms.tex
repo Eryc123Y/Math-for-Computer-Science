@@ -111,6 +111,44 @@ Probability theory is a branch of mathematics that deals with the analysis of ra
         Hence, there are 17,576,000 different possible license plates.
         \end{solution}
         
+        To correctly count the number of ways to do the two tasks, we must subtract the number of ways that are counted twice. This leads us to an important counting rule.
+        Actually, we have already covered this conclusion in set theory.
+
+        The Subtraction Rule in set theory is a straightforward concept used when we need to find the number of elements in a set by excluding those that meet certain criteria. It states that if we have a universal set \( U \) and a subset \( A \) that we wish to exclude, then the number of elements not in \( A \) is \( |U| - |A| \), where \( |S| \) denotes the cardinality of set \( S \).
+
+        The Principle of Inclusion-Exclusion extends the Subtraction Rule for multiple sets. It corrects the overcounting that occurs when we subtract the cardinalities of overlapping sets from the universal set. For two sets \( A \) and \( B \), it is given by \( |A \cup B| = |A| + |B| - |A \cap B| \).
+        
+        \begin{theorem}[Subtraction Rule]
+            If a task can be done in either $n_1$ ways or $n_2$ ways, then the number of ways to do the task is $n_1+n_2$ minus the number of ways to do the task that are common to the two different ways.
+        \end{theorem}
+        Here are two examples demonstrating these rules.
+        \begin{example}
+            Suppose a library has 1,000 books, 300 of which are fiction. If we want to know how many books are non-fiction, we can use the Subtraction Rule:
+            $$ \text{Number of non-fiction books} = |U| - |A| = 1,000 - 300 = 700. $$
+        \end{example}
+
+        \begin{example}
+            In a survey of 200 people, 120 say they like tea, and 150 like coffee. If 50 people like both tea and coffee, to find out how many people like either tea or coffee, we apply the Principle of Inclusion-Exclusion:
+            $$ \text{Number of people who like tea or coffee} = |A| + |B| - |A \cap B| = 120 + 150 - 50 = 220. $$
+        \end{example}
+
+        We also have division rule of counting, which could be further explained by equivalence class. 
+        \begin{theorem}[Rule of Division]
+            The rule of division states that there are $n/d$ ways to do a task if it can be done using a procedure that can be carried out in 
+                $n$ ways, and for each way $w$, exactly $d$ of the $n$ ways correspond to the way $w$. In a nutshell, the division rule is a common way to ignore "unimportant" differences when counting things.
+        \end{theorem}
+            This theorem could be further explained by congruence class.
+            \begin{example}
+                Suppose a set \(X\) with \(n\) elements is partitioned into \(k\) equivalence classes by an equivalence relation, and each equivalence class contains \(m\) elements. If we wish to count the number of distinct subsets of \(X\) that can be formed without regard to the ordering of elements within each equivalence class, we can apply the Division Rule. Since each equivalence class is indistinguishable in terms of the partition, the total number of distinct subsets is \(n/m\), where \(n\) is the total number of elements in the set, and \(m\) is the number of elements in each equivalence class.
+            \end{example}
+
+            \begin{example}
+                If the total degree of a graph is 58, how many edges does it have?
+            \end{example}
+            \begin{solution}
+                hen we count the degrees, we count each edge twice, so there are 58/2 = 29 edges.
+            \end{solution}
+    \subsection{Pigeonhole Theorem}
         We also have another useful conclusion on counting called pigeonhole theorem. Suppose we have 8 pigeons and 7 pigeonholes, then there must be one pigeonhole that
         holds 2 pigeons.
         \begin{theorem}[pigeonhole theorem]
@@ -158,6 +196,22 @@ Probability theory is a branch of mathematics that deals with the analysis of ra
                 because there are 26 letters in the English alphabet.
             \end{itemize}
         \end{example}
+
+        \begin{example}
+            What is the minimum number of students required in a discrete mathematics class to be sure that at least six will receive the same grade, if there are five possible grades, A, B, C, D, and F?
+            \end{example}
+            
+            \begin{proof}
+            The minimum number of students needed to ensure that at least six students receive the same grade can be found using the Pigeonhole Principle. According to this principle, if \(N\) objects (in this case, students) are distributed among \(k\) categories (in this case, grades), and if \(N > k \cdot (m-1)\) where \(m\) is the minimum number of objects that we want in at least one category, then at least one category must contain at least \(m\) objects.
+            
+            Here, we want \(m = 6\) students to have the same grade and we have \(k = 5\) grades. We can apply the formula to find the minimum \(N\):
+            
+            \[ N > 5 \cdot (6-1) \]
+            \[ N > 25 \]
+            
+            The smallest integer greater than 25 is 26, so at least 26 students are needed to guarantee that at least six will receive the same grade. If we had only 25 students, it could happen that each of the five grades is assigned to exactly five students, which means no grade would have six students. Therefore, 26 is the minimum number of students required to ensure that at least six students will receive the same grade.
+            \end{proof}
+
 
     \subsection{Exercises}
     \begin{exercise}
@@ -220,7 +274,56 @@ Probability theory is a branch of mathematics that deals with the analysis of ra
             By pigeonhole theorem, we have $k+1$ pigeons but only $k$ pigeonholes, so one pigeonhole must have $\lceil k+1/k \rceil = 2$ pigeonholes. This means that there is always one
             element from the codomain are mapped from the same element in the domain. Hence, the statement is proven.
         \end{solution}
+        \begin{exercise}
+            How many cards must be selected from a standard deck of 52 cards to guarantee that:
+            \begin{enumerate}
+                \item[a)] At least three cards of the same suit are selected?
+                \item[b)] At least three hearts are selected?
+            \end{enumerate}
+            \end{exercise}
+            
+            \begin{solution}
+            \textbf{a)} Suppose there are four boxes, one for each suit, and as cards are selected they are placed in the box reserved for cards of that suit. By the generalized pigeonhole principle, we see that if \( N \) cards are selected, there is at least one box containing at least \( \lceil N/4 \rceil \) cards. To ensure that at least three cards of one suit are selected, we need \( \lceil N/4 \rceil \geq 3 \). The smallest integer \( N \) satisfying this condition is \( N = 2 \cdot 4 + 1 = 9 \), since selecting 8 cards could result in two cards of each suit, but the ninth card guarantees three of one suit.
+            
+            \textbf{b)} Without the pigeonhole principle, we consider the worst-case scenario where the selected cards are all from the clubs, diamonds, and spades suits. There are 13 cards in each suit, so after selecting all 39 of these, the next three cards must be hearts. Therefore, we may need to select up to 42 cards to guarantee three hearts.
+        \end{solution}
+            
+
+    \begin{exercise}
+        Let \( X = \{a, b, c, d\} \).
+        \begin{enumerate}
+            \item[(a)] How many possible relations are there on \( X \)?
+            \item[(b)] How many of these are reflexive?
+            \item[(c)] How many of these are reflexive and symmetric?
+            \item[(d)] How many of these are equivalence relations?
+            \item[(e)] What would the answers to (a), (b) and (c) be if \( |X| = n \) instead of \( |X| = 4 \)?
+        \end{enumerate}
+
+    \end{exercise}    
+    \begin{solution}
+        For (a), the number of possible relations on a set $X$ is equal to the number of subsets of the power set $P(X \times X)$, which is $2^{|X \times X|} = 2^{16}$, since there are 16 possible pairs in $X \times X$ for $|X| = 4$.
         
+        For (b), the number of reflexive relations on set $X$ can be found by considering that each element must be related to itself, fixing the diagonal entries of the relation matrix to 1. This leaves the other $16 - 4 = 12$ pairs, which correspond to the non-diagonal cells in the relation matrix, to be freely chosen as either part of the relation or not. Hence, there are $2^{12}$ reflexive relations, which is derived by using the division rule to divide the total number of relations by the number of choices for the diagonal (which is fixed), giving $\frac{2^{16}}{2^4} = 2^{12}$.
+        
+        For example, the relation matrix for a reflexive relation would be:
+        $$
+        R = \begin{bmatrix}
+        1 & a & b & c \\
+        d & 1 & e & f \\
+        g & h & 1 & i \\
+        j & k & l & 1 \\
+        \end{bmatrix}
+        $$
+        \begin{remark}
+        In the matrix $R$, the letters $a, b, c, d, \ldots, l$ represent arbitrary binary choices (either 0 or 1), not elements of the set $X$.
+        \end{remark}
+        
+        For (c), a relation that is both reflexive and symmetric requires that for any $R_{ij} = 1$, the symmetric counterpart $R_{ji} = 1$ also holds. This reduces the number of independent binary choices to the upper triangle of the matrix, including the diagonal, which consists of 6 entries. Therefore, there are $2^6$ reflexive and symmetric relations.
+        
+        For (d), the equivalence relations correspond to the partitions of the set. The 4th Bell number, $B_4$, which represents the number of partitions of a set of 4 elements into non-empty subsets, is 15. Hence, there are 15 distinct equivalence relations on the set $X$.
+        
+        For (e), generalizing to a set of size $n$, the answers would be $2^{(n^2)}$ for the number of relations, $2^{n(n-1)}$ for the number of reflexive relations, and $2^{n(n-1)/2}$ for the number of reflexive and symmetric relations. These results can be deduced by extension and verified via mathematical induction.
+        \end{solution}
 
 
 

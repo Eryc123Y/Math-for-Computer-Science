@@ -38,3 +38,4 @@ surjection
 Extensionality
 Dom
 poset
+irreflective
