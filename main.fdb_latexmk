@@ -1,17 +1,17 @@
 # Fdb version 4
-["biber main"] 1713702339.49661 "main.bcf" "main.bbl" "main" 1713729727.30408 0
-  "main.bcf" 1713729726 107256 cda255eed6b0d0df027a0b54e0d84d42 "pdflatex"
+["biber main"] 1713702339.49661 "main.bcf" "main.bbl" "main" 1713796769.29606 0
+  "main.bcf" 1713796768 107256 cda255eed6b0d0df027a0b54e0d84d42 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["makeindex main.idx"] 1713453777.81447 "main.idx" "main.ind" "main" 1713729727.30382 0
-  "main.idx" 1713729721 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+["makeindex main.idx"] 1713453777.81447 "main.idx" "main.ind" "main" 1713796769.29558 0
+  "main.idx" 1713796762 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   (generated)
   "main.ilg"
   "main.ind"
   (rewritten before read)
-["pdflatex"] 1713729720.31471 "main.tex" "main.pdf" "main" 1713729727.30444 0
+["pdflatex"] 1713796761.61552 "c:/Programming/GitProjects/Math-for-Computer-Science/main.tex" "main.pdf" "main" 1713796769.29672 0
   "Images/R^2.png" 1712142752 64840 5aae617f29bd5e5d2c41b0b9dc40ef22 ""
   "Images/R^3.png" 1712312456 153114 e1ae9d1019216090c34455e35abf3082 ""
   "Images/agm3D.png" 1707481231 97995 3c8707993f2acdfb1f5fe89cecae6e4e ""
@@ -42,6 +42,7 @@
   "Images/venn.png" 1707481232 101167 627b3f359fe3b8844e7f344c0e38c3ca ""
   "Images/x+y.png" 1712312431 62314 86a47240dcd91098e26e5fa12ca48aa4 ""
   "LegrandOrangeBook.cls" 1707481232 35066 8b54c63dbc2df44de404d2768f953f7c ""
+  "c:/Programming/GitProjects/Math-for-Computer-Science/main.tex" 1713775262 9950 19bf657e702f9b663dd6806828bef467 ""
   "c:/texlive-full/2023/texmf-dist/fonts/enc/dvips/base/8r.enc" 1707378777 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "c:/texlive-full/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1707378440 2971 def0b6c1f0b107b3b936def894055589 ""
   "c:/texlive-full/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1707379080 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -323,7 +324,13 @@
   "content/Part3 Single-variable Calculus/Chapter7.tex" 1707481232 111 ee3cfede7f15e4c2a607966e056a5992 ""
   "content/Part4 Multi-variable Calculus/Chapter1.tex" 1707481232 1212 fcbe3072e8f964a495d73d96ff321810 ""
   "content/Part5 Linear Algebra/Chapter1.tex" 1707481232 1158 ee1475b1962d30b4ae20f349626a4247 ""
-  "content/Part6 Probability and Combinatorics/Chapter1.tex" 1713729712 2437 cb865afd0a38604f6bdc1ca60de3fb26 ""
+  "content/Part6 Probability and Combinatorics/1.Counting and Probability Axioms.tex" 1713796753 17155 0e981fc8ecf4ba785fa3f9ea2c1d4952 ""
+  "content/Part6 Probability and Combinatorics/2.Conditional Probability and Independence.tex" 1713754529 136 2cead73248c08ab5e6cba1aa2add9a2c ""
+  "content/Part6 Probability and Combinatorics/3.Discrete Distribution and Random Variable.tex" 1713754555 137 b9a36302f0957e01b5eadb39f97ff29a ""
+  "content/Part6 Probability and Combinatorics/4.Continuous Distribution.tex" 1713775260 119 1b1b18ef07f8a9e09cffcefde068c95e ""
+  "content/Part6 Probability and Combinatorics/5.Joint Cumulative Distribution.tex" 1713775222 125 6fdf318460ca341633ac239edd69af5e ""
+  "content/Part6 Probability and Combinatorics/6.Limit Theory in Probability.tex" 1713775239 123 bb5556f9b8b01d003803f820462d197b ""
+  "content/Part6 Probability and Combinatorics/7.Stochastic Process.tex" 1713775259 114 213bd278ecccce5c514c18267b15bc9c ""
   "content/Part7 Statistics/Chapter1.tex" 1707481232 1068 b2c1f9d83977613a5dc61bf7e4818b34 ""
   "content/Part8 Basic Information Theory/Chapter1.tex" 1707481232 759 1d99886bef6f1271d83ef03a8d03a6fa ""
   "content/part1 Intro/1.proof and proposition.tex" 1713459659 51231 dc4fcb0470d27a49321d00402118b993 ""
@@ -331,15 +338,15 @@
   "content/part1 Intro/3.Algorithm and Number System.tex" 1712581190 38943 7a595ea93e0ca3cb74a0582db11b87a3 ""
   "content/part1 Intro/4.Inequality.tex" 1712581190 57251 12d7e1c9df0285c6cb6debb9f9449b00 ""
   "content/part1 Intro/5.Complex Number.tex" 1712581190 88243 989a2fe9a0123e4b52072bab758ecc3f ""
-  "main.aux" 1713729726 151017 49bcbdbdc4a7c5a27cc95b2d82624ea4 "pdflatex"
+  "main.aux" 1713796768 153297 468a8c90feaeefd54f35fe07cde40934 "pdflatex"
   "main.bbl" 1713702340 0 d41d8cd98f00b204e9800998ecf8427e "biber main"
   "main.ind" 1713453778 0 d41d8cd98f00b204e9800998ecf8427e "makeindex main.idx"
-  "main.lof" 1713729726 3949 39a82ddd1eb538bc5eba826c34d54cae "pdflatex"
-  "main.lot" 1713729726 2237 98501997ecdf36f1803ae9bc2d44a367 "pdflatex"
-  "main.ptc" 1713729726 29749 cbaf9bb073e86d3a621a1896d1a06ed3 "pdflatex"
-  "main.run.xml" 1713729726 2224 bc6149f5caee4074188e1b81a66978d0 "pdflatex"
-  "main.tex" 1713454493 9387 5006228e444e1004051ddbb890d1c43e ""
-  "main.toc" 1713729726 29411 fc632ea9060297d46338fb2a81140405 "pdflatex"
+  "main.lof" 1713796768 3929 3dd7c6b3d208bc54b90e19fa79f0e439 "pdflatex"
+  "main.lot" 1713796768 2217 6a0c7c95a2f5aff14bcbee0187a1531f "pdflatex"
+  "main.ptc" 1713796768 29917 7b7041fc545c705956650bbc6be33600 "pdflatex"
+  "main.run.xml" 1713796768 2224 bc6149f5caee4074188e1b81a66978d0 "pdflatex"
+  "main.tex" 1713775262 9950 19bf657e702f9b663dd6806828bef467 ""
+  "main.toc" 1713796768 29579 42225bf0bf055687150233a6d0c51ed9 "pdflatex"
   (generated)
   "main.aux"
   "main.bcf"

@@ -288,32 +288,34 @@
 \contentsline {chapter}{\numberline {31}Complex Vector and Matrices}{315}{chapter.31}%
 \contentsline {chapter}{\numberline {32}Matrix Differential Calculus}{317}{chapter.32}%
 \contentsline {part}{\numberline {VI}Probability and Combinatorics}{319}{part.6}%
-\contentsline {chapter}{\numberline {33}Counting and Probability Axioms}{323}{chapter.33}%
-\contentsline {chapter}{\numberline {34}Conditional Probability and Independence}{325}{chapter.34}%
-\contentsline {chapter}{\numberline {35}Discrete Distribution and Random Variable}{327}{chapter.35}%
-\contentsline {chapter}{\numberline {36}Continuous Distribution}{329}{chapter.36}%
-\contentsline {chapter}{\numberline {37}Joint Cumulative Distribution}{331}{chapter.37}%
-\contentsline {chapter}{\numberline {38}Joint Cumulative Distribution}{333}{chapter.38}%
-\contentsline {chapter}{\numberline {39}Limit Theory in Probability}{335}{chapter.39}%
-\contentsline {chapter}{\numberline {40}Stochastic Process}{337}{chapter.40}%
+\contentsline {chapter}{\numberline {33}Counting and Probability Axioms}{321}{chapter.33}%
+\contentsline {section}{\numberline {33.1}Counting Method}{321}{section.33.1}%
+\contentsline {subsection}{\numberline {33.1.1}Principal of Counting}{321}{subsection.33.1.1}%
+\contentsline {subsection}{\numberline {33.1.2}Exercises}{325}{subsection.33.1.2}%
+\contentsline {chapter}{\numberline {34}Conditional Probability and Independence}{327}{chapter.34}%
+\contentsline {chapter}{\numberline {35}Discrete Distribution and Random Variable}{329}{chapter.35}%
+\contentsline {chapter}{\numberline {36}Continuous Distribution}{331}{chapter.36}%
+\contentsline {chapter}{\numberline {37}Joint Cumulative Distribution}{333}{chapter.37}%
+\contentsline {chapter}{\numberline {38}Limit Theory in Probability}{335}{chapter.38}%
+\contentsline {chapter}{\numberline {39}Stochastic Process}{337}{chapter.39}%
 \contentsline {part}{\numberline {VII}Statistics}{339}{part.7}%
-\contentsline {chapter}{\numberline {41}Sampling and Parameters}{341}{chapter.41}%
-\contentsline {chapter}{\numberline {42}Descriptive Statistics}{343}{chapter.42}%
-\contentsline {chapter}{\numberline {43}Graphical Statistics}{345}{chapter.43}%
-\contentsline {chapter}{\numberline {44}Statistical Inference}{347}{chapter.44}%
-\contentsline {section}{\numberline {44.1}Parameter Estimation}{347}{section.44.1}%
-\contentsline {section}{\numberline {44.2}Interval Estimation}{347}{section.44.2}%
-\contentsline {section}{\numberline {44.3}Hypothesis Testing}{347}{section.44.3}%
-\contentsline {section}{\numberline {44.4}Variance Inference}{347}{section.44.4}%
-\contentsline {section}{\numberline {44.5}Bayesian Inference}{347}{section.44.5}%
-\contentsline {chapter}{\numberline {45}Hypothesis Testing}{349}{chapter.45}%
-\contentsline {chapter}{\numberline {46}Regression and Regressive Analysis}{351}{chapter.46}%
-\contentsline {chapter}{\numberline {47}Basic Multi-variable Statistical analysis}{353}{chapter.47}%
+\contentsline {chapter}{\numberline {40}Sampling and Parameters}{341}{chapter.40}%
+\contentsline {chapter}{\numberline {41}Descriptive Statistics}{343}{chapter.41}%
+\contentsline {chapter}{\numberline {42}Graphical Statistics}{345}{chapter.42}%
+\contentsline {chapter}{\numberline {43}Statistical Inference}{347}{chapter.43}%
+\contentsline {section}{\numberline {43.1}Parameter Estimation}{347}{section.43.1}%
+\contentsline {section}{\numberline {43.2}Interval Estimation}{347}{section.43.2}%
+\contentsline {section}{\numberline {43.3}Hypothesis Testing}{347}{section.43.3}%
+\contentsline {section}{\numberline {43.4}Variance Inference}{347}{section.43.4}%
+\contentsline {section}{\numberline {43.5}Bayesian Inference}{347}{section.43.5}%
+\contentsline {chapter}{\numberline {44}Hypothesis Testing}{349}{chapter.44}%
+\contentsline {chapter}{\numberline {45}Regression and Regressive Analysis}{351}{chapter.45}%
+\contentsline {chapter}{\numberline {46}Basic Multi-variable Statistical analysis}{353}{chapter.46}%
 \contentsline {part}{\numberline {VIII}Information Theory}{355}{part.8}%
-\contentsline {chapter}{\numberline {48}Measuring of Information}{357}{chapter.48}%
-\contentsline {chapter}{\numberline {49}Information Entropy}{359}{chapter.49}%
-\contentsline {chapter}{\numberline {50}Joined Entropy and Conditional Entropy}{361}{chapter.50}%
-\contentsline {chapter}{\numberline {51}Cross Entropy and Relative Entropy}{363}{chapter.51}%
-\contentsline {chapter}{\numberline {52}Mutual Information}{365}{chapter.52}%
-\contentsline {chapter}{\numberline {53}Differential Entropy}{367}{chapter.53}%
+\contentsline {chapter}{\numberline {47}Measuring of Information}{357}{chapter.47}%
+\contentsline {chapter}{\numberline {48}Information Entropy}{359}{chapter.48}%
+\contentsline {chapter}{\numberline {49}Joined Entropy and Conditional Entropy}{361}{chapter.49}%
+\contentsline {chapter}{\numberline {50}Cross Entropy and Relative Entropy}{363}{chapter.50}%
+\contentsline {chapter}{\numberline {51}Mutual Information}{365}{chapter.51}%
+\contentsline {chapter}{\numberline {52}Differential Entropy}{367}{chapter.52}%
 \contentsfinish 

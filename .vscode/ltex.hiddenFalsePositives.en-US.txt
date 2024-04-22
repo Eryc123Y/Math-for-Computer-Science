@@ -1,2 +1,3 @@
 {"rule":"NOW","sentence":"^\\QThere is no any overlap between graphs except the intersection \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q.\\E$"}
 {"rule":"ENGLISH_WORD_REPEAT_BEGINNING_RULE","sentence":"^\\QDerivatives of Parametric Equations.\\E$"}
+{"rule":"IN_A_X_MANNER","sentence":"^\\QCounting method allows us to get the possible number of outcomes in a systematic way.\\E$"}

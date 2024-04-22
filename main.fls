@@ -1,8 +1,8 @@
-PWD C:/Programming/GitProjects/Math-for-Computer-Science
+PWD c:/Programming/GitProjects/Math-for-Computer-Science
 INPUT c:/texlive-full/2023/texmf.cnf
 INPUT c:/texlive-full/2023/texmf-dist/web2c/texmf.cnf
 INPUT c:/texlive-full/2023/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT main.tex
+INPUT c:/Programming/GitProjects/Math-for-Computer-Science/main.tex
 OUTPUT main.log
 INPUT ./LegrandOrangeBook.cls
 INPUT LegrandOrangeBook.cls
@@ -974,30 +974,45 @@ INPUT ./Images/orange2.jpg
 INPUT ./main.ptc
 INPUT ./main.ptc
 INPUT main.ptc
-INPUT ./content/Part6 Probability and Combinatorics/Chapter1.tex
-INPUT ./content/Part6 Probability and Combinatorics/Chapter1.tex
-INPUT content/Part6 Probability and Combinatorics/Chapter1.tex
+INPUT ./content/Part6 Probability and Combinatorics/1.Counting and Probability Axioms.tex
+INPUT ./content/Part6 Probability and Combinatorics/1.Counting and Probability Axioms.tex
+INPUT content/Part6 Probability and Combinatorics/1.Counting and Probability Axioms.tex
 INPUT ./Images/orange2.jpg
 INPUT ./Images/orange2.jpg
 INPUT ./Images/orange2.jpg
+INPUT ./content/Part6 Probability and Combinatorics/2.Conditional Probability and Independence.tex
+INPUT ./content/Part6 Probability and Combinatorics/2.Conditional Probability and Independence.tex
+INPUT content/Part6 Probability and Combinatorics/2.Conditional Probability and Independence.tex
 INPUT ./Images/orange2.jpg
 INPUT ./Images/orange2.jpg
 INPUT ./Images/orange2.jpg
+INPUT ./content/Part6 Probability and Combinatorics/3.Discrete Distribution and Random Variable.tex
+INPUT ./content/Part6 Probability and Combinatorics/3.Discrete Distribution and Random Variable.tex
+INPUT content/Part6 Probability and Combinatorics/3.Discrete Distribution and Random Variable.tex
 INPUT ./Images/orange2.jpg
 INPUT ./Images/orange2.jpg
 INPUT ./Images/orange2.jpg
+INPUT ./content/Part6 Probability and Combinatorics/4.Continuous Distribution.tex
+INPUT ./content/Part6 Probability and Combinatorics/4.Continuous Distribution.tex
+INPUT content/Part6 Probability and Combinatorics/4.Continuous Distribution.tex
 INPUT ./Images/orange2.jpg
 INPUT ./Images/orange2.jpg
 INPUT ./Images/orange2.jpg
+INPUT ./content/Part6 Probability and Combinatorics/5.Joint Cumulative Distribution.tex
+INPUT ./content/Part6 Probability and Combinatorics/5.Joint Cumulative Distribution.tex
+INPUT content/Part6 Probability and Combinatorics/5.Joint Cumulative Distribution.tex
 INPUT ./Images/orange2.jpg
 INPUT ./Images/orange2.jpg
 INPUT ./Images/orange2.jpg
+INPUT ./content/Part6 Probability and Combinatorics/6.Limit Theory in Probability.tex
+INPUT ./content/Part6 Probability and Combinatorics/6.Limit Theory in Probability.tex
+INPUT content/Part6 Probability and Combinatorics/6.Limit Theory in Probability.tex
 INPUT ./Images/orange2.jpg
 INPUT ./Images/orange2.jpg
 INPUT ./Images/orange2.jpg
-INPUT ./Images/orange2.jpg
-INPUT ./Images/orange2.jpg
-INPUT ./Images/orange2.jpg
+INPUT ./content/Part6 Probability and Combinatorics/7.Stochastic Process.tex
+INPUT ./content/Part6 Probability and Combinatorics/7.Stochastic Process.tex
+INPUT content/Part6 Probability and Combinatorics/7.Stochastic Process.tex
 INPUT ./Images/orange2.jpg
 INPUT ./Images/orange2.jpg
 INPUT ./Images/orange2.jpg

@@ -1,0 +1,245 @@
+\chapterimage{orange2.jpg}
+\chapterspaceabove{6.75cm} 
+\chapterspacebelow{7.25cm} 
+
+
+
+\chapter{Counting and Probability Axioms}
+In this part, we discuss wider topics on probability and probability distributions. 
+Probability theory is a branch of mathematics that deals with the analysis of random phenomena. The fundamental concept of the theory is the probability measure, a way of assigning a number to each plausible outcome of an event in such a way that the number reflects the event's likelihood of occurring. This mathematical framework allows for the study and modeling of uncertainty and complexity in various fields, ranging from physics and biology to economics and psychology. By providing the tools to make quantitative predictions about the likelihood of certain outcomes, probability theory forms the basis for statistical inference, enabling scientists and statisticians to infer properties about a population given a sample. The origins of probability theory can be traced back to the analysis of games of chance and has since evolved into a vital component of both theoretical and applied mathematics.
+
+    \section{Counting Method}
+    The very first section in this chapter focuses on the basics of counting, which is the foundation of the whole probability theory. In the study of probability, we aim to measure 
+    random events, and to do this, we must know their frequency, or rather, how many possible outcomes each event has. Counting method allows us to get the possible number of outcomes in a 
+    systematic way.
+
+    \subsection{Principal of Counting}
+    We may start with the most basic counting. Considering tossing a coin, and we make the assumption that this coin is unbiased, meaning that the chance of getting a chance or tail must be 
+    exactly $\frac{1}{2}$. In this case, the total possible number of outcome is 2. This conclusion is obviously true and can be obtained by intuition, because we cannot find a third case that the result is neither a head nor a tail, as the event
+    is binary.
+
+    Now let's increase the number of trials, how many outcomes can we have when tossing a coin twice? If we use T to denote that the result is a head and F for the tail, like what we have
+    done in Boolean Algebra, we have 4 ways to arrange the possibilities:
+    $$(T,T), (T,F), (F,T),(F,F).$$
+    Thus we conclude that we have 4 possible outcomes. 
+
+    This example lead us to a fundamental theorem in counting.
+    \begin{theorem}[The Basic Principal of Counting]\label{Principal of Counting}
+        Suppose that two experiments are to be performed. Then if experiment1 can
+        result in any one of $m$ possible outcomes and if, for each outcome of experiment 1, there are $n$ possible outcomes of experiment 2, then together there are $mn$
+        possible outcomes of the two experiments.
+    \end{theorem}
+
+    This theorem could be proved by mathematical induction.
+    \begin{proof}
+        Start with the base case of $m = n = 1$, there are only 1 possible combination of event 1 and event 2.
+        We move on to the case when $m = n = 2$, there are $4 = 2\times 2$ outcomes: $(1, 1), (1, 2), (2, 1), (2, 2)$.
+        Suppose that the number of outcomes for each event are any integer $n \in \mathbb{N}^+$, similarly, we can enumerate all the cases from $(1, 1)$ to $(n, n)$,  $n^2 = n\times n$ outcomes.
+        For the case when the number of outcomes coming to $n+1$. We can still enumerate all $(n+1)^2 = (n+1)\times(n+1)$ outcomes in a similar way.
+        \par Therefore, the theorem is proven. This could be visualized by $$\begin{array}{l}(1,1),(1,2), \ldots,(1, n) \\(2,1),(2,2), \ldots,(2, n) \\\vdots \\(m, 1),(m, 2), \ldots,(m, n)\end{array}$$
+    \end{proof}
+
+    \begin{example}
+        A small community consists of 10 women, each of whom has 3 children. If one woman and one of her children are to be chosen as mother and child of the year,
+        how many choices are possible?
+    \end{example}
+        \begin{solution}
+            By theorem\ref{Principal of Counting}, the event chosen as woman has $m=10$ outcomes, while there are $n = 3$ outcomes for choosing children. 
+            Hence the total combinations will be $m\times n = 10\times 3 =30 $
+        \end{solution}
+    But mathematicians hate listing possible cases. Is there a way to describe the relation between the trial of events and number
+    of possible outcomes? Think about the way we treat Boolean variables in the truth table, to get the possible outcomes, we arrange them in all possible ways to get a complete
+    truth table. Just like what we do here, we are making trials twice here for tossing coins, each trial has 2 outcomes, and when we make a truth table, we are generating combinations of
+    Boolean value, and we know that $n$ Boolean variable has $2^n$ ways of arrangement. So we can say that tossing a coin here could be fitted into this relation when $n=2$, and they are
+    actually equivalent in terms of  counting the number of outcomes. With this, we can deduce that if we toss the coin for $n$ times, we also have $2^n$ outcomes.
+
+    This allows us to generalize theorem \ref{Principal of Counting}.
+
+    \begin{theorem}[The Generalized Principal of Counting]\label{Generalized Principal of Counting}
+        If $r$ experiments that are to be performed are such that the first one may result in any of $n_1$ possible outcomes; and if, for each of these $n_1$  possible outcomes,
+        there are $n_2$  possible outcomes of the second experiment; and if, for each of the possible outcomes of the first two experiments, there are $n_3$  possible outcomes
+        of the third experiment; and if ..., then there is a total of  $\Pi_{k=1}^r{n_k} = n_1 \cdot n_2 \dots n_r$ possible outcomes of the $r$ experiments.
+    \end{theorem}
+
+    Similarly, this theorem could be proven by mathematical induction with theorem\ref{Principal of Counting} as a lemma. We leave this proof as an exercise.
+
+    This theorem also what we call product rule of counting, which also applicable to probability, which we will discuss in the next section.
+
+    Now we introduce another parallel theorem known as addition rule of counting. This is even easier to understand, suppose 
+    \begin{theorem}[Addition Rule of Counting]\label{Adittion Rule}
+        Suppose that an experiment can be performed in one of $m$ ways \textbf{or} in one of $n$ ways. Where none of the $n$ ways are the same as the $m$
+        ways, then there are $m+n$ ways to perform it.
+    \end{theorem}
+    This theorem could be proven directly by using set.
+    \begin{proof}
+        Let \( A \) and \( B \) be finite sets such that \( A \cap B = \emptyset \). By the definition of disjoint sets, no element is in both \( A \) and \( B \).
+        
+        Let \( a_i \) be an element in \( A \) and \( b_j \) be an element in \( B \), for \( i = 1, 2, \ldots, n \) and \( j = 1, 2, \ldots, m \). The set \( A \) contains exactly \( n \) elements and \( B \) contains exactly \( m \) elements.
+        
+        The union \( A \cup B \) is a set containing all the elements \( a_i \) and \( b_j \) without any repetition, since \( A \) and \( B \) are disjoint.
+        
+        Therefore, the set \( A \cup B \) has \( n + m \) elements, which proves the theorem.
+        \end{proof}
+    \begin{example}
+        A student can choose a computer project from one of three lists. The three lists contain 23, 15, and 19 possible projects, respectively. 
+        No project is on more than one list. How many possible projects are there to choose from?
+    \end{example}
+    \begin{solution}
+        By addition rule, the student can choose a project by selecting a project from the first list, the second list, or the third list. Because no project is on more than one list, 
+        by the sum rule there are $23 + 15 + 19 = 57$ ways to choose a project.
+    \end{solution}
+
+    \begin{example}
+        How many different license plates can be made if each plate contains a sequence of three uppercase English letters followed by three digits (and no sequences of letters are prohibited, even if they are obscene)?
+    \end{example}
+        
+        \begin{solution}
+        To determine the number of different license plates possible, we use the rule of product, also known as the counting principle. 
+        
+        Each of the three positions for the letters can be filled with any of the 26 letters of the English alphabet. Similarly, each of the three positions for the digits can be filled with any of the 10 digits from 0 to 9.
+        
+        Therefore, the total number of possible license plates is given by:
+        \[ 26 \times 26 \times 26 \times 10 \times 10 \times 10 = 26^3 \times 10^3 \]
+        
+        Calculating the powers, we get:
+        \[ 26^3 = 26 \times 26 \times 26 = 17576 \]
+        \[ 10^3 = 10 \times 10 \times 10 = 1000 \]
+        
+        Multiplying these together, we find the total number of different license plates that can be made:
+        \[ 17576 \times 1000 = 17576000 \]
+        
+        Hence, there are 17,576,000 different possible license plates.
+        \end{solution}
+        
+        We also have another useful conclusion on counting called pigeonhole theorem. Suppose we have 8 pigeons and 7 pigeonholes, then there must be one pigeonhole that
+        holds 2 pigeons.
+        \begin{theorem}[pigeonhole theorem]
+            If $k$ is a positive integer and $k+1$ or more objects are placed into $k$ boxes, then there is at least one box containing two or more of the objects.
+        \end{theorem}
+        
+        \begin{proof}
+            We prove the pigeonhole principle using a proof by contraposition. Suppose that none of the $k$ boxes contains more than one object. Then the total number of objects would be 
+            at most $k$ This is a contradiction, because there are at least $k+1$ objects.
+        \end{proof}
+        This theorem could also be generalized.
+        \begin{theorem}[Generalized Pigeonhole Principle]
+            If \( N \) objects are placed into \( k \) boxes, then there is at least one box containing at least \( \lceil N/k \rceil \) objects.
+            \end{theorem}
+            
+            \begin{proof}
+            We will prove the statement by contraposition. Let us assume that no box contains \( \lceil N/k \rceil \) or more objects. This means each box has at most \( \lceil N/k \rceil - 1 \) objects.
+            And the number of objects being placed cannot be $N$, so we have the number of object less than $N$ (this is obvious because it can't be greater than $N$). 
+            
+            The total number of objects, under this assumption, can be represented by multiplying the number of boxes by the maximum number of objects each box could contain:
+            \[
+            k \left( \left\lceil \frac{N}{k} \right\rceil - 1 \right)
+            \]
+            Using the property that \( \lceil x \rceil \leq x + 1 \) for any real number \( x \), we substitute \( \frac{N}{k} \) for \( x \) to obtain:
+            \begin{remark}
+                We get this result in integer function, just in case that you don't remember...
+            \end{remark}
+            \[
+            \left\lceil \frac{N}{k} \right\rceil \leq \frac{N}{k} + 1
+            \]
+            Applying this to our previous equation:
+            \[
+            k \left( \left\lceil \frac{N}{k} \right\rceil - 1 \right) < k \left( \frac{N}{k} + 1 - 1 \right) = N
+            \]
+            This shows that the total number of objects is less than \( N \) under our initial assumption, which is a contradiction since we started with \( N \) objects.
+            
+            Thus, the contrapositive has been proven true: if all boxes have fewer than \( \lceil N/k \rceil \) objects, then we do not have \( N \) objects. Therefore, by contraposition, the original statement is also true: if \( N \) objects are placed into \( k \) boxes, there must be at least one box with \( \lceil N/k \rceil \) or more objects.
+            \end{proof}
+            
+        \begin{example}
+            \begin{itemize}
+                \item Among any group of 367 people, there must be at least two with the same birthday, because
+                there are only 366 possible birthdays.
+                \item In any group of 27 English words, there must be at least two that begin with the same letter,
+                because there are 26 letters in the English alphabet.
+            \end{itemize}
+        \end{example}
+
+    \subsection{Exercises}
+    \begin{exercise}
+        Prove the Generalized Principal of Counting.
+    \end{exercise}
+    \begin{proof}
+        We proceed by mathematical induction on \( r \), the number of experiments.
+        
+        \textbf{Base Case:} For \( r = 1 \), the theorem trivially holds since there are \( n_1 \) possible outcomes for the single experiment.
+        
+        \textbf{Inductive Step:} Assume that the theorem holds for \( r = k \), that is, there are \( \prod_{i=1}^k n_i \) outcomes for \( k \) experiments. Now consider \( r = k + 1 \) experiments. For the first \( k \) experiments, by the inductive hypothesis, we have \( \prod_{i=1}^k n_i \) outcomes. For each of these outcomes, the \( (k+1)^{th} \) experiment can have \( n_{k+1} \) outcomes. Therefore, the total number of outcomes for \( k + 1 \) experiments is:
+        
+        \[
+        \left( \prod_{i=1}^k n_i \right) \cdot n_{k+1} = \prod_{i=1}^{k+1} n_i
+        \]
+        
+        This completes the inductive step and thus the proof.
+    \end{proof}
+        
+    \begin{exercise}
+        How many functions are there from a set with $m$ elements to a set with $n$ elements?
+    \end{exercise}
+    \begin{solution}
+        A function corresponds to a choice of one of the $n$ elements in the codomain for each of
+        the $m$ elements in the domain. Hence, by the product rule there are $n\cdot n\cdot\cdots\cdot n=n^m$ functions from a set with $m$ elements to one with $n$ elements. 
+    \end{solution}
+
+    \begin{exercise}
+        How many one-to-one functions are there from a set with $m$ elements to one with $n$ elements?
+    \end{exercise}
+        \begin{solution}
+            First note that when $m>n$ there are no one-to-one functions from a set with $m$ elements to a set with $n$ elements.
+            
+            Now let $m\leq n.$ Suppose the elements in the domain are $\alpha_1,\alpha_2,\ldots,\alpha_m$ .There are $n$ ways to choose the value of the function at $\alpha_1.$ 
+            Because the function is one-to-one, the value of the function at $\alpha_{2}$ can be picked in $n-1$ ways (because the value used for $\alpha_{1}$ cannot be used again). 
+            In general, the value of the function at $a_k$ can be chosen in $n-k+1$ ways. By the product rule, there are $n(n-1)(n-2)\cdots(n-m+1)$ one-to-one functions from a set 
+            with $m$ elements to one with $n$ elements.
+        \end{solution}
+
+    \begin{exercise}
+        Prove that if \( A_1, A_2, \ldots, A_m \) are finite sets, then the number of elements in the Cartesian product of these sets is the product of the number of elements in each set.
+    \end{exercise}
+        
+        \begin{proof}
+        Consider the finite sets \( A_1, A_2, \ldots, A_m \) with respective cardinalities \( |A_1|, |A_2|, \ldots, |A_m| \). The Cartesian product \( A_1 \times A_2 \times \cdots \times A_m \) is defined as the set of all ordered \( m \)-tuples \( (a_1, a_2, \ldots, a_m) \) where \( a_i \in A_i \) for each \( i \).
+        
+        To construct an element of the Cartesian product, we must choose an element from each set \( A_i \). The number of ways to choose an element from \( A_1 \) is \( |A_1| \), from \( A_2 \) is \( |A_2| \), and so on, until \( A_m \) which is \( |A_m| \).
+        
+        By the product rule of counting, the total number of ways to make these choices is the product of the number of choices for each set, which gives us:
+        
+        \[ |A_1 \times A_2 \times \cdots \times A_m| = |A_1| \cdot |A_2| \cdot \ldots \cdot |A_m| \]
+        
+        This product counts the number of distinct ordered \( m \)-tuples that can be formed, which is exactly the number of elements in the Cartesian product \( A_1 \times A_2 \times \cdots \times A_m \). Hence, the proof is complete.
+        \end{proof}
+    
+    \begin{exercise}
+        Let $A$ and $B$ be finite sets. $|A| = k+1$, $|B| = k$, prove that there is no one-to-one function defined in the mapping $A \to B$.
+    \end{exercise}
+        \begin{solution}
+            By pigeonhole theorem, we have $k+1$ pigeons but only $k$ pigeonholes, so one pigeonhole must have $\lceil k+1/k \rceil = 2$ pigeonholes. This means that there is always one
+            element from the codomain are mapped from the same element in the domain. Hence, the statement is proven.
+        \end{solution}
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
