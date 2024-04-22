@@ -1068,65 +1068,7 @@
 	\end{algorithm}
 	
 	\begin{example}
-		Use the Quine--McCluskey method to simplify the sum-of-products expansion $wxyz + \overline{w}xyz + w\overline{x}yz + w\overline{x}y\overline{z} + \overline{w}\overline{x}\overline{y}\overline{z}$.
-		\begin{solution}
-		First, we represent the minterms in binary form and group them according to the number of 1s in their bit strings.
-		
-		\begin{table}[H]
-			\centering
-			\caption{Minterms represented by bit strings}
-			\begin{tabular}{@{}ccc@{}}
-				\toprule
-				Minterm & Bit String & Number of 1s \\
-				\midrule
-				\( xyz \) & 111 & 3 \\
-				\( \overline{w}yz \) & 011 & 2 \\
-				\( w\overline{x}yz \) & 101 & 2 \\
-				\( w\overline{x}y\overline{z} \) & 001 & 1 \\
-				\( \overline{w}\overline{x}\overline{y}\overline{z} \) & 000 & 0 \\
-				\bottomrule
-			\end{tabular}
-		\end{table}
-		
-		Next, we combine minterms with only one bit of difference:
-		
-		\begin{table}[H]
-			\centering
-			\caption{ Combining minterms}
-			\begin{tabular}{@{}cccccc@{}}
-				\toprule
-				Term & Bit String & \multicolumn{2}{c}{Step 1} & \multicolumn{2}{c}{Step 2} \\
-				\cmidrule(r){3-4} \cmidrule(l){5-6}
-				& & Term & String & Term & String \\
-				\midrule
-				1 & 111 & (1,2) & \( xz \) & (1,2,3,4) & \( z \) \\
-				2 & 101 & (1,3) & \( yz \) & & \( \overline{w} \) \\
-				3 & 011 & (2,4) & \( y\overline{z} \) & & \( x \) \\
-				4 & 001 & (3,4) & \( \overline{x}z \) & & \( y \) \\
-				5 & 000 & (4,5) & \( \overline{x}y \) & & \( \overline{z} \) \\
-				\bottomrule
-			\end{tabular}
-		\end{table}
-		
-		Finally, we use the prime implicant chart to determine the necessary prime implicants:
-		
-		\begin{table}[H]
-			\centering
-			\caption{Prime Implicant Chart}
-			\begin{tabular}{@{}cccccc@{}}
-				\toprule
-				& \( xz \) & \( yz \) & \( y\overline{z} \) & \( \overline{x}z \) & \( \overline{x}y \) \\
-				\midrule
-				\( z \) & X & X & & X & \\
-				\( \overline{x}y \) & & & X & & X \\
-				\bottomrule
-			\end{tabular}
-		\end{table}
-		
-		From Table 4, we see that both \( z \) and \( \overline{x}y \) are necessary to cover all minterms. Hence, the simplified Boolean expression is \( z + \overline{x}y \).
-		
-		\end{solution}
-		
+		You may check one example \href{https://www.tutorialspoint.com/digital_circuits/digital_circuits_quine_mccluskey_tabular_method.htm}{here}.
 	\end{example}
 	
 	

@@ -14,9 +14,6 @@
 \contentsline {table}{\numberline {6.5}{\ignorespaces Basic Boolean Identities}}{170}{table.6.5}%
 \contentsline {table}{\numberline {6.6}{\ignorespaces Truth values of material conditional, biconditional, and XOR for all possible inputs.}}{172}{table.6.6}%
 \contentsline {table}{\numberline {6.7}{\ignorespaces Truth table for the expression \( x \lor ((\lnot y) \land (\lnot z)) \)}}{175}{table.6.7}%
-\contentsline {table}{\numberline {6.8}{\ignorespaces Minterms represented by bit strings}}{187}{table.6.8}%
-\contentsline {table}{\numberline {6.9}{\ignorespaces Combining minterms}}{188}{table.6.9}%
-\contentsline {table}{\numberline {6.10}{\ignorespaces Prime Implicant Chart}}{188}{table.6.10}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

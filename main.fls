@@ -397,3 +397,678 @@ INPUT ./main.bbl
 INPUT ./main.bbl
 INPUT ./main.bbl
 INPUT main.bbl
+OUTPUT main.pdf
+INPUT ./Images/background.pdf
+INPUT ./Images/background.pdf
+INPUT ./Images/background.pdf
+INPUT ./Images/background.pdf
+INPUT c:/texlive-full/2023/texmf-dist/tex/latex/psnfss/t1pag.fd
+INPUT c:/texlive-full/2023/texmf-dist/tex/latex/psnfss/t1pag.fd
+INPUT c:/texlive-full/2023/texmf-dist/tex/latex/psnfss/t1pag.fd
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/avantgar/pagk8t.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/avantgar/pagk8t.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/avantgar/pagd8t.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/avantgar/pagk8t.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/vf/adobe/avantgar/pagd8t.vf
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/avantgar/pagd8r.tfm
+INPUT c:/texlive-full/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map
+INPUT c:/texlive-full/2023/texmf-dist/fonts/enc/dvips/base/8r.enc
+INPUT c:/texlive-full/2023/texmf-dist/fonts/vf/adobe/avantgar/pagk8t.vf
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/avantgar/pagk8r.tfm
+INPUT c:/texlive-full/2023/texmf-dist/tex/latex/psnfss/ts1ptm.fd
+INPUT c:/texlive-full/2023/texmf-dist/tex/latex/psnfss/ts1ptm.fd
+INPUT c:/texlive-full/2023/texmf-dist/tex/latex/psnfss/ts1ptm.fd
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/ptmr8c.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/ptmrc8t.tfm
+INPUT c:/texlive-full/2023/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd
+INPUT c:/texlive-full/2023/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd
+INPUT c:/texlive-full/2023/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/zptmcm7t.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/zptmcm7t.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/zptmcm7t.tfm
+INPUT c:/texlive-full/2023/texmf-dist/tex/latex/psnfss/omlztmcm.fd
+INPUT c:/texlive-full/2023/texmf-dist/tex/latex/psnfss/omlztmcm.fd
+INPUT c:/texlive-full/2023/texmf-dist/tex/latex/psnfss/omlztmcm.fd
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/zptmcm7m.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/zptmcm7m.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/zptmcm7m.tfm
+INPUT c:/texlive-full/2023/texmf-dist/tex/latex/psnfss/omsztmcm.fd
+INPUT c:/texlive-full/2023/texmf-dist/tex/latex/psnfss/omsztmcm.fd
+INPUT c:/texlive-full/2023/texmf-dist/tex/latex/psnfss/omsztmcm.fd
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/zptmcm7y.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/zptmcm7y.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/zptmcm7y.tfm
+INPUT c:/texlive-full/2023/texmf-dist/tex/latex/psnfss/omxztmcm.fd
+INPUT c:/texlive-full/2023/texmf-dist/tex/latex/psnfss/omxztmcm.fd
+INPUT c:/texlive-full/2023/texmf-dist/tex/latex/psnfss/omxztmcm.fd
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/zptmcm7v.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/zptmcm7v.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/zptmcm7v.tfm
+INPUT c:/texlive-full/2023/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+INPUT c:/texlive-full/2023/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+INPUT c:/texlive-full/2023/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/ptmri7t.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/ptmri7t.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/ptmri7t.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT c:/texlive-full/2023/texmf-dist/tex/latex/microtype/mt-msa.cfg
+INPUT c:/texlive-full/2023/texmf-dist/tex/latex/microtype/mt-msa.cfg
+INPUT c:/texlive-full/2023/texmf-dist/tex/latex/microtype/mt-msa.cfg
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT c:/texlive-full/2023/texmf-dist/tex/latex/microtype/mt-msb.cfg
+INPUT c:/texlive-full/2023/texmf-dist/tex/latex/microtype/mt-msb.cfg
+INPUT c:/texlive-full/2023/texmf-dist/tex/latex/microtype/mt-msb.cfg
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/ptmr8t.tfm
+INPUT c:/texlive-full/2023/texmf-dist/tex/latex/base/t1cmtt.fd
+INPUT c:/texlive-full/2023/texmf-dist/tex/latex/base/t1cmtt.fd
+INPUT c:/texlive-full/2023/texmf-dist/tex/latex/base/t1cmtt.fd
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/jknappen/ec/ectt1200.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/ptmri8t.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/vf/adobe/times/ptmr8t.vf
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/ptmr8r.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/vf/adobe/times/ptmr8c.vf
+INPUT c:/texlive-full/2023/texmf-dist/fonts/vf/adobe/times/ptmrc8t.vf
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/ptmr8r.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/vf/adobe/times/ptmr8t.vf
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/ptmr8r.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc
+INPUT c:/texlive-full/2023/texmf-dist/fonts/vf/adobe/times/ptmri8t.vf
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/ptmri8r.tfm
+INPUT ./Images/orange1.jpg
+INPUT ./Images/orange1.jpg
+INPUT ./Images/orange1.jpg
+INPUT ./Images/orange1.jpg
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/ptmr8t.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/zptmcm7t.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/zptmcm7t.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/zptmcm7t.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/zptmcm7m.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/zptmcm7m.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/zptmcm7m.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/zptmcm7y.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/zptmcm7y.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/zptmcm7y.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/zptmcm7v.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/zptmcm7v.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/zptmcm7v.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/ptmri7t.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/ptmri7t.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/ptmri7t.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT ./main.toc
+INPUT ./main.toc
+INPUT main.toc
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/ptmr8t.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/avantgar/pagk8t.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/avantgar/pagd8t.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/zptmcm7t.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/zptmcm7m.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/zptmcm7y.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/zptmcm7v.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/ptmri7t.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/ptmr8t.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/avantgar/pagk8t.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/avantgar/pagd8t.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/avantgar/pagd8t.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/avantgar/pagk8t.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/vf/adobe/avantgar/pagd8t.vf
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/avantgar/pagd8r.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/vf/adobe/avantgar/pagd8t.vf
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/avantgar/pagd8r.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/vf/adobe/avantgar/pagd8t.vf
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/avantgar/pagd8r.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/vf/adobe/avantgar/pagk8t.vf
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/avantgar/pagk8r.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/zptmcm7t.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/zptmcm7t.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/zptmcm7t.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/zptmcm7m.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/zptmcm7m.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/zptmcm7m.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/zptmcm7y.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/zptmcm7y.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/zptmcm7y.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/zptmcm7v.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/zptmcm7v.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/zptmcm7v.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/ptmri7t.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/ptmri7t.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/ptmri7t.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/vf/adobe/times/zptmcm7m.vf
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/psyro.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/ptmri8r.tfm
+OUTPUT main.toc
+INPUT ./Images/orange1.jpg
+INPUT ./Images/orange1.jpg
+INPUT ./Images/orange1.jpg
+INPUT ./main.lof
+INPUT ./main.lof
+INPUT main.lof
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/ptmr8t.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/avantgar/pagk8t.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/avantgar/pagk8t.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/vf/adobe/times/zptmcm7t.vf
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/symbol/psyr.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/ptmr8r.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/vf/adobe/times/zptmcm7t.vf
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/symbol/psyr.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/ptmr8r.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/vf/adobe/times/zptmcm7v.vf
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/symbol/psyr.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/vf/adobe/times/zptmcm7m.vf
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/psyro.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/ptmri8r.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/vf/adobe/times/zptmcm7y.vf
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm
+OUTPUT main.lof
+INPUT ./Images/orange1.jpg
+INPUT ./Images/orange1.jpg
+INPUT ./Images/orange1.jpg
+INPUT ./main.lot
+INPUT ./main.lot
+INPUT main.lot
+OUTPUT main.lot
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/ptmr8t.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/avantgar/pagk8t.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/avantgar/pagd8t.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/ptmr8t.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/avantgar/pagk8t.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/avantgar/pagd8t.tfm
+INPUT ./main.ptc
+INPUT ./main.ptc
+INPUT main.ptc
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/ptmr8t.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/vf/adobe/avantgar/pagd8t.vf
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/avantgar/pagd8r.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/vf/adobe/avantgar/pagd8t.vf
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/avantgar/pagd8r.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/vf/adobe/times/ptmr8t.vf
+INPUT ./content/part1 Intro/1.proof and proposition.tex
+INPUT ./content/part1 Intro/1.proof and proposition.tex
+INPUT content/part1 Intro/1.proof and proposition.tex
+INPUT ./Images/chap1.png
+INPUT ./Images/chap1.png
+INPUT ./Images/chap1.png
+INPUT ./Images/chap1.png
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/ptmb8t.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/avantgar/pagd8t.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/ptmr8c.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/vf/adobe/avantgar/pagd8t.vf
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/avantgar/pagd8r.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/vf/adobe/times/ptmb8t.vf
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/ptmb8r.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/vf/adobe/times/ptmr8c.vf
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/ptmr8r.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/vf/adobe/avantgar/pagk8t.vf
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/avantgar/pagk8r.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/vf/adobe/times/zptmcm7m.vf
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/psyro.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/vf/adobe/times/zptmcm7y.vf
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/symbol/psyr.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/avantgar/pagd8t.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/zptmcm7t.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/zptmcm7m.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/zptmcm7y.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/zptmcm7v.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/ptmri7t.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/ptmr8t.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/vf/adobe/times/zptmcm7t.vf
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/symbol/psyr.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/vf/adobe/times/zptmcm7t.vf
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/vf/adobe/times/zptmcm7m.vf
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/psyro.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/ptmri8r.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/vf/adobe/times/zptmcm7t.vf
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/symbol/psyr.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/ptmr8r.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/vf/adobe/times/zptmcm7v.vf
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/symbol/psyr.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/vf/adobe/times/zptmcm7y.vf
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/vf/adobe/times/zptmcm7m.vf
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/psyro.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/ptmri8r.tfm
+INPUT ./content/part1 Intro/2.Set, Sequence, Function, and Summation.tex
+INPUT ./content/part1 Intro/2.Set, Sequence, Function, and Summation.tex
+INPUT content/part1 Intro/2.Set, Sequence, Function, and Summation.tex
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/ptmr8t.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/ptmri8t.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/vf/adobe/times/ptmri8t.vf
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/ptmb8t.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/vf/adobe/times/ptmb7t.vf
+INPUT ./Images/x+y.png
+INPUT ./Images/x+y.png
+INPUT ./Images/x+y.png
+INPUT ./Images/x+y.png
+INPUT ./Images/R^2.png
+INPUT ./Images/R^2.png
+INPUT ./Images/R^2.png
+INPUT ./Images/R^2.png
+INPUT ./Images/R^3.png
+INPUT ./Images/R^3.png
+INPUT ./Images/R^3.png
+INPUT ./Images/R^3.png
+INPUT ./Images/func.jpg
+INPUT ./Images/func.jpg
+INPUT ./Images/func.jpg
+INPUT ./Images/func.jpg
+INPUT ./Images/func.jpg
+INPUT c:/texlive-full/2023/texmf-dist/fonts/vf/adobe/times/zptmcm7y.vf
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm
+INPUT ./Images/mtxvis.png
+INPUT ./Images/mtxvis.png
+INPUT ./Images/mtxvis.png
+INPUT ./Images/mtxvis.png
+INPUT c:/texlive-full/2023/texmf-dist/fonts/vf/adobe/times/zptmcm7y.vf
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm
+INPUT ./content/part1 Intro/3.Algorithm and Number System.tex
+INPUT ./content/part1 Intro/3.Algorithm and Number System.tex
+INPUT content/part1 Intro/3.Algorithm and Number System.tex
+INPUT ./Images/chap2.png
+INPUT ./Images/chap2.png
+INPUT ./Images/chap2.png
+INPUT ./Images/chap2.png
+INPUT ./Images/venn.png
+INPUT ./Images/venn.png
+INPUT ./Images/venn.png
+INPUT ./Images/venn.png
+INPUT ./Images/intfunc.png
+INPUT ./Images/intfunc.png
+INPUT ./Images/intfunc.png
+INPUT ./Images/intfunc.png
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/ptmr8t.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/vf/adobe/times/ptmr8t.vf
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/ptmr8r.tfm
+INPUT ./Images/time complexity.png
+INPUT ./Images/time complexity.png
+INPUT ./Images/time complexity.png
+INPUT ./Images/time complexity.png
+INPUT ./Images/time complexity.png
+INPUT c:/texlive-full/2023/texmf-dist/fonts/vf/adobe/times/ptmb8t.vf
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/ptmb8r.tfm
+INPUT ./content/part1 Intro/4.Inequality.tex
+INPUT ./content/part1 Intro/4.Inequality.tex
+INPUT content/part1 Intro/4.Inequality.tex
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/quadratic.png
+INPUT ./Images/quadratic.png
+INPUT ./Images/quadratic.png
+INPUT ./Images/quadratic.png
+INPUT ./Images/triangleablt0.png
+INPUT ./Images/triangleablt0.png
+INPUT ./Images/triangleablt0.png
+INPUT ./Images/triangleablt0.png
+INPUT ./Images/triangle2.png
+INPUT ./Images/triangle2.png
+INPUT ./Images/triangle2.png
+INPUT ./Images/triangle2.png
+INPUT c:/texlive-full/2023/texmf-dist/fonts/vf/adobe/times/zptmcm7m.vf
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/psyro.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/ptmri8r.tfm
+INPUT ./Images/agmx=0.png
+INPUT ./Images/agmx=0.png
+INPUT ./Images/agmx=0.png
+INPUT ./Images/agmx=0.png
+INPUT ./Images/agmx=5.png
+INPUT ./Images/agmx=5.png
+INPUT ./Images/agmx=5.png
+INPUT ./Images/agmx=5.png
+INPUT ./Images/agm3D.png
+INPUT ./Images/agm3D.png
+INPUT ./Images/agm3D.png
+INPUT ./Images/agm3D.png
+INPUT ./Images/agm3dsect.png
+INPUT ./Images/agm3dsect.png
+INPUT ./Images/agm3dsect.png
+INPUT ./Images/agm3dsect.png
+INPUT ./content/part1 Intro/5.Complex Number.tex
+INPUT ./content/part1 Intro/5.Complex Number.tex
+INPUT content/part1 Intro/5.Complex Number.tex
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/complexplane.png
+INPUT ./Images/complexplane.png
+INPUT ./Images/complexplane.png
+INPUT ./Images/complexplane.png
+INPUT ./Images/locus1.png
+INPUT ./Images/locus1.png
+INPUT ./Images/locus1.png
+INPUT ./Images/locus1.png
+INPUT ./Images/conjugate.png
+INPUT ./Images/conjugate.png
+INPUT ./Images/conjugate.png
+INPUT ./Images/conjugate.png
+INPUT ./Images/complexvector.png
+INPUT ./Images/complexvector.png
+INPUT ./Images/complexvector.png
+INPUT ./Images/complexvector.png
+INPUT ./Images/paralaw.png
+INPUT ./Images/paralaw.png
+INPUT ./Images/paralaw.png
+INPUT ./Images/paralaw.png
+INPUT ./Images/polar2.png
+INPUT ./Images/polar2.png
+INPUT ./Images/polar2.png
+INPUT ./Images/polar2.png
+INPUT ./Images/rootdemoivre.png
+INPUT ./Images/rootdemoivre.png
+INPUT ./Images/rootdemoivre.png
+INPUT ./Images/rootdemoivre.png
+INPUT ./main.ptc
+INPUT ./main.ptc
+INPUT main.ptc
+INPUT ./content/Part2 Discrete math/1.Boolean Algebra.tex
+INPUT ./content/Part2 Discrete math/1.Boolean Algebra.tex
+INPUT content/Part2 Discrete math/1.Boolean Algebra.tex
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/ptmb8t.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/ptmb8t.tfm
+INPUT ./content/Part2 Discrete math/2.Number Theory.tex
+INPUT ./content/Part2 Discrete math/2.Number Theory.tex
+INPUT content/Part2 Discrete math/2.Number Theory.tex
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/ptmrc8t.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/ptmrc8t.tfm
+INPUT ./Images/converttab.png
+INPUT ./Images/converttab.png
+INPUT ./Images/converttab.png
+INPUT ./Images/converttab.png
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/ptmri8t.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/ptmri8t.tfm
+INPUT ./content/Part2 Discrete math/3.Relation and Order.tex
+INPUT ./content/Part2 Discrete math/3.Relation and Order.tex
+INPUT content/Part2 Discrete math/3.Relation and Order.tex
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/ptmro8t.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/vf/adobe/times/ptmro8t.vf
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/ptmro8r.tfm
+INPUT ./Images/function&relation.png
+INPUT ./Images/function&relation.png
+INPUT ./Images/function&relation.png
+INPUT ./Images/function&relation.png
+INPUT ./content/Part2 Discrete math/4.Graph Theory.tex
+INPUT ./content/Part2 Discrete math/4.Graph Theory.tex
+INPUT content/Part2 Discrete math/4.Graph Theory.tex
+INPUT c:/texlive-full/2023/texmf-dist/fonts/vf/adobe/times/zptmcm7m.vf
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/psyro.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm
+INPUT c:/texlive-full/2023/texmf-dist/fonts/tfm/adobe/times/ptmri8r.tfm
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./content/Part2 Discrete math/5.Basics of Abstract Algebra.tex
+INPUT ./content/Part2 Discrete math/5.Basics of Abstract Algebra.tex
+INPUT content/Part2 Discrete math/5.Basics of Abstract Algebra.tex
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./content/Part2 Discrete math/6.Introductory Topology and Category Theory.tex
+INPUT ./content/Part2 Discrete math/6.Introductory Topology and Category Theory.tex
+INPUT content/Part2 Discrete math/6.Introductory Topology and Category Theory.tex
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./main.ptc
+INPUT ./main.ptc
+INPUT main.ptc
+INPUT ./content/Part3 Single-variable Calculus/Chapter1.tex
+INPUT ./content/Part3 Single-variable Calculus/Chapter1.tex
+INPUT content/Part3 Single-variable Calculus/Chapter1.tex
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./content/Part3 Single-variable Calculus/Chapter2.tex
+INPUT ./content/Part3 Single-variable Calculus/Chapter2.tex
+INPUT content/Part3 Single-variable Calculus/Chapter2.tex
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./content/Part3 Single-variable Calculus/Chapter3.tex
+INPUT ./content/Part3 Single-variable Calculus/Chapter3.tex
+INPUT content/Part3 Single-variable Calculus/Chapter3.tex
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./content/Part3 Single-variable Calculus/Chapter4.tex
+INPUT ./content/Part3 Single-variable Calculus/Chapter4.tex
+INPUT content/Part3 Single-variable Calculus/Chapter4.tex
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./content/Part3 Single-variable Calculus/Chapter5.tex
+INPUT ./content/Part3 Single-variable Calculus/Chapter5.tex
+INPUT content/Part3 Single-variable Calculus/Chapter5.tex
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./content/Part3 Single-variable Calculus/Chapter6.tex
+INPUT ./content/Part3 Single-variable Calculus/Chapter6.tex
+INPUT content/Part3 Single-variable Calculus/Chapter6.tex
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./content/Part3 Single-variable Calculus/Chapter7.tex
+INPUT ./content/Part3 Single-variable Calculus/Chapter7.tex
+INPUT content/Part3 Single-variable Calculus/Chapter7.tex
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./main.ptc
+INPUT ./main.ptc
+INPUT main.ptc
+INPUT ./content/Part4 Multi-variable Calculus/Chapter1.tex
+INPUT ./content/Part4 Multi-variable Calculus/Chapter1.tex
+INPUT content/Part4 Multi-variable Calculus/Chapter1.tex
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./main.ptc
+INPUT ./main.ptc
+INPUT main.ptc
+INPUT ./content/Part5 Linear Algebra/Chapter1.tex
+INPUT ./content/Part5 Linear Algebra/Chapter1.tex
+INPUT content/Part5 Linear Algebra/Chapter1.tex
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./main.ptc
+INPUT ./main.ptc
+INPUT main.ptc
+INPUT ./content/Part6 Probability and Combinatorics/Chapter1.tex
+INPUT ./content/Part6 Probability and Combinatorics/Chapter1.tex
+INPUT content/Part6 Probability and Combinatorics/Chapter1.tex
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./main.ptc
+INPUT ./main.ptc
+INPUT main.ptc
+INPUT ./content/Part7 Statistics/Chapter1.tex
+INPUT ./content/Part7 Statistics/Chapter1.tex
+INPUT content/Part7 Statistics/Chapter1.tex
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./main.ptc
+INPUT ./main.ptc
+INPUT main.ptc
+INPUT ./content/Part8 Basic Information Theory/Chapter1.tex
+INPUT ./content/Part8 Basic Information Theory/Chapter1.tex
+INPUT content/Part8 Basic Information Theory/Chapter1.tex
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+INPUT ./Images/orange2.jpg
+OUTPUT main.ptc
+INPUT main.aux
+INPUT main.run.xml
+OUTPUT main.run.xml
+INPUT c:/texlive-full/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
+INPUT c:/texlive-full/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
+INPUT c:/texlive-full/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
+INPUT c:/texlive-full/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
+INPUT c:/texlive-full/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb
+INPUT c:/texlive-full/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb
+INPUT c:/texlive-full/2023/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb
+INPUT c:/texlive-full/2023/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb
+INPUT c:/texlive-full/2023/texmf-dist/fonts/type1/urw/avantgar/uagd8a.pfb
+INPUT c:/texlive-full/2023/texmf-dist/fonts/type1/urw/avantgar/uagk8a.pfb
+INPUT c:/texlive-full/2023/texmf-dist/fonts/type1/urw/symbol/usyr.pfb
+INPUT c:/texlive-full/2023/texmf-dist/fonts/type1/urw/symbol/usyr.pfb
+INPUT c:/texlive-full/2023/texmf-dist/fonts/type1/urw/times/utmb8a.pfb
+INPUT c:/texlive-full/2023/texmf-dist/fonts/type1/urw/times/utmr8a.pfb
+INPUT c:/texlive-full/2023/texmf-dist/fonts/type1/urw/times/utmr8a.pfb
+INPUT c:/texlive-full/2023/texmf-dist/fonts/type1/urw/times/utmri8a.pfb
