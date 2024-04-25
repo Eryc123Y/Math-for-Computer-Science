@@ -320,20 +320,579 @@ Probability theory is a branch of mathematics that deals with the analysis of ra
         
         For (c), a relation that is both reflexive and symmetric requires that for any $R_{ij} = 1$, the symmetric counterpart $R_{ji} = 1$ also holds. This reduces the number of independent binary choices to the upper triangle of the matrix, including the diagonal, which consists of 6 entries. Therefore, there are $2^6$ reflexive and symmetric relations.
         
-        For (d), the equivalence relations correspond to the partitions of the set. The 4th Bell number, $B_4$, which represents the number of partitions of a set of 4 elements into non-empty subsets, is 15. Hence, there are 15 distinct equivalence relations on the set $X$.
+        For (d), the equivalence relations correspond to the partitions of the set. The 4th \href{https://math.libretexts.org/Bookshelves/Combinatorics_and_Discrete_Mathematics/Combinatorics_and_Graph_Theory_(Guichard)/01%3A_Fundamentals/1.05%3A_Bell_Numbers}{Bell Number}, $B_4$, which represents the number of partitions of a set of 4 elements into non-empty subsets, is 15. Hence, there are 15 distinct equivalence relations on the set $X$.
         
         For (e), generalizing to a set of size $n$, the answers would be $2^{(n^2)}$ for the number of relations, $2^{n(n-1)}$ for the number of reflexive relations, and $2^{n(n-1)/2}$ for the number of reflexive and symmetric relations. These results can be deduced by extension and verified via mathematical induction.
         \end{solution}
 
     \section{Combination and Permutation with applications}
+    In this section, we will introduce more powerful tools for counting, which
+    can be taken as the further abstraction to the basic counting principals we discussed
+    earlier. With these notions, we can further categorize counting problems and find
+    patterns to solve them.
         \subsection{Permutation}
+        We first introduce Permutation, which focuses on finding ways of arrangement
+        for selection with order. Consider that the string $abc$. How many ways can we 
+        arrange them? But listing all the possibilities: $abc, acb, bac, bca, cab,
+        ,cba$ we can tell that the answer is 6. For each of these results, we call it 
+        a Permutation for these letters.
 
+        Now we think about a more generalized case, where we have $n$ letters, where 
+        each letter is distinguishable, even though they are the same latter. Such as 
+        for $a_1$ and $a_2$ we have two permutations, $a_1a_2$ and $a_2a_1$.
+    
+        We can actually apply this by product rule. Since for the first letter, we 
+        are choosing it from $n$ letters, giving $n$ choices, and the second one gives
+        $n-1$ choices, so and and so forth, until we put the last remaining letter into
+        the string. We have 
+        $$n(n-1)(n-1)\dots 3\dots 2 \dots 1$$
+        which is also called $n$ factorial or full permutation.
+        \begin{definition}[Full Permutation]\label{FP}
+            Suppose now that we have $n$ objects. We have that there are $$n\cdot (n-1)\dots \cdot2 \cdot 1 = n!$$
+            possible permutations.
+        \end{definition}
+
+        \begin{notation}[Factorial($!$)]
+            The factorial of a non-negative integer \( n \), denoted by \( n! \), is the product of all positive integers less than or equal to \( n \). It is defined as:
+
+            $$
+            n! = n \times (n-1) \times (n-2) \times \cdots \times 2 \times 1
+            $$
+
+            The factorial function grows very rapidly with the increase of \( n \). It is used prominently in permutations and combinations, as well as in the calculation of probabilities and various mathematical series.
+            
+            Additionally, by convention, the factorial of zero is defined as \( 0! = 1 \).
+            There will be an exercise on this.
+        \end{notation}
+
+        We can combine the counting method for permutation with basic counting principals.
+        Here is an example.
+        \begin{example}
+        A class in probability theory consists of 6 men and 4 women. An examination is
+        given, and the students are ranked according to their performance. Assume that no
+        two students obtain the same score. How many ways of ranking are possible?
+        If the ranking are separated among boys and girls, how many ways of ranking are
+        there?
+        \begin{solution}
+            First, we need to tell which kind of arrangement is involved. Obviously,
+            ranking is ordered.
+            So for the first case, we have $(6+4)! = 3628800$ cases.
+            In the second case however, boys and girls are ranked separately. So we 
+            either rank girls first or rank boys first. We have $6!4! = 720\times 64 =17280$.
+        \end{solution}
+        \begin{remark}
+            This example also shows that \(\forall a,b\in \Z^+, (a+b)! \geq a!b!\).
+        \end{remark}
+        \end{example}
+        
+
+        Let's try out a different example.
+        \begin{example}
+            How many different letter arrangements can be formed from the letters \textbf{PEPPER}?
+        \begin{solution}
+            We first note that there are $6!$ permutations of the letters $P_1E_1P_2P_3E_2R$ when the 3P’s and the 2E’s are distinguished from one another. However, consider any one of these permutations, for instance, $P_1P_2E_1P_3E_2R$. If we now permute the P’s among themselves and the E’s among themselves, then the resultant arrangement would still be of the form PPEPER. That is, all 3! 2! permutations.$$\begin{array}{ll}P_{1} P_{2} E_{1} P_{3} E_{2} R & P_{1} P_{2} E_{2} P_{3} E_{1} R \\P_{1} P_{3} E_{1} P_{2} E_{2} R & P_{1} P_{3} E_{2} P_{2} E_{1} R \\P_{2} P_{1} E_{1} P_{3} E_{2} R & P_{2} P_{1} E_{2} P_{3} E_{1} R \\P_{2} P_{3} E_{1} P_{1} E_{2} R & P_{2} P_{3} E_{2} P_{1} E_{1} R \\P_{3} P_{1} E_{1} P_{2} E_{2} R & P_{3} P_{1} E_{2} P_{2} E_{1} R \\P_{3} P_{2} E_{1} P_{1} E_{2} R & P_{3} P_{2} E_{2} P_{1} E_{1} R\end{array}$$
+            Since we know, the full permutation case where all letters are distinguished is interpreted by $6!$ which is a full permutation. Now what we will do is excluding the cases where confusion could be caused because of repeated letters using division Principal. Therefore the answer is $\frac{6!}{3!2!} = 60$, which means excluding all the cases with the same answer attributed to the repetition. 
+        \end{solution}
+        \end{example}
+        In this example, we combined Permutation counting with division rule.
+        We call this kind of problems "Permutations with Repetition".
+
+        \begin{definition}[Permutations with Repetition] \label{PR}
+            For the permutation problem with $n$ items, among which $n_1$, $n_2$, until
+            $n_k$ are number of repetition within each item. The total number of 
+            permutation when not distinguishing repetition is
+            $$ \frac{n!}{n_1! \cdot n_2! \cdot \ldots \cdot n_k!}.$$
+         \end{definition}
+
+         Now we consider another example to introduce the specific permutation of 
+         a certain amount of element from a complete entity.
+
+         \begin{example}
+            Suppose we have 1, 2, 3, 4, four digits to generate any possible three-digit 
+            numbers, how many such numbers could be created (we will not remove any number
+            after selection)?
+            \begin{solution}
+                Since all numbers can be used multiple times, we have 3 choices among 4 numbers,
+                giving us \(4\times 4 \times 4 = 64\) choices by product rule.
+            \end{solution}
+         \end{example}
+         Now we change the scenario by removing the chosen number after each selection.
+         \begin{example} \label{numberselect}
+            Suppose we have 1, 2, 3, 4, four digits to generate any possible three-digit 
+            numbers, how many such numbers could be created (we will remove any number
+            after selection)?
+        \begin{solution}
+            We first focus on choosing the number. Since now the number will not be replaced,
+            we have \(4\times 3 \times 2 = 24\) ways to choose the number, where each number has 
+            different sequence for the digits.
+        \end{solution}
+        \end{example}
+        We see that the pattern in the second example is completely different from the first example by 
+        just changing one condition. This kind of irreplaceable permutation are categorized
+        to $r$-Permutation.
+        \begin{theorem}[$r$-Permutation]
+            If $n$ is a positive integer and $r$ is an integer with $1\leq r\leq n$, then there are
+            $$
+            P(n,r)=n(n-1)(n-2)\cdots(n-r+1)
+            $$
+            $r$-permutations of a set with $n$ distinct elements.
+            Note that another common notation for this is $^n P_r$.
+        \end{theorem}
+        
+        This could be proven by basic counting principals, leaving as an exercise.
+
+        But this open form is quite lengthy, can we write it in a closed form? Of course yes,
+        because may already realize that the form of the expression is pretty similar to 
+        factorial. But the domain of the factorial function is $\N_0$(natural number greater
+        or equal to 0), while $r\geq 1$ as mentioned in the theorem. By the definition of 
+        permutation, we know that $P(n,0)$ must evaluate to 1, for a similar reason to $0!=1$. By the division 
+        rule, we can get that $\frac{n!}{n!}=1$, which means we are not choosing anything from
+        the entity. Now, if we introduce the variable $r\in[0,n]$ to the last expression, we get
+        the closed form: $$P(n,r) = \frac{n!}{(n-r)!}$$.
+
+        \begin{corollary}
+            If $n$ and $r$ are integers with $0\leq r\leq n$, then $P(n,r)=\frac{n!}{(n-r)!}.$
+        \end{corollary}
+        The explanation above are more about reasoning, while this corollary can also be obtained by 
+        algebra analysis to $P(n,r)=n(n-1)(n-2)\cdots(n-r+1)$, since this can be taken as the quotient 
+        of some $n$ factorial divided by $n-r$ factorial.
+        
+        This is exactly what we have been using in example \ref{numberselect}.
         \subsection{Combination}
+        Now we consider some other scenario of counting.
+        \begin{example}
+        how many possible combinations
+        could be obtained by selecting 3 letters out of $a,b,c,d,e$ (non-replaceable), where the combination is not ordered,
+        meaning that $ab\equiv ba$, both together count for 1 single case.
+        \end{example}
+        \begin{solution}
+            We know that we have 5 choices for the first letter and 4 choices for the second letter, 3 for the last one.
+            so we have $5\times 4\times 3 = 60$. However, this includes some equivalent combinations,
+            which we need to rule out. 
 
-        \subsection{Further Interpretation of Counting}
+            We know that each result is a string of length 3, so we know that every 3 result will be 
+            a set of equivalent string, which will be only counted once. To exclude them, we need to 
+            divide all result of selections with the full permutation of any possible string length 3,
+            which is $3!$. So we have $\frac{5\times 4 \times 3}{3\times 2 \times 1} = 10$ cases. 
+        \end{solution}
+        This result is quite obvious, however, if you examine further, $5\times 4 \times 3 = P(5,3)$.
+        So we can write it as $\frac{P(5,3)}{3!}$. We can use the same letter $n,r$ to denote this relation
+        as $$\frac{P(n,r)}{r!} = \frac{n!}{(n-r)!r!}.$$
+        We call this $r$-combination of $n$.
+        \begin{theorem}[$r$-combination]\label{rcombi}
+            The number of $r$-combinations of a group of object with $n$ distinct elements is denoted
+            by $C(n,r)$ or $\binom{n}{r}$, and is called a binomial coefficient.
+            We define $\binom{n}{r}$,for $r\leq n$, by
+            $$\binom{n}{r} = \frac{n!}{(n-r)!r!}$$
+            and say that $\binom{n}{r}$ (read as “$n$ choose $r$”) represents the number of possible combinations of $n$ objects taken $r$ at a time.
+        \end{theorem}
+        Here is an example  for your better understanding of this.
+        \begin{example}
+            From a group of 5 women and 7 men, how many different committees consisting of 2 women and 3 men can be formed? What if 2 of the men are feuding and refuse to serve on the committee together?
+            \end{example}
+            
+            \begin{solution}
+            As there are \( \binom{5}{2} \) possible groups of 2 women, and \( \binom{7}{3} \) possible groups of 3 men, it follows from the basic principle that there are 
+            \[ \binom{5}{2} \times \binom{7}{3} = \frac{5 \cdot 4}{2 \cdot 1} \times \frac{7 \cdot 6 \cdot 5}{3 \cdot 2 \cdot 1} = 350 \]
+            possible committees consisting of 2 women and 3 men.
+            
+            Now suppose that 2 of the men refuse to serve together. Because a total of \( \binom{7}{3} = 35 \) possible groups of 3 men contain both of the feuding men, it follows that there are \( 35 - \binom{2}{2} \times \binom{5}{1} = 30 \) groups that do not contain both of the feuding men. Because there are still \( \binom{5}{2} = 10 \) ways to choose the 2 women, there are \( 30 \times 10 = 300 \) possible committees in this case.
+        \end{solution}
+        Do keep in mind that even with combination and permutation methods, the basic principles of counting are still essential for problem-solving.
 
+        Here's another important fact about binomial number.
+        \begin{corollary}
+            Let \( n \) and \( r \) be nonnegative integers with \( r \leq n \). Then \( C(n, r) = C(n, n - r) \).
+        \end{corollary}
+        \begin{proof}
+            From Theorem \ref{rcombi} it follows that
+            \[ C(n, r) = \frac{n!}{r!(n - r)!} \]
+            and
+            \[ C(n, n - r) = \frac{n!}{(n - r)![n - (n - r)]!} = \frac{n!}{(n - r)!r!}. \]
+            Hence, \( C(n, r) = C(n, n - r) \).
+            \end{proof}
+        We also provide another combinatorial proof.
+        \begin{proof}
+        By definition, the number of subsets of S with $r$ elements equals $C(n,r)$. But each subset A of S is also determined by specifying which elements are not in $A$, and so are in $A$. Because the complement of a subset of $S$ with $r$ elements has $n-r$ elements, there are also $C(n,n-r)$ subsets of S with $r$ 
+        elements. It follows that $C(n,r)=C(n,n-r).$
+        \end{proof}
+        Another interesting result is about decomposition of  combination number.
+        \begin{example}
+            Suppose you are sent to buy 6 bananas. The store has 20 bananas altogether: 19
+            good ones and 1 bad one. Any selection of 6 either avoids the bad one or includes it.
+            So the total number of selections equals the number containing only good bananas
+            plus the number that contain the bad one and 5 good ones. That is,
+            $$\begin{aligned}
+                \binom{20}{6}& =\binom{19}6+\binom{19}5=\frac{19!}{6!\times13!}+\frac{19!}{5!\times14!} \\
+                &=\frac{19\times18\times17\times16\times15\times14}{6\times5\times4\times3\times2\times1}+\frac{19\times18\times17\times16\times15}{5\times4\times3\times2\times1} \\
+                &=19\times17\times2\times3\times14+19\times18\times17\times2 \\
+                &=27 132+11 628=38 760.
+            \end{aligned}$$
+        \end{example}
+
+        This bring us to the following conclusion.
+        \begin{corollary}\label{pascal's identity}
+            This result applies in general, if $0<k<n$, then
+            $$\binom{n}{k} = \binom{n-1}{k-1} + \binom{n-1}{k}$$
+        \end{corollary}
+        \begin{proof}
+            $$
+                \begin{aligned}
+                &\begin{pmatrix}n-1\\k\end{pmatrix}+\begin{pmatrix}n-1\\k-1\end{pmatrix}=\frac{(n-1)!}{k!\times[(n-1)-k]!}+\frac{(n-1)!}{(k-1)!\times[(n-1)-(k-1)]!} \\
+                &=\frac{(n-1)!}{k!\times[n-k-1]!}+\frac{(n-1)!}{(k-1)!\times[n-k]!}\\
+                &=\frac{(n-1)!}{k!\times(n-k-1)!}\times\frac{(n-k)}{(n-k)}+\frac{k}{k}\times\frac{(n-1)!}{(k-1)!\times(n-k)!}\quad\\
+                &=\frac{[(n-k)+k]\times(n-1)!}{k!\:\times\:(n-k)!}=\frac{n\times(n-1)!}{k!\times(n-k)!}=\frac{n!}{k!\:\times\:(n-k)!}=\left(\begin{array}{c}n\\k\end{array}\right).
+                \end{aligned}
+            $$
+        \end{proof}
+        You may have realized that this is a recursive relation. We will discuss more on this topic later.
+        \begin{remark}
+            This identity is called  
+            \href{https://artofproblemsolving.com/wiki/index.php/Pascal%27s_Identity#:~:text=Pascal's%20Identity%20is%20a%20useful,Formula%2C%20and%20occasionally%20Pascal's%20Theorem.}{Pascal's Identity}.
+            You may find an interesting combinatorial proof in the link.
+        \end{remark}
+
+        \subsection{Further Interpretation of Counting with Set Theory}
+        Now let's wrap up what we have covered in this section. We have gone through combination and permutations, and have seen many examples. However, we haven't reached
+        the nature of these counting method. Fundamentally, all counting problems are set problems. Recall how the four principals of accounting are defined in the last section. Without
+        conclusions and concepts in naive set theory, none of them will exist. 
+
+        We have also seen the intricate relation between fundamental counting principals and permutation, as well as combination. Actually, set theory is one of the cornerstone of counting
+        methods. For every problem we have solved so far, we are actually manipulating a set or multiple sets, and their members. This is because set or class is the abstraction of any
+        existent objects that share some common property.
+
+        The way we distinguish different counting problems, or method we are going to use is basically by finding two properties of the problem.
+        \begin{itemize}
+            \item Whether it is a permutation or combination problem?
+            \item Can each object be selected repetitively? 
+        \end{itemize}
+
+        Now let's recap the four cases of counting and relate them to higher abstraction in sets.
+        
+        \subsubsection*{$k$-Sequences on an $n$-Set}
+        
+        \begin{definition}[$k$-Sequences on an $n$-Set]
+            When the codomain of a sequence S is the set $C$, we say that S is a sequence on C If both $k$ and $n$ are positive integers, then a k-sequence on an an-set is a 
+            function S from $\{1..k\}$ into some set $X=\{x_1,x_2,\ldots,x_n\}$ with exactly $n$ elements, and we may write S as
+            $$S=(s_1,s_2,s_3,\ldots,s_k) \text{ where each } s_j\in X.$$
+        \end{definition} 
+        For $r$-permutation that allow repetition, we can take it as the number of $k$-Sequences on an $n$-Set. This means that we are choosing $k$
+        members from set $n$, and rearrange them to any possible sequence. Since we know that in a sequence, the same object that appears multiple times are distinguishable.
+        So the total number of outcomes is $n^k$.
+
+        For example, there are $4^3$ 3-sequence on $\{1,2,3,4\}$.
+
+        For $r$-permutation that does not allow repetition, meaning that each element can only be chosen once. In this case we are trying to get a sequence of size $r$ where
+        each member is unique and is from $C$. This can be perfectly fitted into the definition of $P(n,r)$.
+        This is equivalent to "truncate" the full permutation ($(n-k)\times \dots \times 1$), so we have 
+        $$n\times(n-1)\times \dots \times(n-k+1).$$
+
+        For example, The number of 4-permutations on a 6-set is $$6\times 5 \times 4 \times 3=360.$$
+        We can actually also write the number of 6-permutations on 4-set, which is 
+        $$4 \times 3\times 2\times 1 \times 0 \times (-1)=0.$$
+        Obviously it does not exist.
+
+        We have learned that the number of subset of a $n$-set is $2^n$. This is actually a corollary fundamental counting Principal. Because for any set with $n$ member (we call it $S$),
+        we can define a characteristic sequence $X$(we discussed in set theory, chapter2), and the cardinality of the characteristic sequence must equal to $n$. Now considering
+        the subsets. Each possible characteristic sequence map to a unique subset of the original set, and each position of $X$ can only be either 0 or 1, so $S$ have $2^n$ 
+        characteristic sequence, i.e., $S$ has $2^n$ subsets.
+        
+        \subsubsection*{Number of $k$-Subsets of an $n$-Set}
+        Now we consider number of $k$-subsets of an $n$-set. Since a set has no sequence and is not repetitive 
+        element, so we know that the number of result for non-repetitive $k$-Subsets of an $n$-Set is 
+        exactly $\binom{n}{r}$.
+
+        But how can we understand combination with repetition, also known as Multiset combination?
+        Multiset combinations refer to combinations where repetition of elements is allowed. Unlike 
+        sets, where each element is unique, a multiset can contain multiple occurrences of the same 
+        element. Mathematically, we denote the number of $k$-combinations from a set with $n$ elements 
+        with repetition allowed as \( \binom{n + k - 1}{k} \).
+        \begin{definition}[$k$-Subsets of an $n$-MultiSet]
+            Given a set \( X = \{x_1, x_2, \ldots, x_n\} \), a $k$-combination with repetition allowed from $X$ 
+            is a selection of $k$ elements from X where each element can appear multiple times. The total number of such combinations is given by:
+            $$ \binom{n + k - 1}{k} = \frac{(n + k - 1)!}{k!(n - 1)!} $$
+        \end{definition}
+        Here are some examples.
+        \begin{example}
+            Consider a set of fruits \( F = \{ \text{apple}, \text{banana}, \text{cherry} \} \). If we want to select 2 fruits with repetition allowed, the possible combinations are:
+        \begin{itemize}
+        \item Two apples.
+        \item One apple and one banana.
+        \item One apple and one cherry.
+        \item Two bananas.
+        \item One banana and one cherry.
+        \item Two cherries.
+        \end{itemize}
+        The number of combinations with repetition is \( \binom{3 + 2 - 1}{2} = \binom{4}{2} = 6 \).
+        \end{example}
+
+        \begin{example}
+            For choosing 3 balls from a set of balls with colors red (R), blue (B), and green (G), we have the following multiset combinations:
+            \begin{itemize}
+              \item RRR, RRB, RRG, RBB, RBG, RGG
+              \item BBB, BBG, BGG, GGG
+              \item RRR, BBB, GGG (repetitions of the same color)
+            \end{itemize}
+            By the formula, the number of combinations with repetition is \( \binom{3 + 3 - 1}{3} = \binom{5}{3} = 10 \).
+        \end{example}
         \subsection{Multinomial Theorem and Bell Number}
+        \subsubsection*{Binomial Theorem}
+        In previous section, we introduced corollary ref{pascal's identity}. This conclusion is the foundation
+        of binomial theorem, which is why we call $\binom{n}{r}$ binomial coefficient. We have learned in the
+        middle school the basic algebra knowledge that 
+        \begin{equation}
+            (a\pm b)^2 = a^2 \pm 2ab + b^2 
+        \end{equation}
+        Though we can prove it by using basic algebra, but it does not really matter here. This conclusion
+        is only a subconclusion of its further generelization, and we call it Binomial Theorem.
+        \begin{theorem}[Binomial Theorem]\label{BT}
+            All binomials with $x\in \mathbb{R}\space \text{and}\space y\in \mathbb{R}$ with $n \in 
+            \mathbb{Z}$ follow: $$(x+y)^{n}=\sum_{k=0}^{n}\left(\begin{array}{l}n \\k\end{array}\right) x^{k} y^{n-k}$$
+        \end{theorem}
+        This theorem could be proven easily by induction with corollary \ref{pascal's identity} as lemma.
+        \begin{proof}
+            For the base case of $n = 1$, $(x+y)^1 = \binom{1}{0} x^0y^1 + \binom{1}{1}x^1y^0 = x+y$
+            With this suppose when $n = n- 1$, by theorem \ref{BT}:
+            $$(x+y)^{n-1} = \sum_{k=0}^{n-1}\left(\begin{array}{c}n-1 \\k\end{array}\right) x^{k} y^{n-1-k}$$ While $$(x+y)^n = (x+y)(x+y)^{n-1} = (x+y)\sum_{k=0}^{n-1}\left(\begin{array}{c}n-1 \\k\end{array}\right) x^{k} y^{n-1-k}$$$$= \sum_{k=0}^{n-1}\left(\begin{array}{c}n-1 \\k\end{array}\right) x^{k+1} y^{n-1-k} + \sum_{k=0}^{n-1}\left(\begin{array}{c}n-1 \\k\end{array}\right) x^{k} y^{n-k} \space \text{(Distribution Law)}$$
+            Let $i = k+1$ in the first sum and $i=k$ in the second sum:
+            
+            $$\begin{aligned}(x+y)^{n} & =\sum_{i=1}^{n}\left(\begin{array}{c}n-1 \\i-1\end{array}\right) x^{i} y^{n-i}+\sum_{i=0}^{n-1}\left(\begin{array}{c}n-1 \\i\end{array}\right) x^{i} y^{n-i} \\& =x^{n}+\sum_{i=1}^{n-1}\left[\left(\begin{array}{c}n-1 \\i-1\end{array}\right)+\left(\begin{array}{c}n-1 \\i\end{array}\right)\right] x^{i} y^{n-i}+y^{n} \\& =x^{n}+\sum_{i=1}^{n-1}\left(\begin{array}{c}n \\i\end{array}\right) x^{i} y^{n-i}+y^{n} \\& =\sum_{i=0}^{n}\left(\begin{array}{c}n \\i\end{array}\right) x^{i} y^{n-i}\end{aligned}$$
+            Thus the theorem\ref{BT} is proved.
+        \end{proof}
+        But actually we can get a more concise and elegant combinatorial proof, you may check 
+        \href{https://artofproblemsolving.com/wiki/index.php/Binomial_Theorem}{here}.
 
+        \begin{example}[Relation between coefficients]
+            The binomial theorem states that for any positive integer $n$, the expansion of $(a+b)^n$ is given by:
+            \[
+            (a + b)^n = \sum_{k=0}^{n} \binom{n}{k} a^{n-k} b^k
+            \]
+            where $\binom{n}{k}$ are the binomial coefficients.
+            \begin{remark}
+                Why this looks different from the theorem? Think about it. Is it really a different expression?
+                What if we are just interchange the notation for each number? Isn't it the same?
+            \end{remark}
+            For $n=3$:
+            \[
+            (a + b)^3 = \binom{3}{0}a^{3}b^{0} + \binom{3}{1}a^{2}b^{1} + \binom{3}{2}a^{1}b^{2} + \binom{3}{3}a^{0}b^{3}
+            \]
+            \[
+            = a^{3} + 3a^{2}b + 3ab^{2} + b^{3}
+            \]
+            
+            For $n=4$:
+            \[
+            (a + b)^4 = \binom{4}{0}a^{4}b^{0} + \binom{4}{1}a^{3}b^{1} + \binom{4}{2}a^{2}b^{2} + \binom{4}{3}a^{1}b^{3} + \binom{4}{4}a^{0}b^{4}
+            \]
+            \[
+            = a^{4} + 4a^{3}b + 6a^{2}b^{2} + 4ab^{3} + b^{4}
+            \]
+            
+            For $n=5$:
+            \[
+            (a + b)^5 = \binom{5}{0}a^{5}b^{0} + \binom{5}{1}a^{4}b^{1} + \binom{5}{2}a^{3}b^{2} + \binom{5}{3}a^{2}b^{3} + \binom{5}{4}a^{1}b^{4} + \binom{5}{5}a^{0}b^{5}
+            \]
+            \[
+            = a^{5} + 5a^{4}b + 10a^{3}b^{2} + 10a^{2}b^{3} + 5ab^{4} + b^{5}
+            \]
+            
+            The coefficients in the expansion follow a pattern known as Pascal's triangle. Each coefficient is the sum of the two coefficients above it in the previous expansion. For instance, the coefficient of $a^{3}b^{2}$ in the expansion of $(a+b)^5$ is 10, which is the sum of the coefficients of $a^{4}b^{1}$ and $a^{3}b^{2}$ from the expansion of $(a+b)^4$, which are 4 and 6, respectively.
+            You may see more \href{https://brilliant.org/wiki/pascals-triangle/}{here}.
+            \end{example}
+        
+        In the last section, we used combinatorial proof to explain why the number of subsets for a $n$-set
+        is $2^n$. Now we can get one more way to explain it by Binomial Theorem.
+        \begin{proof}
+            Since there are \(\binom{n}{k}\) subsets of size $k$, So by theorem \ref{BT}
+            $$\sum_{k=-}^{n}=(1+1)^n = 2^n.$$
+        \end{proof}
+
+        \subsubsection*{Multinomial Theorem}
+        The name of this chapter have told you that our discussion on the power of sum of numbers does not 
+        end here. Mathematicians seek to generalize every problem, so as computer scientists and programmers. 
+        Now suppose we want to find the pattern of result of some expression involving more than 3 numbers 
+        or variables $(a+b+c)^n$, how can we get the expansion?
+
+        Before we do that, let's considering such scenario. 
+        \begin{example}[Counting Problem]
+            How many ways can you arrange the letters in the word "SUCCESS"?
+            Since the word "SUCCESS" has 7 letters with 1 "S", 1 "U", 2 "C", and 3 "S", the number of arrangements is given by the multinomial coefficient:
+            \[
+            \binom{7}{1,1,2,3} = \frac{7!}{1! \cdot 1! \cdot 2! \cdot 3!} = 420.
+            \]
+        \end{example}
+
+        \begin{example}
+            Consider a set of $n$ distinct items to be divided into $r$ distinct groups of respective sizes $n_1, n_2, \ldots, n_r$, where $\sum_{i=1}^{r} n_i = n$. The number of ways to perform this division is given by the multinomial coefficient:
+            \[
+            \binom{n}{n_1, n_2, \ldots, n_r} = \frac{n!}{n_1! \cdot n_2! \cdot \ldots \cdot n_r!}
+            \]
+            This is derived from the principle of counting, starting with $\binom{n}{n_1}$ ways to choose the first group, then $\binom{n - n_1}{n_2}$ ways for the second, and so on, leading to the product of binomial coefficients which simplifies to the formula above due to the factorial terms canceling out. Each division corresponds to a unique permutation of the items into the groups, considering items within the same group as indistinguishable.
+        \end{example}
+        We have covered similar problems earlier as permutation without repetition. Here we introduce a new
+        notation for this.
+        \begin{notation}[Multinomial Coefficient]
+            If $n_1 + n_2 + \dots + n_r = n$, we define $\binom{n}{n_1, n_2, \ldots, n_r}$ by
+            \[
+            \binom{n}{n_1, n_2, \ldots, n_r} = \frac{n!}{n_1! \cdot n_2! \cdot \ldots \cdot n_r!}.
+            \]
+            Thus, $\binom{n}{n_1, n_2, \ldots, n_r}$ represents the number of possible divisions of $n$ distinct objects into $r$ distinct groups of respective sizes $n_1, n_2, \ldots, n_r$.
+        \end{notation}
+        We call this Multinomial Coefficient. This allows us to generalize Multinomial Theorem.
+
+        \begin{definition}[Multinomial Theorem]
+            The multinomial theorem extends the binomial theorem to polynomials with any number of terms. For any positive integer $n$ and non-negative integers $n_1, n_2, \ldots, n_k$ such that $n_1 + n_2 + \cdots + n_k = n$, the theorem states that:
+            \[
+            (a_1 + a_2 + \cdots + a_k)^n = \sum \binom{n}{n_1, n_2, \ldots, n_k} \cdot a_1^{n_1} \cdot a_2^{n_2} \cdots a_k^{n_k},
+            \]
+        \end{definition}
+        We only offer the combinatorial proof here, since the induction proof could be made easily by binomial
+        theorem. That will be one of the exercises.
+        \begin{proof}
+            The multinomial coefficient $\binom{n}{n_1, n_2, \ldots, n_k}$ counts the number of ways to partition a set of $n$ distinct items into $k$ bins with $n_i$ items in the $i$-th bin. This corresponds to the number of distinct sequences that can be formed by permuting the $n$ items where there are $n_i$ of the $i$-th type.
+
+            When we expand $(x_1 + x_2 + \cdots + x_k)^n$ by distributing and multiplying out all terms, each term in the expansion corresponds to choosing one of the $x_i$'s from each of the $n$ factors. The coefficient of a given term $x_1^{n_1} x_2^{n_2} \cdots x_k^{n_k}$ in the expanded product corresponds to the number of sequences of these choices, which is precisely the multinomial coefficient.
+
+            Hence, the combinatorial interpretation of the multinomial coefficients directly provides a proof of the multinomial theorem.
+
+        \end{proof}    
+        The multinomial theorem is related to permutations with repetition. Permutations with repetition occur when we want to count the number of different sequences that can be formed with a set of $n$ elements where each element can appear multiple times. The number of such permutations is given by the multinomial coefficient. This is because each term in the expansion represents a unique way to permute the $n$ objects into $k$ distinct groups with $n_1, n_2, \ldots, n_k$ objects in each group, with the condition that some objects may be identical to one another.
+        
+        \begin{example}
+            Expanding $(a + b + c)^4$ using the multinomial theorem gives:
+            \[
+            (a + b + c)^4 = \binom{4}{4,0,0}a^4 + \binom{4}{3,1,0}a^3b + \binom{4}{3,0,1}a^3c + \binom{4}{2,2,0}a^2b^2 + \ldots + \binom{4}{0,0,4}c^4
+            \]
+            which simplifies to:
+            $
+            a^4 + 4a^3b + 4a^3c + 6a^2b^2 + 6a^2bc + 6a^2c^2 + 4ab^3 + 12ab^2c + 12abc^2 + 4ac^3 + b^4 + 4b^3c + 6b^2c^2 + 4bc^3 + c^4.
+            $
+        \end{example}
+            
+
+
+        
+        \subsection{Exercises}
+        
+
+
+
+        \begin{exercise}
+            We mentioned that $0!=1$ is defined purposely. Why it cannot be 0?
+            Justify or refute it in any way you can work out. 
+        \end{exercise}
+        \begin{solution}
+            Here are some possible explanations.
+            \begin{itemize}
+                \item Since factorial $n$ represents the way of ordered arrangement
+                for $n$ objects, for 0 objects, we only have one way of arranging.
+                \item $n!=n(n-1)!$, so we need to make sure $1 = 1(0)!$ exists, and
+                therefore we  $0!=1$
+            \end{itemize}
+        \end{solution}
+        \begin{exercise}
+            Define a function \( f: \mathbb{N}_0 \rightarrow \mathbb{N}_0 \) by the following recursive relation:
+            \[
+            f(n) =
+            \begin{cases} 
+            1 & \text{if } n = 0, \\
+            n \cdot f(f(n-1)) & \text{if } n > 0.
+            \end{cases}
+            \]
+            \begin{enumerate}
+                \item Prove or disprove: The function \( f(n) \) is always equal to \( n! \).
+                \item If \( f(n) \) does not always equal \( n! \), find an explicit expression for \( f(n) \) and provide examples that demonstrate how \( f(n) \) deviates from \( n! \).
+            \end{enumerate}
+            \textbf{Hint}: Compare this function with the strictly defined factorial
+            recursive function.
+        \end{exercise}
+        
+        \begin{exercise}
+            Prove that If $n$ is a positive integer and $r$ is an integer with $1\leq r\leq n$, then there are
+            $$
+            P(n,r)=n(n-1)(n-2)\cdots(n-r+1).
+            $$
+        \end{exercise}
+        \begin{proof}
+            We will use the product rule to prove that this formula is correct. The first element of the permutation can be chosen in $n$ ways because there are $n$ elements in the set. There are $n-1$ ways to choose the second element of the permutation, because there are $n-1$ elements left in the set after using the element picked for the first position. Similarly, there are $n-2$ ways to choose the third element, and so on, until there are exactly $n-(r-1)=n-r+1$ ways to choose the $r$th element. Consequently, by the product rule, there are
+            $$
+            n(n-1)(n-2)\cdots(n-r+1)
+            $$
+            $r$-permutations of the set.
+        \end{proof}
+
+        \begin{exercise}
+            How many letter arrangements can be made from the letters
+            \begin{enumerate}[label=(\alph*)]
+            \item Fluke?
+            \item Propose?
+            \item Mississippi?
+            \item Arrange?
+            \end{enumerate}
+        \end{exercise}
+
+        \begin{solution}
+            We can find the number of different arrangements of the letters by considering the factorials of the total number of letters divided by the factorials of the number of repeated letters.
+            
+            \begin{enumerate}[label=(\alph*)]
+            \item For the word \emph{Fluke}, there are no repeating letters. So, the number of different arrangements is simply \(5!\):
+            \[ 5! = 5 \times 4 \times 3 \times 2 \times 1 = 120. \]
+            
+            \item For the word \emph{Propose}, the letter `P' is repeated twice and the rest are distinct. So, the number of arrangements is:
+            \[ \frac{7!}{2!} = \frac{7 \times 6 \times 5 \times 4 \times 3 \times 2 \times 1}{2 \times 1} = 2520. \]
+            
+            \item In the word \emph{Mississippi}, we have `S' repeated four times, `I' repeated four times, and `P' repeated twice. The total number of arrangements is:
+            \[ \frac{11!}{4!4!2!} = \frac{11 \times 10 \times 9 \times 8 \times 7 \times 6 \times 5 \times 4 \times 3 \times 2 \times 1}{(4 \times 3 \times 2 \times 1)(4 \times 3 \times 2 \times 1)(2 \times 1)} = 34650. \]
+            
+            \item For the word \emph{Arrange}, the letter `A' is repeated twice, and the letter `R' is repeated twice. The number of different arrangements is:
+            \[ \frac{7!}{2!2!} = \frac{7 \times 6 \times 5 \times 4 \times 3 \times 2 \times 1}{(2 \times 1)(2 \times 1)} = 1260. \]
+            \end{enumerate}
+            In each of these cases, we use the formula for permutations of n items with repetition, \(\frac{n!}{n_1! \times n_2! \times \ldots \times n_k!}\), where \(n_i\) is the number of times the ith element is repeated.
+        \end{solution}
+
+        \begin{exercise}
+            Prove Multinomial Theorem by induction with Binomial Theorem
+        \end{exercise}
+        \begin{solution}
+                the multinomial theorem states:
+                \[
+                (x_1 + x_2 + \cdots + x_k)^n = \sum \binom{n}{n_1, n_2, \ldots, n_k} x_1^{n_1} x_2^{n_2} \cdots x_k^{n_k},
+                \]
+                where the sum is taken over all sequences of non-negative integer indices $n_1, n_2, \ldots, n_k$ such that $n_1 + n_2 + \cdots + n_k = n$.
+                
+            \begin{proof}
+                We will prove the multinomial theorem by induction on the number of terms $k$.
+                
+                \textbf{Base Case} ($k=2$):
+                For $k=2$, the theorem reduces to the binomial theorem, which is already known to be true. That is,
+                \[
+                (x_1 + x_2)^n = \sum_{i=0}^{n} \binom{n}{i} x_1^{n-i} x_2^i.
+                \]
+                
+                \textbf{Inductive Step}:
+                Assume the theorem holds for some $k \geq 2$. We must show it also holds for $k+1$. Consider the expression $(x_1 + x_2 + \cdots + x_k + x_{k+1})^n$. We can write this as:
+                \[
+                \left((x_1 + x_2 + \cdots + x_k) + x_{k+1}\right)^n.
+                \]
+                By the binomial theorem, this is equal to:
+                \[
+                \sum_{i=0}^{n} \binom{n}{i} (x_1 + x_2 + \cdots + x_k)^{n-i} x_{k+1}^i.
+                \]
+                By the induction hypothesis, each term $(x_1 + x_2 + \cdots + x_k)^{n-i}$ can be expanded as:
+                \[
+                \sum \binom{n-i}{n_1, n_2, \ldots, n_k} x_1^{n_1} x_2^{n_2} \cdots x_k^{n_k},
+                \]
+                where the sum is taken over all sequences of non-negative integer indices $n_1, n_2, \ldots, n_k$ such that $n_1 + n_2 + \cdots + n_k = n-i$.
+                
+                Thus, the entire expression expands to:
+                \[
+                \sum_{i=0}^{n} \binom{n}{i} \sum \binom{n-i}{n_1, n_2, \ldots, n_k} x_1^{n_1} x_2^{n_2} \cdots x_k^{n_k} x_{k+1}^i,
+                \]
+                where the outer sum is taken over $i$ and the inner sum is taken over $n_1, n_2, \ldots, n_k$.
+                
+                This is the multinomial expansion for $k+1$ terms. By the principle of mathematical induction, the theorem is proved.
+            \end{proof}
+        \end{solution}
 
 
 

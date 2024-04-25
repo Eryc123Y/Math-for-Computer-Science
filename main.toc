@@ -120,7 +120,7 @@
 \contentsline {paragraph}{Solution:}{216}{paragraph*.5}%
 \contentsline {subsection}{\numberline {7.4.2}The Chinese Remainder Theorem}{219}{subsection.7.4.2}%
 \contentsline {subsection}{\numberline {7.4.3}Fermat's Little Theorem}{223}{subsection.7.4.3}%
-\contentsline {chapter}{\numberline {8}Relation and Order}{227}{chapter.8}%
+\contentsline {chapter}{\numberline {8}Relation}{227}{chapter.8}%
 \contentsline {section}{\numberline {8.1}Basic Relation and NBG Set Theory}{227}{section.8.1}%
 \contentsline {subsection}{\numberline {8.1.1}Class}{228}{subsection.8.1.1}%
 \contentsline {subsection}{\numberline {8.1.2}Binary Relations, Composition and Inverse}{232}{subsection.8.1.2}%
@@ -295,33 +295,34 @@
 \contentsline {subsection}{\numberline {33.1.3}Exercises}{326}{subsection.33.1.3}%
 \contentsline {section}{\numberline {33.2}Combination and Permutation with applications}{329}{section.33.2}%
 \contentsline {subsection}{\numberline {33.2.1}Permutation}{329}{subsection.33.2.1}%
-\contentsline {subsection}{\numberline {33.2.2}Combination}{329}{subsection.33.2.2}%
-\contentsline {subsection}{\numberline {33.2.3}Further Interpretation of Counting}{329}{subsection.33.2.3}%
-\contentsline {subsection}{\numberline {33.2.4}Multinomial Theorem and Bell Number}{329}{subsection.33.2.4}%
-\contentsline {chapter}{\numberline {34}Conditional Probability and Independence of Events}{331}{chapter.34}%
-\contentsline {chapter}{\numberline {35}Discrete Distribution and Random Variable}{333}{chapter.35}%
-\contentsline {chapter}{\numberline {36}Continuous Distribution}{335}{chapter.36}%
-\contentsline {chapter}{\numberline {37}Joint Cumulative Distribution}{337}{chapter.37}%
-\contentsline {chapter}{\numberline {38}Limit Theory in Probability}{339}{chapter.38}%
-\contentsline {chapter}{\numberline {39}Stochastic Process}{341}{chapter.39}%
-\contentsline {part}{\numberline {VII}Statistics}{343}{part.7}%
-\contentsline {chapter}{\numberline {40}Sampling and Parameters}{345}{chapter.40}%
-\contentsline {chapter}{\numberline {41}Descriptive Statistics}{347}{chapter.41}%
-\contentsline {chapter}{\numberline {42}Graphical Statistics}{349}{chapter.42}%
-\contentsline {chapter}{\numberline {43}Statistical Inference}{351}{chapter.43}%
-\contentsline {section}{\numberline {43.1}Parameter Estimation}{351}{section.43.1}%
-\contentsline {section}{\numberline {43.2}Interval Estimation}{351}{section.43.2}%
-\contentsline {section}{\numberline {43.3}Hypothesis Testing}{351}{section.43.3}%
-\contentsline {section}{\numberline {43.4}Variance Inference}{351}{section.43.4}%
-\contentsline {section}{\numberline {43.5}Bayesian Inference}{351}{section.43.5}%
-\contentsline {chapter}{\numberline {44}Hypothesis Testing}{353}{chapter.44}%
-\contentsline {chapter}{\numberline {45}Regression and Regressive Analysis}{355}{chapter.45}%
-\contentsline {chapter}{\numberline {46}Basic Multi-variable Statistical analysis}{357}{chapter.46}%
-\contentsline {part}{\numberline {VIII}Information Theory}{359}{part.8}%
-\contentsline {chapter}{\numberline {47}Measuring of Information}{361}{chapter.47}%
-\contentsline {chapter}{\numberline {48}Information Entropy}{363}{chapter.48}%
-\contentsline {chapter}{\numberline {49}Joined Entropy and Conditional Entropy}{365}{chapter.49}%
-\contentsline {chapter}{\numberline {50}Cross Entropy and Relative Entropy}{367}{chapter.50}%
-\contentsline {chapter}{\numberline {51}Mutual Information}{369}{chapter.51}%
-\contentsline {chapter}{\numberline {52}Differential Entropy}{371}{chapter.52}%
+\contentsline {subsection}{\numberline {33.2.2}Combination}{331}{subsection.33.2.2}%
+\contentsline {subsection}{\numberline {33.2.3}Further Interpretation of Counting with Set Theory}{334}{subsection.33.2.3}%
+\contentsline {subsection}{\numberline {33.2.4}Multinomial Theorem and Bell Number}{335}{subsection.33.2.4}%
+\contentsline {subsection}{\numberline {33.2.5}Exercises}{339}{subsection.33.2.5}%
+\contentsline {chapter}{\numberline {34}Conditional Probability and Independence of Events}{343}{chapter.34}%
+\contentsline {chapter}{\numberline {35}Discrete Distribution and Random Variable}{345}{chapter.35}%
+\contentsline {chapter}{\numberline {36}Continuous Distribution}{347}{chapter.36}%
+\contentsline {chapter}{\numberline {37}Joint Cumulative Distribution}{349}{chapter.37}%
+\contentsline {chapter}{\numberline {38}Limit Theory in Probability}{351}{chapter.38}%
+\contentsline {chapter}{\numberline {39}Stochastic Process}{353}{chapter.39}%
+\contentsline {part}{\numberline {VII}Statistics}{355}{part.7}%
+\contentsline {chapter}{\numberline {40}Sampling and Parameters}{357}{chapter.40}%
+\contentsline {chapter}{\numberline {41}Descriptive Statistics}{359}{chapter.41}%
+\contentsline {chapter}{\numberline {42}Graphical Statistics}{361}{chapter.42}%
+\contentsline {chapter}{\numberline {43}Statistical Inference}{363}{chapter.43}%
+\contentsline {section}{\numberline {43.1}Parameter Estimation}{363}{section.43.1}%
+\contentsline {section}{\numberline {43.2}Interval Estimation}{363}{section.43.2}%
+\contentsline {section}{\numberline {43.3}Hypothesis Testing}{363}{section.43.3}%
+\contentsline {section}{\numberline {43.4}Variance Inference}{363}{section.43.4}%
+\contentsline {section}{\numberline {43.5}Bayesian Inference}{363}{section.43.5}%
+\contentsline {chapter}{\numberline {44}Hypothesis Testing}{365}{chapter.44}%
+\contentsline {chapter}{\numberline {45}Regression and Regressive Analysis}{367}{chapter.45}%
+\contentsline {chapter}{\numberline {46}Basic Multi-variable Statistical analysis}{369}{chapter.46}%
+\contentsline {part}{\numberline {VIII}Information Theory}{371}{part.8}%
+\contentsline {chapter}{\numberline {47}Measuring of Information}{373}{chapter.47}%
+\contentsline {chapter}{\numberline {48}Information Entropy}{375}{chapter.48}%
+\contentsline {chapter}{\numberline {49}Joined Entropy and Conditional Entropy}{377}{chapter.49}%
+\contentsline {chapter}{\numberline {50}Cross Entropy and Relative Entropy}{379}{chapter.50}%
+\contentsline {chapter}{\numberline {51}Mutual Information}{381}{chapter.51}%
+\contentsline {chapter}{\numberline {52}Differential Entropy}{383}{chapter.52}%
 \contentsfinish 
