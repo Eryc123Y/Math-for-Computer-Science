@@ -612,6 +612,19 @@ Probability theory is a branch of mathematics that deals with the analysis of ra
             is a selection of $k$ elements from X where each element can appear multiple times. The total number of such combinations is given by:
             $$ \binom{n + k - 1}{k} = \frac{(n + k - 1)!}{k!(n - 1)!} $$
         \end{definition}
+        \begin{proof}
+            We model the problem of selecting $k$ elements from the multiset $X$ using the stars and bars method. In this method, we represent each selection by a star (*) and use bars (|) to separate the different types of elements in the multiset.
+            
+            For $k$ selections and $n$ types of elements, we need $k$ stars and $n-1$ bars. The bars are used to partition the $k$ stars into $n$ distinct groups, where each group corresponds to one type of element from the multiset $X$.
+            
+            The total number of symbols (stars and bars together) is $n + k - 1$. To find the number of ways to arrange these symbols, we need to choose $k$ positions for the stars out of the $n + k - 1$ available positions, leaving the remaining positions for the bars.
+            
+            This is equivalent to choosing $k$ elements from a set of $n + k - 1$ elements, which is given by the binomial coefficient:
+            \[
+            \binom{n+k-1}{k} = \frac{(n+k-1)!}{k!(n-1)!}
+            \]
+            Thus, the number of $k$-subsets of an $n$-multiset, where repetition is allowed, is precisely the number of ways to arrange $k$ stars and $n-1$ bars, confirming the formula.
+        \end{proof}
         Here are some examples.
         \begin{example}
             Consider a set of fruits \( F = \{ \text{apple}, \text{banana}, \text{cherry} \} \). If we want to select 2 fruits with repetition allowed, the possible combinations are:
@@ -635,6 +648,19 @@ Probability theory is a branch of mathematics that deals with the analysis of ra
             \end{itemize}
             By the formula, the number of combinations with repetition is \( \binom{3 + 3 - 1}{3} = \binom{5}{3} = 10 \).
         \end{example}
+        Here is a brief wrap up for distinguishing these problems.
+        \begin{itemize}
+            \item \textbf{$k$-subset of an \( n \)-set}: In this scenario, the set consists of \( n \) distinct elements, and we want to choose \( k \) of them. No element can be chosen more than once because sets do not allow for repetition. The order of selection does not matter, and the total number of \( k \)-subsets is given by the binomial coefficient \( \binom{n}{k} \).
+            \item \textbf{$k$-subset of an \( n \)-multiset}: In contrast, a multiset can have repeated elements, so when we choose \( k \) elements from an \( n \)-multiset, we are allowed to select the same element multiple times. This greatly increases the number of possible combinations since each of the \( k \) slots can be filled with any of the \( n \) elements, with repetitions. The total number of such combinations is given by \( \binom{n+k-1}{k} \), which accounts for the possibility of repetition.
+        \end{itemize}
+        \begin{example}
+            Consider a set \( S \) of 5 distinct books. If we want to select 3 books to place on a shelf, we use combinations without repetition. The total number of ways to do this is given by:
+            \[ \binom{5}{3} = \frac{5!}{3!(5-3)!} = 10. \]
+            Now, consider a multiset \( M \) of 5 types of fruits with an unlimited quantity of each type. If we want to select a basket of 3 fruits, where we can select the same type more than once, we use combinations with repetition. The total number of ways to do this is given by:
+            \[ \binom{5+3-1}{3} = \binom{7}{3} = \frac{7!}{3!(7-3)!} = 35. \]
+            When counting selections from a set, we use combinations without repetition because each element can be chosen only once. In contrast, when counting selections from a multiset, we use combinations with repetition since each element can appear multiple times in a selection.
+        \end{example}
+        
         \subsection{Multinomial Theorem and Bell Number}
         \subsubsection*{Binomial Theorem}
         In previous section, we introduced corollary ref{pascal's identity}. This conclusion is the foundation
@@ -704,7 +730,7 @@ Probability theory is a branch of mathematics that deals with the analysis of ra
         is $2^n$. Now we can get one more way to explain it by Binomial Theorem.
         \begin{proof}
             Since there are \(\binom{n}{k}\) subsets of size $k$, So by theorem \ref{BT}
-            $$\sum_{k=-}^{n}=(1+1)^n = 2^n.$$
+            $$\sum_{k=0}^{n}\binom{n}{k}=(1+1)^n = 2^n.$$
         \end{proof}
 
         \subsubsection*{Multinomial Theorem}
@@ -850,6 +876,41 @@ Probability theory is a branch of mathematics that deals with the analysis of ra
             In each of these cases, we use the formula for permutations of n items with repetition, \(\frac{n!}{n_1! \times n_2! \times \ldots \times n_k!}\), where \(n_i\) is the number of times the ith element is repeated.
         \end{solution}
 
+        \begin{exercise}
+            \begin{enumerate}
+                \item How many ways can a president, treasurer, and secretary be chosen from a group of 10 people?
+                \item How many ways can a team of three people be chosen from a group of 10 people?
+                \item What's the essential difference between (a) and (b)? Which answer is larger? Could you have known this without doing any calculation?
+                \item How many ways can a bowl of three scoops of ice-cream be selected from 10 flavours? (Multiple scoops of the same flavour are allowed.)
+                \item How many ways can five different prizes be divided among Anastasia, Becky, and Cadel? (Not everyone has to get a prize.)
+                \item In how many different orders can six horses finish a race? (Assume there are no ties and they all do finish.)
+            \end{enumerate}
+        \end{exercise}
+        \begin{solution}
+            For question (a), since the roles are distinct and order matters, we use permutations. The number of ways is given by \( P(10, 3) \).
+            \[ P(10, 3) = \frac{10!}{(10-3)!} = 10 \times 9 \times 8 = 720. \]
+
+            For question (b), as order does not matter, we use combinations. The number of ways is given by \( \binom{10}{3} \).
+
+         \[ \binom{10}{3} = \frac{10!}{3!7!} = \frac{10 \times 9 \times 8}{3 \times 2 \times 1} = 120. \]
+
+         For question (c), the essential difference lies in the consideration of order. (a) uses permutations and is thus larger. Without calculations, we could deduce this due to the nature of permutations yielding more outcomes than combinations when order is taken into account.
+
+         For question (d), concerning the selection of ice-cream scoops, we consider two cases:
+
+        \textbf{Case 1: Order of scoops matters.} Each of the three scoops can be one of 10 flavours, and the order in which the flavours are chosen matters. In this case, each scoop is distinct, and the number of ways to select the ice-cream is \( 10^3 \).
+        \[ 10^3 = 1000. \]
+        \textbf{Case 2: Order of scoops does not matter.} We are interested in the combination of flavours regardless of the order. This is a problem of combinations with repetition. The number of ways to select the ice-cream is given by the formula for combinations with repetition:
+        \[ \binom{n + k - 1}{k} \]
+        where \( n \) is the number of options (flavours), and \( k \) is the number of selections (scoops). Here, \( n = 10 \) and \( k = 3 \):
+        \[ \binom{10 + 3 - 1}{3} = \binom{12}{3} = \frac{12!}{3!9!} = \frac{12 \times 11 \times 10}{3 \times 2 \times 1} = 220. \]
+        So there are 220 different combinations if we do not consider the order of scoops.
+
+        For question (e), each of the five prizes can be awarded to any one of the three people independently, resulting in \( 3^5 \) ways.
+        \[ 3^5 = 243. \]
+        For question (f), every horse finishing in a unique position is a permutation of 6 items.
+        \[ 6! = 720. \]
+        \end{solution}
         \begin{exercise}
             Prove Multinomial Theorem by induction with Binomial Theorem
         \end{exercise}
