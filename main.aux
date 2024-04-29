@@ -2,17 +2,6 @@
 \providecommand\zref@newlabel[2]{}
 \abx@aux@refcontext{nyt/global//global/global}
 \providecommand\hyper@newdestlabel[2]{}
-\providecommand\HyperFirstAtBeginDocument{\AtBeginDocument}
-\HyperFirstAtBeginDocument{\ifx\hyper@anchor\@undefined
-\global\let\oldnewlabel\newlabel
-\gdef\newlabel#1#2{\newlabelxx{#1}#2}
-\gdef\newlabelxx#1#2#3#4#5#6{\oldnewlabel{#1}{{#2}{#3}}}
-\AtEndDocument{\ifx\hyper@anchor\@undefined
-\let\newlabel\oldnewlabel
-\fi}
-\fi}
-\global\let\hyper@last\relax 
-\gdef\HyperFirstAtBeginDocument#1{#1}
 \providecommand\HyField@AuxAddToFields[1]{}
 \providecommand\HyField@AuxAddToCoFields[2]{}
 \providecommand\BKM@entry[2]{}
@@ -20,7 +9,7 @@
 \pgfsyspdfmark {pgfid2}{5594039}{48027987}
 \pgfsyspdfmark {pgfid3}{5594039}{48033493}
 \pgfsyspdfmark {pgfid4}{5594039}{48050247}
-\BKM@entry{id=1,open,dest={706172742E31},color={.95294 .4 .09804},flags=2,srcline={206}}{5C3337365C3337375C303030495C3030305C3034305C303030495C3030306E5C303030745C303030725C3030306F5C303030645C303030755C303030635C303030745C3030306F5C303030725C303030795C3030305C3034305C303030545C3030306F5C303030705C303030695C303030635C30303073}
+\BKM@entry{id=1,open,dest={706172742E31},color={.95294 .4 .09804},flags=2,srcline={222}}{5C3337365C3337375C303030495C3030305C3034305C303030495C3030306E5C303030745C303030725C3030306F5C303030645C303030755C303030635C303030745C3030306F5C303030725C303030795C3030305C3034305C303030545C3030306F5C303030705C303030695C303030635C30303073}
 \ttl@writefile{ptc}{\ttl@starttoc{part@1}}
 \pgfsyspdfmark {pgfid5}{5594039}{33587398}
 \@writefile{toc}{\contentsline {part}{\numberline {I}Introductory Topics}{17}{part.1}\protected@file@percent }
@@ -99,6 +88,7 @@
 \zref@newlabel{mdf@pagelabel-38}{\default{2.2}\page{44}\abspage{44}\mdf@pagevalue{44}}
 \newlabel{def:partition}{{2.11}{44}{Partition of Sets}{definitionT.2.11}{}}
 \zref@newlabel{mdf@pagelabel-39}{\default{2.2}\page{45}\abspage{45}\mdf@pagevalue{45}}
+\newlabel{IE}{{2.1}{45}{The Principle of Inclusion-Exclusion}{theoremeT.2.1}{}}
 \zref@newlabel{mdf@pagelabel-40}{\default{2.2}\page{45}\abspage{45}\mdf@pagevalue{45}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.2.1}Exercises}{45}{subsection.2.2.1}\protected@file@percent }
 \zref@newlabel{mdf@pagelabel-41}{\default{2.2.1}\page{45}\abspage{45}\mdf@pagevalue{45}}
@@ -438,7 +428,7 @@
 \zref@newlabel{mdf@pagelabel-209}{\default{5.5.4}\page{161}\abspage{161}\mdf@pagevalue{161}}
 \zref@newlabel{mdf@pagelabel-210}{\default{5.5.4}\page{162}\abspage{162}\mdf@pagevalue{162}}
 \zref@newlabel{mdf@pagelabel-211}{\default{5.5.4}\page{162}\abspage{162}\mdf@pagevalue{162}}
-\BKM@entry{id=27,open,dest={706172742E32},color={.95294 .4 .09804},flags=2,srcline={213}}{5C3337365C3337375C303030495C303030495C3030305C3034305C303030465C303030755C303030725C303030745C303030685C303030655C303030725C3030305C3034305C303030445C303030695C303030735C303030635C303030725C303030655C303030745C303030655C3030305C3034305C3030304D5C303030615C303030745C303030685C303030655C3030306D5C303030615C303030745C303030695C303030635C303030735C3030305C3034305C303030615C3030306E5C303030645C3030305C3034305C303030545C303030685C303030655C3030306F5C303030725C303030695C303030655C30303073}
+\BKM@entry{id=27,open,dest={706172742E32},color={.95294 .4 .09804},flags=2,srcline={229}}{5C3337365C3337375C303030495C303030495C3030305C3034305C303030465C303030755C303030725C303030745C303030685C303030655C303030725C3030305C3034305C303030445C303030695C303030735C303030635C303030725C303030655C303030745C303030655C3030305C3034305C3030304D5C303030615C303030745C303030685C303030655C3030306D5C303030615C303030745C303030695C303030635C303030735C3030305C3034305C303030615C3030306E5C303030645C3030305C3034305C303030545C303030685C303030655C3030306F5C303030725C303030695C303030655C30303073}
 \ttl@writefile{ptc}{\ttl@stoptoc{part@1}}
 \ttl@writefile{ptc}{\ttl@starttoc{part@2}}
 \pgfsyspdfmark {pgfid42}{5594039}{33587398}
@@ -619,17 +609,18 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {8.1.1}Class}{228}{subsection.8.1.1}\protected@file@percent }
 \zref@newlabel{mdf@pagelabel-282}{\default{8.1.1}\page{228}\abspage{228}\mdf@pagevalue{228}}
 \@writefile{loe}{\addvspace {10\p@ }}
-\@writefile{loe}{\contentsline {axiom}{\ifthmt@listswap Axiom\nobreakspace  {}1\else \numberline {1}Axiom\fi \thmtformatoptarg {Axiom of Extensionality}}{229}{axiom.1}\protected@file@percent }
-\@writefile{loe}{\contentsline {axiom}{\ifthmt@listswap Axiom\nobreakspace  {}2\else \numberline {2}Axiom\fi \thmtformatoptarg {Axiom Scheme of Classification}}{229}{axiom.2}\protected@file@percent }
+\@writefile{loe}{\contentsline {axiom}{\ifthmt@listswap Axiom~8.1\else \numberline {8.1}Axiom\fi \thmtformatoptarg {Axiom of Extensionality}}{229}{axiom.8.1}\protected@file@percent }
+\@writefile{loe}{\contentsline {axiom}{\ifthmt@listswap Axiom~8.2\else \numberline {8.2}Axiom\fi \thmtformatoptarg {Axiom Scheme of Classification}}{229}{axiom.8.2}\protected@file@percent }
 \zref@newlabel{mdf@pagelabel-283}{\default{8.1.1}\page{229}\abspage{229}\mdf@pagevalue{229}}
 \zref@newlabel{mdf@pagelabel-284}{\default{8.1.1}\page{230}\abspage{230}\mdf@pagevalue{230}}
 \zref@newlabel{mdf@pagelabel-285}{\default{8.1.1}\page{230}\abspage{230}\mdf@pagevalue{230}}
 \zref@newlabel{mdf@pagelabel-286}{\default{8.1.1}\page{230}\abspage{230}\mdf@pagevalue{230}}
-\@writefile{loe}{\contentsline {lemma}{\ifthmt@listswap Lemma\nobreakspace  {}8.1\else \numberline {8.1}Lemma\fi }{231}{lemma.8.1}\protected@file@percent }
+\newlabel{intofclass}{{8.5}{230}{Intersection and Union of Class(of one single class)}{definitionT.8.5}{}}
+\@writefile{loe}{\contentsline {lemma}{\ifthmt@listswap Lemma~8.1\else \numberline {8.1}Lemma\fi }{231}{lemma.8.1}\protected@file@percent }
 \zref@newlabel{mdf@pagelabel-287}{\default{8.1.1}\page{231}\abspage{231}\mdf@pagevalue{231}}
-\@writefile{loe}{\contentsline {axiom}{\ifthmt@listswap Axiom\nobreakspace  {}3\else \numberline {3}Axiom\fi \thmtformatoptarg {Power Set Axiom}}{232}{axiom.3}\protected@file@percent }
-\@writefile{loe}{\contentsline {axiom}{\ifthmt@listswap Axiom\nobreakspace  {}4\else \numberline {4}Axiom\fi \thmtformatoptarg {Pairing Axiom}}{232}{axiom.4}\protected@file@percent }
-\@writefile{loe}{\contentsline {axiom}{\ifthmt@listswap Axiom\nobreakspace  {}5\else \numberline {5}Axiom\fi \thmtformatoptarg {Union Axiom}}{232}{axiom.5}\protected@file@percent }
+\@writefile{loe}{\contentsline {axiom}{\ifthmt@listswap Axiom~8.3\else \numberline {8.3}Axiom\fi \thmtformatoptarg {Power Set Axiom}}{232}{axiom.8.3}\protected@file@percent }
+\@writefile{loe}{\contentsline {axiom}{\ifthmt@listswap Axiom~8.4\else \numberline {8.4}Axiom\fi \thmtformatoptarg {Pairing Axiom}}{232}{axiom.8.4}\protected@file@percent }
+\@writefile{loe}{\contentsline {axiom}{\ifthmt@listswap Axiom~8.5\else \numberline {8.5}Axiom\fi \thmtformatoptarg {Union Axiom}}{232}{axiom.8.5}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {8.1.2}Binary Relations, Composition and Inverse}{232}{subsection.8.1.2}\protected@file@percent }
 \zref@newlabel{mdf@pagelabel-288}{\default{8.1.2}\page{233}\abspage{233}\mdf@pagevalue{233}}
 \zref@newlabel{mdf@pagelabel-289}{\default{8.1.2}\page{233}\abspage{233}\mdf@pagevalue{233}}
@@ -638,7 +629,7 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {8.2}{\ignorespaces $R=\{(a,b)\mid a$ divides $b\}$}}{234}{figure.8.2}\protected@file@percent }
 \zref@newlabel{mdf@pagelabel-290}{\default{8.1.2}\page{234}\abspage{234}\mdf@pagevalue{234}}
 \zref@newlabel{mdf@pagelabel-291}{\default{8.1.2}\page{235}\abspage{235}\mdf@pagevalue{235}}
-\@writefile{loe}{\contentsline {axiom}{\ifthmt@listswap Axiom\nobreakspace  {}6\else \numberline {6}Axiom\fi \thmtformatoptarg {Replacement Axiom}}{235}{axiom.6}\protected@file@percent }
+\@writefile{loe}{\contentsline {axiom}{\ifthmt@listswap Axiom~8.6\else \numberline {8.6}Axiom\fi \thmtformatoptarg {Replacement Axiom}}{235}{axiom.8.6}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {8.1.3}Mapping, Composition, and Inverse}{235}{subsection.8.1.3}\protected@file@percent }
 \zref@newlabel{mdf@pagelabel-292}{\default{8.1.3}\page{235}\abspage{235}\mdf@pagevalue{235}}
 \zref@newlabel{mdf@pagelabel-293}{\default{8.1.3}\page{235}\abspage{235}\mdf@pagevalue{235}}
@@ -650,7 +641,7 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {8.1.4}Families of Sets}{237}{subsection.8.1.4}\protected@file@percent }
 \zref@newlabel{mdf@pagelabel-298}{\default{8.1.4}\page{237}\abspage{237}\mdf@pagevalue{237}}
 \zref@newlabel{mdf@pagelabel-299}{\default{8.1.4}\page{238}\abspage{238}\mdf@pagevalue{238}}
-\@writefile{loe}{\contentsline {axiom}{\ifthmt@listswap Axiom\nobreakspace  {}7\else \numberline {7}Axiom\fi \thmtformatoptarg {Axiom of Choice}}{239}{axiom.7}\protected@file@percent }
+\@writefile{loe}{\contentsline {axiom}{\ifthmt@listswap Axiom~8.7\else \numberline {8.7}Axiom\fi \thmtformatoptarg {Axiom of Choice}}{239}{axiom.8.7}\protected@file@percent }
 \zref@newlabel{mdf@pagelabel-300}{\default{8.1.4}\page{239}\abspage{239}\mdf@pagevalue{239}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {8.1.5}Reflexivity, Symmetry, and Transitivity}{240}{subsection.8.1.5}\protected@file@percent }
 \zref@newlabel{mdf@pagelabel-301}{\default{8.1.5}\page{240}\abspage{240}\mdf@pagevalue{240}}
@@ -705,8 +696,8 @@
 \@writefile{loe}{\contentsline {solution}{\ifthmt@listswap \else \numberline {\let \autodot \@empty }\fi Solution}{252}{thmt@dummyctr.dummy.44}\protected@file@percent }
 \@writefile{loe}{\contentsline {solution}{\ifthmt@listswap \else \numberline {\let \autodot \@empty }\fi Solution}{252}{thmt@dummyctr.dummy.45}\protected@file@percent }
 \zref@newlabel{mdf@pagelabel-321}{\default{8.4.2}\page{252}\abspage{252}\mdf@pagevalue{252}}
-\@writefile{loe}{\contentsline {lemma}{\ifthmt@listswap Lemma\nobreakspace  {}8.2\else \numberline {8.2}Lemma\fi }{253}{lemma.8.2}\protected@file@percent }
-\@writefile{loe}{\contentsline {lemma}{\ifthmt@listswap Lemma\nobreakspace  {}8.3\else \numberline {8.3}Lemma\fi }{253}{lemma.8.3}\protected@file@percent }
+\@writefile{loe}{\contentsline {lemma}{\ifthmt@listswap Lemma~8.2\else \numberline {8.2}Lemma\fi }{253}{lemma.8.2}\protected@file@percent }
+\@writefile{loe}{\contentsline {lemma}{\ifthmt@listswap Lemma~8.3\else \numberline {8.3}Lemma\fi }{253}{lemma.8.3}\protected@file@percent }
 \@writefile{loe}{\contentsline {solution}{\ifthmt@listswap \else \numberline {\let \autodot \@empty }\fi Solution}{253}{thmt@dummyctr.dummy.48}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {8.4.3}Exercises}{253}{subsection.8.4.3}\protected@file@percent }
 \zref@newlabel{mdf@pagelabel-322}{\default{8.4.3}\page{253}\abspage{253}\mdf@pagevalue{253}}
@@ -798,7 +789,7 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {11.2.4}Applications of Category Theory}{269}{subsection.11.2.4}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {11.2.4.1}Category Theory in Programming Languages}{269}{subsubsection.11.2.4.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {11.2.4.2}Category Theory in Logic and Set Theory}{269}{subsubsection.11.2.4.2}\protected@file@percent }
-\BKM@entry{id=53,open,dest={706172742E33},color={.95294 .4 .09804},flags=2,srcline={221}}{5C3337365C3337375C303030495C303030495C303030495C3030305C3034305C303030535C303030695C3030306E5C303030675C3030306C5C303030655C3030302D5C303030765C303030615C303030725C303030695C303030615C303030625C3030306C5C303030655C3030305C3034305C303030435C303030615C3030306C5C303030635C303030755C3030306C5C303030755C30303073}
+\BKM@entry{id=53,open,dest={706172742E33},color={.95294 .4 .09804},flags=2,srcline={237}}{5C3337365C3337375C303030495C303030495C303030495C3030305C3034305C303030535C303030695C3030306E5C303030675C3030306C5C303030655C3030302D5C303030765C303030615C303030725C303030695C303030615C303030625C3030306C5C303030655C3030305C3034305C303030435C303030615C3030306C5C303030635C303030755C3030306C5C303030755C30303073}
 \ttl@writefile{ptc}{\ttl@stoptoc{part@2}}
 \ttl@writefile{ptc}{\ttl@starttoc{part@3}}
 \pgfsyspdfmark {pgfid87}{5594039}{33587398}
@@ -918,7 +909,7 @@
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \pgfsyspdfmark {pgfid94}{5594039}{48050247}
-\BKM@entry{id=83,open,dest={706172742E34},color={.95294 .4 .09804},flags=2,srcline={230}}{5C3337365C3337375C303030495C303030565C3030305C3034305C3030304D5C303030755C3030306C5C303030745C303030695C3030302D5C303030765C303030615C303030725C303030695C303030615C303030625C3030306C5C303030655C3030305C3034305C303030615C3030306E5C303030645C3030305C3034305C303030565C303030655C303030635C303030745C3030306F5C303030725C3030305C3034305C303030435C303030615C3030306C5C303030635C303030755C3030306C5C303030755C30303073}
+\BKM@entry{id=83,open,dest={706172742E34},color={.95294 .4 .09804},flags=2,srcline={246}}{5C3337365C3337375C303030495C303030565C3030305C3034305C3030304D5C303030755C3030306C5C303030745C303030695C3030302D5C303030765C303030615C303030725C303030695C303030615C303030625C3030306C5C303030655C3030305C3034305C303030615C3030306E5C303030645C3030305C3034305C303030565C303030655C303030635C303030745C3030306F5C303030725C3030305C3034305C303030435C303030615C3030306C5C303030635C303030755C3030306C5C303030755C30303073}
 \ttl@writefile{ptc}{\ttl@stoptoc{part@3}}
 \ttl@writefile{ptc}{\ttl@starttoc{part@4}}
 \pgfsyspdfmark {pgfid95}{5594039}{33587398}
@@ -964,7 +955,7 @@
 \@writefile{toc}{\contentsline {section}{\numberline {23.1}Vector Fields}{297}{section.23.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {23.2}Gradient, Divergence, and Curl}{297}{section.23.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {23.3}Line and Surface Integrals}{297}{section.23.3}\protected@file@percent }
-\BKM@entry{id=92,open,dest={706172742E35},color={.95294 .4 .09804},flags=2,srcline={233}}{5C3337365C3337375C303030565C3030305C3034305C3030304C5C303030695C3030306E5C303030655C303030615C303030725C3030305C3034305C303030415C3030306C5C303030675C303030655C303030625C303030725C30303061}
+\BKM@entry{id=92,open,dest={706172742E35},color={.95294 .4 .09804},flags=2,srcline={249}}{5C3337365C3337375C303030565C3030305C3034305C3030304C5C303030695C3030306E5C303030655C303030615C303030725C3030305C3034305C303030415C3030306C5C303030675C303030655C303030625C303030725C30303061}
 \ttl@writefile{ptc}{\ttl@stoptoc{part@4}}
 \ttl@writefile{ptc}{\ttl@starttoc{part@5}}
 \pgfsyspdfmark {pgfid101}{5594039}{33587398}
@@ -1014,7 +1005,7 @@
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \pgfsyspdfmark {pgfid110}{5594039}{48050247}
-\BKM@entry{id=102,open,dest={706172742E36},color={.95294 .4 .09804},flags=2,srcline={236}}{5C3337365C3337375C303030565C303030495C3030305C3034305C303030505C303030725C3030306F5C303030625C303030615C303030625C303030695C3030306C5C303030695C303030745C303030795C3030305C3034305C303030615C3030306E5C303030645C3030305C3034305C303030435C3030306F5C3030306D5C303030625C303030695C3030306E5C303030615C303030745C3030306F5C303030725C303030695C303030635C30303073}
+\BKM@entry{id=102,open,dest={706172742E36},color={.95294 .4 .09804},flags=2,srcline={252}}{5C3337365C3337375C303030565C303030495C3030305C3034305C303030505C303030725C3030306F5C303030625C303030615C303030625C303030695C3030306C5C303030695C303030745C303030795C3030305C3034305C303030615C3030306E5C303030645C3030305C3034305C303030435C3030306F5C3030306D5C303030625C303030695C3030306E5C303030615C303030745C3030306F5C303030725C303030695C303030635C30303073}
 \ttl@writefile{ptc}{\ttl@stoptoc{part@5}}
 \ttl@writefile{ptc}{\ttl@starttoc{part@6}}
 \pgfsyspdfmark {pgfid111}{5594039}{33587398}
@@ -1100,121 +1091,146 @@
 \@writefile{loe}{\contentsline {solution}{\ifthmt@listswap \else \numberline {\let \autodot \@empty }\fi Solution}{341}{thmt@dummyctr.dummy.70}\protected@file@percent }
 \zref@newlabel{mdf@pagelabel-366}{\default{33.2.5}\page{342}\abspage{342}\mdf@pagevalue{342}}
 \@writefile{loe}{\contentsline {solution}{\ifthmt@listswap \else \numberline {\let \autodot \@empty }\fi Solution}{342}{thmt@dummyctr.dummy.71}\protected@file@percent }
-\BKM@entry{id=106,open,dest={636861707465722E3334},flags=2,srcline={4}}{5C3337365C3337375C303030335C303030345C3030305C3034305C303030435C3030306F5C3030306E5C303030645C303030695C303030745C303030695C3030306F5C3030306E5C303030615C3030306C5C3030305C3034305C303030505C303030725C3030306F5C303030625C303030615C303030625C303030695C3030306C5C303030695C303030745C303030795C3030305C3034305C303030615C3030306E5C303030645C3030305C3034305C303030495C3030306E5C303030645C303030655C303030705C303030655C3030306E5C303030645C303030655C3030306E5C303030635C303030655C3030305C3034305C3030306F5C303030665C3030305C3034305C303030455C303030765C303030655C3030306E5C303030745C30303073}
-\@writefile{toc}{\contentsline {chapter}{\numberline {34}Conditional Probability and Independence of Events}{345}{chapter.34}\protected@file@percent }
-\@writefile{lof}{\addvspace {10\p@ }}
-\@writefile{lot}{\addvspace {10\p@ }}
-\pgfsyspdfmark {pgfid118}{5594039}{48050247}
-\BKM@entry{id=107,open,dest={636861707465722E3335},flags=2,srcline={4}}{5C3337365C3337375C303030335C303030355C3030305C3034305C303030445C303030695C303030735C303030635C303030725C303030655C303030745C303030655C3030305C3034305C303030445C303030695C303030735C303030745C303030725C303030695C303030625C303030755C303030745C303030695C3030306F5C3030306E5C3030305C3034305C303030615C3030306E5C303030645C3030305C3034305C303030525C303030615C3030306E5C303030645C3030306F5C3030306D5C3030305C3034305C303030565C303030615C303030725C303030695C303030615C303030625C3030306C5C30303065}
-\@writefile{toc}{\contentsline {chapter}{\numberline {35}Discrete Distribution and Random Variable}{347}{chapter.35}\protected@file@percent }
-\@writefile{lof}{\addvspace {10\p@ }}
-\@writefile{lot}{\addvspace {10\p@ }}
-\pgfsyspdfmark {pgfid119}{5594039}{48050247}
-\BKM@entry{id=108,open,dest={636861707465722E3336},flags=2,srcline={4}}{5C3337365C3337375C303030335C303030365C3030305C3034305C303030435C3030306F5C3030306E5C303030745C303030695C3030306E5C303030755C3030306F5C303030755C303030735C3030305C3034305C303030445C303030695C303030735C303030745C303030725C303030695C303030625C303030755C303030745C303030695C3030306F5C3030306E}
-\@writefile{toc}{\contentsline {chapter}{\numberline {36}Continuous Distribution}{349}{chapter.36}\protected@file@percent }
+\BKM@entry{id=106,open,dest={73656374696F6E2E33332E33},srcline={959}}{5C3337365C3337375C303030335C303030335C3030302E5C303030335C3030305C3034305C303030415C303030785C303030695C3030306F5C3030306D5C303030735C3030305C3034305C3030306F5C303030665C3030305C3034305C303030505C303030725C3030306F5C303030625C303030615C303030625C303030695C3030306C5C303030695C303030745C30303079}
+\@writefile{toc}{\contentsline {section}{\numberline {33.3}Axioms of Probability}{343}{section.33.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {33.3.1}Sample Space and Events}{343}{subsection.33.3.1}\protected@file@percent }
+\zref@newlabel{mdf@pagelabel-367}{\default{33.3.1}\page{344}\abspage{344}\mdf@pagevalue{344}}
+\zref@newlabel{mdf@pagelabel-368}{\default{33.3.1}\page{344}\abspage{344}\mdf@pagevalue{344}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {33.3.2}Probability Axioms}{345}{subsection.33.3.2}\protected@file@percent }
+\zref@newlabel{mdf@pagelabel-369}{\default{33.3.2}\page{345}\abspage{345}\mdf@pagevalue{345}}
+\zref@newlabel{mdf@pagelabel-370}{\default{33.3.2}\page{345}\abspage{345}\mdf@pagevalue{345}}
+\@writefile{loe}{\contentsline {axiom}{\ifthmt@listswap Axiom~33.1\else \numberline {33.1}Axiom\fi \thmtformatoptarg {Non-negativity}}{346}{axiom.33.1}\protected@file@percent }
+\@writefile{loe}{\contentsline {axiom}{\ifthmt@listswap Axiom~33.2\else \numberline {33.2}Axiom\fi \thmtformatoptarg {Unit Measure}}{346}{axiom.33.2}\protected@file@percent }
+\@writefile{loe}{\contentsline {axiom}{\ifthmt@listswap Axiom~33.3\else \numberline {33.3}Axiom\fi \thmtformatoptarg {Additivity}}{346}{axiom.33.3}\protected@file@percent }
+\newlabel{additivity}{{33.3}{346}{Additivity}{axiom.33.3}{}}
+\zref@newlabel{mdf@pagelabel-371}{\default{33.3.2}\page{347}\abspage{347}\mdf@pagevalue{347}}
+\zref@newlabel{mdf@pagelabel-372}{\default{33.3.2}\page{348}\abspage{348}\mdf@pagevalue{348}}
+\BKM@entry{id=107,open,dest={73656374696F6E2E33332E34},srcline={1197}}{5C3337365C3337375C303030335C303030335C3030302E5C303030345C3030305C3034305C303030465C303030695C3030306E5C303030645C303030695C3030306E5C303030675C3030305C3034305C303030505C303030725C3030306F5C303030625C303030615C303030625C303030695C3030306C5C303030695C303030745C303030795C3030305C3034305C303030775C303030695C303030745C303030685C3030305C3034305C303030435C3030306F5C303030755C3030306E5C303030745C303030695C3030306E5C30303067}
+\@writefile{toc}{\contentsline {section}{\numberline {33.4}Finding Probability with Counting}{349}{section.33.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {33.4.1}Some Basic Problems}{349}{subsection.33.4.1}\protected@file@percent }
+\@writefile{loe}{\contentsline {solution}{\ifthmt@listswap \else \numberline {\let \autodot \@empty }\fi Solution}{349}{thmt@dummyctr.dummy.75}\protected@file@percent }
+\@writefile{loe}{\contentsline {solution}{\ifthmt@listswap \else \numberline {\let \autodot \@empty }\fi Solution}{350}{thmt@dummyctr.dummy.76}\protected@file@percent }
+\@writefile{loe}{\contentsline {solution}{\ifthmt@listswap \else \numberline {\let \autodot \@empty }\fi Solution}{350}{thmt@dummyctr.dummy.77}\protected@file@percent }
+\@writefile{loe}{\contentsline {solution}{\ifthmt@listswap \else \numberline {\let \autodot \@empty }\fi Solution}{351}{thmt@dummyctr.dummy.78}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {33.4.2}Further Problems}{352}{subsection.33.4.2}\protected@file@percent }
+\@writefile{loe}{\contentsline {solution}{\ifthmt@listswap \else \numberline {\let \autodot \@empty }\fi Solution}{352}{thmt@dummyctr.dummy.79}\protected@file@percent }
+\@writefile{loe}{\contentsline {solution}{\ifthmt@listswap \else \numberline {\let \autodot \@empty }\fi Solution}{352}{thmt@dummyctr.dummy.80}\protected@file@percent }
+\@writefile{loe}{\contentsline {solution}{\ifthmt@listswap \else \numberline {\let \autodot \@empty }\fi Solution}{353}{thmt@dummyctr.dummy.81}\protected@file@percent }
+\BKM@entry{id=108,open,dest={636861707465722E3334},flags=2,srcline={4}}{5C3337365C3337375C303030335C303030345C3030305C3034305C303030435C3030306F5C3030306E5C303030645C303030695C303030745C303030695C3030306F5C3030306E5C303030615C3030306C5C3030305C3034305C303030505C303030725C3030306F5C303030625C303030615C303030625C303030695C3030306C5C303030695C303030745C303030795C3030305C3034305C303030615C3030306E5C303030645C3030305C3034305C303030495C3030306E5C303030645C303030655C303030705C303030655C3030306E5C303030645C303030655C3030306E5C303030635C303030655C3030305C3034305C3030306F5C303030665C3030305C3034305C303030455C303030765C303030655C3030306E5C303030745C30303073}
+\@writefile{toc}{\contentsline {chapter}{\numberline {34}Conditional Probability and Independence of Events}{355}{chapter.34}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \pgfsyspdfmark {pgfid120}{5594039}{48050247}
-\BKM@entry{id=109,open,dest={636861707465722E3337},flags=2,srcline={4}}{5C3337365C3337375C303030335C303030375C3030305C3034305C3030304A5C3030306F5C303030695C3030306E5C303030745C3030305C3034305C303030435C303030755C3030306D5C303030755C3030306C5C303030615C303030745C303030695C303030765C303030655C3030305C3034305C303030445C303030695C303030735C303030745C303030725C303030695C303030625C303030755C303030745C303030695C3030306F5C3030306E}
-\@writefile{toc}{\contentsline {chapter}{\numberline {37}Joint Cumulative Distribution}{351}{chapter.37}\protected@file@percent }
+\BKM@entry{id=109,open,dest={636861707465722E3335},flags=2,srcline={4}}{5C3337365C3337375C303030335C303030355C3030305C3034305C303030445C303030695C303030735C303030635C303030725C303030655C303030745C303030655C3030305C3034305C303030445C303030695C303030735C303030745C303030725C303030695C303030625C303030755C303030745C303030695C3030306F5C3030306E5C3030305C3034305C303030615C3030306E5C303030645C3030305C3034305C303030525C303030615C3030306E5C303030645C3030306F5C3030306D5C3030305C3034305C303030565C303030615C303030725C303030695C303030615C303030625C3030306C5C30303065}
+\@writefile{toc}{\contentsline {chapter}{\numberline {35}Discrete Distribution and Random Variable}{357}{chapter.35}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \pgfsyspdfmark {pgfid121}{5594039}{48050247}
-\BKM@entry{id=110,open,dest={636861707465722E3338},flags=2,srcline={4}}{5C3337365C3337375C303030335C303030385C3030305C3034305C3030304C5C303030695C3030306D5C303030695C303030745C3030305C3034305C303030545C303030685C303030655C3030306F5C303030725C303030795C3030305C3034305C303030695C3030306E5C3030305C3034305C303030505C303030725C3030306F5C303030625C303030615C303030625C303030695C3030306C5C303030695C303030745C30303079}
-\@writefile{toc}{\contentsline {chapter}{\numberline {38}Limit Theory in Probability}{353}{chapter.38}\protected@file@percent }
+\BKM@entry{id=110,open,dest={636861707465722E3336},flags=2,srcline={4}}{5C3337365C3337375C303030335C303030365C3030305C3034305C303030435C3030306F5C3030306E5C303030745C303030695C3030306E5C303030755C3030306F5C303030755C303030735C3030305C3034305C303030445C303030695C303030735C303030745C303030725C303030695C303030625C303030755C303030745C303030695C3030306F5C3030306E}
+\@writefile{toc}{\contentsline {chapter}{\numberline {36}Continuous Distribution}{359}{chapter.36}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \pgfsyspdfmark {pgfid122}{5594039}{48050247}
-\BKM@entry{id=111,open,dest={636861707465722E3339},flags=2,srcline={4}}{5C3337365C3337375C303030335C303030395C3030305C3034305C303030535C303030745C3030306F5C303030635C303030685C303030615C303030735C303030745C303030695C303030635C3030305C3034305C303030505C303030725C3030306F5C303030635C303030655C303030735C30303073}
-\@writefile{toc}{\contentsline {chapter}{\numberline {39}Stochastic Process}{355}{chapter.39}\protected@file@percent }
+\BKM@entry{id=111,open,dest={636861707465722E3337},flags=2,srcline={4}}{5C3337365C3337375C303030335C303030375C3030305C3034305C3030304A5C3030306F5C303030695C3030306E5C303030745C3030305C3034305C303030435C303030755C3030306D5C303030755C3030306C5C303030615C303030745C303030695C303030765C303030655C3030305C3034305C303030445C303030695C303030735C303030745C303030725C303030695C303030625C303030755C303030745C303030695C3030306F5C3030306E}
+\@writefile{toc}{\contentsline {chapter}{\numberline {37}Joint Cumulative Distribution}{361}{chapter.37}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \pgfsyspdfmark {pgfid123}{5594039}{48050247}
-\BKM@entry{id=112,open,dest={706172742E37},color={.95294 .4 .09804},flags=2,srcline={245}}{5C3337365C3337375C303030565C303030495C303030495C3030305C3034305C303030535C303030745C303030615C303030745C303030695C303030735C303030745C303030695C303030635C30303073}
-\ttl@writefile{ptc}{\ttl@stoptoc{part@6}}
-\ttl@writefile{ptc}{\ttl@starttoc{part@7}}
-\pgfsyspdfmark {pgfid124}{5594039}{33587398}
-\@writefile{toc}{\contentsline {part}{\numberline {VII}Statistics}{357}{part.7}\protected@file@percent }
-\BKM@entry{id=113,open,dest={636861707465722E3430},flags=2,srcline={4}}{5C3337365C3337375C303030345C303030305C3030305C3034305C303030535C303030615C3030306D5C303030705C3030306C5C303030695C3030306E5C303030675C3030305C3034305C303030615C3030306E5C303030645C3030305C3034305C303030505C303030615C303030725C303030615C3030306D5C303030655C303030745C303030655C303030725C30303073}
-\@writefile{toc}{\contentsline {chapter}{\numberline {40}Sampling and Parameters}{359}{chapter.40}\protected@file@percent }
+\BKM@entry{id=112,open,dest={636861707465722E3338},flags=2,srcline={4}}{5C3337365C3337375C303030335C303030385C3030305C3034305C3030304C5C303030695C3030306D5C303030695C303030745C3030305C3034305C303030545C303030685C303030655C3030306F5C303030725C303030795C3030305C3034305C303030695C3030306E5C3030305C3034305C303030505C303030725C3030306F5C303030625C303030615C303030625C303030695C3030306C5C303030695C303030745C30303079}
+\@writefile{toc}{\contentsline {chapter}{\numberline {38}Limit Theory in Probability}{363}{chapter.38}\protected@file@percent }
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\pgfsyspdfmark {pgfid124}{5594039}{48050247}
+\BKM@entry{id=113,open,dest={636861707465722E3339},flags=2,srcline={4}}{5C3337365C3337375C303030335C303030395C3030305C3034305C303030535C303030745C3030306F5C303030635C303030685C303030615C303030735C303030745C303030695C303030635C3030305C3034305C303030505C303030725C3030306F5C303030635C303030655C303030735C30303073}
+\@writefile{toc}{\contentsline {chapter}{\numberline {39}Stochastic Process}{365}{chapter.39}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \pgfsyspdfmark {pgfid125}{5594039}{48050247}
-\BKM@entry{id=114,open,dest={636861707465722E3431},flags=2,srcline={10}}{5C3337365C3337375C303030345C303030315C3030305C3034305C303030445C303030655C303030735C303030635C303030725C303030695C303030705C303030745C303030695C303030765C303030655C3030305C3034305C303030535C303030745C303030615C303030745C303030695C303030735C303030745C303030695C303030635C30303073}
-\@writefile{toc}{\contentsline {chapter}{\numberline {41}Descriptive Statistics}{361}{chapter.41}\protected@file@percent }
-\@writefile{lof}{\addvspace {10\p@ }}
-\@writefile{lot}{\addvspace {10\p@ }}
-\pgfsyspdfmark {pgfid126}{5594039}{48050247}
-\BKM@entry{id=115,open,dest={636861707465722E3432},flags=2,srcline={16}}{5C3337365C3337375C303030345C303030325C3030305C3034305C303030475C303030725C303030615C303030705C303030685C303030695C303030635C303030615C3030306C5C3030305C3034305C303030535C303030745C303030615C303030745C303030695C303030735C303030745C303030695C303030635C30303073}
-\@writefile{toc}{\contentsline {chapter}{\numberline {42}Graphical Statistics}{363}{chapter.42}\protected@file@percent }
+\BKM@entry{id=114,open,dest={706172742E37},color={.95294 .4 .09804},flags=2,srcline={261}}{5C3337365C3337375C303030565C303030495C303030495C3030305C3034305C303030535C303030745C303030615C303030745C303030695C303030735C303030745C303030695C303030635C30303073}
+\ttl@writefile{ptc}{\ttl@stoptoc{part@6}}
+\ttl@writefile{ptc}{\ttl@starttoc{part@7}}
+\pgfsyspdfmark {pgfid126}{5594039}{33587398}
+\@writefile{toc}{\contentsline {part}{\numberline {VII}Statistics}{367}{part.7}\protected@file@percent }
+\BKM@entry{id=115,open,dest={636861707465722E3430},flags=2,srcline={4}}{5C3337365C3337375C303030345C303030305C3030305C3034305C303030535C303030615C3030306D5C303030705C3030306C5C303030695C3030306E5C303030675C3030305C3034305C303030615C3030306E5C303030645C3030305C3034305C303030505C303030615C303030725C303030615C3030306D5C303030655C303030745C303030655C303030725C30303073}
+\@writefile{toc}{\contentsline {chapter}{\numberline {40}Sampling and Parameters}{369}{chapter.40}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \pgfsyspdfmark {pgfid127}{5594039}{48050247}
-\BKM@entry{id=116,open,dest={636861707465722E3433},flags=2,srcline={23}}{5C3337365C3337375C303030345C303030335C3030305C3034305C303030535C303030745C303030615C303030745C303030695C303030735C303030745C303030695C303030635C303030615C3030306C5C3030305C3034305C303030495C3030306E5C303030665C303030655C303030725C303030655C3030306E5C303030635C30303065}
-\BKM@entry{id=117,open,dest={73656374696F6E2E34332E31},srcline={24}}{5C3337365C3337375C303030345C303030335C3030302E5C303030315C3030305C3034305C303030505C303030615C303030725C303030615C3030306D5C303030655C303030745C303030655C303030725C3030305C3034305C303030455C303030735C303030745C303030695C3030306D5C303030615C303030745C303030695C3030306F5C3030306E}
-\BKM@entry{id=118,open,dest={73656374696F6E2E34332E32},srcline={25}}{5C3337365C3337375C303030345C303030335C3030302E5C303030325C3030305C3034305C303030495C3030306E5C303030745C303030655C303030725C303030765C303030615C3030306C5C3030305C3034305C303030455C303030735C303030745C303030695C3030306D5C303030615C303030745C303030695C3030306F5C3030306E}
-\BKM@entry{id=119,open,dest={73656374696F6E2E34332E33},srcline={26}}{5C3337365C3337375C303030345C303030335C3030302E5C303030335C3030305C3034305C303030485C303030795C303030705C3030306F5C303030745C303030685C303030655C303030735C303030695C303030735C3030305C3034305C303030545C303030655C303030735C303030745C303030695C3030306E5C30303067}
-\BKM@entry{id=120,open,dest={73656374696F6E2E34332E34},srcline={27}}{5C3337365C3337375C303030345C303030335C3030302E5C303030345C3030305C3034305C303030565C303030615C303030725C303030695C303030615C3030306E5C303030635C303030655C3030305C3034305C303030495C3030306E5C303030665C303030655C303030725C303030655C3030306E5C303030635C30303065}
-\BKM@entry{id=121,open,dest={73656374696F6E2E34332E35},srcline={28}}{5C3337365C3337375C303030345C303030335C3030302E5C303030355C3030305C3034305C303030425C303030615C303030795C303030655C303030735C303030695C303030615C3030306E5C3030305C3034305C303030495C3030306E5C303030665C303030655C303030725C303030655C3030306E5C303030635C30303065}
-\@writefile{toc}{\contentsline {chapter}{\numberline {43}Statistical Inference}{365}{chapter.43}\protected@file@percent }
+\BKM@entry{id=116,open,dest={636861707465722E3431},flags=2,srcline={10}}{5C3337365C3337375C303030345C303030315C3030305C3034305C303030445C303030655C303030735C303030635C303030725C303030695C303030705C303030745C303030695C303030765C303030655C3030305C3034305C303030535C303030745C303030615C303030745C303030695C303030735C303030745C303030695C303030635C30303073}
+\@writefile{toc}{\contentsline {chapter}{\numberline {41}Descriptive Statistics}{371}{chapter.41}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \pgfsyspdfmark {pgfid128}{5594039}{48050247}
-\@writefile{toc}{\contentsline {section}{\numberline {43.1}Parameter Estimation}{365}{section.43.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {43.2}Interval Estimation}{365}{section.43.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {43.3}Hypothesis Testing}{365}{section.43.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {43.4}Variance Inference}{365}{section.43.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {43.5}Bayesian Inference}{365}{section.43.5}\protected@file@percent }
-\BKM@entry{id=122,open,dest={636861707465722E3434},flags=2,srcline={34}}{5C3337365C3337375C303030345C303030345C3030305C3034305C303030485C303030795C303030705C3030306F5C303030745C303030685C303030655C303030735C303030695C303030735C3030305C3034305C303030545C303030655C303030735C303030745C303030695C3030306E5C30303067}
-\@writefile{toc}{\contentsline {chapter}{\numberline {44}Hypothesis Testing}{367}{chapter.44}\protected@file@percent }
+\BKM@entry{id=117,open,dest={636861707465722E3432},flags=2,srcline={16}}{5C3337365C3337375C303030345C303030325C3030305C3034305C303030475C303030725C303030615C303030705C303030685C303030695C303030635C303030615C3030306C5C3030305C3034305C303030535C303030745C303030615C303030745C303030695C303030735C303030745C303030695C303030635C30303073}
+\@writefile{toc}{\contentsline {chapter}{\numberline {42}Graphical Statistics}{373}{chapter.42}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \pgfsyspdfmark {pgfid129}{5594039}{48050247}
-\BKM@entry{id=123,open,dest={636861707465722E3435},flags=2,srcline={40}}{5C3337365C3337375C303030345C303030355C3030305C3034305C303030525C303030655C303030675C303030725C303030655C303030735C303030735C303030695C3030306F5C3030306E5C3030305C3034305C303030615C3030306E5C303030645C3030305C3034305C303030525C303030655C303030675C303030725C303030655C303030735C303030735C303030695C303030765C303030655C3030305C3034305C303030415C3030306E5C303030615C3030306C5C303030795C303030735C303030695C30303073}
-\@writefile{toc}{\contentsline {chapter}{\numberline {45}Regression and Regressive Analysis}{369}{chapter.45}\protected@file@percent }
+\BKM@entry{id=118,open,dest={636861707465722E3433},flags=2,srcline={23}}{5C3337365C3337375C303030345C303030335C3030305C3034305C303030535C303030745C303030615C303030745C303030695C303030735C303030745C303030695C303030635C303030615C3030306C5C3030305C3034305C303030495C3030306E5C303030665C303030655C303030725C303030655C3030306E5C303030635C30303065}
+\BKM@entry{id=119,open,dest={73656374696F6E2E34332E31},srcline={24}}{5C3337365C3337375C303030345C303030335C3030302E5C303030315C3030305C3034305C303030505C303030615C303030725C303030615C3030306D5C303030655C303030745C303030655C303030725C3030305C3034305C303030455C303030735C303030745C303030695C3030306D5C303030615C303030745C303030695C3030306F5C3030306E}
+\BKM@entry{id=120,open,dest={73656374696F6E2E34332E32},srcline={25}}{5C3337365C3337375C303030345C303030335C3030302E5C303030325C3030305C3034305C303030495C3030306E5C303030745C303030655C303030725C303030765C303030615C3030306C5C3030305C3034305C303030455C303030735C303030745C303030695C3030306D5C303030615C303030745C303030695C3030306F5C3030306E}
+\BKM@entry{id=121,open,dest={73656374696F6E2E34332E33},srcline={26}}{5C3337365C3337375C303030345C303030335C3030302E5C303030335C3030305C3034305C303030485C303030795C303030705C3030306F5C303030745C303030685C303030655C303030735C303030695C303030735C3030305C3034305C303030545C303030655C303030735C303030745C303030695C3030306E5C30303067}
+\BKM@entry{id=122,open,dest={73656374696F6E2E34332E34},srcline={27}}{5C3337365C3337375C303030345C303030335C3030302E5C303030345C3030305C3034305C303030565C303030615C303030725C303030695C303030615C3030306E5C303030635C303030655C3030305C3034305C303030495C3030306E5C303030665C303030655C303030725C303030655C3030306E5C303030635C30303065}
+\BKM@entry{id=123,open,dest={73656374696F6E2E34332E35},srcline={28}}{5C3337365C3337375C303030345C303030335C3030302E5C303030355C3030305C3034305C303030425C303030615C303030795C303030655C303030735C303030695C303030615C3030306E5C3030305C3034305C303030495C3030306E5C303030665C303030655C303030725C303030655C3030306E5C303030635C30303065}
+\@writefile{toc}{\contentsline {chapter}{\numberline {43}Statistical Inference}{375}{chapter.43}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \pgfsyspdfmark {pgfid130}{5594039}{48050247}
-\BKM@entry{id=124,open,dest={636861707465722E3436},flags=2,srcline={46}}{5C3337365C3337375C303030345C303030365C3030305C3034305C303030425C303030615C303030735C303030695C303030635C3030305C3034305C3030304D5C303030755C3030306C5C303030745C303030695C3030302D5C303030765C303030615C303030725C303030695C303030615C303030625C3030306C5C303030655C3030305C3034305C303030535C303030745C303030615C303030745C303030695C303030735C303030745C303030695C303030635C303030615C3030306C5C3030305C3034305C303030615C3030306E5C303030615C3030306C5C303030795C303030735C303030695C30303073}
-\@writefile{toc}{\contentsline {chapter}{\numberline {46}Basic Multi-variable Statistical analysis}{371}{chapter.46}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {43.1}Parameter Estimation}{375}{section.43.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {43.2}Interval Estimation}{375}{section.43.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {43.3}Hypothesis Testing}{375}{section.43.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {43.4}Variance Inference}{375}{section.43.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {43.5}Bayesian Inference}{375}{section.43.5}\protected@file@percent }
+\BKM@entry{id=124,open,dest={636861707465722E3434},flags=2,srcline={34}}{5C3337365C3337375C303030345C303030345C3030305C3034305C303030485C303030795C303030705C3030306F5C303030745C303030685C303030655C303030735C303030695C303030735C3030305C3034305C303030545C303030655C303030735C303030745C303030695C3030306E5C30303067}
+\@writefile{toc}{\contentsline {chapter}{\numberline {44}Hypothesis Testing}{377}{chapter.44}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \pgfsyspdfmark {pgfid131}{5594039}{48050247}
-\BKM@entry{id=125,open,dest={706172742E38},color={.95294 .4 .09804},flags=2,srcline={248}}{5C3337365C3337375C303030565C303030495C303030495C303030495C3030305C3034305C303030495C3030306E5C303030665C3030306F5C303030725C3030306D5C303030615C303030745C303030695C3030306F5C3030306E5C3030305C3034305C303030545C303030685C303030655C3030306F5C303030725C30303079}
-\ttl@writefile{ptc}{\ttl@stoptoc{part@7}}
-\ttl@writefile{ptc}{\ttl@starttoc{part@8}}
-\pgfsyspdfmark {pgfid132}{5594039}{33587398}
-\@writefile{toc}{\contentsline {part}{\numberline {VIII}Information Theory}{373}{part.8}\protected@file@percent }
-\BKM@entry{id=126,open,dest={636861707465722E3437},flags=2,srcline={4}}{5C3337365C3337375C303030345C303030375C3030305C3034305C3030304D5C303030655C303030615C303030735C303030755C303030725C303030695C3030306E5C303030675C3030305C3034305C3030306F5C303030665C3030305C3034305C303030495C3030306E5C303030665C3030306F5C303030725C3030306D5C303030615C303030745C303030695C3030306F5C3030306E}
-\@writefile{toc}{\contentsline {chapter}{\numberline {47}Measuring of Information}{375}{chapter.47}\protected@file@percent }
+\BKM@entry{id=125,open,dest={636861707465722E3435},flags=2,srcline={40}}{5C3337365C3337375C303030345C303030355C3030305C3034305C303030525C303030655C303030675C303030725C303030655C303030735C303030735C303030695C3030306F5C3030306E5C3030305C3034305C303030615C3030306E5C303030645C3030305C3034305C303030525C303030655C303030675C303030725C303030655C303030735C303030735C303030695C303030765C303030655C3030305C3034305C303030415C3030306E5C303030615C3030306C5C303030795C303030735C303030695C30303073}
+\@writefile{toc}{\contentsline {chapter}{\numberline {45}Regression and Regressive Analysis}{379}{chapter.45}\protected@file@percent }
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\pgfsyspdfmark {pgfid132}{5594039}{48050247}
+\BKM@entry{id=126,open,dest={636861707465722E3436},flags=2,srcline={46}}{5C3337365C3337375C303030345C303030365C3030305C3034305C303030425C303030615C303030735C303030695C303030635C3030305C3034305C3030304D5C303030755C3030306C5C303030745C303030695C3030302D5C303030765C303030615C303030725C303030695C303030615C303030625C3030306C5C303030655C3030305C3034305C303030535C303030745C303030615C303030745C303030695C303030735C303030745C303030695C303030635C303030615C3030306C5C3030305C3034305C303030615C3030306E5C303030615C3030306C5C303030795C303030735C303030695C30303073}
+\@writefile{toc}{\contentsline {chapter}{\numberline {46}Basic Multi-variable Statistical analysis}{381}{chapter.46}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \pgfsyspdfmark {pgfid133}{5594039}{48050247}
-\BKM@entry{id=127,open,dest={636861707465722E3438},flags=2,srcline={10}}{5C3337365C3337375C303030345C303030385C3030305C3034305C303030495C3030306E5C303030665C3030306F5C303030725C3030306D5C303030615C303030745C303030695C3030306F5C3030306E5C3030305C3034305C303030455C3030306E5C303030745C303030725C3030306F5C303030705C30303079}
-\@writefile{toc}{\contentsline {chapter}{\numberline {48}Information Entropy}{377}{chapter.48}\protected@file@percent }
-\@writefile{lof}{\addvspace {10\p@ }}
-\@writefile{lot}{\addvspace {10\p@ }}
-\pgfsyspdfmark {pgfid134}{5594039}{48050247}
-\BKM@entry{id=128,open,dest={636861707465722E3439},flags=2,srcline={16}}{5C3337365C3337375C303030345C303030395C3030305C3034305C3030304A5C3030306F5C303030695C3030306E5C303030655C303030645C3030305C3034305C303030455C3030306E5C303030745C303030725C3030306F5C303030705C303030795C3030305C3034305C303030615C3030306E5C303030645C3030305C3034305C303030435C3030306F5C3030306E5C303030645C303030695C303030745C303030695C3030306F5C3030306E5C303030615C3030306C5C3030305C3034305C303030455C3030306E5C303030745C303030725C3030306F5C303030705C30303079}
-\@writefile{toc}{\contentsline {chapter}{\numberline {49}Joined Entropy and Conditional Entropy}{379}{chapter.49}\protected@file@percent }
+\BKM@entry{id=127,open,dest={706172742E38},color={.95294 .4 .09804},flags=2,srcline={264}}{5C3337365C3337375C303030565C303030495C303030495C303030495C3030305C3034305C303030495C3030306E5C303030665C3030306F5C303030725C3030306D5C303030615C303030745C303030695C3030306F5C3030306E5C3030305C3034305C303030545C303030685C303030655C3030306F5C303030725C30303079}
+\ttl@writefile{ptc}{\ttl@stoptoc{part@7}}
+\ttl@writefile{ptc}{\ttl@starttoc{part@8}}
+\pgfsyspdfmark {pgfid134}{5594039}{33587398}
+\@writefile{toc}{\contentsline {part}{\numberline {VIII}Information Theory}{383}{part.8}\protected@file@percent }
+\BKM@entry{id=128,open,dest={636861707465722E3437},flags=2,srcline={4}}{5C3337365C3337375C303030345C303030375C3030305C3034305C3030304D5C303030655C303030615C303030735C303030755C303030725C303030695C3030306E5C303030675C3030305C3034305C3030306F5C303030665C3030305C3034305C303030495C3030306E5C303030665C3030306F5C303030725C3030306D5C303030615C303030745C303030695C3030306F5C3030306E}
+\@writefile{toc}{\contentsline {chapter}{\numberline {47}Measuring of Information}{385}{chapter.47}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \pgfsyspdfmark {pgfid135}{5594039}{48050247}
-\BKM@entry{id=129,open,dest={636861707465722E3530},flags=2,srcline={22}}{5C3337365C3337375C303030355C303030305C3030305C3034305C303030435C303030725C3030306F5C303030735C303030735C3030305C3034305C303030455C3030306E5C303030745C303030725C3030306F5C303030705C303030795C3030305C3034305C303030615C3030306E5C303030645C3030305C3034305C303030525C303030655C3030306C5C303030615C303030745C303030695C303030765C303030655C3030305C3034305C303030455C3030306E5C303030745C303030725C3030306F5C303030705C30303079}
-\@writefile{toc}{\contentsline {chapter}{\numberline {50}Cross Entropy and Relative Entropy}{381}{chapter.50}\protected@file@percent }
+\BKM@entry{id=129,open,dest={636861707465722E3438},flags=2,srcline={10}}{5C3337365C3337375C303030345C303030385C3030305C3034305C303030495C3030306E5C303030665C3030306F5C303030725C3030306D5C303030615C303030745C303030695C3030306F5C3030306E5C3030305C3034305C303030455C3030306E5C303030745C303030725C3030306F5C303030705C30303079}
+\@writefile{toc}{\contentsline {chapter}{\numberline {48}Information Entropy}{387}{chapter.48}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \pgfsyspdfmark {pgfid136}{5594039}{48050247}
-\BKM@entry{id=130,open,dest={636861707465722E3531},flags=2,srcline={28}}{5C3337365C3337375C303030355C303030315C3030305C3034305C3030304D5C303030755C303030745C303030755C303030615C3030306C5C3030305C3034305C303030495C3030306E5C303030665C3030306F5C303030725C3030306D5C303030615C303030745C303030695C3030306F5C3030306E}
-\@writefile{toc}{\contentsline {chapter}{\numberline {51}Mutual Information}{383}{chapter.51}\protected@file@percent }
+\BKM@entry{id=130,open,dest={636861707465722E3439},flags=2,srcline={16}}{5C3337365C3337375C303030345C303030395C3030305C3034305C3030304A5C3030306F5C303030695C3030306E5C303030655C303030645C3030305C3034305C303030455C3030306E5C303030745C303030725C3030306F5C303030705C303030795C3030305C3034305C303030615C3030306E5C303030645C3030305C3034305C303030435C3030306F5C3030306E5C303030645C303030695C303030745C303030695C3030306F5C3030306E5C303030615C3030306C5C3030305C3034305C303030455C3030306E5C303030745C303030725C3030306F5C303030705C30303079}
+\@writefile{toc}{\contentsline {chapter}{\numberline {49}Joined Entropy and Conditional Entropy}{389}{chapter.49}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \pgfsyspdfmark {pgfid137}{5594039}{48050247}
-\BKM@entry{id=131,open,dest={636861707465722E3532},flags=2,srcline={34}}{5C3337365C3337375C303030355C303030325C3030305C3034305C303030445C303030695C303030665C303030665C303030655C303030725C303030655C3030306E5C303030745C303030695C303030615C3030306C5C3030305C3034305C303030455C3030306E5C303030745C303030725C3030306F5C303030705C30303079}
-\@writefile{toc}{\contentsline {chapter}{\numberline {52}Differential Entropy}{385}{chapter.52}\protected@file@percent }
+\BKM@entry{id=131,open,dest={636861707465722E3530},flags=2,srcline={22}}{5C3337365C3337375C303030355C303030305C3030305C3034305C303030435C303030725C3030306F5C303030735C303030735C3030305C3034305C303030455C3030306E5C303030745C303030725C3030306F5C303030705C303030795C3030305C3034305C303030615C3030306E5C303030645C3030305C3034305C303030525C303030655C3030306C5C303030615C303030745C303030695C303030765C303030655C3030305C3034305C303030455C3030306E5C303030745C303030725C3030306F5C303030705C30303079}
+\@writefile{toc}{\contentsline {chapter}{\numberline {50}Cross Entropy and Relative Entropy}{391}{chapter.50}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \pgfsyspdfmark {pgfid138}{5594039}{48050247}
+\BKM@entry{id=132,open,dest={636861707465722E3531},flags=2,srcline={28}}{5C3337365C3337375C303030355C303030315C3030305C3034305C3030304D5C303030755C303030745C303030755C303030615C3030306C5C3030305C3034305C303030495C3030306E5C303030665C3030306F5C303030725C3030306D5C303030615C303030745C303030695C3030306F5C3030306E}
+\@writefile{toc}{\contentsline {chapter}{\numberline {51}Mutual Information}{393}{chapter.51}\protected@file@percent }
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\pgfsyspdfmark {pgfid139}{5594039}{48050247}
+\BKM@entry{id=133,open,dest={636861707465722E3532},flags=2,srcline={34}}{5C3337365C3337375C303030355C303030325C3030305C3034305C303030445C303030695C303030665C303030665C303030655C303030725C303030655C3030306E5C303030745C303030695C303030615C3030306C5C3030305C3034305C303030455C3030306E5C303030745C303030725C3030306F5C303030705C30303079}
+\@writefile{toc}{\contentsline {chapter}{\numberline {52}Differential Entropy}{395}{chapter.52}\protected@file@percent }
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\pgfsyspdfmark {pgfid140}{5594039}{48050247}
 \ttl@finishall
 \abx@aux@read@bbl@mdfivesum{D41D8CD98F00B204E9800998ECF8427E}
-\gdef \@abspage@last{385}
+\gdef \@abspage@last{395}

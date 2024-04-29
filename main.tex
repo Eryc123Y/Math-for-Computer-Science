@@ -51,6 +51,7 @@
 \usepackage{booktabs}
 \usepackage[table]{xcolor}
 \usepackage{algorithm}
+%\usepackage{enumitem}
 \usepackage{algpseudocode}
 \usepackage{wrapfig}
 \usepackage{hyperref}
@@ -137,7 +138,22 @@
 \theoremstyle{solutionStyle}  
 \newtheorem*{solution}{Solution}
 
-\newtheorem{axiom}{Axiom}
+% Define a new theorem style called 'axiom_style'
+\newtheoremstyle{axiom_style}% name of the style to be used
+  {3pt}% Space above
+  {3pt}% Space below
+  {\normalfont}% Body font
+  {}% Indent amount
+  {\bfseries}% Theorem head font
+  {.}% Punctuation after theorem head
+  {.5em}% Space after theorem head
+  {}% Theorem head spec (can be left empty, meaning 'normal')
+
+% Apply the theorem style
+\theoremstyle{axiom_style}
+
+% Define the 'axiom' theorem with chapter numbering
+\newtheorem{axiom}{Axiom}[chapter]
 %\addbibresource{sample.bib} % Bibliography file
 
 \definecolor{ocre}{RGB}{243, 102, 25} % Define the color used for highlighting throughout the book

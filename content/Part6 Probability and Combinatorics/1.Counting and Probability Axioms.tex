@@ -955,7 +955,448 @@ Probability theory is a branch of mathematics that deals with the analysis of ra
             \end{proof}
         \end{solution}
 
+    
+    \section{Axioms of Probability}
+    In previous sections, we have solved the problem that how many outcomes can a certain event have under
+    given conditions. This section introduces the concept of the probability of an event and then
+    show how probabilities can be computed in certain situations. 
 
+    \subsection{Sample Space and Events}
+    We have discussed the example of rolling a die in previous sections. Intuitively we know that
+    the probability of getting the number 3 is 1/6 because it's one case out of all six cases. In 
+    this example, the possible results of the event (rolling a die to get a number) can be written
+    as a set $S = {1,2,3,4,5,6}$, and therefore, the possibility of getting a certain number 
+    from 1 to 6 is $\frac{1}{|S|} = \frac{1}{6}$.
+
+    In this example, we call the set of all possible outcomes \textbf{Sample Space}, and getting
+    3 from the dice is an \textbf{event}. An event could be subset of the sample space.
+
+    \begin{definition}[Sample Space]
+        The \textbf{sample space} $S$ of an experiment or random trial is the set of all possible outcomes of that experiment. Each outcome in $S$ is mutually exclusive and collectively exhaustive.
+    \end{definition}
+
+    \begin{definition}[Event]
+        An \textbf{event} is any subset of the sample space $S$ and represents a collection of possible outcomes of the experiment. An event can be as small as containing no outcomes (null event $\emptyset$) or as large as the entire sample space.
+    \end{definition}
+
+    \begin{example}
+        Consider an experiment where one card is drawn from a standard deck of 52 cards.
+
+        The sample space \( S \) consists of 52 elements, each representing a unique card from the deck.
+        
+        Example events could include:
+        \begin{itemize}
+        \item Event \( D \): Drawing a face card (Jack, Queen, or King).
+        \item Event \( E \): Drawing a card of hearts.
+        \item Event \( F \): Drawing an ace.
+        \end{itemize}
+    \end{example}
+
+    \begin{example}
+        Consider a simple experiment where a fair coin is flipped twice.
+
+        The sample space for this experiment, denoted as \( S \), is:
+        \[ S = \{HH, HT, TH, TT\} \]
+        Here, \( H \) stands for heads and \( T \) for tails, with each element representing an outcome sequence over the two flips.
+
+        Example events could include:
+        \begin{itemize}
+        \item Event \( G \): Getting at least one head.
+        \[ G = \{HH, HT, TH\} \]
+        \item Event \( H \): Getting a tail for second trial.
+        \[ H = \{HT, TT\} \]
+        \end{itemize}
+    \end{example}
+
+    Now that we know both sample space and events are sets. Set opperations are applicable for them.
+    We use last example for further illustration. Now suppose we want to get the event that among
+    the two trial, we have at least one head and no tail for second trial. All we need to do is taking
+    the intersection of $G$ and $H$.
+    \[G\cap H = \{HT\}\]
+    So we have only one case which is $HT$ for this. The same goes for the union.
+
+    \begin{remark}
+        Additionally, intsersection of two events are sometimes conventionally written without 
+        intersection notation $\cap$, instead we have $GH \equiv G\cap H$. 
+    \end{remark}
+
+    Here we introduce some new notations for set representation in probability theory. Note that they
+    are using the same notation as in what we have discussed in class (section \ref{intofclass}), 
+    do differenciate them.
+
+    For some scenario where we may find the huge number of events, we use similar notation as $\Sigma$ and $\Pi$
+    to express cpnsecutive set operation. 
+    \begin{notation}
+        Given an infinite sequence of events \( \{E_n\}_{n=1}^{\infty} \), the \textbf{union} of these events is denoted by \( \bigcup_{n=1}^{\infty} E_n \) and is the event containing all outcomes that are in at least one of the events \( E_n \). Formally, an outcome \( \omega \) is in \( \bigcup_{n=1}^{\infty} E_n \) if and only if there exists at least one \( n \) such that \( \omega \in E_n \).
+        
+        Similarly, the \textbf{intersection} of these events is denoted by \( \bigcap_{n=1}^{\infty} E_n \) and is the event containing only those outcomes that are in every \( E_n \). An outcome \( \omega \) is in \( \bigcap_{n=1}^{\infty} E_n \) if and only if for all \( n \), \( \omega \in E_n \).
+    \end{notation}
+    
+    Also, we use $^c$ to show complement event. In last example, we have $H^c = S-H = \{HH,TH\}$.
+
+    Here is an example to let you have some further understanding of the notation.
+    \begin{example}[Generalized De Morgan's Law]
+        We have learned demorgan's law in Boolean algebra and set theory, but only in a base case, meaning 
+        it volves only two sets or Boolean variables. We can use $\bigcap, \bigcup$ to interprete it
+        as:
+        \[\begin{aligned}&\left(\bigcup_{i=1}^nE_i\right)^c=\bigcap_{i=1}^nE_i^c\\&\left(\bigcap_{i=1}^nE_i\right)^c=\bigcup_{i=1}^nE_i^c.\end{aligned}\]
+    \end{example}
+    \begin{remark}
+        Do remember that for some set $S$, $S^c, S^\prime,\bar{S}$ are the same thing.
+    \end{remark}
+
+
+    \subsection{Probability Axioms}
+    This section introduces axioms of probability theorey and some useful propositions. Before that,
+    we need to define what is probability. In natural language you may say, probability is the chance
+    that a certain thing happen, which is intollerable for mathematicians. Here
+    are some common definitions.
+    
+    \begin{definition}[Probability as Relative Frequency]
+    The probability of an event is defined as the limit of its relative frequency in many trials. If an event \( E \) occurs \( n_E \) times in \( n \) trials, the probability of \( E \), \( P(E) \), is given by:
+    \[ P(E) = \lim_{n \to \infty} \frac{n_E}{n} \]
+    assuming the limit exists.
+    \end{definition}
+    
+    \begin{definition}[Probability via Classical Definition]
+    In the classical definition, applicable only to equally likely outcomes, the probability of an event \( E \) is the ratio of the number of outcomes favorable to \( E \) to the total number of possible outcomes in the sample space \( S \). If \( S \) is finite and each outcome is equally likely, then:
+    \[ P(E) = \frac{|E|}{|S|} \]
+    where \( |E| \) is the number of elements in \( E \) and \( |S| \) is the number of elements in \( S \).
+    \end{definition}
+    
+    But don't need to delve into the definition too deep as it may involve something
+    beyond this book. Either of these definitions are enough for solving basic
+    probability problems.
+
+    Probability theory is a mathematical framework for quantifying uncertainty. It provides a set of formal principles, known as probability axioms, which underlie the entire structure of probability. These axioms were introduced by the Russian mathematician Andrey Kolmogorov in 1933, and they form the foundation upon which the modern theory of probability is built. The axioms are intended to be consistent and complete, and any mathematical system that satisfies these axioms is deemed a valid probability space. We discuss these axioms in detail below.
+
+    \begin{axiom}[Non-negativity]
+    For any event \( E \) in the sample space \( S \), the probability of \( E \) is a non-negative number:
+    \[0\leq P(E) \leq 1. \]
+    \end{axiom}
+
+    \begin{axiom}[Unit Measure]
+    The probability of the entire sample space is 1:
+    \[ P(S) = 1. \]
+    \end{axiom}
+
+    \begin{axiom}[Additivity]\label{additivity}
+    For any sequence of disjoint events \( E_1, E_2, \ldots \) (events with no common outcomes), the probability of the union of these events is equal to the sum of their individual probabilities:
+    \[ P\left(\bigcup_{i=1}^{\infty} E_i\right) = \sum_{i=1}^{\infty} P(E_i). \]
+    This is sometimes referred to as countable additivity.
+    \end{axiom}
+
+    With these axioms, we derive some other propositions for problem-solving. 
+    They are actually just some easy-to-find result from set theory.
+
+    \begin{proposition}[Complement Rule]
+    For any event \( E \) in a probability space, the probability of the complement of \( E \), denoted \( E^c \), is given by:
+    \[ P(E^c) = 1 - P(E). \]
+    This states that the likelihood of the event not occurring is the complement of the probability of the event occurring.
+    \end{proposition}
+    
+    \begin{proof}
+    The sample space \( S \) can be partitioned into two disjoint events, \( E \) and its complement \( E^c \). According to the axioms of probability, we have \( P(S) = P(E) + P(E^c) = 1 \). Therefore, rearranging for \( P(E^c) \), we obtain \( P(E^c) = 1 - P(E) \).
+    \end{proof}
+    
+    \begin{proposition}[Monotonicity of Probability]
+    If an event \( E \) is a subset of event \( F \), denoted \( E \subseteq F \), then the probability of \( E \) is less than or equal to the probability of \( F \):
+    \[ P(E) \leq P(F). \]
+    \end{proposition}
+    
+    \begin{proof}
+    Given \( E \subseteq F \), we can express \( F \) as \( F = E \cup (F \setminus E) \), where \( F \setminus E \) is the set of all elements in \( F \) that are not in \( E \), effectively \( E^c \cap F \). As \( E \) and \( F \setminus E \) are disjoint, from the axioms of probability, particularly countable additivity, we have:
+    \[ P(F) = P(E) + P(F \setminus E) \]
+    Since probabilities are non-negative, \( P(F \setminus E) \geq 0 \), hence \( P(E) \leq P(F) \).
+    \end{proof}
+    
+    \begin{proposition}[Probability of Union]
+    For any two events \( E \) and \( F \), the probability of their union is:
+    \[ P(E \cup F) = P(E) + P(F) - P(E \cap F). \]
+    This formula accounts for the overlap between \( E \) and \( F \) to avoid double-counting.
+    \end{proposition}
+    
+    \begin{proof}
+    The events \( E \) and \( F^c \cap F \) are disjoint, and their union is \( E \cup F \). Applying the axiom of countable additivity, we have:
+    \[ P(E \cup F) = P(E \cup (F^c \cap F)) = P(E) + P(F^c \cap F). \]
+    To find \( P(F^c \cap F) \), note that it represents all outcomes in \( F \) that are not in \( E \), which is equivalent to \( P(F) - P(E \cap F) \). Thus, we conclude:
+    \[ P(E \cup F) = P(E) + P(F) - P(E \cap F). \]
+    \end{proof}
+    
+    We introduced the Principle of inclusion-exclusion of two sets in set theory (see theorem \ref{IE}).
+    Now we will prove it's generalized form so that we can use it for probability 
+    problems.
+
+    \begin{theorem}[Generalized Principle of Inclusion-Exclusion]
+        For any collection of finite sets \( A_1, A_2, \ldots, A_n \), the size of their union is given by:
+        \begin{equation}
+        \left|\bigcup_{i=1}^{n} A_i\right| = \sum_{\emptyset \neq I \subseteq [n]} (-1)^{|I|+1} \left|\bigcap_{i \in I} A_i\right|.
+        \end{equation}
+    \end{theorem}
+        
+    \begin{proof}
+        Let \( X \) denote a universal set that contains all the elements we are considering, and let \( [n] \) represent the index set \( \{1, 2, \ldots, n\} \). For any index set \( I \subseteq [n] \), the expression \( \bigcap_{i \in I} A_i \) denotes the intersection of those sets \( A_i \) for which the index \( i \) is in \( I \).
+        
+        For each set \( A_i \) included in our universal set \( X \), we define a characteristic function \( f_i(x) \) as follows:
+        \[
+        f_i(x) = 
+        \begin{cases}
+        1 & \text{if } x \in A_i, \\
+        0 & \text{if } x \notin A_i.
+        \end{cases}
+        \]
+        We then consider the function \( F(x) \) defined as the product of \( 1 - f_i(x) \) for \( i \) from 1 to \( n \):
+        \[
+        F(x) = \prod_{i=1}^{n} (1 - f_i(x)).
+        \]
+        This function \( F(x) \) essentially acts as the characteristic function of the complement of the union of all sets \( A_i \), taking the value 1 if and only if \( x \) is not in any of the sets \( A_i \).
+        
+        Next, we express \( F(x) \) by expanding the product into its individual terms:
+        \[
+        F(x) = \prod_{i=1}^{n} (1 - f_i(x)) = \sum_{I \subseteq [n]} (-1)^{|I|} \prod_{i \in I} f_i(x).
+        \]
+        Here, \( \prod_{i \in I} f_i(x) \) is the product of the values of \( f_i(x) \) for all \( i \) in \( I \), which is the characteristic function for the intersection \( \bigcap_{i \in I} A_i \).
+        
+        Taking the sum of \( F(x) \) over all \( x \in X \), we have:
+        \[
+        \sum_{x \in X} F(x) = \sum_{I \subseteq [n]} (-1)^{|I|} \left|\bigcap_{i \in I} A_i\right|.
+        \]
+        Comparing this with the direct computation of the sum of \( F(x) \) as the size of the complement of the union of all \( A_i \), we can equate the two expressions to obtain:
+        \[
+        \left|X \setminus \bigcup_{i=1}^{n} A_i\right| = \left|X\right| - \left|\bigcup_{i=1}^{n} A_i\right| = \sum_{I \subseteq [n]} (-1)^{|I|} \left|\bigcap_{i \in I} A_i\right|.
+        \]
+        By including the empty set in our summation, we consider it as \( \left|X\right| \), the size of the universal set, and follow the same pattern of alternation as prescribed by the Principle of Inclusion-Exclusion. This completes the proof.
+    \end{proof}
+    
+    This theorem has equivalent form in probability theory, and we don't need to prove this again.
+    \begin{theorem}[Generalized Principle of Inclusion-Exclusion for Probability]
+        For any collection of events \( A_1, A_2, \ldots, A_n \) in a probability space, the probability of the union of these events is given by:
+        \begin{equation}
+        P\left(\bigcup_{i=1}^{n} A_i\right) = \sum_{\emptyset \neq I \subseteq [n]} (-1)^{|I|+1} P\left(\bigcap_{i \in I} A_i\right).
+        \end{equation}
+    \end{theorem}
+    Below is how to understand it from combinatorial perspective.
+    
+        Consider a noninductive argument for the Principle of Inclusion-Exclusion as applied to probability. Assume we have a probability space and events \(A_1, A_2, \ldots, A_n\) within this space. If an outcome of the sample space does not belong to any of the event sets \(A_i\), then it has no impact on the calculation of the probability of the union of these events since it is not an element of any union or intersection of these sets.
+        
+        Now, suppose an outcome occurs in exactly \(m\) of the events \(A_i\), where \(m > 0\). The probability associated with this outcome contributes once to the probability of the union \(P(\bigcup_{i} A_i)\) since it must belong to at least one of the events \(A_i\).
+        
+        However, when we calculate the probability of the union using the Principle of Inclusion-Exclusion, this outcome's probability is counted multiple times: once for each event it belongs to, then subtracted for each intersection of two events it belongs to, added again for each intersection of three events, and so on. This alternation of addition and subtraction continues, matching the pattern of the binomial expansion of \((1 - 1)^m\), which is zero. More precisely, for \(m > 0\), the outcome's probability is included \( \binom{m}{1} \) times for single sets, subtracted \( \binom{m}{2} \) times for intersections of pairs, added \( \binom{m}{3} \) times for triple intersections, and so on, up to \( (-1)^{m+1}\binom{m}{m} \) for the intersection of all \(m\) events.
+        
+        Mathematically, this summation can be expressed as follows:
+        \[
+        1 = \binom{m}{0} = \binom{m}{1} - \binom{m}{2} + \binom{m}{3} - \ldots + (-1)^m\binom{m}{m}.
+        \]
+        Given that \( (1 - 1)^m = 0 \), the binomial theorem tells us that:
+        \[
+        0 = (1 - 1)^m = \sum_{i=0}^{m} \binom{m}{i}(-1)^i = \binom{m}{0} - \binom{m}{1} + \binom{m}{2} - \ldots + (-1)^m\binom{m}{m}.
+        \]
+        The summation of the binomial coefficients weighted by alternating signs is thus zero, mirroring the way an outcome's probability is counted in the Inclusion-Exclusion formula. Consequently, each outcome's probability is correctly accounted for once in the total probability of the union of the events, validating the principle.
+    
+
+    \section{Finding Probability with Counting}
+    In the practice, many cases are assumed that all outcomes are in the same sample space.
+    Given a sample space $S = \{1,2,3,\dots,n\}$, we have 
+    \begin{equation}
+        P(1) = p(2) = p(3)=\dots = p(n) = \frac{1}{n}.
+    \end{equation}
+    By axiom \ref{additivity}, we know that
+    \begin{equation}
+        P(E) = \frac{\tx{Outcomes of E}}{\tx{Outcomes of S}}.
+    \end{equation} 
+
+    This makes things a lot easier, because we can get both numerator and denominator with counting 
+    method we have learned, or by enumerating cases. However, these problems are sometimes quite tricky, and cannot be solved
+    by dubbing into formula without thinking.
+
+    \subsection{Some Basic Problems}
+    We start with some basic example.
+
+    \begin{example}
+        If two dice are rolled, what is the probability that the sum of the upturned faces will equal 7?
+        \end{example}
+        
+        \begin{solution}
+        We approach this problem using classical probability, which requires us to consider all equally likely outcomes. When two six-sided dice are rolled, the total number of outcomes is the product of the number of faces on each die, which is $6 \times 6 = 36$.
+        
+        To find the probability of obtaining a sum of 7, we need to count the number of outcomes where the two dice sum up to 7. These outcomes can be enumerated explicitly:
+        \[
+        \{(1,6), (2,5), (3,4), (4,3), (5,2), (6,1)\}
+        \]       
+        There are 6 favorable outcomes. Thus, the probability $P$ of the sum being 7 is given by the ratio of the number of favorable outcomes to the total number of outcomes:
+        \[
+        P = \frac{\text{Number of favorable outcomes}}{\text{Total number of outcomes}} = \frac{6}{36} = \frac{1}{6}
+        \]
+        Therefore, the probability of the sum of the upturned faces of two dice being 7 is $\frac{1}{6}$.
+        \end{solution}
+
+
+    \begin{example}
+        Consider the problem of selecting a committee of 5 members from a group of 6 men and 9 women. If the selection is made randomly, what is the probability that the committee consists of 3 men and 2 women?
+    \end{example}
+        
+        \begin{solution}
+        To solve this problem, we can use the concept of combinations. A combination is a selection of items from a larger set such that the order of selection does not matter. In mathematical terms, the number of ways to choose $k$ items from a set of $n$ distinct items is given by the combination formula:
+        \[
+        \binom{n}{k} = \frac{n!}{k!(n-k)!}
+        \]
+        where $n!$ denotes the factorial of $n$.
+        
+        For our problem, we first calculate the number of ways to choose 3 men from the 6 available:
+        \[
+        \binom{6}{3} = \frac{6!}{3! \cdot (6-3)!} = 20
+        \]
+        Next, we calculate the number of ways to choose 2 women from the 9 available:
+        \[
+        \binom{9}{2} = \frac{9!}{2! \cdot (9-2)!} = 36
+        \]
+        The number of ways to form a committee of 5 people (3 men and 2 women) is the product of the two combinations:
+        \[
+        \text{Ways to form the committee} = \binom{6}{3} \times \binom{9}{2} = 20 \times 36 = 720
+        \]
+        Finally, we calculate the total number of ways to form a committee of 5 members from the 15 people (6 men and 9 women) without any restriction on gender:
+        \[
+        \binom{15}{5} = \frac{15!}{5! \cdot (15-5)!} = 3003
+        \]
+        The probability $P$ of forming a committee of 3 men and 2 women is the ratio of the number of favorable outcomes to the total number of outcomes:
+        \[
+        P = \frac{\text{Ways to form the committee}}{\binom{15}{5}} = \frac{720}{3003} \approx 0.2398
+        \]
+        So, the probability is approximately $0.2398$ or $\frac{240}{1001}$ when expressed as a fraction.
+        \end{solution}
+        
+        \begin{example}
+            An urn contains \(n\) balls, one of which is special. If \(k\) of these balls are withdrawn one at a time, with each selection being equally likely to be any of the balls that remain at the time, what is the probability that the special ball is chosen?
+            \end{example}
+            
+            \begin{solution}
+            The selection of \(k\) balls from \(n\) is a classic example of combinations where order does not matter, and each selection is equally likely.
+            
+            Since the balls are indistinguishable except for the special ball, the number of ways to choose \(k\) balls from \(n\) without considering any particular ball is:
+            
+            \[
+            \binom{n}{k}
+            \]
+            
+            The number of ways to choose \(k-1\) balls from the remaining \(n-1\) balls (after the special ball is chosen) is:
+            
+            \[
+            \binom{n-1}{k-1}
+            \]
+            
+            Thus, the probability that the special ball is among the \(k\) chosen is the ratio of the two combinations, which simplifies to:
+            
+            \[
+            P(\text{special ball is selected}) = \frac{\binom{n-1}{k-1}}{\binom{n}{k}} = \frac{k}{n}
+            \]
+            
+            Alternatively, considering the events \(A_i\) where the special ball is the \(i\)-th ball chosen for \(i = 1, 2, \ldots, k\), and since each ball is equally likely to be chosen at each draw, the probability \(P(A_i) = \frac{1}{n}\).
+            
+            Since these events are mutually exclusive, we have:
+            
+            \[
+            P(\text{special ball is selected}) = P\left(\bigcup_{i=1}^{k} A_i\right) = \sum_{i=1}^{k} P(A_i) = \frac{k}{n}
+            \]
+            
+            Thus, whether we consider the combinations or the individual probabilities of selection, the probability that the special ball is chosen is \(\frac{k}{n}\).
+            \end{solution}
+
+
+            \begin{example}
+                A total of 36 members of a club play tennis, 28 play squash, and 18 play badminton. Furthermore, 22 of the members play both tennis and squash, 12 play both tennis and badminton, 9 play both squash and badminton, and 4 play all three sports. How many members of this club play at least one of three sports?
+                \end{example}
+                
+                \begin{solution}
+                Let \(N\) denote the number of members of the club. Introducing probability by assuming that a member of the club is randomly selected, for any subset \(C\) of members of the club, let \(P(C)\) denote the probability that the selected member is contained in \(C\), then
+                
+                \[
+                P(C) = \frac{\text{number of members in } C}{N}
+                \]
+                
+                Now, with \(T\) being the set of members that plays tennis, \(S\) being the set that plays squash, and \(B\) being the set that plays badminton, we apply the inclusion-exclusion principle:
+                
+                \[
+                P(T \cup S \cup B) = P(T) + P(S) + P(B) - P(T \cap S) - P(T \cap B) - P(S \cap B) + P(T \cap S \cap B)
+                \]
+                
+                Substituting the given numbers, we have:
+                
+                \[
+                \frac{36}{N} + \frac{28}{N} + \frac{18}{N} - \frac{22}{N} - \frac{12}{N} - \frac{9}{N} + \frac{4}{N} = \frac{43}{N}
+                \]
+                
+                Hence, we conclude that 43 members play at least one of the sports.
+                \end{solution}
+
+        \subsection{Further Problems}
+        There are many tricky problems that are different from these basic problems that requires
+        more techniques and reasoning. I will leave the rest of the examples optional only for those
+        who are interested on this topic.
+
+        \begin{example}
+            In the game of bridge, the entire deck of 52 cards is dealt out to 4 players. What is the probability that
+            \begin{enumerate}[label = \alph*)]
+                \item one of the players receives all 13 spades;
+                \item each player receives 1 ace?
+            \end{enumerate}
+        \end{example}
+            
+            \begin{solution}
+            (a) Let \(E_i\) be the event that hand \(i\) has all 13 spades, then the probability \(P(E_i)\) for \(i = 1, 2, 3, 4\) is given by the number of ways to choose the remaining 39 cards from the 52, while the spades are fixed:
+            
+            \[
+            P(E_i) = \frac{1}{\binom{52}{13}}, \quad i = 1, 2, 3, 4
+            \]
+            
+            Since the events \(E_i\), for \(i = 1, 2, 3, 4\), are mutually exclusive, the probability that one of the hands is dealt all 13 spades is:
+            
+            \[
+            P\left(\bigcup_{i=1}^{4} E_i\right) = \sum_{i=1}^{4} P(E_i) = \frac{4}{\binom{52}{13}} \approx 6.3 \times 10^{-12}
+            \]
+            
+            (b) To determine the number of outcomes in which each of the distinct players receives exactly 1 ace, put aside the aces and note that there are \(\binom{48}{12, 12, 12, 12}\) possible divisions of the other 48 cards when each player is to receive 12. Because there are \(4!\) ways of dividing the 4 aces so that each player receives 1, we see that the number of possible outcomes in which each player receives exactly 1 ace is:
+            
+            \[
+            4! \times \binom{48}{12, 12, 12, 12}
+            \]
+            
+            As there are \(\binom{52}{13, 13, 13, 13}\) possible hands, the desired probability is thus:
+            
+            \[
+            \frac{4! \times \binom{48}{12, 12, 12, 12}}{\binom{52}{13, 13, 13, 13}} \approx 1.055
+            \]
+            \end{solution}
+
+            \begin{example}
+                A football team consists of 20 offensive and 20 defensive players. The players are to be paired in groups of 2 for the purpose of determining roommates. If the pairing is done at random, what is the probability that there are no offensive-defensive roommate pairs?
+                \end{example}
+                
+                \begin{solution}
+                There are
+                $$\left(\begin{array}{cc}40\\2,2,\ldots,2\end{array}\right)=\frac{(40)!}{(2!)^{20}}$$
+                ways of dividing the 40 players into 20 ordered pairs of two each.(That is, there are $(40)!/2^{20}$ ways of dividing the players into a frst pair, a second pair, and so on.) Hence, there are (40)!/2$^{20}(20)!$ ways of dividing the players into (unordered) pairs of 2 each. Furthermore, since a division will result in no offensive-defensive pairs if the offensive (and defensive) players are paired among themselves, it follows that there are $[(20)!/2^{10}(10)!]^{2}$ such divisions. Hence, the probability of no offensive-defensive roommate pairs, call it $P_0$, is given by
+                $$P_0=\frac{\left(\frac{(20)!}{2^{10}(10)!}\right)^2}{\frac{(40)!}{2^{20}(20)!}}=\frac{[(20)!]^3}{[(10)!]^2(40)!}$$
+                \end{solution}
+                \begin{example}
+                    If \(n\) people are present in a room, what is the probability that no two of them celebrate their birthday on the same day of the year? How large must \(n\) be so that this probability is less than \(\frac{1}{2}\)?
+                \end{example}
+                    
+                    \begin{solution}
+                    Each person has 365 days available for a birthday, ignoring February 29 for simplicity. Thus, with \(n\) people, there are \(365^n\) possible outcomes. The probability \(P\) that no two people have the same birthday is then:
+                    
+                    \[
+                    P = \frac{365 \times 364 \times \ldots \times (365 - n + 1)}{365^n}
+                    \]
+                    
+                    This probability decreases as \(n\) increases. It can be shown that when \(n \geq 23\), this probability is less than \(\frac{1}{2}\). This is counterintuitive because 23 is much smaller than 365, but considering all possible pairs of individuals, the probability of a shared birthday becomes significant.
+                    
+                    For a pair, the probability of having the same birthday is \(\frac{1}{365}\), and for 23 people, there are \(\binom{23}{2} = 253\) such pairs. When \(n=50\), the probability that at least two people have the same birthday is approximately \(0.970\), and with \(n=100\), the odds are better than \(3,000,000:1\) in favor of a shared birthday.
+                    \end{solution}
+                    
+                
+
+
+    
 
 
 
