@@ -1392,7 +1392,30 @@ Probability theory is a branch of mathematics that deals with the analysis of ra
                     
                     For a pair, the probability of having the same birthday is \(\frac{1}{365}\), and for 23 people, there are \(\binom{23}{2} = 253\) such pairs. When \(n=50\), the probability that at least two people have the same birthday is approximately \(0.970\), and with \(n=100\), the odds are better than \(3,000,000:1\) in favor of a shared birthday.
                     \end{solution}
-                    
+            
+                    \begin{example}
+                        Compute the probability that if \(10\) married couples are seated at random at a round table, then no wife sits next to her husband.
+                    \end{example}
+                        
+                        \begin{solution}
+                        If we let \(E_i\), for \(i = 1, 2, \ldots, 10\), denote the event that the \(i\)th couple sit next to each other, the desired probability is \(1 - P\left( \bigcup_{i=1}^{10} E_i \right)\). Now, from Proposition 4.4, we have:
+                        
+                        \begin{align*}
+                            P\left( \bigcup_{i=1}^{10} E_i \right) &= \sum_{i=1}^{10} P(E_i) - \sum_{1 \leq i < j \leq 10} P(E_i E_j) \\
+                            &\quad + \ldots + (-1)^{n+1} \sum_{1 \leq i_1 < i_2 < \ldots < i_n \leq 10} P(E_{i_1} E_{i_2} \ldots E_{i_n}) \\
+                            &\quad + \ldots - P(E_1 E_2 \ldots E_{10}).
+                        \end{align*}
+                          
+                        
+                        To compute \(P(E_{i_1} E_{i_2} \ldots E_{i_n})\), we first note that there are \(19!\) ways of arranging \(20\) people around a round table. Since each of the \(n\) married couples can be arranged next to each other in one of two possible ways, it follows that there are \(2^n (19 - n)!\) arrangements that result in a specified set of \(n\) men each sitting next to their wives. Thus, we have:
+                        
+                        \[
+                        P(E_{i_1} E_{i_2} \ldots E_{i_n}) = \frac{2^n (19 - n)!}{19!}
+                        \]
+                        
+                        Applying the inclusion-exclusion principle, we obtain the probability that at least one married couple sits together. Simplifying the alternating sum, the desired probability is approximately \(0.3395\).
+                    \end{solution}
+                        
                 
 
 
