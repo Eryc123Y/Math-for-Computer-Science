@@ -661,7 +661,7 @@ Probability theory is a branch of mathematics that deals with the analysis of ra
             When counting selections from a set, we use combinations without repetition because each element can be chosen only once. In contrast, when counting selections from a multiset, we use combinations with repetition since each element can appear multiple times in a selection.
         \end{example}
         
-        \subsection{Multinomial Theorem and Bell Number}
+        \subsection{Binomial and Multinomial Theorem}
         \subsubsection*{Binomial Theorem}
         In previous section, we introduced corollary ref{pascal's identity}. This conclusion is the foundation
         of binomial theorem, which is why we call $\binom{n}{r}$ binomial coefficient. We have learned in the
@@ -877,6 +877,7 @@ Probability theory is a branch of mathematics that deals with the analysis of ra
         \end{solution}
 
         \begin{exercise}
+            Answer the following questions.
             \begin{enumerate}
                 \item How many ways can a president, treasurer, and secretary be chosen from a group of 10 people?
                 \item How many ways can a team of three people be chosen from a group of 10 people?
@@ -965,7 +966,7 @@ Probability theory is a branch of mathematics that deals with the analysis of ra
     We have discussed the example of rolling a die in previous sections. Intuitively we know that
     the probability of getting the number 3 is 1/6 because it's one case out of all six cases. In 
     this example, the possible results of the event (rolling a die to get a number) can be written
-    as a set $S = {1,2,3,4,5,6}$, and therefore, the possibility of getting a certain number 
+    as a set $S = \{1,2,3,4,5,6\}$, and therefore, the possibility of getting a certain number 
     from 1 to 6 is $\frac{1}{|S|} = \frac{1}{6}$.
 
     In this example, we call the set of all possible outcomes \textbf{Sample Space}, and getting
@@ -1081,7 +1082,7 @@ Probability theory is a branch of mathematics that deals with the analysis of ra
     \end{axiom}
 
     \begin{axiom}[Additivity]\label{additivity}
-    For any sequence of disjoint events \( E_1, E_2, \ldots \) (events with no common outcomes), the probability of the union of these events is equal to the sum of their individual probabilities:
+    For any sequence of disjoint events \( \{E_i\}_{i=1}^n\) (events with no common outcomes), the probability of the union of these events is equal to the sum of their individual probabilities:
     \[ P\left(\bigcup_{i=1}^{\infty} E_i\right) = \sum_{i=1}^{\infty} P(E_i). \]
     This is sometimes referred to as countable additivity.
     \end{axiom}
@@ -1169,7 +1170,7 @@ Probability theory is a branch of mathematics that deals with the analysis of ra
     \end{proof}
     
     This theorem has equivalent form in probability theory, and we don't need to prove this again.
-    \begin{theorem}[Generalized Principle of Inclusion-Exclusion for Probability]
+    \begin{theorem}[Generalized Principle of Inclusion-Exclusion for Probability]\label{PrIE}
         For any collection of events \( A_1, A_2, \ldots, A_n \) in a probability space, the probability of the union of these events is given by:
         \begin{equation}
         P\left(\bigcup_{i=1}^{n} A_i\right) = \sum_{\emptyset \neq I \subseteq [n]} (-1)^{|I|+1} P\left(\bigcap_{i \in I} A_i\right).
@@ -1194,6 +1195,580 @@ Probability theory is a branch of mathematics that deals with the analysis of ra
         The summation of the binomial coefficients weighted by alternating signs is thus zero, mirroring the way an outcome's probability is counted in the Inclusion-Exclusion formula. Consequently, each outcome's probability is correctly accounted for once in the total probability of the union of the events, validating the principle.
     
 
+        \subsection{Exercises}
+        \begin{exercise}
+            This problem involves axiom of probability and some propositions of probability theory. With these, you should prove \textbf{Boole's Inequality}.
+            \begin{theorem}[Boole's Inequality]
+                Let \( E_1, E_2, \ldots, E_n \) be events from a finite sample space. Then,
+                \[
+                    P\left(\bigcup_{i=1}^n E_i\right) \leq \sum_{i=1}^n P(E_i).
+                \]
+            \end{theorem}    
+        \end{exercise}
+
+        This can be proven by both MI and with the help of axioms of probability.
+        \begin{proof}[Proof by MI]
+            We prove Boole's Inequality by induction on the number \( n \) of events.
+        
+            \textbf{Base case:} When \( n = 1 \), the inequality clearly holds as:
+            \[
+                P\left(\bigcup_{i=1}^1 E_i\right) = P(E_1) \leq P(E_1).
+            \]
+        
+            \textbf{Inductive step:} Assume the inequality holds for \( n \) events, i.e.,
+            \[
+                P\left(\bigcup_{i=1}^n E_i\right) \leq \sum_{i=1}^n P(E_i).
+            \]
+            We need to prove it for \( n+1 \) events. Consider:
+            \[
+                \bigcup_{i=1}^{n+1} E_i = \left(\bigcup_{i=1}^n E_i\right) \cup E_{n+1}.
+            \]
+            Using the subadditivity of probability, we have:
+            \[
+                P\left(\bigcup_{i=1}^{n+1} E_i\right) = P\left(\left(\bigcup_{i=1}^n E_i\right) \cup E_{n+1}\right) \leq P\left(\bigcup_{i=1}^n E_i\right) + P(E_{n+1}).
+            \]
+            Applying the induction hypothesis:
+            \[
+                P\left(\bigcup_{i=1}^n E_i\right) \leq \sum_{i=1}^n P(E_i),
+            \]
+            it follows that:
+            \[
+                P\left(\bigcup_{i=1}^{n+1} E_i\right) \leq \sum_{i=1}^n P(E_i) + P(E_{n+1}) = \sum_{i=1}^{n+1} P(E_i).
+            \]
+            This completes the induction.
+        
+            Therefore, by mathematical induction, Boole's Inequality holds for any finite number \( n \) of events.
+        \end{proof}
+
+        \begin{proof}[Proof by Axiom of Probability]
+            The proof employs the principle of inclusion-exclusion and the non-negativity of probability.
+        
+            The probability of the union of any two events \( E_1 \) and \( E_2 \) satisfies
+            \[
+                P(E_1 \cup E_2) = P(E_1) + P(E_2) - P(E_1 \cap E_2),
+            \]
+            which, given \( P(E_1 \cap E_2) \geq 0 \), implies that
+            \[
+                P(E_1 \cup E_2) \leq P(E_1) + P(E_2).
+            \]
+            Extending this to \( n \) events, we have by the subadditivity axiom:
+            \[
+                P\left(\bigcup_{i=1}^n E_i\right) = P\left(\bigcup_{i=1}^{n-1} E_i \cup E_n\right) \leq P\left(\bigcup_{i=1}^{n-1} E_i\right) + P(E_n).
+            \]
+            Assuming inductively that the inequality holds for the union of \( n-1 \) events, i.e.,
+            \[
+                P\left(\bigcup_{i=1}^{n-1} E_i\right) \leq \sum_{i=1}^{n-1} P(E_i),
+            \]
+            we then obtain
+            \[
+                P\left(\bigcup_{i=1}^n E_i\right) \leq \sum_{i=1}^{n-1} P(E_i) + P(E_n) = \sum_{i=1}^n P(E_i),
+            \]
+            as required.
+            
+            Or you can also consider theorem \ref{PrIE} that we must have something less than or equal to $\sum_{i=1}^{n}P(E_i)$.
+        \end{proof}
+        \begin{remark}
+            Boole's Inequality becomes an equality if and only if the events \(E_1, E_2, \ldots, E_n\) are mutually disjoint. When the events are disjoint, the intersection of any two events is the empty set, implying \(P(E_i \cap E_j) = 0\) for all \(i \neq j\). In this case, the probability of the union of these events equals the sum of their individual probabilities, i.e.,
+            \[
+                P\left(\bigcup_{i=1}^n E_i\right) = \sum_{i=1}^n P(E_i).
+            \]
+            This scenario highlights the additive nature of probability in the absence of overlapping outcomes among events. Understanding this condition is crucial as it underscores the distinction between collective and independent probabilistic occurrences, often a key concept in studies involving probability theory and its applications.
+        \end{remark}
+
+        \begin{exercise}
+            Consider a loaded six-sided die where rolling a 3 is twice as likely as rolling any other individual number. Find the probability of each outcome when the die is rolled.
+        \end{exercise}
+        
+        \begin{solution}
+            Let \( p(x) \) denote the probability of rolling a number \( x \) on the die. According to the problem, rolling a 3 is twice as likely as rolling any other number, which can be mathematically represented as:
+            \[
+                p(3) = 2p(x) \quad \text{for } x \neq 3.
+            \]
+        
+            Since the die is fair except for the loading, the probabilities for numbers other than 3 are equal, implying:
+            \[
+                p(1) = p(2) = p(4) = p(5) = p(6).
+            \]
+        
+            The total probability for all outcomes must sum to 1, thus we have:
+            \[
+                p(1) + p(2) + p(3) + p(4) + p(5) + p(6) = 1.
+            \]
+        
+            Substituting the condition \( p(3) = 2p(1) \) into the equation, we obtain:
+            \[
+                5p(1) + 2p(1) = 1 \implies 7p(1) = 1 \implies p(1) = \frac{1}{7}.
+            \]
+        
+            Hence, the probability for each outcome is:
+            \[
+                p(1) = p(2) = p(4) = p(5) = p(6) = \frac{1}{7} \quad \text{and} \quad p(3) = \frac{2}{7}.
+            \]
+        \end{solution}
+
+        \begin{exercise}
+            Suppose that \(E\) and \(F\) are events such that \(p(E) = 0.8\) and \(p(F) = 0.6\). Show that \(p(E \cup F) \geq 0.8\) and \(p(E \cap F) \geq 0.4\).
+        \end{exercise}
+        
+        \begin{solution}
+            To solve this exercise, we start by considering the union and intersection of the events \(E\) and \(F\). 
+        
+            Firstly, note that the probability of the union of two events \(E\) and \(F\) can be found using the formula for the union of two sets:
+            \[
+                p(E \cup F) = p(E) + p(F) - p(E \cap F).
+            \]
+            Given that \(p(E) = 0.8\) and \(p(F) = 0.6\), substituting these values into the formula gives:
+            \[
+                p(E \cup F) = 0.8 + 0.6 - p(E \cap F).
+            \]
+        
+            Since the probability of any event is at most 1, we have:
+            \[
+                0.8 + 0.6 - p(E \cap F) \leq 1,
+            \]
+            which simplifies to:
+            \[
+                p(E \cap F) \geq 0.4.
+            \]
+            Therefore, the probability of the intersection of \(E\) and \(F\) is at least 0.4.
+        
+            With \(p(E \cap F) \geq 0.4\), substituting back into the union formula, we find:
+            \[
+                p(E \cup F) = 0.8 + 0.6 - p(E \cap F) \geq 0.8 + 0.6 - 0.4 = 1.0.
+            \]
+            However, since the probability cannot exceed 1, we consider the minimum possible value of \(p(E \cup F)\), which aligns with the maximum probability of either event:
+            \[
+                p(E \cup F) \geq \max(p(E), p(F)) = \max(0.8, 0.6) = 0.8.
+            \]
+        
+            Thus, we have shown both that \(p(E \cup F) \geq 0.8\) and \(p(E \cap F) \geq 0.4\).
+        \end{solution}
+
+        \begin{exercise}
+            The conclusion on the probability of intersected events could be further generalized to \textbf{Bonferroni's Inequality}.
+            \begin{theorem}[Bonferroni's Inequality]
+                Let \(E\) and \(F\) be events. Then, the probability of their intersection is bounded by:
+                \[
+                    p(E \cap F) \geq p(E) + p(F) - 1.
+                \]
+            \end{theorem}
+            You may find the proof quite easy.
+        \end{exercise}
+        \begin{proof}
+            To prove Bonferroni's inequality, start by using the principle of inclusion-exclusion for the union of two events:
+            \[
+                p(E \cup F) = p(E) + p(F) - p(E \cap F).
+            \]
+        
+            Since the probability of any event cannot exceed 1, we have:
+            \[
+                p(E \cup F) \leq 1.
+            \]
+        
+            Substituting the expression for \( p(E \cup F) \) into the inequality gives:
+            \[
+                p(E) + p(F) - p(E \cap F) \leq 1.
+            \]
+        
+            Rearranging this inequality, we find:
+            \[
+                p(E \cap F) \geq p(E) + p(F) - 1.
+            \]
+        
+            This derivation shows that the probability of the intersection of the events \(E\) and \(F\) is at least the sum of the probabilities of \(E\) and \(F\) minus 1, thereby establishing Bonferroni's inequality.
+        \end{proof}
+
+        \begin{exercise}
+            Use induction to generalize Bonferroni's inequality to $n$ events.
+            \begin{theorem}[Generalized Bonferroni's Inequality]
+                Let \( E_1, E_2, \ldots, E_n \) be events in a probability space. Then, the probability of the intersection of these events is bounded below by the sum of the probabilities of each event minus the number of events minus one, i.e.,
+                \[
+                P\left(\bigcap_{i=1}^n E_i\right) \geq \sum_{i=1}^n P(E_i) - (n - 1).
+                \]
+            \end{theorem}
+            Also consider other ways to prove this, i.e., inclusion-exclusion.
+        \end{exercise}
+        We can do this by weak induction, which is more than enough.
+        \begin{proof}[Proof by Weak Induction]
+            We proceed by mathematical induction on the number of events, \( n \).
+            
+            \textbf{Base case:} For \( n = 2 \), the inequality reduces to 
+            \[
+            P(E_1 \cap E_2) \geq P(E_1) + P(E_2) - 1,
+            \]
+            which is just the simple Bonferroni's inequality and is true by the principles of probability.
+            
+            \textbf{Inductive step:} Assume that the inequality holds for \( n = k \), i.e.,
+            \[
+            P\left(\bigcap_{i=1}^k E_i\right) \geq \sum_{i=1}^k P(E_i) - (k - 1).
+            \]
+            We need to show that the inequality holds for \( n = k+1 \). Consider,
+            \[
+            P\left(\bigcap_{i=1}^{k+1} E_i\right) = P\left(\left(\bigcap_{i=1}^k E_i\right) \cap E_{k+1}\right).
+            \]
+            By the probability of intersections,
+            \[
+            P\left(\left(\bigcap_{i=1}^k E_i\right) \cap E_{k+1}\right) = P\left(\bigcap_{i=1}^k E_i\right) - P\left(\bigcap_{i=1}^k E_i \cap E_{k+1}^c\right).
+            \]
+            Using the inductive hypothesis and subtracting the probability of the complement,
+            \[
+            P\left(\bigcap_{i=1}^k E_i\right) \geq \sum_{i=1}^k P(E_i) - (k - 1),
+            \]
+            \[
+            P\left(\bigcap_{i=1}^k E_i \cap E_{k+1}^c\right) \leq P\left(E_{k+1}^c\right) = 1 - P(E_{k+1}),
+            \]
+            \[
+            P\left(\bigcap_{i=1}^{k+1} E_i\right) \geq \sum_{i=1}^k P(E_i) - (k - 1) + P(E_{k+1}) - 1.
+            \]
+            Simplifying this,
+            \[
+            P\left(\bigcap_{i=1}^{k+1} E_i\right) \geq \sum_{i=1}^{k+1} P(E_i) - k,
+            \]
+            which completes the inductive step.
+            
+            Therefore, by mathematical induction, the Generalized Bonferroni's Inequality holds for any \( n \geq 2 \).
+            \end{proof}
+        However, we can actually start with $n=1$ as our base case and use strong induction, making our life much easier.
+        \begin{proof}[Proof by Strong Induction]
+            We prove this by strong induction on \(n\).
+            
+            \textbf{Base case} (\(n=1\)): The inequality trivially holds because
+            \[
+            P(E_1) \geq P(E_1) - 0.
+            \]
+            
+            \textbf{Inductive step}: Assume the inequality holds for \(n = k\), i.e.,
+            \[
+            P\left(\bigcap_{i=1}^k E_i\right) \geq \sum_{i=1}^k P(E_i) - (k - 1).
+            \]
+            
+            We need to prove that the statement is true for \(n = k+1\). Consider the intersection of \(k+1\) events as two groups:
+            \[
+            P\left(\bigcap_{i=1}^{k+1} E_i\right) = P\left(\left(\bigcap_{i=1}^k E_i\right) \cap E_{k+1}\right).
+            \]
+            
+            Applying the probability of intersections, we have:
+            \[
+            P\left(\left(\bigcap_{i=1}^k E_i\right) \cap E_{k+1}\right) \geq P\left(\bigcap_{i=1}^k E_i\right) + P(E_{k+1}) - 1,
+            \]
+            
+            Using the inductive hypothesis for the first \(k\) events:
+            \[
+            P\left(\bigcap_{i=1}^k E_i\right) \geq \sum_{i=1}^k P(E_i) - (k - 1),
+            \]
+            
+            Combine these results:
+            \[
+            P\left(\bigcap_{i=1}^{k+1} E_i\right) \geq \left(\sum_{i=1}^k P(E_i) - (k - 1)\right) + P(E_{k+1}) - 1,
+            \]
+            
+            Simplify the right-hand side:
+            \[
+            P\left(\bigcap_{i=1}^{k+1} E_i\right) \geq \sum_{i=1}^{k+1} P(E_i) - k.
+            \]
+            
+            This completes the inductive step. Thus, by strong induction, the Generalized Bonferroni's Inequality holds for any \(n \geq 1\).
+            \end{proof}
+            \begin{remark}
+                This reminds us that in mathematical proofs, both weak and strong induction methods are commonly used, each having its own strengths and suitable applications. 
+                
+                \textbf{Weak Induction:} This method, also known as ordinary mathematical induction, assumes the truth of a statement for \(n=k\) to prove it for \(n=k+1\). It is straightforward and effective, particularly when each case depends only on its immediate predecessor. This simplicity makes weak induction especially approachable for many basic proofs.
+                
+                \textbf{Strong Induction:} Strong induction assumes that the statement is true for all integers less than or equal to \(k\), and uses this to prove the statement for \(n=k+1\). This method is advantageous when the problem requires information from all previous cases, as it provides a more robust foundation for the proof, particularly in complex sequences or recursive relationships.
+                
+                The choice between these induction techniques depends on the problem structure and which method more clearly communicates the proof's logic. While strong induction offers a comprehensive approach suitable for complex or highly interdependent scenarios, weak induction's simplicity is beneficial for more straightforward cases.
+                \end{remark}
+        We also have a more interesting way to do that, simply by using principle of inclusion-exclusion.
+        \begin{proof}[Proof by Inclusion-Exclusion]
+            The proof uses the principle of inclusion-exclusion and the non-negativity of probabilities. We start by considering the inclusion-exclusion formula for the probability of the union of \( n \) events, which is:
+            \[
+            P\left(\bigcup_{i=1}^n E_i\right) = \sum_{k=1}^n (-1)^{k+1} \left(\sum_{1 \leq i_1 < \cdots < i_k \leq n} P(E_{i_1} \cap \cdots \cap E_{i_k})\right).
+            \]
+            
+            However, we need the probability of the intersection, \( P\left(\bigcap_{i=1}^n E_i\right) \), not the union. We consider the complementary probability:
+            \[
+            P\left(\bigcap_{i=1}^n E_i\right) = 1 - P\left(\bigcup_{i=1}^n E_i^c\right).
+            \]
+            
+            Using the inclusion-exclusion principle on \( E_i^c \) (the complements), we get:
+            \[
+            P\left(\bigcup_{i=1}^n E_i^c\right) \leq \sum_{i=1}^n P(E_i^c),
+            \]
+            where \( P(E_i^c) = 1 - P(E_i) \).
+            
+            Substituting back, we find:
+            \[
+            P\left(\bigcap_{i=1}^n E_i\right) = 1 - P\left(\bigcup_{i=1}^n E_i^c\right) \geq 1 - \sum_{i=1}^n (1 - P(E_i)).
+            \]
+            
+            Simplifying further:
+            \[
+            P\left(\bigcap_{i=1}^n E_i\right) \geq 1 - n + \sum_{i=1}^n P(E_i) = \sum_{i=1}^n P(E_i) - (n - 1).
+            \]
+            
+            This concludes the proof.
+            \end{proof}
+        \begin{exercise}
+            Show that if \(E_1, E_2, \ldots\) is an infinite sequence of pairwise disjoint events in a sample space \(S\), then 
+            \[
+                p\left(\bigcup_{i=1}^\infty E_i\right) = \sum_{i=1}^\infty p(E_i),
+            \]
+            by taking limits.
+        \end{exercise}
+        
+        \begin{solution}
+            To prove this, we begin by noting that for any finite \(n\), the probability of the union of the first \(n\) events in the sequence, by axiom \ref{additivity}, is
+            \[
+                p\left(\bigcup_{i=1}^n E_i\right) = \sum_{i=1}^n p(E_i).
+            \]
+            Since \(E_1, E_2, \ldots\) are pairwise disjoint, this relationship holds due to the finite additivity of probability measures.
+        
+            We now consider the limit as \(n\) approaches infinity. By the definition of an infinite series and the continuity of probability measures from below (which is a standard result in measure theory, assuming non-decreasing sequences of sets),
+            \[
+                p\left(\bigcup_{i=1}^\infty E_i\right) = \lim_{n \to \infty} p\left(\bigcup_{i=1}^n E_i\right).
+            \]
+            Applying the limit to both sides of the equation established for the finite case,
+            \[
+                \lim_{n \to \infty} p\left(\bigcup_{i=1}^n E_i\right) = \lim_{n \to \infty} \sum_{i=1}^n p(E_i) = \sum_{i=1}^\infty p(E_i),
+            \]
+            where the last equality is justified by the definition of an infinite series sum.
+        
+            Therefore, the probability of the union of an infinite sequence of pairwise disjoint events is equal to the sum of their individual probabilities.
+        \end{solution}
+
+        \begin{exercise}
+            Two dice are thrown. Let \(E\) be the event that the sum of the dice is odd, let \(F\) be the event that at least one of the dice lands on 1, and let \(G\) be the event that the sum is 5. Describe the events \(EF\), \(E \cup F\), \(FG\), \(EF^c\), and \(EFG\).
+        \end{exercise}
+        
+        \begin{solution}
+        \textbf{Event Descriptions:}
+        \begin{itemize}
+            \item \(EF\) (Intersection of \(E\) and \(F\)): This event represents both dice summing to an odd number and at least one die landing on 1. Possible outcomes include \[\{(1, 2), (1, 4), (1, 6), (2, 1), (4, 1), (6, 1)\}\].
+        
+            \item \(E \cup F\) (Union of \(E\) and \(F\)): This event occurs if the sum is odd or if at least one of the dice lands on 1. Since \(F\) includes any outcome with a 1, and \(E\) includes all combinations leading to an odd sum, combining these covers a large set of possibilities, particularly those where at least one die results affect either condition.
+        
+            \item \(FG\) (Intersection of \(F\) and \(G\)): This event includes outcomes where at least one die is 1 and the sum is 5. Outcomes are \(\{(1, 4), (4, 1)\}\) since these are the only ways to achieve a sum of 5 with at least one die showing 1.
+        
+            \item \(EF^c\) (Intersection of \(E\) and the complement of \(F\)): This event occurs when the sum is odd and neither die lands on 1. This excludes any odd sums involving a 1, narrowing the possibilities.
+        
+            \item \(EFG\) (Intersection of \(E\), \(F\), and \(G\)): Since \(G\) specifically requires the sum to be 5, and \(F\) requires at least one die to be 1, this intersection is effectively the same as \(FG\), given that the sum of 5 can only be odd. The outcomes here are also \(\{(1, 4), (4, 1)\}\).
+        \end{itemize}
+        \end{solution}
+
+        \begin{exercise}
+        A certain town with a population of 100,000 has three newspapers: I, II, and III. The proportions of townspeople who read these papers are as follows:
+        \begin{itemize}
+            \item I: 10\%
+            \item II: 30\%
+            \item III: 5\%
+            \item I and II: 8\%
+            \item I and III: 2\%
+            \item II and III: 4\%
+            \item I, II and III: 1\%
+        \end{itemize}
+        \begin{enumerate}
+            \item[(a)] Find the number of people who read only one newspaper.
+            \item[(b)] How many people read at least two newspapers?
+            \item[(c)] If I and III are morning papers and II is an evening
+            paper, how many people read at least one morning paper
+            plus an evening paper?
+            \item[(d)] How many people do not read any newspapers?
+            \item[(e)] How many people read only one morning paper and
+            one evening paper?
+        \end{enumerate}
+        \end{exercise}
+        \begin{solution}
+            \textbf{Definitions and Values Given:}
+            \begin{align*}
+                |I| &= 10\% \times 100,000 = 10,000 \\
+                |II| &= 30\% \times 100,000 = 30,000 \\
+                |III| &= 5\% \times 100,000 = 5,000 \\
+                |I \cap II| &= 8\% \times 100,000 = 8,000 \\
+                |I \cap III| &= 2\% \times 100,000 = 2,000 \\
+                |II \cap III| &= 4\% \times 100,000 = 4,000 \\
+                |I \cap II \cap III| &= 1\% \times 100,000 = 1,000
+            \end{align*}
+
+            \textbf{Individual Newspaper Readers:}
+            \begin{align*}
+                |I \text{ only}| &= |I| - (|I \cap II| + |I \cap III| - |I \cap II \cap III|) \\
+                &= 10,000 - (8,000 + 2,000 - 1,000) = 1,000 \\
+                |II \text{ only}| &= |II| - (|I \cap II| + |II \cap III| - |I \cap II \cap III|) \\
+                &= 30,000 - (8,000 + 4,000 - 1,000) = 19,000 \\
+                |III \text{ only}| &= |III| - (|I \cap III| + |II \cap III| - |I \cap II \cap III|) \\
+                &= 5,000 - (2,000 + 4,000 - 1,000) = 0
+            \end{align*}
+
+            \textbf{Calculations:}
+            \begin{enumerate}
+                \item[(a)] Total people who read only one newspaper = \( |I \text{ only}| + |II \text{ only}| + |III \text{ only}| = 1,000 + 19,000 + 0 = 20,000. \)
+                \item[(b)] Total people who read at least two newspapers = \( |I \cap II| + |I \cap III| + |II \cap III| - 2 \times |I \cap II \cap III| = 8,000 + 2,000 + 4,000 - 2 \times 1,000 = 12,000. \)
+                \item[(c)] Total people who read at least one morning paper and one evening paper (II is evening) = \( |I \cap II| + |III \cap II| = 8,000 + 4,000 = 12,000. \)
+                \item[(d)] Total people who do not read any newspapers = \( 100,000 - (|I \text{ only}| + |II \text{ only}| + |III \text{ only}| + |I \cap II| + |I \cap III| + |II \cap III| - |I \cap II \cap III|) = 100,000 - 29,000 = 71,000. \)
+                \item[(e)] Total people who read only one morning paper and one evening paper = \( |I \cap II| = 8,000. \)
+            \end{enumerate}
+        \end{solution}
+
+        \begin{exercise}
+            Suppose an experiment with 15 team members each having 2 job options and 3 political affiliations.
+            \begin{itemize}
+                \item[(a)] How many outcomes are in the sample space?
+                \item[(b)] How many outcomes are in the event that at least one of the team members is a blue-collar worker?
+                \item[(c)] How many outcomes are in the event that none of the team members considers himself or herself an Independent?
+            \end{itemize}
+        \end{exercise}
+
+        \begin{solution}
+            For different cases.
+            \begin{enumerate}
+                \item[(a)] \textbf{Total Outcomes in the Sample Space:} 
+                Each member can choose from two job types and three political affiliations, resulting in six combinations per member. For 15 members, the total number of outcomes is calculated as:
+                \[
+                6^{15}
+                \]
+            
+                \item[(b)] \textbf{Outcomes with At Least One Blue-Collar Worker:} 
+                To determine the number of outcomes where at least one member is a blue-collar worker, consider the complement scenario where all members are white-collar workers, with each having three choices of political affiliation. Thus:
+                \[
+                3^{15}
+                \]
+                Subtracting this from the total outcomes gives:
+                \[
+                6^{15} - 3^{15}
+                \]
+            
+                \item[(c)] \textbf{Outcomes with No Independents:}
+                If no member is an Independent, each has four choices (two job types and two political affiliations). Thus, for 15 members:
+                \[
+                4^{15}
+                \]
+            \end{enumerate}
+        \end{solution}
+
+        \begin{exercise}
+            If two dice are rolled, what is the probability that the sum of the upturned faces equals \(i\)? Find it for \(i = 2, 3, \ldots, 11, 12\).
+            \end{exercise}
+            
+            \begin{solution}
+            When two dice are rolled, each die has 6 faces, resulting in a total of \(6 \times 6 = 36\) possible outcomes. The probability of any specific outcome is \(\frac{1}{36}\). Here, we determine the number of outcomes that result in each possible sum of the dice:
+            
+            \begin{itemize}
+                \item \textbf{Sum = 2:} (1,1) -- 1 way.
+                \item \textbf{Sum = 3:} (1,2), (2,1) -- 2 ways.
+                \item \textbf{Sum = 4:} (1,3), (2,2), (3,1) -- 3 ways.
+                \item \textbf{Sum = 5:} (1,4), (2,3), (3,2), (4,1) -- 4 ways.
+                \item \textbf{Sum = 6:} (1,5), (2,4), (3,3), (4,2), (5,1) -- 5 ways.
+                \item \textbf{Sum = 7:} (1,6), (2,5), (3,4), (4,3), (5,2), (6,1) -- 6 ways.
+                \item \textbf{Sum = 8:} (2,6), (3,5), (4,4), (5,3), (6,2) -- 5 ways.
+                \item \textbf{Sum = 9:} (3,6), (4,5), (5,4), (6,3) -- 4 ways.
+                \item \textbf{Sum = 10:} (4,6), (5,5), (6,4) -- 3 ways.
+                \item \textbf{Sum = 11:} (5,6), (6,5) -- 2 ways.
+                \item \textbf{Sum = 12:} (6,6) -- 1 way.
+            \end{itemize}
+            
+            The probability of each sum is calculated by dividing the number of favorable outcomes for that sum by the total number of outcomes (36). For example, the probability for a sum of 7 is:
+            
+            \[ P(\text{Sum} = 7) = \frac{6}{36} = \frac{1}{6} \]
+            
+            The same method is applied to calculate the probabilities for other sums.
+            \end{solution}
+
+        \begin{exercise}
+            A pair of dice is rolled until a sum of either 5 or 7 appears. Find the probability that a 5 occurs first.
+        \end{exercise}
+        \begin{solution}
+            Let \( E_n \) denote the event that a 5 occurs on the \( n \)-th roll and no 5 or 7 occurs on the first \( n-1 \) rolls. Compute \( P(E_n) \) and argue that \( \sum_{n=1}^{\infty} P(E_n) \) is the desired probability.
+            To solve this problem, we first calculate the probability of each relevant event when rolling two dice:
+
+            \begin{itemize}
+                \item The sum is 5, which can occur in 4 ways: (1,4), (2,3), (3,2), (4,1).
+                \item The sum is 7, which can occur in 6 ways: (1,6), (2,5), (3,4), (4,3), (5,2), (6,1).
+            \end{itemize}
+
+            Therefore, the probability of rolling a 5 is \( \frac{4}{36} = \frac{1}{9} \), and the probability of rolling a 7 is \( \frac{6}{36} = \frac{1}{6} \).
+
+            \subsubsection*{Probability of \( E_n \)}
+            The event \( E_n \) consists of two parts:
+            \begin{enumerate}
+                \item Not rolling a 5 or 7 on the first \( n-1 \) rolls.
+                \item Rolling a 5 on the \( n \)-th roll.
+            \end{enumerate}
+
+            The probability of not rolling a 5 or 7 on any given roll is \( 1 - \left(\frac{1}{9} + \frac{1}{6}\right) = \frac{26}{36} = \frac{13}{18} \).
+
+            Thus, the probability of \( E_n \) is:
+            \[
+            P(E_n) = \left(\frac{26}{36}\right)^{n-1} \times \frac{4}{36}
+            \]
+            \subsubsection*{Summation of \( P(E_n) \)}
+            The total probability of a 5 occurring first is the sum of probabilities of \( E_n \) over all \( n \):
+            \[
+            \sum_{n=1}^{\infty} P(E_n) = \sum_{n=1}^{\infty} \left(\frac{26}{36}\right)^{n-1} \times \frac{4}{36}
+            \]
+            This is a geometric series with the first term \( a = \frac{4}{36} \) and common ratio \( r = \frac{26}{36} \). The sum of an infinite geometric series is given by \( S = \frac{a}{1 - r} \), hence:
+            \[
+            \sum_{n=1}^{\infty} P(E_n) = \frac{\frac{4}{36}}{1 - \frac{26}{36}} = \frac{\frac{4}{36}}{\frac{10}{36}} = \frac{4}{10} = \frac{2}{5}
+            \]
+            Therefore, the probability that a 5 occurs first is \( \frac{2}{5} \).
+        \end{solution}
+
+        \begin{exercise}
+            Let \( S \) be a given set. If, for some \( k > 0 \), \( S_1, S_2, \ldots, S_k \) are mutually exclusive nonempty subsets of \( S \) such that \(\bigcup_{i=1}^k S_i = S\), then we call the set \( \{S_1, S_2, \ldots, S_k\} \) a \textit{partition} of \( S \). Let \( T_n \) denote the number of different partitions of \( \{1, 2, \ldots, n\} \). Thus, \( T_1 = 1 \) (the only partition being \( S_1 = \{1\} \)) and \( T_2 = 2 \) (the two partitions being \( \{\{1, 2\}\} \), \( \{\{1\}, \{2\}\} \)).
+            
+            \begin{enumerate}[label=(\alph*)]
+                \item Show, by computing all partitions, that \( T_3 = 5 \), \( T_4 = 15 \).
+                \item Show that \( T_{n+1} = 1 + \sum_{k=1}^n \binom{n}{k} T_k \) and use this equation to compute \( T_{10} \).
+            \end{enumerate}
+            \begin{remark}
+                Actually, this formula defines \href{https://www.wikiwand.com/en/Bell_number}{Bell Number}, which denotes the number of possible partition of a $n$ set, where $n\in \Z_0$. You may
+                check the link provided to learn it as something extra.
+            \end{remark}
+        \end{exercise}
+
+        \begin{solution}
+            (a) To compute \( T_3 \) and \( T_4 \):
+            \begin{itemize}
+                \item For \( T_3 \):
+                \begin{enumerate}
+                    \item All elements together: \(\{1, 2, 3\}\) (1 way)
+                    \item One element separate, two elements together: \(\{\{1\}, \{2, 3\}\}\), \(\{\{2\}, \{1, 3\}\}\), \(\{\{3\}, \{1, 2\}\}\) (3 ways)
+                    \item Each element separate: \(\{\{1\}, \{2\}, \{3\}\}\) (1 way)
+                \end{enumerate}
+                Thus, \( T_3 = 5 \).
+                \item For \( T_4 \):
+                \begin{enumerate}
+                    \item All elements together: \(\{1, 2, 3, 4\}\) (1 way)
+                    \item One element separate, three elements together: \(\{\{1\}, \{2, 3, 4\}\}\), and similar arrangements for each of the other single elements (4 ways)
+                    \item Two elements separate, two elements together: \(\{\{1, 2\}, \{3, 4\}\}\), \(\{\{1, 3\}, \{2, 4\}\}\), \(\{\{1, 4\}, \{2, 3\}\}\) (3 ways)
+                    \item One pair and two separate elements: Various combinations such as \(\{\{1, 2\}, \{3\}, \{4\}\}\) (6 ways)
+                    \item Each element separate: \(\{\{1\}, \{2\}, \{3\}, \{4\}\}\) (1 way)
+                \end{enumerate}
+                Thus, \( T_4 = 15 \).
+            \end{itemize}
+            
+            (b) 
+            To demonstrate the recursive relationship for \( T_{n+1} \), consider a set with \( n+1 \) elements. By designating one element as special, we have \( n \) nonspecial elements remaining. The number of ways to partition this set depends on the number of elements included with the special one:
+
+            \begin{itemize}
+                \item The special element can be alone, contributing to the partitions as if it were absent, which gives us \( T_n \) partitions.
+                \item If the special element is not alone, it can be grouped with any subset of the other \( n \) elements. For each subset size \( k \) (where \( k \) ranges from 1 to \( n \)), there are \( \binom{n}{k} \) ways to choose which elements to include with the special one. Each choice leaves \( n-k \) elements to be partitioned in \( T_{n-k} \) ways.
+            \end{itemize}
+
+            Thus, the recursive formula for \( T_{n+1} \) can be written as:
+            \[ T_{n+1} = T_n + \sum_{k=1}^n \binom{n}{k} T_{n-k} \]
+
+            However, this is essentially equivalent to:
+            \[ T_{n+1} = 1 + \sum_{k=1}^n \binom{n}{k} T_k \]
+            since choosing \( k \) elements to include with the special element (and thus \( n-k \) remaining) or choosing \( k \) elements to be separate (and \( n-k \) to include with the special element) are complementary actions, and \( T_0 = 1 \) because there is one way to partition an empty set.
+
+            To compute \( T_{10} \) using this formula:
+            \begin{enumerate}
+                \item Start with known values \( T_1 = 1 \), \( T_2 = 2 \), \( T_3 = 5 \), and \( T_4 = 15 \). Further values would typically be calculated in sequence using the formula.
+                \item Calculate each \( T_n \) recursively using earlier values:
+                \[ T_{n+1} = 1 + \sum_{k=1}^n \binom{n}{k} T_k \]
+                \item Continue this calculation through \( T_9 \) to determine \( T_{10} \).
+            \end{enumerate}
+            \end{solution}
     \section{Finding Probability with Counting}
     In the practice, many cases are assumed that all outcomes are in the same sample space.
     Given a sample space $S = \{1,2,3,\dots,n\}$, we have 
@@ -1416,7 +1991,6 @@ Probability theory is a branch of mathematics that deals with the analysis of ra
                         Applying the inclusion-exclusion principle, we obtain the probability that at least one married couple sits together. Simplifying the alternating sum, the desired probability is approximately \(0.3395\).
                     \end{solution}
                         
-                
 
 
     

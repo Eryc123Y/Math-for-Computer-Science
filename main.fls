@@ -983,9 +983,10 @@ INPUT ./Images/orange2.jpg
 INPUT ./content/Part6 Probability and Combinatorics/2.Conditional Probability and Independence.tex
 INPUT ./content/Part6 Probability and Combinatorics/2.Conditional Probability and Independence.tex
 INPUT content/Part6 Probability and Combinatorics/2.Conditional Probability and Independence.tex
-INPUT ./Images/orange2.jpg
-INPUT ./Images/orange2.jpg
-INPUT ./Images/orange2.jpg
+INPUT ./Images/condprop.jpg
+INPUT ./Images/condprop.jpg
+INPUT ./Images/condprop.jpg
+INPUT ./Images/condprop.jpg
 INPUT ./content/Part6 Probability and Combinatorics/3.Discrete Distribution and Random Variable.tex
 INPUT ./content/Part6 Probability and Combinatorics/3.Discrete Distribution and Random Variable.tex
 INPUT content/Part6 Probability and Combinatorics/3.Discrete Distribution and Random Variable.tex
