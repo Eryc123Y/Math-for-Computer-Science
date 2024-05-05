@@ -1,1 +1,12 @@
-\
+    Using the formula for multi-conditional probability:
+\[ P(\text{Failure} | S, H, N) = \frac{P(\text{Failure} \cap S \cap H \cap N)}{P(S \cap H \cap N)} \]
+
+Since \( P(\text{Failure} | S \cap H \cap N) = 0.75 \) defines the probability of failure given that all three conditions (S, H, N) are true, it follows that:
+\[ P(\text{Failure} \cap S \cap H \cap N) = P(\text{Failure} | S \cap H \cap N) \times P(S \cap H \cap N) \]
+\[ P(\text{Failure} \cap S \cap H \cap N) = 0.75 \times 0.05 \]
+\[ P(\text{Failure} \cap S \cap H \cap N) = 0.0375 \]
+
+Therefore, the probability that the system fails given all these factors are present is:
+\[ P(\text{Failure} | S, H, N) = \frac{0.0375}{0.05} = 0.75 \]
+
+This confirms that given software malfunction, hardware malfunction, and network failure, the probability of the system failing remains at 75%, using the data provided. This example illustrates a practical application of conditional probability in IT risk management.

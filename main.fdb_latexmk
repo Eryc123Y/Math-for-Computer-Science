@@ -1,17 +1,17 @@
 # Fdb version 4
-["biber main"] 1714671102.80433 "main.bcf" "main.bbl" "main" 1714811682.40741 0
-  "main.bcf" 1714811681 107256 cda255eed6b0d0df027a0b54e0d84d42 "pdflatex"
+["biber main"] 1714821231.36329 "main.bcf" "main.bbl" "main" 1714858235.97606 0
+  "main.bcf" 1714858235 107256 cda255eed6b0d0df027a0b54e0d84d42 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["makeindex main.idx"] 1714671102.40641 "main.idx" "main.ind" "main" 1714811682.40715 0
-  "main.idx" 1714811675 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+["makeindex main.idx"] 1714856777.46152 "main.idx" "main.ind" "main" 1714858235.9758 0
+  "main.idx" 1714858228 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   (generated)
   "main.ilg"
   "main.ind"
   (rewritten before read)
-["pdflatex"] 1714811674.46755 "c:/Programming/GitProjects/Math-for-Computer-Science/main.tex" "main.pdf" "main" 1714811682.40802 0
+["pdflatex"] 1714858227.88261 "c:/Programming/GitProjects/Math-for-Computer-Science/main.tex" "main.pdf" "main" 1714858235.97643 0
   "Images/R^2.png" 1712142752 64840 5aae617f29bd5e5d2c41b0b9dc40ef22 ""
   "Images/R^3.png" 1712312456 153114 e1ae9d1019216090c34455e35abf3082 ""
   "Images/agm3D.png" 1707481231 97995 3c8707993f2acdfb1f5fe89cecae6e4e ""
@@ -326,7 +326,7 @@
   "content/Part4 Multi-variable Calculus/Chapter1.tex" 1707481232 1212 fcbe3072e8f964a495d73d96ff321810 ""
   "content/Part5 Linear Algebra/Chapter1.tex" 1707481232 1158 ee1475b1962d30b4ae20f349626a4247 ""
   "content/Part6 Probability and Combinatorics/1.Counting and Probability Axioms.tex" 1714663515 137521 06bc2ada82c2cc06fbe15f57fb526d93 ""
-  "content/Part6 Probability and Combinatorics/2.Conditional Probability and Independence.tex" 1714811665 23665 4b2310aa6f1d83b00ed7d93b55b386df ""
+  "content/Part6 Probability and Combinatorics/2.Conditional Probability and Independence.tex" 1714858226 68958 c6fd2d11aad5f286eacb86aedbdac001 ""
   "content/Part6 Probability and Combinatorics/3.Discrete Distribution and Random Variable.tex" 1713754555 137 b9a36302f0957e01b5eadb39f97ff29a ""
   "content/Part6 Probability and Combinatorics/4.Continuous Distribution.tex" 1713775260 119 1b1b18ef07f8a9e09cffcefde068c95e ""
   "content/Part6 Probability and Combinatorics/5.Joint Cumulative Distribution.tex" 1713775222 125 6fdf318460ca341633ac239edd69af5e ""
@@ -339,15 +339,15 @@
   "content/part1 Intro/3.Algorithm and Number System.tex" 1712581190 38943 7a595ea93e0ca3cb74a0582db11b87a3 ""
   "content/part1 Intro/4.Inequality.tex" 1712581190 57251 12d7e1c9df0285c6cb6debb9f9449b00 ""
   "content/part1 Intro/5.Complex Number.tex" 1712581190 88243 989a2fe9a0123e4b52072bab758ecc3f ""
-  "main.aux" 1714811681 170917 6b7628b163f8bcab6a02744b89df9025 "pdflatex"
-  "main.bbl" 1714671152 0 d41d8cd98f00b204e9800998ecf8427e "biber main"
-  "main.ind" 1714671102 0 d41d8cd98f00b204e9800998ecf8427e "makeindex main.idx"
-  "main.lof" 1714811681 3929 3dd7c6b3d208bc54b90e19fa79f0e439 "pdflatex"
-  "main.lot" 1714811681 2217 6a0c7c95a2f5aff14bcbee0187a1531f "pdflatex"
-  "main.ptc" 1714811681 31598 3606a24a9818d991f58900d0a02b744f "pdflatex"
-  "main.run.xml" 1714811681 2224 bc6149f5caee4074188e1b81a66978d0 "pdflatex"
+  "main.aux" 1714858235 175323 16e59dfe7517dcaa952923b878c6d489 "pdflatex"
+  "main.bbl" 1714821235 0 d41d8cd98f00b204e9800998ecf8427e "biber main"
+  "main.ind" 1714856777 0 d41d8cd98f00b204e9800998ecf8427e "makeindex main.idx"
+  "main.lof" 1714858235 3929 3dd7c6b3d208bc54b90e19fa79f0e439 "pdflatex"
+  "main.lot" 1714858235 2217 6a0c7c95a2f5aff14bcbee0187a1531f "pdflatex"
+  "main.ptc" 1714858235 32560 cfe52afa5f7168f701490a4cb9cfa4b4 "pdflatex"
+  "main.run.xml" 1714858235 2224 bc6149f5caee4074188e1b81a66978d0 "pdflatex"
   "main.tex" 1714358097 10470 6120e1bce4f883226410caa312207f25 ""
-  "main.toc" 1714811681 31260 60faed824b839ebebe1b2ee428dbf671 "pdflatex"
+  "main.toc" 1714858235 32222 1d438cdd5e96c83c27c57c058905a088 "pdflatex"
   (generated)
   "main.aux"
   "main.bcf"
