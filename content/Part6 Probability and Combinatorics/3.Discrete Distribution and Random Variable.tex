@@ -256,40 +256,59 @@ of the likelihood of a specific value of a random variable.
     \[
     P_X(x) = P(X = x) = P(\{\omega \in S \mid X(\omega) = x\})
     \]
+    This means the probability that some elements $\omega$ of the sample space $S$, where $\omega$ that satisfies $X(\omega)=x$ by the random variable $X$ to some real number $x$ (in the case of discrete distribution, $x\in \Z$).
+    
     This function \( P_X \) gives the probability that \( X \) takes any particular value \( x \).    
 \end{definition}
 
 We illustrate with an example of fair dice rolling.
 \begin{example}[Rolling a Fair Six-Sided Die]
-    Let \( X \) be the random variable representing the outcome of rolling a fair six-sided die. The possible outcomes for \( X \) are 1, 2, 3, 4, 5, and 6. Since the die is fair, the probability of each outcome is equal. Thus, the probability mass function (PMF) for \( X \) is given by:
+    Let \( X \) be the random variable representing the outcome of rolling a fair six-sided die. The possible outcomes for \( X \) are 1, 2, 3, 4, 5, and 6. Since the die is fair, the probability of each outcome is equal. Thus, the probability function for \( X \) is given by:
     \[
     P(X = x) = \frac{1}{6}, \text{ for } x = 1, 2, 3, 4, 5, 6
     \]
-    and \( P(X = x) = 0 \) for all other values of \( x \).
-    
-    \begin{tikzpicture}
-        \begin{axis}[
-            axis lines=middle,
-            xlabel=\( x \),
-            ylabel={\( P(X = x) \)},
-            xtick={1,2,3,4,5,6},
-            ytick={0,1/6},
-            ymin=0, ymax=0.2,
-            ybar,
-            bar width=20pt,
-            enlarge x limits=0.15
-        ]
-        \addplot[ycomb, blue, thick, mark=*, mark options={fill=blue}] coordinates {
-            (1,1/6) (2,1/6) (3,1/6) (4,1/6) (5,1/6) (6,1/6)
-        };
-        
-        \end{axis}
-        \end{tikzpicture}
-        
-    
+    and \( P(X = x) = 0 \) for all other values of \( x \). We are not plottig it here for clarity, but doesn't mean the function is not defined for other possible value of $X = x\in \{\Z^+ - \{1, 2, 3, 4, 5, 6\}\}$.
+
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[
+    ybar, 
+    bar width=20pt,
+    width=\textwidth,
+    height=8cm,
+    xlabel={$X$: Possible Outcome},
+    ylabel={$P(X=x)$: Probability},
+    symbolic x coords={1,2,3,4,5,6},
+    xtick=data,
+    ymin=0, ymax=0.20, % Adjust the maximum y-value appropriately
+    ytick={0, 0.1667}, % Use decimal equivalent of 1/6
+    yticklabels={0, $\frac{1}{6}$}, % You can still use fractions in labels for clarity
+    nodes near coords,
+    nodes near coords align={vertical},
+    enlarge x limits=0.15,
+    ymajorgrids=true,
+    grid style=dashed,
+]
+
+\addplot[fill=gray, nodes near coords=] coordinates {
+    (1,0.1667) (2,0.1667) (3,0.1667) (4,0.1667) (5,0.1667) (6,0.1667)
+};
+\end{axis}
+\end{tikzpicture}
+\end{center}
+
     This plot shows the uniform probability distribution for each outcome of rolling the die.
-    
 \end{example}
+
+It is noticeable that for each possible $x$, $P(X=x)$ has the same value $\frac{1}{6}$. 
+Actually, this distribution is categorized as a kind of special, but most basic discrete distribution, called \textbf{Uniform Discrete Distribution}.
+
+We have been using the terms discrete distribution and discrete probability function. They are very close to each other, while we need to differentiate them in many aspects.
+A probability function and a probability distribution are related but distinct concepts in probability theory. The key difference lies in their scope and representation.
+
+A probability function specifies the probability of each individual outcome or value of a random variable. It provides a point-wise description of the likelihood of different outcomes.
+
+On the other hand, a probability distribution is a more comprehensive concept that encompasses the collective behavior of a random variable. It describes the overall probabilistic properties of the random variable, often by specifying the probabilities associated with different ranges or sets of outcomes.
 
 
 
