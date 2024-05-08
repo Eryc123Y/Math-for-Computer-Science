@@ -37,7 +37,7 @@ of random variables and discrete distributions.
 \section{Random Variable}
 We First define random variables and discuss their basic properties, including how they function within the framework of probability theory.
 In a short word, a random variable is a functional relation between the possible outcomes of a random experiment
-and the probability of each outcome. It assigns a real number to each outcome in the sample space of a random experiment.
+and the probability of each outcome. It assigns a real number to each outcome in the sample space of a random experiment. Though we call it a \textbf{variable}, it is actually a function.
 \begin{definition}[Random Variable]
     A \textbf{random variable} is a function \( X: S \rightarrow \mathbb{R} \) 
     where \( S \) is the sample space of a random experiment. This function 
@@ -260,7 +260,9 @@ of the likelihood of a specific value of a random variable.
     
     This function \( P_X \) gives the probability that \( X \) takes any particular value \( x \).    
 \end{definition}
-
+\begin{remark}
+    Note that, the probability function in this context is called \textbf{Probability Density function (PDF)}. We will also discuss the other probability function called \textbf{Cumulative Density Function (CDF)} and dis cuss their relation.
+\end{remark}
 We illustrate with an example of fair dice rolling.
 \begin{example}[Rolling a Fair Six-Sided Die]
     Let \( X \) be the random variable representing the outcome of rolling a fair six-sided die. The possible outcomes for \( X \) are 1, 2, 3, 4, 5, and 6. Since the die is fair, the probability of each outcome is equal. Thus, the probability function for \( X \) is given by:
@@ -309,16 +311,134 @@ A probability function and a probability distribution are related but distinct c
 A probability function specifies the probability of each individual outcome or value of a random variable. It provides a point-wise description of the likelihood of different outcomes.
 
 On the other hand, a probability distribution is a more comprehensive concept that encompasses the collective behavior of a random variable. It describes the overall probabilistic properties of the random variable, often by specifying the probabilities associated with different ranges or sets of outcomes.
-
-
-
 \subsection{Exercises}
 
-\section{expectation and variance}
+\section{Expectation and Variance}
+Since we have defined probability distribution and probability density function. We can now investigate more aspects of the function. Recall that in calculus, the average value of a continuous function $f(x)$ defined on the interval $[a, b]$ is given by the formula:
+\begin{equation}
+\text{Average Value} = \frac{1}{b - a} \int_{a}^{b} f(x) \, dx
+\end{equation}
+where:
+\begin{itemize}
+    \item $\int_{a}^{b} f(x) \, dx$ represents the definite integral of the function $f(x)$ over the interval $[a, b]$, which calculates the accumulated area or value of the function within that interval.
+    \item $b - a$ represents the length of the interval.
+    \item The integral is divided by the interval length to obtain the average value or average level of the function over that interval.
+\end{itemize}
+For a normal discrete function, the integral is replaced by a summation:
+\begin{equation}\label{dissum}
+\text{Average Value} = \frac{1}{n} \sum_{i=1}^{n} f(x_i)
+\end{equation}
+
+where $n$ is the number of discrete points, and $x_i$ are the discrete values at which the function is evaluated.
+
+\subsection{Expectation of Discrete Random Variable}
+Of course we know that discrete random distribution are modeled by discrete function. But things are slightly different here, since when we deal with a normal discrete function, it is implied that we are treated each value equally, if you take that $\frac{1}{n}$ as the possibility of each value appearing. While for discrete distribution this is a different story, because we only see such cases when we have a uniform distribution like rolling a dice. To generalize this expression, we can replace the uniform probability with a the probability that each value $x_i$ occur, which is actually a weighted average. Now we can define expectation of discrete random variable.
+\begin{definition}[Expectation of Discrete Random Variable]
+The expectation $E$ of a discrete random variable $X$ is the weighted average of the possible values that $x\in \text{range}(X)$ can be taken.
+\begin{equation}
+E[X] = \sum_{xp(x) > 0} xp(x)
+\end{equation}
+Where $P(x)$ is derived form the uniform probability $\frac{1}{n}$, and $x$ is derived from $f(x_i)$ in equation \ref*{dissum}.
+\end{definition}
+
+\begin{example}[Fair Dice]
+    When we roll a clear dice, since each side has a chance of $\frac{1}{6}$.
+    Let $\text{range}(X) = \{1,2,3,4,5,6\}$We have 
+    \[
+    E[X] = 1\left(\frac16\right)+2\left(\frac16\right)+3\left(\frac16\right)+4\left(\frac16\right)+5\left(\frac16\right)+6\left(\frac16\right)=\frac72
+    \]
+\end{example}
+
+\begin{example}
+    A school class of 120 students is driven in 3 buses to a symphonic performance. There are 36 students in one of the buses, 40 in another, and 44 in the third bus. When the buses arrive, one of the 120 students is randomly chosen. Let $X$ denote the number of students on the bus of that randomly chosen student, and find $E[X]$.
+    \begin{solution}
+        Since the randomly chosen student is equally likely to be any of the 120 students, it follows that
+\[
+P(X = 36) = \frac{36}{120}, \quad P(X = 40) = \frac{40}{120}, \quad P(X = 44) = \frac{44}{120}
+\]
+Hence,
+\[
+E[X] = 36 \left(\frac{3}{10}\right) + 40 \left(\frac{1}{3}\right) + 44 \left(\frac{11}{30}\right) = \frac{1208}{30} \approx 40.2667
+\]
+    \end{solution}
+\end{example}
+
+\subsection{Expectation of Function of Discrete Random Variable}
+Now suppose we want to transform the random variable $X$, for example, apply some function $g(X)$ to change the random variable.
+How can we get the composed expectation after transformation? Well, don't be scared, remember that distribution function can be used to calculate $P(g[X])$, and we know the value pf $g[X]$. By the definition, we can calculate $E[g(x)]$.
+
+\begin{example}
+    Let $X$ denote a random variable that takes on any of the values $-1$, $0$, and $1$ with respective probabilities
+\[
+P(X = -1) = 0.2, \quad P(X = 0) = 0.5, \quad P(X = 1) = 0.3
+\]
+Compute $E[X^2]$.
+\begin{solution}
+    Let $Y = X^2$. Then the probability mass function of $Y$ is given by
+\[
+P(Y = 1) = P(X = -1) + P(X = 1) = 0.5, \quad P(Y = 0) = P(X = 0) = 0.5
+\]
+Hence,
+\[
+E[X^2] = E[Y] = 1(0.5) + 0(0.5) = 0.5
+\]
+\begin{remark}
+Note that
+\[
+0.5 = E[X^2] \neq (E[X])^2 = 0.01
+\]
+$(E[X])^2$ is what we call \textbf{variance} of $X$, but $E[X^2]$ is the expectation of $X^2$.
+\end{remark}
+
+\end{solution}
+\end{example}
+
+However, we can notice that  we can obtain the same result by 
+$(-1)^{2}(0.2)\:+\:0^{2}(0.5)\:+\:1^{2}(0.3)$, it seems that we don't have to calculate $P(Y=1)$. This is because $g(X) = g(x)$ when $X = x$, so $E[g(X)]$ is the weighted average of $g(x)$ that $X=x$.
+\begin{proposition}
+    If $X$ is a discrete random variable that takes on one of the values $x_i,i\geq1$, with
+respective probabilities $p(x_i)$, then, for any real-valued function g,
+$$E[g(X)]=\sum g(x_i)p(x_i)$$
+\end{proposition}
+\begin{proof}
+Consider a discrete random variable \(X\) taking values \(x_i\) with probability \(p(x_i)\) and a function \(g\) applied to \(X\). Assume \(g(X)\) takes distinct values \(y_j\), \(j \geq 1\). By grouping all the \(x_i\) for which \(g(x_i) = y_j\), the expectation \(E[g(X)]\) can be calculated as follows:
+\begin{align*}
+E[g(X)] &= \sum_i g(x_i)p(x_i) \\
+&= \sum_j \sum_{\{i : g(x_i) = y_j\}} g(x_i)p(x_i) \\
+&= \sum_j y_j \sum_{\{i : g(x_i) = y_j\}} p(x_i) \\
+&= \sum_j y_j P\{g(X) = y_j\} \\
+&= E[g(X)]
+\end{align*}
+This calculation confirms that the expectation of \(g(X)\) is the sum of the products of each value \(g(x_i)\) takes and the probability of \(x_i\), grouped by the unique values \(y_j\) that \(g\) maps to.
+\end{proof}
+
+This brings us to a seemingly conclusion.
+\begin{corollary}
+    A simple logical consequence of Proposition 4.1 is as follows. If \(a\) and \(b\) are constants, then
+\[ E[aX + b] = aE[X] + b \]
+\end{corollary}
+\begin{proof}
+    Starting with the linearity of expectation:
+\[
+E[aX + b] = \sum_{x:p(x)>0} (ax + b)p(x)
+\]
+This can be rewritten by distributing the expectation:
+\[
+= a \sum_{x:p(x)>0} xp(x) + b \sum_{x:p(x)>0} p(x)
+\]
+Recognizing that the sum of the probabilities \( \sum_{x:p(x)>0} p(x) \) equals 1 and \( \sum_{x:p(x)>0} xp(x) \) is \( E[X] \), we obtain:
+\[
+= aE[X] + b
+\]
+\end{proof}
+\subsection{Variance}
 
 \subsection{Exercises}
 
 \section{Common Discrete Distributions}
+\subsection{Binomial (Bernoulli) Distribution}
+\subsection{The Hypergeometric Distribution}
+\subsection{The Poisson Distribution}
 \subsection{Exercises}
 
 \section{Other Discrete Distributions}
