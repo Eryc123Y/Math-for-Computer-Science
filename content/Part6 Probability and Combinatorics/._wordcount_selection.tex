@@ -1,12 +1,22 @@
-    Using the formula for multi-conditional probability:
-\[ P(\text{Failure} | S, H, N) = \frac{P(\text{Failure} \cap S \cap H \cap N)}{P(S \cap H \cap N)} \]
-
-Since \( P(\text{Failure} | S \cap H \cap N) = 0.75 \) defines the probability of failure given that all three conditions (S, H, N) are true, it follows that:
-\[ P(\text{Failure} \cap S \cap H \cap N) = P(\text{Failure} | S \cap H \cap N) \times P(S \cap H \cap N) \]
-\[ P(\text{Failure} \cap S \cap H \cap N) = 0.75 \times 0.05 \]
-\[ P(\text{Failure} \cap S \cap H \cap N) = 0.0375 \]
-
-Therefore, the probability that the system fails given all these factors are present is:
-\[ P(\text{Failure} | S, H, N) = \frac{0.0375}{0.05} = 0.75 \]
-
-This confirms that given software malfunction, hardware malfunction, and network failure, the probability of the system failing remains at 75%, using the data provided. This example illustrates a practical application of conditional probability in IT risk management.
+    \begin{tikzpicture}
+    \begin{axis}[
+        axis lines=middle,
+        xlabel=\( x \),
+        ylabel={\( P(X = x) \)},
+        xtick=data,
+        ytick={0,1/6},
+        ymin=0, ymax=0.2,
+        symbolic x coords={1,2,3,4,5,6},
+        xticklabel style={anchor=base,yshift=-\baselineskip},
+        nodes near coords,
+        ymajorgrids=true,
+        grid style=dashed,
+        enlarge x limits=0.15
+    ]
+    
+    \addplot[ycomb, blue, thick, mark=*, mark options={fill=blue}] coordinates {
+        (1,1/6) (2,1/6) (3,1/6) (4,1/6) (5,1/6) (6,1/6)
+    };
+    
+    \end{axis}
+    \end{tikzpicture}
