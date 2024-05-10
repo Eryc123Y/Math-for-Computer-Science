@@ -11,10 +11,10 @@ This textbook (or probably note?) is a work in progress and will be updated irre
 - Extention of high school and middle school Knowledge (done, but there may be revision in future)
 - Discrete Math (To be finished by May)
 - Continuous Math (complete Calculus) (To be finished by the end of the year)
-- Probability, combinatorics, and statistics. (---)
+- Probability, combinatorics, and statistics. (Working on the discrete part)
 - Linear Algebra(with advanced contents)
 - Information Theory(basics)
-- Important Pure Math knowledge(scattered in important contents, no current plan to make it a independent chapter)
+- Important Pure Math knowledge including abstract algebra, category theory and topology(scattered in important contents, no current plan to make it a independent chapter, but maybe I will write some independent oroject on them).
 Each topic is accompanied by exercises and examples to reinforce learning and understanding.
 All suggestions or corrections are welcome.
 
