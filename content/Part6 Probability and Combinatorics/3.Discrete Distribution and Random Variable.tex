@@ -261,7 +261,7 @@ of the likelihood of a specific value of a random variable.
     This function \( P_X \) gives the probability that \( X \) takes any particular value \( x \).    
 \end{definition}
 \begin{remark}
-    Note that, the probability function in this context is called \textbf{Probability Density function (PDF)}. We will also discuss the other probability function called \textbf{Cumulative Density Function (CDF)} and dis cuss their relation.
+    Note that, the probability function in this context is called \textbf{Probability Density function (PDF)}. We will also discuss the other probability function called \textbf{Cumulative Density Function (CDF)} and discuss their relation. Their properties will also be discussed at the end of this chapter.
 \end{remark}
 We illustrate with an example of fair dice rolling.
 \begin{example}[Rolling a Fair Six-Sided Die]
@@ -363,7 +363,7 @@ E[X] = 36 \left(\frac{3}{10}\right) + 40 \left(\frac{1}{3}\right) + 44 \left(\fr
     \end{solution}
 \end{example}
 
-\subsection{Expectation of Function of Discrete Random Variable}
+\subsection{Expectation of Function and Linearity}
 Now suppose we want to transform the random variable $X$, for example, apply some function $g(X)$ to change the random variable.
 How can we get the composed expectation after transformation? Well, don't be scared, remember that distribution function can be used to calculate $P(g[X])$, and we know the value pf $g[X]$. By the definition, we can calculate $E[g(x)]$.
 
@@ -385,9 +385,8 @@ E[X^2] = E[Y] = 1(0.5) + 0(0.5) = 0.5
 \begin{remark}
 Note that
 \[
-0.5 = E[X^2] \neq (E[X])^2 = 0.01
+0.5 = E[X^2] \neq (E[X])^2 = 0.01.
 \]
-$(E[X])^2$ is what we call \textbf{variance} of $X$, but $E[X^2]$ is the expectation of $X^2$.
 \end{remark}
 
 \end{solution}
@@ -412,7 +411,7 @@ E[g(X)] &= \sum_i g(x_i)p(x_i) \\
 This calculation confirms that the expectation of \(g(X)\) is the sum of the products of each value \(g(x_i)\) takes and the probability of \(x_i\), grouped by the unique values \(y_j\) that \(g\) maps to.
 \end{proof}
 
-This brings us to a seemingly conclusion.
+This brings us to a seemingly conclusion to calculate the expectation of linear combination of random variables.
 \begin{corollary}
     A simple logical consequence of Proposition 4.1 is as follows. If \(a\) and \(b\) are constants, then
 \[ E[aX + b] = aE[X] + b \]
@@ -431,17 +430,755 @@ Recognizing that the sum of the probabilities \( \sum_{x:p(x)>0} p(x) \) equals 
 = aE[X] + b
 \]
 \end{proof}
+
+We can further generalize this to the linearity of expectation.
+\begin{theorem}[Linearity of Expectation Summation]
+For any random variables \(X_1, X_2, \ldots, X_n\):
+\[
+E\left[\sum_{i=1}^n X_i\right] = \sum_{i=1}^n E[X_i].
+\]
+This property holds regardless of whether the random variables are independent or not.
+\end{theorem}
+\begin{proof}
+    We will prove this by induction on $n$.
+
+    \textbf{Base Case:} For $n = 2$, we need to show that:
+    \[
+    E[X_1 + X_2] = E[X_1] + E[X_2].
+    \]
+    By the definition of expectation, we have:
+    \begin{align*}
+    E[X_1 + X_2] &= \sum_{\omega \in S} (X_1(\omega) + X_2(\omega)) P(\omega) \\
+                 &= \sum_{\omega \in S} X_1(\omega) P(\omega) + \sum_{\omega \in S} X_2(\omega) P(\omega) \\
+                 &= E[X_1] + E[X_2]
+    \end{align*}
+    Therefore, the base case holds.
+
+    \textbf{Inductive Step:} Assume the statement holds for some $n = k$, i.e.,
+    \[
+    E\left[ \sum_{i=1}^k X_i \right] = \sum_{i=1}^k E[X_i].
+    \]
+    We need to show that the statement holds for $n = k+1$, i.e.,
+    \[
+    E\left[ \sum_{i=1}^{k+1} X_i \right] = \sum_{i=1}^{k+1} E[X_i].
+    \]
+
+    Consider
+    \[
+    E\left[ \sum_{i=1}^{k+1} X_i \right] = E\left[ \left( \sum_{i=1}^k X_i \right) + X_{k+1} \right].
+    \]
+    By the linearity of expectation (which states that the expectation of a sum is the sum of the expectations), we have:
+    \[
+    E\left[ \left( \sum_{i=1}^k X_i \right) + X_{k+1} \right] = E\left[ \sum_{i=1}^k X_i \right] + E[X_{k+1}].
+    \]
+    Using the inductive hypothesis, we get:
+    \[
+    E\left[ \sum_{i=1}^k X_i \right] + E[X_{k+1}] = \sum_{i=1}^k E[X_i] + E[X_{k+1}].
+    \]
+    Therefore,
+    \[
+    E\left[ \sum_{i=1}^{k+1} X_i \right] = \sum_{i=1}^{k+1} E[X_i].
+    \]
+
+    By mathematical induction, the statement holds for all $n \in \mathbb{N}$.
+\end{proof}
+
+If you have enough mathematical intuition, you may realized that we can find a similar law for the product of random variables, which is summarized as follows.
+But notice that, as we mentioned earlier, expectation is a weighted average based on probability and image of random variable, this rule only holds when all random variables are independent. But how can we define independence of random variable? We can actually duplicate what we have done to define independent event.
+
+\begin{definition}[Independence]
+    Random variables \( X_1, X_2, \ldots, X_n \) are said to be \textit{independent} if for any subset of indices \( i_1, i_2, \ldots, i_k \) where \( 1 \leq i_1 < i_2 < \cdots < i_k \leq n \), the joint cumulative distribution function satisfies
+    \[
+    F_{X_{i_1}, X_{i_2}, \ldots, X_{i_k}}(x_{i_1}, x_{i_2}, \ldots, x_{i_k}) = \prod_{j=1}^k F_{X_{i_j}}(x_{i_j}),
+    \]
+    for all \( x_{i_1}, x_{i_2}, \ldots, x_{i_k} \in \mathbb{R} \), where \( F_{X_{i_j}}(x) \) denotes the cumulative distribution function of \( X_{i_j} \).
+
+    \textbf{Explanation:} This definition means that the probability distribution of any subset of the random variables can be factored into the product of their individual distributions. In other words, knowing the value of one or more of the variables does not provide any information about the others.
+\end{definition}
+
+\begin{definition}[Alternative Definition using Probability]
+    Alternatively, random variables \( X_1, X_2, \ldots, X_n \) are independent if for any sets of events \( A_1, A_2, \ldots, A_n \) where \( A_i \) is an event determined by \( X_i \),
+    \[
+    P(A_1 \cap A_2 \cap \cdots \cap A_n) = P(A_1) \cdot P(A_2) \cdots P(A_n).
+    \]
+
+    \textbf{Explanation:} This definition states that the joint probability of all the events occurring simultaneously is equal to the product of their individual probabilities. This implies that the occurrence of one event does not affect the probability of the occurrence of the others.
+\end{definition}
+
+Now we can define the linearity of product and prove it by induction.
+\begin{theorem}[Linearity of Random Variable Product]
+ If all random variables $ X_1, X_2, \ldots, X_k $ are mutually independent, then
+    \[
+    E\left[ \prod_{i=1}^k X_i \right] = \prod_{i=1}^k E[X_i].
+    \]    
+\end{theorem}
+\begin{proof}
+    We will prove this by induction on \( k \).
+
+    \textbf{Base Case:} For \( k = 2 \), we need to show that:
+    \[
+    E[X_1 \cdot X_2] = E[X_1] \cdot E[X_2].
+    \]
+    Since \( X_1 \) and \( X_2 \) are independent, we have:
+    \[
+    E[X_1 \cdot X_2] = E[X_1] \cdot E[X_2].
+    \]
+    Therefore, the base case holds.
+
+    \textbf{Inductive Step:} Assume the statement holds for some \( k = n \), i.e.,
+    \[
+    E\left[ \prod_{i=1}^n X_i \right] = \prod_{i=1}^n E[X_i].
+    \]
+    We need to show that the statement holds for \( k = n+1 \), i.e.,
+    \[
+    E\left[ \prod_{i=1}^{n+1} X_i \right] = \prod_{i=1}^{n+1} E[X_i].
+    \]
+
+    Consider
+    \[
+    E\left[ \prod_{i=1}^{n+1} X_i \right] = E\left[ \left( \prod_{i=1}^n X_i \right) \cdot X_{n+1} \right].
+    \]
+    By the linearity of expectation and the independence of \( X_{n+1} \) from \( X_1, X_2, \ldots, X_n \), we have:
+    \[
+    E\left[ \left( \prod_{i=1}^n X_i \right) \cdot X_{n+1} \right] = E\left[ \prod_{i=1}^n X_i \right] \cdot E[X_{n+1}].
+    \]
+    Using the inductive hypothesis, we get:
+    \[
+    E\left[ \prod_{i=1}^n X_i \right] \cdot E[X_{n+1}] = \left( \prod_{i=1}^n E[X_i] \right) \cdot E[X_{n+1}].
+    \]
+    Therefore,
+    \[
+    E\left[ \prod_{i=1}^{n+1} X_i \right] = \prod_{i=1}^{n+1} E[X_i].
+    \]
+
+    By mathematical induction, the statement holds for all \( k \in \mathbb{N} \).
+\end{proof}
+
+Do we have a quotient rule for this? The answer is no, but why? We leave it as an exercise.
 \subsection{Variance}
+We just introduced expectation as an important descriptive measurement for the distribution of data, which can be roughly taken as the average of the distributed value. Now we introduce another measurement, variance, which is used to gauge the dispersion of data, i.e., the compactness of the distribution. 
+
+Since variance aims to measure the degree of deviation of a dataset, we can use the difference of random variable and the mean of the distribution to examine to what extend the data is deviated. Formally, the variance is defined as follows.
+
+\begin{definition}
+If \( X \) is a random variable with mean \( \mu \), then the variance of \( X \), denoted by \( \text{Var}(X) \), is defined by
+\[
+\text{Var}(X) = {E}[(X - \mu)^2].
+\]
+\end{definition}
+
+An alternative formula for \( \text{Var}(X) \) is derived as follows:
+\[
+\begin{aligned}
+\text{Var}(X) &= {E}[(X - \mu)^2] \\
+&= \sum_x (x - \mu)^2 p(x) \\
+&= \sum_x (x^2 - 2\mu x + \mu^2) p(x) \\
+&= \sum_x x^2 p(x) - 2\mu \sum_x x p(x) + \mu^2 \sum_x p(x) \\
+&= {E}[X^2] - 2\mu {E}[X] + \mu^2 \\
+&= {E}[X^2] - 2\mu^2 + \mu^2 \\
+&= {E}[X^2] - \mu^2
+\end{aligned}
+\]
+
+That is,
+\[
+\boxed{\text{Var}(X) = {E}[X^2] - ({E}[X])^2}
+\]
+
+In words, the variance of \( X \) is equal to the expected value of \( X^2 \) minus the square of its expected value. In practice, this formula frequently offers the easiest way to compute \( \text{Var}(X) \).
+
+There are still something extra worth mention here. We find that variance is also represented as the expectation of the random variable with respect to the difference to the mean. However, if that is all mathematicians want, why we square the difference $X-\mu$ ? The fact is that they do this for some reason.
+
+\begin{enumerate}
+    \item \textbf{Non-Negativity:} Squaring the differences ensures that all terms are non-negative. This prevents the problem of positive and negative deviations canceling each other out, which would lead to a misleading measure of dispersion. For instance, differences of \(+2\) and \(-2\) would cancel out if not squared, suggesting no variability.
+    \item \textbf{Emphasizing Larger Deviations:} Squaring gives more weight to larger deviations. Since the squared differences grow quadratically, this method is more sensitive to outliers and accurately reflects the spread of the data.
+    \item \textbf{Mathematical Convenience:} The squared deviations have desirable mathematical properties that make variance useful in statistical theory and practice. Variance can be easily decomposed and utilized in various statistical methods, such as analysis of variance (ANOVA) and regression analysis.
+    \item \textbf{Consistency with Other Measures:} Many statistical techniques rely on squared terms. Using squared deviations ensures consistency across different methods, such as the standard deviation, which is the square root of the variance.
+\end{enumerate}
+
+\begin{example}[Variance of Rolling a Fair Die]
+Consider a fair six-sided die. The possible outcomes when rolling the die are \(1, 2, 3, 4, 5, \) and \(6\), each with an equal probability of \( \frac{1}{6} \).
+
+First, we calculate the mean (expected value) \( \mu \):
+\[
+\mu = {E}[X] = \sum_{i=1}^{6} i \cdot P(X = i) = \sum_{i=1}^{6} i \cdot \frac{1}{6} = \frac{1 + 2 + 3 + 4 + 5 + 6}{6} = \frac{21}{6} = 3.5
+\]
+
+Next, we calculate the expected value of \( X^2 \):
+\[
+{E}[X^2] = \sum_{i=1}^{6} i^2 \cdot P(X = i) = \sum_{i=1}^{6} i^2 \cdot \frac{1}{6} = \frac{1^2 + 2^2 + 3^2 + 4^2 + 5^2 + 6^2}{6} =  \frac{91}{6} \approx 15.1667
+\]
+
+Finally, we use the formula for variance:
+\[
+\text{Var}(X) = {E}[X^2] - ({E}[X])^2 = \frac{91}{6} - (3.5)^2 = \frac{91}{6} - 12.25 = \frac{91}{6} - \frac{73.5}{6} = \frac{17.5}{6} \approx 2.9167
+\]
+
+Thus, the variance of rolling a fair six-sided die is approximately \(2.9167\).
+\end{example}
+
+In last section, we proved that the linear transformation of linear variable is interpreted equivalently on the expectation, that $E[aX+b] = aE[X]+b$. Can we get a similar conclusion here for the variance? Let's try it out.
+
+\begin{proposition}[Linear Transformation of Variance]
+    $\text{Var}(aX+b) = a^2\text{Var}(x)$
+\end{proposition}
+\begin{proof}
+    $$\begin{aligned}\operatorname{Var}(a X+b) & =E\left[(a X+b-a \mu-b)^{2}\right] \\& =E\left[a^{2}(X-\mu)^{2}\right] \\& =a^{2} E\left[(X-\mu)^{2}\right] \\& =a^{2} \operatorname{Var}(X)\end{aligned}$$
+\end{proof}
+
+This shows that simply adding some value to each entry of a dataset will not change the variance. 
+
+Apart from variance, we have something else derived from it, called standard deviation.
+\begin{definition}[Standard Deviation]
+Mathematically, if \(X\) is a random variable with variance \(\text{Var}(X)\), the standard deviation, denoted by \(\sigma\), is the square root of the variance: \(\sigma = \sqrt{\text{Var}(X)}\). 
+\end{definition}
+
+This transformation from variance to standard deviation serves to bring the units of the measure back to the same scale as the original data, making it more interpretable. While variance provides a measure of dispersion in squared units, the standard deviation offers a measure in the same units as the data, facilitating easier comparison and understanding. In practice, the standard deviation is widely used in various fields such as finance, science, and engineering to assess the volatility, risk, and reliability of data. It is particularly useful in identifying how much individual data points deviate from the mean, thus giving insight into the overall spread and consistency of the data.
+
+\subsection{PDF and CDF}
 
 \subsection{Exercises}
+\begin{exercise}
+Two fair dice are rolled. Let \(X\) equal the product of the two dice. Compute \(P(X = i)\) for \(i = 1, \ldots, 36\).
+\end{exercise}
+
+\begin{solution}
+When two fair six-sided dice are rolled, each die can land on any of the numbers \(1, 2, 3, 4, 5,\) or \(6\) with equal probability. Therefore, there are \(6 \times 6 = 36\) possible outcomes. To find the probability distribution of \(X\), we compute \(P(X = i)\) for each possible value \(i\) by considering all possible products of the numbers on the two dice.
+
+\[
+\begin{aligned}
+P(X = 1) &= \frac{1}{36} & \quad P(X = 5) &= \frac{2}{36} & \quad P(X = 9) &= \frac{1}{36} & \quad P(X = 15) &= \frac{2}{36} & \quad P(X = 24) &= \frac{2}{36} \\
+P(X = 2) &= \frac{2}{36} & \quad P(X = 6) &= \frac{4}{36} & \quad P(X = 10) &= \frac{2}{36} & \quad P(X = 16) &= \frac{1}{36} & \quad P(X = 25) &= \frac{1}{36} \\
+P(X = 3) &= \frac{2}{36} & \quad P(X = 7) &= 0 & \quad P(X = 11) &= 0 & \quad P(X = 18) &= \frac{2}{36} & \quad P(X = 30) &= \frac{2}{36} \\
+P(X = 4) &= \frac{3}{36} & \quad P(X = 8) &= \frac{2}{36} & \quad P(X = 12) &= \frac{4}{36} & \quad P(X = 20) &= \frac{2}{36} & \quad P(X = 36) &= \frac{1}{36} \\
+\end{aligned}
+\]
+
+To explain, each probability \(P(X = i)\) is computed by counting the number of pairs \((a, b)\) such that the product \(a \times b = i\), where \(a\) and \(b\) are the outcomes of the first and second die, respectively, and then dividing by the total number of possible outcomes, which is 36.
+
+For example:
+- \(P(X = 1) = \frac{1}{36}\) because only the pair \((1, 1)\) results in the product 1.
+- \(P(X = 6) = \frac{4}{36}\) because the pairs \((1, 6), (2, 3), (3, 2), (6, 1)\) all result in the product 6.
+
+This pattern is repeated for each possible product, giving us the probability distribution of \(X\).
+
+\end{solution}
+
+\begin{exercise}
+Five men and five women are ranked according to their scores on an examination. Assume that no two scores are alike and all \(10!\) possible rankings are equally likely. Let \(X\) denote the highest ranking achieved by a woman. (For instance, \(X = 1\) if the top-ranked person is female.) Find \(P(X = i)\) for \(i = 1, 2, 3, \ldots, 8, 9, 10\). Also draw the graph of the distribution function.
+\end{exercise}
+
+\begin{solution}
+To find \(P(X = i)\), we need to compute the probability that the highest-ranking woman is in position \(i\). The probabilities are summarized in the following table:
+
+\begin{center}
+\[
+\begin{array}{|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+i & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 \\
+\hline
+P(X = i) & \frac{1}{2} & \frac{5}{18} & \frac{5}{36} & \frac{10}{168} & \frac{5}{252} & \frac{1}{252} & 0 & 0 & 0 & 0 \\
+\hline
+\end{array}
+\]
+\end{center}
+The probability can be found in the same way. For example, when the highest ranking of woman is 2, we must have one of the five man to be placed on the first place, and then one of the five woman on the second, and the rest of the situation can be calculated by full permutation of ranking 8 players randomly, which is $8!$. Obviously we apply multiplication rule here. So we have \(P(X=2) = \frac{\binom{1}{5}\binom{1}{5}8!}{10!} = \frac{5}{18}.\) Other situation can be handled in the same way.
+The probabilities can be visualized as follows:
+\begin{center}
+\pgfplotstableread{
+i   prob
+1   0.5
+2   0.2778
+3   0.1389
+4   0.0595
+5   0.0198
+6   0.0040
+7   0
+8   0
+9   0
+10  0
+}\probtable
+
+\begin{tikzpicture}
+\begin{axis}[
+    ybar,
+    symbolic x coords={1, 2, 3, 4, 5, 6, 7, 8, 9, 10},
+    xtick=data,
+    ylabel={Probability},
+    xlabel={Highest Ranking Achieved by a Woman ($i$)},
+    ymin=0,
+    ymax=0.6,
+    bar width=15pt,
+    enlarge x limits=0.15,
+]
+\addplot table[x=i,y=prob] {\probtable};
+\end{axis}
+\end{tikzpicture}
+\end{center}
+
+\end{solution}
+
+\begin{exercise}
+\begin{enumerate}
+    \item[(a)] An integer \(N\) is to be selected at random from \(\{1, 2, \ldots, 10^3\}\) in the sense that each integer has the same probability of being selected. What is the probability that \(N\) will be divisible by 3? by 5? by 7? by 15? by 105? How would your answer change if \(10^3\) is replaced by \(10^k\) as \(k\) became larger and larger?
+    \item[(b)] An important function in number theory—one whose properties can be shown to be related to what is probably the most important unsolved problem of mathematics, the Riemann hypothesis—is the Möbius function \(\mu(n)\), defined for all positive integral values \(n\) as follows: Factor \(n\) into its prime factors. If there is a repeated prime factor, as in \(12 = 2 \cdot 2 \cdot 3\) or \(49 = 7 \cdot 7\), then \(\mu(n)\) is defined to equal 0. Now let \(N\) be chosen at random from \(\{1, 2, \ldots, 10^k\}\), where \(k\) is large. Determine \(P\{\mu(N) = 0\}\) as \(k \to \infty\). Hint: To compute \(P\{\mu(N) \neq 0\}\), use the identity
+    \[
+    \prod_{i=1}^{\infty} \left(1 - \frac{1}{p_i^2}\right) = \left(\frac{3}{4}\right) \left(\frac{8}{9}\right) \left(\frac{24}{25}\right) \left(\frac{48}{49}\right) \cdots = \frac{6}{\pi^2}
+    \]
+\end{enumerate}
+\end{exercise}
+\begin{solution}
+\begin{enumerate}
+Considering the following scenario.
+    \item[(a)] To find the probability that \(N\) is divisible by a given number, we need to determine the proportion of numbers within \(\{1, 2, \ldots, 10^3\}\) that are divisible by that number.
+ \begin{itemize}
+        \item \(P(\text{divisible by } 3)\): There are \(\left\lfloor \frac{10^3}{3} \right\rfloor = 333\) numbers divisible by 3.
+        \[
+        P(\text{divisible by } 3) = \frac{333}{1000} = 0.333
+        \]
+
+        \item \(P(\text{divisible by } 5)\): There are \(\left\lfloor \frac{10^3}{5} \right\rfloor = 200\) numbers divisible by 5.
+        \[
+        P(\text{divisible by } 5) = \frac{200}{1000} = 0.2
+        \]
+
+        \item \(P(\text{divisible by } 7)\): There are \(\left\lfloor \frac{10^3}{7} \right\rfloor = 142\) numbers divisible by 7.
+        \[
+        P(\text{divisible by } 7) = \frac{142}{1000} = 0.142
+        \]
+
+        \item \(P(\text{divisible by } 15)\): There are \(\left\lfloor \frac{10^3}{15} \right\rfloor = 66\) numbers divisible by 15.
+        \[
+        P(\text{divisible by } 15) = \frac{66}{1000} = 0.066
+        \]
+
+        \item \(P(\text{divisible by } 105)\): There are \(\left\lfloor \frac{10^3}{105} \right\rfloor = 9\) numbers divisible by 105.
+        \[
+        P(\text{divisible by } 105) = \frac{9}{1000} = 0.009
+        \]
+    \end{itemize}
+
+    In limiting cases, as \(k \to \infty\), these probabilities converge to \( \frac{1}{3}, \frac{1}{5}, \frac{1}{7}, \frac{1}{15}, \frac{1}{105} \).
+
+    \item[(b)] To determine \(P\{\mu(N) = 0\}\) as \(k \to \infty\), we use the given identity and the hint to compute \(P\{\mu(N) \neq 0\}\).
+    
+    \[
+    P\{\mu(N) \neq 0\} = P\{N \text{ is not divisible by } p_i^2, \, i \geq 1\}
+    \]
+
+    \[
+    P\{\mu(N) \neq 0\} = \prod_{i} P\{N \text{ is not divisible by } p_i^2\}
+    \]
+
+    Using the hint, we know that:
+    \[
+    \prod_{i} \left(1 - \frac{1}{p_i^2}\right) = \frac{6}{\pi^2}
+    \]
+
+    Therefore, the probability that \(\mu(N) \neq 0\) is:
+    \[
+    P\{\mu(N) \neq 0\} = \frac{6}{\pi^2}
+    \]
+
+    Consequently, the probability that \(\mu(N) = 0\) is:
+    \[
+    P\{\mu(N) = 0\} = 1 - P\{\mu(N) \neq 0\} = 1 - \frac{6}{\pi^2}
+    \]
+\end{enumerate}
+\end{solution}
+
+\begin{exercise}
+Two coins are to be flipped. The first coin will land on heads with probability 0.6, the second with probability 0.7. Assume that the results of the flips are independent, and let \(X\) equal the total number of heads that result.
+\begin{enumerate}
+    \item[(a)] Find \(P(X = 1)\).
+    \item[(b)] Determine \(E[X]\).
+\end{enumerate}
+\end{exercise}
+
+\begin{solution}
+To solve this problem, we need to consider the probabilities and expectations involving the independent flips of two coins.
+
+\begin{enumerate}
+    \item[(a)] To find \(P(X = 1)\), we need to consider the scenarios where exactly one of the two coins lands on heads. There are two such scenarios:
+    \begin{itemize}
+        \item The first coin lands on heads and the second coin lands on tails.
+        \item The first coin lands on tails and the second coin lands on heads.
+    \end{itemize}
+    These probabilities can be calculated as follows:
+    \[
+    P(\text{first heads, second tails}) = P(\text{first heads}) \cdot P(\text{second tails}) = 0.6 \cdot (1 - 0.7) = 0.6 \cdot 0.3 = 0.18
+    \]
+    \[
+    P(\text{first tails, second heads}) = P(\text{first tails}) \cdot P(\text{second heads}) = (1 - 0.6) \cdot 0.7 = 0.4 \cdot 0.7 = 0.28
+    \]
+    Therefore,
+    \[
+    P(X = 1) = 0.18 + 0.28 = 0.46
+    \]
+
+    \item[(b)] To determine \(E[X]\), we use the linearity of expectation. Let \(X_1\) be the indicator random variable for the first coin landing on heads and \(X_2\) be the indicator random variable for the second coin landing on heads. Thus,
+    \[
+    X = X_1 + X_2
+    \]
+    The expectation of \(X\) is:
+    \[
+    E[X] = E[X_1] + E[X_2]
+    \]
+    Since \(X_1\) and \(X_2\) are indicator random variables, their expectations are simply the probabilities of the corresponding events:
+    \[
+    E[X_1] = P(\text{first heads}) = 0.6
+    \]
+    \[
+    E[X_2] = P(\text{second heads}) = 0.7
+    \]
+    Therefore,
+    \[
+    E[X] = 0.6 + 0.7 = 1.3
+    \]
+\end{enumerate}
+
+\end{solution}
+
+\begin{exercise}
+One of the numbers 1 through 10 is randomly chosen. You are to try to guess the number chosen by asking questions with “yes–no” answers. Compute the expected number of questions you will need to ask in each of the following two cases:
+\begin{enumerate}
+    \item[(a)] Your \(i\)th question is to be “Is it \(i\)?” \(i = 1, 2, 3, 4, 5, 6, 7, 8, 9, 10\).
+    \item[(b)] With each question you try to eliminate one-half of the remaining numbers, as nearly as possible.
+\end{enumerate}
+\end{exercise}
+
+\begin{solution}
+To solve this problem, we need to calculate the expected number of questions in each scenario.
+
+\begin{enumerate}
+    \item[(a)] In this case, you sequentially ask "Is it \(i\)?" for \(i = 1, 2, 3, \ldots, 10\). Since each number from 1 to 10 is equally likely to be chosen, each has a probability of \(\frac{1}{10}\) of being the chosen number.
+
+    The expected number of questions \(E[X]\) can be calculated as follows:
+    \[
+    E[X] = 1 \cdot \frac{1}{10} + 2 \cdot \frac{1}{10} + 3 \cdot \frac{1}{10} + \cdots + 10 \cdot \frac{1}{10}
+    \]
+    
+    This simplifies to the arithmetic mean of the first 10 positive integers:
+    \[
+    E[X] = \frac{1 + 2 + 3 + \cdots + 10}{10} = \frac{10 \cdot (10 + 1) / 2}{10} = \frac{11}{2} = 5.5
+    \]
+    
+    Therefore, the expected number of questions in this scenario is 5.5.
+    
+    \item[(b)] In this case, you aim to eliminate approximately half of the remaining numbers with each question. This approach is similar to a binary search algorithm. After 2 questions, there are 3 remaining possibilities with probability \(\frac{3}{5}\) and 2 with probability \(\frac{2}{5}\).
+
+    The expected number of questions \(E[X]\) can be calculated as follows:
+    \[
+    E[\text{Number}] = \frac{2}{5} \cdot 3 + \frac{3}{5} \left[2 + \frac{1}{3} + 2 \cdot \frac{2}{3}\right]
+    \]
+    
+    Simplifying:
+    \[
+    E[\text{Number}] = \frac{2}{5} \cdot 3 + \frac{3}{5} \left[2 + \frac{1}{3} + \frac{4}{3}\right] = \frac{2}{5} \cdot 3 + \frac{3}{5} \cdot 4 = \frac{6}{5} + \frac{12}{5} = \frac{18}{5} = 3.6
+    \]
+
+    Therefore, the expected number of questions in this scenario is 3.6.
+\end{enumerate}
+\end{solution}
+
+\begin{exercise}
+A person tosses a fair coin until a tail appears for the first time. If the tail appears on the $n$th flip, the person wins $2^n$ dollars. Let $X$ denote the player's winnings. Show that $E[X] = +\infty$. This problem is known as the St. Petersburg paradox.
+
+\begin{enumerate}
+    \item[(a)] Would you be willing to pay \$1 million to play this game once?
+    \item[(b)] Would you be willing to pay \$1 million for each game if you could play for as long as you liked and only had to settle up when you stopped playing?
+\end{enumerate}
+\end{exercise}
+
+\begin{solution}
+Let $X$ be the random variable representing the player's winnings. The expected value of $X$ is given by:
+\[
+E[X] = \sum_{n=1}^{\infty} P(\text{first tail on } n\text{th flip}) \cdot \text{winnings if first tail is on } n\text{th flip}
+\]
+
+The probability that the first tail appears on the $n$th flip is $\left(\frac{1}{2}\right)^n$, since each flip is independent and the probability of a tail is $\frac{1}{2}$. If the tail appears on the $n$th flip, the player wins $2^n$ dollars. Therefore, the expected value is:
+\[
+E[X] = \sum_{n=1}^{\infty} \left(\frac{1}{2}\right)^n \cdot 2^n
+\]
+
+Simplifying the terms inside the summation:
+\[
+E[X] = \sum_{n=1}^{\infty} \left(\frac{2}{2}\right)^n = \sum_{n=1}^{\infty} 1 = \infty
+\]
+
+Thus, the expected value $E[X]$ is infinite, indicating that on average, the winnings are infinite.
+
+\begin{enumerate}
+    \item[(a)] While the expected value is infinite, the actual payout can be very low, since the probability of winning a large amount is very small. Therefore, it is unlikely that a rational person would be willing to pay \$1 million to play this game once due to the high risk of losing a substantial amount.
+    \item[(b)] If you could play for as long as you liked and only had to settle up when you stopped playing, you might consider paying \$1 million for each game. This is because over an arbitrarily large number of games, the limit suggests that the average payout per game would approach the expected value, making it a potentially profitable investment in the long run.
+\end{enumerate}
+\end{solution}
+
+\begin{exercise}
+Four buses carrying 148 students from the same school arrive at a football stadium. The buses carry, respectively, 40, 33, 25, and 50 students. One of the students is randomly selected. Let \( X \) denote the number of students who were on the bus carrying the randomly selected student. One of the 4 bus drivers is also randomly selected. Let \( Y \) denote the number of students on her bus.
+
+\begin{enumerate}[label=(\alph*)]
+    \item Which of \( E[X] \) or \( E[Y] \) do you think is larger? Why?
+    \item Compute \( E[X] \) and \( E[Y] \).
+\end{enumerate}
+\end{exercise}
+
+\begin{solution}
+\begin{enumerate}[label=(\alph*)]
+    \item \( E[X] \) since whereas the bus driver selected is equally likely to be from any of the 4 buses, the student selected is more likely to have come from a bus carrying a large number of students.
+    \item 
+    \[
+    P\{X = i\} = \frac{i}{148}, \quad i = 40, 33, 25, 50
+    \]
+    \[
+    E[X] = \frac{(40)^2 + (33)^2 + (25)^2 + (50)^2}{148} \approx 39.28
+    \]
+    \[
+    E[Y] = \frac{40 + 33 + 25 + 50}{4} = 37
+    \]
+\end{enumerate}
+\end{solution}
+
+\begin{exercise}
+Find \( \text{Var}(X) \) and \( \text{Var}(Y) \) for \( X \) and \( Y \) as given in last problem.
+\end{exercise}
+
+\begin{solution}
+\[
+E[X^2] = \frac{(40)^3 + (33)^3 + (25)^3 + (50)^3}{148} \approx 1625.4
+\]
+\[
+\text{Var}(X) = E[X^2] - (E[X])^2 \approx 1625.4 - (39.28)^2 \approx 82.2
+\]
+\[
+E[Y^2] = \frac{(40)^2 + (33)^2 + (25)^2 + (50)^2}{4} = 1453.5
+\]
+\[
+\text{Var}(Y) = E[Y^2] - (E[Y])^2 = 1453.5 - (37)^2 \approx 84.5
+\]
+\end{solution}
+
+
+\begin{exercise}
+  Each night different meteorologists give us the probability that it will rain the next day. To judge how well these people predict, we will score each of them as follows: If a meteorologist says that it will rain with probability \( p \), then he or she will receive a score of
+  \[
+  1 - (1 - p)^2 \quad \text{if it does rain}
+  \]
+  \[
+  1 - p^2 \quad \text{if it does not rain}
+  \]
+  We will then keep track of scores over a certain time span and conclude that the meteorologist with the highest average score is the best predictor of weather. Suppose now that a given meteorologist is aware of our scoring mechanism and wants to maximize his or her expected score. If this person truly believes that it will rain tomorrow with probability \( p^* \), what value of \( p \) should he or she assert so as to maximize the expected score?
+\end{exercise}
+
+\begin{solution}
+  The expected score \( E[\text{score}] \) is given by:
+  \[
+  E[\text{score}] = p^*[1 - (1 - p)^2] + (1 - p^*)(1 - p^2)
+  \]
+  Simplifying this expression:
+  \[
+  E[\text{score}] = p^*[1 - (1 - 2p + p^2)] + (1 - p^*)(1 - p^2)
+  \]
+  \[
+  = p^*[2p - p^2] + (1 - p^*)(1 - p^2)
+  \]
+  \[
+  = 2p p^* - p^2 p^* + 1 - p^2 - p^* + p^2 p^*
+  \]
+  \[
+  = 2p p^* - p^* + 1 - p^2
+  \]
+
+  To find the maximum, we take the derivative of \( E[\text{score}] \) with respect to \( p \) and set it to zero:
+  \[
+  \frac{d}{dp} E[\text{score}] = 2p^* - 2p
+  \]
+  Setting the derivative to zero:
+  \[
+  2p^* - 2p = 0 \implies p = p^*
+  \]
+  Thus, the value of \( p \) that maximizes the expected score is \( p = p^* \).
+\end{solution}
+
+\begin{exercise}
+    Explain why the independence of random variables \( X_1, X_2, \ldots, X_n \) cannot be concluded using a quotient form similar to the product form:
+    \[
+    \frac{F_{X_{i_1}, X_{i_2}, \ldots, X_{i_k}}(x_{i_1}, x_{i_2}, \ldots, x_{i_k})}{F_{X_{i_j}}(x_{i_j})} = F_{X_{i_{l_1}}}(x_{i_{l_1}}) \cdot F_{X_{i_{l_2}}}(x_{i_{l_2}}) \cdots F_{X_{i_{l_m}}}(x_{i_{l_m}}),
+    \]
+    where \( \{i_1, i_2, \ldots, i_k\} = \{i_j\} \cup \{i_{l_1}, i_{l_2}, \ldots, i_{l_m}\} \).
+
+    Provide an explanation why this form is not applicable.
+\end{exercise}
+
+\begin{solution}
+    The independence of random variables \( X_1, X_2, \ldots, X_n \) is defined by the product of their cumulative distribution functions (CDFs), not by their quotients. The product form for independent random variables states that the joint CDF can be expressed as:
+    \[
+    F_{X_{i_1}, X_{i_2}, \ldots, X_{i_k}}(x_{i_1}, x_{i_2}, \ldots, x_{i_k}) = \prod_{j=1}^k F_{X_{i_j}}(x_{i_j}),
+    \]
+    This means that the probability of all random variables being less than or equal to their respective values can be factored into the product of their individual probabilities.
+
+    If we attempt to use a quotient form, it implies a dependency between the variables. For instance:
+    \[
+    \frac{F_{X_{i_1}, X_{i_2}, \ldots, X_{i_k}}(x_{i_1}, x_{i_2}, \ldots, x_{i_k})}{F_{X_{i_j}}(x_{i_j})}
+    \]
+    would represent the conditional probability of \( X_{i_1}, X_{i_2}, \ldots, X_{i_k} \) given \( X_{i_j} \). Independence implies no such conditioning or dependency.
+
+    Independence means that the knowledge of one random variable does not change the probability distribution of the others. Quotients typically suggest conditioning, which contradicts the notion of independence. Therefore, a quotient form is not applicable for concluding the independence of random variables.
+
+    To illustrate, consider two independent random variables \( X_1 \) and \( X_2 \). By definition:
+    \[
+    F_{X_1, X_2}(x_1, x_2) = F_{X_1}(x_1) \cdot F_{X_2}(x_2).
+    \]
+    If we incorrectly use a quotient form:
+    \[
+    \frac{F_{X_1, X_2}(x_1, x_2)}{F_{X_1}(x_1)} = F_{X_2}(x_2),
+    \]
+    it suggests that \( F_{X_2}(x_2) \) depends on \( F_{X_1}(x_1) \), which contradicts independence.
+
+    Hence, the product form is the correct and applicable method for expressing the independence of random variables, not the quotient form.
+\end{solution}
 
 \section{Common Discrete Distributions}
-\subsection{Binomial (Bernoulli) Distribution}
-\subsection{The Hypergeometric Distribution}
-\subsection{The Poisson Distribution}
+We have covered the basics of random variable, their expectation, as well as the variance. Also, we know the idea to model probability with PDFs and CDFs. In this section, we introduce further abstraction of theory and problems on random variable and discrete probability distributions by learning most commonly used distributions and their property.
+\subsection{Bernoulli and Binomial Distribution}
+The first, and most basic distribution we are going to introduce is Bernoulli Distribution. Bernoulli Distribution is basic, yet important. Many other distributions are derived by playing with Bernoulli Distribution. We have used many cases of tossing a coin to explain probability concepts, and flipping a coin is actually a typical \textbf{Bernoulli Experiment}, meaning that the experiment is binary, i.e., only two cases.
+
+\begin{definition}[Bernoulli Random Variable]
+    A Bernoulli random variable is a discrete random variable that takes the value 1 with probability \( p \) and the value 0 with probability \( 1-p \). Formally, if \( X \) is a Bernoulli random variable with parameter \( p \) (where \( 0 \leq p \leq 1 \)), then its probability mass function is given by:
+    \[
+    P(X = x) = \begin{cases} 
+    p & \text{if } x = 1, \\
+    1-p & \text{if } x = 0.
+    \end{cases}
+    \]
+\end{definition}
+
+This idea is definitely easy to follow, since we are only dealing with a certain event that have two outcomes, where the possibility of one outcome is the complement of the other outcome. 
+
+I believe that no extra time should be spent to give an example. As for the expectation and variance, we can get them by mechanically dubbing the formula introduced earlier. So for Bernoulli Distribution, we have
+\begin{equation}
+    E[X] = 0\times(1-p) + 1\times p = p,
+\end{equation}
+\begin{equation}
+    \text{Var}[X] = E[X^2] - (E[X])^2 = p-p^2 = p(1-p).
+\end{equation}
+
+Now, let's try to make it a more generic model for trials of experiments. Actually, we have seen this before. Considering we tossing a coin for $n$ times, what is the probability that we have $k$ heads and $n-k$ tails? Then we need a more general distribution called \textbf{Binomial Distribution}. As its name, this distribution involves binomial coefficient, since we only care about the amount of outcomes, but not sequence of outcomes, which could be arranged in the sequence of all trials.
+
+\begin{definition}[Binomial Distribution]
+    A Binomial distribution is a discrete probability distribution that models the number of successes in a fixed number of independent Bernoulli trials, each with the same probability of success \( p \). Formally, if \( X \) is a binomial random variable representing the number of successes in \( n \) independent Bernoulli trials with success probability \( p \), then its probability mass function is given by:
+    \[
+    P(X = k) = \binom{n}{k} p^k (1-p)^{n-k}, \quad k = 0, 1, 2, \ldots, n,
+    \]
+    where \( \binom{n}{k} \) is the binomial coefficient.
+\end{definition}
+
+    The Binomial distribution extends the Bernoulli distribution to multiple trials. It describes the probability of obtaining exactly \( k \) successes in \( n \) independent trials, where each trial has a probability \( p \) of success. The Binomial random variable can be seen as the sum of \( n \) independent Bernoulli random variables.
+
+    Again, how can we get the expectation and variance of Binomial Distribution? We can actually get the conclusion without any complex resoning or proof. Because for Binomial distribution, we are only scaling up by $n$, but the nature of the outcomes are basically unchanged.
+
+    For Binomial Distribution:
+    \begin{equation}
+    E[X] =  np,
+\end{equation}
+\begin{equation}
+    \text{Var}[X] = np(1-p).
+\end{equation}
+
+However, if you still want to be rigorous, we can use another important property of Binomial distribution to show this. But before that, we need to prove a lemma on binomial coefficient.
+
+\begin{lemma}[Binomial Coefficient Identity]
+    For any integers \( n \) and \( i \), the following identity holds:
+    \[
+    i \binom{n}{i} = n \binom{n-1}{i-1}.
+    \]
+\end{lemma}
+
+\begin{proof}[Combinatorial Proof]
+    Consider a set of \( n \) objects. We want to choose \( i \) objects from this set and distinguish one of the chosen objects. We can count the number of ways to do this in two different ways.
+
+    \textbf{Method 1:} First choose \( i \) objects from the \( n \) objects, and then choose one of the \( i \) chosen objects to be distinguished. The number of ways to choose \( i \) objects from \( n \) is \( \binom{n}{i} \), and the number of ways to choose one distinguished object from the \( i \) chosen objects is \( i \). Therefore, the total number of ways is:
+    \[
+    i \binom{n}{i}.
+    \]
+
+    \textbf{Method 2:} First choose one distinguished object from the \( n \) objects. There are \( n \) ways to do this. Then choose \( i-1 \) more objects from the remaining \( n-1 \) objects. The number of ways to choose \( i-1 \) objects from \( n-1 \) is \( \binom{n-1}{i-1} \). Therefore, the total number of ways is:
+    \[
+    n \binom{n-1}{i-1}.
+    \]
+
+    Since both methods count the same quantity, we have:
+    \[
+    i \binom{n}{i} = n \binom{n-1}{i-1}.
+    \]
+\end{proof}
+
+\begin{theorem}
+    Let \( X \) be a binomial random variable with parameters \( n \) and \( p \). The expected value of \( X^k \) is given by
+    \[
+    E[X^k] = npE[(Y + 1)^{k-1}],
+    \]
+    where \( Y \) is a binomial random variable with parameters \( n-1 \) and \( p \).
+\end{theorem}
+
+\begin{proof}
+    To begin, note that
+    \[
+    E[X^k] = \sum_{i=0}^n i^k \binom{n}{i} p^i (1 - p)^{n-i}.
+    \]
+    We can rewrite the summation starting from \( i = 1 \) because the term for \( i = 0 \) is zero:
+    \[
+    E[X^k] = \sum_{i=1}^n i^k \binom{n}{i} p^i (1 - p)^{n-i}.
+    \]
+    Using the identity
+    \[
+    i \binom{n}{i} = n \binom{n-1}{i-1},
+    \]
+    we get:
+    \[
+    E[X^k] = np \sum_{i=1}^n i^{k-1} \binom{n-1}{i-1} p^{i-1} (1 - p)^{n-i}.
+    \]
+    Let \( j = i - 1 \). Then \( i = j + 1 \) and we have:
+    \[
+    E[X^k] = np \sum_{j=0}^{n-1} (j+1)^{k-1} \binom{n-1}{j} p^j (1 - p)^{n-1-j}.
+    \]
+    Notice that the summation on the right-hand side is the expected value of \( (Y + 1)^{k-1} \) where \( Y \) is a binomial random variable with parameters \( n-1 \) and \( p \). Thus,
+    \[
+    E[X^k] = np E[(Y + 1)^{k-1}].
+    \]
+\end{proof}
+
+By letting $k=1, 2$, we get the same expression as what we do earlier.
+
+\begin{example}
+    Five fair coins are flipped. If the outcomes are assumed independent, find the probability mass function of the number of heads obtained.
+
+    \textbf{Solution:} If we let \( X \) equal the number of heads (successes) that appear, then \( X \) is a binomial random variable with parameters \( (n = 5, p = \frac{1}{2}) \). Hence, by Equation (6.2),
+    \[
+    \begin{aligned}
+        P\{X = 0\} &= \binom{5}{0} \left( \frac{1}{2} \right)^0 \left( \frac{1}{2} \right)^5 = \frac{1}{32}, \\
+        P\{X = 1\} &= \binom{5}{1} \left( \frac{1}{2} \right)^1 \left( \frac{1}{2} \right)^4 = \frac{5}{32}, \\
+        P\{X = 2\} &= \binom{5}{2} \left( \frac{1}{2} \right)^2 \left( \frac{1}{2} \right)^3 = \frac{10}{32}, \\
+        P\{X = 3\} &= \binom{5}{3} \left( \frac{1}{2} \right)^3 \left( \frac{1}{2} \right)^2 = \frac{10}{32}, \\
+        P\{X = 4\} &= \binom{5}{4} \left( \frac{1}{2} \right)^4 \left( \frac{1}{2} \right)^1 = \frac{5}{32}, \\
+        P\{X = 5\} &= \binom{5}{5} \left( \frac{1}{2} \right)^5 \left( \frac{1}{2} \right)^0 = \frac{1}{32}.
+    \end{aligned}
+    \]
+\end{example}
+
+\subsection{Poisson Distribution}
+\subsection{Geometric Distribution}
+\subsection{Hypergeometric Distribution}
+
 \subsection{Exercises}
 
 \section{Other Discrete Distributions}
+\subsection{Discrete Uniform Distribution}
+\subsection{Negative Binomial Distribution}
+\subsection{Zeta-Bernoulli Distribution}
+\subsection{Logarithmic Series Distribution}
+\subsection{Zipf's Distribution}
+
 \subsection{Exercises}
 
 \section{Properties of Random Variable, PDF, and CDF}
