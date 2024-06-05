@@ -1308,9 +1308,6 @@ This is because when $[a]_R = [b]_R$, the intersection cannot be empty.
 \subsection{Exercises}
 
 \begin{exercise}
-	content...
-\end{exercise}
-\begin{exercise}
 		Determine the equivalence class of \( 2 \) under the relation of congruence modulo \( 5 \).
 \end{exercise}
 	\begin{solution}
@@ -1319,6 +1316,76 @@ This is because when $[a]_R = [b]_R$, the intersection cannot be empty.
 		where each element is of the form \( 2 + 5k \) for some integer \( k \).
 	\end{solution}
 
+ 
+\begin{exercise}
+Let $S$ be the equivalence relation on $\mathcal{P}(\{1, 2, 3, 4\})$ defined by 
+\[
+X \sim Y \text{ if and only if } |X \cup \{2\}| = |Y \cup \{2\}|.
+\]
+
+Write down the equivalence classes of $S$.
+\end{exercise}
+
+\begin{solution}
+To find the equivalence classes of the relation $S$, we need to analyze how the sets $X \cup \{2\}$ and $Y \cup \{2\}$ affect the cardinality and thus the equivalence.
+
+Consider the power set $\mathcal{P}(\{1, 2, 3, 4\})$, which includes all subsets of $\{1, 2, 3, 4\}$:
+
+\[
+\begin{aligned}
+\mathcal{P}(\{1, 2, 3, 4\}) = & \{\emptyset, \{1\}, \{2\}, \{3\}, \{4\}, \{1, 2\}, \{1, 3\}, \{1, 4\}, \{2, 3\}, \{2, 4\}, \\
+& \{3, 4\}, \{1, 2, 3\}, \{1, 2, 4\}, \{1, 3, 4\}, \{2, 3, 4\}, \{1, 2, 3, 4\}\}
+\end{aligned}
+\]
+
+We need to group these sets into equivalence classes based on the criterion $|X \cup \{2\}| = |Y \cup \{2\}|$.
+
+\begin{enumerate}[label=\textbf{Class \arabic*:}, itemsep=10pt]
+
+\item $\{\emptyset, \{2\}\}$
+    \begin{itemize}
+    \item $\emptyset \cup \{2\} = \{2\}$, $|\emptyset \cup \{2\}| = 1$
+    \item $\{2\} \cup \{2\} = \{2\}$, $|\{2\} \cup \{2\}| = 1$
+    \end{itemize}
+
+\item $\{\{1\}, \{3\}, \{4\}, \{1, 2\}, \{2, 3\}, \{2, 4\}\}$
+    \begin{itemize}
+    \item $\{1\} \cup \{2\} = \{1, 2\}$, $|\{1\} \cup \{2\}| = 2$
+    \item $\{3\} \cup \{2\} = \{2, 3\}$, $|\{3\} \cup \{2\}| = 2$
+    \item $\{4\} \cup \{2\} = \{2, 4\}$, $|\{4\} \cup \{2\}| = 2$
+    \item $\{1, 2\} \cup \{2\} = \{1, 2\}$, $|\{1, 2\} \cup \{2\}| = 2$
+    \item $\{2, 3\} \cup \{2\} = \{2, 3\}$, $|\{2, 3\} \cup \{2\}| = 2$
+    \item $\{2, 4\} \cup \{2\} = \{2, 4\}$, $|\{2, 4\} \cup \{2\}| = 2$
+    \end{itemize}
+
+\item $\{\{1, 3\}, \{1, 4\}, \{3, 4\}, \{1, 2, 3\}, \{1, 2, 4\}, \{2, 3, 4\}\}$
+    \begin{itemize}
+    \item $\{1, 3\} \cup \{2\} = \{1, 2, 3\}$, $|\{1, 3\} \cup \{2\}| = 3$
+    \item $\{1, 4\} \cup \{2\} = \{1, 2, 4\}$, $|\{1, 4\} \cup \{2\}| = 3$
+    \item $\{3, 4\} \cup \{2\} = \{2, 3, 4\}$, $|\{3, 4\} \cup \{2\}| = 3$
+    \item $\{1, 2, 3\} \cup \{2\} = \{1, 2, 3\}$, $|\{1, 2, 3\} \cup \{2\}| = 3$
+    \item $\{1, 2, 4\} \cup \{2\} = \{1, 2, 4\}$, $|\{1, 2, 4\} \cup \{2\}| = 3$
+    \item $\{2, 3, 4\} \cup \{2\} = \{2, 3, 4\}$, $|\{2, 3, 4\} \cup \{2\}| = 3$
+    \end{itemize}
+
+\item $\{\{1, 3, 4\}, \{1, 2, 3, 4\}\}$
+    \begin{itemize}
+    \item $\{1, 3, 4\} \cup \{2\} = \{1, 2, 3, 4\}$, $|\{1, 3, 4\} \cup \{2\}| = 4$
+    \item $\{1, 2, 3, 4\} \cup \{2\} = \{1, 2, 3, 4\}$, $|\{1, 2, 3, 4\} \cup \{2\}| = 4$
+    \end{itemize}
+
+\end{enumerate}
+
+Therefore, the equivalence classes are:
+\[
+\begin{aligned}
+&\{\emptyset, \{2\}\}, \\
+&\{\{1\}, \{3\}, \{4\}, \{1, 2\}, \{2, 3\}, \{2, 4\}\}, \\
+&\{\{1, 3\}, \{1, 4\}, \{3, 4\}, \{1, 2, 3\}, \{1, 2, 4\}, \{2, 3, 4\}\}, \\
+&\{\{1, 3, 4\}, \{1, 2, 3, 4\}\}.
+\end{aligned}
+\]
+\end{solution}
 
 \begin{exercise}
 	Let \( A = \mathbb{Z} \), and define \( R \) on \( A \) by \( xRy \) if and only if \( x - y \) is even. Determine if the following statements are true for \( a = 2 \) and \( b = 5 \):
@@ -1539,7 +1606,64 @@ The following exercises are on lexicographic ordering.
 \begin{solution}
 	This could be solved without a second thought that we can make $A_1,A_2$ any sets with smallest element, such as $\Z_{1}$, all integers greater than or equal 1.
 \end{solution}
+\begin{exercise}
+Let $R$ be a binary relation on $\mathbb{Z}$ defined by 
+\[
+xRy \text{ if and only if } x < y \text{ or } x \equiv y \pmod{2}.
+\]
 
+Is $R$ reflexive? Is $R$ symmetric? Is $R$ antisymmetric? Is $R$ transitive?
+
+\textbf{Fully justify each answer.}
+\end{exercise}
+\begin{solution}
+Let's analyze the properties of the relation $R$.
+
+\begin{itemize}
+    \item \textbf{Reflexive:} A relation $R$ on a set $A$ is reflexive if every element is related to itself, i.e., $aRa$ for all $a \in A$. 
+
+    For any integer $x \in \mathbb{Z}$, we have $x \equiv x \pmod{2}$. Hence, $xRx$ holds for all $x \in \mathbb{Z}$. 
+
+    Therefore, $R$ is reflexive.
+
+    \item \textbf{Symmetric:} A relation $R$ on a set $A$ is symmetric if $aRb$ implies $bRa$ for all $a, b \in A$.
+
+    Consider the pair $(2, 3)$. We have $2R3$ because $2 < 3$. However, $3 \not R 2$ because $3 > 2$ and $3 \not\equiv 2 \pmod{2}$. 
+
+    Therefore, $R$ is not symmetric.
+
+    \item \textbf{Antisymmetric:} A relation $R$ on a set $A$ is antisymmetric if $aRb$ and $bRa$ imply $a = b$ for all $a, b \in A$.
+
+    Consider the pair $(2, 4)$. We have $2R4$ because $2 < 4$, and $4R2$ because $4 \equiv 2 \pmod{2}$. However, $2 \neq 4$.
+
+    Therefore, $R$ is not antisymmetric.
+
+    \item \textbf{Transitive:} A relation $R$ on a set $A$ is transitive if $aRb$ and $bRc$ imply $aRc$ for all $a, b, c \in A$.
+
+    Consider the elements $2$, $3$, and $1$. We have $2R3$ because $2 < 3$, and $3R1$ because $3 \equiv 1 \pmod{2}$. However, $2 \not R 1$ because $2 \not< 1$ and $2 \not\equiv 1 \pmod{2}$. 
+
+    Therefore, $R$ is not transitive.
+\end{itemize}
+
+
+\end{solution}
+\begin{exercise}
+Explain why the conjunction of a partial order relation and an equivalence relation leads to the previous result.
+\end{exercise}
+
+\begin{solution}
+A partial order relation is a binary relation that is reflexive, antisymmetric, and transitive. An equivalence relation is a binary relation that is reflexive, symmetric, and transitive.
+
+When we combine a partial order relation with an equivalence relation, the resulting relation can still be reflexive because both component relations are reflexive. However, the antisymmetry of the partial order can conflict with the symmetry of the equivalence relation, leading to a relation that is neither antisymmetric nor symmetric. Furthermore, the transitivity of the partial order might not hold if the conditions of the equivalence relation introduce exceptions, which can break the transitivity in specific cases.
+
+In this particular example:
+- The reflexive property is preserved because both conditions $x < y$ and $x \equiv y \pmod{2}$ ensure that $xRx$.
+- The symmetry is broken because $x < y$ does not imply $y < x$.
+- The antisymmetry is violated when equivalence modulo 2 ($x \equiv y \pmod{2}$) holds for distinct $x$ and $y$.
+- The transitivity is disrupted when combining the partial order ($x < y$) with equivalence modulo 2, as seen in the counterexample with $2, 3$, and $1$.
+
+Thus, the combined relation $R$ does not retain all properties of partial orders and equivalence relations.
+\end{solution}
 \section{Special Types of Relations}
 \subsection{Recursive Relations}
 \subsection{\(n\)-ary Relations}
