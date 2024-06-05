@@ -356,6 +356,39 @@ division produce an integer as result, while sometimes not. We define division a
         
         Hence, the statement is proven.
     \end{proof}
+
+    \begin{exercise}
+Prove that if \(x\) and \(y\) are integers such that \(x \equiv 2 \pmod{8}\) and \(y \equiv 7 \pmod{8}\), then 8 divides \(2(x + y)^{13} + y - 1\).
+\end{exercise}
+\begin{proof}
+    Given \( x \equiv 2 \pmod{8} \) and \( y \equiv 7 \pmod{8} \), we need to prove that 8 divides \( 2(x + y)^{13} + y - 1 \).
+
+First, we find \( x + y \mod 8 \):
+
+\[
+x + y \equiv 2 + 7 \equiv 9 \equiv 1 \pmod{8}
+\]
+
+Next, we calculate \( (x + y)^{13} \mod 8 \):
+
+\[
+(x + y)^{13} \equiv 1^{13} \equiv 1 \pmod{8}
+\]
+
+Then, we calculate \( 2(x + y)^{13} \mod 8 \):
+
+\[
+2(x + y)^{13} \equiv 2 \cdot 1 \equiv 2 \pmod{8}
+\]
+
+Finally, we calculate \( 2(x + y)^{13} + y - 1 \mod 8 \):
+
+\[
+2(x + y)^{13} + y - 1 \equiv 2 + 7 - 1 \equiv 8 \equiv 0 \pmod{8}
+\]
+
+Since \( 2(x + y)^{13} + y - 1 \equiv 0 \pmod{8} \), it follows that 8 divides \( 2(x + y)^{13} + y - 1 \).
+\end{proof}
 \section{Number Representations and Algorithms}
     In everyday life, we use decimal notation to express integers. Though this is not
     for all cases, as we are using a 60 base system for time. However, in computer science, binary, octal, and hexadecimal

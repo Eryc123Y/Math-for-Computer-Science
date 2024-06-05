@@ -313,6 +313,96 @@ A probability function specifies the probability of each individual outcome or v
 On the other hand, a probability distribution is a more comprehensive concept that encompasses the collective behavior of a random variable. It describes the overall probabilistic properties of the random variable, often by specifying the probabilities associated with different ranges or sets of outcomes.
 \subsection{Exercises}
 
+
+
+\begin{exercise}
+One of the 256 subsets of $\{1,2,3,4,5,6,7,8\}$ is chosen uniformly at random. Let $X$ be the number of elements of this subset. Let $Y$ be 1 if the subset is empty and be the least element of the subset otherwise.
+
+\begin{enumerate}
+    \item[(i)] Are the events "X = 1" and "Y = 3" independent?
+    \item[(ii)] Are the random variables $X$ and $Y$ independent?
+    \item[(iii)] What is $\Pr(X \leq 2 \mid Y \leq 5)$?
+\end{enumerate}
+
+\textbf{Fully justify each answer.}
+\end{exercise}
+
+\begin{solution}
+Because there are 256 possible subsets, each is chosen with probability $\frac{1}{256}$.
+
+\begin{enumerate}
+    \item[(i)] To determine if the events $X = 1$ and $Y = 3$ are independent, we need to check if $\Pr(X = 1 \land Y = 3) = \Pr(X = 1) \Pr(Y = 3)$.
+    
+    \[
+    \Pr(X = 1) = \frac{8}{256} = \frac{1}{32}
+    \]
+    because there are 8 subsets with one element.
+    
+    \[
+    \Pr(Y = 3) = \frac{32}{256} = \frac{1}{8}
+    \]
+    because there are 32 subsets with least element 3 (they are the subsets that can be written as $\{3\} \cup A$ for a subset $A$ of $\{4,5,6,7,8\}$).
+
+    So,
+    \[
+    \Pr(X = 1)\Pr(Y = 3) = \frac{1}{32} \times \frac{1}{8} = \frac{1}{256}.
+    \]
+
+    \[
+    \Pr(X = 1 \land Y = 3) = \frac{1}{256}
+    \]
+    because the event "X = 1 and Y = 3" means that the subset chosen had one element and that its least element was 3, which means the subset was $\{3\}$.
+
+    Therefore, the events $X = 1$ and $Y = 3$ are independent because $\Pr(X = 1) \Pr(Y = 3) = \Pr(X = 1 \land Y = 3)$.
+
+    \item[(ii)] To determine if the random variables $X$ and $Y$ are independent, we can check if their joint probability distribution is equal to the product of their marginal distributions. Consider the events $X = 8$ and $Y = 8$.
+
+    \[
+    \Pr(X = 8) = \frac{1}{256}
+    \]
+    because only one of the subsets has 8 elements (the set $\{1,2,3,4,5,6,7,8\}$).
+
+    \[
+    \Pr(Y = 8) = \frac{1}{256}
+    \]
+    because the only set with least element 8 is $\{8\}$.
+
+    So,
+    \[
+    \Pr(X = 8) \Pr(Y = 8) = \frac{1}{256} \times \frac{1}{256} = \frac{1}{65536}.
+    \]
+
+    \[
+    \Pr(X = 8 \land Y = 8) = 0
+    \]
+    because the event "X = 8 and Y = 8" means that the subset had 8 elements and the least element was 8, which is impossible.
+
+    Therefore, the random variables $X$ and $Y$ are not independent because $\Pr(X = 8) \Pr(Y = 8) \neq \Pr(X = 8 \land Y = 8)$.
+
+    \item[(iii)] To find $\Pr(X \leq 2 \mid Y \leq 5)$, we first find $\Pr(Y \leq 5)$.
+
+    \[
+    \Pr(Y \leq 5) = 1 - \Pr(Y \geq 6) = 1 - \frac{7}{256} = \frac{249}{256}
+    \]
+    because there are seven subsets whose minimum element is at least 6: $\{6\}$, $\{7\}$, $\{8\}$, $\{6,7\}$, $\{6,8\}$, $\{7,8\}$, and $\{6,7,8\}$.
+
+    \[
+    \Pr(X \leq 2 \land Y \leq 5) = \frac{37}{256} - \frac{6}{256} = \frac{31}{256}
+    \]
+    because there are $\binom{8}{0} + \binom{8}{1} + \binom{8}{2} = 37$ subsets with at most two elements but, of these, six $\{6\}$, $\{7\}$, $\{8\}$, $\{6,7\}$, $\{6,8\}$, $\{7,8\}$ have a minimum element at least 6.
+
+    So,
+
+    \[
+    \Pr(X \leq 2 \mid Y \leq 5) = \frac{\Pr(X \leq 2 \land Y \leq 5)}{\Pr(Y \leq 5)} = \frac{31/256}{249/256} = \frac{31}{249}.
+    \]
+\end{enumerate}
+\begin{remark}
+    A common mistake here is to count the cases of $(x=2)\land (y\leq5)$ by \[\binom{5}{1} \times \binom{7}{1}=35\]
+    It looks reasonable, since we are taking one of the items between 1-5 and take the other from the rest. This actually ignores the fact that the sequence of taking elements does not affect the result, and thus counting one case twice. For example: $\{2\} \cup \{1\}$ and $\{1\} \cup \{2\}$ are actually the same set,  and both are included in the selection.
+\end{remark}
+\end{solution}
+
 \section{Expectation and Variance}
 Since we have defined probability distribution and probability density function. We can now investigate more aspects of the function. Recall that in calculus, the average value of a continuous function $f(x)$ defined on the interval $[a, b]$ is given by the formula:
 \begin{equation}
@@ -1140,6 +1230,105 @@ E[Y^2] = \frac{(40)^2 + (33)^2 + (25)^2 + (50)^2}{4} = 1453.5
 
     Hence, the product form is the correct and applicable method for expressing the independence of random variables, not the quotient form.
 \end{solution}
+
+\begin{exercise}
+Let $X$ and $Y$ be independent random variables with distributions:
+\[
+\begin{array}{c|ccc}
+x & -1 & 0 & 1 \\
+\hline
+\Pr(X = x) & \frac{1}{6} & \frac{1}{3} & \frac{1}{2} \\
+\end{array}
+\quad
+\begin{array}{c|cccc}
+y & 0 & 2 & 4 \\
+\hline
+\Pr(Y = y) & \frac{1}{4} & \frac{1}{2} & \frac{1}{4} \\
+\end{array}
+\]
+
+Let $W = 3Y - 6X$ and $Z = 2X + Y$.
+
+\begin{enumerate}
+    \item[(i)] What is ${E}[X]$?
+    \item[(ii)] What is $\mathrm{Var}[X]$?
+    \item[(iii)] What is ${E}[W]$?
+    \item[(iv)] Write down a table giving the probability distribution for $Z$.
+\end{enumerate}
+\end{exercise}
+
+\begin{solution}
+\begin{enumerate}
+    \item[(i)] To find ${E}[X]$:
+    \[
+    {E}[X] = \sum_{x} x \Pr(X = x) = -1 \cdot \frac{1}{6} + 0 \cdot \frac{1}{3} + 1 \cdot \frac{1}{2} = -\frac{1}{6} + \frac{1}{2} = \frac{1}{3}.
+    \]
+
+    \item[(ii)] To find $\mathrm{Var}[X]$:
+    \[
+    \mathrm{Var}[X] = {E}[X^2] - ({E}[X])^2.
+    \]
+    First, we calculate ${E}[X^2]$:
+    \[
+    {E}[X^2] = \sum_{x} x^2 \Pr(X = x) = (-1)^2 \cdot \frac{1}{6} + 0^2 \cdot \frac{1}{3} + 1^2 \cdot \frac{1}{2} = \frac{1}{6} + \frac{1}{2} = \frac{2}{3}.
+    \]
+    Now, we calculate the variance:
+    \[
+    \mathrm{Var}[X] = \frac{2}{3} - \left(\frac{1}{3}\right)^2 = \frac{2}{3} - \frac{1}{9} = \frac{6}{9} - \frac{1}{9} = \frac{5}{9}.
+    \]
+
+    \item[(iii)] To find ${E}[W]$:
+    \[
+    W = 3Y - 6X.
+    \]
+    Using the linearity of expectation:
+    \[
+    {E}[W] = {E}[3Y - 6X] = 3{E}[Y] - 6{E}[X].
+    \]
+    We need ${E}[Y]$:
+    \[
+    {E}[Y] = \sum_{y} y \Pr(Y = y) = 0 \cdot \frac{1}{4} + 2 \cdot \frac{1}{2} + 4 \cdot \frac{1}{4} = 0 + 1 + 1 = 2.
+    \]
+    Therefore,
+    \[
+    {E}[W] = 3 \cdot 2 - 6 \cdot \frac{1}{3} = 6 - 2 = 4.
+    \]
+
+    \item[(iv)] To find the probability distribution for $Z = 2X + Y$:
+    The possible values of $Z$ are $-2, 0, 2, 4, 6$. We calculate the probabilities for each case.
+
+    \[
+    \begin{array}{c|ccccc}
+    Z & -2 & 0 & 2 & 4 & 6 \\
+    \hline
+    \Pr(Z = z) & \frac{1}{24} & \frac{1}{6} & \frac{1}{3} & \frac{1}{3} & \frac{1}{8} \\
+    \end{array}
+    \]
+
+    The calculations are as follows:
+    \[
+    \Pr(Z = -2) = \Pr(X = -1 \land Y = 0) = \frac{1}{6} \cdot \frac{1}{4} = \frac{1}{24}.
+    \]
+
+    \[
+    \Pr(Z = 0) = \Pr(X = -1 \land Y = 2) + \Pr(X = 0 \land Y = 0) = \frac{1}{6} \cdot \frac{1}{2} + \frac{1}{3} \cdot \frac{1}{4} = \frac{1}{12} + \frac{1}{12} = \frac{1}{6}.
+    \]
+
+    \[
+    \Pr(Z = 2) = \Pr(X = -1 \land Y = 4) + \Pr(X = 0 \land Y = 2) + \Pr(X = 1 \land Y = 0) =\ \frac{1}{6} \cdot \frac{1}{4} + \frac{1}{3} \cdot \frac{1}{2} + \frac{1}{2} \cdot \frac{1}{4}  = \frac{1}{3}.
+    \]
+
+    \[
+    \Pr(Z = 4) = \Pr(X = 0 \land Y = 4) + \Pr(X = 1 \land Y = 2) = \frac{1}{3} \cdot \frac{1}{4} + \frac{1}{2} \cdot \frac{1}{2} = \frac{1}{12} + \frac{1}{4} = \frac{1}{12} + \frac{3}{12} = \frac{4}{12} = \frac{1}{3}.
+    \]
+
+    \[
+    \Pr(Z = 6) = \Pr(X = 1 \land Y = 4) = \frac{1}{2} \cdot \frac{1}{4} = \frac{1}{8}.
+    \]
+
+\end{enumerate}
+\end{solution}
+
 
 \section{Common Discrete Distributions}
 We have covered the basics of random variable, their expectation, as well as the variance. Also, we know the idea to model probability with PDFs and CDFs. In this section, we introduce further abstraction of theory and problems on random variable and discrete probability distributions by learning most commonly used distributions and their property.
