@@ -16,10 +16,10 @@ This interconnectedness ensures that mathematical knowledge, once proven, become
 and offering a universal language spoken by all cultures in the language of logic and reason.
 
 %------------------------------------------------
-\section{Propositions}
+\section{Propositions and Axiomatic System}
 The angles in a triangle add up to 180 degrees; the sum of any two even numbers is even. Statement as such is so common in mathematics, which we call proposition.
 	\begin{definition}[Proposition]
-		A proposition is a declarative sentence that is either true or false. 
+		A proposition is a declarative sentence that is \textbf{either true or false}. 
 		Propositions are the fundamental building blocks of mathematical reasoning, as they can be clearly judged to be true or false.
 	\end{definition}
 	Propositions have the following characteristics:
@@ -51,6 +51,108 @@ The inverse of a statement negates both the hypothesis and the conclusion. For t
 
 \subsection*{Contrapositive}
 The contrapositive of a statement negates and flips the hypothesis and the conclusion. For the statement \(P \rightarrow Q\), the contrapositive is \(\neg Q \rightarrow \neg P\). Unlike the converse and the inverse, the truth of the contrapositive is always the same as the truth of the original statement. This property is often used in mathematical proofs, particularly in \textbf{proofs by contradiction}, which we will discuss in successive sections.
+
+While proposition is really easy to understand, we can further categorize it into different sub-types that build the pillar of mathematics. The essence of contemporary math is what we call axiomatic system. 
+
+\begin{definition}[Axiomatic System]
+    An axiomatic system  is a set of axioms that are used as a foundation to derive theorems. The system consists of the following components:
+
+\begin{itemize}
+    \item \textbf{Axioms:} Fundamental statements assumed to be true without proof.
+    \item \textbf{Definitions:} Precise explanations of terms used within the system.
+    \item \textbf{Theorems:} Statements derived from axioms and previously proven theorems through logical reasoning.
+    \item \textbf{Lemmas:} Intermediate propositions used as stepping stones to prove theorems.
+    \item \textbf{Corollaries:} Statements that follow directly from a theorem or lemma.
+\end{itemize}
+
+In an axiomatic system, axioms serve as the foundational truths, while definitions provide clarity to the terms and concepts. Theorems, lemmas, and corollaries are the results obtained through logical deductions based on the axioms and definitions.
+\end{definition}
+
+This seems very abstruse, what are all these things? Let's try to break it into different parts that are more understandable.
+
+Let's just put aside the system itself and just focus on these components. We can only categorize the 5 components into two classes by if it is a proposition. Recall that propositions are statements they always can be judged as true or false. If you check the description, you will find that we mentioned that axioms are statements/facts, and theorems, lemmas, and corollaries are all derived from axioms, so they are propositions. The only exception is definition, why? Let's just look up the dictionary as what we do when we see unfamiliar word. Let's give definition a definition by a dictionary.
+\begin{definition}[Definition]
+    By Oxford dictionary, definition refers to an explanation of the meaning of a word or phrase, especially in a dictionary.
+\end{definition}
+
+You may have realized that we can not always tell whether a definition is true or false, as it is only a description to a existing entity or concept. More interestingly, we can have different definitions to the same thing. An example is that we can define definition using another definition in a different dictionary, that a definition is \textit{what is meant by a word, text, concept, or action}. Which definition is better? Is there any mistake or inaccuracy? We cannot tell. That's why definition is treated independently in the classification.
+
+Now let's just focus on the rest of the sub-propositions. We can encapsulate all of them using definition already, so why we need to categorize them into different concepts? The reason is the way mathematician learns math. Imagine you are a smart guy who lived in long long ago, when people barely know what is number. What will you do if you are a mathematician? Consider that one-digit addition is more than natural for human, as you can use your fingers to help, and you find that counting 9 using 4 fingers on the left and 5 on the right is the same as 4 fingers on the right while 5 on the left are the same. Congratulations! You just "create" the commutative law of addition, which is an axiom, because you have no idea to prove it, despite modern math usually take it as a theorem from Peano Axioms. We still take it as an axiom for ancient people. 
+
+Now the smart guy is getting excited, and he wants to know more about these property. He suddenly realized that this rule also works for powers so that $a^m\cdot a^n = a^{m+n} = a^n\cdot a^m$. He prove this with the previously proven commutative property, and the property of power as a Lemma to help.
+
+\begin{proof}
+    We will prove that $a^m\cdot a^n = a^{m+n} = a^n\cdot a^m$.
+
+    By the rule of power,
+    \begin{lemma}
+        $a^m\cdot a^n = a^{m+n}$.
+    \end{lemma}
+
+    By the commutative law of addition,
+    \begin{lemma}
+        $a+b=b+a$.
+    \end{lemma}
+
+    These two lemmas combine to:
+    \[a^{m+n}=a^{n+m}\]
+
+    Again, by using the first lemma from right to left.
+    \[a^{n+m} = a^n \cdot a^m\]
+
+    Thus, $a^m\cdot a^n = a^{m+n} = a^n\cdot a^m$ is proven.
+\end{proof}
+
+This example is enough for understanding the axiomatic system. In the middle school, we have actually already known an example of axiomatic system. The Euclidean axioms, formulated by the ancient Greek mathematician Euclid, represent one of the earliest and most influential examples of an axiomatic system. Euclid's axioms form the foundation of Euclidean geometry, a mathematical framework that has been studied for over two millennia. The system comprises five fundamental axioms:
+
+\begin{enumerate}
+    \item A straight line segment can be drawn joining any two points.
+    \item A straight line can be extended indefinitely in both directions.
+    \item A circle can be drawn with any center and any radius.
+    \item All right angles are equal to each other.
+    \item If two lines are drawn such that they intersect a third line in such a way that the sum of the inner angles on one side is less than two right angles, then the two lines, if extended indefinitely, will meet on that side.
+\end{enumerate}
+
+These axioms serve as the basic building blocks for deriving further geometrical truths, known as theorems. For example, from these simple and intuitive axioms, one can prove the Pythagorean theorem, properties of triangles and circles, and many other fundamental results in geometry. Euclid's axiomatic system exemplifies how a small set of foundational assumptions can lead to a rich and comprehensive mathematical theory through logical deduction.
+
+Axiomatic system has three important property, consistency, independence, and completeness.
+
+\begin{definition}[Consistency]
+A formal system is said to be \textit{consistent} if it does not contain any contradictions. That is, there are no two statements \(P\) and \(\neg P\) that can both be derived from the axioms of the system.
+\end{definition}
+
+\begin{definition}[Independence]
+An axiom in a formal system is \textit{independent} if it cannot be derived from the other axioms in the system. In other words, removing this axiom would result in a system where the axiom is not provable from the remaining axioms.
+\end{definition}
+
+\begin{definition}[Completeness]
+A formal system is \textit{complete} if every statement expressible in the language of the system can be proven either true or false using the axioms and rules of inference of the system. That is, there are no undecidable statements within the system.
+\end{definition}
+
+But do all axiomatic systems meet these requirements? The answer is no. For example, in Euclidean axioms, the Parallel Postulate (the fifth axiom) is controversial.
+\begin{quotation}
+\textit{If a line segment intersects two straight lines forming two interior angles on the same side that sum to less than two right angles, then the two lines, if extended indefinitely, meet on that side}.
+\end{quotation}
+
+
+In modern terms, this postulate can be stated as:
+
+\textit{Given a line and a point not on the line, there is exactly one line through the point that is parallel to the given line.}
+
+\begin{itemize}
+    \item \textbf{Complexity:} The Fifth Postulate is much more complex than the other axioms, such as "a straight line segment can be drawn joining any two points." This complexity led mathematicians to suspect that it might be derivable from the other axioms.
+    \item \textbf{Independence:} For centuries, mathematicians attempted to prove the Fifth Postulate from the other four axioms but to no avail. It was eventually proven to be independent, meaning it cannot be derived from the other axioms.
+    \item \textbf{Discovery of Non-Euclidean Geometry:} In the early 19th century, mathematicians discovered geometries that deny the Fifth Postulate:
+    \begin{itemize}
+        \item \textit{Elliptic Geometry:} No parallel lines exist; through a given point not on a line, no line parallel to the given line can be drawn.
+        \item \textit{Hyperbolic Geometry:} Infinitely many parallel lines can be drawn through a given point not on a line.
+    \end{itemize}
+    These discoveries showed that the Parallel Postulate is not the only possibility, thereby expanding the field of geometry.
+\end{itemize}
+
+The controversy surrounding Euclid's Fifth Postulate has significantly influenced the development of mathematics, leading to the creation of non-Euclidean geometries and broadening our understanding of space and geometric properties.
+
+This example reminds us that there is no absolute truth in mathematics, since it is always evolving and changing. Though euclidean axioms are not complete, it is still regarded as a astonishing achievement in math that have laid foundation to numerous areas of mathematical study.
 
 \section{Direct Proof}
 	\subsection*{Framework of Direct Proof}
@@ -924,6 +1026,7 @@ By writing down a few terms of this sequence, suggest a (non-recursive) formula 
 	\end{align*}
 	which is the desired formula. Therefore, by strong induction, the formula holds for all \( n \geq 0 \).
 \end{proof}
+
 
 
 %------------------------------------------------

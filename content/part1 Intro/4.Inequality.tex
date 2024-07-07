@@ -949,7 +949,18 @@ Consider the expression \( \sum_{i=1}^{n-1} \sum_{j=i+1}^{n} (a_i b_j - a_j b_i)
 
 Thus, by rearranging the terms and recognizing that the right-hand side sum is always non-negative, we establish Lagrange's Identity as an equality.
 
-    \end{proof}
+The complete working is below.
+    \begin{align*}
+    &\left( \sum_{i=1}^{n} a_i^2 \right) \left( \sum_{i=1}^{n} b_i^2 \right) \\
+    =& \sum_{i=1}^{n} \sum_{j=1}^{n} a_i^2 b_j^2 \\
+    =& \left( \sum_{i=1}^{n} a_i b_i \right)^2 + \sum_{1 \leq i < j \leq n} (a_i b_j - a_j b_i)^2 \\
+    =& \sum_{i=1}^{n} \sum_{j=1}^{n} a_i a_j b_i b_j + \sum_{1 \leq i < j \leq n} (a_i^2 b_j^2 - 2a_i a_j b_i b_j + a_j^2 b_i^2) \\
+    =& \sum_{i=1}^{n} \sum_{j=1}^{n} a_i a_j b_i b_j + \sum_{1 \leq i < j \leq n} (a_i^2 b_j^2 + a_j^2 b_i^2 - 2a_i a_j b_i b_j) \\
+    =& \sum_{i=1}^{n} a_i^2 b_i^2 + \sum_{i=1}^{n} \sum_{j \neq i} a_i a_j b_i b_j + \sum_{1 \leq i < j \leq n} (a_i^2 b_j^2 + a_j^2 b_i^2 - 2a_i a_j b_i b_j) \\
+    =& \sum_{i=1}^{n} a_i^2 b_i^2 + \sum_{1 \leq i < j \leq n} (a_i^2 b_j^2 + a_j^2 b_i^2 - 2a_i a_j b_i b_j) \\
+    =& \left( \sum_{i=1}^{n} a_i^2 \right) \left( \sum_{i=1}^{n} b_i^2 \right) = \left( \sum_{i=1}^{n} a_i b_i \right)^2 + \sum_{1 \leq i < j \leq n} (a_i b_j - a_j b_i)^2 
+    \end{align*}
+\end{proof}
 
 \begin{exercise}
     Consider the function \( f(x) = \frac{(x+k)^2}{x^2+1} \) where \( k \) is a positive whole number. Show that \( f(x) \leq k^2 + 1 \).

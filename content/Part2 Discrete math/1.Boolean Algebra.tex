@@ -1323,6 +1323,159 @@
 \end{figure}
 
     \section{Predicates and Quantifiers}
+We have covered the knowledge that allows us to work around with boolean variables and logical operators and simplify logical circuits accordingly. However, the most interesting part of logic is not yet mentioned. Before that, we need to work out predicate and quantifiers that will be used to adding details to our statements so that they can be more precise and also avoid ambiguous interpretations. This part of logic is more accessible, and less boring, because we can relate all these to natural language rather than circuits.
+
+\subsection{Predicate}
+When you see the word "predicate", you may feel like you are having a primary school English class, where you learn basic grammars. Well, the predicate in mathematics is indeed pretty much the same as what we see the the English language. The definition we all have known is listed below.
+\begin{definition}[Predicate]
+    Predicate is the part of a sentence containing a verb that makes a statement about the subject of the verb, such as "went home" in John went home. In mathematics, predicate is regarded as a \textit{Boolean function}. Usually, a predicate is denoted by $P$ by convention, but preferably, it can be anything you want, or even a word. Like what we do for writing a function, we write the inputs, or we say the objects involved in the statement in a pair of parenthesis (can be any number). 
+\end{definition}
+
+\begin{example}
+    We can define a predicate $P$, where for $P(x)$, $x$ is the first name of someone, means that $x$ begins with letter "E". So $P(\text{Eric})\equiv 1$, and $P(\text{Alex})\equiv 0$.
+\end{example}
+
+\begin{example}
+    We define a predicate $Less(x, y)$ on integers, meaning that $x < y$. So we have $Less(2, 3) \equiv 1$ and $Less(3, 2) \equiv 0$. 
+\end{example}
+
+\begin{remark}
+    Notice that, sometimes a predicate is defined without specifying the type of objects that involved, so whether it is valid depends on the arguments. 
+\end{remark}
+
+In Computer Science, an important application of predicate is determining program correctness by checking \textbf{preconditions} and \textbf{post conditions}.
+
+\begin{definition}[Precondition]
+     A precondition is a condition or set of conditions that must be true before the execution of a program or a procedure. Preconditions are used to specify the requirements or constraints on the inputs for the procedure to function correctly.
+\end{definition}
+
+\begin{definition}[Postcondition]
+    A postcondition is a condition or set of conditions that must be true after the execution of a program or a procedure, assuming that the preconditions were true. Postconditions specify the expected state of the outputs and the system once the procedure has completed.
+\end{definition}
+Consider the following example related to predicate logic. 
+
+\begin{example}
+    Suppose we have a procedure that takes an integer \( n \) and returns the factorial of \( n \). The precondition for this procedure is that \( n \) must be a non-negative integer. The postcondition is that the returned value must be equal to the product of all positive integers up to \( n \).
+
+Formally, let \( P(n) \) denote the predicate "the input \( n \) is a non-negative integer," and let \( Q(n, f(n)) \) denote the predicate "the output \( f(n) \) is the factorial of \( n \)." We can express the precondition and postcondition as follows:
+
+\begin{itemize}
+    \item \textbf{Precondition:} \( P(n) \equiv (n \geq 0) \)
+    \item \textbf{Postcondition:} \( Q(n, f(n)) \equiv (f(n) = n!) \)
+\end{itemize}
+
+If the precondition \( P(n) \) holds, then after executing the procedure, the postcondition \( Q(n, f(n)) \) must hold, ensuring that the procedure correctly computes the factorial of \( n \).
+\end{example}
+
+\subsection{Quantifier}
+With predicate, we can specify statements for different scenarios, yet we can add more constraints to our statements. In English, we always use pronouns with some or any/every as in "someone", "anyone", or "everyone". There is no lack of such usage when we are speaking natural language. Don't take quantifier as something complex, what we do in math is only formalize and symbolize such meaning or usage in natural language so that they are more reliable for mathematical reasoning.
+
+\begin{definition}[Quantifier]
+
+Quantifiers are symbols used in logic to express the extent to which a predicate is true over a range of elements. The two most common quantifiers are the universal quantifier and the existential quantifier.
+
+\begin{description}
+    \item[Universal Quantifier] The universal quantifier, denoted by $\forall$, asserts that a predicate is true for all elements in a given domain. It is read as "for all" or "for every". Formally, $\forall x \in D, P(x)$ means that for every element $x$ in the domain $D$, the predicate $P(x)$ holds true.
+    \item[Existential Quantifier] The existential quantifier, denoted by $\exists$, asserts that there exists at least one element in the domain for which the predicate is true. It is read as "there exists" or "for some". Formally, $\exists x \in D \text{ such that } P(x)$ means that there is at least one element $x$ in the domain $D$ for which the predicate $P(x)$ holds true.
+\end{description}
+\end{definition}
+\begin{remark}
+    We also have a quantifier called uniqueness quantifier which uses the same notation as for existential quantifier. The only difference is that we write $\exists_x$ to express that there are exactly $x$ cases that the interpretation is true.
+\end{remark}
+\begin{example}
+\begin{equation*}
+    \forall x \in \mathbb{R}, x^2 \geq 0
+\end{equation*}
+This statement asserts that for all real numbers $x$, the square of $x$ is greater than or equal to zero.
+\end{example}
+\begin{example}
+\begin{equation*}
+    \exists x \in \mathbb{R} \text{ such that } x^2 = 4
+\end{equation*}
+This statement asserts that there exists a real number $x$ such that the square of $x$ is equal to 4. Indeed, $x = 2$ or $x = -2$ satisfy this condition.
+\end{example}
+
+Actually, quantifiers can be written as logical operations of predicates. Suppose we define $P(x)$ on \seq{x}{1}{k}. Then we have
+\[\forall x P(x) \equiv \bigwedge_{i=1}^{k} P(x_i) = P(x_1)\land P(x_2)\land \cdots \land P(x_k).\]
+
+Similarly, we have 
+\[\exists x P(x) \equiv \bigvee_{i=1}^{k} P(x_i) = P(x_1)\lor P(x_2)\lor \cdots \lor P(x_k).\]
 
 
-    \section{Logic of Deduction and Induction}
+As a shorthand, we can write the domain or condition to the variables in the quantifier and write the predicate in math expression.
+\begin{example}
+    Every negative number are positive after square can be written as
+    \[\forall x < 0 (x^2>0).\]
+    Where the predicate it put inside parenthesis.
+\end{example}
+
+Sometimes, or in most cases, a single quantifier is not enough to express the statement we want to present. In that case, we need to use multiple quantifiers. Consider the statement "For all natural number, there exists natural number that is two times of them." We can write it as
+\[\forall x\in \N\exists y \in \N(y=2x).\]
+
+This is obviously true, however, if we write
+\[\exists  x\in \N\forall y \in \N(y=2x).\]
+We can find that it does not hold, since there is no such $x$ to be half of any $y$.
+
+Another important aspect of quantifier when we deal with predicate with multiple variables is bounded variable.
+\begin{definition}[Bounded Variable]
+    A variable \( x \) is said to be \textbf{bounded} by a quantifier in a logical formula if it appears within the scope of a quantifier such as \(\forall\) (for all) or \(\exists\) (there exists), else we call it a free variable. 
+
+The scope of the quantifier includes the part of the formula where the variable is explicitly governed by the quantifier.
+\end{definition}
+
+\begin{example}
+Consider the logical statement:
+\[ \forall x \in \mathbb{N} \, \exists y \in \mathbb{N} \, (x < y) \]
+In this statement:
+\begin{itemize}
+    \item The variable \( x \) is bounded by the universal quantifier \(\forall x\).
+    \item The variable \( y \) is bounded by the existential quantifier \(\exists y\).
+\end{itemize}
+Both \( x \) and \( y \) are bounded variables within their respective scopes. Outside the scope of these quantifiers, the variables would be considered free.
+\end{example}
+
+Quantifiers can also be joined with logical operators, and here we provide proof to the only logical equivalence on simple quantifiers.
+\begin{theorem}
+\(\forall x (P(x) \land Q(x))\) and \(\forall x P(x) \land \forall x Q(x)\) are logically equivalent.
+\end{theorem}
+
+\begin{proof}
+To show that these statements are logically equivalent, we must show that they always take the same truth value, no matter what the predicates \(P\) and \(Q\) are, and no matter which domain of discourse is used. Suppose we have particular predicates \(P\) and \(Q\), with a common domain. We can show that \(\forall x (P(x) \land Q(x))\) and \(\forall x P(x) \land \forall x Q(x)\) are logically equivalent by doing two things. First, we show that if \(\forall x (P(x) \land Q(x))\) is true, then \(\forall x P(x) \land \forall x Q(x)\) is true. Second, we show that if \(\forall x P(x) \land \forall x Q(x)\) is true, then \(\forall x (P(x) \land Q(x))\) is true.
+
+So, suppose that \(\forall x (P(x) \land Q(x))\) is true. This means that if \(a\) is in the domain, then \(P(a) \land Q(a)\) is true. Hence, \(P(a)\) is true and \(Q(a)\) is true. Because \(P(a)\) is true and \(Q(a)\) is true for every element \(a\) in the domain, we can conclude that \(\forall x P(x)\) and \(\forall x Q(x)\) are both true. This means that \(\forall x P(x) \land \forall x Q(x)\) is true.
+
+Next, suppose that \(\forall x P(x) \land \forall x Q(x)\) is true. It follows that \(\forall x P(x)\) is true and \(\forall x Q(x)\) is true. Hence, if \(a\) is in the domain, then \(P(a)\) is true and \(Q(a)\) is true (because \(P(x)\) and \(Q(x)\) are both true for all elements in the domain, there is no conflict using the same value of \(a\) here). It follows that for all \(a\), \(P(a) \land Q(a)\) is true. It follows that \(\forall x (P(x) \land Q(x))\) is true. We can now conclude that
+\[
+\forall x (P(x) \land Q(x)) \equiv \forall x P(x) \land \forall x Q(x).
+\]
+\end{proof}
+
+Then, how can we negate a quantifier?
+
+Consider this statement: Everyone in this room likes banana.
+We use $P(x)$ to show that the individual $x$ likes banana.
+Then we have \[\forall x P(x).\]
+
+We can negate in natural language that: someone in this room dislikes banana, which can be written as
+\[\exists x\neg P(x).\]
+You may have already found the pattern, to negate the whole expression, we replace all universal quantifiers to existential quantifiers and vice versa, finally we negate the predicate. We call these rules De Morgan's law for quantifiers.
+
+\begin{table}[H]
+\centering
+\caption{De Morgan's law for quantifiers}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Negation} & \textbf{Equivalence} & \textbf{When True?} & \textbf{When False?} \\
+\hline
+$\neg \exists x P(x)$ & $\forall x \neg P(x)$ & For every $x$, $P(x)$ is false. & Exists $x$ for which $P(x)$ is true. \\
+\hline
+$\neg \forall x P(x)$ & $\exists x \neg P(x)$ & Exists $x$ for which $P(x)$ is false. & $P(x)$ is true for every $x$. \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsection{Nested Quantifier}
+
+
+
+    \section{Inference and Deduction}
