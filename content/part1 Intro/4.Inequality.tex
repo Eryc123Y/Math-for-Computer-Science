@@ -723,6 +723,25 @@ To prove the LHS, apply the above with \( -y_i \) instead of \( y_i \) (noting t
     This completes the proof.
 \end{proof}
 If you are interested in the complete proof, check \href{https://artofproblemsolving.com/wiki/index.php/Root-Mean_Square-Arithmetic_Mean-Geometric_Mean-Harmonic_mean_Inequality}{this link}.
+
+\begin{exercise}
+Prove that for arbitrary real $a_{k}, b_{k}, c_{k}$ we have
+\[
+\left(\sum_{k=1}^{n} a_{k} b_{k} c_{k}\right)^{4} \leq\left(\sum_{k=1}^{n} a_{k}^{4}\right)\left(\sum_{k=1}^{n} b_{k}^{2}\right)^{2}\left(\sum_{k=1}^{n} c_{k}^{4}\right)
+\]
+\end{exercise}
+\begin{solution}
+    By using Cauchy-Schwartz inequality twice, we have: 
+    
+\begin{align*}
+\left( \sum_{k=1}^{n} a_k b_k c_k \right)^4 &= \left[ \left( \sum_{k=1}^{n} a_k b_k c_k \right)^2 \right]^2 \\
+&\leq \left( \sum_{k=1}^{n} a_k^2 c_k^2 \right)^2 \left( \sum_{k=1}^{n} b_k^2 \right)^2 \\
+&\leq \left( \left( \sum_{k=1}^{n} a_k^4 \right) \left( \sum_{k=1}^{n} c_k^4 \right) \right) \left( \sum_{k=1}^{n} b_k^2 \right)^2 \\
+&= \left( \sum_{k=1}^{n} a_k^4 \right) \left( \sum_{k=1}^{n} c_k^4 \right) \left( \sum_{k=1}^{n} b_k^2 \right)^2 \\
+&= \left( \sum_{k=1}^{n} a_k^4 \right) \left( \sum_{k=1}^{n} b_k^2 \right)^2 \left( \sum_{k=1}^{n} c_k^4 \right).
+\end{align*}
+\end{solution}
+
 \begin{exercise}
     Prove that, let \( a, b, c \) be positive real numbers such that \( a + b + c = 1 \). Then the following inequality holds:
 \[
@@ -929,6 +948,33 @@ Which is true since it is a sum of squares.
     Hence, the inequality is proven. Equality holds if and only if the numbers are proportional.
     \end{proof}
 
+\begin{exercise}
+Prove Minkowski's inequality:
+\[
+\left(\sum_{k=1}^{n}\left(a_{k}+b_{k}\right)^{2}\right)^{1 / 2} \leq\left(\sum_{k=1}^{n} a_{k}^{2}\right)^{1 / 2}+\left(\sum_{k=1}^{n} b_{k}^{2}\right)^{1 / 2}
+\]
+Which basic inequality do you find that is related to this?
+\end{exercise}
+\begin{solution}
+Consider
+\[
+\begin{aligned}
+\sum_{k=1}^{n} (a_k + b_k)^2 &= \sum_{k=1}^{n} a_k^2 + \sum_{k=1}^{n} b_k^2 + 2 \sum_{k=1}^{n} a_k b_k \\
+&\leq \sum_{k=1}^{n} a_k^2 + \sum_{k=1}^{n} b_k^2 + 2 \left( \sum_{k=1}^{n} a_k^2 \right)^{1/2} \left( \sum_{k=1}^{n} b_k^2 \right)^{1/2} \quad \text{(by Cauchy-Schwarz inequality)} \\
+&= \left( \left( \sum_{k=1}^{n} a_k^2 \right)^{1/2} + \left( \sum_{k=1}^{n} b_k^2 \right)^{1/2} \right)^2
+\end{aligned}
+\]
+
+Taking the square root on both sides, we obtain
+\[
+\left( \sum_{k=1}^{n} (a_k + b_k)^2 \right)^{1/2} \leq \left( \sum_{k=1}^{n} a_k^2 \right)^{1/2} + \left( \sum_{k=1}^{n} b_k^2 \right)^{1/2}
+\]
+\begin{remark}
+    The inequality can also be written as 
+    \[\left(\sum_{i=1}^n\left|x_i+y_i\right|^p\right)^{1 / p} \leq\left(\sum_{i=1}^n\left|x_i\right|^p\right)^{1 / p}+\left(\sum_{i=1}^n\left|y_i\right|^p\right)^{1 / p}\]
+    Where when $p=1$, we get triangle inequality.
+\end{remark}
+\end{solution}
     \begin{exercise}
         If one did not know the Cauchy Schwarz inequality, but knew Lagrange's identity, then how could one derive the Cauchy-Schwarz inequality.
         \begin{theorem}[Lagrange's Identity]
