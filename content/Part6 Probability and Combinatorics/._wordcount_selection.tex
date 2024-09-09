@@ -1,22 +1,22 @@
-    \begin{tikzpicture}
-    \begin{axis}[
-        axis lines=middle,
-        xlabel=\( x \),
-        ylabel={\( P(X = x) \)},
-        xtick=data,
-        ytick={0,1/6},
-        ymin=0, ymax=0.2,
-        symbolic x coords={1,2,3,4,5,6},
-        xticklabel style={anchor=base,yshift=-\baselineskip},
-        nodes near coords,
-        ymajorgrids=true,
-        grid style=dashed,
-        enlarge x limits=0.15
-    ]
+    \begin{align*}
+        p_m = \frac{(m+1)^2-m}{\binom{4m+2}{2}} = \frac{m^2+m+1}{8m^2+6m+1}>\frac{1}{8}.
+    \end{align*}
+
+    This could be done by many ways, like taking limit, induction or even by investigating the global minimum of the function.
+
+    We use $f(m)$ to denote $\frac{m^2+m+1}{8m^2+6m+1}$ and
+    \begin{align*}
+        g(m) = f(m) - \frac{1}{8}.
+    \end{align*}
+    \begin{proof}
+    Now we need to prove that $\forall m\in \Z^{>=1}, g(m) > 0$.
+        \begin{align}
+            g(m)&=\frac{8\left(m^2+m+1\right)-\left(8 m^2+6 m+1\right)}{8\left(8 m^2+6 m+1\right)\\
+            &=\frac{8 m^2+8 m+8-8 m^2-6 m-1}{8\left(8 m^2+6 m+1\right)}\\
+            &=\frac{2 m+7}{8\left(8 m^2+6 m+1\right)}}
+        \end{align}
+
+    Given $m\in \Z^{>=1}$, $g(m) > 0$ in the specified domain.
     
-    \addplot[ycomb, blue, thick, mark=*, mark options={fill=blue}] coordinates {
-        (1,1/6) (2,1/6) (3,1/6) (4,1/6) (5,1/6) (6,1/6)
-    };
-    
-    \end{axis}
-    \end{tikzpicture}
+    Hence, $p_m > \frac{1}{8}$. This completes the proof.
+    \end{proof}
