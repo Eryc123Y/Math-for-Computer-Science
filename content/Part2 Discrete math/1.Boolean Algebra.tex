@@ -1410,10 +1410,10 @@ As a shorthand, we can write the domain or condition to the variables in the qua
 \end{example}
 
 Sometimes, or in most cases, a single quantifier is not enough to express the statement we want to present. In that case, we need to use multiple quantifiers. Consider the statement "For all natural number, there exists natural number that is two times of them." We can write it as
-\[\forall x\in \N\exists y \in \N(y=2x).\]
+\[\forall x\in \N, \; \exists y \in \N(y=2x).\]
 
 This is obviously true, however, if we write
-\[\exists  x\in \N\forall y \in \N(y=2x).\]
+\[\exists  x\in \N, \; \forall y \in \N(y=2x).\]
 We can find that it does not hold, since there is no such $x$ to be half of any $y$.
 
 Another important aspect of quantifier when we deal with predicate with multiple variables is bounded variable.
@@ -1425,7 +1425,7 @@ The scope of the quantifier includes the part of the formula where the variable 
 
 \begin{example}
 Consider the logical statement:
-\[ \forall x \in \mathbb{N} \, \exists y \in \mathbb{N} \, (x < y) \]
+\[ \forall x \in \mathbb{N}, \; \exists y \in \mathbb{N} \, (x < y) \]
 In this statement:
 \begin{itemize}
     \item The variable \( x \) is bounded by the universal quantifier \(\forall x\).
